@@ -25,16 +25,27 @@ h6,
 }
 
 
-
-
-
-
 @for $i from 11 through 40 {
   .f-size-#{$i} {
     font-size: $i * 1px !important;
   }
 }
 
+.font-bold{
+  font-weight: 700;
+}
+.black{
+  font-weight: 900;
+}
+.font-medium{
+  font-weight: 500;
+}
+.font-normal{
+  font-weight: 400;
+}
+.font-semibold{
+  font-weight: 600;
+}
 
 
 @each $currentfont in $bodyfontvariation {
