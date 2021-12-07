@@ -1,0 +1,75 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $heading-font;
+  color: var(--gray-900);
+  font-weight: 500;
+}
+
+@each $cheadingfont in $headingfontSize {
+  $i: index($headingfontSize, $cheadingfont);
+  h#{$i},
+  .text-h#{$i} {
+    font-size: $cheadingfont;
+    line-height: nth($headingLineheight, $i);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  @each $cheadingfont1 in $headingfontSize_lg {
+    $i: index($headingfontSize_lg, $cheadingfont1);
+    h#{$i},
+    .text-h#{$i} {
+      font-size: $cheadingfont1;
+      line-height: nth($headingLineheight_lg, $i);
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  @each $cheadingfont2 in $headingfontSize_xs {
+    $i: index($headingfontSize_xs, $cheadingfont2);
+    h#{$i},
+    .text-h#{$i} {
+      font-size: $cheadingfont2;
+      line-height: nth($headingLineheight_xs, $i);
+    }
+  }
+}
+
+@for $i from 4 through 9 {
+  .ft-wt-#{$i} {
+    font-weight: $i * 100 !important;
+  }
+}
+
+@for $i from 11 through 40 {
+  .f-size-#{$i} {
+    font-size: $i * 1px !important;
+  }
+}
+
+@each $font, $sizes in $bodyfontScale {
+  @each $size, $value in $sizes {
+    #{".body-" + $font + "-" + $size} {
+      color: #{$value};
+    }
+  }
+}
+
+@each $currentfont in $bodyfontvariation {
+  $i: index($bodyfontvariation, $currentfont);
+  .body-font-#{$i} {
+    font-size: $currentfont;
+    line-height: nth($lineheightvariation, $i);
+  }
+}

@@ -1,0 +1,103 @@
+// fonts variable
+$heading-font: "Inter", sans-serif !default;
+$body-font: "Inter", sans-serif !default;
+
+// color variable
+
+$colors: (
+  gray: (
+    900: #191f33,
+    800: #2e3447,
+    700: #464d61,
+    600: #636a80,
+    500: #767e94,
+    400: #939aad,
+    300: #aeb3c2,
+    200: #c5c9d6,
+    100: #dadde5,
+    50: #edeff5,
+    20: #f5f7fc,
+    10: #fff,
+  ),
+  primary: (
+    900: hsla(216, 100%, 20%, 1),
+    600: hsla(216, 100%, 40%, 1),
+    500: hsla(216, 100%, 50%, 1),
+    400: hsla(216, 100%, 60%, 1),
+    300: hsla(216, 100%, 60%, 1),
+    200: hsla(216, 100%, 80%, 1),
+    100: hsla(216, 100%, 93%, 1),
+    50: hsla(216, 100%, 95%, 1),
+  ),
+  success: (
+    600: hsla(108, 100%, 30%, 1),
+    500: hsla(108, 100%, 38%, 1),
+    400: hsla(108, 61%, 50%, 1),
+    300: hsla(108, 61%, 63%, 1),
+    200: hsla(108, 62%, 75%, 1),
+    100: hsla(108, 62%, 88%, 1),
+    50: hsla(111, 55%, 95%, 1),
+  ),
+  warning: (
+    900: hsla(40, 100%, 25%, 1),
+    600: hsla(40, 100%, 40%, 1),
+    500: hsla(40, 100%, 50%, 1),
+    400: hsla(40, 100%, 60%, 1),
+    300: hsla(40, 100%, 70%, 1),
+    200: hsla(40, 100%, 80%, 1),
+    100: hsla(40, 100%, 90%, 1),
+    50: hsla(41, 100%, 95%, 1),
+  ),
+  danger: (
+    600: hsla(0, 58%, 52%, 1),
+    500: hsla(0, 100%, 65%, 1),
+    400: hsla(0, 100%, 72%, 1),
+    300: hsla(0, 100%, 79%, 1),
+    200: hsla(0, 100%, 86%, 1),
+    100: hsla(0, 100%, 93%, 1),
+    50: hsla(0, 100%, 96%, 1),
+  ),
+);
+
+$bodyfontScale: (
+  xl: (
+    20: 20px,
+    lineheight: 32px,
+  ),
+  lg: (
+    18: 18px,
+    lineheight: 28px,
+  ),
+  md: (
+    16: 16px,
+    lineheight: 24px,
+  ),
+  xs: (
+    14: 14px,
+    lineheight: 22px,
+  ),
+  xss: (
+    12: 12px,
+    lineheight: 20px,
+  ),
+);
+
+$bodyfontvariation: 20px 18px 16px 14px 12px;
+$lineheightvariation: 32px 28px 24px 22px 20px;
+
+$headingfontSize: 72px 56px 48px 40px 32px 24px;
+$headingLineheight: 88px 64px 56px 48px 40px 32px;
+
+$headingfontSize_lg: 56px 56px 48px 40px 32px 24px;
+$headingLineheight_lg: 64px 64px 56px 48px 40px 32px;
+
+$headingfontSize_xs: 36px 34px 32px 30px 28px 24px;
+$headingLineheight_xs: 46px 44px 42px 40px 38px 34px;
+
+// button font size
+$button_font_size: 16px;
+$buton_line_height: 24px;
+$buton_border_radius: 4px;
+$button_padding: 12px 24px 12px 24px;
+$button_font_weight: 600;
+$button_font_family: $heading-font;

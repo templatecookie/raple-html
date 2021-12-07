@@ -1,0 +1,340 @@
+.main-menu {
+  position: relative;
+}
+.main-menu ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-right: -18px;
+  @include breakpoint(xxl) {
+    margin-right: -14px;
+  }
+
+  li {
+    display: inline-block;
+    position: relative;
+    &.has-megamenu {
+      position: static;
+    }
+    a {
+      color: var(--gray-700);
+      display: block;
+      font-size: var(--fs-lg-16);
+      font-family: $body-font;
+      @include rt-trs(0.24s);
+      padding: 0 18px;
+      font-weight: 400;
+      @include breakpoint(xxl) {
+        padding: 0 14px;
+      }
+      @include breakpoint(xl) {
+        padding: 0 5px;
+        // font-size: 15px;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.main-menu a:foucs {
+  outline: none;
+  text-decoration: none;
+}
+
+.main-menu > ul > li.current-menu-item > a,
+.main-menu ul li a.active {
+  color: var(--primary-500);
+}
+
+/*change hover color*/
+.main-menu > ul > li > a {
+  line-height: 104px;
+  @include breakpoint(lg) {
+    line-height: 1.9;
+  }
+}
+
+.main-menu > ul > li:hover > a {
+  color: var(--primary-500);
+}
+
+/*li dot hover change*/
+
+/*men item carve icon*/
+
+.main-menu > ul > li.menu-item-has-children > a:after {
+  content: "\f101";
+  margin-left: 8px;
+  font-family: "flaticon";
+  font-size: 12px;
+  @include rt-trs(0.24s);
+  @include breakpoint(md) {
+    margin-left: 0;
+    position: absolute;
+    right: 15px;
+  }
+}
+
+.main-menu > ul > li.menu-item-has-children:hover > a:after {
+  color: var(--primary-500);
+}
+
+.main-menu > ul > li.menu-item-has-children.open > a:after {
+  content: "\eab9";
+}
+
+/*sub menu*/
+
+.main-menu > ul > li.menu-item-has-children > ul.sub-menu {
+  position: absolute;
+  left: 0;
+  top: 80%;
+  background: #fff;
+  z-index: 999;
+  color: #fff;
+  text-align: left;
+  border-radius: 8px;
+  min-width: 248px;
+  transition: all 0.24s ease-in-out;
+  padding: 12px;
+  border: 1px solid var(--gray-100);
+  box-shadow: 0px 12px 32px rgba(25, 31, 51, 0.08);
+  @include hidden();
+  // &:before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 2px;
+  //     left: 45px;
+  //     box-sizing: border-box;
+  //     border: 7px solid #495057;
+  //     border-color: transparent transparent #ffffff #ffffff;
+  //     transform-origin: 0 0;
+  //     transform: rotate(135deg);
+  //     box-shadow: -2px 2px 2px -1px rgba(60, 72, 88, 0.15);
+  //     @include breakpoint(md) {
+  //         display: none
+  //     }
+  // }
+}
+
+.main-menu > ul > li.menu-item-has-children:hover > ul.sub-menu {
+  @include vis();
+  top: 74%;
+}
+
+.main-menu > ul > li.menu-item-has-children:hover > .rt-mega-menu {
+  @include vis();
+  top: 74%;
+}
+
+.main-menu > ul > li.menu-item-has-children > ul.sub-menu > li,
+.main-menu ul ul li {
+  display: block;
+}
+
+.main-menu > ul > li.menu-item-has-children > ul.sub-menu > li > a,
+.main-menu ul ul li a {
+  display: block;
+  padding: 8px 15px;
+  border-bottom: 1px solid rgba(#ccc, 0);
+  text-transform: capitalize;
+  color: var(--gray-700);
+  font-weight: 400;
+  @include afterparent();
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.main-menu > ul > li.menu-item-has-children > ul.sub-menu > li:last-child > a,
+.main-menu ul ul li:last-child > a {
+  border-bottom: 1px solid transparent !important;
+}
+
+.main-menu > ul > li.menu-item-has-children > ul.sub-menu > li:hover > a,
+.main-menu ul ul > li:hover > a {
+  // padding-left: 25px;
+  color: var(--primary-500);
+
+  background: var(--primary-50);
+}
+
+/*// drop menu cart*/
+
+.main-menu ul ul li.menu-item-has-children > a:after {
+  content: "\f105";
+  position: absolute;
+  font-family: "flaticon";
+  right: 15px;
+  font-size: 12px;
+  @include breakpoint(md) {
+    content: "\eab2";
+    right: 15px;
+  }
+}
+
+.main-menu ul ul li.menu-item-has-children.open > a:after {
+  content: "\eab9";
+}
+
+.main-menu ul ul {
+  position: absolute;
+  left: 240px;
+  top: 0px;
+  background: #fff;
+  border: none;
+  z-index: 999;
+  text-align: left;
+  border-radius: 8px;
+  min-width: 248px;
+  transition: all 0.24s ease-in-out;
+  padding: 12px;
+  border: 1px solid var(--gray-100);
+  box-shadow: 0px 12px 32px rgba(25, 31, 51, 0.08);
+  @include hidden();
+  // &:before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 14px;
+  //     left: 2px;
+  //     box-sizing: border-box;
+  //     border: 7px solid #495057;
+  //     border-color: transparent transparent #ffffff #ffffff;
+  //     transform-origin: 0 0;
+  //     transform: rotate(44deg);
+  //     box-shadow: -2px 2px 2px -1px rgba(60, 72, 88, 0.15);
+  //     @include breakpoint(md) {
+  //         display: none;
+  //     }
+  // }
+}
+
+.main-menu
+  > ul
+  > li.menu-item-has-children
+  > ul.sub-menu
+  > li.menu-item-has-children:hover
+  > ul.sub-menu,
+.main-menu
+  > ul
+  > li.menu-item-has-children
+  > ul.sub-menu
+  > li.menu-item-has-children
+  > ul.sub-menu
+  > li.menu-item-has-children:hover
+  > ul.sub-menu {
+  left: 242px;
+  @include vis();
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.menu-click {
+  margin-left: 15px;
+  cursor: pointer;
+  i {
+    font-size: 23px;
+    color: var(--gray-100);
+  }
+}
+
+.menu-icon {
+  cursor: pointer;
+  margin-left: 15px;
+  position: relative;
+  height: 21px;
+  span {
+    display: block;
+    background: var(--gray-900);
+    height: 2px;
+    width: 25px;
+    margin-bottom: 5px;
+    transition: all 0.24s ease-in-out;
+    &:first-child {
+      margin-top: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    &:nth-child(2) {
+      width: 15px;
+    }
+    &:nth-child(3) {
+      width: 20px;
+    }
+  }
+}
+
+.mblnav-close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  @include hw(35px);
+  border-radius: 50%;
+  text-align: center;
+  background: var(--primary-500);
+  cursor: pointer;
+  color: #fff;
+}
+
+.mobile-menu {
+  display: none;
+}
+.mblbrand-logo {
+  display: none;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  @include breakpoint(lg) {
+    display: block;
+  }
+}
+
+.rt-mobile-menu-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  @include hidden();
+  @include rt-trs(0.24s);
+  &.active {
+    z-index: 7;
+    @include vis();
+  }
+}
+
+.rt-mobile-menu-close {
+  display: none;
+  @extend .mblnav-close;
+  @include hw(30px);
+  right: 10px;
+  font-size: 12px;
+  @include breakpoint(lg) {
+    display: block;
+  }
+}
+
+//experintam mobile menu
+// white menu css
+@media (min-width: 992px) {
+  .white-menu {
+    .main-menu > ul > li > a {
+      color: var(--gray-400);
+    }
+    .main-menu > ul > li.current-menu-item > a {
+      color: #fff;
+    }
+    .main-menu > ul > li:hover > a {
+      color: #fff;
+      &:after {
+        color: #fff;
+      }
+    }
+  }
+}

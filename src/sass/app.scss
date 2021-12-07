@@ -1,0 +1,91 @@
+/**!
+
+    Template Name: 
+    Template URI:
+    Description:
+    Author: 
+    Author URI: 
+    Version: 1.0.0
+    -------------------------------------------------
+     1.0 base css
+     1.1 layout css
+     1.2 components css
+     1.3 pages css
+     1.4 themes css
+   
+**/
+
+// 1. Configuration and helpers
+@import 
+ 'abstracts/variables',
+ 'abstracts/functions',
+ 'abstracts/mixins';
+
+// 2. Vendores
+@import 
+'vendors/bourbon/bourbon',
+'vendors/chart',
+'vendors/select2';
+
+
+/*1.0 base css*/
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout
+/*1.1 layout css*/
+@import
+  'layout/header',
+  'layout/footer',
+  'layout/menu',
+  'layout/iconbox',
+  'layout/mega-menu',
+  'layout/navtools',
+  'layout/menu-responsive';
+
+// 5. Components
+/*1.2 components css*/
+@import
+  'components/accrodain',
+  'components/button',
+  'components/bs-dropdown',
+  'components/badge',
+  'components/form',
+  'components/tippyjs',
+  'components/card',
+  'components/breadcrumbs',
+  'components/pagination';
+
+// 6. Page-specific styles
+/*1.3 pages css*/
+@import
+  'pages/home';
+
+// 7. Themes
+/*1.4 themes css*/
+@import
+  'themes/dark';
+
+//   body {
+//     @include breakpoint(xxl2) {
+//         background-color: magenta;
+//     }
+//     @include breakpoint(xxl) {
+//         background-color: gold;
+//     }
+//     @include breakpoint(lg) {
+//         background-color: purple;
+//     }
+//     @include breakpoint(md) {
+//         background-color: red;
+//     }
+//     @include breakpoint(xs) {
+//         background-color: yellow;
+//     }
+//     @include breakpoint(xs2) {
+//         background-color: pink;
+//     }
+// }

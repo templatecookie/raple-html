@@ -1,0 +1,20 @@
+$breakpoints: (
+  "xss": 575.98px,
+  "xs": 767.98px,
+  "md": 991.98px,
+  "lg": 1199.98px,
+  "xxl": 1399.98px,
+  "xxl2": 1600px,
+);
+
+@mixin breakpoint($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width;
+    }
+    @media (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}

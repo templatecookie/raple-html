@@ -1,0 +1,52 @@
+.pagination {
+  margin-bottom: 0px;
+}
+.page-item {
+  margin-right: 13px;
+  &:last-child {
+    margin-right: 0px;
+  }
+  .page-link {
+    height: 48px;
+    width: 48px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: var(--gray-600);
+    text-align: center;
+    @include breakpoint(xs) {
+      height: 35px;
+      width: 35px;
+    }
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+    &:hover {
+      background-color: var(--gray-50);
+    }
+  }
+  &:first-child,
+  &:last-child {
+    .page-link {
+      border-radius: 50%;
+      font-size: 24px;
+      color: var(--primary-200);
+      &:hover {
+        background: var(--primary-50);
+        color: var(--primary-500);
+      }
+    }
+  }
+  &.active {
+    .page-link {
+      background-color: var(--primary-500);
+    }
+  }
+}
