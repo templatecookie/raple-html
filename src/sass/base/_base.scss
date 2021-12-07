@@ -34,6 +34,7 @@ body {
   text-rendering: optimizeLegibility;
   font-weight: 400;
   overflow-x: hidden;
+  background-color: #F5F6F7;
   counter-reset: my-sec-counter;
   &.styleguide {
     background-color: #dcdfe8;
