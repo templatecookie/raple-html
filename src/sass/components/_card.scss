@@ -1,0 +1,49 @@
+.card {
+    box-shadow: none;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: #fff;
+    margin-bottom: 24px;
+    .card-body {
+      padding: 20px 24px;
+      .card-full-width-border {
+        margin-left: -24px;
+        margin-right: -24px;
+        padding: 0px;
+      }
+    }
+    .card-title {
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 500;
+      color: var(--gray-900);
+      border-bottom: 1px solid #E5E7E8;
+      padding: 16px 20px;
+      margin: -20px -24px 16px -24px;
+    }
+    .card-header,
+    .card-footer {
+      font-size: 16px;
+      line-height: 16px;
+      padding: 16px 20px;
+      font-weight: 500;
+      color: var(--gray-900);
+      border-color: #E5E7E8;
+      background: transparent;
+      &:first-child {
+        border-radius: calc(9px - 1px) calc(9px - 1px) 0 0;
+      }
+      @include breakpoint(xs) {
+        > div {
+          padding: 5px 0;
+        }
+      }
+    }
+    .card-footer {
+      padding: 24px;
+    }
+  
+
+  }
+  
+  
