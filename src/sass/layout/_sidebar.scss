@@ -30,6 +30,10 @@
         margin-bottom: 8px;
         text-transform: uppercase;
         padding: 0px 24px;
+        margin-top: 21px;
+        &.no-margin{
+          margin-top: 0px;
+        }
       }
     }
     li {
