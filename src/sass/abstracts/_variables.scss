@@ -1,52 +1,70 @@
 // fonts variable
-$heading-font: "Inter", sans-serif !default;
-$body-font: "Inter", sans-serif !default;
+$heading-font: 'Public Sans', sans-serif !default;
+$body-font: 'Public Sans', sans-serif !default;
 
 // color variable
 
 $colors: (
   gray: (
-    900: #191f33,
-    800: #2e3447,
-    700: #464d61,
-    600: #636a80,
-    500: #767e94,
-    400: #939aad,
-    300: #aeb3c2,
-    200: #c5c9d6,
-    100: #dadde5,
-    50: #edeff5,
-    20: #f5f7fc,
+    900: #191B1C,
+    800: #313638,
+    700: #4A5154,
+    600: #626C70,
+    500: #7B878C,
+    400: #959FA3,
+    300: #B0B7BA,
+    200: #CACFD1,
+    100: #E5E7E8,
+    50: #F5F6F7,
     10: #fff,
   ),
   primary: (
-    900: hsla(216, 100%, 20%, 1),
-    600: hsla(216, 100%, 40%, 1),
-    500: hsla(216, 100%, 50%, 1),
-    400: hsla(216, 100%, 60%, 1),
-    300: hsla(216, 100%, 60%, 1),
-    200: hsla(216, 100%, 80%, 1),
-    100: hsla(216, 100%, 93%, 1),
-    50: hsla(216, 100%, 95%, 1),
+    900: #03132B,
+    800: #062657,
+    700: #083982,
+    600: #0B4CAE,
+    500: #005CE8,
+    400: #3E7FE1,
+    300: #6E9FE8,
+    200: #9FBFF0,
+    100: #CFDFF7,
+    50: #F0F6FF,
+  ),
+  secondary:(
+    900: #333014,
+    800: #666129,
+    700: #99913D,
+    600: #CCC252,
+    500: #FFF266,
+    400: #FFF585,
+    300: #FFF7A3,
+    200: #FFFAC2,
+    100: #FFFCE0,
+    50: #FFFEF0,
   ),
   success: (
-    600: hsla(108, 100%, 30%, 1),
-    500: hsla(108, 100%, 38%, 1),
-    400: hsla(108, 61%, 50%, 1),
-    300: hsla(108, 61%, 63%, 1),
-    200: hsla(108, 62%, 75%, 1),
-    100: hsla(108, 62%, 88%, 1),
-    50: hsla(111, 55%, 95%, 1),
+    900: #032314,
+    800: #064627,
+    700: #09693B,
+    600: #0C8C4E,
+    500: #0FAF62,
+    400: #3FBF81,
+    300: #6FCFA1,
+    200: #9FDFC0,
+    100: #CFEFE0,
+    50: #E7F7EF,
   ),
   warning: (
-    900: hsla(40, 100%, 25%, 1),
-    600: hsla(40, 100%, 40%, 1),
-    500: hsla(40, 100%, 50%, 1),
-    400: hsla(40, 100%, 60%, 1),
-    300: hsla(40, 100%, 70%, 1),
-    200: hsla(40, 100%, 80%, 1),
-    100: hsla(40, 100%, 90%, 1),
-    50: hsla(41, 100%, 95%, 1),
+    900: #331E00,
+    800: #663C00,
+    700: #995900,
+    600: #CC7700,
+    500: #FF9500,
+    400: #FFAA33,
+    300: #FFBF66,
+    200: #FFD599,
+    100: #FFEACC,
+    50: #FFF4E6,
   ),
   danger: (
     600: hsla(0, 58%, 52%, 1),
@@ -87,12 +105,6 @@ $lineheightvariation: 32px 28px 24px 22px 20px;
 
 $headingfontSize: 72px 56px 48px 40px 32px 24px;
 $headingLineheight: 88px 64px 56px 48px 40px 32px;
-
-$headingfontSize_lg: 56px 56px 48px 40px 32px 24px;
-$headingLineheight_lg: 64px 64px 56px 48px 40px 32px;
-
-$headingfontSize_xs: 36px 34px 32px 30px 28px 24px;
-$headingLineheight_xs: 46px 44px 42px 40px 38px 34px;
 
 // button font size
 $button_font_size: 16px;
