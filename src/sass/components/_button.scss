@@ -24,6 +24,10 @@
   &.d-block {
     width: 100%;
   }
+  &.pill{
+    border-radius: 999px;
+  }
+  
   &:focus {
     box-shadow: none;
   }
