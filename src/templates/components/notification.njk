@@ -1,0 +1,26 @@
+      {% set items = [
+            {
+                title: 'Small SizeS',
+                icon: 'assets/images/icons/l-small_size.svg',
+                range: '25-70',
+                unit: 'sq ft'
+            }, {
+                title: 'Medium Sizes',
+                icon: 'assets/images/icons/l-medium_size.svg',
+                range: '75-150',
+                unit: 'sq-ft'
+            }, {
+                title: 'Large Size',
+                icon: 'assets/images/icons/l-large_size.svg',
+                range: '200-330',
+                unit: 'sq-ft'
+            },{
+                title: 'Commercial',
+                icon: 'assets/images/icons/l-commercial.svg',
+                range: '',
+                unit: ''
+            }
+        ] %}
+         {%for item in items%}
+        <li> {{item.title}} </li>  
+        {% endfor %}

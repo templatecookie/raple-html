@@ -9,7 +9,7 @@
       display: none;
     }
     > li {
-      margin-right: 18px;
+      margin-right: 20px;
       position: relative;
       @include breakpoint(xl) {
         margin-right: 10px;
@@ -27,3 +27,123 @@
     }
   }
 }
+
+
+
+.rt-single-icon-box {
+  &.user-profile-icon-big {
+    padding: 0 15px;
+    .icon-thumb {
+      .innerImage {
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        margin-right: 15px;
+        position: relative;
+        overflow: hidden;
+        background-color: var(--primary-500);
+        color: #fff;
+        font-size: 15px;
+        text-align: center;
+        line-height: 46px;
+        &.sm-size2 {
+          height: 40px;
+          width: 40px;
+          line-height: 40px;
+        }
+        &.sm-size {
+          height: 36px;
+          width: 36px;
+          line-height: 36px;
+        }
+        &.has-border {
+          border: 2px solid #fff;
+        }
+      }
+      img {
+        display: block;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 0;
+        right: 0;
+        top: 50%;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .iconbox-content {
+      h4 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: capitalize;
+        margin: 0 0 3px;
+        color: var(--gray-900);
+        a {
+          &:hover {
+            color: var(--primary-500);
+          }
+        }
+      }
+      > span {
+        font-size: 11px;
+        line-height: 11px;
+        display: block;
+        color: #969ca2;
+      }
+    }
+    &.admin-lsit{
+      padding: 0px;
+    }
+  }
+}
+
+.tippy-box {
+  border-radius: 8px;
+}
+.PopoverParent {
+  padding: 15px;
+  width: max-content;
+  min-width: 205px;
+  &.mx-421 {
+    min-width: 421px;
+    @include breakpoint(xs) {
+      min-width: 100%;
+    }
+  }
+
+ 
+  .Popover-header {
+    border-bottom: 1px solid #efeded;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .popOverFooter {
+    border-top: 1px solid #efeded;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(54px - 15px);
+    a {
+      font-size: 14px;
+      margin-top: 10px;
+      color: var(--primary-500);
+      span {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      padding-left: 15px;
+      font-weight: 400;
+    }
+  }
+}
+
+
+

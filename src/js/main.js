@@ -19,9 +19,8 @@
 
   var template_x = document.getElementById('template');
   var template2_x = document.getElementById('template2');
-  var template3_x = document.getElementById('template3');
   tippy('.notifications', {
-    arrow: true,
+    arrow: false,
     delay: 40,
     content: template_x.innerHTML,
     allowHTML: true,
@@ -33,7 +32,7 @@
     trigger: 'click',
   });
   tippy('.openaccount', {
-    arrow: true,
+    arrow: false,
     delay: 40,
     content: template2_x.innerHTML,
     allowHTML: true,
@@ -45,20 +44,8 @@
     trigger: 'click',
   });
 
-  tippy('.openmaptag', {
-    arrow: true,
-    delay: 40,
-    content: template3_x.innerHTML,
-    allowHTML: true,
-    interactive: 'true',
-    placement: 'top',
-    animation: 'fade',
-    theme: 'light',
-    maxWidth: 'none',
-    trigger: 'mouseover',
-  });
 
-  $('.opener_sidebar').on('click', function (e) {
+$('.opener_sidebar').on('click', function (e) {
     e.preventDefault(),
       $('body').toggleClass('sidebar-collapse'),
       992 <= $(window).width()
