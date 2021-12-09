@@ -3,25 +3,24 @@
 {% block content %}
 
 <main class="app-wrapper">
-  {% include "../templates/layout/header-footer/app-header.html" %}
-  {% include "../templates/layout/header-footer/app-sidebar.html" %}
-  <div class="content-wrapper">
-    <div class="page-content">
-      <div class="container-fluid">
+ <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="card">
+                <div class="card-body">
                 <h4>Primary Button</h4>
                 <!-- button top -->
                 <div class="primary-button-list-wrap">
                     <div class="primary-button-list">
-                      <button type="button" class="btn bg-primary-500 text-white pill">Button</button>
+                      <button type="button" class="btn btn-outline-primary pill"  disabled>Button</button>
+                      <button type="button" class="btn btn-primary pill" >Button</button>
+                      <button type="button" class="btn btn-primary pill" disabled>Button</button>
                       <button type="button" class="btn bg-primary-600 text-white pill">Button</button>
                       <button type="button" class="btn bg-primary-50 text-primary-300 pill" disabled>Button</button>
                       <button type="button" class="btn bg-primary-500 text-white pill">
                         <span class="button-content-wrapper">
                           <span class="button-icon align-icon-right">
-                            <img src="assets/images/svg/arrowright-white.svg" alt="">
+                            <i class="ph-arrow-right"></i>
                           </span>
                           <span class="button-text">
                             Button
@@ -712,13 +711,12 @@
                 
                   </div>
                 </div>
+                </div>
                 
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 </main>
 
 {% endblock %}
