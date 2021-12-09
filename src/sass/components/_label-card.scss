@@ -4,7 +4,7 @@
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.03);
   background-color: white;
   margin-bottom: 24px;
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     padding: 24px;
   }
   h3 {
