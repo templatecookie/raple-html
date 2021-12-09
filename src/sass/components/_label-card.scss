@@ -1,0 +1,64 @@
+.label-tag-item {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.03);
+  background-color: white;
+  margin-bottom: 24px;
+  @include breakpoint(md) {
+    padding: 24px;
+  }
+  h3 {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray-600);
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &.bg-white {
+    h3 {
+      color: var(--gray-900);
+    }
+  }
+  &.bg-gray-900 {
+    p {
+      color: var(--gray-400);
+    }
+  }
+  &.bg-primary-500 {
+    p {
+      color: var(--primary-200);
+    }
+  }
+  &.bg-secondary-500 {
+    h3 {
+      color: var(--gray-900);
+    }
+    p {
+      color: var(--gray-700);
+    }
+  }
+  &.bg-success-500 {
+    p {
+      color: var(--success-100);
+    }
+  }
+  &.bg-warning-500 {
+    p {
+      color: var(--warning-100);
+    }
+  }
+  &.bg-danger-600 {
+    p {
+      color: var(--danger-200);
+    }
+  }
+}
