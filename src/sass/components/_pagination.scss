@@ -1,5 +1,5 @@
-.pagination {
-  margin-bottom: 0px;
+.pagination-section .pagination {
+  margin-bottom: 20px;
 }
 .page-item {
   margin-right: 13px;
@@ -38,7 +38,7 @@
   &:last-child {
     .page-link {
       border-radius: 50%;
-      font-size: 24px;
+      font-size: 20px;
       background: var(--primary-50);
       color: var(--primary-500);
       &:hover {
@@ -51,6 +51,26 @@
     .page-link {
       color: white;
       background-color: var(--primary-500);
+    }
+  }
+}
+
+.page-item.page-item2 {
+  .page-link {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+  &:first-child,
+  &:last-child {
+    .page-link {
+      font-size: 12px;
+      background: transparent;
+      color: var(--gray-500);
+      &:hover {
+        background-color: var(--gray-50);
+        color: var(--gray-900);
+      }
     }
   }
 }
