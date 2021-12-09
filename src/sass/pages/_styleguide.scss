@@ -1,10 +1,13 @@
 .primary-button-list-wrap {
   margin-bottom: 70px;
-  text-align: center;
+}
+h4.component-title {
+  margin-bottom: 30px;
 }
 
 .primary-button-list {
   margin-bottom: 16px;
+  display: flex;
   .btn {
     margin-right: 10px;
   }
