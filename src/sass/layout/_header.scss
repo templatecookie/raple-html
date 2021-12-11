@@ -4,19 +4,18 @@
   width: 100%;
   z-index: 1010;
   background-color: #fff;
-  @include breakpoint(xs){
-    
+  @include breakpoint(xs) {
     position: static;
   }
   .navbar {
     padding: {
       left: 26px;
-      top:16px;
+      top: 16px;
       bottom: 16px;
       right: 42px;
     }
 
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       height: auto;
       padding-left: 15px;
       padding-right: 15px;
@@ -26,8 +25,7 @@
     padding: {
       left: 0px;
       right: 0px;
-    };
-    
+    }
   }
   .left-content {
     display: flex;
@@ -35,30 +33,29 @@
     align-items: center;
     @include afterparent();
   }
-  .collapse-in-logo{
+  .collapse-in-logo {
     display: none;
   }
 }
-.brand-logo{
-  @include breakpoint(md){
+.brand-logo {
+  @include breakpoint(md) {
     max-width: 100px;
     margin-right: 30px;
   }
-  @include breakpoint(xs){
+  @include breakpoint(xs) {
     max-width: 90px;
   }
 }
 .logo-segment {
   width: 252px;
-  
+
   display: flex;
   justify-content: space-between;
-padding-right: 15px;
-  background: #fff;
+  padding-right: 15px;
   align-items: center;
   transition: background 0.3s, width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
   position: relative;
-  &::after{
+  &::after {
     position: absolute;
     right: 0;
     top: 50%;
@@ -68,12 +65,12 @@ padding-right: 15px;
     background: #f2f3f4;
     transform: translateY(-50%);
   }
-  @include breakpoint(md){
+  @include breakpoint(md) {
     width: auto;
     box-shadow: none;
   }
-  @include breakpoint(xs){
-    border-color:  transparent;
+  @include breakpoint(xs) {
+    border-color: transparent;
     padding: 0px;
   }
   .opener_sidebar {
@@ -99,25 +96,22 @@ padding-right: 15px;
       left: 40px;
       right: 40px;
     }
-    .container-fluid{
+    .container-fluid {
       padding: 0px;
     }
     @include breakpoint(xxl2) {
       padding-left: 30px;
       padding-right: 30px;
     }
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       padding-top: 32px;
       padding-left: 15px;
       padding-right: 15px;
     }
-    
   }
-  @include breakpoint(md){
+  @include breakpoint(md) {
     margin-left: 0px;
   }
-  
-  
 }
 
 .dashboard-message {
@@ -125,24 +119,23 @@ padding-right: 15px;
   @include breakpoint(xxl2) {
     padding-left: 30px;
   }
-  @include breakpoint(xs){
+  @include breakpoint(xs) {
     padding-left: 0px;
   }
   .hello-msg {
     font-size: 12px;
     color: var(--gray-500);
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       display: none;
     }
   }
   .page-title {
     font-size: 20px;
     color: var(--gray-900);
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       display: none;
     }
   }
- 
 }
 .back_sidebar_icon {
   color: var(--primary-500);
@@ -154,18 +147,17 @@ padding-right: 15px;
   @include hidden();
   transition: all 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
   cursor: pointer;
-  @include breakpoint(md){
+  @include breakpoint(md) {
     left: -25px;
   }
-  @include breakpoint(xs){
-  
+  @include breakpoint(xs) {
     font-size: 25px;
   }
 }
 
 .app-mian-serach {
   @include afterparent();
-  
+
   display: flex;
   align-items: center;
   transition: background 0.3s, width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
@@ -174,7 +166,7 @@ padding-right: 15px;
     height: 40px;
     border-radius: 4px;
     width: 240px;
-    @include breakpoint(lg){
+    @include breakpoint(lg) {
       width: auto;
     }
     background: rgba(242, 243, 244, 0.5);
@@ -215,12 +207,11 @@ padding-right: 15px;
       }
     }
   }
-  @include breakpoint(xs){
+  @include breakpoint(xs) {
     display: none;
-    
   }
-  &.floting-box{
-    @include breakpoint(xs){
+  &.floting-box {
+    @include breakpoint(xs) {
       display: block;
       position: absolute;
       top: 100%;
@@ -232,8 +223,8 @@ padding-right: 15px;
   }
 }
 
-.app-mian-serach{
-  &.full-wd{
+.app-mian-serach {
+  &.full-wd {
     flex-grow: 1;
     max-width: 648px;
     display: block;
@@ -243,20 +234,20 @@ padding-right: 15px;
 .sidebar-collapse {
   .logo-segment {
     width: 80px;
-    @include breakpoint(md){
+    @include breakpoint(md) {
       width: auto;
     }
   }
-  .content-wrapper{
+  .content-wrapper {
     margin-left: 80px;
-    .page-content{
+    .page-content {
       padding-left: 60px;
       padding-right: 60px;
-      @include breakpoint(xxl2){
+      @include breakpoint(xxl2) {
         padding-left: 30px;
         padding-right: 30px;
       }
-      @include breakpoint(xs){
+      @include breakpoint(xs) {
         padding-left: 15px;
         padding-right: 15px;
       }
@@ -264,15 +255,14 @@ padding-right: 15px;
   }
   .dashboard-message {
     padding-left: 140px;
-    @include breakpoint(md){
+    @include breakpoint(md) {
       padding-left: 20px;
     }
-    
   }
-  .opener_sidebar{
+  .opener_sidebar {
     display: none;
   }
-  .collapse-in-logo{
+  .collapse-in-logo {
     display: block;
   }
   .back_sidebar_icon {
@@ -280,33 +270,71 @@ padding-right: 15px;
     visibility: visible;
     left: 72px;
     transition-delay: 0.15s;
-    @include breakpoint(xxl2){
+    @include breakpoint(xxl2) {
       left: 32px;
     }
-    @include breakpoint(md){
+    @include breakpoint(md) {
       left: -30px;
     }
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       left: -20px;
     }
   }
 }
 
-// sticky header 
-.app-header{
+// sticky header
+.app-header {
   border-bottom: 1px solid transparent;
- 
-  .app-mian-serach{}
-  &.rt-sticky-active{
+
+  .app-mian-serach {
+  }
+  &.rt-sticky-active {
     background-color: #fff;
-    border-color:  #e9eaf0;
-    .logo-segment{
+    border-color: #e9eaf0;
+    .logo-segment {
       border-color: transparent;
     }
   }
 }
 
-.app-wrapper{
+.app-wrapper {
   min-height: 100vh;
   position: relative;
+}
+[data-layout="horizental"] {
+  .app-header {
+    background: var(--gray-900);
+    border-bottom: none;
+    position: static;
+  }
+  .brand-logo {
+    display: none;
+    &.white {
+      display: block;
+    }
+  }
+  .logo-segment {
+    .opener_sidebar {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+  .app-mian-serach {
+    display: none;
+
+  }
+  .navbar {
+    padding: {
+      left: 180px;
+      right: 180px;
+      top: 20px;
+      right: 180px;
+    }
+    @include breakpoint(xxl2) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
 }
