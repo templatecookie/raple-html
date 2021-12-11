@@ -1,0 +1,34 @@
+.folder {
+  &-wrap {
+    padding: 20px;
+    width: 204px;
+    background: white;
+    border: 1px solid var(--primary-100);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: all 0.4s;
+    &:hover {
+      background-color: var(--primary-50);
+    }
+  }
+  &-icon {
+    margin-bottom: 20px;
+  }
+  &-data {
+    h4 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 5px;
+      color: var(--gray-900);
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--gray-500);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
