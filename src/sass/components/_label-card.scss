@@ -1,7 +1,7 @@
 .label-tag-item {
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.03);
+
   background-color: white;
   margin-bottom: 24px;
   @include breakpoint(lg) {
@@ -27,6 +27,7 @@
     h3 {
       color: var(--gray-900);
     }
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.03);
   }
   &.bg-gray-900 {
     p {
