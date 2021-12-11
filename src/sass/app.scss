@@ -1,6 +1,6 @@
 /**!
 
-    Template Name: 
+    Template Name: 'Relik-Admin Dashboard'
     Template URI:
     Description:
     Author: 
@@ -16,7 +16,7 @@
 **/
 
 // 1. Configuration and helpers
-@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins", "abstracts/placeholder";
 
 // 2. Vendores
 @import "vendors/bourbon/bourbon", "vendors/chart", "vendors/select2";
@@ -27,7 +27,7 @@
 // 4. Layout
 /*1.1 layout css*/
 @import "layout/header", "layout/footer", "layout/menu", "layout/iconbox",
-  "layout/mega-menu", "layout/navtools", "layout/sidebar.scss",
+  "layout/mega-menu", "layout/navtools", "layout/sidebar.scss", "layout/app-settings",
   "layout/menu-responsive";
 
 // 5. Components

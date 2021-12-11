@@ -1,0 +1,38 @@
+.app-settings {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 552px;
+  height: 100vh;
+  transition: all 0.24s ease-in-out;
+  transform: translateX(20px);
+  background: #fff;
+  z-index: -1;
+  @include hidden();
+  .inner-content {
+    padding: 24px;
+  }
+  &.open{
+    z-index: 99999;
+    transform: translateX(0px);
+    @include vis();
+  }
+}
+.settings-overlay{
+  position: fixed;
+  left: 0px;
+  top:0px;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.7);
+  content: "";
+  transition: all 0.24s ease-in-out;
+  z-index: -1; 
+  @include hidden();
+  &.open{
+    z-index: 9999;
+    @include vis();
+  }
+  
+  
+}
