@@ -212,5 +212,21 @@
       margin-bottom: 24px;
     }
   }
+
+  // center 
+  &--center { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--right { 
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: right;
+  }
 }
 
