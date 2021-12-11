@@ -40,9 +40,12 @@
   &-header {
     display: flex;
     align-items: center;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
     position: relative;
     justify-content: space-between;
+    &.header2 {
+      margin-bottom: 45px;
+    }
     h4 {
       font-weight: 600;
       font-size: 18px;
@@ -76,7 +79,7 @@
   }
   &-number {
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     justify-content: space-between;
     &-left {
       display: flex;
