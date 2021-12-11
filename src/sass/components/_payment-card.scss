@@ -29,10 +29,13 @@
 .payment-card {
   &-wrap {
     width: 382px;
-    padding: 32px 32px 28px;
+    padding: 28px 32px 28px;
     border-radius: 4px;
     background-size: cover;
     background-position: center center;
+    @include breakpoint(md) {
+      width: 100%;
+    }
   }
   &-header {
     display: flex;
@@ -49,6 +52,7 @@
       span {
         font-weight: 400;
         opacity: 0.5;
+        text-transform: uppercase;
       }
     }
   }
@@ -76,12 +80,14 @@
     justify-content: space-between;
     &-left {
       display: flex;
-      #textToCopy {
+      #textToCopy,
+      #textToCopy2 {
         font-size: 24px;
         color: white;
         margin: 0;
       }
-      button#copyButton {
+      button#copyButton,
+      button#copyButton2 {
         border: none;
         line-height: 1;
         background-color: transparent;

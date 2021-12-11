@@ -157,20 +157,36 @@
 
 
   // copyToClipboard
-const copy = document.getElementById("copyButton");
-const selection = window.getSelection();
-const range = document.createRange();
-const textToCopy = document.getElementById("textToCopy")
+  const copy = document.getElementById ("copyButton");
+  const selection = window.getSelection();
+  const range = document.createRange();
+  const textToCopy = document.getElementById("textToCopy")
 
-copy.addEventListener('click', function(e) {
-    range.selectNodeContents(textToCopy);
-    selection.removeAllRanges();
-    selection.addRange(range);
-    const successful = document.execCommand('copy');
-    if(successful){
-    }
-    window.getSelection().removeAllRanges()
-});
+  copy.addEventListener('click', function(e) {
+      range.selectNodeContents(textToCopy);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      const successful = document.execCommand('copy');
+      if(successful){
+      }
+      window.getSelection().removeAllRanges()
+  });
+  //end one
+
+  const copy2 = document.getElementById ("copyButton2");
+  const selection2 = window.getSelection();
+  const range2 = document.createRange();
+  const textToCopy2 = document.getElementById("textToCopy2")
+  copy2.addEventListener('click', function(e) {
+      range2.selectNodeContents(textToCopy2);
+      selection2.removeAllRanges();
+      selection2.addRange(range2);
+      const successful2 = document.execCommand('copy');
+      if(successful2){
+      }
+      window.getSelection().removeAllRanges()
+  });
+
   // end copytoclipboard
 
 
