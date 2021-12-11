@@ -41,13 +41,12 @@
 // Blog 
 .card-blog { 
   overflow: hidden;
-  position: relative;
   max-width: 372px;
+  position: relative;
   border-radius: 8px;
   box-shadow: 0px 8px 24px 0px #00000008;
 
   &:hover { 
-    
     .card-blog__img { 
       img { 
         -webkit-transform: scale(1.3);
@@ -166,10 +165,310 @@
 }
 
 
+// Aligned Blog Cards 
+.card-aligned { 
+  padding: 32px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  max-width: 505px;
+  box-shadow: 0px 8px 24px 0px #00000008;
+  &:hover {   
+    .card-aligned__icon { 
+      color: #fff;
+      background-color: var(--primary-500);
+      svg { 
+        transform: scale(1.3);
+      }
+    }
+  }
+  &__icon { 
+    width: 80px;
+    height: 80px;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 24px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    color: var(--primary-500);
+    transition: all 0.3s linear;
+    background-color: var(--primary-50);
+    svg { 
+      transform: scale(1);
+      transition: all 0.3s linear;
+    }
+  }
 
-// Key frames 
-@keyframes shine {
-	100% {
-		left: 125%;
-	}
+  &__info { 
+    h2 { 
+      @extend %text-one;
+      margin-bottom: 12px;
+    }
+
+    p { 
+      @extend %text-para;
+      margin-bottom: 24px;
+    }
+  }
+
+  // center 
+  &--center { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--right { 
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: right;
+  }
+}
+
+
+// Card BG 
+.card-bg { 
+  overflow: hidden;
+  max-width: 372px;
+  max-height: 100%;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px 0px #00000008;
+  background: url('assets/images/all-img/cards/img-one.jpg');
+  &__content {
+    width: 100%;
+    padding: 24px;
+    padding-top: 256px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    h2 { 
+      @extend %text-one;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    p { 
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+    }
+    .btn { 
+      color: #fff;
+      border-color: transparent;
+      background: rgba(255, 255, 255, 0.12);
+    }
+  }
+}
+
+// basic Card 
+.card-basic { 
+  padding: 32px;
+  overflow: hidden;
+  max-width: 372px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px 0px #00000008;
+  h2 { 
+    @extend %text-one;
+    margin-bottom: 12px;
+  }
+  p { 
+    @extend %text-para;
+    margin-bottom: 24px;
+  }
+
+  &-redirect { 
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-500);
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    white-space: nowrap;
+    span { 
+      margin-left: 12px;
+    }
+  }
+
+
+  &--bg { 
+    background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    .card-basic { 
+
+
+      &-redirect { 
+        color: #fff;
+      }
+
+    }
+    h2 { 
+      color: #fff;
+    }
+    p { 
+      color: #B0B7BA;
+
+    }
+  }
+ 
+}
+
+
+// Priority card 
+.card-priority { 
+  overflow: hidden;
+  position: relative;
+  padding: 18px 16px;
+  border-radius: 8px;
+  border: 1px solid #E5E7E8;
+  box-shadow: 0px 4px 12px 0px #191B1C0F;
+
+  &__header { 
+    display: flex;
+    align-items: center;
+    padding-bottom: 18px;
+    justify-content: space-between;
+
+    .date { 
+      display: flex;
+      align-items: center;
+      .icon { 
+        margin-right: 8px;
+      }
+
+      p  { 
+        font-size: 14px ;
+        line-height: 20px;
+        color: var(--gray-700);
+        margin: 0px;
+      }
+    }
+  }
+
+  // Dropdown 
+  &__actions { 
+    position: relative;
+    .toggle-icon { 
+      cursor: pointer;
+    }
+    .dropdown-actions { 
+      top: 100%;
+      right: 0px;
+      width: 170px;
+      position: absolute;
+      border-radius: 8px;
+      padding: 12px 0px;
+      background-color: #fff;
+      border: 1px solid #E5E7E8;
+      box-shadow: 0px 4px 24px 0px #191B1C29;
+      // opacity: 0;
+      // overflow: hidden;
+      &.show { 
+        opacity: 1;
+        visibility: visible
+      }
+      li { 
+        a { 
+          @extend %text-para;
+          color: var(--gray-600);
+          width: 100%;
+          padding: 8px 12px;
+          display: inline-block;
+          span { 
+            margin-right: 12px;
+          }
+        }
+
+        &:nth-last-child(1) { 
+          a  { 
+            padding: 12px;
+            padding-bottom: 0px;
+            border-top: 1px solid #E5E7E8;
+            display: inline-block;
+            color: var(--danger-500);
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 165px;
+    margin-bottom: 12px;
+    img { 
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &__labels { 
+    ul { 
+      display: flex;
+      align-items: center;
+      li { 
+        span{
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          padding: 6px 16px;
+          border-radius: 24px;
+          display: inline-block;
+          color: var(--primary-500);
+          text-transform: capitalize;
+          background-color: var(--primary-50);
+
+          &.urgent { 
+            color: #D50000;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  &__title { 
+    @extend %text-para;
+    font-weight: 600;
+    margin: 8px 0px;
+    color: #191B1C;
+    text-transform: capitalize;
+  }
+
+  &__footer { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .labels-info { 
+      display: flex;
+      align-items: center;
+      
+      li { 
+        margin-right: 18px;
+        &:nth-last-child(1) { 
+          margin: 0px;
+        }
+        a { 
+          color: #959FA3;
+          @extend %text-para;
+        }
+      }
+    }
+
+    .users { 
+      display: flex;
+      align-items: center;
+
+      &-item { 
+        margin-left: -14px;
+        &:nth-child(1) { 
+          margin: 0px;
+        }
+      }
+    }
+  }
+
 }

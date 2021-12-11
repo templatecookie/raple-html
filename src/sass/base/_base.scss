@@ -207,3 +207,9 @@ textarea {
     page-break-after: avoid;
   }
 }
+
+ul,ol,li { 
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}

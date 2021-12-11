@@ -7,7 +7,7 @@
 
       <!-- ========  All Btn ==========  -->
 
-      <div class="all-btn">
+      <section class="all-btn">
           <div class="component-title">
             <h4>All Button</h4>
           </div>
@@ -757,7 +757,7 @@
               </button>
             </div>
           </div>
-      </div>
+      </section>
       <!-- End all btn -->
 
       <!-- ========  badge ==========  -->
@@ -774,7 +774,7 @@
       </section>
       <!-- end badge -->
 
-      <!-- ========  check radio switch field ==========  -->
+      <!-- ========  check radio switch btn ==========  -->
       <section class="padding-bottom">
         <div class="component-title">
           <h4>Checkbox</h4>
@@ -789,7 +789,7 @@
           <input class="form-check-input" type="checkbox" value="" id="check-three">
         </div>
       </section>
-      <!-- end checkbox -->
+      <!-- end checkbox btn -->
       
       <section class="padding-bottom">
         <div class="component-title">
@@ -805,8 +805,7 @@
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-three">
         </div>
       </section>
-      
-      <!-- end radio -->
+      <!-- end radio btn -->
       
       <section class="padding-bottom">
         <div class="component-title">
@@ -822,7 +821,7 @@
           <input class="form-check-input" type="checkbox" role="switch" id="switch-three">
         </div>
       </section>
-      <!-- end radio -->
+      <!-- end switch btn -->
 
       <!-- ========  Pagination ==========  -->
 
@@ -1092,12 +1091,73 @@
         <div class="component-title">
           <h4>Payment Card</h4>
         </div>
-        <div class="payment-card-add">
+        <div class="payment-card-add mb-4">
             <img src="assets/images/svg/pluscircle.svg" alt="">
             <p>Add new card</p>
         </div>
+        <!-- end add card -->
+        <div class="payment-card-wrap mb-4" style="background-image: url(assets/images/all-img/card-bg1.png);">
+          <div class="payment-card-header">
+            <h4>$95, 400.00 <span>USD</span></h4>
+            <img src="assets/images/svg/visa.svg" alt="">
+          </div>
+          <div class="payment-card-number">
+              <div class="payment-card-number-left">
+                <p id="textToCopy">**** **** **** 3814</p>
+                <button id="copyButton"><img src="assets/images/svg/copy.svg" alt=""></button>
+              </div>
+              <div class="payment-card-number-right">
+                <p>Expires</p>
+                <h5>04 / 24</h5>
+              </div>
+          </div>
+          <div class="payment-card-footer">
+            <p>Kevin Gilbert</p>
+            <div class="card-dropdown">
+                <button class="dots-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"><img src="assets/images/svg/dots.svg"
+                    alt=""></button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Download</a></li>
+                  <li><a class="dropdown-item" href="#">Print</a></li>
+                  <li><a class="dropdown-item" href="#">Delete</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end card one -->
+
+        <div class="payment-card-wrap" style="background-image: url(assets/images/all-img/card-bg2.png);">
+          <div class="payment-card-header header2">
+            <h4>$95, 400.00 <span>USD</span></h4>
+            <img src="assets/images/svg/visa2.svg" alt="">
+          </div>
+          <div class="payment-card-number">
+            <div class="payment-card-number-left">
+              <p id="textToCopy2">**** **** **** 5468</p>
+              <button id="copyButton2"><img src="assets/images/svg/copy.svg" alt=""></button>
+            </div>
+            <div class="payment-card-number-right">
+              <p>Expires</p>
+              <h5>04 / 24</h5>
+            </div>
+          </div>
+          <div class="payment-card-footer">
+            <p>Kevin Gilbert</p>
+            <div class="card-dropdown">
+              <button class="dots-btn" id="dropdownMenuButton2" data-bs-toggle="dropdown"><img src="assets/images/svg/dots.svg"
+                  alt=""></button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="#">Download</a></li>
+                <li><a class="dropdown-item" href="#">Print</a></li>
+                <li><a class="dropdown-item" href="#">Delete</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end payment-card-wrap -->
       </section>
       <!-- end payment card -->
+
 
 
      
@@ -1109,7 +1169,7 @@
       <!-- card  -->
       <section>
         <div class="component-title">
-          <h4>Blog Cards</h4>
+          <h4>Basic Cards</h4>
         </div>
         <div class="card-blog">
            <div class="card-blog__img">
@@ -1164,6 +1224,248 @@
             </div>
           </div>
         </div> 
+        <br>
+        <div class="row">
+          <div class=" col-lg-4 col-md-6">
+            <div class="card-aligned">
+              <div class="card-aligned__icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.2" d="M4.13848 9.32695C4.04778 9.48078 3.99997 9.6561 4 9.83468V22.165C4 22.3424 4.04721 22.5167 4.13679 22.6698C4.22637 22.823 4.35509 22.9496 4.50974 23.0366L15.5097 29.2241C15.6594 29.3083 15.8283 29.3525 16 29.3525L16.0013 29.3525L16.1186 15.9998L4.1385 9.32697L4.13848 9.32695Z" fill="currentColor"/>
+                  <path d="M28 22.1651V9.83477C28 9.65733 27.9528 9.48309 27.8632 9.32992C27.7736 9.17675 27.6449 9.05018 27.4903 8.96319L16.4903 2.77569C16.3406 2.6915 16.1717 2.64727 16 2.64727C15.8283 2.64727 15.6594 2.6915 15.5097 2.77569L4.50974 8.96319C4.35509 9.05018 4.22637 9.17675 4.13679 9.32992C4.04721 9.48309 4 9.65733 4 9.83477V22.1651C4 22.3425 4.04721 22.5167 4.13679 22.6699C4.22637 22.8231 4.35509 22.9497 4.50974 23.0366L15.5097 29.2241C15.6594 29.3083 15.8283 29.3526 16 29.3526C16.1717 29.3526 16.3406 29.3083 16.4903 29.2241L27.4903 23.0366C27.6449 22.9497 27.7736 22.8231 27.8632 22.6699C27.9528 22.5167 28 22.3425 28 22.1651Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22.1278 19.0635V12.5635L10 5.87461" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.8623 9.3282L16.1188 15.9998L4.13867 9.32695" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.1193 15.9996L16.002 29.3523" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="card-aligned__info">
+                <h2>This is a card title </h2>
+                <p>
+                  Donec aliquet ut diam ut dictum. Donec ornare erat enim, sollicitudin tristique libero tincidunt a. Vestibulum ultrices odio quis tortor viverra commodo.
+                </p>
+                <a href="#"  class="btn btn-outline-primary pill btn-icon">
+                  <span class="button-content-wrapper">
+                      <span class="button-icon align-icon-right">
+                        <i class="ph-arrow-right"></i>
+                      </span>
+                  <span class="button-text">
+                        Read more 
+                      </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class=" col-lg-4 col-md-6">
+            <div class="card-aligned card-aligned--center">
+              <div class="card-aligned__icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.2" d="M4.13848 9.32695C4.04778 9.48078 3.99997 9.6561 4 9.83468V22.165C4 22.3424 4.04721 22.5167 4.13679 22.6698C4.22637 22.823 4.35509 22.9496 4.50974 23.0366L15.5097 29.2241C15.6594 29.3083 15.8283 29.3525 16 29.3525L16.0013 29.3525L16.1186 15.9998L4.1385 9.32697L4.13848 9.32695Z" fill="currentColor"/>
+                  <path d="M28 22.1651V9.83477C28 9.65733 27.9528 9.48309 27.8632 9.32992C27.7736 9.17675 27.6449 9.05018 27.4903 8.96319L16.4903 2.77569C16.3406 2.6915 16.1717 2.64727 16 2.64727C15.8283 2.64727 15.6594 2.6915 15.5097 2.77569L4.50974 8.96319C4.35509 9.05018 4.22637 9.17675 4.13679 9.32992C4.04721 9.48309 4 9.65733 4 9.83477V22.1651C4 22.3425 4.04721 22.5167 4.13679 22.6699C4.22637 22.8231 4.35509 22.9497 4.50974 23.0366L15.5097 29.2241C15.6594 29.3083 15.8283 29.3526 16 29.3526C16.1717 29.3526 16.3406 29.3083 16.4903 29.2241L27.4903 23.0366C27.6449 22.9497 27.7736 22.8231 27.8632 22.6699C27.9528 22.5167 28 22.3425 28 22.1651Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22.1278 19.0635V12.5635L10 5.87461" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.8623 9.3282L16.1188 15.9998L4.13867 9.32695" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.1193 15.9996L16.002 29.3523" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="card-aligned__info">
+                <h2>This is a card title </h2>
+                <p>
+                  Donec aliquet ut diam ut dictum. Donec ornare erat enim, sollicitudin tristique libero tincidunt a. Vestibulum ultrices odio quis tortor viverra commodo.
+                </p>
+                <a href="#"  class="btn btn-outline-primary pill btn-icon">
+                  <span class="button-content-wrapper">
+                      <span class="button-icon align-icon-right">
+                        <i class="ph-arrow-right"></i>
+                      </span>
+                  <span class="button-text">
+                        Read more 
+                      </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class=" col-lg-4 col-md-6">
+            
+            <div class="card-aligned card-aligned--right">
+              <div class="card-aligned__icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.2" d="M4.13848 9.32695C4.04778 9.48078 3.99997 9.6561 4 9.83468V22.165C4 22.3424 4.04721 22.5167 4.13679 22.6698C4.22637 22.823 4.35509 22.9496 4.50974 23.0366L15.5097 29.2241C15.6594 29.3083 15.8283 29.3525 16 29.3525L16.0013 29.3525L16.1186 15.9998L4.1385 9.32697L4.13848 9.32695Z" fill="currentColor"/>
+                  <path d="M28 22.1651V9.83477C28 9.65733 27.9528 9.48309 27.8632 9.32992C27.7736 9.17675 27.6449 9.05018 27.4903 8.96319L16.4903 2.77569C16.3406 2.6915 16.1717 2.64727 16 2.64727C15.8283 2.64727 15.6594 2.6915 15.5097 2.77569L4.50974 8.96319C4.35509 9.05018 4.22637 9.17675 4.13679 9.32992C4.04721 9.48309 4 9.65733 4 9.83477V22.1651C4 22.3425 4.04721 22.5167 4.13679 22.6699C4.22637 22.8231 4.35509 22.9497 4.50974 23.0366L15.5097 29.2241C15.6594 29.3083 15.8283 29.3526 16 29.3526C16.1717 29.3526 16.3406 29.3083 16.4903 29.2241L27.4903 23.0366C27.6449 22.9497 27.7736 22.8231 27.8632 22.6699C27.9528 22.5167 28 22.3425 28 22.1651Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22.1278 19.0635V12.5635L10 5.87461" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.8623 9.3282L16.1188 15.9998L4.13867 9.32695" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.1193 15.9996L16.002 29.3523" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="card-aligned__info">
+                <h2>This is a card title </h2>
+                <p>
+                  Donec aliquet ut diam ut dictum. Donec ornare erat enim, sollicitudin tristique libero tincidunt a. Vestibulum ultrices odio quis tortor viverra commodo.
+                </p>
+                <a href="#"  class="btn btn-outline-primary pill btn-icon">
+                  <span class="button-content-wrapper">
+                      <span class="button-icon align-icon-right">
+                        <i class="ph-arrow-right"></i>
+                      </span>
+                  <span class="button-text">
+                        Read more 
+                      </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <!-- Background bg blog card   -->
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="card-bg" >
+              <div class="card-bg__content" style="background: url('assets/images/all-img/cards/img-one.jpg') center center/cover no-repeat;">
+                <h2>This is a Basic Card Title</h2>
+                <p>Morbi pretium mollis justo, vitae dictum eros mollis ut. Aliquam erat volutpat. Ut egestas ipsum ut eros vulputate dapibus.</p>
+                <a href="#" class="btn btn-primary2 pill btn-icon">
+                  <span class="button-content-wrapper">
+                      <span class="button-icon align-icon-right">
+                        <i class="ph-arrow-right"></i>
+                      </span>
+                  <span class="button-text">
+                        Read More 
+                      </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card-basic">
+              <h2>This is a Basic Card Title </h2>
+              <p>
+                Morbi pretium mollis justo, vitae dictum eros mollis ut. Aliquam erat volutpat. Ut egestas ipsum ut eros vulputate dapibus.
+              </p>
+              <a href="#" class="card-basic-redirect">
+                Card Link
+                <span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.125 10H16.875" stroke="#005CE8" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M11.25 4.375L16.875 10L11.25 15.625" stroke="#005CE8" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>                    
+                 </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card-basic card-basic--bg" style="background: url('assets/images/all-img/cards/img-two.png') center center/cover no-repeat;">
+              <h2>This is a Basic Card Title </h2>
+              <p>
+                Morbi pretium mollis justo, vitae dictum eros mollis ut. Aliquam erat volutpat. Ut egestas ipsum ut eros vulputate dapibus.
+              </p>
+              <a href="#" class="card-basic-redirect">
+                Card Link
+                <span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.125 10H16.875" stroke="#fff" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M11.25 4.375L16.875 10L11.25 15.625" stroke="#fff" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>                    
+                 </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <!-- Priority card  -->
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="card-priority">
+              <!-- top bar  -->
+              <div class="card-priority__header">
+                <div class="date">
+                  <span class="icon">
+                   <img src="assets/images/svg/clock.svg" alt="clock">
+                  </span>
+                  <p>14 Nov, 2021</p>
+                </div>
+                  <!-- actions  -->
+                  <div class="card-priority__actions">
+                      <span class="toggle-icon">
+                        <img src="assets/images/svg/outline.svg" alt="toggle-icon">
+                      </span>
+                      <ul class="dropdown-actions">
+                        <li>
+                          <a href="#">
+                            <span>
+                              <img src="assets/images/svg/pen.svg" alt="pen">
+                            </span>
+                            Edit  
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>
+                              <img src="assets/images/svg/copy-link.svg" alt="copylink">
+                            </span>
+                            Copy Link
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>
+                              <img src="assets/images/svg/trash.svg" alt="copylink">
+                            </span>
+                            Delete
+                          </a>
+                        </li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- Img Content  -->
+              <div class="card-priority__img">
+                <img src="assets/images/all-img/img-two.png" alt="">
+              </div>
+              <!-- labels  -->
+              <div class="card-priority__labels">
+                <ul>
+                  <li><span class="labels medium">Medium Priority</span></li>
+                  <li><span class="labels urgent">Urgents</span></li>
+                </ul>
+              </div>
+              <h2 class="card-priority__title">
+                Meeting with UI/UX Team to manage our  upcoming projects & task.
+              </h2>
+              <!-- priority footer  -->
+              <div class="card-priority__footer">
+                <div>
+                  <ul class="labels-info">
+                      <li>
+                          <a href="#">
+                              <span>
+                                <img src="assets/images/svg/attach.svg" alt="icon">
+                              </span>
+                              5
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                            <span>
+                              <img src="assets/images/svg/comments.svg" alt="icon">
+                            </span>
+                            19
+                          </a>
+                      </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul class="users">
+                    <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                    <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                    <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                    <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section> 
     </div>
 </main>
