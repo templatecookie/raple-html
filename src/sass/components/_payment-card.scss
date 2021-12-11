@@ -25,3 +25,89 @@
 }
 
 // card add end
+
+.payment-card {
+  &-wrap {
+    width: 382px;
+    padding: 28px 32px 28px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center center;
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 55px;
+    position: relative;
+    justify-content: space-between;
+    h4 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0;
+      color: white;
+      span {
+        font-weight: 400;
+        opacity: 0.5;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      margin: 0;
+      color: white;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    button.dots-btn {
+      border: none;
+      background-color: transparent;
+      line-height: 1;
+    }
+  }
+  &-number {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      #textToCopy,
+      #textToCopy2 {
+        font-size: 24px;
+        color: white;
+        margin: 0;
+      }
+      button#copyButton,
+      button#copyButton2 {
+        border: none;
+        line-height: 1;
+        background-color: transparent;
+      }
+    }
+    &-right {
+      p {
+        font-size: 12px;
+        font-weight: normal;
+        margin: 0 0 4px;
+        color: white;
+        opacity: 0.6;
+      }
+      h5 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        line-height: 100%;
+      }
+    }
+  }
+}
