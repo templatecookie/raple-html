@@ -1,0 +1,23 @@
+.banner {
+  &-wrap {
+    display: flex;
+    padding: 24px;
+    width: 324px;
+    border-radius: 6px;
+  }
+  &-icon {
+    flex-shrink: 0;
+    margin-right: 24px;
+  }
+  &-data {
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0 0 16px;
+      color: var(--gray-900);
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
