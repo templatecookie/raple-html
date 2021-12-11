@@ -230,6 +230,11 @@ blockquote {
 .pointer {
   cursor: pointer;
 }
+.text-hide{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 // slick slider gap
 
 .slick-slide {

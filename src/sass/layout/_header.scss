@@ -95,9 +95,9 @@ padding-right: 15px;
   overflow: hidden;
   .page-content {
     padding: {
-      top: 98px;
-      left: 160px;
-      right: 160px;
+      top: 97px;
+      left: 40px;
+      right: 40px;
     }
     .container-fluid{
       padding: 0px;
@@ -121,9 +121,9 @@ padding-right: 15px;
 }
 
 .dashboard-message {
-  padding-left: 172px;
+  padding-left: 40px;
   @include breakpoint(xxl2) {
-    padding-left: 32px;
+    padding-left: 30px;
   }
   @include breakpoint(xs){
     padding-left: 0px;

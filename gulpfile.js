@@ -49,7 +49,7 @@ function serve(done) {
 
 function nunjucks(done) {
     console.log("Rendering nunjucks files..");
-    return src(files.pages + '/**/*.+(html|js|css)')
+    return src(files.pages + '/**/*.+(html|nunjucks|njk)')
         .pipe(nunjucksRender({
             path: [files.templates],
             watch: true,

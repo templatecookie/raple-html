@@ -27,8 +27,7 @@
   <div class="rt-mobile-menu-overlay"></div><!-- /.rt-mobile-menu-overlay -->
   <div id="template2" style="display: none">
     <div class="PopoverParent">
-      <div class="PopoverContent">
-        <div class="Popover-header">
+    <div class="Popover-header">
           <a
             class="rt-single-icon-box user-profile-icon-big rt-align-center"
             href="#"
@@ -47,6 +46,8 @@
             </div>
           </a>
         </div>
+      <div class="PopoverContent">
+        
         <div class="popoverInnerContent">
           <ul class="user_menu">
             <li>
@@ -137,16 +138,16 @@
   </div>
   
   <div id="template" style="display: none">
-    <div class="PopoverParent">
-      <div class="PopoverContent">
-        <div class="popoverInnerContent">
-          <div class="Popover-header d-flex justify-content-between">
+    <div class="PopoverParent min-372">
+     <div class="Popover-header d-flex justify-content-between">
               <div class="d-blok f-size-14 line-height-20 text-gray-900">Notification</div>
               <div class="d-blok f-size-14 text-gray-700 pointer">Clear All</div>
           </div>
+      <div class="PopoverContent">
+        <div class="popoverInnerContent">
           <div class="notifybox">
-            <ul class="notify-lists">
-              {% include "../components/notification.njk" %}
+            <ul class="notify-lists rt-list">
+              {% include "../components/notification.html" %}
             </ul>
           </div>
           
