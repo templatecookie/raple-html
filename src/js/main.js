@@ -171,4 +171,13 @@
   });
 
   //hide & show
+
+
+  // dropdown 
+  const dropdownBtn = document.querySelector('toggle-icon');
+
+  dropdownBtn.addEventListener('click', function () { 
+    document.querySelector('.dropdown-actions').classList.toggle('show');
+  })
+
 })(jQuery);
