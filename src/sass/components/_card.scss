@@ -166,10 +166,51 @@
 }
 
 
+// Aligned Blog Cards 
+.card-aligned { 
+  padding: 32px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  max-width: 505px;
+  box-shadow: 0px 8px 24px 0px #00000008;
+  &:hover {   
+    .card-aligned__icon { 
+      color: #fff;
+      background-color: var(--primary-500);
+      svg { 
+        transform: scale(1.3);
+      }
+    }
+  }
+  &__icon { 
+    width: 80px;
+    height: 80px;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 24px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    color: var(--primary-500);
+    transition: all 0.3s linear;
+    background-color: var(--primary-50);
+    svg { 
+      transform: scale(1);
+      transition: all 0.3s linear;
+    }
+  }
 
-// Key frames 
-@keyframes shine {
-	100% {
-		left: 125%;
-	}
+  &__info { 
+    h2 { 
+      @extend %text-one;
+      margin-bottom: 12px;
+    }
+
+    p { 
+      @extend %text-para;
+      margin-bottom: 24px;
+    }
+  }
 }
+
