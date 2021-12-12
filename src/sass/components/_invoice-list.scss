@@ -15,7 +15,7 @@
           border-color: var(--primary-500);
           box-shadow: 0 2px 8px rgb(14 95 217 / 24%);
         }
-        td {
+        &:hover td {
           color: var(--gray-900);
         }
         &:hover .btn-icon {
@@ -28,8 +28,8 @@
           }
         }
         &:hover .icon-btn {
-          background-color: white;
-          border-color: white;
+          background-color: white !important;
+          border-color: white !important;
         }
       }
     }
