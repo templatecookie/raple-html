@@ -26,10 +26,10 @@
   box-sizing: border-box;
   box-shadow: 0px 4px 24px rgba(25, 27, 28, 0.16);
   border-radius: 4px;
-  transform: translateX(490px);
+  min-width: 160px;
 }
 .dropdown-item {
-  color: var(--gray-400);
+  color: var(--gray-600);
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -37,5 +37,17 @@
   &:hover {
     background-color: transparent;
     color: var(--danger-500);
+  }
+  svg {
+    margin-right: 4px;
+  }
+  path {
+    transition: all 0.4s;
+    stroke: var(--gray-600);
+  }
+  &:hover {
+    path {
+      stroke: var(--danger-500);
+    }
   }
 }
