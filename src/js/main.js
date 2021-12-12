@@ -195,12 +195,14 @@
       $("body").attr("data-layout", "horizental");
     }
   });
+
   $("#layout").on("click", function () {
     $("#appSettings").toggleClass("open");
     $(".settings-overlay").addClass("open")
     
   });
-  $(".settings-overlay").on("click", function () {
+  
+  $(".settings-overlay, #closesetting").on("click", function () {
     $("#appSettings").removeClass("open");
     $(".settings-overlay").removeClass("open")
     
