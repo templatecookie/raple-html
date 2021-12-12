@@ -236,104 +236,21 @@
     display: none;
   }
 }
-.top-navbar{
+.top-navbar {
   display: none;
 }
 [data-layout="horizental"] {
   .app-sidebar {
-   display: none;
+    display: none;
   }
-  .top-navbar{
+  .top-navbar {
     background-color: #fff;
     padding: 0px 180px;
     display: block;
-    @include breakpoint(xxl2){
+    @include breakpoint(xxl2) {
       padding-left: 80px;
       padding-right: 80px;
     }
   }
-  .sidebar-menu {
-    ul {
-      margin: 0;
-      padding: 0px;
-      list-style: none;
-   
-      li {
-        position: relative;
-        display: inline-block;
-      
-        &.has-child {
-          > a {
-            position: relative;
-            &::after {
-              content: "\f101";
-              font-family: "flaticon";
-              font-size: 12px;
-              @include rt-trs(0.24s);
-              position: absolute;
-              right: 0px;
-              top: 50%;
-              transform: translateY(-50%);
-            }
-          }
-        }
-        a {
-          display: flex;
-          text-transform: capitalize;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 20px;
-          padding: 16px 27px;
-          color: var(--gray-500);
-          .icon-box {
-            font-size: 20px;
-            margin-right: 10px;
-          }
-        }
-        &:first-child{
-          a{
-          padding-left: 0px;
-          }
-        }
-        &:last-child{
-          a{
-            padding-right: 0px;
-          }
-        }
-      }
-    }
-    
-    ul ul,
-    ul.sub-menu {
-      position: absolute;
-      left: 0;
-      top: 100%;
-      border: 1px solid var(--gray-100);
-      padding-left: 0px;
-      border-left: transparent;
-      @include hidden();
-      height: auto !important;
-      display: none;
-      > li {
-        > a {
-          width: 200px;
-          line-height: 32px;
-          background-color: #fff;
-          padding: 6px 24px;
-          z-index: 8989;
-          color: var(--gray-600);
-        }
-        &:hover {
-          > a {
-            color: var(--primary-500);
-          }
-        }
-      }
-    }
-    ul > li.has-child:hover ul,
-    ul > li.has-child:hover ul.sub-menu {
-      @include vis();
-      display: block;
-    }
-  }
+ 
 }

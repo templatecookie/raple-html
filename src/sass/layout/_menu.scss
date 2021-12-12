@@ -5,26 +5,29 @@
   list-style: outside none none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: left;
   margin-right: -18px;
-  @include breakpoint(xxl) {
-    margin-right: -14px;
-  }
 
   li {
     display: inline-block;
     position: relative;
+
     &.has-megamenu {
       position: static;
     }
+
     a {
-      color: var(--gray-700);
-      display: block;
-      font-size: var(--fs-lg-16);
-      font-family: $body-font;
-      @include rt-trs(0.24s);
-      padding: 0 18px;
+      display: flex;
+      text-transform: capitalize;
+      font-size: 14px;
       font-weight: 400;
+      line-height: 20px;
+      padding: 16px 12px;
+      color: var(--gray-500);
+      .icon-box {
+        font-size: 20px;
+        margin-right: 10px;
+      }
       @include breakpoint(xxl) {
         padding: 0 14px;
       }
@@ -43,18 +46,17 @@
   outline: none;
   text-decoration: none;
 }
+.main-menu > ul > li {
+  &:first-child {
+    > a {
+      padding-left: 0px;
+    }
+  }
+}
 
 .main-menu > ul > li.current-menu-item > a,
 .main-menu ul li a.active {
   color: var(--primary-500);
-}
-
-/*change hover color*/
-.main-menu > ul > li > a {
-  line-height: 104px;
-  @include breakpoint(lg) {
-    line-height: 1.9;
-  }
 }
 
 .main-menu > ul > li:hover > a {
@@ -91,33 +93,20 @@
 .main-menu > ul > li.menu-item-has-children > ul.sub-menu {
   position: absolute;
   left: 0;
-  top: 80%;
+  top: 100%;
   background: #fff;
   z-index: 999;
   color: #fff;
   text-align: left;
-  border-radius: 8px;
+  border-radius: 4px;
   min-width: 248px;
   transition: all 0.24s ease-in-out;
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border: 1px solid var(--gray-100);
-  box-shadow: 0px 12px 32px rgba(25, 31, 51, 0.08);
+  box-shadow: 0px 4px 24px rgba(25, 27, 28, 0.16);
   @include hidden();
-  // &:before {
-  //     content: "";
-  //     position: absolute;
-  //     top: 2px;
-  //     left: 45px;
-  //     box-sizing: border-box;
-  //     border: 7px solid #495057;
-  //     border-color: transparent transparent #ffffff #ffffff;
-  //     transform-origin: 0 0;
-  //     transform: rotate(135deg);
-  //     box-shadow: -2px 2px 2px -1px rgba(60, 72, 88, 0.15);
-  //     @include breakpoint(md) {
-  //         display: none
-  //     }
-  // }
+
 }
 
 .main-menu > ul > li.menu-item-has-children:hover > ul.sub-menu {
@@ -138,14 +127,14 @@
 .main-menu > ul > li.menu-item-has-children > ul.sub-menu > li > a,
 .main-menu ul ul li a {
   display: block;
-  padding: 8px 15px;
+  padding: 6px 20px;
+  line-height: 20px;
   border-bottom: 1px solid rgba(#ccc, 0);
   text-transform: capitalize;
-  color: var(--gray-700);
+  color: var(--gray-500);
   font-weight: 400;
   @include afterparent();
   font-size: 14px;
-  border-radius: 4px;
 }
 
 .main-menu > ul > li.menu-item-has-children > ul.sub-menu > li:last-child > a,
@@ -156,9 +145,9 @@
 .main-menu > ul > li.menu-item-has-children > ul.sub-menu > li:hover > a,
 .main-menu ul ul > li:hover > a {
   // padding-left: 25px;
-  color: var(--primary-500);
+  color: white;
 
-  background: var(--primary-50);
+  background: var(--primary-500);
 }
 
 /*// drop menu cart*/
@@ -190,25 +179,12 @@
   border-radius: 8px;
   min-width: 248px;
   transition: all 0.24s ease-in-out;
-  padding: 12px;
+padding-top: 12px;
+padding-bottom: 12px;
   border: 1px solid var(--gray-100);
-  box-shadow: 0px 12px 32px rgba(25, 31, 51, 0.08);
+  box-shadow: 0px 4px 24px rgba(25, 27, 28, 0.16);
   @include hidden();
-  // &:before {
-  //     content: "";
-  //     position: absolute;
-  //     top: 14px;
-  //     left: 2px;
-  //     box-sizing: border-box;
-  //     border: 7px solid #495057;
-  //     border-color: transparent transparent #ffffff #ffffff;
-  //     transform-origin: 0 0;
-  //     transform: rotate(44deg);
-  //     box-shadow: -2px 2px 2px -1px rgba(60, 72, 88, 0.15);
-  //     @include breakpoint(md) {
-  //         display: none;
-  //     }
-  // }
+
 }
 
 .main-menu
@@ -225,7 +201,7 @@
   > ul.sub-menu
   > li.menu-item-has-children:hover
   > ul.sub-menu {
-  left: 242px;
+  left: 248px;
   @include vis();
 }
 

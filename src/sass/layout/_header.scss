@@ -301,7 +301,22 @@
   min-height: 100vh;
   position: relative;
 }
+
+[data-layout="vertical"] {
+  .for-h {
+    display: none;
+  }
+}
 [data-layout="horizental"] {
+  .content-wrapper{
+    margin-left: 0px;
+  }
+  .for-h {
+    display: block;
+  }
+  .for-v{
+    display: none;
+  }
   .app-header {
     background: var(--gray-900);
     border-bottom: none;
@@ -323,7 +338,6 @@
   }
   .app-mian-serach {
     display: none;
-
   }
   .navbar {
     padding: {
