@@ -1,0 +1,88 @@
+.invoice-table-list {
+  @include breakpoint(lg) {
+    overflow-x: scroll;
+  }
+  table {
+    width: 100%;
+
+    tbody {
+      vertical-align: middle;
+      tr {
+        transition: all 0.4s;
+        &:hover {
+          background-color: var(--primary-50);
+        }
+        &:hover .form-check-input {
+          border-color: var(--primary-500);
+          box-shadow: 0 2px 8px rgb(14 95 217 / 24%);
+        }
+        td {
+          color: var(--gray-900);
+        }
+        &:hover .btn-icon {
+          color: white;
+          background-color: var(--primary-500);
+        }
+        &:hover .button-icon {
+          path {
+            stroke: white;
+          }
+        }
+        &:hover .icon-btn {
+          background-color: white;
+          border-color: white;
+        }
+      }
+    }
+    td.large-width {
+      width: 180px;
+      @include breakpoint(lg) {
+        width: auto;
+      }
+    }
+    td.large-width2 {
+      width: 130px;
+      @include breakpoint(lg) {
+        width: auto;
+      }
+    }
+    td {
+      padding: 16px 24px;
+      font-size: 14px;
+      @include breakpoint(lg) {
+        min-width: 180px;
+        padding: 16px;
+      }
+      color: var(--gray-700);
+    }
+    .form-check-input {
+      margin: 0;
+      margin-right: 24px;
+      @include breakpoint(lg) {
+        margin-right: 16px;
+      }
+    }
+    .table-btn-wrap {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .button-icon {
+      path {
+        stroke: var(--primary-500);
+      }
+    }
+    .country-flag,
+    .paid-wrap {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 8px;
+      }
+    }
+    .btn.icon-btn {
+      margin-left: 12px;
+    }
+  }
+}

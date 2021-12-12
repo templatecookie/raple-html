@@ -2,17 +2,17 @@ $primary_color: var(--primary-500);
 #{$all-text-inputs},
 .card-element,
 .form-control {
-  height: 48px;
+  height: 40px;
   display: block;
   width: 100%;
-  padding: 20px;
-  border: 1px solid var(--gray-50);
-  font-size: 16px;
+  padding: 10px 16px;
+  border: 1px solid var(--gray-100);
+  font-size: 14px;
   background-color: #fff;
   position: relative;
   font-weight: 400;
   color: var(--gray-900);
-  border-radius: 5px;
+  border-radius: 4px;
   transition: all 0.24s ease-in-out;
 
   &.pill {
@@ -20,7 +20,7 @@ $primary_color: var(--primary-500);
   }
   &::placeholder {
     color: var(--gray-400);
-    font-size: 16px;
+    font-size: 14px;
     text-transform: capitalize;
     font-weight: 400;
   }
@@ -82,7 +82,46 @@ select,
     transform: translateY(-50%);
     z-index: 2;
     cursor: pointer;
+    display: none;
+    img {
+      width: 20px;
+    }
   }
+  &.success,
+  &.warning {
+    .form-control {
+      padding: 10px 40px 10px 16px;
+      background-color: var(--success-50);
+      border: 1px solid var(--success-500);
+      &::placeholder {
+        color: var(--gray-700);
+      }
+      &:focus {
+        border-color: var(--success-500) !important;
+      }
+    }
+    .has-badge {
+      display: block !important;
+    }
+  }
+  &.warning {
+    .form-control {
+      background-color: var(--danger-50);
+      border: 1px solid var(--danger-500);
+      &:focus {
+        border-color: var(--danger-500) !important;
+      }
+    }
+  }
+  &.eye {
+    .form-control {
+      padding: 10px 40px 10px 16px;
+    }
+    .has-badge {
+      display: block !important;
+    }
+  }
+
   .icon-badge,
   .icon-badge-2 {
     position: absolute;
@@ -92,12 +131,12 @@ select,
     z-index: 2;
   }
   .icon-badge-2 {
-    left: 20px;
+    left: 15px;
   }
   &.has-icon {
     #{$all-text-inputs},
     .form-control {
-      padding-left: 36px;
+      padding-left: 45px;
     }
   }
   &.has-icon2 {
@@ -111,7 +150,7 @@ select,
 #{$all-text-inputs-focus},
 .form-control:focus {
   box-shadow: none !important;
-  border-color: var(--primary-600) !important;
+  border-color: var(--primary-500) !important;
   outline: none;
 }
 
@@ -477,5 +516,35 @@ select,
       @include vis();
       animation: zoomIn 0.24s ease-in-out;
     }
+  }
+}
+
+// date picker
+
+#date {
+  width: 150px;
+  outline: none;
+  border: 1px solid #aaa;
+  padding: 6px 28px;
+  color: #aaa;
+}
+
+.date-container {
+  position: relative;
+  float: left;
+  .date-text {
+    position: absolute;
+    top: 6px;
+    left: 12px;
+    color: #aaa;
+  }
+
+  .date-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* pointer-events: none; */
+    cursor: pointer;
+    color: #aaa;
   }
 }
