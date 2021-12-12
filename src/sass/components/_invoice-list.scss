@@ -4,7 +4,6 @@
   }
   table {
     width: 100%;
-
     tbody {
       vertical-align: middle;
       tr {
@@ -36,22 +35,16 @@
     }
     td.large-width {
       width: 180px;
-      @include breakpoint(lg) {
-        width: auto;
-      }
     }
     td.large-width2 {
       width: 130px;
-      @include breakpoint(lg) {
-        width: auto;
-      }
     }
     td {
       padding: 16px 24px;
       font-size: 14px;
+      white-space: nowrap;
       @include breakpoint(lg) {
-        min-width: 180px;
-        padding: 16px;
+        padding: 16px 20px;
       }
       color: var(--gray-700);
     }
