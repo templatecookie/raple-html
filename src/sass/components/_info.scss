@@ -1,0 +1,28 @@
+.info {
+  &-item {
+    display: flex;
+    margin-bottom: 24px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &-icon {
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+  &-data {
+    p {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 100%;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      color: var(--gray-400);
+    }
+    a {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--gray-900);
+    }
+  }
+}

@@ -125,3 +125,42 @@
     }
   }
 }
+
+.about-content,
+.social-icon {
+  h4 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    color: var(--gray-900);
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray-500);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.biography-details {
+  margin-top: 24px;
+  ul {
+    li {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      color: var(--gray-900);
+      span {
+        color: var(--gray-400);
+        width: 135px;
+        display: inline-block;
+      }
+    }
+  }
+}
