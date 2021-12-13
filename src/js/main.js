@@ -196,6 +196,22 @@
     }
   });
 
+  $("#seibar_black").change(function () {
+    if ($(this).is(":checked")) {
+      $("body").attr("data-sidebar", "black");
+    }
+  });
+  $("#seibar_navy").change(function () {
+    if ($(this).is(":checked")) {
+      $("body").attr("data-sidebar", "blue");
+    }
+  });
+  $("#seibar_white").change(function () {
+    if ($(this).is(":checked")) {
+      $("body").attr("data-sidebar", "white");
+    }
+  });
+
   $("#layout").on("click", function () {
     $("#appSettings").toggleClass("open");
     $(".settings-overlay").addClass("open")

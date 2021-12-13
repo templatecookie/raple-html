@@ -22,6 +22,15 @@
     box-sizing: border-box;
     box-shadow: 0px 4px 12px rgba(25, 27, 28, 0.06);
     border-radius: 4px;
+    label{
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--gray-900)
+    }
+    &.no-shadow{
+      border: none;
+      box-shadow: none;
+    }
     cursor: pointer;
     margin:0px;
     .form-check-input {
@@ -47,6 +56,10 @@
     padding: 16px 24px;
     box-shadow: inset 0px -1px 0px #E5E7E8;
   }
+  hr{
+    margin-left: -24px;
+    margin-right: -24px;
+  }
 }
 .settings-overlay {
   position: fixed;
@@ -63,4 +76,12 @@
     z-index: 9999;
     @include vis();
   }
+}
+
+.setting-title{
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--text-gray-900);
+  font-weight: 600;
+  margin-bottom: 20px;
 }

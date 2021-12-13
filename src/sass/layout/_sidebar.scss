@@ -6,7 +6,7 @@
   background-color: #fff;
   min-height: calc(100vh - 70px);
   bottom: 0;
-  z-index: 99;
+  z-index: 999;
   margin-top: 0px;
   transition: background 0.3s, width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
   @include breakpoint(md) {
@@ -71,10 +71,12 @@
     ul ul,
     ul.sub-menu {
       padding-left: 32px;
+      margin-top: 2px;
 
       > li {
         a {
           position: relative;
+          padding: 6px 24px;
           // &::after{
           //   position: absolute;
           //   left: 0px;
@@ -124,6 +126,9 @@
 }
 
 .sidebar-collapse {
+  .sidebar-menu ul li.menu-title{
+    display: none;
+  }
   .app-sidebar {
     width: 80px;
     position: absolute;
@@ -251,4 +256,60 @@
     }
   }
  
+}
+
+
+[data-sidebar="white"]{
+  .app-sidebar{
+    background-color: #fff;
+  }
+}
+
+[data-sidebar="black"]{
+  .app-sidebar{
+    background-color:  var(--gray-900);
+  }
+  .sidebar-menu>ul>li.mm-active>a{
+    background-color: #f5f6f7;
+    color: var(--gray-900);
+  }
+  .sidebar-menu ul li a{
+    color: var(--gray-200);
+  }
+  .sidebar-menu>ul>li.mm-active:hover>a .icon-box{
+    color: var(--primary-500);
+  }
+  .sidebar-menu>ul>li:hover>a .icon-box,
+  .sidebar-menu ul ul ul>li.mm-active a, .sidebar-menu ul ul ul>li:hover a, .sidebar-menu ul ul.sub-menu>li.mm-active a, .sidebar-menu ul ul.sub-menu>li:hover a
+
+  
+  {
+    color: var(--gray-50);
+  }
+}
+
+[data-sidebar="blue"]{
+  .app-sidebar{
+    background-color: var(--primary-500);
+  }
+  .sidebar-menu ul li.menu-title{
+    color: var(--gray-200);
+  }
+  .sidebar-menu>ul>li.mm-active>a{
+    background-color: #f5f6f7;
+    color: var(--gray-900);
+  }
+  .sidebar-menu ul li a{
+    color: var(--gray-50);
+  }
+  .sidebar-menu>ul>li.mm-active:hover>a .icon-box{
+    color: var(--primary-500);
+  }
+  .sidebar-menu>ul>li:hover>a .icon-box,
+  .sidebar-menu ul ul ul>li.mm-active a, .sidebar-menu ul ul ul>li:hover a, .sidebar-menu ul ul.sub-menu>li.mm-active a, .sidebar-menu ul ul.sub-menu>li:hover a
+
+  
+  {
+    color: var(--gray-50);
+  }
 }
