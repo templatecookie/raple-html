@@ -156,38 +156,7 @@
 
 
 
-  // copyToClipboard
-  const copy = document.getElementById ("copyButton");
-  const selection = window.getSelection();
-  const range = document.createRange();
-  const textToCopy = document.getElementById("textToCopy")
-
-  // copy.addEventListener('click', function(e) {
-  //     range.selectNodeContents(textToCopy);
-  //     selection.removeAllRanges();
-  //     selection.addRange(range);
-  //     const successful = document.execCommand('copy');
-  //     if(successful){
-  //     }
-  //     window.getSelection().removeAllRanges()
-  // });
-  //end one
-
-  const copy2 = document.getElementById ("copyButton2");
-  const selection2 = window.getSelection();
-  const range2 = document.createRange();
-  const textToCopy2 = document.getElementById("textToCopy2")
-  // copy2.addEventListener('click', function(e) {
-  //     range2.selectNodeContents(textToCopy2);
-  //     selection2.removeAllRanges();
-  //     selection2.addRange(range2);
-  //     const successful2 = document.execCommand('copy');
-  //     if(successful2){
-  //     }
-  //     window.getSelection().removeAllRanges()
-  // });
-
-  // end copytoclipboard
+  
 
 
   $("#horizental_label").change(function () {
@@ -226,6 +195,78 @@
 
   //hide & show
 
+
+  //all chart
+  var barchartOne = {
+    chart: {
+      height: 148,
+      type: 'bar',
+      stacked: true,
+      stackType: '20%',
+      toolbar: {
+        autoSelected: 'pan',
+        show: false,
+      },
+      offsetX: 0,
+      offsetY: 0,
+      zoom: {
+        enabled: false,
+      },
+      sparkline: {
+        enabled: true,
+      },
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: '40px',
+        barHeight: '100%',
+        borderRadius: 4,
+        rangeBarOverlap: false,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: { curve: 'smooth', width: 2 },
+    series: [
+      {
+        data: [1000, 400, 1000, 600, 700, 400, 800],
+      },
+      {
+        data: [300, 600, 150, 400, 450, 700, 400],
+      },
+    ],
+    colors: ['#0E5FD9', '#F0F6FF'],
+
+    tooltip: {
+      theme: 'dark',
+    },
+    grid: {
+      show: false,
+     
+    },
+    yaxis: {
+      show: false,
+    },
+    fill: {
+      type: 'dashed',
+      opacity: [1, 1],
+    },
+    xaxis: {
+      show: false,
+    },
+    legend: {
+      show: false,
+    },
+  };
+
+if (document.getElementById('bar-chart1')) {
+    var chart = new ApexCharts(
+      document.querySelector('#bar-chart1'),
+      barchartOne
+    );
+    chart.render();
+  } 
 
 
 })(jQuery);
