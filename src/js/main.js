@@ -337,12 +337,168 @@ if (document.getElementById('bar-chart1')) {
     },
   };
   if (document.getElementById('area-spaline-bottom')) {
-    var chart3 = new ApexCharts(
+    var chart2 = new ApexCharts(
       document.querySelector('#area-spaline-bottom'),
       options
     );
 
+    chart2.render();
+  }
+  var options2 = {
+    chart: {
+      height: 62,
+      type: 'area',
+      toolbar: {
+        autoSelected: 'pan',
+        show: false,
+      },
+      offsetX: 0,
+      offsetY: 0,
+      zoom: {
+        enabled: false,
+      },
+      sparkline: {
+        enabled: true,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: { curve: 'smooth', width: 2 },
+    series: [
+      {
+        type: 'area',
+
+        data: [800, 600, 1000, 800, 600, 1000, 800, 900],
+      },
+      
+    ],
+    colors: ['#E84646',],
+
+    tooltip: {
+      theme: 'light',
+    },
+    grid: {
+      show: false,
+      padding: {
+        left: 0,
+        right: 0,
+      },
+    },
+    yaxis: {
+      show: false,
+    },
+    fill: {
+      type: 'solid',
+      opacity: [0.10],
+    },
+    xaxis: {
+      categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan'],
+      low: 0,
+      offsetX: 0,
+      offsetY: 0,
+      show: false,
+      labels: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+      axisBorder: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+    },
+    legend: {
+      show: false,
+    },
+  };
+  if (document.getElementById('area-spaline-bottom2')) {
+    var chart3 = new ApexCharts(
+      document.querySelector('#area-spaline-bottom2'),
+      options2
+    );
+
     chart3.render();
+  }
+
+  var barchar2 = {
+    chart: {
+      height: 120,
+      type: 'bar',
+      
+      toolbar: {
+        autoSelected: 'pan',
+        show: false,
+      },
+      offsetX: 0,
+      offsetY: 0,
+      zoom: {
+        enabled: false,
+      },
+      sparkline: {
+        enabled: true,
+      },
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: '70px',
+        barHeight: '100%',
+  
+      },
+    },
+    crosshairs: {
+      fill: {
+        type: 'gradient',
+        gradient: {
+          colorFrom: '#FFD599',
+          colorTo: '#FFD599',
+          stops: [0, 100],
+          opacityFrom: 0.4,
+          opacityTo: 0.5,
+        }
+      }
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: { curve: 'smooth', width: 2 },
+    series: [
+      
+      {
+        data: [200, 400, 900, 800, 500, 600],
+      },
+    ],
+    colors: ['#FFD599'],
+    tooltip: {
+      theme: 'light',
+    },
+    grid: {
+      show: false,
+     
+    },
+    yaxis: {
+      show: false,
+    },
+    fill: {
+      type: 'dashed',
+      opacity: [1, 1],
+    },
+    xaxis: {
+      show: false,
+    },
+    legend: {
+      show: false,
+    },
+  };
+
+  if (document.getElementById('barchart2')) {
+    var chart4 = new ApexCharts(
+      document.querySelector('#barchart2'),
+      barchar2
+    );
+
+    chart4.render();
   }
 
 
