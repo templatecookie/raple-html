@@ -1,0 +1,6 @@
+.col-only-4{
+    @include flex-width(25%);
+    @media (max-width: 1552px) {
+        @include flex-width(33.33%);
+    }
+}   

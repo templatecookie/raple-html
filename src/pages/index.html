@@ -1,73 +1,63 @@
-{% extends "layout/layout.html" %}
-
-{% block content %}
+{% extends "layout/layout.html" %} {% block content %}
 
 <main class="app-wrapper">
-    {% include "../templates/layout/header-footer/app-header.html" %}
-    {% include "../templates/layout/header-footer/app-sidebar.html" %}
-    {% include "../templates/layout/header-footer/topnavbar.html" %}
-    <div class="content-wrapper">
-      <div class="page-content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12 rt-mb-25">
-                <div class="page-title body-font-3 font-semibold "><span class="inline-block rt-mr-5">👋</span> Hey, Kevin.</div>
-                <div  class="text-gray-600 body-font-4">Here is all your Relik analytics overview</div>
-              </div>
-              <div class="col-12">
-              <div class="card">
-                <div class="card-body">
-                  Home page
-                </div>
-              </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
-                    <div>Browser Overview</div>
-                    <div >
-                      select
-                    </div>
-                  </div>
-                  <div class="card-body   ">
-
-                    
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis mollitia nemo esse ullam a veniam autem consectetur illo, aut nihil.
-            <div class="form-check ">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Default checkbox
-              </label>
+  {% include "../templates/layout/header-footer/app-header.html" %} {% include
+  "../templates/layout/header-footer/app-sidebar.html" %} {% include
+  "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            <div class="page-title body-font-3 font-semibold">
+              <span class="inline-block rt-mr-5">👋</span> Hey, Kevin.
             </div>
-
-            <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="form-check-label" for="flexRadioDefault1">
-    Default radio
-  </label>
-  </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-
-                <div class="card">
-                  <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
-                    <div>Browser Overview</div>
-                    <div>
-                      select
+            <div class="text-gray-600 body-font-4">
+              Here is all your Relik analytics overview
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col  col-only-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
+                      Active Visitors
                     </div>
+                    <div class=" f-size-24 font-semibold">157,367</div>
                   </div>
-                  <div class="card-body ">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis mollitia nemo esse ullam a veniam autem consectetur illo, aut nihil.
+                  <div class=" text-left text-lg-end text-success-500 body-font-4">
+                    6.7% Increase
                   </div>
                 </div>
+                <div id="bar-chart1"></div>
               </div>
             </div>
           </div>
+          <div class="col  col-only-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex  justify-content-between">
+                  <div>
+                    <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
+                      Visitor per minute
+                    </div>
+                    <div class=" f-size-24 font-semibold">9,741</div>
+                  </div>
+                  <div class=" text-left text-lg-end text-danger-500 body-font-4">
+                    13.5% Decrease
+                  </div>
+                </div>
+                <div id="area-spaline-bottom"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 </main>
 
 {% endblock %}

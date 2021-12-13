@@ -166,6 +166,11 @@ function copyjs2() {
         .pipe(browserSync.stream());
 }
 
+function copyjs3() {
+    return src("src/js/Dashboard-Chart.js")
+        .pipe(dest(files.output + "/" + "assets/js"))
+        .pipe(browserSync.stream());
+}
 
 function copysass() {
     return src(files.sass_path)
