@@ -194,8 +194,20 @@
   });
 
   //hide & show
+//map
+  $('#world-map').vectorMap({
+    map: 'world_mill_en',
+    normalizeFunction: 'polynomial',
+    hoverOpacity: 0.7,
+    hoverColor: false,
+    
+    regionStyle: {
+      initial: { fill: '#B6BFF3' },
+      hover: { fill: '#4452FF', 'fill-opacity': 1 },
+    },
 
-
+    backgroundColor: 'transparent',
+  });
   //all chart
   var barchartOne = {
     chart: {
@@ -585,7 +597,7 @@ if (document.getElementById('bar-chart1')) {
 
   var user_chart_option = {
     chart: {
-      height: 293,
+      height: 234,
       type: 'area',
       toolbar: {
         show: false,
@@ -602,7 +614,7 @@ if (document.getElementById('bar-chart1')) {
     stroke: { curve: 'smooth', width: 5 },
     series: [
       {
-        data: [90, 70, 85, 60, 80, 95, 90],
+        data: [90, 70, 85, 60, 80, 70, 90, 75, 60, 80],
       },
     ],
     colors: ['#4452FF'],
@@ -625,7 +637,7 @@ if (document.getElementById('bar-chart1')) {
       },
     },
     xaxis: {
-      categories: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+      categories: ['November 01', 'November 10', 'November 20', 'November 30'],
     },
     padding: {
       top: 0,

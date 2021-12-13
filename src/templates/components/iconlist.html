@@ -1,0 +1,46 @@
+{% set items = [
+    {
+        title: 'This is a success notification.',
+        icon: 'assets/images/notification/check.svg',
+        time: '5 min ago'
+      
+    },
+    {
+        title: 'Kevin Mention you in “UX Design Proc...”',
+        icon: 'assets/images/all-img/user_1.png',
+        time: '5 min ago'
+      
+    },
+    {
+        title: 'This is you lasst waring',
+        icon: 'assets/images/notification/alert.svg',
+        time: '5 min ago'
+      
+    },
+    {
+        title: 'Janny invited you in events in calender',
+        icon: 'assets/images/all-img/user_2.png',
+        time: '5 min ago'
+      
+    },
+    {
+        title: 'Your pricing plan is updated',
+        icon: 'assets/images/notification/file.svg',
+        time: '5 min ago'
+      
+    }
+] %}
+ {%for item in items%}
+<li>
+ <a class="rt-single-icon-box" href="#">
+    <div class="icon-thumb rt-mr-12">
+        <img src="{{item.icon}}" alt="">
+    </div>
+    <div class="iconbox-content">
+        <div class="title body-font-4 text-gray-900 text-hide mb-1">{{item.title}}</div>
+        <div class=" body-fonty-4 text-gray-500">{{item.time}}</div>
+    </div>
+</a> 
+
+</li>  
+{% endfor %}

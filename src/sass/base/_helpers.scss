@@ -111,6 +111,9 @@ blockquote {
 .rt-mb-8{
   margin-bottom: 8px;
 }
+.rt-mb-2{
+  margin-bottom: 2px;
+}
 .rt-mb-4{
   margin-bottom: 4px;
 }
@@ -140,7 +143,9 @@ blockquote {
   padding: 0;
  
 }
-
+.text-gray{
+  color: #7B878C;
+}
 @each $color, $shades in $colors {
   @each $shade, $value in $shades {
     #{".text-" + $color + "-" + $shade} {
