@@ -583,5 +583,65 @@ if (document.getElementById('bar-chart1')) {
     chart5.render();
   }
 
+  var user_chart_option = {
+    chart: {
+      height: 293,
+      type: 'area',
+      toolbar: {
+        show: false,
+      },
+    },
+    plotOptions: {
+      area: {
+        fillTo: 'origin',
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: { curve: 'smooth', width: 5 },
+    series: [
+      {
+        data: [90, 70, 85, 60, 80, 95, 90],
+      },
+    ],
+    colors: ['#4452FF'],
+
+    tooltip: {
+      theme: 'dark',
+    },
+    grid: {
+      show: true,
+    },
+
+    fill: {
+      type: 'gradient',
+      colors: '#0E5FD9',
+      gradient: {
+        shadeIntensity: 1,
+        opacityFrom: 0.4,
+        opacityTo: 0.9,
+        stops: [0, 100, 0],
+      },
+    },
+    xaxis: {
+      categories: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    },
+  };
+  if (document.getElementById('user_chart')) {
+    var user_chart = new ApexCharts(
+      document.querySelector('#user_chart'),
+      user_chart_option
+    );
+
+    user_chart.render();
+  }
+
 
 })(jQuery);
