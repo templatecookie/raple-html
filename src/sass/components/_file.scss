@@ -64,10 +64,12 @@ h3.file-title {
 // file table
 
 .recent-file-list {
-  overflow-x: scroll;
   border-radius: 0 0 8px 8px;
   background-color: white;
   overflow: hidden;
+  @include max(1550px) {
+    overflow-x: scroll;
+  }
   table {
     width: 100%;
     thead {
