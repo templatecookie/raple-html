@@ -221,7 +221,7 @@
         columnWidth: '40px',
         barHeight: '100%',
         borderRadius: 4,
-        rangeBarOverlap: false,
+  
       },
     },
     dataLabels: {
@@ -237,7 +237,6 @@
       },
     ],
     colors: ['#0E5FD9', '#F0F6FF'],
-
     tooltip: {
       theme: 'dark',
     },
@@ -267,6 +266,84 @@ if (document.getElementById('bar-chart1')) {
     );
     chart.render();
   } 
+
+  var options = {
+    chart: {
+      height: 62,
+      type: 'area',
+      toolbar: {
+        autoSelected: 'pan',
+        show: false,
+      },
+      offsetX: 0,
+      offsetY: 0,
+      zoom: {
+        enabled: false,
+      },
+      sparkline: {
+        enabled: true,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: { curve: 'smooth', width: 2 },
+    series: [
+      {
+        type: 'area',
+
+        data: [800, 600, 1000, 800, 600, 1000, 800, 900],
+      },
+      
+    ],
+    colors: ['#0FAF62',],
+
+    tooltip: {
+      theme: 'light',
+    },
+    grid: {
+      show: false,
+      padding: {
+        left: 0,
+        right: 0,
+      },
+    },
+    yaxis: {
+      show: false,
+    },
+    fill: {
+      type: 'solid',
+      opacity: [0.10],
+    },
+    xaxis: {
+      categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan'],
+      low: 0,
+      offsetX: 0,
+      offsetY: 0,
+      show: false,
+      labels: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+      axisBorder: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+    },
+    legend: {
+      show: false,
+    },
+  };
+  if (document.getElementById('area-spaline-bottom')) {
+    var chart3 = new ApexCharts(
+      document.querySelector('#area-spaline-bottom'),
+      options
+    );
+
+    chart3.render();
+  }
 
 
 })(jQuery);

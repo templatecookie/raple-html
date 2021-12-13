@@ -25,9 +25,15 @@ h6,
 }
 
 
-@for $i from 11 through 40 {
+@for $i from 10 through 40 {
   .f-size-#{$i} {
     font-size: $i * 1px !important;
+  }
+}
+
+@for $i from 10 through 40 {
+  .line-height-#{$i} {
+    line-height: $i * 1px !important;
   }
 }
 
