@@ -500,6 +500,88 @@ if (document.getElementById('bar-chart1')) {
 
     chart4.render();
   }
+  var line_1 = {
+    chart: {
+      height: 148,
+      type: 'area',
+      toolbar: {
+        autoSelected: 'pan',
+        show: false,
+      },
+      offsetX: 0,
+      offsetY: 0,
+      zoom: {
+        enabled: false,
+      },
+      sparkline: {
+        enabled: true,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      width: [5, 7, 5],
+      curve: 'straight',
+      dashArray: [0, 8, 5]
+    },
+    series: [
+      {
+        type: 'area',
+
+        data: [800, 600, 1000, 800, 600, 1000, 800, 900],
+      },
+      
+    ],
+    colors: ['#E84646',],
+
+    tooltip: {
+      theme: 'light',
+    },
+    grid: {
+      show: false,
+      padding: {
+        left: 0,
+        right: 0,
+      },
+    },
+    yaxis: {
+      show: false,
+    },
+    fill: {
+      type: 'solid',
+      opacity: [0.10],
+    },
+    xaxis: {
+      categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan'],
+      low: 0,
+      offsetX: 0,
+      offsetY: 0,
+      show: false,
+      labels: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+      axisBorder: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+    },
+    legend: {
+      show: false,
+    },
+  };
+
+  if (document.getElementById('line-1')) {
+    var chart5 = new ApexCharts(
+      document.querySelector('#line-1'),
+      line_1
+    );
+
+    chart5.render();
+  }
 
 
 })(jQuery);
