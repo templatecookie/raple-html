@@ -2,11 +2,11 @@
   padding-bottom: 24px;
   margin-bottom: 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  &:last-child {
-    padding: 0;
-    margin: 0;
-    border: none;
-  }
+  // &:last-child {
+  //   padding: 0;
+  //   margin: 0;
+  //   border: none;
+  // }
 }
 
 .file-text {
@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 26px;
+    position: relative;
   }
   &-left {
     display: flex;
