@@ -521,7 +521,7 @@ if (document.getElementById('bar-chart1')) {
       enabled: false,
     },
     stroke: {
-      width: [5, 7, 5],
+      width: [4, 3, 3],
       curve: 'straight',
       dashArray: [0, 8, 5]
     },
@@ -529,11 +529,11 @@ if (document.getElementById('bar-chart1')) {
       {
         type: 'area',
 
-        data: [800, 600, 1000, 800, 600, 1000, 800, 900],
+        data: [45, 52, 38, 54, 33, 26, 60]
       },
       
     ],
-    colors: ['#E84646',],
+    colors: ['#0FAF62',],
 
     tooltip: {
       theme: 'light',
