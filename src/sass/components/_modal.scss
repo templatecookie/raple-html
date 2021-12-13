@@ -1,0 +1,46 @@
+.modal-dialog {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal-content {
+  border-radius: 8px;
+  margin: 20px;
+}
+
+label.upload-file-wrap {
+  padding: 40px 24px;
+  text-align: center;
+  cursor: pointer;
+  img {
+    margin-bottom: 15px;
+  }
+  h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--gray-900);
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    color: var(--gray-900);
+    a {
+      color: var(--primary-500);
+    }
+  }
+  input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
