@@ -1,3 +1,19 @@
-.breadcrumb{
-    margin: 0px;
+.breadcrumb-title {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--gray-900);
+}
+
+.breadcrumb {
+  margin: 0px;
+  .breadcrumb-item {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray-900);
+    a {
+      color: var(--gray-600);
+    }
+  }
 }
