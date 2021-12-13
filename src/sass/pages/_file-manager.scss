@@ -1,0 +1,146 @@
+.file-manager-item {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  &:last-child {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}
+
+.file-text {
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 26px;
+  }
+  &-left {
+    display: flex;
+    align-items: center;
+  }
+  &-icon {
+    flex-shrink: 0;
+    margin-right: 7px;
+  }
+  &-data {
+    h4 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      color: var(--gray-900);
+    }
+  }
+}
+
+.file-text-toggle {
+  position: relative;
+  button.arrow-btn {
+    border: none;
+    line-height: 1;
+    background-color: transparent;
+  }
+}
+
+.connected-apps {
+  p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: var(--gray-400);
+  }
+  ul {
+    li {
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--gray-900);
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.file-link {
+  @include min(1200px) {
+    padding-bottom: 48px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--gray-600);
+        transition: all 0.4s;
+        &:hover {
+          color: var(--gray-900);
+        }
+        &:hover path {
+          stroke: var(--primary-500);
+        }
+        svg {
+          margin-right: 7px;
+          path {
+            stroke: var(--gray-600);
+            transition: all 0.4s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.progress {
+  &-wrap {
+    display: flex;
+    margin-bottom: 24px;
+    .progress {
+      height: 6px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      background-color: var(--gray-100);
+      &-bar {
+        width: 20%;
+      }
+    }
+  }
+  &-icon {
+    flex-shrink: 0;
+    margin-right: 15px;
+  }
+  &-data {
+    flex: 1;
+    h4 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: var(--gray-900);
+    }
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--gray-600);
+    }
+  }
+}

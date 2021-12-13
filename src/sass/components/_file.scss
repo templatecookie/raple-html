@@ -1,0 +1,202 @@
+h3.file-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--gray-900);
+  margin-bottom: 20px;
+}
+
+.file-wrap {
+  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  @include max(1500px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include breakpoint(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include max(767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include max(399px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.file {
+  &-item {
+    padding: 20px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: all 0.4s;
+    border: 1px solid var(--primary-100);
+    &:hover {
+      background-color: var(--primary-50);
+    }
+  }
+  &-icon {
+    margin-bottom: 18px;
+  }
+  &-data {
+    h4 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 5px;
+      color: var(--gray-900);
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--gray-500);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// file table
+
+.recent-file-list {
+  overflow-x: scroll;
+  border-radius: 0 0 8px 8px;
+  background-color: white;
+  overflow: hidden;
+  table {
+    width: 100%;
+    thead {
+      th {
+        font-size: 12px;
+        width: 120px;
+        padding: 0 24px 12px;
+        white-space: nowrap;
+        color: var(--gray-700);
+        text-transform: uppercase;
+        background-color: #f5f6f7;
+        @include breakpoint(lg) {
+          width: auto;
+        }
+        &:first-child {
+          padding-left: 60px;
+          border-radius: 0;
+        }
+        &:last-child {
+          border-radius: 0;
+        }
+      }
+    }
+    tbody {
+      vertical-align: middle;
+      tr {
+        transition: all 0.4s;
+        border-radius: 7px;
+
+        &:hover {
+          background-color: var(--primary-50);
+        }
+        &:hover .button-icon {
+          path {
+            stroke: var(--gray-900);
+          }
+        }
+        &:hover .start-icon {
+          path {
+            stroke: var(--warning-500);
+          }
+        }
+        &:hover .folder-name {
+          path {
+            fill: var(--gray-900);
+          }
+        }
+        &:hover td {
+          color: var(--gray-900);
+        }
+        &:hover .button-icon {
+          path {
+            stroke: var(--gray-900);
+          }
+        }
+
+        td {
+          padding: 15px 24px;
+          font-size: 14px;
+          width: 120px;
+
+          white-space: nowrap;
+          color: var(--gray-700);
+          @include breakpoint(lg) {
+            width: auto;
+          }
+          &:first-child {
+            padding-top: 24px;
+            border-radius: 7px 0px 0px 7px;
+          }
+          &:last-child {
+            border-radius: 0px 7px 7px 0px;
+          }
+        }
+      }
+    }
+    .start-icon {
+      margin-right: 25px;
+      path {
+        transition: all 0.4s;
+      }
+    }
+    .folder-name {
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 9px;
+      }
+      path {
+        transition: all 0.4s;
+      }
+    }
+    .button-icon {
+      border: none;
+      padding: 0;
+      background-color: transparent;
+      path {
+        transition: all 0.4s;
+        stroke: var(--gray-400);
+      }
+    }
+    .recent-file-wrap {
+      display: flex;
+      align-items: center;
+    }
+    .dropdown-wrap {
+      padding-right: 10px;
+    }
+    td.large-width {
+      width: 700px;
+      @include breakpoint(lg) {
+        width: 400px;
+      }
+      @include breakpoint(md) {
+        width: auto;
+      }
+    }
+    .link-wrap {
+      margin-left: -48px;
+      @include breakpoint(md) {
+        margin: 0;
+      }
+      img {
+        margin-right: 24px;
+        @include breakpoint(md) {
+          display: none;
+        }
+      }
+    }
+  }
+}
