@@ -78,6 +78,8 @@ h3.file-title {
         width: 120px;
         padding: 0 24px 12px;
         white-space: nowrap;
+        border-width: 0;
+        box-shadow: none;
         color: var(--gray-700);
         text-transform: uppercase;
         background-color: #f5f6f7;
@@ -95,10 +97,9 @@ h3.file-title {
     }
     tbody {
       vertical-align: middle;
+      border: 0;
       tr {
         transition: all 0.4s;
-        border-radius: 7px;
-
         &:hover {
           background-color: var(--primary-50);
         }
@@ -125,19 +126,17 @@ h3.file-title {
             stroke: var(--gray-900);
           }
         }
-
         td {
-          padding: 15px 24px;
+          padding: 12px 24px;
           font-size: 14px;
           width: 120px;
-
           white-space: nowrap;
           color: var(--gray-700);
+          border-width: 0;
           @include breakpoint(lg) {
             width: auto;
           }
           &:first-child {
-            padding-top: 24px;
             border-radius: 7px 0px 0px 7px;
           }
           &:last-child {
@@ -201,4 +200,11 @@ h3.file-title {
       }
     }
   }
+}
+
+.table > :not(:first-child) {
+  border-top: 0;
+}
+td.extra-padding {
+  padding-top: 24px !important;
 }

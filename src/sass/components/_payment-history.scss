@@ -37,6 +37,7 @@
           padding: 16px 24px;
           font-size: 14px;
           white-space: nowrap;
+          border-width: 0;
           @include breakpoint(lg) {
             padding: 16px 20px;
           }
