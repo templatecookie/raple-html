@@ -1,0 +1,29 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Profile" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+       <div class="row">
+           <div class="col-12">
+               <h1> Let's Start Code..</h1>
+           </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}
