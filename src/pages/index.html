@@ -235,7 +235,84 @@
               <div class="card-header">
                 Social Media Traffic
               </div>
-              <div class="card-body"></div>
+              <div class="card-body">
+                <div class="table-responsive">
+                <table class="table info-table">
+                  <thead >
+                    <tr class=" bg-gray-50">
+                      <td class="f-size-11 text-gray-700 font-medium"  colspan="2">Network</td>
+                      <td class="f-size-11 text-gray-700 font-medium">Visitors</td>
+                      <td class="f-size-11 text-gray-700 font-medium">Followers</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% set items = [
+                      {
+                          title: 'Facebook',
+                          icon: 'fb.svg',
+                          visitors: '5,761,687',
+                          followers: '68,412'
+                        
+                      },
+                      {
+                        title: 'Twitter',
+                        icon: 'tw.svg',
+                        visitors: '5,761,687',
+                        followers: '68,412'
+                      
+                    },
+                      {
+                        title: 'Linkedin',
+                        icon: 'lin.svg',
+                        visitors: '5,761,687',
+                        followers: '68,412'
+                      
+                    },
+                      {
+                        title: 'Instagram',
+                        icon: 'ins.svg',
+                        visitors: '5,761,687',
+                        followers: '68,412'
+                      
+                    },
+                      {
+                        title: 'Dribbble',
+                        icon: 'dr.svg',
+                        visitors: '5,761,687',
+                        followers: '68,412'
+                      
+                    },
+                      {
+                        title: 'Behance',
+                        icon: 'be.svg',
+                        visitors: '5,761,687',
+                        followers: '68,412'
+                      
+                    },
+                      {
+                        title: 'Pinterest',
+                        icon: 'pin.svg',
+                        visitors: '5,761,687',
+                        followers: '68,412'
+                      
+                    }
+                  ] %}
+                   {%for item in items%}
+                    <tr>
+                      <td colspan="2" >
+                        <div class="rt-single-icon-box rt-align-center">
+                        <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/{{item.icon}}" alt=""></div>
+                          <div class="iconbox-content text-gray-900 body-font-4 font-medium">{{item.title}}</div>
+                        </div>
+                      </td>
+                      <td class=" body-font-4 text-gray-700">{{item.visitors}}</td>
+                      <td class=" body-font-4 text-gray-700">{{item.followers}}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              </div>
             </div>
           </div>
           <div class="col-xxl-3">
