@@ -92,6 +92,171 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-xl-9">
+            <div class="card">
+              <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
+                <div>User Overview</div>
+                
+              </div>
+              <div class="card-body">
+                <div id="user_chart"></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-xl-3">
+            <div class="card">
+              <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
+                <div>Most Visited Page</div>
+                
+              </div>
+              <div class="card-body">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xxl-3">
+            <div class="card">
+              <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
+                <div>Browser Overview</div>
+                
+              </div>
+              <div class="card-body pb-0">
+                <div class="row">
+                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
+                      <img src="assets/images/all-img/chrome.svg" alt="" draggable="false">
+                    </div>
+                    <div class="body-font-4  text-black font-semibold rt-mb-4">Google Chrome</div>
+                    <div class="body-font-4  text-gray ">54% User</div>
+                    
+
+                  </div>
+                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
+                      <img src="assets/images/all-img/firefox.svg" alt="" draggable="false">
+                    </div>
+                    <div class="body-font-4  text-black font-semibold rt-mb-4">Firefox</div>
+                    <div class="body-font-4  text-gray ">23% User</div>
+
+                  </div>
+                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
+                      <img src="assets/images/all-img/edge.svg" alt="" draggable="false">
+                    </div>
+                 
+                    <div class="body-font-4  text-black font-semibold rt-mb-4">Microsoft Edge</div>
+                    <div class="body-font-4  text-gray ">19% User</div>
+
+                  </div>
+                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
+                      <img src="assets/images/all-img/breve.svg" alt="" draggable="false">
+                    </div>
+                    
+                    <div class="body-font-4  text-black font-semibold rt-mb-4">Brave</div>
+                    <div class="body-font-4  text-gray ">11% User</div>
+
+                  </div>
+                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
+                      <img src="assets/images/all-img/safari.svg" alt="" draggable="false">
+                    </div>
+                    
+                    <div class="body-font-4  text-black font-semibold rt-mb-4">Apple Safari</div>
+                    <div class="body-font-4  text-gray ">7% User</div>
+
+                  </div>
+                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
+                      <img src="assets/images/all-img/opera.svg" alt="" draggable="false">
+                    </div>
+                    <div class="body-font-4  text-black font-semibold rt-mb-4">Opera</div>
+                    <div class="body-font-4  text-gray ">3% User</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="card">
+              <div class="card-header">
+                User Location
+              </div>
+              <div class="card-body">
+                <div id="world-map" class=" rt-mb-48"></div>
+                <div class="row">
+                  <div class="col-md-4 rt-md-10 ">
+                    <div class="rt-mb-15">
+                      <img src="assets/images/svg/usa-flag.svg" alt="" draggable="false">
+                    </div>
+                    <div class=" text-gray-900 body-font-3 font-medium rt-mb-4">United State (USA)</div>
+                    <div class=" text-gray  body-font-4">54% . 5,761,687 Users</div>
+                  </div>
+                  <div class="col-md-4 rt-md-10 ">
+                    <div class="rt-mb-15">
+                      <img src="assets/images/svg/china-flag.svg" alt="" draggable="false">
+                    </div>
+                    <div class=" text-gray-900 body-font-3 font-medium rt-mb-4">China</div>
+                    <div class=" text-gray  body-font-4">54% . 5,761,687 Users</div>
+                  </div>
+                  <div class="col-md-4 rt-md-10 ">
+                    <div class="rt-mb-15">
+                      <img src="assets/images/svg/russia-flag.svg" alt="" draggable="false">
+                    </div>
+                    <div class=" text-gray-900 body-font-3 font-medium rt-mb-4">Russia</div>
+                    <div class=" text-gray  body-font-4">54% . 5,761,687 Users</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-3">
+            <div class="card">
+              <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
+                <div>Devices Overview</div>
+                
+              </div>
+              <div class="card-body pb-0">
+               <ul>
+                {% include "../templates/components/device-list.html" %}
+               </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xxl-4">
+            <div class="card">
+              <div class="card-header">
+                Social Media Traffic
+              </div>
+              <div class="card-body"></div>
+            </div>
+          </div>
+          <div class="col-xxl-3">
+            <div class="card">
+              <div class="card-header">
+                Calendar
+              </div>
+              <div class="card-body">
+                <div class="date-picker-calender rt-pt-15"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-5">
+            <div class="card">
+              <div class="card-header">
+                Operating System
+              </div>
+              <div class="card-body"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -194,8 +194,23 @@
   });
 
   //hide & show
+// calender 
+$(".date-picker-calender").datepicker(),
 
+//map
+  $('#world-map').vectorMap({
+    map: 'world_mill_en',
+    normalizeFunction: 'polynomial',
+    hoverOpacity: 0.7,
+    hoverColor: false,
+    
+    regionStyle: {
+      initial: { fill: '#B6BFF3' },
+      hover: { fill: '#4452FF', 'fill-opacity': 1 },
+    },
 
+    backgroundColor: 'transparent',
+  });
   //all chart
   var barchartOne = {
     chart: {
@@ -521,7 +536,7 @@ if (document.getElementById('bar-chart1')) {
       enabled: false,
     },
     stroke: {
-      width: [5, 7, 5],
+      width: [4, 3, 3],
       curve: 'straight',
       dashArray: [0, 8, 5]
     },
@@ -529,11 +544,11 @@ if (document.getElementById('bar-chart1')) {
       {
         type: 'area',
 
-        data: [800, 600, 1000, 800, 600, 1000, 800, 900],
+        data: [45, 52, 38, 54, 33, 26, 60]
       },
       
     ],
-    colors: ['#E84646',],
+    colors: ['#0FAF62',],
 
     tooltip: {
       theme: 'light',
@@ -581,6 +596,66 @@ if (document.getElementById('bar-chart1')) {
     );
 
     chart5.render();
+  }
+
+  var user_chart_option = {
+    chart: {
+      height: 234,
+      type: 'area',
+      toolbar: {
+        show: false,
+      },
+    },
+    plotOptions: {
+      area: {
+        fillTo: 'origin',
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: { curve: 'smooth', width: 5 },
+    series: [
+      {
+        data: [90, 70, 85, 60, 80, 70, 90, 75, 60, 80],
+      },
+    ],
+    colors: ['#4452FF'],
+
+    tooltip: {
+      theme: 'dark',
+    },
+    grid: {
+      show: true,
+    },
+
+    fill: {
+      type: 'gradient',
+      colors: '#0E5FD9',
+      gradient: {
+        shadeIntensity: 1,
+        opacityFrom: 0.4,
+        opacityTo: 0.9,
+        stops: [0, 100, 0],
+      },
+    },
+    xaxis: {
+      categories: ['November 01', 'November 10', 'November 20', 'November 30'],
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    },
+  };
+  if (document.getElementById('user_chart')) {
+    var user_chart = new ApexCharts(
+      document.querySelector('#user_chart'),
+      user_chart_option
+    );
+
+    user_chart.render();
   }
 
 

@@ -1,0 +1,58 @@
+{% set items = [
+    {
+        title: 'Computer',
+        icon: 'assets/images/svg/big-desktop.svg',
+        valuePercent: '23%',
+        usercount : '698,723 Users',
+        increaseCount : '1.2% Increase',
+        increaseIcon: 'ph-arrow-up'
+      
+    },
+    {
+        title: 'Laptop',
+        icon: 'assets/images/svg/big-laptop.svg',
+        valuePercent: '23%',
+        usercount : '698,723 Users',
+        increaseCount : '2.1% Decrease',
+        increaseIcon: 'ph-arrow-down'
+      
+    },
+    {
+        title: 'Tablet',
+        icon: 'assets/images/svg/big-tablet.svg',
+        valuePercent: '19%',
+        usercount : '+68,412 Users',
+        increaseCount : '1.7% Increase',
+        increaseIcon: 'ph-arrow-up'
+      
+    },
+    {
+        title: 'Mobile Phone',
+        icon: 'assets/images/svg/big-phone.svg',
+        valuePercent: '11%',
+        usercount : '16,716 Users',
+        increaseCount : '2.9% Increase',
+        increaseIcon: 'ph-arrow-up'
+      
+    }
+    
+] %}
+ {%for item in items%}
+<li class=" block rt-mb-24">
+    <div class="rt-single-icon-box">
+        <div class="icon-thumb rt-mr-20"><img src="{{item.icon}}" alt="" draggable="false"></div>
+        <div class="iconbox-content">
+          <div class=" body-font-3 text-gray-900 font-medium rt-mb-4">{{item.title}}</div>
+          <div class=" text-gray  body-font-4 rt-mb-8">
+            <span>{{item.valuePercent}}</span>
+            <span>.</span>
+            <span>{{item.usercount}}</span>
+          </div>
+          <div class=" text-success-500 body-font-4">
+              <span class=" rt-mr-4"><i class="{{item.increaseIcon}}"></i></span>{{item.increaseCount}}
+            </div>
+        </div>
+      </div>
+
+</li>  
+{% endfor %}
