@@ -40,13 +40,6 @@ $primary_color: var(--primary-500);
     color: var(--gray-900);
     appearance: none;
   }
-  label {
-    display: block;
-    color: var(--gray-900);
-    font-size: 17px;
-    margin-bottom: 7px;
-    font-weight: 500;
-  }
 }
 textarea {
   height: auto !important;
@@ -86,6 +79,14 @@ select,
     img {
       width: 20px;
     }
+  }
+  label {
+    display: block;
+    color: var(--gray-900);
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 20px;
+    font-weight: 400;
   }
   &.success,
   &.warning {
@@ -547,4 +548,8 @@ select,
     cursor: pointer;
     color: #aaa;
   }
+}
+
+.form-control-icon {
+  position: relative;
 }

@@ -1,0 +1,102 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Account Setting" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+            <div class="upload-photo-section">
+              <label class="upload-file">
+                  <div class="upload-photo-thumb">
+                    <img src="assets/images/all-img/users/user1.png" alt="">
+                  </div>
+                  <input type="file">
+                  <a type="button" class="btn btn-outline-primary pill btn-icon block">
+                    <span class="button-content-wrapper">
+                      <span class="button-text">
+                        Upload Proifle Photo
+                      </span>
+                      <span class="button-icon">
+                        <img src="assets/images/svg/download2.svg" alt="">
+                      </span>
+                    </span>
+                  </a>
+              </label>
+              <div class="upload-photo-content">
+                <p><span>Remember:</span> For best results, use an image at least 200px by 200px in .jpg or .png format</p>
+              </div>
+
+                
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+            <div class="upload-photo-section">
+              <label class="upload-file two">
+                <div class="upload-photo-thumb two">
+                  <img src="assets/images/all-img/banner2.png" alt="">
+                </div>
+                <input type="file">
+                <div class="upload-btn-wrap">
+                    <a type="button" class="btn btn-outline-primary pill btn-icon block">
+                      <span class="button-content-wrapper">
+                        <span class="button-text">
+                          Upload Proifle Photo
+                        </span>
+                        <span class="button-icon">
+                          <img src="assets/images/svg/download2.svg" alt="">
+                        </span>
+                      </span>
+                    </a>
+                </div>
+              </label>
+              <div class="upload-photo-content two">
+                <button type="button" class="btn btn-danger2 pill">Remove Banner</button>
+                <p><span>Remember:</span> For best results, use an image at least 200px by 200px in .jpg or .png format</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-12">
+            <div class="card">
+              <div class="card-header">Basic Info</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="fromGroup mb-4">
+                      <label>test</label>
+                      <input class="form-control" type="text" placeholder="Normal">
+                    </div>
+                    <div class="fromGroup eye mb-4">
+                      <label>test</label>
+                      <div class="form-control-icon">
+                        <input class="form-control" type="password" placeholder="password">
+                        <div class="has-badge">
+                          <img src="assets/images/svg/eye.svg" alt="">
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}

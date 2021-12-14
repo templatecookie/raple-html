@@ -164,3 +164,67 @@
     }
   }
 }
+
+.upload {
+  &-photo {
+    &-section {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    &-thumb {
+      width: 152px;
+      height: 152px;
+      border-radius: 100%;
+      overflow: hidden;
+      margin: 0 auto 35px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &.two {
+        width: 100%;
+        height: 140px;
+        border-radius: 0;
+      }
+    }
+    &-content {
+      padding: 24px 40px 40px;
+      &.two {
+        padding: 12px 40px 40px;
+      }
+      .btn-danger2 {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--gray-600);
+        span {
+          font-weight: 500;
+          color: var(--gray-900);
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &-file {
+    display: block;
+    position: relative;
+    padding: 40px 40px 0;
+    .btn-icon {
+      width: 100%;
+    }
+    &.two {
+      padding: 0;
+    }
+  }
+  &-btn-wrap {
+    padding: 0 40px;
+  }
+}
