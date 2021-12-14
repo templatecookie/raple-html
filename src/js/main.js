@@ -88,8 +88,7 @@
         ));
     });
 
-  //custom scrollbar
-  $(".custom-scrolbar").overlayScrollbars({});
+
 
   // select 2 active
   if (document.querySelector(".rt-selectactive")) {
