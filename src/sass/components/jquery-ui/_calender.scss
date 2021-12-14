@@ -42,4 +42,53 @@
         border: none;
         color: white;
     }
+    .ui-datepicker .ui-datepicker-prev{
+        width: 40px;
+        height: 40px;
+        background-color: var(--primary-50);
+        border-radius: 50%;
+        border-color: var(--primary-50);
+        cursor: pointer;
+        top: -10px;
+        &:after{
+            content: "\f107";
+            position: absolute;
+            font-family: "Flaticon";
+          left: 0px;
+          top: 0px;
+          display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            transform: rotate(180deg);
+            font-size: 16px;
+            color: var(--primary-500);
+
+        }
+    }
+    .ui-datepicker .ui-datepicker-next{
+        width: 40px;
+        height: 40px;
+        background-color: var(--primary-50);
+        border-radius: 50%;
+        border-color: var(--primary-50);
+        cursor: pointer;
+        top: -10px;
+        &:after{
+            content: "\f107";
+            position: absolute;
+            font-family: "Flaticon";
+          left: 0px;
+          top: 0px;
+          display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+            color: var(--primary-500);
+
+        }
+    }
 }
