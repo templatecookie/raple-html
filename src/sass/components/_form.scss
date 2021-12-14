@@ -445,6 +445,7 @@ select,
     border-radius: 3px;
     margin-right: 8px;
     transition: all 0.4s;
+    cursor: pointer;
     &:hover {
       border-color: var(--primary-500);
       box-shadow: 0px 2px 8px rgba(14, 95, 217, 0.24);
@@ -469,6 +470,10 @@ select,
   }
   label {
     vertical-align: middle;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray-900);
+    cursor: pointer;
   }
 }
 .from-radio-custom {

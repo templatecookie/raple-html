@@ -659,9 +659,7 @@ if (document.getElementById('bar-chart1')) {
   }
 
   // custom select
-
-   
-
+  
     $('.custom-select').each(function () {
       var classes = $(this).attr('class'),
         id = $(this).attr('id'),
