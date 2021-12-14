@@ -194,6 +194,9 @@
   });
 
   //hide & show
+// calender 
+$(".date-picker-calender").datepicker(),
+
 //map
   $('#world-map').vectorMap({
     map: 'world_mill_en',
