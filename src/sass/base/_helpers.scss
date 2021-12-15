@@ -490,3 +490,13 @@ blockquote {
 .modal-body {
   padding: 50px;
 }
+
+$theme-colors: (
+  "primary":    var(--primary-500),
+  "secondary":  var(--secondary-500),
+  "success":    var(--success-500),
+
+  "warning":    var(--warning-500),
+  "danger":     var(--danger-500),
+  "dark":       var(--gray-900),
+);
