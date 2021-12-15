@@ -123,3 +123,219 @@
     }
   }
 }
+
+// invoice datail page
+
+.invoice-detail {
+  &-wrap {
+    padding: 60px;
+    @include max(767px) {
+      padding: 30px;
+    }
+  }
+  &-item {
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    @include max(767px) {
+      margin-bottom: 30px;
+    }
+  }
+  &-logo {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  &-middle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    @include max(1400px) {
+      display: block;
+    }
+    @include max(767px) {
+      margin-bottom: 30px;
+    }
+  }
+  &-data {
+    @include max(1400px) {
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      color: var(--gray-600);
+      span {
+        font-weight: 600;
+        color: var(--gray-900);
+      }
+    }
+  }
+  &-payment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    @include max(767px) {
+      margin-bottom: 30px;
+    }
+    @include max(479px) {
+      display: block;
+    }
+  }
+  &-data2 {
+    &.text-right {
+      text-align: right;
+      @include max(479px) {
+        text-align: left;
+        margin-top: 15px;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 0 5px;
+      color: var(--gray-600);
+    }
+    h4 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0;
+      color: var(--gray-900);
+    }
+  }
+  &-data3 {
+    &.text-right {
+      text-align: right;
+      @include max(479px) {
+        text-align: left;
+        margin-top: 20px;
+      }
+    }
+    h4 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 0 8px;
+      color: var(--gray-900);
+    }
+    ul {
+      li {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--gray-600);
+      }
+    }
+  }
+}
+
+.invoice-detail-table {
+  @include breakpoint(md) {
+    overflow-x: scroll;
+  }
+  table {
+    width: 100%;
+    margin: 0;
+    thead {
+      th {
+        font-size: 12px;
+        padding: 12px 24px;
+        white-space: nowrap;
+        border-width: 0;
+        box-shadow: none;
+        font-weight: 500;
+        color: var(--gray-700);
+        text-transform: uppercase;
+        background-color: rgba(245, 246, 247, 0.7);
+      }
+    }
+    tbody {
+      vertical-align: middle;
+      tr {
+        td {
+          padding: 12px 24px;
+          font-size: 14px;
+          white-space: nowrap;
+          color: var(--gray-700);
+          border-color: var(--gray-100);
+          .invoice-logo {
+            &-creation {
+              display: flex;
+            }
+            &-number {
+              width: 24px;
+              height: 24px;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 16px;
+              color: #000000;
+              display: flex;
+              align-items: center;
+              flex-shrink: 0;
+              margin-right: 10px;
+              justify-content: center;
+              border-radius: 100%;
+              transition: all 0.4s;
+              background: rgba(0, 0, 0, 0.05);
+              &:hover {
+                color: var(--primary-500);
+                background-color: var(--primary-50);
+              }
+            }
+            &-data {
+              h4 {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 4px;
+                color: var(--gray-900);
+              }
+              p {
+                margin: 0;
+                font-size: 14px;
+                line-height: 20px;
+                color: var(--gray-500);
+              }
+            }
+          }
+          &.large-width {
+            width: 74%;
+          }
+          &.sub-totla {
+            font-weight: 500;
+            color: var(--gray-900);
+            &.two {
+              text-transform: uppercase;
+            }
+            &.three {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+p.invoice-footer-content {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--gray-900);
+  padding-top: 40px;
+  @include max(767px) {
+    padding-top: 30px;
+  }
+}
+
+.invoice-detail-btn {
+  .btn {
+    @include max(479px) {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+}
