@@ -1,0 +1,42 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Billing" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-5">
+              <div class="card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, placeat.
+              </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, placeat.
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, placeat.
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}

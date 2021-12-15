@@ -253,12 +253,16 @@
     tbody {
       vertical-align: middle;
       tr {
+        border-bottom: 1px solid var(--gray-100);
+        &:last-child {
+          border: none;
+        }
         td {
           padding: 12px 24px;
           font-size: 14px;
           white-space: nowrap;
           color: var(--gray-700);
-          border-color: var(--gray-100);
+          border: none;
           .invoice-logo {
             &-creation {
               display: flex;
