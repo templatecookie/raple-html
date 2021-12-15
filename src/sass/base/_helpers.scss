@@ -508,6 +508,7 @@ background-color: var(--success-500) !important;
 .bg-danger{
   background-color: var(--danger-500) !important;
 }
+
 .bg-dark{
   background-color:  var(--gray-900) !important;
 }
@@ -529,4 +530,9 @@ color: var(--success-500) !important;
 }
 .text-dark{
  color:  var(--gray-900) !important;
+}
+
+.alert-info{
+  color: var(--primary-500);
+  background-color: rgba(95,99,242,.04) !important;
 }

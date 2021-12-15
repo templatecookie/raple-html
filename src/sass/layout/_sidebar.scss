@@ -47,9 +47,17 @@
             font-size: 12px;
             @include rt-trs(0.24s);
             position: absolute;
-            right: 40px;
+            right: 30px;
             top: 50%;
             transform: translateY(-50%);
+          }
+          
+        }
+        &.mm-active{
+          > a{
+            &::after{
+              transform: translateY(-50%) rotate(-180deg);
+            }
           }
         }
       }
@@ -61,7 +69,18 @@
         line-height: 20px;
         padding: 12px 24px;
         color: var(--gray-600);
-        box-shadow: inset 0px 0px 0px #4452ff;
+        //box-shadow: inset 0px 0px 0px #4452ff;
+        &::before{
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 3px;
+          height: 0px;
+          content: "";
+          background: #4452ff;
+          @include hidden();
+          @include rt-trs(0.34s);
+        }
         .icon-box {
           font-size: 20px;
           margin-right: 10px;
@@ -107,7 +126,11 @@
         > a {
           background: var(--primary-50);
           color: var(--gray-900);
-          box-shadow: inset 3px 0px 0px #0e5fd9;
+          //box-shadow: inset 3px 0px 0px #0e5fd9;
+          &::before{
+            @include vis();
+            height: 100%;
+          }
           .icon-box {
             color: var(--primary-500);
           }
