@@ -1,0 +1,782 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Invoice" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header border-0">Invoice</div>
+          <div class="invoice-table-list table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>NO.</th>
+                  <th>INVOICE SUBJECT</th>
+                  <th>Client</th>
+                  <th>Vat NO.</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Price</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag1.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle2.svg" alt="">
+                      Pending
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+          
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag2.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle2.svg" alt="">
+                      Pending
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+          
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag1.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag2.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag1.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag2.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag1.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag2.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag1.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag2.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag1.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one">
+                      EKG464SJFN17
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag2.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <div class="table-footer-left">
+              Showing 1 to 8 of 16 entries
+            </div>
+            <div class="table-footer-right">
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <i class="ph-arrow-left"></i>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">01</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">02</a></li>
+                  <li class="page-item"><a class="page-link" href="#">03</a></li>
+                  <li class="page-item"><a class="page-link" href="#">04</a></li>
+                  <li class="page-item"><a class="page-link" href="#">05</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <i class="ph-arrow-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}
