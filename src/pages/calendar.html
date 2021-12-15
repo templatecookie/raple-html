@@ -18,63 +18,70 @@
           <div class="col-12">
 
               <div class="row">
+                <div class="col-lg-9">
+                  <div class="card">
+                      <div class="card-body">
+                          <div id="calendar"></div>
+                      </div>
+                  </div>
+              </div> <!-- end col -->
                   <div class="col-lg-3">
+                      
                       <div class="card">
-                          <div class="card-body">
-                              <div class="d-grid">
-                                  <button class="btn font-size-16 btn-primary" id="btn-new-event"><i class="mdi mdi-plus-circle-outline"></i> Create New Event</button>
+                        <div class="card-header">
+                          Calendar
+                        </div>
+                        <div class="card-body">
+                          <div class="date-picker-calender"></div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          Types
+                        </div>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="form-check from-chekbox-custom mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="taskone" checked="">
+                                <label for="taskone">Task</label>
                               </div>
-
-                              <div id="external-events" class="mt-2">
-                                  <br>
-                                  <p class="text-muted">Drag and drop your event or click in the calendar</p>
-                                  <div class="external-event fc-event bg-success" data-class="bg-success">
-                                      <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>New Event Planning
-                                  </div>
-                                  <div class="external-event fc-event bg-info" data-class="bg-info">
-                                      <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Meeting
-                                  </div>
-                                  <div class="external-event fc-event bg-warning" data-class="bg-warning">
-                                      <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Generating Reports
-                                  </div>
-                                  <div class="external-event fc-event bg-danger" data-class="bg-danger">
-                                      <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Create New theme
-                                  </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="form-check from-chekbox-custom mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="tasktwo" checked="">
+                                <label for="tasktwo">Events</label>
                               </div>
-                              
-                              <div class="mt-5">
-                                  
-                                  <h4 class="card-title mb-3">Activity</h4>
-
-                                  <ol class="activity-feed mb-0 ps-2 ms-1" >
-                                      <li class="feed-item">
-                                              <p class="mb-0">Andrei Coman magna sed porta finibus, risus
-                                                  posted a new article: Forget UX Rowland</p>
-                                      </li>
-                                      <li class="feed-item">
-                                          <p class="mb-0">Zack Wetass, sed porta finibus, risus Chris Wallace Commented Developer Moreno</p>
-                                      </li>
-                                      <li class="feed-item">
-                                          <p class="mb-0">Zack Wetass, Chris combined Commented UX Murphy</p>
-                                      </li>
-                                  </ol>
-                              </div>
+                            </div>
                           </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          Label
+                        </div>
+                        <div class="card-body">
+                          <div id="btn-new-event" class="btn btn-primary">Create New Event</div>
+                            <div id="external-events">
+                              <div class="external-event fc-event bg-success" data-class="bg-success">
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>New Event Planning
+                            </div>
+                            <div class="external-event fc-event bg-info" data-class="bg-info">
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Meeting
+                            </div>
+                            <div class="external-event fc-event bg-warning" data-class="bg-warning">
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Generating Reports
+                            </div>
+                            <div class="external-event fc-event bg-danger" data-class="bg-danger">
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Create New theme
+                            </div>
+                            </div>
+                         
+                        </div>
                       </div>
                   </div> <!-- end col-->
-
-                  <div class="col-lg-9">
-                      <div class="card">
-                          <div class="card-body">
-                              <div id="calendar"></div>
-                          </div>
-                      </div>
-                  </div> <!-- end col -->
-
               </div> 
-
-              <div style='clear:both'></div>
-                  
+              
               <!-- Add New Event MODAL -->
               <div class="modal fade" id="event-modal" tabindex="-1">
                   <div class="modal-dialog modal-dialog-centered">

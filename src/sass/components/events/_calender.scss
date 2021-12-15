@@ -1,0 +1,12 @@
+.table-bordered td, .table-bordered th {
+    border: 1px solid #e9ecef;
+}
+.fc-event {
+    border-radius: 2px;
+    border: none;
+    cursor: move;
+    font-size: .8125rem;
+    margin: 5px 7px;
+    padding: 5px 5px;
+    text-align: center;
+}

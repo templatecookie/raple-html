@@ -491,12 +491,42 @@ blockquote {
   padding: 50px;
 }
 
-$theme-colors: (
-  "primary":    var(--primary-500),
-  "secondary":  var(--secondary-500),
-  "success":    var(--success-500),
 
-  "warning":    var(--warning-500),
-  "danger":     var(--danger-500),
-  "dark":       var(--gray-900),
-);
+
+.bg-primary{
+  background-color: var(--primary-500) !important;
+}
+.bg-secondary{
+  background-color: var(--secondary-500) !important;
+}
+.bg-success{
+background-color: var(--success-500) !important;
+}
+.bg-warning{
+  background-color: var(--warning-500) !important;
+}
+.bg-danger{
+  background-color: var(--danger-500) !important;
+}
+.bg-dark{
+  background-color:  var(--gray-900) !important;
+}
+
+.text-primary{
+  color: var(--primary-500) !important;
+}
+.text-secondary{
+ color: var(--secondary-500) !important;
+}
+.text-success{
+color: var(--success-500) !important;
+}
+.text-warning{
+  color: var(--warning-500) !important;
+}
+.text-danger{
+ color: var(--danger-500) !important;
+}
+.text-dark{
+ color:  var(--gray-900) !important;
+}
