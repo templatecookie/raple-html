@@ -1,6 +1,6 @@
 /*
 * ----------------------------------------------------------------------------------------
-    Template Name: Nitrex
+    Template Name: Relik
     Template URI: 
     Description: 
     Author: 
@@ -15,6 +15,10 @@
 */
 (function ($) {
   "use strict";
+
+  var cal = new tui.Calendar('#calendar_1', {
+    defaultView: 'month' // monthly view option
+  });
 
   var template_x = document.getElementById("template");
   var template2_x = document.getElementById("template2");
