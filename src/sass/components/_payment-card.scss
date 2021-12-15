@@ -1,3 +1,15 @@
+.payment-card-column {
+  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  @include max(1450px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include max(825px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .payment-card-add {
   width: 218px;
   height: 218px;
@@ -9,6 +21,9 @@
   cursor: pointer;
   transition: all 0.4s;
   background: var(--primary-50);
+  @include max(1100px) {
+    width: 100%;
+  }
   &:hover {
     background-color: var(--primary-100);
   }
@@ -33,6 +48,9 @@
     border-radius: 4px;
     background-size: cover;
     background-position: center center;
+    @include max(1450px) {
+      width: 100%;
+    }
     @include breakpoint(md) {
       width: 100%;
     }
@@ -81,6 +99,9 @@
     display: flex;
     margin-bottom: 22px;
     justify-content: space-between;
+    @include max(479px) {
+      display: block;
+    }
     &-left {
       display: flex;
       #textToCopy,
