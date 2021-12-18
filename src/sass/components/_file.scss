@@ -133,6 +133,7 @@ h3.file-title {
           white-space: nowrap;
           color: var(--gray-700);
           border-width: 0;
+          line-height: 1;
           @include breakpoint(lg) {
             width: auto;
           }

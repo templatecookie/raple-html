@@ -737,7 +737,7 @@ if (document.getElementById('bar-chart1')) {
 PRICING TABLE JS INIT
 ------------------------------------------------------------*/
     // Table BTN Trigger
-    $("#l5-pricing-btn .toggle-btn").on("click", function (e) {
+    $(" .toggle-btn, label").on("click", function (e) {
       console.log($(e.target).parent().parent().hasClass("monthly-active"));
       $(e.target).toggleClass("clicked");
       if ($(e.target).parent().parent().hasClass("monthly-active")) {

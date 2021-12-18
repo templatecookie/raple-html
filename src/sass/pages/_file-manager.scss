@@ -33,12 +33,17 @@
 
 .file-text-toggle {
   position: relative;
-  button.arrow-btn {
+  a.arrow-btn {
     border: none;
     line-height: 1;
     background-color: transparent;
   }
 }
+// .file-text-wrap.collapsed {
+//   a.arrow-btn {
+//     transform: rotate(20deg);
+//   }
+// }
 
 .connected-apps {
   p {
