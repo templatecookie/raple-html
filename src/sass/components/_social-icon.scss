@@ -33,3 +33,30 @@
     }
   }
 }
+.social-icon-wrap {
+  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include max(479px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+a.social-icon2 {
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  color: var(--gray-900);
+  transition: all 0.4s;
+  background-color: var(--primary-50);
+  &:hover {
+    background-color: var(--primary-100);
+  }
+  img {
+    margin-right: 6px;
+  }
+}
