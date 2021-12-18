@@ -1,0 +1,118 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Pricing Plans" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+
+      <div class="comenci-pricing-section comenci-pricing-section2 section-padding">
+        <div class="container">
+          <div class="pricing-btn d-flex align-items-center justify-content-center flex-wrap ">
+            <label class="mb-3 mb-lg-0">Monthly</label>
+            <div class="toggle-btn form-check form-switch  mb-2 mb-lg-0">
+              <input class="form-check-input btn-toggle price-deck-trigger mb-2 mb-lg-0" type="checkbox"
+                id="flexSwitchCheckDefault" data-pricing-trigger data-target="#table-price-value" checked>
+            </div>
+            <label class="mb-3 mb-lg-0">Yearly</label>
+          </div>
+          <div class="comenci-pricing-wraper">
+            <div class="row" id="table-price-value" data-pricing-dynamic data-value-active="monthly">
+              <div class="col-lg-4 col-md-6">
+                <div class="comenci-pricing-wrap wow fadeInUpX" data-wow-delay="0s">
+                  <div class="comenci-pricing-header">
+                    <h3>Starter Plan</h3>
+                  </div>
+                  <div class="comenci-pricing-price">
+                    <span class="comenci-price-currency">$</span>
+                    <h2 class="comenci-price dynamic-value" data-active="0" data-monthly="0" data-yearly="0"></h2>
+                    <p class="bottom_text dynamic-value" data-active="Per Month" data-monthly="Per Month"
+                      data-yearly="Per Year"></p>
+                  </div>
+                  <div class="comenci-pricing-body">
+                    <ul>
+                      <li><i class="fas fa-check"></i> 10 GB Disk Space</li>
+                      <li><i class="fas fa-check"></i> Free Custom Domain</li>
+                      <li><i class="fas fa-check"></i> 1 Year Support</li>
+                      <li><i class="fas fa-check"></i> Basic Statistics</li>
+                      <li><i class="fas fa-check"></i> 500 Queries</li>
+                    </ul>
+                  </div>
+                  <div class="comenci-pricing-footer">
+                    <a class="comenci-default-btn border-btn yellow-border" href="contact.html">Try Free</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="comenci-pricing-wrap wow fadeInUpX" data-wow-delay="0.25s">
+                  <div class="comenci-pricing-header">
+                    <h3>Basic Plan</h3>
+                  </div>
+                  <div class="comenci-pricing-price">
+                    <span class="comenci-price-currency">$</span>
+                    <h2 class="comenci-price dynamic-value" data-active="45" data-monthly="45" data-yearly="449"></h2>
+                    <p class="bottom_text dynamic-value" data-active="Per Month" data-monthly="Per Month"
+                      data-yearly="Per Year"></p>
+                  </div>
+                  <div class="comenci-pricing-body">
+                    <ul>
+                      <li><i class="fas fa-check"></i> 500 GB Disk Space</li>
+                      <li><i class="fas fa-check"></i> Free Custom Domain</li>
+                      <li><i class="fas fa-check"></i> 5 Year Support</li>
+                      <li><i class="fas fa-check"></i> Basic Statistics</li>
+                      <li><i class="fas fa-check"></i> 1000 Queries</li>
+                    </ul>
+                  </div>
+                  <div class="comenci-pricing-footer">
+                    <a class="comenci-default-btn border-btn yellow-border active-btn" href="contact.html">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
+                <div class="comenci-pricing-wrap wow fadeInUpX" data-wow-delay="0.5s">
+                  <div class="comenci-pricing-header">
+                    <h3>Premium Plan</h3>
+                  </div>
+                  <div class="comenci-pricing-price">
+                    <span class="comenci-price-currency">$</span>
+                    <h2 class="comenci-price dynamic-value" data-active="0" data-monthly="100" data-yearly="799"></h2>
+                    <p class="bottom_text dynamic-value" data-active="Per Month" data-monthly="Per Month"
+                      data-yearly="Per Year"></p>
+                  </div>
+                  <div class="comenci-pricing-body">
+                    <ul>
+                      <li><i class="fas fa-check"></i> 800 GB Disk Space</li>
+                      <li><i class="fas fa-check"></i> Free Custom Domain</li>
+                      <li><i class="fas fa-check"></i> Unlimited Support</li>
+                      <li><i class="fas fa-check"></i> Full Statistics</li>
+                      <li><i class="fas fa-check"></i> Unlimited Queries</li>
+                    </ul>
+                  </div>
+                  <div class="comenci-pricing-footer">
+                    <a class="comenci-default-btn border-btn yellow-border" href="contact.html">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End comenci-pricing-section -->
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}
