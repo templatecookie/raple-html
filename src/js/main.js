@@ -165,9 +165,12 @@
   $("#horizental_label").change(function () {
     if ($(this).is(":checked")) {
       $("body").attr("data-layout", "horizental");
+      
     }
   });
 
+  
+  
   $("#seibar_black").change(function () {
     if ($(this).is(":checked")) {
       $("body").attr("data-sidebar", "black");
@@ -181,6 +184,8 @@
   $("#seibar_white").change(function () {
     if ($(this).is(":checked")) {
       $("body").attr("data-sidebar", "white");
+      
+      
     }
   });
 
