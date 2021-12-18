@@ -4,8 +4,8 @@
   margin: 0 auto 48px;
   padding-top: 50px;
   @include max(479px) {
-    padding-top: 30px;
-    margin: 0 auto 30px;
+    font-size: 30px;
+    line-height: 36px;
   }
   h2 {
     font-weight: 600;
