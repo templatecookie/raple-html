@@ -1,0 +1,56 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Dashboard" %}
+{% block content %}
+
+<main class="app-wrapper">
+  <div class="container">
+    <div class="login-wrap">
+        <a class="login-logo" href="index.html"><img src="assets/images/logo/logo.svg" alt=""></a>
+        <div class="login-box">
+            <div class="login-thumb">
+              <img src="assets/images/all-img/thumb.jpg" alt="">
+            </div>
+            <div class="login-content">
+              <h3>Create account in Relik</h3>
+              <form action="#">
+                <div class="fromGroup rt-mb-16">
+                  <label>Email</label>
+                  <input class="form-control" type="text" placeholder="Email address">
+                </div>
+                <div class="fromGroup eye rt-mb-24 forget-password">
+                  <label>Password <a href="#">Forget Password</a></label>
+                  <div class="form-control-icon">
+                    <input class="form-control" type="password" placeholder="password">
+                    <div class="has-badge">
+                      <img src="assets/images/svg/eye.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <a href="registration.html" type="button" class="btn btn-primary pill btn-icon full-width">
+                  <span class="button-content-wrapper">
+                    <span class="button-icon align-icon-right">
+                      <i class="ph-arrow-right"></i>
+                    </span>
+                    <span class="button-text">
+                      Create Account
+                    </span>
+                  </span>
+                </a>
+              </form>
+              <div class="login-with">
+                  <p>or Login with</p>
+              </div>
+              <div class="social-icon-wrap">
+                <a class="social-icon2" href=""><img src="assets/images/svg/google.svg" alt="">Google</a>
+                <a class="social-icon2" href=""><img src="assets/images/svg/apple.svg" alt="">Apple</a>
+                <a class="social-icon2" href=""><img src="assets/images/svg/facebook.svg" alt="">Facebook</a>
+              </div>
+            </div>
+        </div>
+        <p> Don’t have account! <a href="registration.html">Create Account</a></p>
+      </div>
+
+  </div>
+</main>
+
+{% endblock %}

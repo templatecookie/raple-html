@@ -31,19 +31,15 @@
   }
 }
 
-.file-text-toggle {
-  position: relative;
-  a.arrow-btn {
-    border: none;
-    line-height: 1;
-    background-color: transparent;
+.collapsed {
+  .file-text-toggle {
+    transform: rotate(180deg);
   }
 }
-// .file-text-wrap.collapsed {
-//   a.arrow-btn {
-//     transform: rotate(20deg);
-//   }
-// }
+.file-text-toggle {
+  position: relative;
+  transition: all 0.4s;
+}
 
 .connected-apps {
   p {
