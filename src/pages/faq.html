@@ -1,0 +1,112 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Faqs" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Nam nec ante et elit pulvinar placerat. Praesent lacinia purus in dui convallis placerat. Cras euismod a nisi ut
+            elementum.</p>
+        </div>
+        <!--End section title -->
+
+        <div class="row">
+          <div class="col-xl-6">
+              <div class="faq-wrap">
+                <div class="faq-icon">
+                  <img src="assets/images/svg/faq-icon1.svg" alt="">
+                </div>
+                <div class="faq-data">
+                  <h4>Can I add or edit more than one user at at time?</h4>
+                  <p>Ut sed orci venenatis, aliquam nunc et, tempor leo. Suspendisse dolor massa, pellentesque vitae tempus non, tempor a
+                  massa. Suspendisse hendrerit massa velit, et blandit ex pulvinar in.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="faq-wrap">
+              <div class="faq-icon">
+                <img src="assets/images/svg/faq-icon2.svg" alt="">
+              </div>
+              <div class="faq-data">
+                <h4>How do I edit an existing user?</h4>
+                <p>Nam nec ante et elit pulvinar placerat. Praesent lacinia purus in dui convallis placerat. Cras euismod a nisi ut
+                elementum. Duis auctor eros ex, at pharetra arcu rhoncus id. Curabitur in enim justo. Nullam eget aliquet mauris. Nulla
+                mattis, sem ut facilisis viverra.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="faq-wrap">
+              <div class="faq-icon">
+                <img src="assets/images/svg/faq-icon3.svg" alt="">
+              </div>
+              <div class="faq-data">
+                <h4>What is the “Additional Data” available for selection?</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis sem eu sem porta cursus. Nam sollicitudin
+                finibus tincidunt.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="faq-wrap">
+              <div class="faq-icon">
+                <img src="assets/images/svg/faq-icon4.svg" alt="">
+              </div>
+              <div class="faq-data">
+                <h4>How do I create and define permissions for a role?</h4>
+                <p>Sed ut vehicula arcu, eget consequat sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                ac turpis egestas. Nam tristique et est eu vehicula.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="faq-wrap">
+              <div class="faq-icon">
+                <img src="assets/images/svg/faq-icon5.svg" alt="">
+              </div>
+              <div class="faq-data">
+                <h4>What admin functions are now available for RapidLite?</h4>
+                <p>Quisque venenatis ligula et nunc aliquam, vitae blandit mi suscipit. Praesent venenatis odio nisl, id ultricies est
+                sollicitudin vel. Ut volutpat tincidunt turpis, sed feugiat dolor euismod sit amet. Quisque non turpis id risus
+                fringilla porttitor. Aenean vulputate lorem vel lobortis volutpat. Phasellus non ex tortor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="faq-wrap">
+              <div class="faq-icon">
+                <img src="assets/images/svg/faq-icon6.svg" alt="">
+              </div>
+              <div class="faq-data">
+                <h4>How do I use the PSAP Information tab?</h4>
+                <p>Sed metus nunc, ultrices non lacus eget, venenatis cursus neque. Fusce orci dui, bibendum eleifend nisi ut, interdum
+                condimentum diam. Aliquam erat volutpat. Suspendisse libero tellus, dignissim pulvinar ipsum in, sagittis pretium
+                lectus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis sem eu sem porta cursus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End faq -->
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}

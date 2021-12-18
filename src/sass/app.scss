@@ -39,13 +39,13 @@
   "components/alert", "components/label-card", "components/file",
   "components/banner", "components/payment-card", "components/invoice-list",
   "components/payment-history", "components/modal", "components/profile",
-  "components/jquery-ui/calender", "components/info", "components/social-icon", "components/events/calender",
-  "components/card-activity";
+  "components/jquery-ui/calender", "components/info", "components/social-icon",
+  "components/events/calender", "components/card-activity", "components/faq";
 
 // 6. Page-specific styles
 /*1.3 pages css*/
 @import "pages/home", "pages/styleguide", "pages/file-manager", "pages/setting",
-  "pages/billing";
+  "pages/billing", "pages/blank";
 
 // 7. Themes
 /*1.4 themes css*/
