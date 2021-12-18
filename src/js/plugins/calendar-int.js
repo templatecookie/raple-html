@@ -73,5 +73,8 @@
 })(window.jQuery),
     (function () {
         "use strict";
-        window.jQuery.CalendarPage.init();
+        if(document.getElementById("calendar")) {
+            window.jQuery.CalendarPage.init();
+        }
+
     })();

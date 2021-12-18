@@ -96,12 +96,12 @@
     transition: transform 0.24s;
     transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
   }
-  &:before {
-    background-color: var(--primary-400);
-  }
-  &:after {
-    background-color: var(--primary-600);
-  }
+  // &:before {
+  //   background-color: var(--primary-400);
+  // }
+  // &:after {
+  //   background-color: var(--primary-600);
+  // }
   &:hover {
     &:before {
       transform: translate3d(0, 100%, 0);
@@ -117,6 +117,14 @@
   background: var(--primary-500);
   border-color: var(--primary-500);
   color: #fff;
+  &.multipule-color-strep {
+    &:before {
+      background-color: var(--primary-400);
+    }
+    &:after {
+      background-color: var(--primary-600);
+    }
+  }
   &:hover,
   &:focus,
   &:active {
@@ -172,11 +180,19 @@
   background: var(--gray-900);
   border-color: var(--gray-900);
   color: #fff;
+  &.multipule-color-strep {
+    &:before {
+      background-color: var(--gray-500);
+    }
+    &:after {
+      background-color: var(--gray-800);
+    }
+  }
   &:hover,
   &:focus,
   &:active {
     background: var(--gray-800);
-    border-color: var(--primary-800);
+    border-color: var(--gray--800);
   }
   &.disabled,
   &:disabled {
