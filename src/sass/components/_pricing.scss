@@ -10,6 +10,16 @@
 .pricing-btn {
   display: flex;
   align-items: center;
+  &.monthly-active {
+    label.monthly {
+      color: var(--gray-900);
+    }
+  }
+  &.yearly-active {
+    label.yearly {
+      color: var(--gray-900);
+    }
+  }
   @include max(479px) {
     margin-top: 40px;
     justify-content: center;
