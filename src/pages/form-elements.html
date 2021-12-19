@@ -1,0 +1,116 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Account Setting" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-header">Private Info</div>
+              <div class="card-body">
+                <div class="fromGroup mb-3">
+                  <label>Team</label>
+                  <div class="select-box">
+                    <select class="custom-select sources" title="Select...">
+                      <option>Select...</option>
+                      <option>Select...</option>
+                      <option>Select...</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                    <div class="fromGroup mb-3">
+                      <label>Country</label>
+                      <div class="select-box">
+                        <select class="custom-select sources" title="Select...">
+                          <option>Bangladesh</option>
+                          <option>New zealand</option>
+                          <option>switzerland</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                    <div class="fromGroup mb-3">
+                      <label>City</label>
+                      <div class="select-box">
+                        <select class="custom-select sources" title="Select...">
+                          <option>Dhaka</option>
+                          <option>New zealand</option>
+                          <option>switzerland</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fromGroup mb-3">
+                  <label>Date of Birth</label>
+                  <div class="select-box">
+                    <select class="custom-select sources" title="Date of Birth">
+                      <option>Bangladesh</option>
+                      <option>New zealand</option>
+                      <option>switzerland</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="fromGroup mb-3">
+                  <label>Language</label>
+                  <div class="select-box">
+                    <select class="custom-select sources" title="Select...">
+                      <option>Bangla</option>
+                      <option>English</option>
+                    </select>
+                  </div>
+                </div>
+
+
+
+                <button type="button" class="btn btn-primary pill mt-3">Save Changes</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-header">Social Account</div>
+              <div class="card-body">
+                <div class="fromGroup mb-3">
+                  <label>Facebook</label>
+                  <input class="form-control" type="text" placeholder="Facebook profile url...">
+                </div>
+                <div class="fromGroup mb-3">
+                  <label>Twitter</label>
+                  <input class="form-control" type="text" placeholder="Twitter profile url...">
+                </div>
+                <div class="fromGroup mb-3">
+                  <label>Linkedin</label>
+                  <input class="form-control" type="text" placeholder="Linkedin profile url...">
+                </div>
+                <div class="fromGroup mb-3">
+                  <label>Instagram</label>
+                  <input class="form-control" type="text" placeholder="Instagram profile url...">
+                </div>
+                <button type="button" class="btn btn-primary pill mt-3">Save Changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}
