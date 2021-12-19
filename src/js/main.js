@@ -16,9 +16,9 @@
 (function ($) {
   "use strict";
 
-  var cal = new tui.Calendar('#calendar_1', {
-    defaultView: 'month' // monthly view option
-  });
+  // var cal = new tui.Calendar('#calendar_1', {
+  //   defaultView: 'month' // monthly view option
+  // });
 
   var template_x = document.getElementById("template");
   var template2_x = document.getElementById("template2");
@@ -173,32 +173,102 @@
   });
 
 
-  var theme = window.localStorage.getItem('data-sidebar');
-  if(theme) document.documentElement.setAttribute('data-sidebar', theme);
-
-
-  $("#seibar_black").change(function () {
-    if ($(this).is(":checked")) {
-      document.documentElement.setAttribute('data-sidebar', 'black');
-      localStorage.setItem( 'data-sidebar', 'black');   
-    }
-  });
-  $("#seibar_navy").change(function () {
-    if ($(this).is(":checked")) {
-      document.documentElement.removeAttribute('data-sidebar', 'black');
-      document.documentElement.setAttribute('data-sidebar', 'blue');
-      localStorage.setItem( 'data-sidebar', 'blue'); 
-    }
-  });
-  $("#seibar_white").change(function () {
-    if ($(this).is(":checked")) {
-      document.documentElement.removeAttribute('data-sidebar', 'dark');
-      document.documentElement.removeAttribute('data-sidebar', 'blue');
-      document.documentElement.setAttribute('data-sidebar', 'white');
-      localStorage.setItem( 'data-sidebar', 'white'); 
+  const darkButton = document.getElementById('dark');
+  const lightButton = document.getElementById('light');
+  const solarButton = document.getElementById('solar');
+  const body = document.body;
+  
+  const theme = localStorage.getItem('theme');
+  const isSolar = localStorage.getItem('isSolar');
+  
+  if (theme) {
+    body.classList.add(theme);
+    isSolar && body.classList.add('solar');
+  }
+  
+  // Button Event Handlers
+  
+  darkButton.onclick = () => {
+    body.classList.replace('light', 'dark');
+    localStorage.setItem('theme', 'dark');
+  };
+  
+  lightButton.onclick = () => {
+    body.classList.replace('dark', 'light');
+  
+    localStorage.setItem('theme', 'light');
+  };
+  
+  solarButton.onclick = () => {
+  
+    if (body.classList.contains('solar')) {
       
+      body.classList.remove('solar');
+      localStorage.removeItem('isSolar');
+  
+    } else {
+  
+      body.classList.add('solar');
+      localStorage.setItem('isSolar', true);
+  
     }
-  });
+  };
+
+
+//   var theme = window.localStorage.getItem('data-sidebar');
+
+//   if(theme) {
+    
+//       document.documentElement.setAttribute('data-sidebar', theme);
+//       localStorage.setItem( 'data-sidebar', theme);
+     
+// }
+
+
+//   $("#seibar_black").change(function (e) {
+//     if (e.target.checked) {
+//       document.documentElement.setAttribute('data-sidebar', 'black');
+//       localStorage.setItem( 'data-sidebar', 'black'); 
+      
+      
+      
+
+//     }
+//     else{
+//       document.documentElement.setAttribute('data-sidebar', 'white');
+//       localStorage.setItem( 'data-sidebar', 'white'); 
+//       this.checked = ture;
+      
+//     }
+//   });
+//   $("#seibar_navy").change(function (e) {
+//     if (e.target.checked) {
+//       document.documentElement.removeAttribute('data-sidebar', 'black');
+//       document.documentElement.setAttribute('data-sidebar', 'blue');
+//       localStorage.setItem( 'data-sidebar', 'blue'); 
+      
+
+//     }
+//     else{
+//       document.documentElement.setAttribute('data-sidebar', 'white');
+//       localStorage.setItem( 'data-sidebar', 'white'); 
+//       this.checked = ture;
+//     }
+//   });
+//   $("#seibar_white").change(function (e) {
+//     if (e.target.checked) {
+//       document.documentElement.removeAttribute('data-sidebar', 'dark');
+//       document.documentElement.removeAttribute('data-sidebar', 'blue');
+//       document.documentElement.setAttribute('data-sidebar', 'white');
+//       localStorage.setItem( 'data-sidebar', 'white'); 
+      
+      
+      
+//     }
+//     else{
+//       this.checked = ture;
+//     }
+//   });
 
   $("#layout").on("click", function () {
     $("#appSettings").toggleClass("open");
