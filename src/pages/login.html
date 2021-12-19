@@ -15,14 +15,14 @@
               <form action="#">
                 <div class="fromGroup rt-mb-16">
                   <label>Email</label>
-                  <input class="form-control" type="text" placeholder="Email address">
+                  <input class="form-control" type="email" placeholder="Email address">
                 </div>
                 <div class="fromGroup eye rt-mb-24 forget-password">
                   <label>Password <a href="#">Forget Password</a></label>
                   <div class="form-control-icon">
-                    <input class="form-control" type="password" placeholder="password">
-                    <div class="has-badge">
-                      <img src="assets/images/svg/eye.svg" alt="">
+                    <input id="password-hide_show" class="form-control" type="password" placeholder="password">
+                    <div class="has-badge" onclick="showPassword('password-hide_show', this)">
+                      <i class="ph-eye"></i>
                     </div>
                   </div>
                 </div>
