@@ -36,10 +36,18 @@
     float: none;
     padding: 16px;
     display: inline-block;
+    color: var(--gray-700);
 }
 .fc .fc-row .fc-content-skeleton table, .fc .fc-row .fc-content-skeleton td, .fc .fc-row .fc-mirror-skeleton td{
     text-align: left;
 }
 .modal-backdrop.show{
     opacity: 0.7;
+}
+.fc-day-top.fc-other-month{
+    opacity: 1;
+    .fc-day-number{
+        color: var(--gray-300) !important;
+    }
+   
 }
