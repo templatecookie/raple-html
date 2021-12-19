@@ -8,7 +8,7 @@
     text-align: center;
     max-width: 320px;
     margin: 0 auto;
-    @include max(479px) {
+    @include breakpoint(xs) {
       height: auto;
       padding: 100px 0;
       display: block;
@@ -21,7 +21,7 @@
     overflow: hidden;
     border-radius: 100%;
     margin: 0 auto 20px;
-    @include max(479px) {
+    @include breakpoint(xs) {
       width: 140px;
       height: 140px;
     }
