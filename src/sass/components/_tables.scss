@@ -1,115 +1,128 @@
-.table { 
+.table-wrapper { 
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     background-color: #fff;
-
-    &-head { 
-        padding: 16px 24px;
-        overflow: hidden;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        background-color: #fff;
-        h2 { 
-            margin: 0px;
-           @extend %text-two;
-           color: var(--gray-900);
-        }
-    }
-
-    thead { 
-        tr { 
-            th { 
-                border: 0px;
-                font-size: 12px;
-                line-height: 12px;
-                font-weight: 500;
-                padding: 12px 24px;
-                color: var(--gray-700);
-                text-transform: uppercase;
-                background-color: var(--gray-50);
-                white-space: nowrap;
+    
+    .table { 
+        &-head { 
+            padding: 16px 24px;
+            overflow: hidden;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            background-color: #fff;
+            h2 { 
+                margin: 0px;
+               @extend %text-two;
+               color: var(--gray-900);
             }
         }
-    }
-    tbody { 
-       tr { 
-        border-bottom: 1px solid #E5E7E8;
-        &:nth-last-child(1) { 
-            border-bottom: 0px;
+    
+        thead { 
+            tr { 
+                th { 
+                    border: 0px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: 500;
+                    padding: 12px 24px;
+                    color: var(--gray-700);
+                    text-transform: uppercase;
+                    background-color: var(--gray-50);
+                    white-space: nowrap;
+                }
+            }
         }
-           th,td { 
-               border: 0px;
-               padding: 24px;
-           }
-
-           th,
-           td { 
-               @extend %text-para;
-               color: var(--gray-900);
-               white-space: nowrap;
-           }
-
-           td { 
-               color: var(--gray-700);
-
-               ul { 
-                   display: flex;
-                   align-items: center;
-
-                   li { 
-
-                    &:nth-child(1) { 
-                       margin-right: 8px; 
-                     
-                       button { 
-                        color: var(--danger-500);
-                        background-color: var(--danger-50) ;
-
-                        &:hover { 
-                            color: white;
-                            background-color: var(--danger-500);
+        tbody { 
+           tr { 
+            border-bottom: 1px solid #E5E7E8;
+            &:nth-last-child(1) { 
+                border-bottom: 0px;
+            }
+               th,td { 
+                   border: 0px;
+                   padding: 24px;
+               }
+    
+               th,
+               td { 
+                   @extend %text-para;
+                   color: var(--gray-900);
+                   white-space: nowrap;
+               }
+    
+               td { 
+                   color: var(--gray-700);
+    
+                   ul { 
+                       display: flex;
+                       align-items: center;
+    
+                       li { 
+    
+                        &:nth-child(1) { 
+                           margin-right: 8px; 
+                         
+                           button { 
+                            color: var(--danger-500);
+                            background-color: var(--danger-50) ;
+    
+                            &:hover { 
+                                color: white;
+                                background-color: var(--danger-500);
+                                svg { 
+                                    transform: scale(1.2);
+                                }
+                            }
+                           }
                         }
-                       }
-                    }
-
-                    &:nth-child(2) { 
-                     
-                       button { 
-                           color: var(--success-500);
-                        background-color: var(--success-50) ;
-
-                        &:hover { 
-                            color: white;
-                            background-color: var(--success-500);
+    
+                        &:nth-child(2) { 
+                         
+                           button { 
+                               color: var(--success-500);
+                            background-color: var(--success-50) ;
+    
+                            &:hover { 
+                                color: white;
+                                background-color: var(--success-500);
+                                svg { 
+                                    transform: scale(1.2);
+                                }
+                            }
+                           }
                         }
-                       }
-                    }
-                       button { 
-                           border: 0px;
-                           outline: 0px;
-                           width: 36px;
-                           height: 36px;
-                           display: flex;
-                           align-items: center;
-                           justify-content: center;
-                           border-radius: 50%;
-                           overflow: hidden;
-                            transition: all 0.3s linear;
+                           button { 
+                               border: 0px;
+                               outline: 0px;
+                               width: 36px;
+                               height: 36px;
+                               display: flex;
+                               align-items: center;
+                               justify-content: center;
+                               border-radius: 50%;
+                               overflow: hidden;
+                            //    transition: all 0.3s linear;
+    
+                               svg { 
+                                   transform: scale(1);
+                                   transition: all 0.3s ease-in-out;
+                               }
+                           }
                        }
                    }
                }
-           }
+               
+           } 
+        }
+    
+        &-basic--border { 
            
-       } 
-    }
-
-    &-basic--border { 
-       
-        tbody { 
-            tr { 
-                th,td { 
-                    border-right: 1px solid #E5E7E8
+            tbody { 
+                tr { 
+                    th,td { 
+                        border-right: 1px solid #E5E7E8
+                    }
                 }
             }
         }
