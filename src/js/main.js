@@ -415,6 +415,7 @@ if (document.getElementById('bar-chart1')) {
       show: false,
     },
   };
+
   if (document.getElementById('area-spaline-bottom')) {
     var chart2 = new ApexCharts(
       document.querySelector('#area-spaline-bottom'),
@@ -423,6 +424,7 @@ if (document.getElementById('bar-chart1')) {
 
     chart2.render();
   }
+
   var options2 = {
     chart: {
       height: 62,
@@ -492,6 +494,7 @@ if (document.getElementById('bar-chart1')) {
       show: false,
     },
   };
+
   if (document.getElementById('area-spaline-bottom2')) {
     var chart3 = new ApexCharts(
       document.querySelector('#area-spaline-bottom2'),
@@ -713,6 +716,7 @@ if (document.getElementById('bar-chart1')) {
       left: 0,
     },
   };
+
   if (document.getElementById('user_chart')) {
     var user_chart = new ApexCharts(
       document.querySelector('#user_chart'),
@@ -776,6 +780,93 @@ if (document.getElementById('bar-chart1')) {
         .find('.custom-select-trigger')
         .text($(this).text());
     });
+
+
+    
+    var line_chart_keyword_1 = {
+      maintainAspectRatio: true,
+      chart: {
+        height: 24,
+        type: 'line',
+        toolbar: {
+          show: false,
+        },
+  
+        sparkline: {
+          enabled: true,
+        },
+      },
+  
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: { curve: 'smooth', width: 2 },
+      series: [
+        {
+          data: [70, 20, 80, 10, 40, 30, 60, 40, 90, 20],
+        },
+      ],
+      colors: ['#0066FF'],
+  
+      tooltip: {
+        theme: 'light',
+      },
+      grid: {
+        show: false,
+      },
+      yaxis: {
+        show: false,
+      },
+  
+      xaxis: {
+        show: false,
+      },
+      legend: {
+        show: false,
+      },
+    };
+
+    // Apex charts 
+    if (document.getElementById('line_chartkeyword_1')) {
+        var line_chart_create = new ApexCharts(
+          document.querySelector('#line_chartkeyword_1'),
+          line_chart_keyword_1,
+        );
+    
+        line_chart_create.render();
+    }
+    if (document.getElementById('line_chartkeyword_2')) {
+        var line_chart_create = new ApexCharts(
+          document.querySelector('#line_chartkeyword_2'),
+          line_chart_keyword_1,
+        );
+    
+        line_chart_create.render();
+    }
+    if (document.getElementById('line_chartkeyword_3')) {
+        var line_chart_create = new ApexCharts(
+          document.querySelector('#line_chartkeyword_3'),
+          line_chart_keyword_1,
+        );
+    
+        line_chart_create.render();
+    }
+    if (document.getElementById('line_chartkeyword_4')) {
+        var line_chart_create = new ApexCharts(
+          document.querySelector('#line_chartkeyword_4'),
+          line_chart_keyword_1,
+        );
+    
+        line_chart_create.render();
+    }
+    if (document.getElementById('line_chartkeyword_5')) {
+        var line_chart_create = new ApexCharts(
+          document.querySelector('#line_chartkeyword_5'),
+          line_chart_keyword_1,
+        );
+    
+        line_chart_create.render();
+    }
 
 
 })(jQuery);
