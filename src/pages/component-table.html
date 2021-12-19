@@ -1,0 +1,373 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Table" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="table-wrapper">
+                    <div class="table-head">
+                        <h2>Basic Table </h2>
+                    </div>
+                    <div class="table-content table-responsive">
+                        <table class="table align-middle table-basic ">
+                            <thead>
+                              <tr>
+                                <th scope="col">id</th>
+                                <th colspan="2" scope="col">Name</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Date of Birth</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="table-wrapper">
+                    <div class="table-head">
+                        <h2>Basic Bordered Table</h2>
+                    </div>
+                    <div class="table-content table-responsive">
+                        <table class="table align-middle table-basic table-basic--border ">
+                            <thead>
+                              <tr>
+                                <th scope="col">id</th>
+                                <th colspan="2" scope="col">Name</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Date of Birth</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">647</th>
+                                <td colspan="2">Esther Howard</td>
+                                <td>(252) 555-0126</td>
+                                <td>Oct. 18, 1996</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>                                                    
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>             
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End blank page -->
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}

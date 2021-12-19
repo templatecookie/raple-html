@@ -31,13 +31,14 @@
   }
 }
 
+.collapsed {
+  .file-text-toggle {
+    transform: rotate(180deg);
+  }
+}
 .file-text-toggle {
   position: relative;
-  button.arrow-btn {
-    border: none;
-    line-height: 1;
-    background-color: transparent;
-  }
+  transition: all 0.4s;
 }
 
 .connected-apps {

@@ -1,0 +1,129 @@
+[data-pricing-dynamic][data-value-active="yearly"] .dynamic-value:before {
+  display: inline-block;
+  content: attr(data-yearly);
+}
+.dynamic-value:before {
+  display: inline-block;
+  content: attr(data-active);
+}
+
+.pricing-btn {
+  display: flex;
+  align-items: center;
+  @include max(479px) {
+    margin-top: 40px;
+    justify-content: center;
+  }
+  label {
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    line-height: 1;
+    color: var(--gray-500);
+  }
+  .custom-switch.form-switch {
+    margin: 5px 10px 0;
+  }
+}
+.pricing-header-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include max(479px) {
+    display: block;
+  }
+}
+.pricing {
+  &-wrap {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    &.active {
+      background-color: var(--gray-900);
+      .pricing-top {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .pricing-header {
+        h3 {
+          color: white;
+        }
+        p {
+          color: var(--gray-400);
+        }
+      }
+      .pricing-price {
+        h2 {
+          color: white;
+        }
+        p {
+          color: var(--gray-500);
+        }
+      }
+      .pricing-body {
+        ul {
+          li {
+            color: var(--gray-300);
+            path {
+              fill: var(--secondary-500);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-top {
+    padding: 32px;
+    text-align: center;
+    border-bottom: 1px solid rgba(25, 27, 28, 0.1);
+  }
+  &-header {
+    img {
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--gray-600);
+      margin-bottom: 16px;
+    }
+  }
+  &-price {
+    h2 {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 18px;
+      color: var(--gray-500);
+      text-transform: uppercase;
+    }
+  }
+  &-body {
+    padding: 32px;
+    ul {
+      li {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 12px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        color: var(--gray-700);
+        svg {
+          margin-right: 9px;
+        }
+      }
+    }
+  }
+}
