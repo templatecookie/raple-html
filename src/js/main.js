@@ -900,5 +900,4 @@ if (document.getElementById('bar-chart1')) {
 
 
 
-
 })(jQuery);
