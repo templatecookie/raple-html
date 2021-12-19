@@ -151,26 +151,58 @@
     }
   });
 
+  var layoutbox = document.getElementsByName("layoutbox");
 
-  var layout = window.localStorage.getItem('data-layout');
-  if(layout) document.documentElement.setAttribute('data-layout', layout);
+  var theme = window.localStorage.getItem('data-layout');
+
+  if(theme) {
+    
+      document.documentElement.setAttribute('data-layout', theme);
+      localStorage.setItem( 'data-layout', theme);
+     
+}
+
+var layoutmode = {
+  "vertical":"vertical",
+  "horizental":"horizental",
+} 
+
+var val = localStorage.getItem('layoutbox');
+for (var i=0;i<layoutbox.length;i++) {
+  layoutbox[i].onclick=function() {
+    var lay = layoutmode[this.value];
+    document.documentElement.setAttribute('data-layout', lay);
+    localStorage.setItem( 'data-layout', lay); 
+    
+  }
+  if(layoutbox[i].value == val){
+    layoutbox[i].checked = true;
+  }
+}
+
+$('input[name="layoutbox"]').on('change', function(){
+  localStorage.setItem('layoutbox', $(this).val());
+
+});
 
 
-  $("#vertical_lable").change(function () {
-    if ($(this).is(":checked")) {
-      document.documentElement.setAttribute('data-layout', 'vertical');
-      localStorage.setItem( 'data-layout', 'vertical');  
-    }
-  });
 
-  $("#horizental_label").change(function () {
-    if ($(this).is(":checked")) {
-      document.documentElement.removeAttribute('data-layout', 'vertical');
-      document.documentElement.setAttribute('data-layout', 'horizental');
-      localStorage.setItem( 'data-layout', 'horizental');  
+
+  // $("#vertical_lable").change(function () {
+  //   if ($(this).is(":checked")) {
+  //     document.documentElement.setAttribute('data-layout', 'vertical');
+  //     localStorage.setItem( 'data-layout', 'vertical');  
+  //   }
+  // });
+
+  // $("#horizental_label").change(function () {
+  //   if ($(this).is(":checked")) {
+  //     document.documentElement.removeAttribute('data-layout', 'vertical');
+  //     document.documentElement.setAttribute('data-layout', 'horizental');
+  //     localStorage.setItem( 'data-layout', 'horizental');  
       
-    }
-  });
+  //   }
+  // });
 
 
 
@@ -179,9 +211,12 @@ var checkBox = document.getElementsByName("sidebar");
 
   var theme = window.localStorage.getItem('data-sidebar');
 
-  if(theme) document.documentElement.setAttribute('data-sidebar', theme);
+  if(theme) {
+    
+      document.documentElement.setAttribute('data-sidebar', theme);
+      localStorage.setItem( 'data-sidebar', theme);
      
-
+}
 
 var sidebarmode = {
   "white":"white",
