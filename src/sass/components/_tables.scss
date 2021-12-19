@@ -1,10 +1,9 @@
 .table-wrapper { 
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: #fff;
-    
     .table { 
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;    
+        background-color: #fff;
         &-head { 
             padding: 16px 24px;
             overflow: hidden;
@@ -116,6 +115,7 @@
            } 
         }
     
+
         &-basic--border { 
            
             tbody { 
@@ -123,6 +123,74 @@
                     th,td { 
                         border-right: 1px solid #E5E7E8
                     }
+                }
+            }
+        }
+
+        // Strip 
+        &-stripeds { 
+          tbody { 
+
+            tr { 
+              th,td { 
+                padding: 20px 24px;
+              }
+            }
+
+              tr { 
+                  background-color: #fff;
+                  border: 0px;
+                  th { 
+                      a  { 
+                          display: flex;
+                          color: #191B1C;
+                          font-size: 14px;
+                          font-weight: 500;
+                          line-height: 20px;
+                          align-items: center;
+                          text-transform: capitalize;
+                          span { 
+                            flex-shrink: 0;  
+                            margin-right: 8px;
+                          }
+                      }
+                  }
+                &:nth-child(odd) { 
+                    background-color: #fff;
+                }
+                &:nth-child(even) { 
+                    background-color: #F0F6FF;
+                }
+              }
+          }
+        }
+
+        // hoverable row 
+        &-hoverable { 
+            tbody { 
+                tr { 
+                    &:hover { 
+                        background-color: #F5F6F7;
+                    }
+                }
+                tr { 
+                    th,td { 
+                        padding: 16px 24px;
+                    }
+                    th { 
+                        a { 
+                            display: flex;
+                            align-items: center;
+                            span { 
+                                flex-shrink: 0;
+                                margin-right: 12px;
+                            }
+                            @extend %text-para;
+                            font-weight: 500;
+                            color: var(--gray-900);
+                        }
+                    }
+                  
                 }
             }
         }
