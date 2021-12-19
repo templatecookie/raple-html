@@ -179,27 +179,33 @@ var checkBox = document.getElementsByName("sidebar");
 
   var theme = window.localStorage.getItem('data-sidebar');
 
-  if(theme) {
-    
-      document.documentElement.setAttribute('data-sidebar', theme);
-      localStorage.setItem( 'data-sidebar', theme);
+  if(theme) document.documentElement.setAttribute('data-sidebar', theme);
      
-}
 
-var cols = {
+
+var sidebarmode = {
   "white":"white",
   "black":"black",
   "blue":"blue"
 } 
+
+var val = localStorage.getItem('sidebar');
 for (var i=0;i<checkBox.length;i++) {
   checkBox[i].onclick=function() {
-    var col = cols[this.value];
-   // document.body.style.backgroundColor=col;
+    var col = sidebarmode[this.value];
     document.documentElement.setAttribute('data-sidebar', col);
     localStorage.setItem( 'data-sidebar', col); 
+    
+  }
+  if(checkBox[i].value == val){
+    checkBox[i].checked = true;
   }
 }
 
+$('input[name="sidebar"]').on('change', function(){
+  localStorage.setItem('sidebar', $(this).val());
+
+});
 
  
 
