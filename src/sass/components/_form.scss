@@ -104,6 +104,12 @@ select,
     .has-badge {
       display: block !important;
     }
+    .warning-icon {
+      display: none;
+    }
+    .success-icon {
+      display: block;
+    }
   }
   &.warning {
     .form-control {
@@ -113,6 +119,12 @@ select,
         border-color: var(--danger-500) !important;
       }
     }
+    .warning-icon {
+      display: block;
+    }
+    .success-icon {
+      display: none;
+    }
   }
   &.eye {
     .form-control {
@@ -120,6 +132,11 @@ select,
     }
     .has-badge {
       display: block !important;
+      i {
+        font-size: 22px;
+        line-height: 1;
+        margin-top: 7px;
+      }
     }
   }
 
