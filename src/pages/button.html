@@ -1,0 +1,794 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Button" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Basic Button</div>
+                <div class="card-body">
+                    <div class="primary-button-list-wrap">
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-primary pill multipule-color-strep">Button</button>
+                        <button type="button" class="btn btn-primary pill">Button</button>
+                        <button type="button" class="btn btn-primary pill" disabled>Button</button>
+                        <button type="button" class="btn btn-primary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-primary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-primary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-dark pill multipule-color-strep">Button</button>
+                        <button type="button" class="btn btn-dark pill" disabled>Button</button>
+                        <button type="button" class="btn btn-dark pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-dark pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-dark pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-secondary pill">Button</button>
+                        <button type="button" class="btn btn-secondary pill" disabled>Button</button>
+                        <button type="button" class="btn btn-secondary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-secondary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-secondary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-success pill">Button</button>
+                        <button type="button" class="btn btn-success pill" disabled>Button</button>
+                        <button type="button" class="btn btn-success pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-success pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-success pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-warning pill">Button</button>
+                        <button type="button" class="btn btn-warning pill" disabled>Button</button>
+                        <button type="button" class="btn btn-warning pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-warning pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-warning pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-danger pill">Button</button>
+                        <button type="button" class="btn btn-danger pill" disabled>Button</button>
+                        <button type="button" class="btn btn-danger pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-danger pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-danger pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Border Button</div>
+                <div class="card-body">
+                    <div class="primary-button-list-wrap">
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-outline-primary pill">Button</button>
+                        <button type="button" class="btn btn-outline-primary pill" disabled>Button</button>
+                        <button type="button" class="btn btn-outline-primary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-outline-dark pill">Button</button>
+                        <button type="button" class="btn btn-outline-dark pill" disabled>Button</button>
+                        <button type="button" class="btn btn-outline-dark pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-dark pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-dark pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-outline-secondary pill">Button</button>
+                        <button type="button" class="btn btn-outline-secondary pill" disabled>Button</button>
+                        <button type="button" class="btn btn-outline-secondary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-outline-success pill">Button</button>
+                        <button type="button" class="btn btn-outline-success pill" disabled>Button</button>
+                        <button type="button" class="btn btn-outline-success pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-success pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-success pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-outline-warning pill">Button</button>
+                        <button type="button" class="btn btn-outline-warning pill" disabled>Button</button>
+                        <button type="button" class="btn btn-outline-warning pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-warning pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-warning pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-outline-danger pill">Button</button>
+                        <button type="button" class="btn btn-outline-danger pill" disabled>Button</button>
+                        <button type="button" class="btn btn-outline-danger pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-danger pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-danger pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Basic Button</div>
+                <div class="card-body">
+                    <div class="primary-button-list-wrap">
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-primary2 pill">Button</button>
+                        <button type="button" class="btn btn-primary2 pill" disabled>Button</button>
+                        <button type="button" class="btn btn-primary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                    
+                        <button type="button" class="btn btn-primary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-primary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-dark2 pill">Button</button>
+                        <button type="button" class="btn btn-dark2 pill" disabled>Button</button>
+                        <button type="button" class="btn btn-dark2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-dark2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-dark2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-secondary2 pill">Button</button>
+                        <button type="button" class="btn btn-secondary2 pill" disabled>Button</button>
+                        <button type="button" class="btn btn-secondary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-secondary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-secondary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-success2 pill">Button</button>
+                        <button type="button" class="btn btn-success2 pill" disabled>Button</button>
+                        <button type="button" class="btn btn-success2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-success2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-success2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-warning2 pill">Button</button>
+                        <button type="button" class="btn btn-warning2 pill" disabled>Button</button>
+                        <button type="button" class="btn btn-warning2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-warning2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-warning2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-danger2 pill">Button</button>
+                        <button type="button" class="btn btn-danger2 pill" disabled>Button</button>
+                        <button type="button" class="btn btn-danger2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-danger2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+                            </span>
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn btn-danger2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Button
+                            </span>
+                            <span class="button-icon">
+                              <i class="ph-arrow-left"></i>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">Icon Button</div>
+                  <div class="card-body">
+                    <div class="primary-button-list-wrap">
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-primary rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary2 rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-dark rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-dark rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-dark2 rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-secondary rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary2 rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-success rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-success rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-success2 rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-warning rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-warning rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning2 rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                      </div>
+                      <div class="primary-button-list">
+                        <button type="button" class="btn btn-danger rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-danger rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger2 rounded-circle icon-btn">
+                          <i class="ph-arrow-left"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
