@@ -783,6 +783,8 @@ if (document.getElementById('bar-chart1')) {
 
 
     
+    
+    // Apex charts 
     var line_chart_keyword_1 = {
       maintainAspectRatio: true,
       chart: {
@@ -825,8 +827,7 @@ if (document.getElementById('bar-chart1')) {
         show: false,
       },
     };
-
-    // Apex charts 
+    
     if (document.getElementById('line_chartkeyword_1')) {
         var line_chart_create = new ApexCharts(
           document.querySelector('#line_chartkeyword_1'),

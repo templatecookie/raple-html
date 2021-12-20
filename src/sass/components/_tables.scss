@@ -53,7 +53,7 @@
                td { 
                    color: var(--gray-700);
     
-                   ul { 
+                   .action-btn { 
                        display: flex;
                        align-items: center;
     
@@ -193,6 +193,11 @@
                   
                 }
             }
+        }
+
+        &-small { 
+            overflow: hidden;
+            overflow-y: visible;
         }
     }
 }
