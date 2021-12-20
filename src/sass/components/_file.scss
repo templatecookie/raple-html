@@ -163,15 +163,7 @@ h3.file-title {
         transition: all 0.4s;
       }
     }
-    .button-icon {
-      border: none;
-      padding: 0;
-      background-color: transparent;
-      path {
-        transition: all 0.4s;
-        stroke: var(--gray-400);
-      }
-    }
+
     .recent-file-wrap {
       display: flex;
       align-items: center;
@@ -208,4 +200,14 @@ h3.file-title {
 }
 td.extra-padding {
   padding-top: 24px !important;
+}
+
+.button-icon {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  path {
+    transition: all 0.4s;
+    stroke: var(--gray-400);
+  }
 }
