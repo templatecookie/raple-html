@@ -404,17 +404,24 @@ select,
   .form-check-label {
     order: 2;
   }
-  .form-check-label,
-  .label1 {
-    color: var(--gray-300);
-    font-size: 16px;
-    line-height: 21px;
-    margin-left: 7px;
-  }
-  .label1 {
-    margin-right: 10px;
-    order: 0;
-    color: var(--gray-700);
+  // .form-check-label,
+  // .label1 {
+  //   color: var(--gray-300);
+  //   font-size: 16px;
+  //   line-height: 21px;
+  //   margin-left: 7px;
+  // }
+  // .label1 {
+  //   margin-right: 10px;
+  //   order: 0;
+  //   color: var(--gray-700);
+  // }
+  label {
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray-900);
+    cursor: pointer;
   }
 }
 
@@ -459,6 +466,7 @@ select,
     height: 20px;
     width: 20px;
     border: 2px solid;
+    flex-shrink: 0;
     border-color: var(--gray-100);
     border-radius: 3px;
     margin-right: 8px;
@@ -504,6 +512,7 @@ select,
     margin-right: 8px;
     position: relative;
     transition: all 0.4s;
+    cursor: pointer;
     &:hover {
       border-color: var(--primary-500);
       box-shadow: 0px 2px 8px rgba(14, 95, 217, 0.24);
@@ -530,6 +539,13 @@ select,
     .form-check-input {
       border-color: var(--danger-500);
     }
+  }
+  label {
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray-900);
+    cursor: pointer;
   }
   .form-check-input:checked {
     border-color: var(--primary-500);
@@ -604,6 +620,7 @@ select,
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+  text-transform: capitalize;
   transition: all 0.3s ease-in-out;
   border: 1px solid var(--gray-100);
   &::after {
@@ -680,5 +697,23 @@ select,
   &:hover {
     color: #1d2026 !important;
     background: #ffeee8;
+  }
+}
+
+.fromGroup.horizontal-form {
+  display: flex;
+  align-items: center;
+  label {
+    width: 130px;
+    margin: 0;
+    display: inline-block;
+    @include max(479px) {
+      width: 100px;
+    }
+  }
+  input.form-control,
+  .form-control-icon,
+  .select-box {
+    flex: 1;
   }
 }

@@ -6,6 +6,9 @@
   margin-bottom: 24px;
   .card-body {
     padding: 20px 24px;
+    @include max(991px) {
+      padding: 14px 20px;
+    }
     .card-full-width-border {
       margin-left: -24px;
       margin-right: -24px;
@@ -22,6 +25,9 @@
     color: var(--gray-900);
     border-color: #e5e7e8;
     background: transparent;
+    @include max(991px) {
+      padding: 14px 20px;
+    }
     &:first-child {
       border-radius: calc(9px - 1px) calc(9px - 1px) 0 0;
     }

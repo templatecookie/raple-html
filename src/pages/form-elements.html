@@ -1,0 +1,410 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Form Elements" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-header">Basic Input Field</div>
+              <div class="card-body">
+                <form action="#">
+                    <div class="fromGroup mb-3">
+                      <label>Text Field</label>
+                      <input class="form-control" type="text" placeholder="">
+                    </div>
+                    <div class="fromGroup mb-3">
+                      <label>Email</label>
+                      <input class="form-control" type="email" placeholder="Twitter profile url...">
+                    </div>
+                    <div class="fromGroup eye mb-3">
+                      <label>Password</label>
+                      <div class="form-control-icon">
+                        <input id="password-hide_show1" class="form-control" type="password" placeholder="password">
+                        <div class="has-badge" onclick="showPassword('password-hide_show1', this)">
+                          <i class="ph-eye"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fromGroup has-icon mb-3">
+                      <label>Search</label>
+                      <div class="form-control-icon">
+                        <input class="form-control" type="search" placeholder="Search for anything...">
+                        <div class="icon-badge-2">
+                          <img src="assets/images/svg/search2.svg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fromGroup has-icon mb-3">
+                      <label>Left Icon</label>
+                      <div class="form-control-icon">
+                        <input class="form-control" type="search" placeholder="Write down your location...">
+                        <div class="icon-badge-2">
+                          <img src="assets/images/svg/map2.svg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fromGroup has-icon mb-3">
+                      <label>date</label>
+                      <div class="form-control-icon">
+                        <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
+                        <!-- <div class="date-picker-calender rt-pt-15"></div> -->
+                        <div class="icon-badge-2">
+                          <img src="assets/images/svg/calendar.svg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fromGroup mb-3">
+                      <label>Message</label>
+                      <textarea class="form-control" name="textarea" placeholder="Write your message, description..."
+                        spellcheck="false"></textarea>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-header">Select</div>
+              <div class="card-body">
+                <form action="#">
+                  <div class="fromGroup mb-3">
+                    <label>Basic Select/Dropdown</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>Select...</option>
+                        <option>Select...</option>
+                        <option>Select...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Country</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>Bangladesh</option>
+                        <option>New zealand</option>
+                        <option>switzerland</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Left Icon</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>Dhaka</option>
+                        <option>New zealand</option>
+                        <option>switzerland</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Check Icon</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>Bangladesh</option>
+                        <option>New zealand</option>
+                        <option>switzerland</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Select Badge</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>Bangla</option>
+                        <option>English</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4">
+                <div class="card">
+                  <div class="card-header">Checkbox</div>
+                  <div class="card-body">
+                    <form action="#">
+                      <div class="form-check from-chekbox-custom mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="check-one">
+                        <label class="form-check-label" for="check-one">
+                          Option 01
+                        </label>
+                      </div>
+                      <div class="form-check from-chekbox-custom mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="check-two" checked>
+                        <label class="form-check-label" for="check-two">
+                          Option 02
+                        </label>
+                      </div>
+                      <div class="form-check from-chekbox-custom">
+                        <input class="form-check-input" type="checkbox" value="" id="check-three">
+                        <label class="form-check-label" for="check-three">
+                          Option 03
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4">
+                <div class="card">
+                  <div class="card-header">Checkbox</div>
+                  <div class="card-body">
+                    <form action="#">
+                      <div class="form-check from-radio-custom mb-3">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-one">
+                        <label class="form-check-label" for="radio-one">
+                          Option 01
+                        </label>
+                      </div>
+                      <div class="form-check from-radio-custom mb-3">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-two">
+                        <label class="form-check-label" for="radio-two">
+                          Option 02
+                        </label>
+                      </div>
+                      <div class="form-check from-radio-custom">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-three" checked>
+                        <label class="form-check-label" for="radio-three">
+                          Option 03
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4">
+                <div class="card">
+                  <div class="card-header">Toggle Switches</div>
+                  <div class="card-body">
+                      <form action="#">
+                        <div class="form-check form-switch custom-switch mb-3">
+                          <input class="form-check-input rt-mr-8" type="checkbox" role="switch" id="switch-one" checked>
+                          <label class="form-check-label" for="switch-one">
+                            Option 01
+                          </label>
+                        </div>
+                        <div class="form-check form-switch custom-switch mb-3">
+                          <input class="form-check-input rt-mr-8" type="checkbox" role="switch" id="switch-two">
+                          <label class="form-check-label" for="switch-two">
+                            Option 02
+                          </label>
+                        </div>
+                        <div class="form-check form-switch custom-switch">
+                          <input class="form-check-input rt-mr-8" type="checkbox" role="switch" id="switch-three">
+                          <label class="form-check-label" for="switch-three">
+                            Option 03
+                          </label>
+                        </div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">Basic Form</div>
+              <div class="card-body">
+                <form action="#">
+                  <div class="fromGroup mb-3">
+                    <label>Email</label>
+                    <input class="form-control" type="email" placeholder="Email address">
+                  </div>
+                  <div class="fromGroup eye mb-3">
+                    <label>Password</label>
+                    <div class="form-control-icon">
+                      <input id="password-hide_show2" class="form-control" type="password" placeholder="password">
+                      <div class="has-badge" onclick="showPassword('password-hide_show2', this)">
+                        <i class="ph-eye"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Company Size</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>One</option>
+                        <option>Two</option>
+                        <option>Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-check from-chekbox-custom rt-mb-30">
+                    <input class="form-check-input" type="checkbox" value="" id="check-four" checked="">
+                    <label class="form-check-label" for="check-four">
+                      I’m agree with all of your terms & conditions.
+                    </label>
+                  </div>
+                  <button type="button" class="btn btn-primary pill btn-icon">
+                    <span class="button-content-wrapper">
+                      <span class="button-icon align-icon-right">
+                        <i class="ph-arrow-right"></i>
+                      </span>
+                      <span class="button-text">
+                        Submit Form
+                      </span>
+                    </span>
+                  </button>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">Horizontal Form</div>
+              <div class="card-body">
+                <form action="#">
+                  <div class="fromGroup horizontal-form mb-3">
+                    <label>Email</label>
+                    <input class="form-control" type="email" placeholder="Email address">
+                  </div>
+                  <div class="fromGroup horizontal-form eye mb-3">
+                    <label>Password</label>
+                    <div class="form-control-icon">
+                      <input id="password-hide_show3" class="form-control" type="password" placeholder="password">
+                      <div class="has-badge" onclick="showPassword('password-hide_show3', this)">
+                        <i class="ph-eye"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fromGroup horizontal-form mb-3">
+                    <label>Company Size</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>One</option>
+                        <option>Two</option>
+                        <option>Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-check from-chekbox-custom rt-mb-30">
+                    <input class="form-check-input" type="checkbox" value="" id="check-five" checked="">
+                    <label class="form-check-label" for="check-five">
+                      I’m agree with all of your terms & conditions.
+                    </label>
+                  </div>
+                  <button type="button" class="btn btn-primary pill btn-icon">
+                    <span class="button-content-wrapper">
+                      <span class="button-icon align-icon-right">
+                        <i class="ph-arrow-right"></i>
+                      </span>
+                      <span class="button-text">
+                        Submit Form
+                      </span>
+                    </span>
+                  </button>
+          
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="card">
+          <div class="card-header">Advance Form</div>
+          <div class="card-body">
+            <form action="#">
+              <div class="row">
+                <div class="col-lg-6">
+                    <div class="fromGroup mb-3">
+                      <label>Email</label>
+                      <input class="form-control" type="email" placeholder="Email address">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="fromGroup mb-3">
+                    <label>Email</label>
+                    <input class="form-control" type="email" placeholder="Email address">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="fromGroup eye mb-3">
+                    <label>Password</label>
+                    <div class="form-control-icon">
+                      <input id="password-hide_show4" class="form-control" type="password" placeholder="password">
+                      <div class="has-badge" onclick="showPassword('password-hide_show4', this)">
+                        <i class="ph-eye"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="fromGroup eye mb-3">
+                    <label>Password</label>
+                    <div class="form-control-icon">
+                      <input id="password-hide_show5" class="form-control" type="password" placeholder="password">
+                      <div class="has-badge" onclick="showPassword('password-hide_show5', this)">
+                        <i class="ph-eye"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  
+              </div>
+              <div class="fromGroup mb-3">
+                <label>Addresss Line 01</label>
+                <input class="form-control" type="email" placeholder="Email address">
+              </div>
+              <div class="fromGroup mb-3">
+                <label>Addresss Line 02</label>
+                <input class="form-control" type="email" placeholder="Email address">
+              </div>
+              <div class="row">
+                <div class="col-xl-5 col-lg-4">
+                  <div class="fromGroup mb-3">
+                    <label>Country</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>Bangladesh</option>
+                        <option>New zealand</option>
+                        <option>switzerland</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-5 col-lg-4">
+                  <div class="fromGroup mb-3">
+                    <label>City</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>Dhaka</option>
+                        <option>New zealand</option>
+                        <option>switzerland</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-lg-4">
+                  <div class="fromGroup mb-3">
+                    <label>Zip Cod3</label>
+                    <input class="form-control" type="text">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+{% endblock %}
