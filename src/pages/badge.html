@@ -1,0 +1,37 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Badge" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Basic Badge</div>
+                <div class="card-body">
+                  <span class="badge rounded-pill bg-gray-50 text-gray-900 ">Badge</span>
+                  <span class="badge rounded-pill bg-primary-50 text-primary-500">Badge</span>
+                  <span class="badge rounded-pill bg-secondary-100 text-gray-900">Badge</span>
+                  <span class="badge rounded-pill bg-success-50 text-success-500">Badge</span>
+                  <span class="badge rounded-pill bg-warning-50 text-warning-500">Badge</span>
+                  <span class="badge rounded-pill bg-danger-50 text-danger-500">Badge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
