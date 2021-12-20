@@ -1,0 +1,47 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Switch" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Basic</div>
+                <div class="card-body">
+                  <div class="form-check form-switch custom-switch mb-3">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switch-one">
+                  </div>
+                  <div class="form-check form-switch custom-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switch-two" checked>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Invalid</div>
+                <div class="card-body">
+                  <div class="form-check form-switch custom-switch invalid">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switch-three">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

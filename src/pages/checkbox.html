@@ -1,0 +1,56 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Checkbox" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Basic</div>
+                <div class="card-body">
+                  <div class="form-check from-chekbox-custom mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="check-one">
+                    <label class="form-check-label" for="check-one">
+                      Default checkbox
+                    </label>
+                  </div>
+                  <div class="form-check from-chekbox-custom">
+                    <input class="form-check-input" type="checkbox" value="" id="check-two" checked>
+                    <label class="form-check-label" for="check-two">
+                      Default checkbox
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Invalid</div>
+                <div class="card-body">
+                  <div class="form-check from-chekbox-custom invalid">
+                    <input class="form-check-input" type="checkbox" value="" id="check-three">
+                    <label class="form-check-label" for="check-three">
+                      Checkbox invalid
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

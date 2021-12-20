@@ -121,19 +121,27 @@ h3.file-title {
         &:hover td {
           color: var(--gray-900);
         }
+        &:hover td a {
+          color: var(--gray-900);
+        }
         &:hover .button-icon {
           path {
             stroke: var(--gray-900);
           }
         }
         td {
-          padding: 12px 24px;
           font-size: 14px;
           width: 120px;
           white-space: nowrap;
           color: var(--gray-700);
           border-width: 0;
           line-height: 1;
+          padding: 0;
+          a {
+            color: var(--gray-700);
+            padding: 12px 24px;
+            display: block;
+          }
           @include breakpoint(lg) {
             width: auto;
           }
@@ -169,7 +177,7 @@ h3.file-title {
       align-items: center;
     }
     .dropdown-wrap {
-      padding-right: 10px;
+      padding-right: 24px;
     }
     td.large-width {
       width: 700px;
