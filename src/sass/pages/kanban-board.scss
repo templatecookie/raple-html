@@ -1,0 +1,31 @@
+.kanban-board {
+  &-wrap {
+    padding: 20px;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    h5 {
+      margin: 0;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+  }
+}
+
+button.dots-three {
+  border: none;
+  background-color: transparent;
+  path {
+    transition: all 0.4s;
+  }
+  &:hover {
+    path {
+      fill: var(--gray-900);
+    }
+  }
+}
