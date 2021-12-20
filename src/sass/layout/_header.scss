@@ -406,3 +406,42 @@
     color: var(--gray-50);
   }
 }
+
+.notifications{
+  >img{
+    animation: tada_animation 1.5s ease infinite;
+    
+  }
+  &:hover{
+    >img{
+      animation: none;
+    }
+  }
+}
+
+
+@keyframes tada_animation {
+  from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+      transform: scale3d(1, 1, 0.95) rotate3d(0, 0, 1, -10deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+      transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+  }
+  40%,
+  60%,
+  80% {
+      transform: rotate3d(0, 0, 1, -10deg);
+  }
+  to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+  }
+}
