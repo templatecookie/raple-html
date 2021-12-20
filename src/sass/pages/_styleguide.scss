@@ -2,9 +2,9 @@
   padding-bottom: 70px;
 }
 
-// .primary-button-list-wrap {
-//   margin-bottom: 70px;
-// }
+.primary-button-list-wrap {
+  margin-bottom: 70px;
+}
 .component-title {
   margin-bottom: 40px;
 }
@@ -39,5 +39,11 @@
         color: var(--gray-900);
       }
     }
+  }
+}
+
+.btn-example {
+  .btn {
+    margin: 4px;
   }
 }
