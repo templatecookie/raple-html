@@ -13,6 +13,19 @@
             overflow: hidden;
             border-radius: 8px;    
             background-color: #fff;
+
+            .users-profile { 
+                display: flex;
+                align-items: center;
+                span { 
+                    flex-shrink: 0;
+                    margin-right: 12px;
+                }
+                @extend %text-para;
+                font-weight: 500;
+                color: var(--gray-900);
+            }
+
             &-head { 
                 padding: 16px 24px;
                 overflow: hidden;
@@ -186,20 +199,6 @@
                         th,td { 
                             padding: 16px 24px;
                         }
-                        th { 
-                            a { 
-                                display: flex;
-                                align-items: center;
-                                span { 
-                                    flex-shrink: 0;
-                                    margin-right: 12px;
-                                }
-                                @extend %text-para;
-                                font-weight: 500;
-                                color: var(--gray-900);
-                            }
-                        }
-                      
                     }
                 }
             }
@@ -233,6 +232,16 @@
                            }
                        }
                    }
+                }
+            }
+
+            &-responsives { 
+                tbody { 
+                    tr { 
+                        th,td { 
+                            padding: 22px 24px;
+                        }
+                    }
                 }
             }
         }
