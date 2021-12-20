@@ -1,0 +1,100 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Accordion" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Primary</div>
+                <div class="card-body">
+                    <div class="alert-item alert fade show" role="alert">
+                      <div class="alert-left">
+                        <div class="alert-icon">
+                          <img src="assets/images/svg/info.svg" alt="">
+                        </div>
+                        <div class="alert-data">
+                          <h6>This is a information alerts.</h6>
+                          <p>This is a information alerts sub-text...</p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Success</div>
+                <div class="card-body">
+                  <div class="alert-item alert fade show success" role="alert">
+                    <div class="alert-left">
+                      <div class="alert-icon">
+                        <img src="assets/images/svg/checkcircle.svg" alt="">
+                      </div>
+                      <div class="alert-data">
+                        <h6>This is a success alerts.</h6>
+                        <p>This is a information alerts sub-text...</p>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Warning</div>
+                <div class="card-body">
+                  <div class="alert-item alert fade show warning" role="alert">
+                    <div class="alert-left">
+                      <div class="alert-icon">
+                        <img src="assets/images/svg/warningcircle.svg" alt="">
+                      </div>
+                      <div class="alert-data">
+                        <h6>This is a warning alerts.</h6>
+                        <p>This is a information alerts sub-text...</p>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Danger</div>
+                <div class="card-body">
+                  <div class="alert-item alert fade show danger" role="alert">
+                    <div class="alert-left">
+                      <div class="alert-icon">
+                        <img src="assets/images/svg/warning.svg" alt="">
+                      </div>
+                      <div class="alert-data">
+                        <h6>This is a warning alerts.</h6>
+                        <p>This is a information alerts sub-text...</p>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
