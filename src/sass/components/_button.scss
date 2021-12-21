@@ -19,8 +19,8 @@
     padding: 0;
     width: 40px;
     height: 40px;
-    line-height: 44px;
     font-size: 20px;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -517,5 +517,15 @@
   &:disabled {
     background: var(--primary-100);
     border-color: var(--primary-100);
+  }
+}
+
+.remove-class {
+  .btn {
+    margin: 4px;
+  }
+  .icon-btn {
+    display: inline-block;
+    line-height: 44px;
   }
 }

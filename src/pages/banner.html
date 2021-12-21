@@ -1,0 +1,41 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Banner" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Banner</div>
+                <div class="card-body">
+                  <div class="banner-wrap bg-secondary-500 remove-class">
+                    <div class="banner-icon">
+                      <img src="assets/images/svg/folder-open.svg" alt="">
+                    </div>
+                    <div class="banner-data">
+                      <p>Become a <span>Pro</span> <br> to get more <span>Space</span>
+                      </p>
+                      <button type="button" class="btn bg-white pill text-gray-900">Upgrade Plans</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
