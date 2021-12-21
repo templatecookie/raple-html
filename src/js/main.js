@@ -17,6 +17,40 @@
   "use strict";
 
   dragula([document.getElementById("todo"),document.getElementById("doing"),document.getElementById("done")]);
+  const boardTitle = document.getElementById('board_title');
+  const CreateBoard = document.getElementById('createboard');
+
+  CreateBoard.addEventListener('click', function () {
+
+    let kanbanParents = document.getElementById('kanban_board_parent');
+    let kabanChild = document.createElement('div');
+    kabanChild.classList.add('kanbanboard_child');
+    kabanChild.innerHTML = `   
+    <div class="kanbanboard_child">
+    <div class="card">
+        <div class="card-body" >
+          <div class="kanban-board-header">
+            <h5>${ boardTitle.value }</h5>
+            <button class="dots-three text-gray-400 f-size-24" type="button">
+              <img src="assets/images/svg/dot.svg" alt="clock">
+            </button>
+          </div>
+          
+        </div>
+    </div>
+    
+  </div>
+    
+    `;
+    //kabanChild.textContent = boardTitle.value;
+    kanbanParents.appendChild(kabanChild);
+    boardTitle.value= '';
+    document.getElementById("createboard-modal").classList.remove("show");
+    $(".modal-backdrop").removeClass("show");
+
+  });
+
+
 
   var template_x = document.getElementById("template");
   var template2_x = document.getElementById("template2");

@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-12">
             <div id="board" class="board">
-              <div class="d-flex kanbanboard_parent">
+              <div class="row kanbanboard_parent" id="kanban_board_parent">
                 <div class="kanbanboard_child">
                   <div class="card">
                       <div class="card-body" >
@@ -330,7 +330,7 @@
                   <div class="card">
                     <div class="card-body">
                       <button class=" btn  text-primary" data-bs-toggle="modal" data-bs-target="#createboard-modal"> 
-                         Add new Column
+                        <i class="ph-plus"></i>    Add new Column
                       </button>
                     </div>
                   </div>
@@ -356,18 +356,18 @@
       </div>
       <div class="modal-body">
         <div class="rt-mb-24">
-          <label class=" body-font-4 pointer block mb-2" for="title">Tittle</label>
-        <input type="text" placeholder="Add label tittle" class="form-control" id="title">
+          <label class=" body-font-4 pointer block mb-2" for="board_title">Tittle</label>
+        <input type="text" placeholder="Add label tittle" class="form-control" id="board_title">
         </div>
         <div class="createboard-modal-footer d-flex justify-content-between">
           <button type="button" class="btn btn-dark2 pill" data-bs-dismiss="modal">Cancel</button>
    
-          <button type="button" class="btn btn-primary pill btn-icon" >
+          <button type="button" class="btn btn-primary pill btn-icon" id="createboard">
             <span class="button-content-wrapper">
             <span class="button-icon align-icon-right">
               <i class="ph-arrow-right"></i>
             </span>
-            <span class="button-text">
+            <span class="button-text" >
               Create Column
             </span>
             </span>
