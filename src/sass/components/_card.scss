@@ -45,11 +45,11 @@
 // Blog
 .card-blog {
   overflow: hidden;
-  max-width: 372px;
+  max-width: 100%;
   position: relative;
   border-radius: 8px;
+  background-color: #fff;
   box-shadow: 0px 8px 24px 0px #00000008;
-
   &:hover {
     .card-blog__img {
       img {
@@ -81,10 +81,10 @@
     padding: 24px;
     padding-top: 0px;
     h2 {
+      margin-bottom: 12px;
       font-size: 18px;
       font-weight: 600;
       line-height: 24px;
-      margin-bottom: 12px;
       text-transform: capitalize;
     }
     p {
@@ -106,13 +106,16 @@
     white-space: nowrap;
     span {
       margin-left: 12px;
+      @include max(575px) { 
+        margin-left: 6px;
+      }
     }
   }
 
   &--two {
     display: flex;
-    max-width: 768px;
-    max-height: 205px;
+    max-width: 100%;
+    max-height: 204px;
     align-items: flex-start;
     justify-content: space-between;
     @include max(767px) {
@@ -124,10 +127,9 @@
         margin: 0;
         padding: 0;
         width: 330px;
-        height: 100%;
+        height: auto;
         flex-shrink: 0;
         position: relative;
-
         @include max(767px) {
           width: 100%;
         }
@@ -142,7 +144,7 @@
       &__info {
         padding: 32px;
         @include max(767px) {
-          padding: 24px;
+          padding: 24px 18px;
         }
         p {
           margin-bottom: 24px;
@@ -155,6 +157,9 @@
         .card-blog-redirect {
           &:nth-child(1) {
             margin-right: 24px;
+            @include max(575px) { 
+              margin-right: 12px;
+            }
           }
         }
       }
@@ -229,7 +234,7 @@
 // Card BG
 .card-bg {
   overflow: hidden;
-  max-width: 372px;
+  max-width: 100%;
   max-height: 100%;
   position: relative;
   border-radius: 8px;
@@ -265,10 +270,14 @@
 .card-basic {
   padding: 32px;
   overflow: hidden;
-  max-width: 372px;
+  max-width: 100%;
   position: relative;
   border-radius: 8px;
+  background-color: #fff;
   box-shadow: 0px 8px 24px 0px #00000008;
+  @include max(575px) { 
+    padding: 24px;
+  }
   h2 {
     @extend %text-one;
     margin-bottom: 12px;
@@ -359,8 +368,6 @@
       background-color: #fff;
       border: 1px solid #e5e7e8;
       box-shadow: 0px 4px 24px 0px #191b1c29;
-      // opacity: 0;
-      // overflow: hidden;
       &.show {
         opacity: 1;
         visibility: visible;
@@ -476,3 +483,16 @@
     }
   }
 }
+
+
+
+// Cards Wrapper 
+  .cards { 
+    .row { 
+      // margin-bottom: 12px;
+      .col-xxl3,
+      .col-md-6 { 
+        margin-bottom: 24px;
+      }
+    }
+  }
