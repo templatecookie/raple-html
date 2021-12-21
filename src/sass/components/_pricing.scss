@@ -126,12 +126,16 @@
         font-size: 14px;
         line-height: 20px;
         margin-bottom: 12px;
+        position: relative;
+        padding-left: 28px;
         &:last-child {
           margin-bottom: 0;
         }
         color: var(--gray-700);
         svg {
+          left: 0;
           margin-right: 9px;
+          position: absolute;
         }
       }
     }

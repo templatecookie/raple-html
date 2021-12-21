@@ -7,7 +7,7 @@
     @include max(325px) {
       padding: 15px;
     }
-    @include max(1500px) {
+    @include max(1600px) {
       width: 100%;
       display: block;
       text-align: center;
@@ -16,7 +16,7 @@
   &-icon {
     flex-shrink: 0;
     margin-right: 24px;
-    @include max(1500px) {
+    @include max(1600px) {
       margin: 0 0 10px;
     }
   }

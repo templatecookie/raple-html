@@ -45,6 +45,20 @@
         }
       }
     }
+    &:hover .card-aligned__icon {
+      background-color: var(--primary-500);
+    }
+    &:hover {
+      path.color-white {
+        fill: white;
+      }
+      svg {
+        transform: scale(1.2);
+      }
+      path {
+        stroke: white;
+      }
+    }
   }
 
   &-invoice {
@@ -86,21 +100,6 @@
         @include max(1400px) {
           width: 60px;
           height: 60px;
-        }
-      }
-      &:hover .card-aligned__icon {
-        background-color: var(--primary-500);
-      }
-
-      &:hover {
-        path.color-white {
-          fill: white;
-        }
-        svg {
-          transform: scale(1.2);
-        }
-        path {
-          stroke: white;
         }
       }
     }
