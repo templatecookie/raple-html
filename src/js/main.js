@@ -19,8 +19,9 @@
   dragula([document.getElementById("todo"),document.getElementById("doing"),document.getElementById("done")]);
   const boardTitle = document.getElementById('board_title');
   const CreateBoard = document.getElementById('createboard');
-
+if(CreateBoard){
   CreateBoard.addEventListener('click', function () {
+    let StingId = boardTitle.value.toLowerCase();
 
     let kanbanParents = document.getElementById('kanban_board_parent');
     let kabanChild = document.createElement('div');
@@ -35,7 +36,18 @@
               <img src="assets/images/svg/dot.svg" alt="clock">
             </button>
           </div>
+          <button class="btn btn-primary btn-icon pill d-block"
+          <span class="button-content-wrapper">
+            <span class="button-icon align-icon-right">
+              <i class="ph-arrow-right"></i>
+            </span>
+            <span class="button-text" >
+               
+          Add new card
+            </span>
+            </span>
           
+          </button>
         </div>
     </div>
     
@@ -49,6 +61,8 @@
     $(".modal-backdrop").removeClass("show");
 
   });
+}
+
 
 
 
