@@ -3,22 +3,22 @@ h3.file-title {
   font-size: 18px;
   line-height: 24px;
   color: var(--gray-900);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .file-wrap {
-  gap: 12px;
+  gap: 24px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   @include max(1500px) {
     grid-template-columns: repeat(4, 1fr);
   }
-  @include breakpoint(lg) {
+  @include max(1400px) {
     grid-template-columns: repeat(3, 1fr);
   }
-  @include breakpoint(md) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  // @include breakpoint(991px) {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
   @include max(767px) {
     grid-template-columns: repeat(2, 1fr);
   }
