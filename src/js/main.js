@@ -17,10 +17,12 @@
   "use strict";
 
   dragula([document.getElementById("todo"),document.getElementById("doing"),document.getElementById("done")]);
+
   const boardTitle = document.getElementById('board_title');
   const CreateBoard = document.getElementById('createboard');
-
+if(CreateBoard){
   CreateBoard.addEventListener('click', function () {
+    let StingId =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);;
 
     let kanbanParents = document.getElementById('kanban_board_parent');
     let kabanChild = document.createElement('div');
@@ -35,7 +37,21 @@
               <img src="assets/images/svg/dot.svg" alt="clock">
             </button>
           </div>
+          <div id="${StingId}">
           
+          </div>
+          <button class="btn btn-primary2 btn-icon pill d-block"
+          <span class="button-content-wrapper">
+            <span class="button-icon align-icon-right">
+              <i class="ph-arrow-right"></i>
+            </span>
+            <span class="button-text" >
+               
+          Add new card
+            </span>
+            </span>
+          
+          </button>
         </div>
     </div>
     
@@ -47,8 +63,11 @@
     boardTitle.value= '';
     document.getElementById("createboard-modal").classList.remove("show");
     $(".modal-backdrop").removeClass("show");
+    dragula([document.getElementById(StingId)]);
 
   });
+}
+
 
 
 
