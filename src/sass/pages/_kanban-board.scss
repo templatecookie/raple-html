@@ -29,3 +29,18 @@ button.dots-three {
     }
   }
 }
+.kanbanboard_parent{
+  overflow-x: auto;
+}
+.kanbanboard_child{
+  max-width: 372px;
+  flex: 0 0 372px;
+  margin-right: 30px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.plain-btn{
+  background: transparent;
+  border: none;
+}
