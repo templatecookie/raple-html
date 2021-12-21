@@ -519,3 +519,13 @@
     border-color: var(--primary-100);
   }
 }
+
+.remove-class {
+  .btn {
+    margin: 4px;
+  }
+  .icon-btn {
+    display: inline-block;
+    line-height: 44px;
+  }
+}

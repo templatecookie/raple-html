@@ -9,14 +9,6 @@
   margin-bottom: 40px;
 }
 
-.primary-button-list {
-  margin-bottom: 16px;
-  display: flex;
-  .btn {
-    margin-right: 10px;
-  }
-}
-
 // file
 .file-item.remove-class {
   width: 204px;
@@ -39,15 +31,5 @@
         color: var(--gray-900);
       }
     }
-  }
-}
-
-.remove-class {
-  .btn {
-    margin: 4px;
-  }
-  .icon-btn {
-    display: inline-block;
-    line-height: 44px;
   }
 }
