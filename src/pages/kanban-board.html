@@ -15,348 +15,327 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3">
-            <div class="card">
-                <div class="kanban-board-wrap">
-                    <div class="kanban-board-header">
-                      <h5>To-do</h5>
-                      <button class="dots-three" type="button">
-                          <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M2 0.5C1.17157 0.5 0.5 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5Z"
-                              fill="#959FA3" />
-                            <path
-                              d="M6.5 2C6.5 1.17157 7.17157 0.5 8 0.5C8.82843 0.5 9.5 1.17157 9.5 2C9.5 2.82843 8.82843 3.5 8 3.5C7.17157 3.5 6.5 2.82843 6.5 2Z"
-                              fill="#959FA3" />
-                            <path
-                              d="M12.5 2C12.5 1.17157 13.1716 0.5 14 0.5C14.8284 0.5 15.5 1.17157 15.5 2C15.5 2.82843 14.8284 3.5 14 3.5C13.1716 3.5 12.5 2.82843 12.5 2Z"
-                              fill="#959FA3" />
-                          </svg>
+          <div class="col-12">
+            <div id="board" class="board">
+              <div class="d-flex kanbanboard_parent">
+                <div class="kanbanboard_child">
+                  <div class="card">
+                      <div class="card-body" >
+                        <div class="kanban-board-header">
+                          <h5>To-do</h5>
+                          <button class="dots-three text-gray-400 f-size-24" type="button">
+                            <img src="assets/images/svg/dot.svg" alt="clock">
+                          </button>
+                        </div>
+                        <div id="todo">
+                          <div class="card-priority rt-mb-12">
+                            <!-- top bar  -->
+                            <div class="card-priority__header">
+                              <div class="date">
+                                <span class="icon">
+                                  <img src="assets/images/svg/clock.svg" alt="clock">
+                                </span>
+                                <p>14 Nov, 2021</p>
+                              </div>
+                              <!-- actions  -->
+                              <div class="card-priority__actions">
+                                <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                  <img src="assets/images/svg/dot.svg" alt="clock">
+                                </button>
+                                <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                 
+      
+                                  <li>
+                                    <a href="#" class="dropdown-item" >
+                                      <span>
+                                            <img src="assets/images/svg/pen.svg" alt="pen">
+                                          </span>
+                                      Edit
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="dropdown-item" >
+                                      <span>
+                                            <img src="assets/images/svg/copy-link.svg" alt="copylink">
+                                          </span>
+                                      Copy Link
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="dropdown-item" >
+                                      <span>
+                                            <img src="assets/images/svg/trash.svg" alt="copylink">
+                                          </span>
+                                      Delete
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                     
+                            <!-- labels  -->
+                            <div class="card-priority__labels">
+                              <ul>
+                                <li><span class="labels medium">Medium Priority</span></li>
+                                <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
+                              </ul>
+                            </div>
+                            <h2 class="card-priority__title">
+                              Meeting with UI/UX Team to manage our upcoming projects &amp; task.
+                            </h2>
+                            <!-- priority footer  -->
+                            <div class="card-priority__footer">
+                              <div>
+                                <ul class="labels-info">
+                                  <li>
+                                    <a href="#">
+                                      <span>
+                                        <img src="assets/images/svg/attach.svg" alt="icon">
+                                      </span>
+                                      5
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <span>
+                                        <img src="assets/images/svg/comments.svg" alt="icon">
+                                      </span>
+                                      19
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div>
+                                <ul class="users">
+                                  <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
+                                  <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
+                                  <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
+                                  <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  
+                </div>
+                <div class="kanbanboard_child">
+                  <div class="card">
+                      <div class="card-body" >
+                        <div class="kanban-board-header">
+                          <h5>Doing</h5>
+                          <button class="dots-three text-gray-400 f-size-24" type="button">
+                            <img src="assets/images/svg/dot.svg" alt="clock">
+                          </button>
+                        </div>
+                        <div id="doing">
+                          <div class="card-priority rt-mb-12">
+                            <!-- top bar  -->
+                            <div class="card-priority__header">
+                              <div class="date">
+                                <span class="icon">
+                                  <img src="assets/images/svg/clock.svg" alt="clock">
+                                </span>
+                                <p>14 Nov, 2021</p>
+                              </div>
+                              <!-- actions  -->
+                              <div class="card-priority__actions">
+                                <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                  <img src="assets/images/svg/dot.svg" alt="clock">
+                                </button>
+                                <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                 
+      
+                                  <li>
+                                    <a href="#" class="dropdown-item" >
+                                      <span>
+                                            <img src="assets/images/svg/pen.svg" alt="pen">
+                                          </span>
+                                      Edit
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="dropdown-item" >
+                                      <span>
+                                            <img src="assets/images/svg/copy-link.svg" alt="copylink">
+                                          </span>
+                                      Copy Link
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="dropdown-item" >
+                                      <span>
+                                            <img src="assets/images/svg/trash.svg" alt="copylink">
+                                          </span>
+                                      Delete
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                     
+                            <!-- labels  -->
+                            <div class="card-priority__labels">
+                              <ul>
+                                <li><span class="labels medium">Medium Priority</span></li>
+                                <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
+                              </ul>
+                            </div>
+                            <h2 class="card-priority__title">
+                              Meeting with UI/UX Team to manage our upcoming projects &amp; task.
+                            </h2>
+                            <!-- priority footer  -->
+                            <div class="card-priority__footer">
+                              <div>
+                                <ul class="labels-info">
+                                  <li>
+                                    <a href="#">
+                                      <span>
+                                        <img src="assets/images/svg/attach.svg" alt="icon">
+                                      </span>
+                                      5
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <span>
+                                        <img src="assets/images/svg/comments.svg" alt="icon">
+                                      </span>
+                                      19
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div>
+                                <ul class="users">
+                                  <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
+                                  <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
+                                  <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
+                                  <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  
+                </div>
+                <div class="kanbanboard_child">
+                  <div class="card">
+                      <div class="card-body">
+                        <div class="kanban-board-header">
+                          <h5>Done</h5>
+                          <button class="dots-three text-gray-400 f-size-24" type="button">
+                            <img src="assets/images/svg/dot.svg" alt="clock">
+                          </button>
+                        </div>
+                        <div id="done">
+                          <div class="card-priority rt-mb-12">
+                            <!-- top bar  -->
+                            <div class="card-priority__header">
+                              <div class="date">
+                                <span class="icon">
+                                  <img src="assets/images/svg/clock.svg" alt="clock">
+                                </span>
+                                <p>14 Nov, 2021</p>
+                              </div>
+                              <!-- actions  -->
+                              <div class="card-priority__actions">
+                                <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                  <img src="assets/images/svg/dot.svg" alt="clock">
+                                </button>
+                                <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                 
+      
+                                  <li>
+                                    <a href="#" class="dropdown-item" >
+                                      <span>
+                                            <img src="assets/images/svg/pen.svg" alt="pen">
+                                          </span>
+                                      Edit
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="dropdown-item" >
+                                      <span>
+                                            <img src="assets/images/svg/copy-link.svg" alt="copylink">
+                                          </span>
+                                      Copy Link
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="dropdown-item" >
+                                      <span>
+                                            <img src="assets/images/svg/trash.svg" alt="copylink">
+                                          </span>
+                                      Delete
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                     
+                            <!-- labels  -->
+                            <div class="card-priority__labels">
+                              <ul>
+                                <li><span class="labels medium">Medium Priority</span></li>
+                                <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
+                              </ul>
+                            </div>
+                            <h2 class="card-priority__title">
+                              Meeting with UI/UX Team to manage our upcoming projects &amp; task.
+                            </h2>
+                            <!-- priority footer  -->
+                            <div class="card-priority__footer">
+                              <div>
+                                <ul class="labels-info">
+                                  <li>
+                                    <a href="#">
+                                      <span>
+                                        <img src="assets/images/svg/attach.svg" alt="icon">
+                                      </span>
+                                      5
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <span>
+                                        <img src="assets/images/svg/comments.svg" alt="icon">
+                                      </span>
+                                      19
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div>
+                                <ul class="users">
+                                  <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
+                                  <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
+                                  <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
+                                  <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                         
+                      </div>
+                  </div>
+                  
+                </div>
+                <div class="kanbanboard_child">
+                  <div class="card">
+                    <div class="card-body">
+                      <button class=" btn  text-primary"> 
+                         Add new Column
                       </button>
                     </div>
-                    <div class="card-priority rt-mb-12">
-                      <!-- top bar  -->
-                      <div class="card-priority__header">
-                        <div class="date">
-                          <span class="icon">
-                            <img src="assets/images/svg/clock.svg" alt="clock">
-                          </span>
-                          <p>14 Nov, 2021</p>
-                        </div>
-                        <!-- actions  -->
-                        <div class="card-priority__actions">
-                          <button class="dots-three" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
-                            <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M2 0.5C1.17157 0.5 0.5 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5Z"
-                                fill="#959FA3" />
-                              <path
-                                d="M6.5 2C6.5 1.17157 7.17157 0.5 8 0.5C8.82843 0.5 9.5 1.17157 9.5 2C9.5 2.82843 8.82843 3.5 8 3.5C7.17157 3.5 6.5 2.82843 6.5 2Z"
-                                fill="#959FA3" />
-                              <path
-                                d="M12.5 2C12.5 1.17157 13.1716 0.5 14 0.5C14.8284 0.5 15.5 1.17157 15.5 2C15.5 2.82843 14.8284 3.5 14 3.5C13.1716 3.5 12.5 2.82843 12.5 2Z"
-                                fill="#959FA3" />
-                            </svg>
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start"
-                            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-85px, 42px);">
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                  <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-                                  </path>
-                                  <path
-                                    d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
-                                    stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                          
-                          
-                                Download
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.99951 6.25V3.125H14.9995V6.25" stroke="#626C70" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                  <path d="M14.9995 11.875H4.99951V17.1875H14.9995V11.875Z" stroke="#626C70" stroke-width="1.25"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                  <path
-                                    d="M4.99951 13.75H2.18701V7.5C2.18701 6.80964 2.79329 6.25 3.54118 6.25H16.4578C17.2057 6.25 17.812 6.80964 17.812 7.5V13.75H14.9995"
-                                    stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                  <path
-                                    d="M14.6875 10C15.2053 10 15.625 9.58027 15.625 9.0625C15.625 8.54473 15.2053 8.125 14.6875 8.125C14.1697 8.125 13.75 8.54473 13.75 9.0625C13.75 9.58027 14.1697 10 14.6875 10Z"
-                                    fill="#626C70"></path>
-                                </svg>
-                          
-                                Print
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                  <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                  <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                  <path
-                                    d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375"
-                                    stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                  <path
-                                    d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375"
-                                    stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                          
-                                Delete
-                              </a>
-                            </li>
-                          </ul>
-                          <!-- <ul class="dropdown-actions">
-                            <li>
-                              <a href="#">
-                                <span>
-                                  <img src="assets/images/svg/pen.svg" alt="pen">
-                                </span>
-                                Edit
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <span>
-                                  <img src="assets/images/svg/copy-link.svg" alt="copylink">
-                                </span>
-                                Copy Link
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <span>
-                                  <img src="assets/images/svg/trash.svg" alt="copylink">
-                                </span>
-                                Delete
-                              </a>
-                            </li>
-                          </ul> -->
-                        </div>
-                      </div>
-               
-                      <!-- labels  -->
-                      <div class="card-priority__labels">
-                        <ul>
-                          <li><span class="labels medium">Medium Priority</span></li>
-                          <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
-                        </ul>
-                      </div>
-                      <h2 class="card-priority__title">
-                        Meeting with UI/UX Team to manage our upcoming projects &amp; task.
-                      </h2>
-                      <!-- priority footer  -->
-                      <div class="card-priority__footer">
-                        <div>
-                          <ul class="labels-info">
-                            <li>
-                              <a href="#">
-                                <span>
-                                  <img src="assets/images/svg/attach.svg" alt="icon">
-                                </span>
-                                5
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <span>
-                                  <img src="assets/images/svg/comments.svg" alt="icon">
-                                </span>
-                                19
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <ul class="users">
-                            <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
-                            <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
-                            <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
-                            <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-priority rt-mb-12">
-                      <!-- top bar  -->
-                      <div class="card-priority__header">
-                        <div class="date">
-                          <span class="icon">
-                            <img src="assets/images/svg/clock.svg" alt="clock">
-                          </span>
-                          <p>14 Nov, 2021</p>
-                        </div>
-                        <!-- actions  -->
-                        <div class="card-priority__actions">
-                          <button class="dots-three" type="button" id="downMenuButton2" data-bs-toggle="dropdown" aria-expanded="true">
-                            <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M2 0.5C1.17157 0.5 0.5 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5Z"
-                                fill="#959FA3" />
-                              <path
-                                d="M6.5 2C6.5 1.17157 7.17157 0.5 8 0.5C8.82843 0.5 9.5 1.17157 9.5 2C9.5 2.82843 8.82843 3.5 8 3.5C7.17157 3.5 6.5 2.82843 6.5 2Z"
-                                fill="#959FA3" />
-                              <path
-                                d="M12.5 2C12.5 1.17157 13.1716 0.5 14 0.5C14.8284 0.5 15.5 1.17157 15.5 2C15.5 2.82843 14.8284 3.5 14 3.5C13.1716 3.5 12.5 2.82843 12.5 2Z"
-                                fill="#959FA3" />
-                            </svg>
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2" data-popper-placement="bottom-start"
-                            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-85px, 42px);">
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                  <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                  </path>
-                                  <path
-                                    d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
-                                    stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                    
-                    
-                                Download
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.99951 6.25V3.125H14.9995V6.25" stroke="#626C70" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                  <path d="M14.9995 11.875H4.99951V17.1875H14.9995V11.875Z" stroke="#626C70" stroke-width="1.25"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                  <path
-                                    d="M4.99951 13.75H2.18701V7.5C2.18701 6.80964 2.79329 6.25 3.54118 6.25H16.4578C17.2057 6.25 17.812 6.80964 17.812 7.5V13.75H14.9995"
-                                    stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                  <path
-                                    d="M14.6875 10C15.2053 10 15.625 9.58027 15.625 9.0625C15.625 8.54473 15.2053 8.125 14.6875 8.125C14.1697 8.125 13.75 8.54473 13.75 9.0625C13.75 9.58027 14.1697 10 14.6875 10Z"
-                                    fill="#626C70"></path>
-                                </svg>
-                    
-                                Print
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                  <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                  <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                  <path
-                                    d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375"
-                                    stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                  <path
-                                    d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375"
-                                    stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                    
-                                Delete
-                              </a>
-                            </li>
-                          </ul>
-                          <!-- <ul class="dropdown-actions">
-                                                <li>
-                                                  <a href="#">
-                                                    <span>
-                                                      <img src="assets/images/svg/pen.svg" alt="pen">
-                                                    </span>
-                                                    Edit
-                                                  </a>
-                                                </li>
-                                                <li>
-                                                  <a href="#">
-                                                    <span>
-                                                      <img src="assets/images/svg/copy-link.svg" alt="copylink">
-                                                    </span>
-                                                    Copy Link
-                                                  </a>
-                                                </li>
-                                                <li>
-                                                  <a href="#">
-                                                    <span>
-                                                      <img src="assets/images/svg/trash.svg" alt="copylink">
-                                                    </span>
-                                                    Delete
-                                                  </a>
-                                                </li>
-                                              </ul> -->
-                        </div>
-                      </div>
-                    
-                      <!-- labels  -->
-                      <div class="card-priority__labels">
-                        <ul>
-                          <li><span class="labels medium bg-danger-50 text-danger-500">High Priority</span></li>
-                          <li><span class="labels urgent text-success-500"><img class="rt-mr-6" src="assets/images/svg/green-circle.svg" alt=""> Work</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h2 class="card-priority__title">
-                        New Project Idea & UX Research
-                      </h2>
-                      <!-- priority footer  -->
-                      <div class="card-priority__footer">
-                        <div>
-                          <ul class="labels-info">
-                            <li>
-                              <a href="#">
-                                <span>
-                                  <img src="assets/images/svg/attach.svg" alt="icon">
-                                </span>
-                                5
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <span>
-                                  <img src="assets/images/svg/comments.svg" alt="icon">
-                                </span>
-                                19
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <ul class="users">
-                            <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
-                            <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
-                            <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
-                            <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                  </div>
                 </div>
-            </div>
-            
-          </div>
-          <div class="col-lg-3">
-            <div class="card">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, aliquid.
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="card">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, aliquid.
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="card">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, aliquid.
+              </div>
             </div>
           </div>
         </div>

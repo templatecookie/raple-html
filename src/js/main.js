@@ -16,9 +16,7 @@
 (function ($) {
   "use strict";
 
-  // var cal = new tui.Calendar('#calendar_1', {
-  //   defaultView: 'month' // monthly view option
-  // });
+  dragula([document.getElementById("todo"),document.getElementById("doing"),document.getElementById("done")]);
 
   var template_x = document.getElementById("template");
   var template2_x = document.getElementById("template2");

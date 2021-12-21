@@ -412,7 +412,7 @@
     animation: tada_animation 1.5s ease infinite;
     
   }
-  &:hover{
+  &:hover, &[aria-expanded="true"]{
     >img{
       animation: none;
     }
