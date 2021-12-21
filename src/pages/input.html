@@ -1,0 +1,102 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Input" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Basic</div>
+                <div class="card-body">
+                  <div class="fromGroup">
+                    <input class="form-control" type="text" placeholder="Full name">
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">Textarea</div>
+                <div class="card-body">
+                  <div class="fromGroup mb-3">
+                    <textarea class="form-control" name="textarea" placeholder="You boigraphy, description"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">Warning</div>
+                <div class="card-body">
+                  <div class="fromGroup warning">
+                    <input class="form-control" type="text" placeholder="Warning">
+                    <div class="has-badge">
+                      <img class="success-icon" src="assets/images/svg/checkcircle.svg" alt="">
+                      <img class="warning-icon" src="assets/images/svg/warning.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Search</div>
+                <div class="card-body">
+                  <div class="fromGroup has-icon">
+                    <div class="form-control-icon">
+                      <input class="form-control" type="search" placeholder="Search">
+                      <div class="icon-badge-2">
+                        <img src="assets/images/svg/search2.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">Password</div>
+                <div class="card-body">
+                  <div class="fromGroup eye">
+                    <div class="form-control-icon">
+                      <input id="password-hide_show" class="form-control" type="password" placeholder="password">
+                       <div class="has-badge"
+                        onclick="showPassword('password-hide_show', this)">
+                        <i class="ph-eye"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">Success</div>
+                <div class="card-body">
+                  <div class="fromGroup success">
+                    <input class="form-control" type="text" placeholder="Success">
+                    <div class="has-badge">
+                      <img class="success-icon" src="assets/images/svg/checkcircle.svg" alt="">
+                      <img class="warning-icon" src="assets/images/svg/warning.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+        
+        
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}
