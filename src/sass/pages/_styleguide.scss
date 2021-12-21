@@ -9,18 +9,7 @@
   margin-bottom: 40px;
 }
 
-.primary-button-list {
-  margin-bottom: 16px;
-  display: flex;
-  .btn {
-    margin-right: 10px;
-  }
-}
-
 // file
-.file-item.remove-class {
-  width: 204px;
-}
 
 .banner-wrap.remove-class {
   width: 324px;
@@ -39,11 +28,5 @@
         color: var(--gray-900);
       }
     }
-  }
-}
-
-.btn-example {
-  .btn {
-    margin: 4px;
   }
 }

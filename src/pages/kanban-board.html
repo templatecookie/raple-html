@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-12">
             <div id="board" class="board">
-              <div class="d-flex kanbanboard_parent">
+              <div class="row kanbanboard_parent" id="kanban_board_parent">
                 <div class="kanbanboard_child">
                   <div class="card">
                       <div class="card-body" >
@@ -27,92 +27,193 @@
                             <img src="assets/images/svg/dot.svg" alt="clock">
                           </button>
                         </div>
-                        <div id="todo">
-                          <div class="card-priority rt-mb-12">
-                            <!-- top bar  -->
-                            <div class="card-priority__header">
-                              <div class="date">
-                                <span class="icon">
-                                  <img src="assets/images/svg/clock.svg" alt="clock">
+                        <div id="task-1">
+                          <div id="todo">
+                            <div class="card-priority rt-mb-12">
+                              <!-- top bar  -->
+                              <div class="card-priority__header">
+                                <div class="date">
+                                  <span class="icon">
+                                    <img src="assets/images/svg/clock.svg" alt="clock">
+                                  </span>
+                                  <p>14 Nov, 2021</p>
+                                </div>
+                                <!-- actions  -->
+                                <div class="card-priority__actions">
+                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                    <img src="assets/images/svg/dot.svg" alt="clock">
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                   
+        
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/pen.svg" alt="pen">
+                                            </span>
+                                        Edit
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/copy-link.svg" alt="copylink">
+                                            </span>
+                                        Copy Link
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/trash.svg" alt="copylink">
+                                            </span>
+                                        Delete
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                       
+                              <!-- labels  -->
+                              <div class="card-priority__labels">
+                                <ul>
+                                  <li><span class="labels medium">Medium Priority</span></li>
+                                  <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
+                                </ul>
+                              </div>
+                              <h2 class="card-priority__title">
+                                Meeting with UI/UX Team to manage our upcoming projects &amp; task.
+                              </h2>
+                              <!-- priority footer  -->
+                              <div class="card-priority__footer">
+                                <div>
+                                  <ul class="labels-info">
+                                    <li>
+                                      <a href="#">
+                                        <span>
+                                          <img src="assets/images/svg/attach.svg" alt="icon">
+                                        </span>
+                                        5
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        <span>
+                                          <img src="assets/images/svg/comments.svg" alt="icon">
+                                        </span>
+                                        19
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div>
+                                  <ul class="users">
+                                    <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-priority rt-mb-12">
+                              <!-- top bar  -->
+                              <div class="card-priority__header">
+                                <div class="date">
+                                  <span class="icon">
+                                    <img src="assets/images/svg/clock.svg" alt="clock">
+                                  </span>
+                                  <p>14 Nov, 2021</p>
+                                </div>
+                                <!-- actions  -->
+                                <div class="card-priority__actions">
+                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                    <img src="assets/images/svg/dot.svg" alt="clock">
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                   
+        
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/pen.svg" alt="pen">
+                                            </span>
+                                        Edit
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/copy-link.svg" alt="copylink">
+                                            </span>
+                                        Copy Link
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/trash.svg" alt="copylink">
+                                            </span>
+                                        Delete
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                       
+                              <!-- labels  -->
+                              <div class="card-priority__labels">
+                                <ul>
+                                  <li><span class="labels medium">Medium Priority</span></li>
+                                  <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
+                                </ul>
+                              </div>
+                              <h2 class="card-priority__title">
+                                Meeting with UI/UX Team to manage our upcoming projects &amp; task.
+                              </h2>
+                              <!-- priority footer  -->
+                              <div class="card-priority__footer">
+                                <div>
+                                  <ul class="labels-info">
+                                    <li>
+                                      <a href="#">
+                                        <span>
+                                          <img src="assets/images/svg/attach.svg" alt="icon">
+                                        </span>
+                                        5
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        <span>
+                                          <img src="assets/images/svg/comments.svg" alt="icon">
+                                        </span>
+                                        19
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div>
+                                  <ul class="users">
+                                    <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <button type="button" class="btn btn-primary2 pill btn-icon d-block">
+                                <span class="button-content-wrapper">
+                                <span class="button-icon align-icon-left">
+                                  <i class="ph-plus"></i>
                                 </span>
-                                <p>14 Nov, 2021</p>
-                              </div>
-                              <!-- actions  -->
-                              <div class="card-priority__actions">
-                                <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
-                                  <img src="assets/images/svg/dot.svg" alt="clock">
-                                </button>
-                                <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
-                                 
-      
-                                  <li>
-                                    <a href="#" class="dropdown-item" >
-                                      <span>
-                                            <img src="assets/images/svg/pen.svg" alt="pen">
-                                          </span>
-                                      Edit
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#" class="dropdown-item" >
-                                      <span>
-                                            <img src="assets/images/svg/copy-link.svg" alt="copylink">
-                                          </span>
-                                      Copy Link
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#" class="dropdown-item" >
-                                      <span>
-                                            <img src="assets/images/svg/trash.svg" alt="copylink">
-                                          </span>
-                                      Delete
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                     
-                            <!-- labels  -->
-                            <div class="card-priority__labels">
-                              <ul>
-                                <li><span class="labels medium">Medium Priority</span></li>
-                                <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
-                              </ul>
-                            </div>
-                            <h2 class="card-priority__title">
-                              Meeting with UI/UX Team to manage our upcoming projects &amp; task.
-                            </h2>
-                            <!-- priority footer  -->
-                            <div class="card-priority__footer">
-                              <div>
-                                <ul class="labels-info">
-                                  <li>
-                                    <a href="#">
-                                      <span>
-                                        <img src="assets/images/svg/attach.svg" alt="icon">
-                                      </span>
-                                      5
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <span>
-                                        <img src="assets/images/svg/comments.svg" alt="icon">
-                                      </span>
-                                      19
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div>
-                                <ul class="users">
-                                  <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
-                                  <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
-                                  <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
-                                  <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
-                                </ul>
-                              </div>
+                                <span class="button-text" >
+                                  Add new card
+                                </span>
+                                </span>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -129,92 +230,106 @@
                             <img src="assets/images/svg/dot.svg" alt="clock">
                           </button>
                         </div>
-                        <div id="doing">
-                          <div class="card-priority rt-mb-12">
-                            <!-- top bar  -->
-                            <div class="card-priority__header">
-                              <div class="date">
-                                <span class="icon">
-                                  <img src="assets/images/svg/clock.svg" alt="clock">
+                        <div id="task-2">
+                          <div id="doing">
+                            <div class="card-priority rt-mb-12">
+                              <!-- top bar  -->
+                              <div class="card-priority__header">
+                                <div class="date">
+                                  <span class="icon">
+                                    <img src="assets/images/svg/clock.svg" alt="clock">
+                                  </span>
+                                  <p>14 Nov, 2021</p>
+                                </div>
+                                <!-- actions  -->
+                                <div class="card-priority__actions">
+                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                    <img src="assets/images/svg/dot.svg" alt="clock">
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                   
+        
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/pen.svg" alt="pen">
+                                            </span>
+                                        Edit
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/copy-link.svg" alt="copylink">
+                                            </span>
+                                        Copy Link
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/trash.svg" alt="copylink">
+                                            </span>
+                                        Delete
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                       
+                              <!-- labels  -->
+                              <div class="card-priority__labels">
+                                <ul>
+                                  <li><span class="labels medium">Medium Priority</span></li>
+                                  <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
+                                </ul>
+                              </div>
+                              <h2 class="card-priority__title">
+                                Meeting with UI/UX Team to manage our upcoming projects &amp; task.
+                              </h2>
+                              <!-- priority footer  -->
+                              <div class="card-priority__footer">
+                                <div>
+                                  <ul class="labels-info">
+                                    <li>
+                                      <a href="#">
+                                        <span>
+                                          <img src="assets/images/svg/attach.svg" alt="icon">
+                                        </span>
+                                        5
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        <span>
+                                          <img src="assets/images/svg/comments.svg" alt="icon">
+                                        </span>
+                                        19
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div>
+                                  <ul class="users">
+                                    <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <button type="button" class="btn btn-primary2 pill btn-icon d-block">
+                                <span class="button-content-wrapper">
+                                <span class="button-icon align-icon-left">
+                                  <i class="ph-plus"></i>
                                 </span>
-                                <p>14 Nov, 2021</p>
-                              </div>
-                              <!-- actions  -->
-                              <div class="card-priority__actions">
-                                <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
-                                  <img src="assets/images/svg/dot.svg" alt="clock">
-                                </button>
-                                <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
-                                 
-      
-                                  <li>
-                                    <a href="#" class="dropdown-item" >
-                                      <span>
-                                            <img src="assets/images/svg/pen.svg" alt="pen">
-                                          </span>
-                                      Edit
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#" class="dropdown-item" >
-                                      <span>
-                                            <img src="assets/images/svg/copy-link.svg" alt="copylink">
-                                          </span>
-                                      Copy Link
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#" class="dropdown-item" >
-                                      <span>
-                                            <img src="assets/images/svg/trash.svg" alt="copylink">
-                                          </span>
-                                      Delete
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                     
-                            <!-- labels  -->
-                            <div class="card-priority__labels">
-                              <ul>
-                                <li><span class="labels medium">Medium Priority</span></li>
-                                <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
-                              </ul>
-                            </div>
-                            <h2 class="card-priority__title">
-                              Meeting with UI/UX Team to manage our upcoming projects &amp; task.
-                            </h2>
-                            <!-- priority footer  -->
-                            <div class="card-priority__footer">
-                              <div>
-                                <ul class="labels-info">
-                                  <li>
-                                    <a href="#">
-                                      <span>
-                                        <img src="assets/images/svg/attach.svg" alt="icon">
-                                      </span>
-                                      5
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <span>
-                                        <img src="assets/images/svg/comments.svg" alt="icon">
-                                      </span>
-                                      19
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div>
-                                <ul class="users">
-                                  <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
-                                  <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
-                                  <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
-                                  <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
-                                </ul>
-                              </div>
+                                <span class="button-text" >
+                                  Add new card
+                                </span>
+                                </span>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -231,95 +346,109 @@
                             <img src="assets/images/svg/dot.svg" alt="clock">
                           </button>
                         </div>
-                        <div id="done">
-                          <div class="card-priority rt-mb-12">
-                            <!-- top bar  -->
-                            <div class="card-priority__header">
-                              <div class="date">
-                                <span class="icon">
-                                  <img src="assets/images/svg/clock.svg" alt="clock">
+                        <div id="task-3">
+                          <div id="done">
+                            <div class="card-priority rt-mb-12">
+                              <!-- top bar  -->
+                              <div class="card-priority__header">
+                                <div class="date">
+                                  <span class="icon">
+                                    <img src="assets/images/svg/clock.svg" alt="clock">
+                                  </span>
+                                  <p>14 Nov, 2021</p>
+                                </div>
+                                <!-- actions  -->
+                                <div class="card-priority__actions">
+                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                    <img src="assets/images/svg/dot.svg" alt="clock">
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                   
+        
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/pen.svg" alt="pen">
+                                            </span>
+                                        Edit
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/copy-link.svg" alt="copylink">
+                                            </span>
+                                        Copy Link
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" class="dropdown-item" >
+                                        <span>
+                                              <img src="assets/images/svg/trash.svg" alt="copylink">
+                                            </span>
+                                        Delete
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                       
+                              <!-- labels  -->
+                              <div class="card-priority__labels">
+                                <ul>
+                                  <li><span class="labels medium">Medium Priority</span></li>
+                                  <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
+                                </ul>
+                              </div>
+                              <h2 class="card-priority__title">
+                                Meeting with UI/UX Team to manage our upcoming projects &amp; task.
+                              </h2>
+                              <!-- priority footer  -->
+                              <div class="card-priority__footer">
+                                <div>
+                                  <ul class="labels-info">
+                                    <li>
+                                      <a href="#">
+                                        <span>
+                                          <img src="assets/images/svg/attach.svg" alt="icon">
+                                        </span>
+                                        5
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        <span>
+                                          <img src="assets/images/svg/comments.svg" alt="icon">
+                                        </span>
+                                        19
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div>
+                                  <ul class="users">
+                                    <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
+                                    <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <button type="button" class="btn btn-primary2 pill btn-icon d-block">
+                                <span class="button-content-wrapper">
+                                <span class="button-icon align-icon-left">
+                                  <i class="ph-plus"></i>
                                 </span>
-                                <p>14 Nov, 2021</p>
-                              </div>
-                              <!-- actions  -->
-                              <div class="card-priority__actions">
-                                <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
-                                  <img src="assets/images/svg/dot.svg" alt="clock">
-                                </button>
-                                <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
-                                 
-      
-                                  <li>
-                                    <a href="#" class="dropdown-item" >
-                                      <span>
-                                            <img src="assets/images/svg/pen.svg" alt="pen">
-                                          </span>
-                                      Edit
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#" class="dropdown-item" >
-                                      <span>
-                                            <img src="assets/images/svg/copy-link.svg" alt="copylink">
-                                          </span>
-                                      Copy Link
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#" class="dropdown-item" >
-                                      <span>
-                                            <img src="assets/images/svg/trash.svg" alt="copylink">
-                                          </span>
-                                      Delete
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
+                                <span class="button-text" >
+                                  Add new card
+                                </span>
+                                </span>
+                              </button>
                             </div>
-                     
-                            <!-- labels  -->
-                            <div class="card-priority__labels">
-                              <ul>
-                                <li><span class="labels medium">Medium Priority</span></li>
-                                <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
-                              </ul>
-                            </div>
-                            <h2 class="card-priority__title">
-                              Meeting with UI/UX Team to manage our upcoming projects &amp; task.
-                            </h2>
-                            <!-- priority footer  -->
-                            <div class="card-priority__footer">
-                              <div>
-                                <ul class="labels-info">
-                                  <li>
-                                    <a href="#">
-                                      <span>
-                                        <img src="assets/images/svg/attach.svg" alt="icon">
-                                      </span>
-                                      5
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <span>
-                                        <img src="assets/images/svg/comments.svg" alt="icon">
-                                      </span>
-                                      19
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div>
-                                <ul class="users">
-                                  <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
-                                  <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
-                                  <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
-                                  <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
-                                </ul>
-                              </div>
-                            </div>
+                            
                           </div>
-                          
                         </div>
                          
                       </div>
@@ -330,7 +459,7 @@
                   <div class="card">
                     <div class="card-body">
                       <button class=" btn  text-primary" data-bs-toggle="modal" data-bs-target="#createboard-modal"> 
-                         Add new Column
+                        <i class="ph-plus"></i>    Add new Column
                       </button>
                     </div>
                   </div>
@@ -356,18 +485,18 @@
       </div>
       <div class="modal-body">
         <div class="rt-mb-24">
-          <label class=" body-font-4 pointer block mb-2" for="title">Tittle</label>
-        <input type="text" placeholder="Add label tittle" class="form-control" id="title">
+          <label class=" body-font-4 pointer block mb-2" for="board_title">Tittle</label>
+        <input type="text" placeholder="Add label tittle" class="form-control" id="board_title">
         </div>
         <div class="createboard-modal-footer d-flex justify-content-between">
           <button type="button" class="btn btn-dark2 pill" data-bs-dismiss="modal">Cancel</button>
    
-          <button type="button" class="btn btn-primary pill btn-icon" >
+          <button type="button" class="btn btn-primary pill btn-icon" id="createboard">
             <span class="button-content-wrapper">
             <span class="button-icon align-icon-right">
               <i class="ph-arrow-right"></i>
             </span>
-            <span class="button-text">
+            <span class="button-text" >
               Create Column
             </span>
             </span>
@@ -377,5 +506,7 @@
     </div>
   </div>
 </div>
+
+
 
 {% endblock %}

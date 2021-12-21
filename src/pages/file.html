@@ -1,0 +1,41 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "File" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %}
+  {% include "../templates/layout/header-footer/app-sidebar.html" %}
+  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+          <div class="row remove-class">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">Basic</div>
+                <div class="card-body">
+                  <div class="file-item">
+                    <div class="file-icon">
+                      <img src="assets/images/svg/image.svg" alt="">
+                    </div>
+                    <div class="file-data">
+                      <h4>Photos</h4>
+                      <p>2451 photos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

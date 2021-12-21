@@ -18,6 +18,73 @@
 
   dragula([document.getElementById("todo"),document.getElementById("doing"),document.getElementById("done")]);
 
+  const boardTitle = document.getElementById('board_title');
+  const CreateBoard = document.getElementById('createboard');
+
+ 
+
+  setInterval(function(){
+    if(boardTitle.value.length > 0){
+      CreateBoard.disabled = false;
+    }else{
+      CreateBoard.disabled = true;
+    }
+}, 100);
+
+
+if(CreateBoard){
+  CreateBoard.addEventListener('click', function (event) {
+    event.preventDefault();
+    
+    let StingId =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);;
+    
+    let kanbanParents = document.getElementById('kanban_board_parent');
+    let kabanChild = document.createElement('div');
+    kabanChild.classList.add('kanbanboard_child');
+    kabanChild.innerHTML = `   
+    <div class="kanbanboard_child">
+    <div class="card">
+        <div class="card-body" >
+          <div class="kanban-board-header">
+            <h5>${ boardTitle.value }</h5>
+            <button class="dots-three text-gray-400 f-size-24" type="button">
+              <img src="assets/images/svg/dot.svg" alt="clock">
+            </button>
+          </div>
+          <div id="${StingId}">
+          
+          </div>
+          <button class="btn btn-primary2 btn-icon pill d-block"
+          <span class="button-content-wrapper">
+            <span class="button-icon align-icon-right">
+              <i class="ph-arrow-right"></i>
+            </span>
+            <span class="button-text" >
+               
+          Add new card
+            </span>
+            </span>
+          
+          </button>
+        </div>
+    </div>
+    
+  </div>
+    
+    `;
+    //kabanChild.textContent = boardTitle.value;
+    kanbanParents.appendChild(kabanChild);
+    boardTitle.value= '';
+    document.getElementById("createboard-modal").classList.remove("show");
+    $(".modal-backdrop").removeClass("show");
+    dragula([document.getElementById(StingId)]);
+
+  });
+}
+
+
+
+
   var template_x = document.getElementById("template");
   var template2_x = document.getElementById("template2");
   tippy(".notifications", {
@@ -724,64 +791,6 @@ if (document.getElementById('bar-chart1')) {
     user_chart.render();
   }
 
-  // custom select
-  
-    $('.custom-select').each(function () {
-      var classes = $(this).attr('class'),
-        id = $(this).attr('id'),
-        name = $(this).attr('name');
-      var template = '<div class="' + classes + '">';
-      template +=
-        '<span class="custom-select-trigger">' + $(this).attr('title') + '</span>';
-      template += '<div class="custom-options">';
-      $(this)
-        .find('option')
-        .each(function () {
-          template +=
-            '<span class="custom-option ' +
-            $(this).attr('class') +
-            '" data-value="' +
-            $(this).attr('value') +
-            '">' +
-            $(this).html() +
-            '</span>';
-        });
-      template += '</div></div>';
-
-      $(this).wrap('<div class="custom-select-wrapper"></div>');
-      $(this).hide();
-      $(this).after(template);
-    });
-
-    $('.custom-option:first-of-type').hover(
-      function () {
-        $(this).parents('.custom-options').addClass('option-hover');
-      },
-      function () {
-        $(this).parents('.custom-options').removeClass('option-hover');
-      },
-    );
-    $('.custom-select-trigger').on('click', function () {
-      $('html').one('click', function () {
-        $('.custom-select').removeClass('opened');
-      });
-      $(this).parents('.custom-select').toggleClass('opened');
-      event.stopPropagation();
-    });
-    $('.custom-option').on('click', function () {
-      $(this).parents('.custom-select-wrapper').find('select').val($(this).data('value'));
-      $(this).parents('.custom-options').find('.custom-option').removeClass('selection');
-      $(this).addClass('selection');
-      $(this).parents('.custom-select').removeClass('opened');
-      $(this)
-        .parents('.custom-select')
-        .find('.custom-select-trigger')
-        .text($(this).text());
-    });
-
-
-    
-    
     // Apex charts 
     var line_chart_keyword_1 = {
       maintainAspectRatio: true,
