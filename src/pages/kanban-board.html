@@ -204,7 +204,7 @@
                               </div>
                             </div>
                             <div>
-                              <button type="button" class="btn btn-primary2 pill btn-icon d-block">
+                              <button type="button" class="btn btn-primary2  waves-effect  primary-dark pill btn-icon d-block" data-bs-toggle="modal" data-bs-target="#createcard-modal" id="toboad_task">
                                 <span class="button-content-wrapper">
                                 <span class="button-icon align-icon-left">
                                   <i class="ph-plus"></i>
@@ -320,8 +320,8 @@
                               </div>
                             </div>
                             <div>
-                              <button type="button" class="btn btn-primary2 pill btn-icon d-block">
-                                <span class="button-content-wrapper">
+                              <button type="button" class="btn btn-primary2  waves-effect  primary-dark pill btn-icon d-block" data-bs-toggle="modal" data-bs-target="#createcard-modal" id="doingboard_task">
+                                <span class="button-content-wrapper" >
                                 <span class="button-icon align-icon-left">
                                   <i class="ph-plus"></i>
                                 </span>
@@ -436,7 +436,7 @@
                               </div>
                             </div>
                             <div>
-                              <button type="button" class="btn btn-primary2 pill btn-icon d-block">
+                              <button type="button" class="btn btn-primary2  waves-effect  primary-dark pill btn-icon d-block" data-bs-toggle="modal" data-bs-target="#createcard-modal" id="done_task">
                                 <span class="button-content-wrapper">
                                 <span class="button-icon align-icon-left">
                                   <i class="ph-plus"></i>
@@ -507,6 +507,41 @@
   </div>
 </div>
 
-
+<div class="modal fade" id="createcard-modal" tabindex="-1" aria-labelledby="createcard-modalLabel" aria-hidden="true">
+  <div class="modal-dialog createcard-modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="body-font-3">Create New Card</h5>
+        <button type="button" class="plain-btn"  data-bs-dismiss="modal" aria-label="Close">
+          <img src="assets/images/svg/modal-close.svg" alt="" draggable="false">
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="rt-mb-24">
+          <div class="row">
+            <div class="col-12">
+              <label class=" body-font-4 pointer block mb-2" for="card_title">Tittle</label>
+        <input type="text" placeholder="Add tittle" class="form-control" id="card_title">
+            </div>
+          </div>
+        </div>
+        <div class="createcard-modal-footer d-flex justify-content-between">
+          <button type="button" class="btn btn-dark2 pill" data-bs-dismiss="modal">Cancel</button>
+   
+          <button type="button" class="btn btn-primary pill btn-icon" id="createcard">
+            <span class="button-content-wrapper">
+            <span class="button-icon align-icon-right">
+              <i class="ph-arrow-right"></i>
+            </span>
+            <span class="button-text" >
+              Create Column
+            </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

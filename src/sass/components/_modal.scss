@@ -1,17 +1,20 @@
 // file mamager page modal
 
 .modal-dialog {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  height: 100vh;
+  // max-width: 500px;
+  // margin: 0 auto;
+  // display: flex;
+  // align-items: center;
+  // height: 100vh;
+  &.createcard-modal-dialog{
+    max-width: 668px;
+  }
 }
 
-.modal-content {
-  border-radius: 8px;
-  margin: 20px;
-}
+// .modal-content {
+//   border-radius: 8px;
+//   margin: 20px;
+// }
 
 label.upload-file-wrap {
   padding: 40px 24px;

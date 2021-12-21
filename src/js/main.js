@@ -21,8 +21,7 @@
   const boardTitle = document.getElementById('board_title');
   const CreateBoard = document.getElementById('createboard');
 
- 
-
+ if(boardTitle){
   setInterval(function(){
     if(boardTitle.value.length > 0){
       CreateBoard.disabled = false;
@@ -30,6 +29,9 @@
       CreateBoard.disabled = true;
     }
 }, 100);
+ }
+
+
 
 
 if(CreateBoard){
@@ -75,7 +77,6 @@ if(CreateBoard){
     //kabanChild.textContent = boardTitle.value;
     kanbanParents.appendChild(kabanChild);
     boardTitle.value= '';
-    //document.getElementById("createboard-modal").modal("hide");
     $("#createboard-modal").modal('hide');
     document.querySelector(".modal-backdrop").remove();
     //$(".modal-backdrop").removeClass("show");

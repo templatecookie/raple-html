@@ -61,6 +61,9 @@
   &.primary-light .waves-ripple {
     background-color: var(--primary-100);
   }
+  &.primary-dark .waves-ripple {
+    background-color: var(--primary-500);
+  }
 
   // Style input button bug.
   input[type="button"], input[type="reset"], input[type="submit"] {
