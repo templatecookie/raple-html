@@ -5,6 +5,12 @@
   @include max(1450px) {
     grid-template-columns: repeat(2, 1fr);
   }
+  @include max(1100px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @include max(991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @include max(825px) {
     grid-template-columns: repeat(1, 1fr);
   }
