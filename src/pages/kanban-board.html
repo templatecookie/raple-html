@@ -329,7 +329,7 @@
                 <div class="kanbanboard_child">
                   <div class="card">
                     <div class="card-body">
-                      <button class=" btn  text-primary"> 
+                      <button class=" btn  text-primary" data-bs-toggle="modal" data-bs-target="#createboard-modal"> 
                          Add new Column
                       </button>
                     </div>
@@ -344,6 +344,38 @@
   </div>
 </main>
 
-
+<!-- Modal -->
+<div class="modal fade" id="createboard-modal" tabindex="-1" aria-labelledby="createboard-modalLabel" aria-hidden="true">
+  <div class="modal-dialog createboard-modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="body-font-3">Create New Column</h5>
+        <button type="button" class="plain-btn"  data-bs-dismiss="modal" aria-label="Close">
+          <img src="assets/images/svg/modal-close.svg" alt="" draggable="false">
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="rt-mb-24">
+          <label class=" body-font-4 pointer block mb-2" for="title">Tittle</label>
+        <input type="text" placeholder="Add label tittle" class="form-control" id="title">
+        </div>
+        <div class="createboard-modal-footer d-flex justify-content-between">
+          <button type="button" class="btn btn-dark2 pill" data-bs-dismiss="modal">Cancel</button>
+   
+          <button type="button" class="btn btn-primary pill btn-icon" >
+            <span class="button-content-wrapper">
+            <span class="button-icon align-icon-right">
+              <i class="ph-arrow-right"></i>
+            </span>
+            <span class="button-text">
+              Create Column
+            </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
