@@ -166,11 +166,13 @@
 
 // Footer 
 footer {
+  padding: 24px 0px;
   .footer { 
     &-content { 
       display: flex;
       align-items: center;
       justify-content: space-between;
+      
       @include max(767px) { 
         flex-direction: column
       }
