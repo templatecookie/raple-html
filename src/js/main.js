@@ -75,8 +75,10 @@ if(CreateBoard){
     //kabanChild.textContent = boardTitle.value;
     kanbanParents.appendChild(kabanChild);
     boardTitle.value= '';
-    document.getElementById("createboard-modal").classList.remove("show");
-    $(".modal-backdrop").removeClass("show");
+    //document.getElementById("createboard-modal").modal("hide");
+    $("#createboard-modal").modal('hide');
+    document.querySelector(".modal-backdrop").remove();
+    //$(".modal-backdrop").removeClass("show");
     dragula([document.getElementById(StingId)]);
 
   });
