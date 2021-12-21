@@ -20,10 +20,24 @@
 
   const boardTitle = document.getElementById('board_title');
   const CreateBoard = document.getElementById('createboard');
-if(CreateBoard){
-  CreateBoard.addEventListener('click', function () {
-    let StingId =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);;
 
+ 
+
+  setInterval(function(){
+    if(boardTitle.value.length > 0){
+      CreateBoard.disabled = false;
+    }else{
+      CreateBoard.disabled = true;
+    }
+}, 100);
+
+
+if(CreateBoard){
+  CreateBoard.addEventListener('click', function (event) {
+    event.preventDefault();
+    
+    let StingId =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);;
+    
     let kanbanParents = document.getElementById('kanban_board_parent');
     let kabanChild = document.createElement('div');
     kabanChild.classList.add('kanbanboard_child');
