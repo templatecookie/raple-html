@@ -56,7 +56,7 @@ if(CreateBoard){
           <div id="${StingId}">
           
           </div>
-          <button class="btn btn-primary2 btn-icon pill d-block"
+          <button class="btn btn-primary2 btn-icon pill d-block" data-bs-toggle="modal" data-bs-target="#createcard-modal"
           <span class="button-content-wrapper">
             <span class="button-icon align-icon-right">
               <i class="ph-arrow-right"></i>
@@ -82,6 +82,7 @@ kanbanParents.insertBefore(kabanChild,kanbanParents.childNodes[6]);
     document.querySelector(".modal-backdrop").remove();
     //$(".modal-backdrop").removeClass("show")
     dragula([document.getElementById(StingId)]);
+    
 
   });
 }
@@ -93,121 +94,31 @@ const cardTitle = document.getElementById('card_title');
 const createcard = document.getElementById('createcard');
 
 let btngroup = document.getElementsByName('button-group')
-for (let i = 0; i < btngroup.length; i++) {
-  btngroup[i].onclick = function () {
-    $("#createcard-modal").modal("toggle")
-  }
-  
-}
-
-if(createcard){
-  createcard.addEventListener("click", function name(event) {
-    event.preventDefault();
-   
-   
-    let cardPriority = document.getElementById("todo");
-    let  innerCard = document.createElement('div');
-    innerCard.classList.add('div');
-    innerCard.innerHTML = `
-
-    <div class="card-priority rt-mb-12">
-                              <!-- top bar  -->
-                              <div class="card-priority__header">
-                                <div class="date">
-                                  <span class="icon">
-                                    <img src="assets/images/svg/clock.svg" alt="clock">
-                                  </span>
-                                  <p>14 Nov, 2021</p>
-                                </div>
-                                <!-- actions  -->
-                                <div class="card-priority__actions">
-                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
-                                    <img src="assets/images/svg/dot.svg" alt="clock">
-                                  </button>
-                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
-                                   
-        
-                                    <li>
-                                      <a href="#" class="dropdown-item" >
-                                        <span>
-                                              <img src="assets/images/svg/pen.svg" alt="pen">
-                                            </span>
-                                        Edit
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#" class="dropdown-item" >
-                                        <span>
-                                              <img src="assets/images/svg/copy-link.svg" alt="copylink">
-                                            </span>
-                                        Copy Link
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#" class="dropdown-item" >
-                                        <span>
-                                              <img src="assets/images/svg/trash.svg" alt="copylink">
-                                            </span>
-                                        Delete
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                       
-                              <!-- labels  -->
-                              <div class="card-priority__labels">
-                                <ul>
-                                  <li><span class="labels medium">Medium Priority</span></li>
-                                  <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
-                                </ul>
-                              </div>
-                              <h2 class="card-priority__title">
-                                Meeting with UI/UX Team to manage our upcoming projects &amp; task.
-                              </h2>
-                              <!-- priority footer  -->
-                              <div class="card-priority__footer">
-                                <div>
-                                  <ul class="labels-info">
-                                    <li>
-                                      <a href="#">
-                                        <span>
-                                          <img src="assets/images/svg/attach.svg" alt="icon">
-                                        </span>
-                                        5
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#">
-                                        <span>
-                                          <img src="assets/images/svg/comments.svg" alt="icon">
-                                        </span>
-                                        19
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div>
-                                  <ul class="users">
-                                    <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
-                                    <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
-                                    <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
-                                    <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-
-    `;
-    cardPriority.appendChild(innerCard);
-    cardPriority.insertBefore(innerCard, cardPriority.childNodes[0]);
-    cardTitle.value= '';
-    $("#createcard-modal").modal('hide');
-    document.querySelector(".modal-backdrop").remove();
+  btngroup.forEach(function(value, index, arr){
     
+    value.addEventListener('click', function () {
+      $("#createcard-modal").modal("toggle");
+      createcard.addEventListener('click', function (event) {
+        event.preventDefault();
+        let CurrentcardP = value.getAttribute('id');
+        let cardPriority = document.getElementById($('#'+CurrentcardP).parent().parent().attr('id'));
+        let  innerCard = document.createElement('div');
+        innerCard.classList.add('div');
+        innerCard.innerHTML = ` 
+        <h1 className="card-title"> mahedi</h1>
+        `
+        cardPriority.appendChild(innerCard);
+        cardPriority.insertBefore(innerCard, cardPriority.childNodes[0]);
+        cardTitle.value= '';
+        
+    });
+    });
+
     
   })
-}
+
+
+
 
   var template_x = document.getElementById("template");
   var template2_x = document.getElementById("template2");
