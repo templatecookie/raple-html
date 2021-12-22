@@ -29,9 +29,9 @@ button.dots-three {
     }
   }
 }
-.kanbanboard_parent{
+ #appkanban{
   overflow-x: auto;
-  align-items: start;
+  
 }
 .kanbanboard_child{
   max-width: 372px;
@@ -44,4 +44,10 @@ button.dots-three {
 .plain-btn{
   background: transparent;
   border: none;
+}
+
+.kanban-board{
+  background: #fff;
+  border-radius: 8px;
+  //padding: 20px 24px;
 }
