@@ -1031,5 +1031,75 @@ if (document.getElementById('bar-chart1')) {
     });
 
 
+    // * Show / Hide password type function 
+    function showPassword(input, icon) { 
+      icon.addEventListener('click', (e) => { 
+        // todo 1:  toggle eye show / hide  
+        icon.classList.toggle('ph-eye-slash');
+  
+        // todo 2: input type 
+        input.type === 'password' ? input.type = 'text' : input.type = 'password';
+      })
+    }
+
+    const input =  document.querySelector("#password-hide_show");
+    const inputIcon = document.querySelector(".has-badge i");
+
+    const finputOne = document.querySelector("#password-hide_show1");
+    const ficonOne = document.querySelector(".select-icon__one i");
+
+    const finputTwo = document.querySelector("#password-hide_show2");
+    const ficonTwo = document.querySelector(".select-icon__two i");
+
+    const finputThree = document.querySelector("#password-hide_show3");
+    const ficonThree = document.querySelector(".select-icon__three i");
+
+    const finputFour = document.querySelector("#password-hide_show4");
+    const ficonFour = document.querySelector(".select-icon__four i");
+
+    const finputFive = document.querySelector("#password-hide_show5");
+    const ficonFive = document.querySelector(".select-icon__five i");
+
+    const finputSix = document.querySelector("#password-hide_show6");
+    const ficonSix = document.querySelector(".select-icon__six i");
+
+    const finputSeven = document.querySelector("#password-hide_show7");
+    const ficonSeven = document.querySelector(".select-icon__seven i");
+
+
+    
+    // Input page 
+    if(input || inputIcon) { 
+      showPassword(input,inputIcon)
+    }
+
+    // form elements page 
+    if (finputOne || ficonOne) { 
+      showPassword(finputOne,ficonOne)
+    }
+    if(finputTwo || ficonTwo ) { 
+      showPassword(finputTwo,ficonTwo)
+    }
+    if(finputThree || ficonThree) { 
+      
+      showPassword(finputThree,ficonThree)
+    }
+    if(finputFour || ficonFour) { 
+      
+      showPassword(finputFour,ficonFour)
+    }
+    if( finputFive || ficonFive ) { 
+      showPassword(finputFive,ficonFive)
+    }
+    if(finputSix || ficonSix) { 
+
+      showPassword(finputSix,ficonSix)
+    }
+
+    if(finputSeven || ficonSeven) { 
+
+      showPassword(finputSeven,ficonSeven)
+    }
+
 
 })(jQuery);
