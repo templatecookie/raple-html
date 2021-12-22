@@ -92,17 +92,18 @@ kanbanParents.insertBefore(kabanChild,kanbanParents.childNodes[6]);
 const cardTitle = document.getElementById('card_title');
 const createcard = document.getElementById('createcard');
 
+let btngroup = document.getElementsByName('button-group')
+for (let i = 0; i < btngroup.length; i++) {
+  btngroup[i].onclick = function () {
+    $("#createcard-modal").modal("toggle")
+  }
+  
+}
 
 if(createcard){
   createcard.addEventListener("click", function name(event) {
     event.preventDefault();
-    // let btngroup = document.getElementsByName('button-group')
-    // for (let i = 0; i < btngroup.length; i++) {
-    //   btngroup[i].onclick = function () {
-    //     alert("lada")
-    //   }
-      
-    // }
+   
    
     let cardPriority = document.getElementById("todo");
     let  innerCard = document.createElement('div');
