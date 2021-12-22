@@ -5,9 +5,9 @@
   background-color: #fff;
   margin-bottom: 24px;
   .card-body {
-    padding: 20px 24px;
+    padding: 24px;
     @include max(991px) {
-      padding: 14px 20px;
+      padding: 20px;
     }
     .card-full-width-border {
       margin-left: -24px;
@@ -106,7 +106,7 @@
     white-space: nowrap;
     span {
       margin-left: 12px;
-      @include max(575px) { 
+      @include max(575px) {
         margin-left: 6px;
       }
     }
@@ -157,7 +157,7 @@
         .card-blog-redirect {
           &:nth-child(1) {
             margin-right: 24px;
-            @include max(575px) { 
+            @include max(575px) {
               margin-right: 12px;
             }
           }
@@ -276,7 +276,7 @@
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0px 8px 24px 0px #00000008;
-  @include max(575px) { 
+  @include max(575px) {
     padding: 24px;
   }
   h2 {
@@ -485,17 +485,15 @@
   }
 }
 
-
-
-// Cards Wrapper 
-  .cards { 
-    .row { 
-      // margin-bottom: 12px;
-      .col-xxl3,
-      .col-md-6,
-      .col-lg-6,
-      .col-12 { 
-        margin-bottom: 24px;
-      }
+// Cards Wrapper
+.cards {
+  .row {
+    // margin-bottom: 12px;
+    .col-xxl3,
+    .col-md-6,
+    .col-lg-6,
+    .col-12 {
+      margin-bottom: 24px;
     }
   }
+}
