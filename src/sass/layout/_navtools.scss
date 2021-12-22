@@ -104,21 +104,21 @@
 .PopoverParent {
   width: max-content;
   min-width: 205px;
-  &.min-372{
+  &.min-372 {
     min-width: 372px;
   }
-  
-.PopoverContent{
-  padding: 19px;
-}
+
+  .PopoverContent {
+    padding: 19px;
+  }
   .Popover-header {
-    border-bottom: 1px solid #E5E7E8;
+    border-bottom: 1px solid #e5e7e8;
     margin-left: -6px;
     margin-right: -6px;
     padding: 16px 24px;
   }
   .popOverFooter {
-    border-top: 1px solid #E5E7E8;
+    border-top: 1px solid #e5e7e8;
 
     margin-top: 12px;
     display: flex;
@@ -140,17 +140,17 @@
 }
 
 .notify-lists {
-  li{
+  li {
     margin-bottom: 16px;
     display: block;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0px;
     }
   }
-  .icon-thumb{
+  .icon-thumb {
     height: 48px;
     width: 48px;
-    img{
+    img {
       display: block;
       width: 100%;
       height: 100%;
