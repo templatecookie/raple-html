@@ -266,11 +266,7 @@ $('input[name="sidebar"]').on('change', function(){
 
   //hide & show
 // calender 
-if(document.querySelector('.date-picker-calender')) { 
-
-  $(".date-picker-calender").datepicker(),
-}
-
+$(".date-picker-calender").datepicker(),
 
 //map
   $('#world-map').vectorMap({
