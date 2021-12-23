@@ -9,13 +9,21 @@
         z-index: 999;
         background-color: transparent;
         transition: all 0.3s linear;
+
+        &-collapse { 
+         @include max(991px) {
+             padding-bottom: 24px;
+             background-color: var(--gray-900);
+         }
+        }
+
+        .navbar-toggler { 
+            color: #fff;
+            border-color: #fff;
+            background-color: #fff;
+        }
         &.fixed { 
             background-color: var(--gray-900);
-            .navbar-toggler { 
-                color: #fff;
-                border-color: #fff;
-                background-color: #fff;
-            }
         }
         &-nav { 
             @include max(991px) { 
