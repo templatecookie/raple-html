@@ -32,7 +32,7 @@
             
          
          getsingletem.addEventListener('click', function(){
-            getsingletem.parentNode.remove();
+            alert("afafa")
        });
 
    });
