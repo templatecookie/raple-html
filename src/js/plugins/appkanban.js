@@ -14,8 +14,32 @@
       }
   }, 100);
    }
+
+
+   var ID = function () {
+   
+    return '_' + Math.random().toString(36).substr(2, 9);
+  };
+  
+
+   const UniqBoard = document.querySelectorAll('.card-priority');
+   UniqBoard.forEach(function(item, index){
+       item.setAttribute('id', ID());
+       let singleItem =item.getAttribute('id');
+         let getsingletem = document.getElementById(singleItem);
+            let removicon = document.querySelector('.removeitem');
+         
+            getsingletem.addEventListener('click', function(){
+                // getsingletem.remove()
+                //alert("afafa");
+                this.remove();
+       });
+
+   });
+
   
   
+
   
   
   if(CreateBoard){
@@ -238,12 +262,12 @@
                                           </a>
                                         </li>
                                         <li>
-                                          <a href="#" class="dropdown-item" >
-                                            <span>
-                                                  <img src="assets/images/svg/trash.svg" alt="copylink">
-                                                </span>
-                                            Delete
-                                          </a>
+                                        <a href="#!" class="dropdown-item remove-killer">
+                                        <span>
+                                              <img src="assets/images/svg/trash.svg" alt="copylink">
+                                            </span>
+                                        Delete
+                                      </a>
                                         </li>
                                       </ul>
                                     </div>
@@ -295,6 +319,8 @@
             cardPriority.appendChild(innerCard);
             cardPriority.insertBefore(innerCard, cardPriority.childNodes[0]);
             cardTitle.value= '';
+
+
     
            document.body.removeChild(modalbox);
       document.body.removeChild(overlay);
@@ -308,8 +334,10 @@
   
     });
   }
+
   
   
+
   // kanban card add  
   
   
@@ -485,12 +513,12 @@
                                         </a>
                                       </li>
                                       <li>
-                                        <a href="#" class="dropdown-item" >
-                                          <span>
-                                                <img src="assets/images/svg/trash.svg" alt="copylink">
-                                              </span>
-                                          Delete
-                                        </a>
+                                      <a href="#!" class="dropdown-item remove-killer">
+                                      <span>
+                                            <img src="assets/images/svg/trash.svg" alt="copylink">
+                                          </span>
+                                      Delete
+                                    </a>
                                       </li>
                                     </ul>
                                   </div>
