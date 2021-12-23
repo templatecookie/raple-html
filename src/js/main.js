@@ -19,30 +19,35 @@
 
   var template_x = document.getElementById("template");
   var template2_x = document.getElementById("template2");
-  tippy(".notifications", {
-    arrow: false,
-    delay: 40,
-    content: template_x.innerHTML,
-    allowHTML: true,
-    interactive: "true",
-    placement: "bottom-end",
-    animation: "fade",
-    theme: "light",
-    maxWidth: "none",
-    trigger: "click",
-  });
-  tippy(".openaccount", {
-    arrow: false,
-    delay: 40,
-    content: template2_x.innerHTML,
-    allowHTML: true,
-    interactive: "true",
-    placement: "bottom-end",
-    animation: "fade",
-    theme: "light",
-    maxWidth: "none",
-    trigger: "click",
-  });
+  if(template2_x) { 
+    tippy(".notifications", {
+      arrow: false,
+      delay: 40,
+      content: template_x.innerHTML,
+      allowHTML: true,
+      interactive: "true",
+      placement: "bottom-end",
+      animation: "fade",
+      theme: "light",
+      maxWidth: "none",
+      trigger: "click",
+    });
+  }
+
+  if(template2_x) {
+    tippy(".openaccount", {
+      arrow: false,
+      delay: 40,
+      content: template2_x.innerHTML,
+      allowHTML: true,
+      interactive: "true",
+      placement: "bottom-end",
+      animation: "fade",
+      theme: "light",
+      maxWidth: "none",
+      trigger: "click",
+    });
+  }
 
   $(".opener_sidebar").on("click", function (e) {
     e.preventDefault(),
@@ -58,25 +63,30 @@
 
   //metisMenu active
 
-  $("#side-menu").metisMenu();
+  if(document.getElementById('side-menu')) { 
+    $("#side-menu").metisMenu();
+  }
 
-  $("#side-menu a").each(function () {
-    var e = window.location.href.split(/[?#]/)[0];
-    this.href == e &&
-      ($(this).addClass("active"),
-      $(this).parent().addClass("mm-active"),
-      $(this).parent().parent().addClass("mm-show"),
-      $(this).parent().parent().prev().addClass("mm-active"),
-      $(this).parent().parent().parent().addClass("mm-active"),
-      $(this).parent().parent().parent().parent().addClass("mm-show"),
-      $(this)
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .addClass("mm-active"));
-  }),
+  if(document.getElementById('side-menu'))  { 
+
+    
+    $("#side-menu a").each(function () {
+      var e = window.location.href.split(/[?#]/)[0];
+      this.href == e &&
+        ($(this).addClass("active"),
+        $(this).parent().addClass("mm-active"),
+        $(this).parent().parent().addClass("mm-show"),
+        $(this).parent().parent().prev().addClass("mm-active"),
+        $(this).parent().parent().parent().addClass("mm-active"),
+        $(this).parent().parent().parent().parent().addClass("mm-show"),
+        $(this)
+          .parent()
+          .parent()
+          .parent()
+          .parent()
+          .parent()
+          .addClass("mm-active"));
+    }),
     $(document).ready(function () {
       var e;
       0 < $("#side-menu").length &&
@@ -88,6 +98,7 @@
           "slow"
         ));
     });
+  }
 
 
 
@@ -255,7 +266,10 @@ $('input[name="sidebar"]').on('change', function(){
 
   //hide & show
 // calender 
-$(".date-picker-calender").datepicker(),
+if(document.querySelector('.date-picker-calender')) { 
+
+  $(".date-picker-calender").datepicker(),
+}
 
 
 //map
@@ -990,6 +1004,19 @@ if (document.getElementById('bar-chart1')) {
         e.preventDefault();
       });
   
+    });
+
+
+    // Presentation page 
+
+    // sticky navbar 
+    $(window).scroll(function(){
+      if ($(window).scrollTop() >= 330) {
+        $('.p-header .navbar').addClass('fixed');
+       }
+       else {
+        $('.p-header .navbar').removeClass('fixed');
+       }
     });
 
 
