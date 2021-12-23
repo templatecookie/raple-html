@@ -1,4 +1,6 @@
 
+
+
 // navbar 
 .p-header { 
     .navbar { 
@@ -160,6 +162,7 @@
 
 .section-padding {
   padding: 100px 0;
+  overflow: hidden;
   @include max(991px) {
     padding: 80px 0;
   }
@@ -173,20 +176,29 @@
 }
 // feature section
 .feature {
+  overflow: hidden;
   &-wrap {
+    width: 100%;
     padding: 32px 30px;
     text-align: center;
     border-radius: 8px;
     margin: 12px 0;
     background-color: var(--primary-50);
-    &:hover .feature-icon {
-      background-color: var(--primary-500);
-    }
-    &:hover .feature-icon {
-      path {
-        stroke: white;
+    transition: all 0.3s ease-in-out;
+    &:hover { 
+      .feature-icon {
+        background-color: var(--primary-500);
+        svg { 
+          transform: scale(1.2);
+        }
+        path {
+          stroke: white;
+        }
       }
     }
+
+
+
   }
   &-icon {
     width: 80px;
@@ -197,7 +209,11 @@
     align-items: center;
     justify-content: center;
     background-color: white;
-    transition: all 0.4s;
+    transition: all 0.3s ease-in-out;
+    svg { 
+      transform: scale(1);
+      transition: all 0.4s linear;
+    }
     path {
       transition: all 0.4s;
     }
@@ -220,6 +236,7 @@
   }
 }
 .presentation {
+  overflow: hidden;
   &-content {
     @include max(479px) {
       text-align: center;
@@ -296,14 +313,12 @@
   min-height: 730px;
   background-position: center;
   background-size: cover;
-  @include max(1199px) {
-    min-height: 650px;
+  overflow: hidden;
+  @include max(1200px) { 
+  min-height: 680px;
   }
-  @include max(991px) {
-    min-height: 550px;
-  }
-  @include max(479px) {
-    min-height: 450px;
+  @include max(991px) { 
+    min-height: 520px;
   }
   .presentation-button {
     margin-top: 48px;
