@@ -38,9 +38,7 @@
               </button>
             </div>
             <div id="${StingId}">
-            
-            </div>
-            <button class="btn btn-primary2 btn-icon pill d-block"  name="button-group2" type="button"
+            <button class="btn btn-primary2 btn-icon pill d-block"  name="button-group2" type="button" id="${'btn'+StingId}">
             <span class="button-content-wrapper">
               <span class="button-icon align-icon-right">
                 <i class="ph-arrow-right"></i>
@@ -52,6 +50,9 @@
               </span>
             
             </button>
+            
+            </div>
+            
           </div>
       </div>
       
@@ -197,9 +198,9 @@
             let priority__tag = document.getElementById('priority__tag');
            
             let CurrentcardP = item.getAttribute('id');
-            console.log(CurrentcardP);
-            let cardPriority = document.getElementById($('#'+CurrentcardP).parent().parent().attr('id'));
-            
+           
+            let cardPriority = document.getElementById($('#'+CurrentcardP).parent().attr('id'));
+            console.log(cardPriority);
             let  innerCard = document.createElement('div');
             innerCard.classList.add('div');
             innerCard.innerHTML = ` 
