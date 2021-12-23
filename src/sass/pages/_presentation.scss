@@ -1,5 +1,88 @@
 // section padding
 
+// navbar
+.p-header {
+  .navbar {
+    padding: 24px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+    transition: all 0.3s linear;
+    &.fixed {
+      background-color: var(--gray-900);
+      .navbar-toggler {
+        color: #fff;
+        border-color: #fff;
+        background-color: #fff;
+      }
+    }
+    &-nav {
+      @include max(991px) {
+        margin-top: 36px;
+        align-items: center;
+        text-align: center;
+      }
+      .nav-item {
+        margin-right: 32px;
+        @include max(991px) {
+          margin: 0px;
+          margin-bottom: 24px;
+        }
+        &:nth-last-child(1) {
+          margin: 0px;
+        }
+      }
+
+      .nav-link {
+        padding: 0px;
+        @extend %text-two;
+        text-transform: capitalize;
+        color: rgb(255, 255, 255, 0.7);
+        transition: all 0.3s linear;
+
+        &:hover,
+        &.active,
+        &:focus,
+        &:active {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 600;
+    border-radius: 160px;
+    display: inline-block;
+    text-transform: capitalize;
+    color: var(--primary-500);
+    padding: 0px 24px;
+    background-color: #fff;
+    transition: all 0.3s linear;
+    text-align: center;
+    @include max(991px) {
+      width: 100%;
+      max-width: 280px;
+      margin: 0px auto;
+      margin-top: 24px;
+    }
+    &:hover {
+      span {
+        transform: scale(1.2);
+      }
+    }
+    span {
+      margin-left: 12px;
+      display: inline-block;
+      transition: all 0.2s ease-in;
+    }
+  }
+}
 .section-padding {
   padding: 100px 0;
   @include max(991px) {
@@ -11,6 +94,7 @@
 }
 .presentation-section-title {
   margin-bottom: 40px;
+  text-align: center;
 }
 // feature section
 .feature {
