@@ -1,0 +1,269 @@
+{% extends "layout/layout.html" %} {% set page_title = "Documentation" %} {% block content %}
+
+<main class="app-wrapper">
+    {% include "../templates/layout/header-footer/app-header.html" %} {% include "../templates/layout/header-footer/app-sidebar.html" %} {% include "../templates/layout/header-footer/topnavbar.html" %}
+    <div class="content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 rt-mb-25">
+                        {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+                    </div>
+                </div>
+
+                <div class="docu">
+                    <div>
+                        <ul class="docu-typography">
+                            <li>
+                                <h1>Heading 01</h1>
+                            </li>
+                            <li>
+                                <h2>Heading 02</h2>
+                            </li>
+                            <li>
+                                <h3>Heading 03</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="docu-info">
+                        <div class="docu-info-text">
+                            <p>
+                                Zakir Soft is a <a href="#">Software company</a> and Software Development Training Institute. We have passionate teams like Full Stack Laravel Developer, Android Developer, UI/UX Designer. We have management
+                                system softwares for the local market. we also have eCommerce systems for your online business. <b>Highlight Text</b>
+                            </p>
+                        </div>
+                        <div class="docu-info-orderlist">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <p>Bullet List</p>
+                                    </li>
+                                    <li>
+                                        <p>Bullet List</p>
+                                    </li>
+                                    <li>
+                                        <p>Bullet List</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ol>
+                                    <li>
+                                        <p>Number List</p>
+                                    </li>
+                                    <li>
+                                        <p>Number List</p>
+                                    </li>
+                                    <li>
+                                        <p>Number List</p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="docu-code-block">
+                        <h2 class="docu-title">Code Block</h2>
+                        <textarea id="editor">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    </body>
+    </html>
+                        </textarea>
+                    </div>
+                    <div class="docu-files">
+                        <h2 class="docu-title">File Structure</h2>
+                        <div class="docu-files__wrapper">
+                            <div class="box">
+                                <ul class="directory-list">
+                                  <li>dist
+                                    <ul>
+                                      <li>assets
+                                        <ul>
+                                          <li>css
+                                              <ul>
+                                                  <li>libs
+                                                      <ul></ul>
+                                                  </li>
+                                                  <li>bootstrap
+                                                      <ul>
+                                                          <li>main.min.css</li>
+                                                      </ul>
+                                                  </li>
+                                                  <li>core
+                                                      <ul>
+                                                          <li>main.min.css</li>
+                                                      </ul>
+                                                  </li>
+                                                  <li>
+                                                      daygrid
+                                                      <ul>
+                                                          <li>main.min.css</li>
+                                                      </ul>
+                                                  </li>
+                                                  <li>
+                                                      timegrid
+                                                      <ul>
+                                                          <li>main.min.css</li>
+                                                      </ul>
+                                                  </li>
+                                                  <li>animate.min.css</li>
+                                                  <li>apexcharts.css</li>
+                                                  <li>app.css</li>
+                                                  <li>app.css.map.css</li>
+                                                  <li>app.css.min.map.css</li>
+                                                  <li>app.min.css</li>
+                                                  <li>bootstrap.min.css</li>
+                                                  <li>chartist-plugin-tooltip.css</li>
+                                                  <li>chartist.min.css</li>
+                                                  <li>customfont.css</li>
+                                                  <li>dragula.min.css</li>
+                                                  <li>jquery-jvectormap-2.0.5.css</li>
+                                                  <li>jquery-ui.css</li>
+                                                  <li>jquery-ui.theme.css</li>
+                                                  <li>metisMenu.min.css</li>
+                                                  <li>morris.css</li>
+                                                  <li>select2.min.css</li>
+                                                  <li>simplebar.css</li>
+                                              </ul>
+                                          </li>
+                                          <li>
+                                              fonts
+                                              <ul>
+                                                  <li>font.css</li>
+                                              </ul>
+                                          </li>
+                                          <li>
+                                              images
+                                              <ul>
+                                                  <li>
+                                                      all-img
+                                                      <ul></ul>
+                                                  </li>
+                                                  <li>
+                                                      logo 
+                                                      <ul></ul>
+                                                  </li>
+                                                  <li>
+                                                      notification
+                                                      <ul></ul>
+                                                  </li>
+                                                  <li>
+                                                      svg
+                                                      <ul></ul>
+                                                  </li>
+                                                  <li>
+                                                      users
+                                                      <ul></ul>
+                                                  </li>
+                                              </ul>
+                                          </li>
+                                          <li>
+                                              js
+                                              <ul>
+                                                  <li>
+                                                      libs 
+                                                      <ul>
+                                                        <li>bootstrap
+                                                            <ul>
+                                                                <li>main.min.js</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>core
+                                                            <ul>
+                                                                <li>main.min.js</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>daygrid
+                                                            <ul>
+                                                                <li>main.min.js</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>interaction
+                                                              <ul>
+                                                                <li>main.min.js</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>timegrid
+                                                              <ul>
+                                                                <li>main.min.js</li>
+                                                            </ul>
+                                                        </li>
+                                                      </ul>
+                                                  </li>
+                                                  <li>aos.js</li>
+                                                  <li>apexcharts.min.js</li>
+                                                  <li>app.js</li>
+                                                  <li>app.min.js</li>
+                                                  <li>bootstrap.bundle.min.js</li>
+                                                  <li>calendar-int.js</li>
+                                                  <li>chartist.min.js</li>
+                                                  <li>custom-select.js</li>
+                                                  <li>dragula.min.js</li>
+                                                  <li>jquery-3.6.0.min.js</li>
+                                                  <li>jquery-jvectormap-2.0.5.min.js</li>
+                                                  <li>jquery-jvectormap-world-mill-en.js</li>
+                                                  <li>jquery-ui.min.js</li>
+                                                  <li>metisMenu.min.js</li>
+                                                  <li>moment.min.js</li>
+                                                  <li>morris.min.js</li>
+                                                  <li>select2.min.js</li>
+                                                  <li>simplebar.min.js</li>
+                                                  <li>waves.js</li>
+
+                                              </ul>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li>accordion.html</li>
+                                      <li>alerts.html</li>
+                                      <li>badge.html</li>
+                                      <li>banner.html</li>
+                                      <li>billing.html</li>
+                                      <li>blank-page.html</li>
+                                      <li>button.html</li>
+                                      <li>checkbox.html</li>
+                                      <li>component-card.html</li>
+                                      <li>component-table.html</li>
+                                      <li>documentation.html</li>
+                                      <li>faq.html</li>
+                                      <li>file-manager-new.html</li>
+                                      <li>file-manager.html</li>
+                                      <li>file.html</li>
+                                      <li>form-elements.html</li>
+                                      <li>full-calendar.html</li>
+                                      <li>index.html</li>
+                                      <li>input.html</li>
+                                      <li>invoice-detail.html</li>
+                                      <li>invoice.html</li>
+                                      <li>kanban-board.html</li>
+                                      <li>login.html</li>
+                                      <li>pagination.html</li>
+                                      <li>pricing-plans.html</li>
+                                      <li>profile.html</li>
+                                      <li>radio.html</li>
+                                      <li>registration.html</li>
+                                      <li>setting.html</li>
+                                      <li>starter-page.html</li>
+                                      <li>switch.html</li>
+                                      <li>ti-calendar.html</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

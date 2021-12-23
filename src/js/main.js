@@ -1102,4 +1102,87 @@ if (document.getElementById('bar-chart1')) {
     }
 
 
+    var validation = false;
+    var myTimeoutId = null;
+
+
+    $('#info').onclick = function() {
+        $('#console').style.display = "block";
+        console.log("hello");
+    }
+
+    $('#close').onclick = function() {
+        $('#console').style.display = "none";
+    }
+
+    var config = {
+        mode: "text/html",
+        extraKeys: {"Ctrl-Space": "autocomplete"},
+        lineNumbers: true,
+        keyMap:"sublime",
+        tabSize:4,
+    };
+
+    // initialize editor
+    var editor = CodeMirror.fromTextArea(document.getElementById('editor'),config);
+    editor.setOption("theme", "material-ocean");
+
+	function loadHtml(html) {
+		const document_pattern = /( )*?document\./i;
+		let finalHtml = html.replace(document_pattern, "document.getElementById('result').contentWindow.document.");
+		$('#result').contents().find('html').html(finalHtml);
+	}
+
+	loadHtml($('#editor').val());
+
+    editor.on('change',function(cMirror){
+
+        if (myTimeoutId!==null) {
+            clearTimeout(myTimeoutId);
+        }
+        myTimeoutId = setTimeout(function() {
+
+                try{
+
+                    loadHtml(cMirror.getValue());
+
+                }catch(err){
+
+                    console.log('err:'+err);
+
+                }
+
+
+            }, 1000);
+
+    });
+
+    // * Inspired from : Alex Raven 
+    // * Example :  https://codepen.io/asraven/pen/qbrgje?editors=1010 
+    // Folder Structures
+    var allFolders = $(".directory-list li > ul");
+    allFolders.each(function() {
+  
+      // add the folder class to the parent <li>
+      var folderAndName = $(this).parent();
+      folderAndName.addClass("folder");
+  
+      // backup this inner <ul>
+      var backupOfThisFolder = $(this);
+      // then delete it
+      $(this).remove();
+      // add an <a> tag to whats left ie. the folder name
+      folderAndName.wrapInner("<a href='#' />");
+      // then put the inner <ul> back
+      folderAndName.append(backupOfThisFolder);
+  
+      // now add a slideToggle to the <a> we just added
+      folderAndName.find("a").click(function(e) {
+        $(this).siblings("ul").slideToggle("slow");
+        e.preventDefault();
+      });
+  
+    });
+
+
 })(jQuery);
