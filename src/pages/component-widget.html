@@ -1,0 +1,1382 @@
+{% extends "layout/layout.html" %} {% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %} {% include
+  "../templates/layout/header-footer/app-sidebar.html" %} {% include
+  "../templates/layout/header-footer/topnavbar.html" %}
+
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="active-visitor-wrap">
+                      <div class="active-visitor-data">
+                        <p>Active Visitors</p>
+                        <h3>157,367</h3>
+                        <h4><img src="assets/images/svg/arrow-up.svg" alt=""> 6.7% Increase</h4>
+                      </div>
+                      <div class="active-visitor-icon bg-primary-50">
+                        <img src="assets/images/svg/package2.svg" alt="">
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="active-visitor-wrap">
+                  <div class="active-visitor-data">
+                    <p>Visitor per minute</p>
+                    <h3>9,741</h3>
+                    <h4 class="text-danger-500"><img src="assets/images/svg/arrow-red.svg" alt=""> 13.5% Decrease</h4>
+                  </div>
+                  <div class="active-visitor-icon bg-secondary-200">
+                    <img src="assets/images/svg/stack.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-6 col-xl-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="fun-fact-wrap">
+                  <div class="fun-fact-item">
+                    <div class="fun-fact-icon">
+                      <img src="assets/images/svg/user-circle.svg" alt="">
+                    </div>
+                    <div class="fun-fact-data">
+                      <h4>157,367</h4>
+                      <p>Total users</p>
+                    </div>
+                  </div>
+                  <div class="fun-fact-item">
+                    <div class="fun-fact-icon">
+                      <img src="assets/images/svg/hand-pointing.svg" alt="">
+                    </div>
+                    <div class="fun-fact-data">
+                      <h4>9,741</h4>
+                      <p>Click</p>
+                    </div>
+                  </div>
+                  <div class="fun-fact-item">
+                    <div class="fun-fact-icon">
+                      <img src="assets/images/svg/pencil-circle.svg" alt="">
+                    </div>
+                    <div class="fun-fact-data">
+                      <h4>9.73%</h4>
+                      <p>Conversion Rate</p>
+                    </div>
+                  </div>
+                  <div class="fun-fact-item">
+                    <div class="fun-fact-icon">
+                      <img src="assets/images/svg/book-open.svg" alt="">
+                    </div>
+                    <div class="fun-fact-data">
+                      <h4>81.94%</h4>
+                      <p>Bounce Rate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="row">
+          <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="active-visitor-wrap">
+                  <div class="active-visitor-data">
+                    <p>Conversion Rate</p>
+                    <h3>9.73%</h3>
+                    <h4><img src="assets/images/svg/arrow-up.svg" alt=""> 3.5% Increase</h4>
+                  </div>
+                  <div class="active-visitor-icon bg-success-50">
+                    <img src="assets/images/svg/coffee.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="active-visitor-wrap">
+                  <div class="active-visitor-data">
+                    <p>bounce rate</p>
+                    <h3>81.94%</h3>
+                    <h4><img src="assets/images/svg/arrow-up.svg" alt=""> 1.7% Increase</h4>
+                  </div>
+                  <div class="active-visitor-icon bg-danger-50">
+                    <img src="assets/images/svg/activity.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+            <div class="card">
+              <div class="profile-left active-visitor">
+                <div class="profile-thumb">
+                  <img src="assets/images/all-img/users/user1.png" alt="">
+                </div>
+                <div class="profile-data">
+                  <h4>Kevin Gilbert</h4>
+                  <p>Software Engineer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+            <div class="banner-wrap bg-secondary-500 active-visitor">
+              <div class="banner-icon">
+                <img src="assets/images/svg/folder-open.svg" alt="">
+              </div>
+              <div class="banner-data">
+                <p>Become a <span>Pro</span> <br> to get more <span>Space</span>
+                </p>
+                <button type="button" class="btn bg-white pill text-gray-900">Upgrade Plans</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- upgrade palne start -->
+        <div class="row">
+          <div class="col-xxl-5">
+            <div class="billing-column black-box">
+              <h5>Current subscription plans</h5>
+              <div class="primium-content"><img src="assets/images/all-img/plane.png" alt=""> Premium</div>
+              <p>Premium monthly subscription plan active since: <span>Apr 16, 2021</span> </p>
+              <button type="button" class="btn btn-secondary pill">Upgrade Plans</button>
+            </div>
+          </div>
+          <div class="col-xxl-3  col-xl-6 col-lg-12 col-md-6">
+            <div class="billing-column">
+              <div class="billing-invoice-wrap">
+                <div class="billing-invoice-content">
+                  <p>Next invoice</p>
+                  <h3>$149.00</h3>
+                  <h4><img src="assets/images/svg/alarm.svg" alt=""> On May, 2021</h4>
+                  <button type="button" class="btn btn-primary pill btn-icon">
+                    <span class="button-content-wrapper">
+                      <span class="button-icon align-icon-right">
+                        <i class="ph-arrow-right"></i>
+                      </span>
+                      <span class="button-text">
+                        Pay Now
+                      </span>
+                    </span>
+                  </button>
+                </div>
+                <div class="card-aligned__icon">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="color-white" opacity="0.2"
+                      d="M3.99976 23.9999L3.99976 23.9998L3.99909 13.1064H27.9991L27.9998 23.9999L3.99976 23.9999Z"
+                      fill="#005CE8" stroke="#005CE8" stroke-width="2" />
+                    <path
+                      d="M28 7H4C3.44772 7 3 7.44772 3 8V24C3 24.5523 3.44772 25 4 25H28C28.5523 25 29 24.5523 29 24V8C29 7.44772 28.5523 7 28 7Z"
+                      stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20.999 21H24.999" stroke="#005CE8" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M14.999 21H16.999" stroke="#005CE8" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M2.99902 12.1064H28.999" stroke="#005CE8" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+        
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-4  col-xl-6 col-lg-12 col-md-6">
+            <div class="billing-column">
+              <div class="billing-curent-plane">
+                <h5>Current Plans Benefits</h5>
+                <p>Aenean efficitur euismod elementum. Donec ullamcorper pretium tempus.</p>
+              </div>
+              <div class="billing-curent-plane-benefits">
+                <ul>
+                  <li><img src="assets/images/svg/check.svg" alt="">Upgrade Profile</li>
+                  <li><img src="assets/images/svg/check.svg" alt="">Multi-shot & video</li>
+                  <li><img src="assets/images/svg/check.svg" alt="">Instant creative portfolio</li>
+                  <li><img src="assets/images/svg/check.svg" alt="">Sell goods</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End upgrade palne start -->
+        <div class="row">
+          <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+            <div class="card">
+              <div class="upload-file">
+                <div class="upload-photo-thumb">
+                  <img src="assets/images/all-img/users/user1.png" alt="">
+                </div>
+                <div class="btn btn-outline-primary pill btn-icon d-block position-static">
+                  <span class="button-content-wrapper">
+                    <span class="button-text">
+                      Upload Proifle Photo
+                    </span>
+                    <span class="button-icon">
+                      <img src="assets/images/svg/download2.svg" alt="">
+                    </span>
+                  </span>
+                </div>
+                <input type="file">
+              </div>
+              <div class="upload-photo-content">
+                <p><span>Remember:</span> For best results, use an image at least 200px by 200px in .jpg or .png format</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+            <div class="card">
+              <div class="upload-file two">
+                <div class="upload-photo-thumb two">
+                  <img src="assets/images/all-img/banner2.jpg" alt="">
+                </div>
+                <input type="file">
+                <div class="upload-btn-wrap">
+                  <div class="btn btn-outline-primary pill btn-icon d-block position-static">
+                    <span class="button-content-wrapper">
+                      <span class="button-text">
+                        Upload Proifle Photo
+                      </span>
+                      <span class="button-icon">
+                        <img src="assets/images/svg/download2.svg" alt="">
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="upload-photo-content two">
+                <button type="button" class="btn btn-danger2 pill d-block">Remove Banner</button>
+                <p><span>Remember:</span> For best results, use an image at least 200px by 200px in .jpg or .png format</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-6 col-xl-12">
+            <div class="card">
+              <div class="card-header">Basic Info</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6">
+                    <div class="fromGroup mb-3">
+                      <label>Name</label>
+                      <input class="form-control" type="text" placeholder="Full name">
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <div class="fromGroup mb-3">
+                      <label>Tittle</label>
+                      <input class="form-control" type="text" placeholder="headline, sub-tittle">
+                    </div>
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Boigraphy</label>
+                    <textarea class="form-control" name="textarea" placeholder="You boigraphy, description"></textarea>
+                  </div>
+                  <div class="save-change-btn">
+                    <button type="button" class="btn btn-primary pill mt-3">Save Changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xxl-4 col-xl-6 col-md-6">
+            <div class="card">
+              <div class="card-header">Private Info</div>
+              <div class="card-body">
+                <div class="fromGroup mb-3">
+                  <label>Team</label>
+                  <div class="select-box">
+                    <select class="custom-select sources" title="Select...">
+                      <option>Select...</option>
+                      <option>Select...</option>
+                      <option>Select...</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                    <div class="fromGroup mb-3">
+                      <label>Country</label>
+                      <div class="select-box">
+                        <select class="custom-select sources" title="Select...">
+                          <option>Bangladesh</option>
+                          <option>New zealand</option>
+                          <option>switzerland</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                    <div class="fromGroup mb-3">
+                      <label>City</label>
+                      <div class="select-box">
+                        <select class="custom-select sources" title="Select...">
+                          <option>Dhaka</option>
+                          <option>New zealand</option>
+                          <option>switzerland</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fromGroup has-icon mb-3">
+                  <label>Date of Birth</label>
+                  <div class="form-control-icon">
+                    <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
+                    <!-- <div class="date-picker-calender rt-pt-15"></div> -->
+                    <div class="icon-badge-2">
+                      <img src="assets/images/svg/calendar.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="fromGroup mb-3">
+                  <label>Language</label>
+                  <div class="select-box">
+                    <select class="custom-select sources" title="Select...">
+                      <option>Bangla</option>
+                      <option>English</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary pill mt-3">Save Changes</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-4 col-xl-6 col-md-6">
+            <div class="card">
+              <div class="card-header">Social Account</div>
+              <div class="card-body">
+                <form action="#">
+                  <div class="fromGroup mb-3">
+                    <label>Facebook</label>
+                    <input class="form-control" type="text" placeholder="Facebook profile url...">
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Twitter</label>
+                    <input class="form-control" type="text" placeholder="Twitter profile url...">
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Linkedin</label>
+                    <input class="form-control" type="text" placeholder="Linkedin profile url...">
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Instagram</label>
+                    <input class="form-control" type="text" placeholder="Instagram profile url...">
+                  </div>
+                  <button type="button" class="btn btn-primary pill mt-3">Save Changes</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-4">
+            <div class="card">
+              <div class="card-header">Contact Info</div>
+              <div class="card-body">
+                <form action="#">
+                  <div class="fromGroup has-icon mb-3">
+                    <label>Phone</label>
+                    <div class="form-control-icon">
+                      <input class="form-control" type="text" placeholder="Phone number">
+                      <div class="icon-badge-2">
+                        <img src="assets/images/svg/phonecall2.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fromGroup has-icon mb-3">
+                    <label>Email</label>
+                    <div class="form-control-icon">
+                      <input class="form-control" type="text" placeholder="email address">
+                      <div class="icon-badge-2">
+                        <img src="assets/images/svg/envelope2.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fromGroup has-icon mb-3">
+                    <label>Address</label>
+                    <div class="form-control-icon">
+                      <input class="form-control" type="text" placeholder="Current location...">
+                      <div class="icon-badge-2">
+                        <img src="assets/images/svg/map2.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fromGroup has-icon mb-3">
+                    <label>Portfolio</label>
+                    <div class="form-control-icon">
+                      <input class="form-control" type="text" placeholder="Personal portfolio url">
+                      <div class="icon-badge-2">
+                        <img src="assets/images/svg/briefcase.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary pill mt-3">Save Changes</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xxl-4 col-xl-6 col-md-6">
+            <div class="card">
+              <div class="card-header">Change Password</div>
+              <div class="card-body">
+                <form action="#">
+                  <div class="fromGroup eye mb-3">
+                    <label>Current Password</label>
+                    <div class="form-control-icon">
+                      <input id="password-hide_show" class="form-control" type="password" placeholder="password">
+                      <div class="has-badge">
+                        <i class="ph-eye"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fromGroup eye mb-3">
+                    <label>New Password</label>
+                    <div class="form-control-icon">
+                      <input id="password-hide_show2" class="form-control" type="password" placeholder="password">
+                      <div class="has-badge select-icon__two">
+                        <i class="ph-eye"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fromGroup eye mb-3">
+                    <label>Confirm Password</label>
+                    <div class="form-control-icon">
+                      <input id="password-hide_show3" class="form-control" type="password" placeholder="password">
+                      <div class="has-badge select-icon__three">
+                        <i class="ph-eye"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary pill mt-3">Save Changes</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-3 col-xl-6 col-md-6">
+            <div class="card">
+              <div class="card-header">Advance Setting</div>
+              <div class="card-body">
+                <form action="#">
+                  <div class="checkbox-top">
+                    <div class="form-check from-chekbox-custom mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="check-one" checked>
+                      <label class="form-check-label" for="check-one">
+                        Show my balance
+                      </label>
+                    </div>
+                    <div class="form-check from-chekbox-custom mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="check-two" checked>
+                      <label class="form-check-label" for="check-two">
+                        Show total Kanban Board card
+                      </label>
+                    </div>
+                    <div class="form-check from-chekbox-custom mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="check-three">
+                      <label class="form-check-label" for="check-three">
+                        Show total Calendar task
+                      </label>
+                    </div>
+                    <div class="form-check from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-four">
+                      <label class="form-check-label" for="check-four">
+                        Show total Calendar events
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-check from-chekbox-custom mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="check-five" checked>
+                    <label class="form-check-label" for="check-five">
+                      Show private information
+                    </label>
+                  </div>
+                  <div class="form-check from-chekbox-custom mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="check-six">
+                    <label class="form-check-label" for="check-six">
+                      Contact information
+                    </label>
+                  </div>
+                  <div class="form-check from-chekbox-custom">
+                    <input class="form-check-input" type="checkbox" value="" id="check-seven">
+                    <label class="form-check-label" for="check-seven">
+                      Social media link
+                    </label>
+                  </div>
+                  <button type="button" class="btn btn-primary pill mt-3">Save Changes</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-5">
+            <div class="pricing-plan-wrap">
+              <div class="pricing-plan top">
+                <h4>Pricing Plans</h4>
+                <h5>🚀 Premium</h5>
+                <p>Transfer this account to another user or to an organization where you have the ability to create
+                  repositories.</p>
+                <button type="button" class="btn btn-primary pill">Upgrade plan</button>
+              </div>
+              <div class="pricing-plan bottom">
+                <h4>Deactivate this account</h4>
+                <p>Once you delete a account, there is no going back. Please be certain.</p>
+                <button type="button" class="btn btn-danger2 pill">Deactivated account</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- End setting -->
+        <div class="profile-wrap">
+          <div class="profile-left">
+            <div class="profile-thumb">
+              <img src="assets/images/all-img/users/user1.png" alt="">
+            </div>
+            <div class="profile-data">
+              <h4>Kevin Gilbert</h4>
+              <p>Software Engineer</p>
+            </div>
+          </div>
+          <div class="profile-right">
+            <div class="profile-right-item">
+              <h4>$95,400</h4>
+              <p>Total Balance</p>
+            </div>
+            <div class="profile-right-item">
+              <h4>3,475</h4>
+              <p>Board Card</p>
+            </div>
+            <div class="profile-right-item">
+              <h4>63,867</h4>
+              <p>Calender Events</p>
+            </div>
+          </div>
+        </div>
+        <!-- End profile -->
+
+        <div class="card">
+          <div class="card-header">Payment Method</div>
+          <div class="card-body">
+            <div class="payment-card-column">
+              <div class="payment-card-wrap" style="background-image: url(assets/images/all-img/card-bg1.png);">
+                <div class="payment-card-header">
+                  <h4>$95, 400.00 <span>USD</span></h4>
+                  <img src="assets/images/svg/visa.svg" alt="">
+                </div>
+                <div class="payment-card-number">
+                  <div class="payment-card-number-left">
+                    <p id="textToCopy">**** **** **** 3814</p>
+                    <button id="copyButton"><img src="assets/images/svg/copy.svg" alt=""></button>
+                  </div>
+                  <div class="payment-card-number-right">
+                    <p>Expires</p>
+                    <h5>04 / 24</h5>
+                  </div>
+                </div>
+                <div class="payment-card-footer">
+                  <p>Kevin Gilbert</p>
+                  <div class="card-dropdown">
+                    <button class="dots-btn" id="dropdownMenuButton10" data-bs-toggle="dropdown"><img
+                        src="assets/images/svg/dots.svg" alt=""></button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton10">
+                      <li><a class="dropdown-item" href="#">Download</a></li>
+                      <li><a class="dropdown-item" href="#">Print</a></li>
+                      <li><a class="dropdown-item" href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- end card one -->
+              <div class="payment-card-wrap" style="background-image: url(assets/images/all-img/card-bg2.png);">
+                <div class="payment-card-header header2">
+                  <h4>$95, 400.00 <span>USD</span></h4>
+                  <img src="assets/images/svg/visa2.svg" alt="">
+                </div>
+                <div class="payment-card-number">
+                  <div class="payment-card-number-left">
+                    <p id="textToCopy2">**** **** **** 5468</p>
+                    <button id="copyButton2"><img src="assets/images/svg/copy.svg" alt=""></button>
+                  </div>
+                  <div class="payment-card-number-right">
+                    <p>Expires</p>
+                    <h5>04 / 24</h5>
+                  </div>
+                </div>
+                <div class="payment-card-footer">
+                  <p>Kevin Gilbert</p>
+                  <div class="card-dropdown">
+                    <button class="dots-btn" id="dropdownMenuButton11" data-bs-toggle="dropdown"><img
+                        src="assets/images/svg/dots.svg" alt=""></button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton11">
+                      <li><a class="dropdown-item" href="#">Download</a></li>
+                      <li><a class="dropdown-item" href="#">Print</a></li>
+                      <li><a class="dropdown-item" href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- end card two -->
+              <div class="payment-card-add" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="assets/images/svg/pluscircle.svg" alt="">
+                <p>Add new card</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end payment method -->
+        <div class="card">
+          <div class="card-header border-0">Payment History</div>
+          <div class="payment-history-list table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>NO.</th>
+                  <th>Invoice Date</th>
+                  <th>Date Paid</th>
+                  <th>Status</th>
+                  <th>Payment Method</th>
+                  <th>Subscription</th>
+                  <th>Amount</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>EKG464SJFN17</td>
+                  <td>10 Dec, 2021</td>
+                  <td>10 Dec, 2021</td>
+                  <td><button type="button" class="btn btn-primary2 pill small-btn">Button</button></td>
+                  <td>0077 **** **** 3814 (Visa)</td>
+                  <td>Premium (Yearly)</td>
+                  <td>$129.99 USD</td>
+                  <td>
+                    <div class="dropdown-wrap">
+                      <button type="button" class="btn bg-primary-50 rounded-circle icon-btn" id="dropdownMenuButton_1"
+                        data-bs-toggle="dropdown">
+                        <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                            fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                        </svg>
+        
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton_1">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+        
+        
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.99951 6.25V3.125H14.9995V6.25" stroke="#626C70" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M14.9995 11.875H4.99951V17.1875H14.9995V11.875Z" stroke="#626C70" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M4.99951 13.75H2.18701V7.5C2.18701 6.80964 2.79329 6.25 3.54118 6.25H16.4578C17.2057 6.25 17.812 6.80964 17.812 7.5V13.75H14.9995"
+                                stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M14.6875 10C15.2053 10 15.625 9.58027 15.625 9.0625C15.625 8.54473 15.2053 8.125 14.6875 8.125C14.1697 8.125 13.75 8.54473 13.75 9.0625C13.75 9.58027 14.1697 10 14.6875 10Z"
+                                fill="#626C70" />
+                            </svg>
+        
+                            Print
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375"
+                                stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375"
+                                stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+        
+                            Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EKG464SJFN17</td>
+                  <td>10 Dec, 2021</td>
+                  <td>10 Dec, 2021</td>
+                  <td><button type="button" class="btn btn-success2 pill small-btn small-btn2">Completed</button></td>
+                  <td>0077 **** **** 3814 (Visa)</td>
+                  <td>Premium (Yearly)</td>
+                  <td>$129.99 USD</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn bg-primary-50 rounded-circle icon-btn" id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown">
+                        <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                            fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.99951 6.25V3.125H14.9995V6.25" stroke="#626C70" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M14.9995 11.875H4.99951V17.1875H14.9995V11.875Z" stroke="#626C70" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M4.99951 13.75H2.18701V7.5C2.18701 6.80964 2.79329 6.25 3.54118 6.25H16.4578C17.2057 6.25 17.812 6.80964 17.812 7.5V13.75H14.9995"
+                                stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M14.6875 10C15.2053 10 15.625 9.58027 15.625 9.0625C15.625 8.54473 15.2053 8.125 14.6875 8.125C14.1697 8.125 13.75 8.54473 13.75 9.0625C13.75 9.58027 14.1697 10 14.6875 10Z"
+                                fill="#626C70" />
+                            </svg>
+        
+                            Print
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375"
+                                stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375"
+                                stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+        
+                            Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EKG464SJFN17</td>
+                  <td>10 Dec, 2021</td>
+                  <td>10 Dec, 2021</td>
+                  <td><button type="button" class="btn btn-success2 pill small-btn small-btn2">Completed</button></td>
+                  <td>0077 **** **** 3814 (Visa)</td>
+                  <td>Premium (Yearly)</td>
+                  <td>$129.99 USD</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn bg-primary-50 rounded-circle icon-btn" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown">
+                        <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                            fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                        </svg>
+        
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+        
+        
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.99951 6.25V3.125H14.9995V6.25" stroke="#626C70" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M14.9995 11.875H4.99951V17.1875H14.9995V11.875Z" stroke="#626C70" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M4.99951 13.75H2.18701V7.5C2.18701 6.80964 2.79329 6.25 3.54118 6.25H16.4578C17.2057 6.25 17.812 6.80964 17.812 7.5V13.75H14.9995"
+                                stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M14.6875 10C15.2053 10 15.625 9.58027 15.625 9.0625C15.625 8.54473 15.2053 8.125 14.6875 8.125C14.1697 8.125 13.75 8.54473 13.75 9.0625C13.75 9.58027 14.1697 10 14.6875 10Z"
+                                fill="#626C70" />
+                            </svg>
+        
+                            Print
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375"
+                                stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375"
+                                stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+        
+                            Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EKG464SJFN17</td>
+                  <td>10 Dec, 2021</td>
+                  <td>10 Dec, 2021</td>
+                  <td><button type="button" class="btn btn-success2 pill small-btn small-btn2">Completed</button></td>
+                  <td>0077 **** **** 3814 (Visa)</td>
+                  <td>Premium (Yearly)</td>
+                  <td>$129.99 USD</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn bg-primary-50 rounded-circle icon-btn" id="dropdownMenuButton4"
+                        data-bs-toggle="dropdown">
+                        <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                            fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.99951 6.25V3.125H14.9995V6.25" stroke="#626C70" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M14.9995 11.875H4.99951V17.1875H14.9995V11.875Z" stroke="#626C70" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M4.99951 13.75H2.18701V7.5C2.18701 6.80964 2.79329 6.25 3.54118 6.25H16.4578C17.2057 6.25 17.812 6.80964 17.812 7.5V13.75H14.9995"
+                                stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M14.6875 10C15.2053 10 15.625 9.58027 15.625 9.0625C15.625 8.54473 15.2053 8.125 14.6875 8.125C14.1697 8.125 13.75 8.54473 13.75 9.0625C13.75 9.58027 14.1697 10 14.6875 10Z"
+                                fill="#626C70" />
+                            </svg>
+        
+                            Print
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375"
+                                stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375"
+                                stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- End payment history list -->
+
+        <div class="card">
+          <div class="card-header border-0">Invoice</div>
+          <div class="invoice-table-list table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>NO.</th>
+                  <th>INVOICE SUBJECT</th>
+                  <th>Client</th>
+                  <th>Vat NO.</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Price</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-eight">
+                      <label class="form-check-label" for="check-eight">
+                        EKG464SJFN17
+                      </label>
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag1.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle2.svg" alt="">
+                      Pending
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton5"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-nine">
+                      <label class="form-check-label" for="check-nine">
+                        EKG464SJFN17
+                      </label>
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag2.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle2.svg" alt="">
+                      Pending
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+        
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton6"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-ten">
+                      <label class="form-check-label" for="check-ten">
+                        EKG464SJFN17
+                      </label>
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag1.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton7"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-eleven">
+                      <label class="form-check-label" for="check-eleven">
+                        EKG464SJFN17
+                      </label>
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag2.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton8"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton8">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check12">
+                      <label class="form-check-label" for="check12">
+                        EKG464SJFN17
+                      </label>
+                    </div>
+                  </td>
+                  <td class="large-width">Design Works</td>
+                  <td>
+                    <div class="rt-single-icon-box rt-align-center">
+                      <div class="icon-thumb rt-mr-8 ">
+                        <img src="assets/images/all-img/flag1.png" alt="">
+                      </div>
+                      <div class="iconbox-content">
+                        Carlson Limited
+                      </div>
+                    </div>
+                  </td>
+                  <td>87956621</td>
+                  <td>15 Dec, 2017</td>
+                  <td class="large-width2">
+                    <div class="paid-wrap">
+                      <img src="assets/images/svg/circle.svg" alt="">
+                      Paid
+                    </div>
+                  </td>
+                  <td>$887.00</td>
+                  <td>
+                    <div class="dropdown-wrap ">
+                      <button type="button" class="btn btn-primary2 pill btn-icon">
+                        <span class="button-content-wrapper">
+                          <span class="button-text">
+                            Download
+                          </span>
+                          <span class="button-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton9"
+                        data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots2.svg" alt="">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton9">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <div class="table-footer-left">
+              Showing 1 to 8 of 16 entries
+            </div>
+            <div class="table-footer-right">
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <i class="ph-arrow-left"></i>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">01</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">02</a></li>
+                  <li class="page-item"><a class="page-link" href="#">03</a></li>
+                  <li class="page-item"><a class="page-link" href="#">04</a></li>
+                  <li class="page-item"><a class="page-link" href="#">05</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <i class="ph-arrow-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- End invoice list -->
+
+        {% include "../templates/layout/header-footer/footer.html" %}
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card m-0">
+        <div class="card-header">Add new Card</div>
+        <div class="card-body">
+          <form action="#">
+            <div class="fromGroup mb-3">
+              <label>Card Number</label>
+              <input class="form-control" type="text" placeholder="card number...">
+            </div>
+            <div class="fromGroup mb-3">
+              <label>Name on Card</label>
+              <input class="form-control" type="text" placeholder="Name">
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="fromGroup mb-3">
+                  <label>CVC</label>
+                  <input class="form-control" type="password" placeholder="...">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="fromGroup mb-3">
+                  <label>Expire Date</label>
+                  <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
+                </div>
+              </div>
+            </div>
+            <div class="billing-modal-footer">
+              <button type="button" class="btn btn-dark2 pill">Cancel</button>
+              <button type="button" class="btn btn-primary pill btn-icon" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <span class="button-content-wrapper">
+                  <span class="button-text">
+                    Upload file
+                  </span>
+                  <span class="button-icon">
+                    <img src="assets/images/svg/plus.svg" alt="">
+                  </span>
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
