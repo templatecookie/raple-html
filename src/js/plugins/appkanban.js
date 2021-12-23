@@ -22,17 +22,17 @@
   };
   
 
-   const UniqBoard = document.querySelectorAll('.card-priority');
+   const UniqBoard = document.querySelectorAll('.remove-killer');
    UniqBoard.forEach(function(item, index){
        item.setAttribute('id', ID());
        let singleItem =item.getAttribute('id');
          let getsingletem = document.getElementById(singleItem);
-            let removicon = document.querySelector('.removeitem');
+         console.log(getsingletem);
+        cons
+            
          
-            getsingletem.addEventListener('click', function(){
-                // getsingletem.remove()
-                //alert("afafa");
-                this.remove();
+         getsingletem.addEventListener('click', function(){
+            alert("afafa")
        });
 
    });

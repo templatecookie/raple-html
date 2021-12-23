@@ -264,9 +264,10 @@ $('input[name="sidebar"]').on('change', function(){
     
   });
 
-  //hide & show
-// calender 
-$(".date-picker-calender").datepicker(),
+//hide & show
+  // calender 
+
+  $(".date-picker-calender").datepicker(),
 
 //map
   $('#world-map').vectorMap({
