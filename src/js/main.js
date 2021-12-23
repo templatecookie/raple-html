@@ -99,6 +99,7 @@ let btngroup = document.getElementsByName('button-group')
       let modalbox = document.createElement('div');
      let overlay = document.createElement('div');
      overlay.setAttribute("class", "modal-backdrop fade show");
+     overlay.setAttribute("id", "modal-vag3");
       modalbox.setAttribute("class", "modal fade show");
       modalbox.style.display = "block";
       modalbox.innerHTML = `
@@ -202,15 +203,30 @@ document.getElementById("modal-vag2").onclick = function() {
   document.body.removeChild(modalbox);
   document.body.removeChild(overlay);
 }
+document.getElementById("modal-vag3").onclick = function() {
+  document.body.removeChild(modalbox);
+  document.body.removeChild(overlay);
+}
 
 const createcard = document.getElementById('boardform');  // form id
       createcard.addEventListener('submit', function (event) {
  
         event.preventDefault();
-        let cardTitle =  document.getElementById('card_title_1').value;
-        console.log(cardTitle);
+        // let cardTitle =  document.getElementById('card_title_1').value;
+        // console.log(cardTitle);
 
+        let CurrentcardP = item.getAttribute('id');
+        console.log(CurrentcardP);
+        let cardPriority = document.getElementById($('#'+CurrentcardP).parent().parent().attr('id'));
         
+        let  innerCard = document.createElement('div');
+        innerCard.classList.add('div');
+        innerCard.innerHTML = ` 
+        <h1 className="card-title"> mahedi</h1>
+        `
+        cardPriority.appendChild(innerCard);
+        cardPriority.insertBefore(innerCard, cardPriority.childNodes[0]);
+        cardTitle.value= '';
        
         
       });
