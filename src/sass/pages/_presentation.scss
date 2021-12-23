@@ -1,3 +1,5 @@
+// section padding
+
 .section-padding {
   padding: 100px 0;
   @include max(991px) {
@@ -5,6 +7,57 @@
   }
   @include max(767px) {
     padding: 60px 0;
+  }
+}
+.presentation-section-title {
+  margin-bottom: 40px;
+}
+// feature section
+.feature {
+  &-wrap {
+    padding: 32px 30px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 12px 0;
+    background-color: var(--primary-50);
+    &:hover .feature-icon {
+      background-color: var(--primary-500);
+    }
+    &:hover .feature-icon {
+      path {
+        stroke: white;
+      }
+    }
+  }
+  &-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    margin: 0 auto 24px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: all 0.4s;
+    path {
+      transition: all 0.4s;
+    }
+  }
+  &-data {
+    h4 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 7px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--gray-700);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 .presentation {
