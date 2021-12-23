@@ -1,3 +1,4 @@
+
 // navbar 
 .p-header { 
     .navbar { 
@@ -59,38 +60,35 @@
         }
     }
 
-    &__btn { 
-        font-size: 14px;  
-        line-height: 40px;
-        font-weight: 600;
-        border-radius: 160px;
-        display: inline-block;
-        text-transform: capitalize;
-        color: var(--primary-500);
-        padding: 0px 24px;
-        background-color: #fff;
-        transition: all 0.3s linear;
-        text-align: center;
-        @include max(991px) { 
-            width: 100%;
-            max-width: 280px;
-            margin: 0px auto;
-            margin-top: 24px;
-        }
-        &:hover { 
-            span { 
-                transform: scale(1.2);
-            }
-        }
-      span { 
-          margin-left: 12px;          
-          display: inline-block;
-          transition: all 0.2s ease-in;
-
+  &__btn {
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 600;
+    border-radius: 160px;
+    display: inline-block;
+    text-transform: capitalize;
+    color: var(--primary-500);
+    padding: 0px 24px;
+    background-color: #fff;
+    transition: all 0.3s linear;
+    text-align: center;
+    @include max(991px) {
+      width: 100%;
+      max-width: 280px;
+      margin: 0px auto;
+      margin-top: 24px;
+    }
+    &:hover {
+      span {
+        transform: scale(1.2);
       }
     }
-
-
+    span {
+      margin-left: 12px;
+      display: inline-block;
+      transition: all 0.2s ease-in;
+    }
+  }
 }
 
 // banner section 
@@ -167,6 +165,58 @@
   }
   @include max(767px) {
     padding: 60px 0;
+  }
+}
+.presentation-section-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+// feature section
+.feature {
+  &-wrap {
+    padding: 32px 30px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 12px 0;
+    background-color: var(--primary-50);
+    &:hover .feature-icon {
+      background-color: var(--primary-500);
+    }
+    &:hover .feature-icon {
+      path {
+        stroke: white;
+      }
+    }
+  }
+  &-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    margin: 0 auto 24px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: all 0.4s;
+    path {
+      transition: all 0.4s;
+    }
+  }
+  &-data {
+    h4 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 7px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--gray-700);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 .presentation {
