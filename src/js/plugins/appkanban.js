@@ -1,68 +1,70 @@
 (function ($) {
+  dragula([
+    document.getElementById("todo"),
+    document.getElementById("doing"),
+    document.getElementById("done"),
+  ]);
 
-    dragula([document.getElementById("todo"),document.getElementById("doing"),document.getElementById("done")]);
+  const boardTitle = document.getElementById("board_title");
+  const CreateBoard = document.getElementById("createboard");
 
-    const boardTitle = document.getElementById('board_title');
-    const CreateBoard = document.getElementById('createboard');
-  
-   if(boardTitle){
-    setInterval(function(){
-      if(boardTitle.value.length > 0){
+  if (boardTitle) {
+    setInterval(function () {
+      if (boardTitle.value.length > 0) {
         CreateBoard.disabled = false;
-      }else{
+      } else {
         CreateBoard.disabled = true;
       }
-  }, 100);
-   }
+    }, 100);
+  }
 
-
-   var ID = function () {
-   
-    return '_' + Math.random().toString(36).substr(2, 9);
+  var ID = function () {
+    return "_" + Math.random().toString(36).substr(2, 9);
   };
-  
 
-   const UniqBoard = document.querySelectorAll('.remove-killer');
-   UniqBoard.forEach(function(item, index){
-       item.setAttribute('id', ID());
-       let singleItem =item.getAttribute('id');
-         let getsingletem = document.getElementById(singleItem);
-         console.log(getsingletem);
-        cons
-            
-         
-         getsingletem.addEventListener('click', function(){
-            alert("afafa")
-       });
+  const UniqBoardButton = document.querySelectorAll(".remove-killer");
+  const UinqBoard = document.querySelectorAll(".card-priority");
+  UinqBoard.forEach(function (item) {
+    item.setAttribute("id", "pid_" + ID());
+  });
+  UniqBoardButton.forEach(function (item, index) {
+    item.setAttribute("id", ID());
+    let singleItem = item.getAttribute("id");
+    let getsingletem = document.getElementById(singleItem);
+    let removeitemid =
+      getsingletem.parentNode.parentNode.parentNode.parentNode.parentNode.id;
+    let removeitem = document.getElementById(removeitemid);
 
-   });
+    getsingletem.addEventListener("click", function () {
+        removeitem.remove();
+    });
+  });
 
-  
-  
-
-  
-  
-  if(CreateBoard){
-    CreateBoard.addEventListener('click', function (event) {
+  if (CreateBoard) {
+    CreateBoard.addEventListener("click", function (event) {
       event.preventDefault();
-      
-      let StingId =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-      
-      let kanbanParents = document.getElementById('kanban_board_parent');
-      let kabanChild = document.createElement('div');
-      kabanChild.classList.add('kanbanboard_child');
+
+      let StingId =
+        Math.random().toString(36).substring(2, 15) +
+        Math.random().toString(36).substring(2, 15);
+
+      let kanbanParents = document.getElementById("kanban_board_parent");
+      let kabanChild = document.createElement("div");
+      kabanChild.classList.add("kanbanboard_child");
       kabanChild.innerHTML = `   
       <div class="kanbanboard_child">
       <div class="card">
           <div class="card-body" >
             <div class="kanban-board-header">
-              <h5>${ boardTitle.value }</h5>
+              <h5>${boardTitle.value}</h5>
               <button class="dots-three text-gray-400 f-size-24" type="button">
                 <img src="assets/images/svg/dot.svg" alt="clock">
               </button>
             </div>
             <div id="${StingId}">
-            <button class="btn btn-primary2 btn-icon pill d-block"  name="button-group2" type="button" id="${'btn'+StingId}">
+            <button class="btn btn-primary2 btn-icon pill d-block"  name="button-group2" type="button" id="${
+              "btn" + StingId
+            }">
             <span class="button-content-wrapper">
               <span class="button-icon align-icon-right">
                 <i class="ph-arrow-right"></i>
@@ -83,23 +85,22 @@
     </div>
       
       `;
-      
+
       kanbanParents.appendChild(kabanChild);
-  kanbanParents.insertBefore(kabanChild,kanbanParents.childNodes[6]);
-      boardTitle.value= '';
-      $("#createboard-modal").modal('hide');
+      kanbanParents.insertBefore(kabanChild, kanbanParents.childNodes[6]);
+      boardTitle.value = "";
+      $("#createboard-modal").modal("hide");
       document.querySelector(".modal-backdrop").remove();
       //$(".modal-backdrop").removeClass("show")
       dragula([document.getElementById(StingId)]);
-  
-      let btngroup = document.getElementsByName('button-group2')
-      btngroup.forEach(function(item, index){
-        
-        item.addEventListener('click', function () {
-          let modalbox = document.createElement('div');
-         let overlay = document.createElement('div');
-         overlay.setAttribute("class", "modal-backdrop fade show");
-         overlay.setAttribute("id", "modal-vag3");
+
+      let btngroup = document.getElementsByName("button-group2");
+      btngroup.forEach(function (item, index) {
+        item.addEventListener("click", function () {
+          let modalbox = document.createElement("div");
+          let overlay = document.createElement("div");
+          overlay.setAttribute("class", "modal-backdrop fade show");
+          overlay.setAttribute("id", "modal-vag3");
           modalbox.setAttribute("class", "modal fade show");
           modalbox.style.display = "block";
           modalbox.innerHTML = `
@@ -196,37 +197,45 @@
         </div>
       </div>
           
-          `
-        document.body.appendChild(modalbox);
-        document.body.appendChild(overlay);
-    document.getElementById("modal-vag").onclick = function() {
-      document.body.removeChild(modalbox);
-      document.body.removeChild(overlay);
-    }
-    document.getElementById("modal-vag2").onclick = function() {
-      document.body.removeChild(modalbox);
-      document.body.removeChild(overlay);
-    }
-    document.getElementById("modal-vag3").onclick = function() {
-      document.body.removeChild(modalbox);
-      document.body.removeChild(overlay);
-    }
-    
-    const createcard = document.getElementById('boardform');  // form id
-          createcard.addEventListener('submit', function (event) {
-     
+          `;
+          document.body.appendChild(modalbox);
+          document.body.appendChild(overlay);
+          document.getElementById("modal-vag").onclick = function () {
+            document.body.removeChild(modalbox);
+            document.body.removeChild(overlay);
+          };
+          document.getElementById("modal-vag2").onclick = function () {
+            document.body.removeChild(modalbox);
+            document.body.removeChild(overlay);
+          };
+          document.getElementById("modal-vag3").onclick = function () {
+            document.body.removeChild(modalbox);
+            document.body.removeChild(overlay);
+          };
+
+          const createcard = document.getElementById("boardform"); // form id
+          createcard.addEventListener("submit", function (event) {
             event.preventDefault();
-            let cardTitle =  document.getElementById('card_title_1');
+            let cardTitle = document.getElementById("card_title_1");
             let collectdate = new Date();
-            let currentdate = collectdate.getDate() + " " + collectdate.toLocaleString("default", { month: "short" }) + ", " + collectdate.getFullYear();
-            let priority__tag = document.getElementById('priority__tag');
-           
-            let CurrentcardP = item.getAttribute('id');
-           
-            let cardPriority = document.getElementById($('#'+CurrentcardP).parent().attr('id'));
+            let currentdate =
+              collectdate.getDate() +
+              " " +
+              collectdate.toLocaleString("default", { month: "short" }) +
+              ", " +
+              collectdate.getFullYear();
+            let priority__tag = document.getElementById("priority__tag");
+
+            let CurrentcardP = item.getAttribute("id");
+
+            let cardPriority = document.getElementById(
+              $("#" + CurrentcardP)
+                .parent()
+                .attr("id")
+            );
             console.log(cardPriority);
-            let  innerCard = document.createElement('div');
-            innerCard.classList.add('div');
+            let innerCard = document.createElement("div");
+            innerCard.classList.add("div");
             innerCard.innerHTML = ` 
             <div class="card-priority rt-mb-12">
                                   <!-- top bar  -->
@@ -276,8 +285,13 @@
                                   <!-- labels  -->
                                   <div class="card-priority__labels">
                                     <ul>
-                                      <li><span class="labels medium">${priority__tag.value}</span></li>
-                                      <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt="">${document.getElementById("urgent_tag").value}</span></li>
+                                      <li><span class="labels medium">${
+                                        priority__tag.value
+                                      }</span></li>
+                                      <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt="">${
+                                        document.getElementById("urgent_tag")
+                                          .value
+                                      }</span></li>
                                     </ul>
                                   </div>
                                   <h2 class="card-priority__title">
@@ -315,45 +329,31 @@
                                     </div>
                                   </div>
                                 </div>
-            `
+            `;
             cardPriority.appendChild(innerCard);
             cardPriority.insertBefore(innerCard, cardPriority.childNodes[0]);
-            cardTitle.value= '';
+            cardTitle.value = "";
 
-
-    
-           document.body.removeChild(modalbox);
-      document.body.removeChild(overlay);
-            
+            document.body.removeChild(modalbox);
+            document.body.removeChild(overlay);
           });
         });
-    
-        
       });
-      
-  
     });
   }
 
-  
-  
+  // kanban card add
 
-  // kanban card add  
-  
-  
-  
-  
-  let btngroup = document.getElementsByName('button-group')
-    btngroup.forEach(function(item, index){
-      
-      item.addEventListener('click', function () {
-        let modalbox = document.createElement('div');
-       let overlay = document.createElement('div');
-       overlay.setAttribute("class", "modal-backdrop fade show");
-       overlay.setAttribute("id", "modal-vag3");
-        modalbox.setAttribute("class", "modal fade show");
-        modalbox.style.display = "block";
-        modalbox.innerHTML = `
+  let btngroup = document.getElementsByName("button-group");
+  btngroup.forEach(function (item, index) {
+    item.addEventListener("click", function () {
+      let modalbox = document.createElement("div");
+      let overlay = document.createElement("div");
+      overlay.setAttribute("class", "modal-backdrop fade show");
+      overlay.setAttribute("id", "modal-vag3");
+      modalbox.setAttribute("class", "modal fade show");
+      modalbox.style.display = "block";
+      modalbox.innerHTML = `
         <div class="modal-dialog createcard-modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -447,38 +447,47 @@
       </div>
     </div>
         
-        `
+        `;
       document.body.appendChild(modalbox);
       document.body.appendChild(overlay);
-  document.getElementById("modal-vag").onclick = function() {
-    document.body.removeChild(modalbox);
-    document.body.removeChild(overlay);
-  }
-  document.getElementById("modal-vag2").onclick = function() {
-    document.body.removeChild(modalbox);
-    document.body.removeChild(overlay);
-  }
-  document.getElementById("modal-vag3").onclick = function() {
-    document.body.removeChild(modalbox);
-    document.body.removeChild(overlay);
-  }
-  
-  const createcard = document.getElementById('boardform');  // form id
-        createcard.addEventListener('submit', function (event) {
-   
-          event.preventDefault();
-          let cardTitle =  document.getElementById('card_title_1');
-          let collectdate = new Date();
-          let currentdate = collectdate.getDate() + " " + collectdate.toLocaleString("default", { month: "short" }) + ", " + collectdate.getFullYear();
-          let priority__tag = document.getElementById('priority__tag');
-         
-          let CurrentcardP = item.getAttribute('id');
-          console.log(CurrentcardP);
-          let cardPriority = document.getElementById($('#'+CurrentcardP).parent().parent().attr('id'));
-          
-          let  innerCard = document.createElement('div');
-          innerCard.classList.add('div');
-          innerCard.innerHTML = ` 
+      document.getElementById("modal-vag").onclick = function () {
+        document.body.removeChild(modalbox);
+        document.body.removeChild(overlay);
+      };
+      document.getElementById("modal-vag2").onclick = function () {
+        document.body.removeChild(modalbox);
+        document.body.removeChild(overlay);
+      };
+      document.getElementById("modal-vag3").onclick = function () {
+        document.body.removeChild(modalbox);
+        document.body.removeChild(overlay);
+      };
+
+      const createcard = document.getElementById("boardform"); // form id
+      createcard.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let cardTitle = document.getElementById("card_title_1");
+        let collectdate = new Date();
+        let currentdate =
+          collectdate.getDate() +
+          " " +
+          collectdate.toLocaleString("default", { month: "short" }) +
+          ", " +
+          collectdate.getFullYear();
+        let priority__tag = document.getElementById("priority__tag");
+
+        let CurrentcardP = item.getAttribute("id");
+        console.log(CurrentcardP);
+        let cardPriority = document.getElementById(
+          $("#" + CurrentcardP)
+            .parent()
+            .parent()
+            .attr("id")
+        );
+
+        let innerCard = document.createElement("div");
+        innerCard.classList.add("div");
+        innerCard.innerHTML = ` 
           <div class="card-priority rt-mb-12">
                                 <!-- top bar  -->
                                 <div class="card-priority__header">
@@ -527,8 +536,13 @@
                                 <!-- labels  -->
                                 <div class="card-priority__labels">
                                   <ul>
-                                    <li><span class="labels medium">${priority__tag.value}</span></li>
-                                    <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt="">${document.getElementById("urgent_tag").value}</span></li>
+                                    <li><span class="labels medium">${
+                                      priority__tag.value
+                                    }</span></li>
+                                    <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt="">${
+                                      document.getElementById("urgent_tag")
+                                        .value
+                                    }</span></li>
                                   </ul>
                                 </div>
                                 <h2 class="card-priority__title">
@@ -566,18 +580,14 @@
                                   </div>
                                 </div>
                               </div>
-          `
-          cardPriority.appendChild(innerCard);
-          cardPriority.insertBefore(innerCard, cardPriority.childNodes[0]);
-          cardTitle.value= '';
-  
-         document.body.removeChild(modalbox);
-    document.body.removeChild(overlay);
-          
-        });
+          `;
+        cardPriority.appendChild(innerCard);
+        cardPriority.insertBefore(innerCard, cardPriority.childNodes[0]);
+        cardTitle.value = "";
+
+        document.body.removeChild(modalbox);
+        document.body.removeChild(overlay);
       });
-  
-      
     });
-  
+  });
 })(jQuery);
