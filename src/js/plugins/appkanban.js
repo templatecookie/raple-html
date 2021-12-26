@@ -22,24 +22,6 @@
     return "_" + Math.random().toString(36).substr(2, 9);
   };
 
-  const UniqBoardButton = document.querySelectorAll(".remove-killer");
-  const UinqBoard = document.querySelectorAll(".card-priority");
-  UinqBoard.forEach(function (item) {
-    item.setAttribute("id", "pid_" + ID());
-  });
-  UniqBoardButton.forEach(function (item, index) {
-    item.setAttribute("id", ID());
-    let singleItem = item.getAttribute("id");
-    let getsingletem = document.getElementById(singleItem);
-    let removeitemid =
-      getsingletem.parentNode.parentNode.parentNode.parentNode.parentNode.id;
-    let removeitem = document.getElementById(removeitemid);
-
-    getsingletem.addEventListener("click", function () {
-        removeitem.remove();
-    });
-  });
-
   if (CreateBoard) {
     CreateBoard.addEventListener("click", function (event) {
       event.preventDefault();
@@ -233,11 +215,13 @@
                 .parent()
                 .attr("id")
             );
-            console.log(cardPriority);
+
             let innerCard = document.createElement("div");
             innerCard.classList.add("div");
             innerCard.innerHTML = ` 
-            <div class="card-priority rt-mb-12">
+            <div class="card-priority rt-mb-12 newcard" id="${
+              "newcard" + ID()
+            }">
                                   <!-- top bar  -->
                                   <div class="card-priority__header">
                                     <div class="date">
@@ -271,12 +255,14 @@
                                           </a>
                                         </li>
                                         <li>
-                                        <a href="#!" class="dropdown-item remove-killer">
+                                        <button   type="button"  class="dropdown-item remove-killer2 plain-btn" id="${
+                                          "newbtn_1" + ID()
+                                        }">
                                         <span>
                                               <img src="assets/images/svg/trash.svg" alt="copylink">
                                             </span>
                                         Delete
-                                      </a>
+                                      </button>
                                         </li>
                                       </ul>
                                     </div>
@@ -336,7 +322,10 @@
 
             document.body.removeChild(modalbox);
             document.body.removeChild(overlay);
+
+            
           });
+          
         });
       });
     });
@@ -522,12 +511,13 @@
                                         </a>
                                       </li>
                                       <li>
-                                      <a href="#!" class="dropdown-item remove-killer">
-                                      <span>
-                                            <img src="assets/images/svg/trash.svg" alt="copylink">
-                                          </span>
-                                      Delete
-                                    </a>
+                                     
+                                    <button   type="button"  class="dropdown-item remove-killer plain-btn">
+                                        <span>
+                                              <img src="assets/images/svg/trash.svg" alt="copylink">
+                                            </span>
+                                        Delete
+                                      </button>
                                       </li>
                                     </ul>
                                   </div>
@@ -588,6 +578,40 @@
         document.body.removeChild(modalbox);
         document.body.removeChild(overlay);
       });
+    });
+  });
+
+  const UniqBoardButton = document.querySelectorAll(".remove-killer");
+  const UinqBoard = document.getElementsByClassName("card-priority");
+
+
+
+  window.addEventListener('load', () => {
+    UinqBoard.forEach(function (item) {
+      item.setAttribute("id", "pid_" + ID());
+    });
+    UniqBoardButton.forEach(function (item, index) {
+      item.setAttribute("id", ID());
+      let singleItem = item.getAttribute("id");
+      let getsingletem = document.getElementById(singleItem);
+      let removeitemid =
+        getsingletem.parentNode.parentNode.parentNode.parentNode.parentNode.id;
+      let removeitem = document.getElementById(removeitemid);
+  
+      getsingletem.addEventListener("click", function () {
+        removeitem.remove();
+      });
+    });
+  })
+  
+
+
+
+  let cardviewModal = document.querySelectorAll(".card-priority__title");
+
+  cardviewModal.forEach(function (singlemodal) {
+    $(singlemodal).on("click", function () {
+      $("#viewmodal").modal("toggle");
     });
   });
 })(jQuery);

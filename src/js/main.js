@@ -17,6 +17,9 @@
   "use strict";
   
 
+
+ 
+
   var template_x = document.getElementById("template");
   var template2_x = document.getElementById("template2");
   if(template2_x) { 
