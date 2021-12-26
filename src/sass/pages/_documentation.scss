@@ -107,3 +107,20 @@
 .nt {
   color: #2f6f9f;
 }
+
+.icon {
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-item {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin: 8px;
+  }
+}
