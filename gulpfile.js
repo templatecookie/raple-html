@@ -25,6 +25,7 @@ const files = {
     templates: 'src/templates',
     layout: 'src/layout',
     pages: 'src/pages',
+    docs:'src/docs',
     sass_path: 'src/sass/**/*.{sass,scss}',
     css_path: 'src/css/**/*.css',
     plugins_path: 'src/js/plugins/**/*.js',
@@ -62,6 +63,25 @@ function nunjucks(done) {
             extra_liners: ['head', 'body'],
         }))
         .pipe(dest(files.output))
+        .pipe(browserSync.stream());
+    done();
+}
+
+function docsnunjucks(done) {
+    console.log("Rendering nunjucks files..");
+    return src(files.docs + '/**/*.+(html|nunjucks|njk)')
+        .pipe(nunjucksRender({
+            path: [files.templates],
+            watch: true,
+        }))
+        .pipe(plumberNotifier())
+        .pipe(prettyHtml({
+            indent_size: 2,
+            indent_char: ' ',
+            unformatted: ['code', 'pre', 'em', 'strong', 'span', 'i', 'b', 'br'],
+            extra_liners: ['head', 'body'],
+        }))
+        .pipe(dest(files.output + "/" + 'docs'))
         .pipe(browserSync.stream());
     done();
 }
@@ -201,7 +221,7 @@ function watchfiles() {
     watch([files.fonts_path], series(copyfonts, reload));
     watch([files.css_path], series(copycss, reload));
     watch([files.plugins_path], series(copyjs, reload));
-    watch(['src/templates/**/*.html', 'src/pages/**/*.html'], series(nunjucks, reload));
+    watch(['src/templates/**/*.html', 'src/pages/**/*.html', 'src/docs/**/*.html'], series(nunjucks,docsnunjucks,  reload));
     watch(files.output + '/*').on('change', browserSync.reload);
 }
 
@@ -214,6 +234,7 @@ function  build (){
 exports.default = parallel(
     dlt_dist,
     nunjucks,
+    docsnunjucks,
     sassCompile,
     csspluginTask,
     copyjs2,
@@ -232,6 +253,7 @@ exports.default = parallel(
 
 exports.build = parallel(
     nunjucks,
+    docsnunjucks,
     sassCompile,
     csspluginTask,
     copyjs2,
