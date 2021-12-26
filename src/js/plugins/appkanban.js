@@ -586,24 +586,21 @@
 
 
 
-  window.addEventListener('load', () => {
-    UinqBoard.forEach(function (item) {
-      item.setAttribute("id", "pid_" + ID());
+  UinqBoard.forEach(function (item) {
+    item.setAttribute("id", "pid_" + ID());
+  });
+  UniqBoardButton.forEach(function (item, index) {
+    item.setAttribute("id", ID());
+    let singleItem = item.getAttribute("id");
+    let getsingletem = document.getElementById(singleItem);
+    let removeitemid =
+      getsingletem.parentNode.parentNode.parentNode.parentNode.parentNode.id;
+    let removeitem = document.getElementById(removeitemid);
+
+    getsingletem.addEventListener("click", function () {
+      removeitem.remove();
     });
-    UniqBoardButton.forEach(function (item, index) {
-      item.setAttribute("id", ID());
-      let singleItem = item.getAttribute("id");
-      let getsingletem = document.getElementById(singleItem);
-      let removeitemid =
-        getsingletem.parentNode.parentNode.parentNode.parentNode.parentNode.id;
-      let removeitem = document.getElementById(removeitemid);
-  
-      getsingletem.addEventListener("click", function () {
-        removeitem.remove();
-      });
-    });
-  })
-  
+  });
 
 
 
