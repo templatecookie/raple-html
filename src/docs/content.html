@@ -1,0 +1,33 @@
+{% extends "layout/layout-docs.html" %} {% set page_title = "Introduction" %} {% block content %}
+
+<main class="app-wrapper">
+    {% include "../templates/layout/header-footer/app-header.html" %} {% include "../templates/layout/header-footer/app-sidebar.html" %} {% include "../templates/layout/header-footer/topnavbar.html" %}
+    <div class="content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 rt-mb-25">
+                        {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+                    </div>
+                </div>
+
+                <div class="docu ">
+                    <section id="colors"  >
+                        <h2 class="docu-title">colors</h2>
+                      <!-- Write content from here -->
+                    </section>
+                    <section id="typography"  >
+                        <h2 class="docu-title">typgography</h2>
+                       <!-- Write content from here -->
+                    </section>
+                    <section id="icon"  >
+                        <h2 class="docu-title">Icons</h2>
+                        <!-- Write content from here -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

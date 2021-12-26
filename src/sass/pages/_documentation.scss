@@ -60,6 +60,7 @@
   &-title {
     @extend %text-five;
     margin-bottom: 20px;
+    text-transform: capitalize;
     &-sub {
       font-size: 18px;
       line-height: 1;
