@@ -14,6 +14,9 @@
       }
     }
   }
+  p {
+    color: var(--gray-600);
+  }
 
   &-info {
     display: grid;
@@ -80,4 +83,27 @@
       display: none !important;
     }
   }
+}
+
+.color-box {
+  display: flex;
+  flex-wrap: wrap;
+  &-item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    justify-content: center;
+    background-color: green;
+    color: white;
+    margin: 8px;
+    @include max(400px) {
+      width: 100%;
+    }
+  }
+}
+
+.nt {
+  color: #2f6f9f;
 }
