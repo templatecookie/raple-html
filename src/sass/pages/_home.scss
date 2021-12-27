@@ -34,9 +34,8 @@
 
 .donut-chart-table {
   margin-bottom: 10px;
-  @include max(1800px) {
-    overflow-x: scroll;
-  }
+  overflow-x: auto;
+
   table {
     &.table {
       margin-bottom: 8px;
@@ -97,7 +96,7 @@
     padding: 8px;
     height: 32px;
     border: none;
-    width: 114px;
+    min-width: 114px;
     color: var(--gray-700);
     background-color: var(--gray-50);
     &:after {
@@ -113,11 +112,17 @@
   &-wrap {
     display: flex;
     flex-wrap: wrap;
+    @include max(400px) {
+      display: block;
+    }
   }
   &-item {
     flex: 0 0 33.33%;
     text-align: center;
     margin: 16px 0;
+    @include max(600px) {
+      flex: 0 0 50%;
+    }
   }
   &-thumb {
     margin-bottom: 12px;
