@@ -96,9 +96,15 @@
         <div class="row">
           <div class="col-xl-9">
             <div class="card">
-              <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
+              <div class="d-flex justify-content-between flex-sm-row flex-column align-items-center card-header">
                 <div>User Overview</div>
-                
+                <div class="select-box select-header">
+                  <select class="custom-select sources" title="This Month">
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>Mar</option>
+                  </select>
+                </div>
               </div>
               <div class="card-body">
                 <div id="user_chart"></div>
@@ -108,14 +114,49 @@
           </div>
           <div class="col-xl-3">
             <div class="card">
-              <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
+              <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
                 <div>Most Visited Page</div>
-                
+                <div class="select-box select-header">
+                  <select class="custom-select sources" title="This Month">
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>Mar</option>
+                  </select>
+                </div>
               </div>
-              <div class="card-body">
+              <div class="donut-chart-wrap">
+                  <div id="dount_chart"></div>
+              </div>
+              <div class="donut-chart-table">
+                  <table class=" table">
+                    <thead>
+                      <tr>
+                        <th>Page name</th>
+                        <th>total users</th>
+                        <th>bounce rate</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-gray-900 extra-padding"> <img src="assets/images/svg/circle-grren.svg" alt=""> Request a Quote
+                        </td>
+                        <td class="text-gray-700 fw-normal extra-padding">547,914</td>
+                        <td class="text-success-500 extra-padding">81.94%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-gray-900"> <img src="assets/images/svg/circle-orange.svg" alt=""> Career</td>
+                        <td class="text-gray-700 fw-normal">547,914</td>
+                        <td class="text-success-500">81.94%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-gray-900"> <img src="assets/images/svg/circle-red.svg" alt=""> Work</td>
+                        <td class="text-gray-700 fw-normal">547,914</td>
+                        <td class="text-success-500">81.94%</td>
+                      </tr>
+                    </tbody>
+                  </table>
               </div>
             </div>
-
           </div>
         </div>
         <div class="row">
@@ -123,7 +164,6 @@
             <div class="card">
               <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
                 <div>Browser Overview</div>
-                
               </div>
               <div class="card-body pb-0">
                 <div class="row">
@@ -133,8 +173,6 @@
                     </div>
                     <div class="body-font-4  text-black font-semibold rt-mb-4">Google Chrome</div>
                     <div class="body-font-4  text-gray ">54% User</div>
-                    
-
                   </div>
                   <div class="col-sm-6 col-12 text-center rt-mb-28">
                     <div class="borwser-img rt-mb-16">
@@ -142,7 +180,6 @@
                     </div>
                     <div class="body-font-4  text-black font-semibold rt-mb-4">Firefox</div>
                     <div class="body-font-4  text-gray ">23% User</div>
-
                   </div>
                   <div class="col-sm-6 col-12 text-center rt-mb-28">
                     <div class="borwser-img rt-mb-16">
@@ -331,7 +368,60 @@
               <div class="card-header">
                 Operating System
               </div>
-              <div class="card-body"></div>
+              <div class="card-body">
+                <div class="operating-system-wrap">
+                    <div class="operating-system-item">
+                        <div class="operating-system-thumb">
+                          <img src="assets/images/svg/windows.svg" alt="">
+                        </div>
+                        <div class="operating-system-data">
+                          <a href="#">Computer & Laptop</a>
+                          <h4>Windows</h4>
+                          <p>57% • 68,412 Users</p>
+                        </div>
+                    </div>
+                    <div class="operating-system-item">
+                      <div class="operating-system-thumb">
+                        <img src="assets/images/svg/MacOS.svg" alt="">
+                      </div>
+                      <div class="operating-system-data">
+                        <a href="#">Computer & Laptop</a>
+                        <h4>macOS</h4>
+                        <p>57% • 68,412 Users</p>
+                      </div>
+                    </div>
+                    <div class="operating-system-item">
+                      <div class="operating-system-thumb">
+                        <img src="assets/images/svg/iOS.svg" alt="">
+                      </div>
+                      <div class="operating-system-data">
+                        <a href="#">Mobile & Tablet</a>
+                        <h4>iOS</h4>
+                        <p>57% • 68,412 Users</p>
+                      </div>
+                    </div>
+                    <div class="operating-system-item">
+                      <div class="operating-system-thumb">
+                        <img src="assets/images/svg/Android.svg" alt="">
+                      </div>
+                      <div class="operating-system-data">
+                        <a href="#">Mobile & Tablet</a>
+                        <h4>Android</h4>
+                        <p>57% • 68,412 Users</p>
+                      </div>
+                    </div>
+                    <div class="operating-system-item">
+                      <div class="operating-system-thumb">
+                        <img src="assets/images/svg/Ubuntu.svg" alt="">
+                      </div>
+                      <div class="operating-system-data">
+                        <a href="#">Computer & Laptop</a>
+                        <h4>Ubuntu</h4>
+                        <p>57% • 68,412 Users</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
