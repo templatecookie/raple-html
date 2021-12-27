@@ -1,5 +1,23 @@
 .docu {
 
+
+  // section 
+  &-section { 
+    margin-bottom: 24px;
+  }
+
+
+  // Cards wrapper 
+  &-card { 
+    padding: 24px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 8px 24px 0px #00000008;
+  }
+
+
   &-sub-section { 
     padding: 24px;
     margin-bottom: 24px;
@@ -98,19 +116,22 @@
     }
   }
 
-  &-code-block {
-    margin-bottom: 18px;
-    p {
-      color: var(--gray-600);
-    }
-    .cm-s-material-ocean.CodeMirror {
-      border-radius: 8px;
-    }
-    .CodeMirror-scrollbar-filler {
-      display: none !important;
+  &-navigation { 
+    ul { 
+      li { 
+        margin: 6px 0px;
+        a { 
+          font-size: 14px;
+          line-height: 21px;
+          text-transform: capitalize;
+          color: var(--gray-700);
+          &:hover { 
+            color: var(--gray-900);
+          }
+        }
+      }
     }
   }
-
 
 
 
