@@ -789,7 +789,7 @@ if (document.getElementById('bar-chart1')) {
     
         line_chart_create.render();
     }
-    
+
     if (document.getElementById('line_chartkeyword_2')) {
         var line_chart_create = new ApexCharts(
           document.querySelector('#line_chartkeyword_2'),
@@ -946,65 +946,10 @@ if (document.getElementById('bar-chart1')) {
         tabSize:2,
     };
 
-    // initialize editor
-    var editor = CodeMirror.fromTextArea(document.querySelector('.editor'),config);
 
-    editor.setOption("theme", "material-ocean");
-
-	// function loadHtml(html) {
-	// 	const document_pattern = /( )*?document\./i;
-	// 	let finalHtml = html.replace(document_pattern, "document.getElementById('result').contentWindow.document.");
-	// 	$('#result').contents().find('html').html(finalHtml);
-	// }
-
-	// loadHtml($('.editor').val());
-
-    editor.on('change',function(cMirror){
-
-        if (myTimeoutId!==null) {
-            clearTimeout(myTimeoutId);
-        }
-
-        myTimeoutId = setTimeout(function() {
-                try {
-                    loadHtml(cMirror.getValue());
-                } catch(err){
-                    console.log('err:'+ err);
-                }
-            }, 1000);
-
-    });
-
-    // * Inspired from : Alex Raven 
-    // * Example :  https://codepen.io/asraven/pen/qbrgje?editors=1010 
-    // Folder Structures
-    var allFolders = $(".directory-list li > ul");
-    allFolders.each(function() {
-  
-      // add the folder class to the parent <li>
-      var folderAndName = $(this).parent();
-      folderAndName.addClass("folder");
-  
-      // backup this inner <ul>
-      var backupOfThisFolder = $(this);
-      // then delete it
-      $(this).remove();
-      // add an <a> tag to whats left ie. the folder name
-      folderAndName.wrapInner("<a href='#' />");
-      // then put the inner <ul> back
-      folderAndName.append(backupOfThisFolder);
-  
-      // now add a slideToggle to the <a> we just added
-      folderAndName.find("a").click(function(e) {
-        $(this).siblings("ul").slideToggle("slow");
-        e.preventDefault();
-      });
-  
-    });
 
 
     // Presentation page 
-
     // sticky navbar 
     $(window).scroll(function(){
       if ($(window).scrollTop() >= 330) {
