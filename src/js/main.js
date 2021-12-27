@@ -789,6 +789,7 @@ if (document.getElementById('bar-chart1')) {
     
         line_chart_create.render();
     }
+
     if (document.getElementById('line_chartkeyword_2')) {
         var line_chart_create = new ApexCharts(
           document.querySelector('#line_chartkeyword_2'),
@@ -941,9 +942,7 @@ if (document.getElementById('bar-chart1')) {
 
 
 
-
     // Presentation page 
-
     // sticky navbar 
     $(window).scroll(function(){
       if ($(window).scrollTop() >= 330) {
