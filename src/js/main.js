@@ -678,7 +678,7 @@ if (document.getElementById('bar-chart1')) {
 
   var user_chart_option = {
     chart: {
-      height: 234,
+      height: 280,
       type: 'area',
       toolbar: {
         show: false,
@@ -938,13 +938,6 @@ if (document.getElementById('bar-chart1')) {
         $('#console').style.display = "none";
     }
 
-    var config = {
-        mode: "text/html",
-        extraKeys: {"Ctrl-Space": "autocomplete"},
-        lineNumbers: true,
-        keyMap:"sublime",
-        tabSize:2,
-    };
 
 
 
@@ -959,6 +952,35 @@ if (document.getElementById('bar-chart1')) {
         $('.p-header .navbar').removeClass('fixed');
        }
     });
-
+  
+  // pie chart home page
+   var donut_options = {
+        series: [90, 50, 200],
+          chart: {
+            width: 220,
+            type: 'donut',
+        },
+        colors: ['#FF9500', '#E84646', '#0E5FD9', ],
+        dataLabels: {
+          enabled: false,
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 220,
+            },
+            legend: {
+              show: false
+            }
+          }
+        }],
+        legend: {
+          show: false
+        }
+        };
+        var dountChart = new ApexCharts(document.querySelector("#dount_chart"), donut_options);
+        dountChart.render();
+    
 
 })(jQuery);
