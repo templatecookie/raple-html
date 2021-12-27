@@ -1,4 +1,32 @@
 .docu {
+
+  &-sub-section { 
+    padding: 24px;
+    margin-bottom: 24px;
+    background-color: #fff;
+    p { 
+      @extend %text-two;
+      font-weight: 400;
+    }
+
+    ol { 
+      padding-left: 16px;
+      li {
+        list-style: decimal;
+        p { 
+          font-size: 14px;
+          line-height: 24px;
+          color: var(--gray-900);
+          span { 
+            font-weight: 600;
+            color: var(--primary-500);
+          }
+        }
+      }
+    }
+  }
+
+
   &-typography {
     margin-top: 15px;
     li {
@@ -65,9 +93,8 @@
     margin-bottom: 20px;
     text-transform: capitalize;
     &-sub {
-      font-size: 18px;
-      line-height: 1;
-      margin-bottom: 15px;
+     @extend %text-two;
+      font-weight: 600;
     }
   }
 
@@ -83,6 +110,10 @@
       display: none !important;
     }
   }
+
+
+
+
 }
 
 .color-box {
