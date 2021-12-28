@@ -131,7 +131,7 @@
                 <div class="row">
                   <div class="col-md-6 rt-mb-15">
                     <div class="fromGroup has-icon">
-                      <label>Date</label>
+                      <label>Created Date</label>
                       <div class="form-control-icon">
                         <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
                         <div class="icon-badge-2">
@@ -142,7 +142,7 @@
                   </div>
                   <div class="col-md-6 rt-mb-15">
                     <div class="fromGroup has-icon">
-                      <label>Date</label>
+                      <label>Due Date</label>
                       <div class="form-control-icon">
                         <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
                         <div class="icon-badge-2">
