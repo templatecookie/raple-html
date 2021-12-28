@@ -1,0 +1,63 @@
+{% extends "layout/layout-docs.html" %}
+{% set page_title = "Browser Support & Credits" %}
+{% block content %}
+
+<main class="app-wrapper">
+    {% include "../templates/layout/header-footer/doc-appheader.html" %} {% include "../templates/layout/header-footer/doc-sidebar.html" %} {% include "../templates/layout/header-footer/doc-topnav.html" %}
+
+    <div class="content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 rt-mb-25">
+                        {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+                    </div>
+                </div>
+
+                <div class="docu">
+                    <div class="docu-section">
+                        <div class="docu-card">
+                            <h2 class="docu-title">Browser Supports</h2>
+
+                            <div class="browser-table">
+                                <table>
+                                    <thead>
+                                      <tr>
+                                        <th>Browser</th>
+                                        <th>Version</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><img src="../assets/images/svg/social/chrome.svg" width="24" height="24" class="me-2"> Chrome</td>
+                                        <td>last 3 versions</td>
+                                      </tr>
+                                      <tr>
+                                        <td><img src="../assets/images/svg/social/safari.svg" width="24" height="24" class="me-2"> Safari</td>
+                                        <td>last 3 versions</td>
+                                      </tr>
+                                      <tr>
+                                        <td><img src="../assets/images/svg/social/opera.svg" width="24" height="24" class="me-2"> Opera</td>
+                                        <td>last 3 versions</td>
+                                      </tr>
+                                      <tr>
+                                        <td><img src="../assets/images/svg/social/electron.svg" width="24" height="24" class="me-2"> Electron</td>
+                                        <td>last 3 versions</td>
+                                      </tr>
+                                      <tr>
+                                        <td><img src="../assets/images/svg/social/brave.svg" width="24" height="24" class="me-2"> Brave</td>
+                                        <td>last 3 versions</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}
