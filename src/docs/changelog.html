@@ -1,0 +1,72 @@
+{% extends "layout/layout-docs.html" %}
+{% set page_title = "Changelog" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %} {% include
+  "../templates/layout/header-footer/app-sidebar.html" %} {% include "../templates/layout/header-footer/topnavbar.html"
+  %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+
+
+        <div class="docu">
+          <div class="docu-sub-section m-0">
+            <div class="rt-mb-30">
+              <h2 class="docu-title text-primary-500">v3.3.1 <span>- 27 Oct 2021</span></h2>
+                <ul class="docu-li">
+                  <li>Updated Laravel Version to 8.65.</li>
+                  <li>Webpack error fixies.</li>
+                </ul>
+            </div>
+            <div class="rt-mb-30">
+              <h2 class="docu-title text-primary-500">v3.3.0 <span>- 20 Oct 2021</span></h2>
+              <ul class="docu-li">
+                  <li>Updated Bootstrap version to v5.1.3.</li>
+                  <li>Added Full Calender Page.</li>
+                  <li>Added Placeholder Page.</li>
+              </ul>
+            </div>
+            <div class="rt-mb-30">
+              <h2 class="docu-title text-primary-500">v3.2.0 <span> - 25 Aug 2021</span></h2>
+              <ul class="docu-li">
+                <li>Upgraded bootstrap version to 5.1.0 in the HTML version..</li>
+                <li>Fixed minor issues.</li>
+              </ul>
+            </div>
+            <div class="rt-mb-30">
+              <h2 class="docu-title text-primary-500">v3.1.0<span> - 25 May 2021</span></h2>
+              <ul class="docu-li">
+                <li>Updated Bootstrap version to ^5.0.1.</li>
+                <li>Added Off-canvas page.</li>
+                <li>Fixed minor issues.</li>
+              </ul>
+            </div>
+            <div class="rt-mb-30">
+              <h2 class="docu-title text-primary-500">v3.0.1<span> - 10 March 2021</span></h2>
+              <ul class="docu-li">
+                <li>Updated Bootstrap version to ^5.0.0-beta2..</li>
+              </ul>
+            </div>
+            <div class="rt-mb-30">
+              <h2 class="docu-title text-primary-500">v3.0.0<span> - 29 January 2021</span></h2>
+              <ul class="docu-li">
+                <li>Updated version of other plugins.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+          
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

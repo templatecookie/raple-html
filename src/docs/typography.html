@@ -1,0 +1,190 @@
+{% extends "layout/layout-docs.html" %}
+{% set page_title = "Typography" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %} {% include
+  "../templates/layout/header-footer/app-sidebar.html" %} {% include "../templates/layout/header-footer/topnavbar.html"
+  %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+
+
+        <div class="docu rt-mb-30">
+          <div class="docu-sub-section m-0">
+            <div class="rt-mb-0">
+              <h2 class="docu-title">Typography</h2>
+              <p>Typography Plays An Important Role In Creating An Attractive And Clear Interface Design. Good Typography Will Make The
+              Content Easy To Follow And Improve The Usability Of Your Website.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="docu rt-mb-30">
+          <div class="docu-sub-section m-0">
+            <div class="rt-mb-0">
+              <h2 class="docu-title">Base colors</h2>
+              <p>Choose one of the available colors from the basic color palette and make your design attractive for users. You
+                can use
+                the colors to customize the design of components, indicate different states or suggest actions you want users to
+                take.</p>
+                <div class="color-box">
+                  <div class="color-box-item bg-gray-500">
+                      #7b878c
+                  </div>
+                  <div class="color-box-item bg-primary-500">
+                    #005ce8
+                  </div>
+                  <div class="color-box-item bg-secondary-500 text-gray-900">
+                    #fff266,
+                  </div>
+                  <div class="color-box-item bg-success-500">
+                    #0faf62,
+                  </div>
+                  <div class="color-box-item bg-warning-500">
+                    #ff9500
+                  </div>
+                  <div class="color-box-item bg-danger-500">
+                    #e84646
+                  </div>
+                </div>
+                <div class="example-code bg-gray-100">
+                  <div class="rt-mb-20">
+                      <p>Use Text Color</p>
+                      <code class="language-html" data-lang="html">
+                      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-gray"</span><span class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                      <br/>
+                      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-primary"</span><span
+                        class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                      <br />
+                      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-secondary"</span><span
+                        class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                      <br />
+                      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-success"</span><span
+                        class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                      <br />
+                      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-warning"</span><span
+                        class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                      <br />
+                      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-danger"</span><span
+                        class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                      <br />
+                  </code>
+                  </div>
+                  <p>Use Background Color</p>
+                  <code class="language-html"
+                    data-lang="html">
+                    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-gray"</span><span class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                    <br/>
+                    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-primary"</span><span
+                      class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                    <br />
+                    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-secondary"</span><span
+                      class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                    <br />
+                    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-success"</span><span
+                      class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                    <br />
+                    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-warning"</span><span
+                      class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                    <br />
+                    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-danger"</span><span
+                      class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                    <br />
+                
+                  </code>
+                  
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="docu rt-mb-30">
+          <div class="docu-sub-section m-0">
+            <div class="rt-mb-0">
+              <h2 class="docu-title">Headings</h2>
+             <p>Use HTML headings to organize content on your website and make the structure clear and user-friendly.</p>
+            </div>
+          </div>
+          <div class="example-content bg-primary-100">
+            <h1>H1 Heading</h1>
+            <h2>H2 Heading</h2>
+            <h3>H3 Heading</h3>
+            <h4>H4 Heading</h4>
+            <h5>H5 Heading</h5>
+            <h6>H6 Heading</h6>
+          </div>
+          <div class="example-code bg-gray-100">
+            <code class="language-html" data-lang="html">
+              <span class="nt">&lt;h1&gt;</span>H1 Heading<span class="nt">&lt;/h1&gt;</span>
+              <br/>
+              <span class="nt">&lt;h2&gt;</span>H2 Heading<span class="nt">&lt;/h2&gt;</span>
+              <br />
+              <span class="nt">&lt;h3&gt;</span>H3 Heading<span class="nt">&lt;/h3&gt;</span>
+              <br />
+              <span class="nt">&lt;h4&gt;</span>H4 Heading<span class="nt">&lt;/h4&gt;</span>
+              <br />
+              <span class="nt">&lt;h5&gt;</span>H5 Heading<span class="nt">&lt;/h5&gt;</span>
+              <br />
+              <span class="nt">&lt;h6&gt;</span>H6 Heading<span class="nt">&lt;/h6&gt;</span>
+            </code>
+          </div>
+        </div>
+        
+        <div class="docu rt-mb-30">
+          <div class="docu-sub-section m-0">
+            <div class="rt-mb-0">
+              <h2 class="docu-title">Paragraphs</h2>
+              <p>Organize longer pieces of text into paragraphs using the (<code>p</code>)  tag.</p>
+            </div>
+          </div>
+          <div class="example-content bg-primary-100">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+            magna aliquyam erat, sed diam voluptua.</p>
+            <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+          </div>
+          <div class="example-code bg-gray-100">
+            <code class="language-html"
+              data-lang="html">
+              <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<span class="nt">&lt;/p&gt;</span>
+              <br/>
+            <span class="nt">&lt;p&gt;</span>At vero eos et accusam et justo duo dolores et ea rebum.<span class="nt">&lt;/p&gt;</span>
+          </code>
+
+          </div>
+        </div>
+        <div class="docu rt-mb-30">
+          <div class="docu-sub-section m-0">
+            <div class="rt-mb-0">
+              <h2 class="docu-title">Text transform</h2>
+              <p>Transform the content of components with text capitalization classes.</p>
+            </div>
+          </div>
+          <div class="example-content bg-primary-100">
+            <p>lowercased text.</p>
+            <p>UPPERCASED TEXT.</p>
+            <p>Capitalized Text.</p>
+          </div>
+          <div class="example-code bg-gray-100">
+            <code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lowercase"</span>
+            <span class="nt">&gt;</span>Lowercased text.<span class="nt">&lt;/p&gt;</span>
+            <br/>
+            
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-uppercase"</span><span class="nt">&gt;</span>Uppercased text.<span class="nt">&lt;/p&gt;</span>
+            <br/>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-capitalize"</span><span class="nt">&gt;</span>Capitalized text.<span class="nt">&lt;/p&gt;</span></code>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

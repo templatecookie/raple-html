@@ -1,0 +1,78 @@
+{% extends "layout/layout-docs.html" %}
+{% set page_title = "Vertical" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %} {% include
+  "../templates/layout/header-footer/app-sidebar.html" %} {% include "../templates/layout/header-footer/topnavbar.html"
+  %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+
+        <div class="docu">
+          <div class="docu-sub-section m-0">
+            <div class="rt-mb-30">
+              <h2 class="docu-header-title">Vertical menu configuration</h2>
+             <p>In order to add, change or remove menu items from the left side navigation, simply edit in file
+           <code>src/layout/app-sidebar.html</code> . The change would reflect in all the html files automatically. We are using <a href="https://www.npmjs.com/package/gulp-file-include" target="_blank">gulp-file-include</a> 
+            which would actually take care of including the <code>app-sidebar.html</code>  file content in the all html pages.</p>
+            </div>
+
+            <div class="rt-mb-48">
+              <h2 class="docu-title">How to change width?</h2>
+              <p>In order to change the width of left side navigation bar, open a file <code>src/sass/layout/_sidebar.scss</code>  and change the
+              value of <code>280px</code> .</p>
+            </div>
+
+            <div class="rt-mb-30">
+              <h2 class="docu-title">How to use pre-built layouts?</h2>
+              <p>Each of the layout options is provided below with steps you would need to perform in:   <code>data-layout="vertical"</code></p>
+              <div class="docu-thumb-wrap">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="docu-thumb-item">
+                      <img src="../assets/images/all-img/ss1.png" alt="">
+                      <div class="docu-thumb-content">
+                          <h3>White Sidebar</h3>
+                          <p>Remove data attribute <code>data-sidebar="white"</code> body element to have white sidebar.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="docu-thumb-item">
+                      <img src="../assets/images/all-img/ss2.png" alt="">
+                      <div class="docu-thumb-content">
+                        <h3>black Sidebar</h3>
+                        <p>Remove data attribute <code>data-sidebar="black"</code> body element to have black sidebar.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="docu-thumb-item">
+                      <img src="../assets/images/all-img/ss3.png" alt="">
+                      <div class="docu-thumb-content">
+                        <h3>Blue Sidebar</h3>
+                        <p>Remove data attribute <code>data-sidebar="blue"</code> body element to have blue sidebar.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+               
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

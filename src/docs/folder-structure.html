@@ -1,0 +1,68 @@
+{% extends "layout/layout-docs.html" %}
+{% set page_title = "Folder Structure" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %} {% include
+  "../templates/layout/header-footer/app-sidebar.html" %} {% include "../templates/layout/header-footer/topnavbar.html"
+  %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+
+        <div class="docu">
+          <div class="docu-sub-section">
+            <div class="rt-mb-0">
+              <h2 class="docu-title"><i class="ph-folder-open"></i> Folder & Files Structure</h2>
+              <h3 class="docu-title">HTML</h3>
+              <pre class="mb-0">├── Admin
+              ├── Startkit
+              
+              ├── Admin
+                  ├── src directory
+                      ├── assets
+                          ├── css
+                          ├── fonts
+                          ├── images
+                          ├── js
+                          └── scss
+                              ├── custom
+                              ├── _variables.scss
+                              ├── _variables-dark.scss
+                              ├── app.scss
+                              ├── app-dark.scss
+                              ├── bootstrap.scss
+                              ├── bootstrap-dark.scss
+                              └── icons.scss
+                      ├── partials
+                          ├── body.html
+                          ├── footer.html
+                          ├── head-css.html
+                          ├── horizontal.html
+                          ├── main.html
+                          ├── menu.html
+                          ├── page-title.html
+                          ├── right-sidebar.html
+                          ├── sidebar.html
+                          ├── title-meta.html
+                          ├── topbar.html
+                          └── vendor-script.html
+                      └── all html pages
+                  ├── gulpfile.js
+                  ├── package.json
+                  └── yarn.lock
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

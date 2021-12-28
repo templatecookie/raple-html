@@ -1,0 +1,62 @@
+{% extends "layout/layout-docs.html" %}
+{% set page_title = "Horizontal" %}
+{% block content %}
+
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %} {% include
+  "../templates/layout/header-footer/app-sidebar.html" %} {% include "../templates/layout/header-footer/topnavbar.html"
+  %}
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 rt-mb-25">
+            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+          </div>
+        </div>
+
+        <div class="docu">
+          <div class="docu-sub-section m-0">
+            <div class="rt-mb-30">
+              <h2 class="docu-header-title">Horizontal menu configuration</h2>
+              Simply update
+              
+            <code> &lt;body data-layout="horizontal" data-topbar="dark"&gt;</code>  in the <code>src/partials/body.html</code>  file and
+                Remove other includes and add <code>@@include('horizontal.html')</code>  in <code>Src/Layout/App-Sidebar.Html</code> file.
+              </p>
+            </div>
+            <div class="rt-mb-48">
+              <h2 class="docu-title">How to change width?</h2>
+              <p>In order to change the width of left side navigation bar, open a file
+                <code>src/sass/layout/_sidebar.scss</code> and change the
+                value of <code>280px</code> .</p>
+            </div>
+            <div class="rt-mb-30">
+              <h2 class="docu-title">How to use pre-built layouts?</h2>
+              <p>Each of the layout options is provided below with steps you would need to perform in:
+                <code>data-layout="horizontal"</code></p>
+              <div class="docu-thumb-wrap">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="docu-thumb-item">
+                      <img src="../assets/images/all-img/ss4.png" alt="">
+                      <div class="docu-thumb-content">
+                        <h3>Topbar</h3>
+                        <p>Keep your body element with data attribute <code>data-topbar="dark" data-layout="horizontal"</code> E.g.
+                        
+                       <code>&lt;body data-topbar="light" data-layout="horizontal"&gt;</code>  to have dark topbar and dark menubar.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

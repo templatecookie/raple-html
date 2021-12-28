@@ -15,42 +15,96 @@
 
                 <div class="docu">
                     <div class="docu-sub-section" >
-                        <h2 class="docu-title">Getting Started</h2>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum dignissimos eos, dicta autem incidunt qui quisquam reiciendis fuga aperiam nesciunt sequi natus ipsa possimus labore dolorem maiores dolore ducimus mollitia ea tempora est necessitatibus. Qui tempora delectus eveniet expedita, minima laborum veritatis! At tenetur magni ratione modi voluptatibus iste quis explicabo harum architecto distinctio aut consequatur, possimus, mollitia error veniam?
-                        </p>
-                    </div>
-
-                    <div class="docu-sub-section">
-                            <h2 class="docu-title">Set up the environment</h2>
-                            <div>
-                                <p>To use our build system and run our documentation locally, you’ll need a copy of Tabler’s source files. Follow the steps below:</p>
-                            </div>
-                            <div>
-                                <ol>
-                                    <li>
-                                        <p>install <span>package dependecies</span> via yarn or npm</p>
-                                    </li>
-                                    <li>
-                                        <p> In the comand line run <span>gulp</span>  </p>
-                                    </li>
-                                    <li>
-                                        <p>open in <span>http://localhost:3000/</span> in your browser </p>
-                                    </li>
-                                    <li>
-                                        <p>Any change in /src directory will build the aplication and refresh the page </p>
-                                    </li>
-                                </ol>
-                            </div>
-                    </div>
-
-                    <div class="docu-sub-section">
-                            <h2 class="docu-title"> Bugs and feature requests</h2>
+                        <div class="rt-mb-48">
+                            <h2 class="docu-header-title">Get Started</h2>
+                            <h2 class="docu-title">Introduction</h2>
                             <p>
-                                Found a bug or have a feature request? <a href="#">Please open a new issue</a> 
+                                We are using <a href="https://gulpjs.com/" target="_blank">gulp</a> which allows having complete automation for
+                                build flow. In case if you don't know Gulp then it's easy
+                                to use it. Gulp is a toolkit for automating painful or time-consuming tasks in the development workflow, so you can
+                                stop
+                                messing around while building any project. You can read it more about it here. Please follow below steps to install
+                                and
+                                setup all prerequisites:
                             </p>
-                    </div>
+                        </div>
+                        <div class="rt-mb-48">
+                            <h2 class="docu-title">Prerequisites</h2>
+                            <p>Please follow below steps to install and setup all prerequisites:</p>
+                            <ul class="docu-li">
+                                <li>
+                                    <strong>Yarn</strong>
+                                    <p>Make sure to have the <a href="https://classic.yarnpkg.com/en/" target="_blank">Yarn</a>  installed & running in your computer. If you already have installed Yarn on your computer,
+                                    you can skip this step. We suggest you to use Yarn instead of NPM.</p>
+                                </li>
+                            </ul>
+                            <ul class="docu-li">
+                                <li>
+                                    <strong>Nodejs</strong>
+                                    <p>Make sure to have the <a href="https://nodejs.org/en/" target="_blank">Node.js</a> installed & running in your computer. If you already have installed Node on your computer, you can skip this step if
+                                    your existing node version is greater than 10.</p>
+                                </li>
+                            </ul>
+                            <ul class="docu-li">
+                                <li>
+                                    <strong>Gulp</strong>
+                                    <p>Make sure to have the <a href="https://gulpjs.com/" target="_blank">Gulp</a> installed & running in your computer. If you already have installed gulp on run command <code>npm install -g gulp</code> from your
+                                    terminal</p>
+                                </li>
+                            </ul>
+                            <ul class="docu-li">
+                                <li>
+                                    <strong>Git</strong>
+                                    <p>Make sure to have the <a href="https://git-scm.com/" target="_blank">Git</a> installed globally & running on your computer. If you already have installed git on your computer, you can skip this
+                                    step.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rt-mb-0">
+                            <h2 class="docu-title">Installation</h2>
+                            <p>To setup the admin theme, follow below-mentioned steps:</p>
+                            <ul class="docu-li rt-mb-30">
+                                <li>
+                                    <strong>Install Prerequisites</strong>
+                                    <p>Make sure to have all above prerequisites installed & running on your computer</p>
+                                </li>
+                            </ul>
+                            <p>After you finished with the above steps, you can run the following commands into the terminal / command prompt from the
+                            root directory of the project to run the project locally or build for production use:</p>
+              
+                        </div>
 
+                        <table class="table docs">
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>yarn install</code></td>
+                                    <td>This would install all the required dependencies in the <code>node_modules</code>  folder.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>gulp</code></td>
+                                    <td>Runs the project locally, starts the development server and watches for any changes in your code, including your HTML,
+                                    javascript, sass, etc. The development server is accessible at <a href="http://localhost:3000."></a></td>
+                                </tr>
+                                <tr>
+                                    <td><code>gulp build</code></td>
+                                    <td>Generates a <code>/dist</code> directory with all the production files.</td>
+                                </tr>
+                     
+                            </tbody>
+                        </table>
+                        <div class="rt-mb-0">
+                            <h2 class="docu-title">Tips</h2>
+                            <p>SCSS: We suggest you to do not change any scss files from the assets/scss/custom folders because to get new updates will
+                            might be break your SCSS changes if any you have made. We strongly suggest you to create new custom.scss file and use
+                            that instead of overwrite any theme's custom scss files.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
