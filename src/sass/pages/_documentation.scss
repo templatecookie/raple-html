@@ -25,6 +25,7 @@
     p { 
       @extend %text-two;
       font-weight: 400;
+      text-transform:none;
     }
 
     ol { 
