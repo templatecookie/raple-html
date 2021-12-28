@@ -240,6 +240,71 @@
     }
   }
 
+  // code 
+  &-tabs { 
+    .nav { 
+      margin-bottom: 12px;
+      justify-content: flex-end;
+      &-link { 
+        color: var(--gray-900);
+        border-radius: 0px;
+        text-transform: lowercase;
+        background-color: var(--gray-100);
+        border: 1px solid transparent;
+        &.active { 
+          border: 1px solid var(--primary-400);
+          font-weight: 600;
+          background-color: var(--primary-500);
+        }
+      }
+    }
+
+    code[class*=language-], pre[class*=language-] { 
+      color: var(--gray-100);
+    }
+    :not(pre)>code[class*=language-], pre[class*=language-] { 
+      background-color: #232e3c;
+      border: 1px solid var(--falcon-border-color);
+      border-radius: 0.25rem;
+    }
+    :not(pre) > code[class*="language-"], pre[class*="language-"] { 
+      background-color: #272822;
+    }
+    pre[class*="language-"] { 
+      padding: 1em;
+      margin: 0.5em 0;
+      overflow: auto;
+      border-radius: 0.3em;
+    }
+
+    code[class*="language-"], pre[class*="language-"] { 
+    color: #f8f8f2; 
+    background: none;
+    text-shadow: 0 1px rgb(0 0 0 / 30%);
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+      }
+
+      code.language-html:first-child { 
+        display: block;
+      }
+
+    }
+  }
+
 }
 
 .color-box {
