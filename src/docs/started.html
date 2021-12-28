@@ -4,6 +4,7 @@
 
 <main class="app-wrapper">
     {% include "../templates/layout/header-footer/app-header.html" %} {% include "../templates/layout/header-footer/app-sidebar.html" %} {% include "../templates/layout/header-footer/topnavbar.html" %}
+
     <div class="content-wrapper">
         <div class="page-content">
             <div class="container-fluid">
@@ -14,14 +15,17 @@
                 </div>
 
                 <div class="docu">
-                    <div class="docu-sub-section" >
-                        <h2 class="docu-title">Quick Start</h2>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum dignissimos eos, dicta autem incidunt qui quisquam reiciendis fuga aperiam nesciunt sequi natus ipsa possimus labore dolorem maiores dolore ducimus mollitia ea tempora est necessitatibus. Qui tempora delectus eveniet expedita, minima laborum veritatis! At tenetur magni ratione modi voluptatibus iste quis explicabo harum architecto distinctio aut consequatur, possimus, mollitia error veniam?
-                        </p>
+                    <div class="docu-section">
+                        <div class="docu-card" >
+                            <h2 class="docu-title">Quick Start</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum dignissimos eos, dicta autem incidunt qui quisquam reiciendis fuga aperiam nesciunt sequi natus ipsa possimus labore dolorem maiores dolore ducimus mollitia ea tempora est necessitatibus. Qui tempora delectus eveniet expedita, minima laborum veritatis! At tenetur magni ratione modi voluptatibus iste quis explicabo harum architecto distinctio aut consequatur, possimus, mollitia error veniam?
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="docu-sub-section" id="setup">
+                    <div class="docu-section" id="setup">
+                        <div class="docu-card">
                             <h2 class="docu-title">Set up the environment</h2>
                             <div>
                                 <p>To use our build system and run our documentation locally, you’ll need a copy of Tabler’s source files. Follow the steps below:</p>
@@ -42,19 +46,46 @@
                                     </li>
                                 </ol>
                             </div>
+                        </div>
                     </div>
-
-                    <div class="docu-sub-section">
-                            <h2 class="docu-title"> Bugs and feature requests</h2>
-                            <p>
-                                Found a bug or have a feature request? <a href="#">Please open a new issue</a> 
-                            </p>
+                    <div class="docu-section">
+                        <div class="docu-card">
+                            <h2 class="docu-title"> Technologies </h2>
+                         
+                            <div class="technology-group">
+                                <div class="technology-group__item">
+                                    <img src="https://img.icons8.com/color/48/000000/html-5--v1.png"/>
+                                </div>
+                                <div class="technology-group__item">
+                                    <img src="https://img.icons8.com/color/48/000000/css3.png"/>
+                                </div>
+                                <div class="technology-group__item">
+                                    <img src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>
+                                </div>
+                                <div class="technology-group__item">
+                                    <img src="https://img.icons8.com/color/48/000000/sass.png"/>
+                                </div>
+                                <div class="technology-group__item">
+                                    <img src="https://img.icons8.com/color/48/000000/npm.png"/>
+                                </div>
+                                <div class="technology-group__item">
+                                    <img src="https://img.icons8.com/color/48/000000/bootstrap.png"/>
+                                </div>
+                                <div class="technology-group__item">
+                                    <img src="https://img.icons8.com/windows/64/000000/gulp.png"/>
+                                </div>
+                                <div class="technology-group__item">
+                                    <img src="https://img.icons8.com/fluency/48/000000/node-js.png"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
+
 </main>
 
 {% endblock %}
