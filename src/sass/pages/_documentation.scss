@@ -168,6 +168,52 @@
     }
   }
 
+  // colors plate 
+  .colors-plate { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__item { 
+      width: 120px;
+      height: 120px;
+      display: flex;
+      margin: 6px;
+      align-items: center;
+      justify-content: center;
+      
+
+      &.black { 
+        background-color: var(--gray-900);
+      }
+      &.blue { 
+        background-color: #0E5FD9;
+      }
+
+      &.yellow {
+        background-color: #FFF266;
+      }
+
+      &.green { 
+        background-color: #0FAF62;
+      }
+
+      &.orange { 
+        background-color: #FF9500;
+      }
+
+      &.red { 
+        background-color: #E84646;
+      }
+
+      
+      p { 
+      color: #fff;
+      margin: 0px;
+      }
+    }
+  }
+
 
 
 }
@@ -176,7 +222,7 @@
   display: flex;
   flex-wrap: wrap;
   &-item {
-    width: 100px;
+    max-width: 100px;
     height: 100px;
     display: flex;
     align-items: center;
