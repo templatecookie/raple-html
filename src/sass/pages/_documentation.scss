@@ -32,6 +32,16 @@
         }
       }
     }
+
+    p { 
+      @extend %text-para;
+      text-transform: capitalize;
+      span { 
+        font-weight: 600;
+        text-transform: none;
+        color: var(--primary-500);
+      }
+    }
   }
 
 
@@ -243,11 +253,20 @@
   // code 
   &-tabs { 
     .nav { 
+      width: 100%;
       margin-bottom: 12px;
       justify-content: flex-end;
+
+      &-item { 
+        @include max(575px) { 
+          width: 50%;
+        }
+      }
+      
       &-link { 
-        color: var(--gray-900);
+        width: 100%;
         border-radius: 0px;
+        color: var(--gray-900);
         text-transform: lowercase;
         background-color: var(--gray-100);
         border: 1px solid transparent;

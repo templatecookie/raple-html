@@ -1,0 +1,79 @@
+{% extends "layout/layout-docs.html" %} {% set page_title = "Plugin" %} {% block content %}
+
+<main class="app-wrapper">
+    {% include "../templates/layout/header-footer/doc-appheader.html" %} {% include "../templates/layout/header-footer/doc-sidebar.html" %} {% include "../templates/layout/header-footer/doc-topnav.html" %}
+    <div class="content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 rt-mb-25">
+                        {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+                    </div>
+                </div>
+                <div class="docu">
+                    <div class="docu-section">
+                        <div class="docu-card">
+                            <div>
+                                <h2 class="docu-title">Map</h2>
+                                <p>
+                                    Relick uses jVectorMap - a free and open-source modern map library that helps developers to create beautiful and interactive visualizations for web pages.
+                                </p>
+                            </div>
+                            <div class="my-4" >
+                                <h6 class="docu-title-sub">Usage</h6>
+
+                                <p>
+                                    to able to use jvector you have to link <b>css</b> and <b>js</b>  files ( <span>jquery-jvectormap-2.0.5.css</span>, <span>jquery-jvectormap-2.0.5.min.js</span>, <span>jquery-jvectormap-world-mill-en.js</span> )
+                                </p>
+                            </div>
+
+                            <div class="docu-tabs">
+                                <ul class="nav nav-pills  " id="pills-tab" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-map-preview" data-bs-toggle="pill" data-bs-target="#pills-map-previews" type="button" role="tab" aria-controls="pills-map-previews" aria-selected="true">preview</button>
+                                  </li>
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-map-code" data-bs-toggle="pill" data-bs-target="#pills-map-codes" type="button" role="tab" aria-controls="pills-map-codes" aria-selected="false">code</button>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                  <div class="tab-pane fade active show" id="pills-map-previews" role="tabpanel" aria-labelledby="pills-map-preview">
+                                    <div id="world-map" class=" rt-mb-48"></div>
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-map-codes" role="tabpanel" aria-labelledby="pills-map-code">
+                                    <!-- Editor  -->
+                                    <textarea class="editor">
+<div id="world-map" class=" rt-mb-48"></div>
+<script>
+    //map
+    $('#world-map').vectorMap({
+        map: 'world_mill_en',
+        normalizeFunction: 'polynomial',
+        hoverOpacity: 0.7,
+        hoverColor: false,
+        
+        regionStyle: {
+        initial: { fill: '#B6BFF3' },
+        hover: { fill: '#4452FF', 'fill-opacity': 1 },
+        },
+
+        backgroundColor: 'transparent',
+});
+</script>
+                                    </textarea>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                {% include "../templates/layout/header-footer/footer.html" %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

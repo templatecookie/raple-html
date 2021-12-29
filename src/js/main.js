@@ -286,6 +286,7 @@ $('input[name="sidebar"]').on('change', function(){
 
     backgroundColor: 'transparent',
   });
+  
   //all chart
   var barchartOne = {
     chart: {
