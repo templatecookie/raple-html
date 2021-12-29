@@ -259,14 +259,14 @@
       }
     }
 
-      // editor 
+  // editor 
   .editor { 
     color: #fff;
     resize: none;
     min-height: 180px;
     background-color: var(--primary-800);
 
-          /* width */
+      /* width */
       &::-webkit-scrollbar {
         width: 6px;
       }
@@ -287,11 +287,8 @@
       }
 
   }
-
-
   }
 
-  
   //  Icon 
   .icon-gallery { 
     display: grid;
