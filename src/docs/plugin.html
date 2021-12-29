@@ -353,6 +353,72 @@
 
                         </div>
                     </div>
+
+                    <div class="docu-section">
+                        <div class="docu-card">
+                            <div>
+                                <h2 class="docu-title">Chart</h2>
+                                <p>Relick Uses Javascript Apexchart - A Free And Open-Source Modern Calendar Library That Helps Developers To Create Beautiful And Interactive Visualizations For Web Pages. you have to need to files once css & js . All src files you get from  <span> <b>assets/css</b> </span> & <span> <b>assets/js</b> </span> </p>
+                            </div>
+                            <div class="docu-tabs">
+                                <ul class="nav nav-pills" id="pills-charts" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-charts-preview" data-bs-toggle="pill" data-bs-target="#pills-charts-previews" type="button" role="tab" aria-controls="pills-charts-previews" aria-selected="true">preview</button>
+                                  </li>
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-charts-code" data-bs-toggle="pill" data-bs-target="#pills-charts-codes" type="button" role="tab" aria-controls="pills-charts-codes" aria-selected="false">code</button>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                  <div class="tab-pane fade active show" id="pills-charts-previews" role="tabpanel" aria-labelledby="pills-charts-preview">
+                                    <div id="dount_chart"></div>
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-charts-codes" role="tabpanel" aria-labelledby="pills-charts-code">
+                                    <!-- Editor  -->
+                                    <textarea class="editor">
+<div id="dount_chart"></div>
+<script>
+      // pie chart home page
+   var donut_options = {
+        series: [90, 50, 200],
+          chart: {
+            width: 220,
+            type: 'donut',
+        },
+        colors: ['#FF9500', '#E84646', '#0E5FD9', ],
+        dataLabels: {
+          enabled: false,
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 220,
+            },
+            legend: {
+              show: false
+            }
+          }
+        }],
+        legend: {
+          show: false
+        }
+        };
+        var dountChart = new ApexCharts(document.querySelector("#dount_chart"), donut_options);
+        dountChart.render();
+    
+</script>
+                                    </textarea>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                            
+
+                        </div>
+                    </div>
+
                 </div>
 
                 {% include "../templates/layout/header-footer/footer.html" %}
