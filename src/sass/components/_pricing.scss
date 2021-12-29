@@ -79,6 +79,9 @@
           }
         }
       }
+      .dynamic-value:before {
+       color: var(--gray-100);
+      }
     }
   }
 
