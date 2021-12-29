@@ -304,5 +304,24 @@
     }
   }
 
+  // credits 
+  .resources-list { 
+    ul { 
+      padding-left: 16px;
+      li { 
+        list-style: disc;
+        color: var(--gray-500);
+        a  { 
+          @extend %text-para;
+          color: var(--primary-500);
+          text-transform: capitalize;
+          &:hover {
+            color: var(--primary-600);
+          }
+        }
+      }
+    }
+  }
+
 
   }
