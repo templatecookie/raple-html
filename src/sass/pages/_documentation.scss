@@ -42,6 +42,41 @@
         color: var(--primary-500);
       }
     }
+    .usage-file { 
+      display: flex;
+      @include max(640px) { 
+        flex-direction: column;
+      }
+      &__item { 
+        margin-right: 24px;
+        @include max(640px) { 
+          margin: 0px;
+          margin: 12px 0px;
+        }
+      }
+
+      ul { 
+        margin-top: 24px;
+        @include max(640px) { 
+          margin: 0px;
+        }
+        li { 
+          margin: 6px 0px;
+          &:nth-child(1) { 
+            list-style: none
+          }
+          h2 { 
+            @extend %text-two;
+            font-weight: 600;
+          }
+
+          p { 
+            @extend %text-para;
+            color: var(--primary-600);
+          }
+        }
+      }
+    }
   }
 
 
