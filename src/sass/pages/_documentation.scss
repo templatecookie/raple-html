@@ -253,11 +253,41 @@
         border: 1px solid transparent;
         &.active { 
           font-weight: 600;
-          border: 1px solid var(--primary-400);
-          background-color: var(--primary-500);
+          border: 1px solid white;
+          background-color: var(--primary-800);
         }
       }
     }
+
+      // editor 
+  .editor { 
+    color: #fff;
+    resize: none;
+    min-height: 180px;
+    background-color: var(--primary-800);
+
+          /* width */
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: var(--gray-100);
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+  }
+
 
   }
 
@@ -322,6 +352,8 @@
       }
     }
   }
+
+
 
 
   }
