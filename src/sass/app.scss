@@ -76,15 +76,15 @@
 
 // 1. Configuration and helpers
 @import
-        "abstracts/mixins",
-        "abstracts/variables",
+        "abstracts/variables", 
         "abstracts/functions", 
+        "abstracts/mixins",
         "abstracts/placeholder";
 
 // 2. Vendors
 @import 
-        "vendors/select2",
-        "vendors/bourbon/bourbon";
+        "vendors/bourbon/bourbon",
+        "vendors/select2";
 
 // 3. base css
 @import 
@@ -100,6 +100,7 @@
         "layout/iconbox",
         "layout/mega-menu",
         "layout/navtools",
+        "layout/sidebar",
         "layout/app-settings", 
         "layout/menu-responsive";
 
