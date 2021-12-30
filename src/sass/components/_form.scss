@@ -43,7 +43,7 @@ $primary_color: var(--primary-500);
 }
 textarea {
   height: auto !important;
-} 
+}
 select,
 .form-select {
   width: 100%;
@@ -687,8 +687,8 @@ select,
   padding: 5px 18px;
   text-transform: capitalize;
   &:hover {
-    color: #1d2026 !important;
-    background: #ffeee8;
+    color: white !important;
+    background-color: var(--primary-500);
   }
 }
 .fromGroup.horizontal-form {
