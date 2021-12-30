@@ -2,74 +2,147 @@
 
     Template Name: 'Relik-Admin Dashboard'
     Template URI:
-    Description:
-    Author: 
+    Description: ' '
+    Author: templatecookie
     Author URI: 
     Version: 1.0.0
     -------------------------------------------------
-     1.0 base css
-     1.1 layout css
-     1.2 components css
-     1.3 pages css
-     1.4 themes css
-   
+     1. Configuration and helpers
+      1.1 mixins
+      1.2 variables
+      1.3 functions
+      1.4 placeholder
+
+     2. Vendors
+      2.1 chart 
+      2.2 select2
+      2.3 bourbon
+
+     3. Base
+      3.1 base
+      3.2 typography
+      3.3 helpers
+
+     4. Layout
+      4.1 header
+      4.2 footer
+      4.3 menu 
+      4.4 iconbox
+      4.5 mega-menu
+      4.6 navtools
+      4.7 app-settings
+      4.8 menu-responsive 
+
+     5. Components 
+        5.1 accordian
+        5.2 button 
+        5.3 bs-dropdown
+        5.4 badge 
+        5.5 form 
+        5.6 tippyjs
+        5.7 card
+        5.8 breadcrumbs
+        5.9 pagination 
+        5.10 alert
+        5.11 label-card
+        5.12 file
+        5.13 file 
+        5.14 banner 
+        5.15 payment-card
+        5.16 invoice-list
+        5.17 payment-history
+        5.18 modal
+        5.19 profile
+        5.20 calender 
+        5.21 card-activity 
+        5.22 pricing 
+        5.23 waves 
+        5.24 faq 
+        5.25 tables 
+        5.26 active-visitor
+
+     6. Page-specific styles
+       6.1 home 
+       6.2 setting 
+       6.3 billing 
+       6.4 blank 
+       6.5 login 
+       6.6 styleguide 
+       6.7 file-manager
+       6.8 kanban-board
+       6.9 documentation 
+       6.10 presentation 
 **/
 
 // 1. Configuration and helpers
-@import "abstracts/variables", "abstracts/functions", "abstracts/mixins",
-  "abstracts/placeholder";
+@import
+        "abstracts/mixins",
+        "abstracts/variables",
+        "abstracts/functions", 
+        "abstracts/placeholder";
 
-// 2. Vendores
-@import "vendors/bourbon/bourbon", "vendors/chart", "vendors/select2";
+// 2. Vendors
+@import 
+        "vendors/select2",
+        "vendors/bourbon/bourbon";
 
-/*1.0 base css*/
-@import "base/base", "base/fonts", "base/typography", "base/helpers";
+// 3. base css
+@import 
+        "base/base",
+        "base/typography",
+        "base/helpers";
 
 // 4. Layout
-/*1.1 layout css*/
-@import "layout/header", "layout/footer", "layout/menu", "layout/iconbox",
-  "layout/mega-menu", "layout/navtools", "layout/sidebar.scss",
-  "layout/app-settings", "layout/menu-responsive";
+@import
+        "layout/header",
+        "layout/footer",
+        "layout/menu",
+        "layout/iconbox",
+        "layout/mega-menu",
+        "layout/navtools",
+        "layout/app-settings", 
+        "layout/menu-responsive";
 
 // 5. Components
-/*1.2 components css*/
-@import "components/accrodain", "components/button", "components/bs-dropdown",
-  "components/badge", "components/form", "components/tippyjs", "components/card",
-  "components/breadcrumbs", "components/breadcrumbs", "components/pagination",
-  "components/alert", "components/label-card", "components/file",
-  "components/banner", "components/payment-card", "components/invoice-list",
-  "components/payment-history", "components/modal", "components/profile",
-  "components/jquery-ui/calender", "components/info", "components/social-icon",
-  "components/events/calender", "components/card-activity", "components/pricing",
-  "components/waves", "components/faq", "components/tables",
-  "components/active-visitor";
+@import 
+        "components/accordian",
+        "components/button",
+        "components/bs-dropdown",
+        "components/badge",
+        "components/form",
+        "components/tippyjs",
+        "components/card",
+        "components/breadcrumbs",
+        "components/pagination",
+        "components/alert",
+        "components/label-card",
+        "components/file",
+        "components/banner",
+        "components/payment-card",
+        "components/invoice-list",
+        "components/payment-history",
+        "components/modal",
+        "components/profile",
+        "components/jquery-ui/calender",
+        "components/info",
+        "components/social-icon",
+        "components/events/calender",
+        "components/card-activity",
+        "components/pricing",
+        "components/waves",
+        "components/faq",
+        "components/tables",
+        "components/active-visitor";
 
 // 6. Page-specific styles
-/*1.3 pages css*/
-@import "pages/home", "pages/styleguide", "pages/file-manager", "pages/setting",
-  "pages/billing", "pages/blank", "pages/login", "pages/kanban-board", "pages/documentation", "pages/presentation";
-
-// 7. Themes
-/*1.4 themes css*/
-@import "themes/dark";
-
-//   body {
-//     @include breakpoint(xxl2) {
-//         background-color: magenta;
-//     }
-//     @include breakpoint(xxl) {
-//         background-color: gold;
-//     }
-//     @include breakpoint(lg) {
-//         background-color: purple;
-//     }
-//     @include breakpoint(md) {
-//         background-color: red;
-//     }
-//     @include breakpoint(xs) {
-//         background-color: yellow;
-//     }
-//     @include breakpoint(xs2) {
-//         background-color: pink;
-//     }
-// }
+@import 
+        "pages/home",
+        "pages/setting",
+        "pages/billing",
+        "pages/blank",
+        "pages/login",
+        "pages/styleguide",
+        "pages/file-manager",
+        "pages/kanban-board",
+        "pages/documentation",
+        "pages/presentation";
