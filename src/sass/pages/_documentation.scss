@@ -79,9 +79,8 @@
     }
 
     .layouts { 
-      @include max(767px) { 
-        margin-bottom: 24px;
-      }
+      margin-bottom: 24px;
+   
       &__img-wrapper { 
         width: 100%;
         height: 380px;
