@@ -79,9 +79,8 @@
     }
 
     .layouts { 
-      @include max(767px) { 
-        margin-bottom: 24px;
-      }
+      margin-bottom: 24px;
+   
       &__img-wrapper { 
         width: 100%;
         height: 380px;
@@ -97,8 +96,8 @@
       &__text-content {
         padding-top: 16px;
         h2 { 
-          font-size: 24px;
-          line-height: 36px;
+          font-size: 18px;
+          line-height: 28px;
           text-transform: capitalize;
         }
 
