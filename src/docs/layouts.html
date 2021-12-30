@@ -1,0 +1,67 @@
+{% extends "layout/layout-docs.html" %}
+{% set page_title = "Layouts & Theme" %}
+{% block content %}
+
+<main class="app-wrapper">
+    {% include "../templates/layout/header-footer/doc-appheader.html" %} {% include "../templates/layout/header-footer/doc-sidebar.html" %} {% include "../templates/layout/header-footer/doc-topnav.html" %}
+
+    <div class="content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 rt-mb-25">
+                        {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+                    </div>
+                </div>
+
+                <div class="docu">
+                    <div class="docu-section">
+                        <div class="docu-card">
+                            <div class="mb-5">
+                                <h2 class="docu-title">Layout</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione adipisci vitae quam labore excepturi magni in vel iure error, id optio dolor eos alias assumenda quasi omnis illo numquam accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sed vel totam asperiores nulla ratione nesciunt quis reprehenderit nam facere.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="layouts">
+                                        <div class="layouts__img-wrapper">
+                                            <img src="../assets/images/all-img/verticle.png" alt="layout-img" class="img-fluid">
+                                        </div>
+                                        <div class="layouts__text-content">
+                                            <h2>Verticle Sidebar</h2>
+                                            <p>
+                                                By Default if You want to set verticle sidebar , you have to add  attribute <span> ( data-layout )  
+                                                </span> inside html.
+                                                attributes value would be verticle, means <span>data-layout="verticle"</span>. That's it   
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="layouts">
+                                        <div class="layouts__img-wrapper">
+                                            <img src="../assets/images/all-img/horizontal.png" alt="layout-img" class="img-fluid">
+                                        </div>
+                                        <div class="layouts__text-content">
+                                            <h2>Horizontal Sidebar</h2>
+                                            <p>
+                                                By Default if You want to set verticle sidebar , you have to add  attribute <span> ( data-layout )  
+                                                </span> inside html.
+                                                attributes value would be verticle, means <span>data-layout="horizontal"</span>. That's it   
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}
