@@ -922,7 +922,9 @@ $('input[name="sidebar"]').on('change', function(){
   });
 
 // 9. calender 
+if(document.getElementsByClassName('date-picker-calender')) { 
   $(".date-picker-calender").datepicker();
+}
 
 // 10. map
 if(document.getElementById("world-map")) { 
