@@ -8,9 +8,22 @@
   @include flex-width(33.33333333%);
   
 }
+.col-only-5{
+  @include flex-width(41.66666667%);
+  
+}
+.col-only-6{
+  @include flex-width(50%);
+  
+}
 .col-only-9{
   @include flex-width(66.66666667%);
   
+}
+@media (max-width: 1552px){
+  .col-only-md-6{
+    @include flex-width(50%);
+  }
 }
 .sidebar-collapse{
   .col-only-4 {
