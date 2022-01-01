@@ -1033,6 +1033,18 @@ $('#close').onclick = function() {
     $('#console').style.display = "none";
 }
 
+// presentioton 
+$(window).scroll(function(){
+  if ($(window).scrollTop() >= 120) {
+  $('.p-header .navbar').addClass('fixed');
+  }
+  else {
+  $('.p-header .navbar').removeClass('fixed');
+  }
+});
+
+// Animate on scroll 
+AOS.init();
 
 
 
