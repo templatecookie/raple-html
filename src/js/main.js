@@ -984,6 +984,11 @@ $('#close').onclick = function() {
     $('#console').style.display = "none";
 }
 
+
+
+
+
+
   
 
 })(jQuery);
