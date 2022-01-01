@@ -24,6 +24,9 @@
   .col-only-md-6{
     @include flex-width(50%);
   }
+  .col-only-md-12{
+    @include flex-width(100%);
+  }
 }
 .sidebar-collapse{
   .col-only-4 {
