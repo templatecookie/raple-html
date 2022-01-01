@@ -24,13 +24,6 @@
     @include flex-width(100%);
   }
 }
-.sidebar-collapse {
-  .col-only-4 {
-    @media (max-width: 1552px) {
-      @include flex-width(25%);
-    }
-  }
-}
 #world-map {
   height: 252px;
   width: 100%;
