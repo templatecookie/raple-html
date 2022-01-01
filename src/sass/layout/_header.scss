@@ -528,4 +528,12 @@
       display: block;
     }
   }
+  .dropdown.dropdown-flag .dropdown-toggle{
+    background-color: var(--gray-800);
+    color: var(--gray-300);
+  }
+  .dropdown.dropdown-flag .dropdown-toggle::after{
+    color: var(--gray-300);
+  }
+  
 }
