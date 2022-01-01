@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="row grid">
-          <div class="col col-only-4 ">
+          <div class="col col-only-4 col-only-md-6 ">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex justify-content-between rt-mb-24">
@@ -37,7 +37,7 @@
               </div>
             </div>
           </div>
-          <div class="col col-only-4 ">
+          <div class="col col-only-4 col-only-md-6  ">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex  justify-content-between rt-mb-24">
@@ -56,7 +56,7 @@
               </div>
             </div>
           </div>
-          <div class="col col-only-4 ">
+          <div class="col col-only-4 col-only-md-6 ">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex  justify-content-between rt-mb-48">
@@ -74,7 +74,7 @@
               </div>
             </div>
           </div>
-          <div class="col col-only-4 ">
+          <div class="col col-only-4  col-only-md-6 ">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex  justify-content-between rt-mb-24">
@@ -160,7 +160,7 @@
         </div>
        
         <div class="row">
-          <div class="col col-only-4 col-sm-6">
+          <div class="col col-only-4 col-only-md-6">
             <div class="card">
               <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
                 <div>Browser Overview</div>
@@ -227,19 +227,7 @@
               </div>
             </div>
           </div>
-          <div class="col col-only-4 col-sm-6 order-xxl-3">
-            <div class="card">
-              <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
-                <div>Devices Overview</div>
-              </div>
-              <div class="card-body pb-0">
-                <ul>
-                  {% include "../templates/components/device-list.html" %}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-xxl-6">
+          <div class="col col-only-6">
             <div class="card">
               <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
                 <div>User Location</div>
@@ -279,10 +267,23 @@
               </div>
             </div>
           </div>
+          <div class="col col-only-4 col-only-md-12">
+            <div class="card">
+              <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
+                <div>Devices Overview</div>
+              </div>
+              <div class="card-body pb-0">
+                <ul>
+                  {% include "../templates/components/device-list.html" %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          
           
         </div>
         <div class="row">
-          <div class="col-xxl-4 col-xl-6 col-md-6">
+          <div class=" col col-only-3">
             <div class="card">
               <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header border-0">
                 <div>Social Media Traffic</div>
@@ -374,7 +375,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xxl-3 col-xl-6 col-md-6">
+          <div class="col  col-only-4">
             <div class="card">
               <div class="card-header">
                 Calendar
@@ -384,7 +385,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xxl-5 col-xl-12">
+          <div class="col  col-only-5">
             <div class="card">
               <div class="card-header">
                 Operating System
