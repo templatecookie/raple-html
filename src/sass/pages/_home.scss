@@ -119,7 +119,7 @@
   &-item {
     flex: 0 0 33.33%;
     text-align: center;
-    margin: 16px 0;
+    margin: 15px 0;
     @include max(600px) {
       flex: 0 0 50%;
     }
