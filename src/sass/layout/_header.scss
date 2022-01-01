@@ -36,15 +36,13 @@
   }
   .collapse-in-logo {
     display: none;
+    
+
   }
 }
 .brand-logo {
-  @include breakpoint(md) {
-    max-width: 100px;
-    margin-right: 30px;
-  }
-  @include breakpoint(xs) {
-    max-width: 90px;
+  @include breakpoint(lg){
+    display: none;
   }
 }
 .logo-segment {
@@ -372,6 +370,7 @@
 .logo-white {
   display: none;
 }
+
 [data-sidebar="black"] {
   .logo-segment {
     background-color: var(--gray-900);

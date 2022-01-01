@@ -23,12 +23,22 @@
 @media (max-width: 1552px){
   .col-only-md-6{
     @include flex-width(50%);
+  } 
+  .col-only-md-7{
+    @include flex-width(58.33333333%);
+  } 
+  .col-only-md-5{
+    @include flex-width(41.66666667%);
   }
   .col-only-md-12{
     @include flex-width(100%);
   }
 }
-
+@media (max-width: 768px){
+  .col-only-xs-12{
+    @include flex-width(100%);
+  }
+}
 #world-map {
   height: 252px;
   width: 100%;
