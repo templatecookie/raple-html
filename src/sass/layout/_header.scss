@@ -40,7 +40,13 @@
 
   }
 }
-.brand-logo {
+.logo-icon{
+  display: none;
+  @include breakpoint(lg){
+    display: block;
+  }
+}
+.logo-black{
   @include breakpoint(lg){
     display: none;
   }
