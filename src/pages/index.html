@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="row grid">
-          <div class="col col-only-4 ">
+          <div class="col col-only-4 col-only-xs-12 col-only-md-6 ">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex justify-content-between rt-mb-24">
@@ -37,7 +37,7 @@
               </div>
             </div>
           </div>
-          <div class="col col-only-4 ">
+          <div class="col col-only-4 col-only-xs-12 col-only-md-6  ">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex  justify-content-between rt-mb-24">
@@ -56,7 +56,7 @@
               </div>
             </div>
           </div>
-          <div class="col col-only-4 ">
+          <div class="col col-only-4 col-only-xs-12 col-only-md-6 ">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex  justify-content-between rt-mb-48">
@@ -74,7 +74,7 @@
               </div>
             </div>
           </div>
-          <div class="col col-only-4 ">
+          <div class="col col-only-4 col-only-xs-12  col-only-md-6 ">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex  justify-content-between rt-mb-24">
@@ -94,7 +94,7 @@
           </div>
         </div>
         <div class="row">
-          <div class=" col  col-only-9 ">
+          <div class=" col  col-only-9  col-only-md-7 col-only-xs-12 ">
             <div class="card">
               <div class="d-flex justify-content-between flex-sm-row flex-column align-items-center card-header">
                 <div>User Overview</div>
@@ -111,7 +111,7 @@
               </div>
             </div>
           </div>
-          <div class="col col-only-3 ">
+          <div class="col col-only-3 col-only-md-5 col-only-xs-12 ">
             <div class="card">
               <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
                 <div>Most Visited Page</div>
@@ -160,7 +160,7 @@
         </div>
        
         <div class="row">
-          <div class="col col-only-4 col-sm-6">
+          <div class="col col-only-4 col-only-xs-12 col-only-md-6">
             <div class="card">
               <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
                 <div>Browser Overview</div>
@@ -174,21 +174,21 @@
               </div>
               <div class="card-body pb-0">
                 <div class="row">
-                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                  <div class="col-6 text-center rt-mb-28">
                     <div class="borwser-img rt-mb-16">
                       <img src="assets/images/all-img/chrome.svg" alt="" draggable="false">
                     </div>
                     <div class="body-font-4  text-black font-semibold rt-mb-4">Google Chrome</div>
                     <div class="body-font-4  text-gray ">54% User</div>
                   </div>
-                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                  <div class="col-6 text-center rt-mb-28">
                     <div class="borwser-img rt-mb-16">
                       <img src="assets/images/all-img/firefox.svg" alt="" draggable="false">
                     </div>
                     <div class="body-font-4  text-black font-semibold rt-mb-4">Firefox</div>
                     <div class="body-font-4  text-gray ">23% User</div>
                   </div>
-                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                  <div class="col-6 text-center rt-mb-28">
                     <div class="borwser-img rt-mb-16">
                       <img src="assets/images/all-img/edge.svg" alt="" draggable="false">
                     </div>
@@ -197,7 +197,7 @@
                     <div class="body-font-4  text-gray ">19% User</div>
 
                   </div>
-                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                  <div class="col-6 text-center rt-mb-28">
                     <div class="borwser-img rt-mb-16">
                       <img src="assets/images/all-img/breve.svg" alt="" draggable="false">
                     </div>
@@ -206,7 +206,7 @@
                     <div class="body-font-4  text-gray ">11% User</div>
 
                   </div>
-                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                  <div class="col-6 text-center rt-mb-28">
                     <div class="borwser-img rt-mb-16">
                       <img src="assets/images/all-img/safari.svg" alt="" draggable="false">
                     </div>
@@ -215,7 +215,7 @@
                     <div class="body-font-4  text-gray ">7% User</div>
 
                   </div>
-                  <div class="col-sm-6 col-12 text-center rt-mb-28">
+                  <div class="col-6 text-center rt-mb-28">
                     <div class="borwser-img rt-mb-16">
                       <img src="assets/images/all-img/opera.svg" alt="" draggable="false">
                     </div>
@@ -227,19 +227,7 @@
               </div>
             </div>
           </div>
-          <div class="col col-only-4 col-sm-6 order-xxl-3">
-            <div class="card">
-              <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
-                <div>Devices Overview</div>
-              </div>
-              <div class="card-body pb-0">
-                <ul>
-                  {% include "../templates/components/device-list.html" %}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-xxl-6">
+          <div class="col col-only-6 col-only-xs-12">
             <div class="card">
               <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
                 <div>User Location</div>
@@ -279,10 +267,23 @@
               </div>
             </div>
           </div>
+          <div class="col col-only-4 col-only-xs-12 col-only-md-12">
+            <div class="card">
+              <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
+                <div>Devices Overview</div>
+              </div>
+              <div class="card-body pb-0">
+                <ul>
+                  {% include "../templates/components/device-list.html" %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          
           
         </div>
         <div class="row">
-          <div class="col-xxl-4 col-xl-6 col-md-6">
+          <div class=" col col-only-3 col-only-md-6 col-only-xs-12">
             <div class="card">
               <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header border-0">
                 <div>Social Media Traffic</div>
@@ -294,14 +295,14 @@
                   </select>
                 </div>
               </div>
-              <div class="card-body pt-0">
+              <div class="card-body p-0">
                 <div class="table-responsive">
                 <table class="table info-table mb-0">
                   <thead >
-                    <tr class=" bg-gray-50 border-0">
-                      <td class="f-size-11 text-gray-700 font-medium"  colspan="2">Network</td>
-                      <td class="f-size-11 text-gray-700 font-medium">Visitors</td>
-                      <td class="f-size-11 text-gray-700 font-medium">Followers</td>
+                    <tr>
+                      <th colspan="2">Network</th>
+                      <th>Visitors</th>
+                      <th>Followers</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -374,74 +375,72 @@
               </div>
             </div>
           </div>
-          <div class="col-xxl-3 col-xl-6 col-md-6">
+          <div class="col  col-only-4 col-only-xs-12 col-only-md-6">
             <div class="card">
               <div class="card-header">
                 Calendar
               </div>
-              <div class="card-body">
-                <div class="date-picker-calender rt-pt-15"></div>
+              <div class="card-body body-calendar">
+                <div class="date-picker-calender rt-pt-10"></div>
               </div>
             </div>
           </div>
-          <div class="col-xxl-5 col-xl-12">
+          <div class="col  col-only-5 col-only-md-12">
             <div class="card">
               <div class="card-header">
                 Operating System
               </div>
-              <div class="card-body">
-                <div class="operating-system-wrap">
-                    <div class="operating-system-item">
-                        <div class="operating-system-thumb">
-                          <img src="assets/images/svg/windows.svg" alt="">
-                        </div>
-                        <div class="operating-system-data">
-                          <a href="#">Computer & Laptop</a>
-                          <h4>Windows</h4>
-                          <p>57% • 68,412 Users</p>
-                        </div>
-                    </div>
-                    <div class="operating-system-item">
+              <div class="operating-system-wrap">
+                  <div class="operating-system-item">
                       <div class="operating-system-thumb">
-                        <img src="assets/images/svg/MacOS.svg" alt="">
+                        <img src="assets/images/svg/windows.svg" alt="">
                       </div>
                       <div class="operating-system-data">
                         <a href="#">Computer & Laptop</a>
-                        <h4>macOS</h4>
+                        <h4>Windows</h4>
                         <p>57% • 68,412 Users</p>
                       </div>
+                  </div>
+                  <div class="operating-system-item">
+                    <div class="operating-system-thumb">
+                      <img src="assets/images/svg/MacOS.svg" alt="">
                     </div>
-                    <div class="operating-system-item">
-                      <div class="operating-system-thumb">
-                        <img src="assets/images/svg/iOS.svg" alt="">
-                      </div>
-                      <div class="operating-system-data">
-                        <a href="#">Mobile & Tablet</a>
-                        <h4>iOS</h4>
-                        <p>57% • 68,412 Users</p>
-                      </div>
+                    <div class="operating-system-data">
+                      <a href="#">Computer & Laptop</a>
+                      <h4>macOS</h4>
+                      <p>57% • 68,412 Users</p>
                     </div>
-                    <div class="operating-system-item">
-                      <div class="operating-system-thumb">
-                        <img src="assets/images/svg/Android.svg" alt="">
-                      </div>
-                      <div class="operating-system-data">
-                        <a href="#">Mobile & Tablet</a>
-                        <h4>Android</h4>
-                        <p>57% • 68,412 Users</p>
-                      </div>
+                  </div>
+                  <div class="operating-system-item">
+                    <div class="operating-system-thumb">
+                      <img src="assets/images/svg/iOS.svg" alt="">
                     </div>
-                    <div class="operating-system-item">
-                      <div class="operating-system-thumb">
-                        <img src="assets/images/svg/Ubuntu.svg" alt="">
-                      </div>
-                      <div class="operating-system-data">
-                        <a href="#">Computer & Laptop</a>
-                        <h4>Ubuntu</h4>
-                        <p>57% • 68,412 Users</p>
-                      </div>
+                    <div class="operating-system-data">
+                      <a href="#">Mobile & Tablet</a>
+                      <h4>iOS</h4>
+                      <p>57% • 68,412 Users</p>
                     </div>
-                </div>
+                  </div>
+                  <div class="operating-system-item">
+                    <div class="operating-system-thumb">
+                      <img src="assets/images/svg/Android.svg" alt="">
+                    </div>
+                    <div class="operating-system-data">
+                      <a href="#">Mobile & Tablet</a>
+                      <h4>Android</h4>
+                      <p>57% • 68,412 Users</p>
+                    </div>
+                  </div>
+                  <div class="operating-system-item">
+                    <div class="operating-system-thumb">
+                      <img src="assets/images/svg/Ubuntu.svg" alt="">
+                    </div>
+                    <div class="operating-system-data">
+                      <a href="#">Computer & Laptop</a>
+                      <h4>Ubuntu</h4>
+                      <p>57% • 68,412 Users</p>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>

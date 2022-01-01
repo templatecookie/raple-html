@@ -5,10 +5,16 @@
     box-shadow: none;
     min-width: 100%;
   }
+  .ui-datepicker th {
+    padding-top: 15px;
+  }
 }
 
 tr {
   background-color: white;
+}
+.ui-datepicker table {
+  margin: 0;
 }
 .ui-widget.ui-widget-content {
   border: none;

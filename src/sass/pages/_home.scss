@@ -4,38 +4,74 @@
     @include flex-width(33.33333333%);
   }
 }
-.col-only-3{
+.col-only-3 {
   @include flex-width(33.33333333%);
-  
 }
-.col-only-9{
+.col-only-5 {
+  @include flex-width(41.66666667%);
+}
+.col-only-6 {
+  @include flex-width(50%);
+}
+.col-only-9 {
   @include flex-width(66.66666667%);
-  
 }
-.sidebar-collapse{
-  .col-only-4 {
-    @media (max-width: 1552px){
-      @include flex-width(25%);
-    }
+@media (max-width: 1552px) {
+  .col-only-md-6 {
+    @include flex-width(50%);
+  } 
+  .col-only-md-7{
+    @include flex-width(58.33333333%);
+  } 
+  .col-only-md-5{
+    @include flex-width(41.66666667%);
+  }
+  .col-only-md-12 {
+    @include flex-width(100%);
+  }
+}
+@media (max-width: 768px){
+  .col-only-xs-12{
+    @include flex-width(100%);
   }
 }
 #world-map {
   height: 252px;
   width: 100%;
 }
-.info-table {
-  tbody,
-  thead,
-  tr,
-  td,
-  th {
-    border: none !important;
+table.info-table {
+  thead {
+    tr {
+      background-color: rgba(245, 246, 247, 0.7);
+      th {
+        border: none !important;
+        padding: 5px 24px;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: var(--gray-700);
+        white-space: nowrap;
+      }
+    }
   }
-  tr {
-    padding: 12px 0;
-    border-bottom: 1px solid #e5e7e8 !important;
+  tbody {
+    tr {
+      border-bottom: 1px solid rgba(229, 231, 232, 0.6);
+      &:last-child {
+        border: 0;
+      }
+      td {
+        padding: 12px 24px;
+        border: none;
+        white-space: nowrap;
+      }
+    }
   }
 }
+
+// tr {
+//   padding: 12px 0;
+//   border-bottom: 1px solid #e5e7e8 !important;
+// }
 
 //most visited section
 .donut-chart-wrap {
@@ -126,6 +162,7 @@
   &-wrap {
     display: flex;
     flex-wrap: wrap;
+    padding: 20px 32px 20px;
     @include max(400px) {
       display: block;
     }
@@ -133,13 +170,13 @@
   &-item {
     flex: 0 0 33.33%;
     text-align: center;
-    margin: 16px 0;
+    margin: 18px 0;
     @include max(600px) {
       flex: 0 0 50%;
     }
   }
   &-thumb {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
   }
   &-data {
     a {
@@ -147,11 +184,10 @@
       font-size: 10px;
       line-height: 100%;
       color: var(--primary-500);
-      margin-bottom: 4px;
       text-transform: uppercase;
     }
     h4 {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
