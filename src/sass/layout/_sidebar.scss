@@ -274,7 +274,8 @@
   }
   .top-navbar {
     background-color: #fff;
-    padding: 0px 180px;
+    padding-left: 154px;
+    padding-right: 180px;
     display: block;
     @include breakpoint(xxl2) {
       padding-left: 80px;

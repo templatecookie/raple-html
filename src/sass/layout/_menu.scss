@@ -28,13 +28,7 @@
         font-size: 20px;
         margin-right: 10px;
       }
-      @include breakpoint(xxl) {
-        padding: 0 14px;
-      }
-      @include breakpoint(xl) {
-        padding: 0 5px;
-        // font-size: 15px;
-      }
+     
       &:hover {
         text-decoration: none;
       }
@@ -85,7 +79,7 @@
 }
 
 .main-menu > ul > li.menu-item-has-children.open > a:after {
-  content: "\eab9";
+  content: "\f103";
 }
 
 /*sub menu*/
@@ -158,14 +152,11 @@
   font-family: "flaticon";
   right: 15px;
   font-size: 12px;
-  @include breakpoint(md) {
-    content: "\eab2";
-    right: 15px;
-  }
+  
 }
 
 .main-menu ul ul li.menu-item-has-children.open > a:after {
-  content: "\eab9";
+  content: "\f103";
 }
 
 .main-menu ul ul {
@@ -287,10 +278,14 @@ padding-bottom: 12px;
 
 .rt-mobile-menu-close {
   display: none;
-  @extend .mblnav-close;
-  @include hw(30px);
-  right: 10px;
-  font-size: 12px;
+
+  // @include hw(30px);
+  // background: var(--primary-500);
+  // color: white;
+  // border-radius: 50%;
+  // text-align: center;
+  // font-size: 16px;
+  cursor: pointer;
   @include breakpoint(lg) {
     display: block;
   }
