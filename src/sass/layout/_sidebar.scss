@@ -158,6 +158,9 @@
     @include breakpoint(md) {
       display: block;
     }
+    @include breakpoint(md){
+      width: 70px;
+    }
   }
   .brand-logo {
     display: none;

@@ -144,6 +144,10 @@
   min-width: 205px;
   &.min-372 {
     min-width: 372px;
+    @include breakpoint(xs){
+      min-width: 100%;
+      max-width: 280px;
+    }
   }
 
   .PopoverContent {
@@ -192,6 +196,17 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+.notify-lists{
+  .rt-single-icon-box{
+    @include breakpoint(xs){
+      flex-direction: column !important;
+      .icon-thumb{
+        margin-bottom: 12px;
+      }
     }
   }
 }

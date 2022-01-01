@@ -666,11 +666,16 @@
 
 
 // 3. Sidebar 
-
+var SidebarOpenrIcon = document.getElementById("opener_icon");
   $(".opener_sidebar").on("click", function (e) {
-    e.preventDefault(),
-      $("body").toggleClass("sidebar-collapse"),
-      992 <= $(window).width()
+    e.preventDefault();
+   
+    if(window.innerWidth < 992){
+     
+      SidebarOpenrIcon.classList.toggle("has-cross");
+      
+    }
+      $("body").toggleClass("sidebar-collapse"),992 <= $(window).width()
         ? $("body").toggleClass("vertical-collpsed")
         : $("body").removeClass("vertical-collpsed");
   });
