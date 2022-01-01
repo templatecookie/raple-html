@@ -450,3 +450,7 @@
       transform: scale3d(1, 1, 1);
   }
 }
+
+.simplebar-content-wrapper[style]{
+  padding-right: 0px !important;
+}
