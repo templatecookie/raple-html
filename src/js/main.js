@@ -613,8 +613,11 @@
     }
   };
 
-  var dountChart = new ApexCharts(document.querySelector("#dount_chart"), donut_options);
-  dountChart.render();
+  
+  if(document.querySelector("#dount_chart")) { 
+    var dountChart = new ApexCharts(document.querySelector("#dount_chart"), donut_options);
+    dountChart.render();
+  }
 
 
 
@@ -919,9 +922,10 @@ $('input[name="sidebar"]').on('change', function(){
   });
 
 // 9. calender 
-  $(".date-picker-calender").datepicker(),
+  $(".date-picker-calender").datepicker();
 
 // 10. map
+if(document.getElementById("world-map")) { 
   $('#world-map').vectorMap({
     map: 'world_mill_en',
     normalizeFunction: 'polynomial',
@@ -936,6 +940,7 @@ $('input[name="sidebar"]').on('change', function(){
     backgroundColor: 'transparent',
   });
     
+}
  
   
 
