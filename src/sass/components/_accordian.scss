@@ -30,10 +30,6 @@
   }
 }
 
-// .accordion-button:not(.collapsed)::after {
-//   transform: rotate(180deg);
-// }
-
 .accordion-button::after {
   background-size: 14px;
   background-position: center center;
@@ -43,7 +39,3 @@
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 1L6 6L1 1' stroke='%23191B1C' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   transform: rotate(180deg);
 }
-
-// .accordion-button:not(.collapsed) + .accordion.style-two {
-//   box-shadow: 0px 12px 48px rgba(0, 44, 109, 0.1);
-// }

@@ -5,7 +5,8 @@
         valuePercent: '23%',
         usercount : '698,723 Users',
         increaseCount : '1.2% Increase',
-        increaseIcon: 'ph-arrow-up'
+        increaseIcon: 'ph-arrow-up',
+        "text_color":"text-success-500"
       
     },
     {
@@ -14,7 +15,8 @@
         valuePercent: '23%',
         usercount : '698,723 Users',
         increaseCount : '2.1% Decrease',
-        increaseIcon: 'ph-arrow-down'
+        increaseIcon: 'ph-arrow-down',
+        "text_color":"text-danger-500"
       
     },
     {
@@ -23,7 +25,8 @@
         valuePercent: '19%',
         usercount : '+68,412 Users',
         increaseCount : '1.7% Increase',
-        increaseIcon: 'ph-arrow-up'
+        increaseIcon: 'ph-arrow-up',
+        "text_color":"text-success-500"
       
     },
     {
@@ -32,7 +35,8 @@
         valuePercent: '11%',
         usercount : '16,716 Users',
         increaseCount : '2.9% Increase',
-        increaseIcon: 'ph-arrow-up'
+        increaseIcon: 'ph-arrow-up',
+        "text_color":"text-success-500"
       
     }
     
@@ -48,7 +52,7 @@
             <span>.</span>
             <span>{{item.usercount}}</span>
           </div>
-          <div class=" text-success-500 body-font-4">
+          <div class=" {{item.text_color}} body-font-4 rt-mb-8">
               <span class=" rt-mr-4"><i class="{{item.increaseIcon}}"></i></span>{{item.increaseCount}}
             </div>
         </div>
