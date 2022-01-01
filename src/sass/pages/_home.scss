@@ -4,17 +4,15 @@
     @include flex-width(33.33333333%);
   }
 }
-.col-only-3{
+.col-only-3 {
   @include flex-width(33.33333333%);
-  
 }
-.col-only-9{
+.col-only-9 {
   @include flex-width(66.66666667%);
-  
 }
-.sidebar-collapse{
+.sidebar-collapse {
   .col-only-4 {
-    @media (max-width: 1552px){
+    @media (max-width: 1552px) {
       @include flex-width(25%);
     }
   }
@@ -24,12 +22,9 @@
   width: 100%;
 }
 .info-table {
-  tbody,
-  thead,
-  tr,
-  td,
   th {
     border: none !important;
+    padding: 12px 24px;
   }
   tr {
     padding: 12px 0;
