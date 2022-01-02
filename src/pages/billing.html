@@ -97,12 +97,12 @@
                 <div class="payment-card-footer">
                   <p>Kevin Gilbert</p>
                   <div class="card-dropdown">
-                    <button class="dots-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"><img src="assets/images/svg/dots.svg"
+                    <button class="dots-btn" id="dropdownMenuButton5" data-bs-toggle="dropdown"><img src="assets/images/svg/dots.svg"
                         alt=""></button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
                       <li><a class="dropdown-item" href="#">Download</a></li>
                       <li><a class="dropdown-item" href="#">Print</a></li>
-                      <li><a class="dropdown-item" href="#">Delete</a></li>
+                      <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
                     </ul>
                   </div>
                 </div>
@@ -126,12 +126,12 @@
                 <div class="payment-card-footer">
                   <p>Kevin Gilbert</p>
                   <div class="card-dropdown">
-                    <button class="dots-btn" id="dropdownMenuButton2" data-bs-toggle="dropdown"><img src="assets/images/svg/dots.svg"
+                    <button class="dots-btn" id="dropdownMenuButton6" data-bs-toggle="dropdown"><img src="assets/images/svg/dots.svg"
                         alt=""></button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
                       <li><a class="dropdown-item" href="#">Download</a></li>
                       <li><a class="dropdown-item" href="#">Print</a></li>
-                      <li><a class="dropdown-item" href="#">Delete</a></li>
+                      <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
                     </ul>
                   </div>
                 </div>
@@ -140,7 +140,7 @@
               <div class="payment-card-add" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <img src="assets/images/svg/pluscircle.svg" alt="">
                 <p>Add new card</p>
-              </div>
+              </div> 
             </div>
           </div>
         </div>
@@ -170,8 +170,8 @@
                   <td>Premium (Yearly)</td>
                   <td>$129.99 USD</td>
                   <td>
-                    <div class="dropdown-wrap ">
-                      <button type="button" class="btn bg-primary-50 rounded-circle icon-btn" id="dropdownMenuButton1"
+                    <div class="dropdown-wrap">
+                      <button type="button" class="btn bg-primary-50 rounded-circle icon-btn" id="dropdownMenuButton7"
                         data-bs-toggle="dropdown">
                         <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -180,7 +180,7 @@
                         </svg>
           
                       </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
                         <li>
                           <a class="dropdown-item" href="#">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -216,7 +216,7 @@
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">
+                          <a class="dropdown-item delete-content" href="#">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -294,7 +294,7 @@
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">
+                          <a class="dropdown-item delete-content" href="#">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -372,7 +372,7 @@
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">
+                          <a class="dropdown-item delete-content" href="#">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -450,7 +450,7 @@
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">
+                          <a class="dropdown-item delete-content" href="#">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -483,10 +483,8 @@
   </div>
 </main>
 
-
-
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1"  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="card m-0">
@@ -511,7 +509,7 @@
                   <div class="col-lg-6">
                     <div class="fromGroup mb-3">
                       <label>Expire Date</label>
-                      <input class="form-control" type="text" placeholder="MM / YY">
+                      <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
                     </div>
                   </div>
                 </div>

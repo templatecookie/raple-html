@@ -1,0 +1,252 @@
+{% extends "layout/layout-docs.html" %}
+{% set page_title = "Getting Started" %}
+{% block content %}
+
+<main class="app-wrapper">
+    {% include "../templates/layout/header-footer/doc-appheader.html" %} {% include "../templates/layout/header-footer/doc-sidebar.html" %} {% include "../templates/layout/header-footer/doc-topnav.html" %}
+
+    <div class="content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 rt-mb-25">
+                        {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+                    </div>
+                </div>
+
+                <div class="docu">
+                    <!-- Quick Start  -->
+                    <div class="docu-section"  >
+                        <div class="docu-card" >
+                            <h2 class="docu-title">Quick Start</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum dignissimos eos, dicta autem incidunt qui quisquam reiciendis fuga aperiam nesciunt sequi natus ipsa possimus labore dolorem maiores dolore ducimus mollitia ea tempora est necessitatibus. Qui tempora delectus eveniet expedita, minima laborum veritatis! At tenetur magni ratione modi voluptatibus iste quis explicabo harum architecto distinctio aut consequatur, possimus, mollitia error veniam?
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Environment Setup  -->
+                    <div class="docu-section" id="environment">
+                        <div class="docu-card">
+                            <h2 class="docu-title">Environment Setup</h2>
+                            <div>
+                                <p>To use our build system and run our documentation locally, you’ll need a copy of Tabler’s source files. Follow the steps below:</p>
+                            </div>
+                            <div class="environment">
+                                <ol>
+                                    <li>
+                                        <p>install <span>package dependecies</span> via yarn or npm</p>
+                                    </li>
+                                    <li>
+                                        <p> In the comand line run <span>gulp</span>  </p>
+                                    </li>
+                                    <li>
+                                        <p>open in <span>http://localhost:3000/</span> in your browser </p>
+                                    </li>
+                                    <li>
+                                        <p>Any change in <span>/src</span>  directory will build the aplication and refresh the page </p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Folder Structures  -->
+                    <div class="docu-section" id="folder" >
+                        <div class="docu-card">
+                            <h2 class="docu-title">Folder Structure</h2>
+                            <div class="folder-structure">
+                                <pre>
+├── Relick
+    ├── dist
+        ├── assets
+           ├── css
+           ├── fonts 
+           ├── images
+           ├── js
+        ├── docs
+            ├── content.html
+            ├── index.html 
+            ├── started.html 
+        ├── accordion.html
+        ├── alerts.html
+        ├── badge.html
+        ├── banner.html
+        ├── billing.html
+        ├── blank-page.html
+        ├── button.html
+        ├── checkbox.html
+        ├── component-card.html
+        ├── button.html
+        ├── checkbox.html
+        ├── component-card.html
+        ├── component-table.html
+        ├── component-widget.html
+        ├── documentation-started.html
+        ├── faq.html
+        ├── file-manager-new.html
+        ├── file-manager.html 
+        ├── file.html 
+        ├── form-elements.html 
+        ├── full-calendar.html 
+        ├── index.html 
+        ├── input.html 
+        ├── invoice-detail.html 
+        ├── invoice.html 
+        ├── kanban-board.html 
+        ├── login.html 
+        ├── pagination.html 
+        ├── presentation.html 
+        ├── pricing-plans.html 
+        ├── profile.html 
+        ├── radio.html 
+        ├── registration.html 
+        ├── setting.html 
+        ├── sitemap.html 
+        ├── styleguide.html 
+        ├── switch.html 
+        |── ti-calendar.html
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- colors  -->
+                    <div class="docu-section" id="colors" >
+                        <div class="docu-card">
+                            <h2 class="docu-title">Colors</h2>
+                            <div class="colors-plate">
+                                <div class="colors-plate__item black">
+                                    <p>#1B1F21</p>
+                                </div>
+                                <div class="colors-plate__item blue">
+                                    <p>#0E5FD9</p>
+                                </div>
+                                <div class="colors-plate__item yellow">
+                                    <p>#FFF266</p>
+                                </div>
+                                <div class="colors-plate__item green ">
+                                    <p>#0FAF62</p>
+                                </div>
+                                <div class="colors-plate__item orange ">
+                                    <p>#FF9500</p>
+                                </div>
+                                <div class="colors-plate__item red ">
+                                    <p>#E84646</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Typography  -->
+                    <div class="docu-section" id="typography" >
+                        <div class="docu-card">
+                            <h2 class="docu-title">Typography</h2>
+                          <div class="docu-tabs">
+                            <ul class="nav nav-pills  " id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link active" id="pills-typography-tab" data-bs-toggle="pill" data-bs-target="#pills-typography" type="button" role="tab" aria-controls="pills-typography" aria-selected="true">preview</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="pills-typo-code" data-bs-toggle="pill" data-bs-target="#pills-code" type="button" role="tab" aria-controls="pills-code" aria-selected="false">code</button>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-typography" role="tabpanel" aria-labelledby="pills-typography-tab">
+                                  <div class="typography">
+                                    <div class="typography-heading">
+                                        <h1>Heading</h1>
+                                        <h2>Heading</h2>
+                                        <h3>Heading</h3>
+                                        <h4>Heading</h4>
+                                        <h5>Heading</h5>
+                                        <h6>Heading</h6>
+                                    </div>
+
+                                  </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-code" role="tabpanel" aria-labelledby="pills-typo-code">
+                                    <!-- Editor  -->
+                                    <textarea  class="editor">
+<h1>Heading</h1>
+<h2>Heading</h2>
+<h3>Heading</h3>
+<h4>Heading</h4>
+<h5>Heading</h5>
+<h6>Heading</h6>
+                                    </textarea>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Icons  -->
+                    <div class="docu-section" id="icons" >
+                        <div class="docu-card">
+                          <div class="mb-3">
+                            <h2 class="docu-title">Icons</h2>
+                            <p >
+                                All icons come from the <a href="https://phosphoricons.com/">Phosphoricons.com</a> & it's a open source . Just go & checkout there documentation you will get to know how to use it . Here below some of icons previewed 
+                            </p>
+                          </div>
+                            <div class="icon-gallery">
+                                <div class="icon-gallery__item">
+                                    <i class="ph-house"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-bell"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-browser"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-google-play-logo"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-airplay"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-phone"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-device-tablet"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-calendar"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-check-circle"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-flag"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-crown"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-dots-three-outline-vertical"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-envelope"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-download-simple"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-facebook-logo"></i>
+                                </div>
+                                <div class="icon-gallery__item">
+                                    <i class="ph-info"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

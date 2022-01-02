@@ -3,12 +3,26 @@
     Template Name: Relik
     Template URI: 
     Description: 
-    Author: 
+    Author: templatecookie
     Author URI: 
     Version: 
 
-    1.0 Dropdown Menu
-    1.01 Sticky Menu  
+   
+    1. Charts
+      1.1 bar 
+      1.2 area 
+      1.3 line 
+      1.4 pie 
+
+    2. Dropdown
+    3. Sidebar
+    4. Menu 
+    5. Sticky Navbar 
+    6. Input Type Changer 
+    7. Themes
+    8. Layouts 
+    9. Date Picker
+    10. Map
     
 
 * ----------------------------------------------------------------------------------------
@@ -16,335 +30,12 @@
 (function ($) {
   "use strict";
 
-  dragula([document.getElementById("todo"),document.getElementById("doing"),document.getElementById("done")]);
-
-  const boardTitle = document.getElementById('board_title');
-  const CreateBoard = document.getElementById('createboard');
-
- if(boardTitle){
-  setInterval(function(){
-    if(boardTitle.value.length > 0){
-      CreateBoard.disabled = false;
-    }else{
-      CreateBoard.disabled = true;
-    }
-}, 100);
- }
 
 
+// 1. Charts 
 
-
-if(CreateBoard){
-  CreateBoard.addEventListener('click', function (event) {
-    event.preventDefault();
-    
-    let StingId =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);;
-    
-    let kanbanParents = document.getElementById('kanban_board_parent');
-    let kabanChild = document.createElement('div');
-    kabanChild.classList.add('kanbanboard_child');
-    kabanChild.innerHTML = `   
-    <div class="kanbanboard_child">
-    <div class="card">
-        <div class="card-body" >
-          <div class="kanban-board-header">
-            <h5>${ boardTitle.value }</h5>
-            <button class="dots-three text-gray-400 f-size-24" type="button">
-              <img src="assets/images/svg/dot.svg" alt="clock">
-            </button>
-          </div>
-          <div id="${StingId}">
-          
-          </div>
-          <button class="btn btn-primary2 btn-icon pill d-block"
-          <span class="button-content-wrapper">
-            <span class="button-icon align-icon-right">
-              <i class="ph-arrow-right"></i>
-            </span>
-            <span class="button-text" >
-               
-          Add new card
-            </span>
-            </span>
-          
-          </button>
-        </div>
-    </div>
-    
-  </div>
-    
-    `;
-    //kabanChild.textContent = boardTitle.value;
-    kanbanParents.appendChild(kabanChild);
-    boardTitle.value= '';
-    $("#createboard-modal").modal('hide');
-    document.querySelector(".modal-backdrop").remove();
-    //$(".modal-backdrop").removeClass("show");
-    dragula([document.getElementById(StingId)]);
-
-  });
-}
-
-
-
-
-  var template_x = document.getElementById("template");
-  var template2_x = document.getElementById("template2");
-  tippy(".notifications", {
-    arrow: false,
-    delay: 40,
-    content: template_x.innerHTML,
-    allowHTML: true,
-    interactive: "true",
-    placement: "bottom-end",
-    animation: "fade",
-    theme: "light",
-    maxWidth: "none",
-    trigger: "click",
-  });
-  tippy(".openaccount", {
-    arrow: false,
-    delay: 40,
-    content: template2_x.innerHTML,
-    allowHTML: true,
-    interactive: "true",
-    placement: "bottom-end",
-    animation: "fade",
-    theme: "light",
-    maxWidth: "none",
-    trigger: "click",
-  });
-
-  $(".opener_sidebar").on("click", function (e) {
-    e.preventDefault(),
-      $("body").toggleClass("sidebar-collapse"),
-      992 <= $(window).width()
-        ? $("body").toggleClass("vertical-collpsed")
-        : $("body").removeClass("vertical-collpsed");
-  });
-
-  $(".back_sidebar_icon").on("click", function () {
-    $("body").removeClass("sidebar-collapse");
-  });
-
-  //metisMenu active
-
-  $("#side-menu").metisMenu();
-
-  $("#side-menu a").each(function () {
-    var e = window.location.href.split(/[?#]/)[0];
-    this.href == e &&
-      ($(this).addClass("active"),
-      $(this).parent().addClass("mm-active"),
-      $(this).parent().parent().addClass("mm-show"),
-      $(this).parent().parent().prev().addClass("mm-active"),
-      $(this).parent().parent().parent().addClass("mm-active"),
-      $(this).parent().parent().parent().parent().addClass("mm-show"),
-      $(this)
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .addClass("mm-active"));
-  }),
-    $(document).ready(function () {
-      var e;
-      0 < $("#side-menu").length &&
-        0 < $("#side-menu .mm-active .active").length &&
-        300 < (e = $("#side-menu .mm-active .active").offset().top) &&
-        ((e -= 300),
-        $(".app-sidebar .simplebar-content-wrapper").animate(
-          { scrollTop: e },
-          "slow"
-        ));
-    });
-
-
-
-  // select 2 active
-  if (document.querySelector(".rt-selectactive")) {
-    $(".rt-selectactive").select2({
-      minimumResultsForSearch: Infinity,
-    });
-  }
-
-  function stickyHeader() {
-    let mainheader = $(".rt-sticky"),
-      height = mainheader.outerHeight(),
-      scroll = $(document).scrollTop();
-    $(window).on("load", function () {
-      if ($(document).scrollTop() > height) {
-        if (mainheader.hasClass("rt-sticky-active")) {
-          mainheader.removeClass("rt-sticky-active");
-        } else {
-          mainheader.addClass("rt-sticky-active");
-        }
-      }
-    });
-    $(window).on("scroll", function () {
-      let scrolled = $(document).scrollTop(),
-        header = $(".rt-sticky-active");
-      if (scrolled > scroll) {
-        header.addClass("sticky");
-      } else {
-        header.removeClass("sticky");
-      }
-      if (scrolled === 0) {
-        mainheader.removeClass("rt-sticky-active");
-      } else {
-        mainheader.addClass("rt-sticky-active");
-      }
-      scroll = $(document).scrollTop();
-    });
-  }
-
-  stickyHeader();
-
-  $(".togglepass").on("click", function () {
-    var x = document.getElementById("myInput");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  });
-
-  $(".togglepass2").on("click", function () {
-    var x = document.getElementById("myinput2");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  });
-
-  var layoutbox = document.getElementsByName("layoutbox");
-
-  var theme = window.localStorage.getItem('data-layout');
-
-  if(theme) {
-    
-      document.documentElement.setAttribute('data-layout', theme);
-      localStorage.setItem( 'data-layout', theme);
-     
-}
-
-var layoutmode = {
-  "vertical":"vertical",
-  "horizental":"horizental",
-} 
-
-var val = localStorage.getItem('layoutbox');
-for (var i=0;i<layoutbox.length;i++) {
-  layoutbox[i].onclick=function() {
-    var lay = layoutmode[this.value];
-    document.documentElement.setAttribute('data-layout', lay);
-    localStorage.setItem( 'data-layout', lay); 
-    
-  }
-  if(layoutbox[i].value == val){
-    layoutbox[i].checked = true;
-  }
-}
-
-$('input[name="layoutbox"]').on('change', function(){
-  localStorage.setItem('layoutbox', $(this).val());
-
-});
-
-
-
-
-  // $("#vertical_lable").change(function () {
-  //   if ($(this).is(":checked")) {
-  //     document.documentElement.setAttribute('data-layout', 'vertical');
-  //     localStorage.setItem( 'data-layout', 'vertical');  
-  //   }
-  // });
-
-  // $("#horizental_label").change(function () {
-  //   if ($(this).is(":checked")) {
-  //     document.documentElement.removeAttribute('data-layout', 'vertical');
-  //     document.documentElement.setAttribute('data-layout', 'horizental');
-  //     localStorage.setItem( 'data-layout', 'horizental');  
-      
-  //   }
-  // });
-
-
-
-
-var checkBox = document.getElementsByName("sidebar");
-
-  var theme = window.localStorage.getItem('data-sidebar');
-
-  if(theme) {
-    
-      document.documentElement.setAttribute('data-sidebar', theme);
-      localStorage.setItem( 'data-sidebar', theme);
-     
-}
-
-var sidebarmode = {
-  "white":"white",
-  "black":"black",
-  "blue":"blue"
-} 
-
-var val = localStorage.getItem('sidebar');
-for (var i=0;i<checkBox.length;i++) {
-  checkBox[i].onclick=function() {
-    var col = sidebarmode[this.value];
-    document.documentElement.setAttribute('data-sidebar', col);
-    localStorage.setItem( 'data-sidebar', col); 
-    
-  }
-  if(checkBox[i].value == val){
-    checkBox[i].checked = true;
-  }
-}
-
-$('input[name="sidebar"]').on('change', function(){
-  localStorage.setItem('sidebar', $(this).val());
-
-});
-
- 
-
-  $("#layout").on("click", function () {
-    $("#appSettings").toggleClass("open");
-    $(".settings-overlay").addClass("open")
-    
-  });
-  
-  $(".settings-overlay, #closesetting").on("click", function () {
-    $("#appSettings").removeClass("open");
-    $(".settings-overlay").removeClass("open")
-    
-  });
-
-  //hide & show
-// calender 
-$(".date-picker-calender").datepicker(),
-
-
-//map
-  $('#world-map').vectorMap({
-    map: 'world_mill_en',
-    normalizeFunction: 'polynomial',
-    hoverOpacity: 0.7,
-    hoverColor: false,
-    
-    regionStyle: {
-      initial: { fill: '#B6BFF3' },
-      hover: { fill: '#4452FF', 'fill-opacity': 1 },
-    },
-
-    backgroundColor: 'transparent',
-  });
-  //all chart
-  var barchartOne = {
+   // bar chart  
+   var barchartOne = {
     chart: {
       height: 148,
       type: 'bar',
@@ -405,172 +96,6 @@ $(".date-picker-calender").datepicker(),
       show: false,
     },
   };
-
-if (document.getElementById('bar-chart1')) {
-    var chart = new ApexCharts(
-      document.querySelector('#bar-chart1'),
-      barchartOne
-    );
-    chart.render();
-  } 
-
-  var options = {
-    chart: {
-      height: 62,
-      type: 'area',
-      toolbar: {
-        autoSelected: 'pan',
-        show: false,
-      },
-      offsetX: 0,
-      offsetY: 0,
-      zoom: {
-        enabled: false,
-      },
-      sparkline: {
-        enabled: true,
-      },
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    stroke: { curve: 'smooth', width: 2 },
-    series: [
-      {
-        type: 'area',
-
-        data: [800, 600, 1000, 800, 600, 1000, 800, 900],
-      },
-      
-    ],
-    colors: ['#0FAF62',],
-
-    tooltip: {
-      theme: 'light',
-    },
-    grid: {
-      show: false,
-      padding: {
-        left: 0,
-        right: 0,
-      },
-    },
-    yaxis: {
-      show: false,
-    },
-    fill: {
-      type: 'solid',
-      opacity: [0.10],
-    },
-    xaxis: {
-      categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan'],
-      low: 0,
-      offsetX: 0,
-      offsetY: 0,
-      show: false,
-      labels: {
-        low: 0,
-        offsetX: 0,
-        show: false,
-      },
-      axisBorder: {
-        low: 0,
-        offsetX: 0,
-        show: false,
-      },
-    },
-    legend: {
-      show: false,
-    },
-  };
-
-  if (document.getElementById('area-spaline-bottom')) {
-    var chart2 = new ApexCharts(
-      document.querySelector('#area-spaline-bottom'),
-      options
-    );
-
-    chart2.render();
-  }
-
-  var options2 = {
-    chart: {
-      height: 62,
-      type: 'area',
-      toolbar: {
-        autoSelected: 'pan',
-        show: false,
-      },
-      offsetX: 0,
-      offsetY: 0,
-      zoom: {
-        enabled: false,
-      },
-      sparkline: {
-        enabled: true,
-      },
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    stroke: { curve: 'smooth', width: 2 },
-    series: [
-      {
-        type: 'area',
-
-        data: [800, 600, 1000, 800, 600, 1000, 800, 900],
-      },
-      
-    ],
-    colors: ['#E84646',],
-
-    tooltip: {
-      theme: 'light',
-    },
-    grid: {
-      show: false,
-      padding: {
-        left: 0,
-        right: 0,
-      },
-    },
-    yaxis: {
-      show: false,
-    },
-    fill: {
-      type: 'solid',
-      opacity: [0.10],
-    },
-    xaxis: {
-      categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan'],
-      low: 0,
-      offsetX: 0,
-      offsetY: 0,
-      show: false,
-      labels: {
-        low: 0,
-        offsetX: 0,
-        show: false,
-      },
-      axisBorder: {
-        low: 0,
-        offsetX: 0,
-        show: false,
-      },
-    },
-    legend: {
-      show: false,
-    },
-  };
-
-  if (document.getElementById('area-spaline-bottom2')) {
-    var chart3 = new ApexCharts(
-      document.querySelector('#area-spaline-bottom2'),
-      options2
-    );
-
-    chart3.render();
-  }
 
   var barchar2 = {
     chart: {
@@ -642,6 +167,16 @@ if (document.getElementById('bar-chart1')) {
     },
   };
 
+  if (document.getElementById('bar-chart1')) {
+      var chart = new ApexCharts(
+        document.querySelector('#bar-chart1'),
+        barchartOne
+      );
+      chart.render();
+    } 
+
+
+
   if (document.getElementById('barchart2')) {
     var chart4 = new ApexCharts(
       document.querySelector('#barchart2'),
@@ -650,6 +185,150 @@ if (document.getElementById('bar-chart1')) {
 
     chart4.render();
   }
+
+
+  // area chart 
+  var options = {
+    chart: {
+      height: 62,
+      type: 'area',
+      toolbar: {
+        autoSelected: 'pan',
+        show: false,
+      },
+      offsetX: 0,
+      offsetY: 0,
+      zoom: {
+        enabled: false,
+      },
+      sparkline: {
+        enabled: true,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: { curve: 'smooth', width: 2 },
+    series: [
+      {
+        type: 'area',
+
+        data: [800, 600, 1000, 800, 600, 1000, 800, 900],
+      },
+      
+    ],
+    colors: ['#0FAF62',],
+
+    tooltip: {
+      theme: 'light',
+    },
+    grid: {
+      show: false,
+      padding: {
+        left: 0,
+        right: 0,
+      },
+    },
+    yaxis: {
+      show: false,
+    },
+    fill: {
+      type: 'solid',
+      opacity: [0.10],
+    },
+    xaxis: {
+      categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan'],
+      low: 0,
+      offsetX: 0,
+      offsetY: 0,
+      show: false,
+      labels: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+      axisBorder: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+    },
+    legend: {
+      show: false,
+    },
+  };
+
+  var options2 = {
+    chart: {
+      height: 62,
+      type: 'area',
+      toolbar: {
+        autoSelected: 'pan',
+        show: false,
+      },
+      offsetX: 0,
+      offsetY: 0,
+      zoom: {
+        enabled: false,
+      },
+      sparkline: {
+        enabled: true,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: { curve: 'smooth', width: 2 },
+    series: [
+      {
+        type: 'area',
+
+        data: [800, 600, 1000, 800, 600, 1000, 800, 900],
+      },
+      
+    ],
+    colors: ['#E84646',],
+
+    tooltip: {
+      theme: 'light',
+    },
+    grid: {
+      show: false,
+      padding: {
+        left: 0,
+        right: 0,
+      },
+    },
+    yaxis: {
+      show: false,
+    },
+    fill: {
+      type: 'solid',
+      opacity: [0.10],
+    },
+    xaxis: {
+      categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan'],
+      low: 0,
+      offsetX: 0,
+      offsetY: 0,
+      show: false,
+      labels: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+      axisBorder: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+    },
+    legend: {
+      show: false,
+    },
+  };
+
+    
   var line_1 = {
     chart: {
       height: 148,
@@ -724,18 +403,9 @@ if (document.getElementById('bar-chart1')) {
     },
   };
 
-  if (document.getElementById('line-1')) {
-    var chart5 = new ApexCharts(
-      document.querySelector('#line-1'),
-      line_1
-    );
-
-    chart5.render();
-  }
-
   var user_chart_option = {
     chart: {
-      height: 234,
+      height: 280,
       type: 'area',
       toolbar: {
         show: false,
@@ -785,6 +455,38 @@ if (document.getElementById('bar-chart1')) {
     },
   };
 
+
+
+  if (document.getElementById('area-spaline-bottom')) {
+    var chart2 = new ApexCharts(
+      document.querySelector('#area-spaline-bottom'),
+      options
+    );
+
+    chart2.render();
+  }
+
+
+  if (document.getElementById('area-spaline-bottom2')) {
+    var chart3 = new ApexCharts(
+      document.querySelector('#area-spaline-bottom2'),
+      options2
+    );
+
+    chart3.render();
+  }
+
+  if (document.getElementById('line-1')) {
+    var chart5 = new ApexCharts(
+      document.querySelector('#line-1'),
+      line_1
+    );
+
+    chart5.render();
+  }
+
+
+
   if (document.getElementById('user_chart')) {
     var user_chart = new ApexCharts(
       document.querySelector('#user_chart'),
@@ -794,7 +496,8 @@ if (document.getElementById('bar-chart1')) {
     user_chart.render();
   }
 
-    // Apex charts 
+
+  // Line charts 
     var line_chart_keyword_1 = {
       maintainAspectRatio: true,
       chart: {
@@ -846,6 +549,7 @@ if (document.getElementById('bar-chart1')) {
     
         line_chart_create.render();
     }
+
     if (document.getElementById('line_chartkeyword_2')) {
         var line_chart_create = new ApexCharts(
           document.querySelector('#line_chartkeyword_2'),
@@ -854,6 +558,7 @@ if (document.getElementById('bar-chart1')) {
     
         line_chart_create.render();
     }
+
     if (document.getElementById('line_chartkeyword_3')) {
         var line_chart_create = new ApexCharts(
           document.querySelector('#line_chartkeyword_3'),
@@ -862,6 +567,7 @@ if (document.getElementById('bar-chart1')) {
     
         line_chart_create.render();
     }
+
     if (document.getElementById('line_chartkeyword_4')) {
         var line_chart_create = new ApexCharts(
           document.querySelector('#line_chartkeyword_4'),
@@ -870,6 +576,7 @@ if (document.getElementById('bar-chart1')) {
     
         line_chart_create.render();
     }
+
     if (document.getElementById('line_chartkeyword_5')) {
         var line_chart_create = new ApexCharts(
           document.querySelector('#line_chartkeyword_5'),
@@ -879,36 +586,470 @@ if (document.getElementById('bar-chart1')) {
         line_chart_create.render();
     }
 
-    // pricing js
-    $(".toggle-btn").on("click", function (e) {
-      console.log($(e.target).parent().parent().hasClass("monthly-active"));
-      $(e.target).toggleClass("clicked");
-      if ($(e.target).parent().parent().hasClass("monthly-active")) {
-        $(e.target)
+// pie chart 
+  var donut_options = {
+    series: [90, 50, 200],
+      chart: {
+        width: 220,
+        type: 'donut',
+    },
+    colors: ['#FF9500', '#E84646', '#0E5FD9', ],
+    dataLabels: {
+      enabled: false,
+    },
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 220,
+        },
+        legend: {
+          show: false
+        }
+      }
+    }],
+    legend: {
+      show: false
+    }
+  };
+
+  
+  if(document.querySelector("#dount_chart")) { 
+    var dountChart = new ApexCharts(document.querySelector("#dount_chart"), donut_options);
+    dountChart.render();
+  }
+
+
+
+// 2. Dropdown
+
+  var template_x = document.getElementById("template");
+  var template2_x = document.getElementById("template2");
+
+  // Dropdown - notification
+  if(template2_x) { 
+    tippy(".notifications", {
+      arrow: false,
+      delay: 40,
+      content: template_x.innerHTML,
+      allowHTML: true,
+      interactive: "true",
+      placement: "bottom-end",
+      animation: "fade",
+      theme: "light",
+      maxWidth: "none",
+      trigger: "click",
+    });
+  }
+
+  if(template2_x) {
+    tippy(".openaccount", {
+      arrow: false,
+      delay: 40,
+      content: template2_x.innerHTML,
+      allowHTML: true,
+      interactive: "true",
+      placement: "bottom-end",
+      animation: "fade",
+      theme: "light",
+      maxWidth: "none",
+      trigger: "click",
+    });
+  }
+
+  if (document.querySelector(".rt-selectactive")) {
+    $(".rt-selectactive").select2({
+      minimumResultsForSearch: Infinity,
+    });
+  }
+
+
+
+// 3. Sidebar 
+var SidebarOpenrIcon = document.getElementById("opener_icon");
+const MainMenuOpen = document.getElementById("mainmenuOpen");
+if(MainMenuOpen){
+  MainMenuOpen.addEventListener("click", function (e) {
+  e.preventDefault();
+    $(".main-menu").toggleClass("active-mobile-menu");
+    $(".rt-mobile-menu-overlay").addClass("active");
+  
+  });
+}
+
+$(".rt-mobile-menu-close, .rt-mobile-menu-overlay").on("click", function () {
+  $(".main-menu").removeClass("active-mobile-menu");
+  $(".rt-mobile-menu-overlay").removeClass("active");
+  return false;
+});
+
+if ($(window).width() < 991.98) {
+  $(".menu-item-has-children > a").on("click", function () {
+    var element = $(this).parent("li");
+    if (element.hasClass("open")) {
+      element.removeClass("open");
+      element.find("li").removeClass("open");
+      element.find("ul").slideUp(300);
+      element.find(".rt-mega-menu").slideUp(300);
+    } else {
+      element.addClass("open");
+      element.children("ul").slideDown(300);
+      element.children(".rt-mega-menu").slideDown(300);
+      element.siblings("li").children("ul").slideUp();
+      element.siblings("li").removeClass("open");
+      element.siblings("li").find("li").removeClass("open");
+      element.siblings("li").find("ul").slideUp();
+    }
+  });
+}
+
+
+  $(".opener_sidebar").on("click", function (e) {
+    e.preventDefault();
+   
+    if(window.innerWidth < 992){
+     
+      SidebarOpenrIcon.classList.toggle("has-cross");
+      
+    }
+      $("body").toggleClass("sidebar-collapse"),992 <= $(window).width()
+        ? $("body").toggleClass("vertical-collpsed")
+        : $("body").removeClass("vertical-collpsed");
+  });
+  
+  $(".back_sidebar_icon").on("click", function () {
+    $("body").removeClass("sidebar-collapse");
+  });
+
+// 4. Menu 
+
+  if(document.getElementById('side-menu')) { 
+    $("#side-menu").metisMenu();
+  }
+
+  if(document.getElementById('side-menu'))  { 
+
+    
+    $("#side-menu a").each(function () {
+      var e = window.location.href.split(/[?#]/)[0];
+      this.href == e &&
+        ($(this).addClass("active"),
+        $(this).parent().addClass("mm-active"),
+        $(this).parent().parent().addClass("mm-show"),
+        $(this).parent().parent().prev().addClass("mm-active"),
+        $(this).parent().parent().parent().addClass("mm-active"),
+        $(this).parent().parent().parent().parent().addClass("mm-show"),
+        $(this)
           .parent()
           .parent()
-          .removeClass("monthly-active")
-          .addClass("yearly-active");
-      } else {
-        $(e.target)
           .parent()
           .parent()
-          .removeClass("yearly-active")
-          .addClass("monthly-active");
+          .parent()
+          .addClass("mm-active"));
+    }),
+    $(document).ready(function () {
+      var e;
+      0 < $("#side-menu").length &&
+        0 < $("#side-menu .mm-active .active").length &&
+        300 < (e = $("#side-menu .mm-active .active").offset().top) &&
+        ((e -= 300),
+        $(".app-sidebar .simplebar-content-wrapper").animate(
+          { scrollTop: e },
+          "slow"
+        ));
+    });
+  }
+
+// 5. Sticky Navbar  
+  function stickyHeader() {
+    let mainheader = $(".rt-sticky"),
+      height = mainheader.outerHeight(),
+      scroll = $(document).scrollTop();
+    $(window).on("load", function () {
+      if ($(document).scrollTop() > height) {
+        if (mainheader.hasClass("rt-sticky-active")) {
+          mainheader.removeClass("rt-sticky-active");
+        } else {
+          mainheader.addClass("rt-sticky-active");
+        }
       }
     });
-
-    $("[data-pricing-trigger]").on("click", function (e) {
-      $(e.target).addClass("active").siblings().removeClass("active");
-      var target = $(e.target).attr("data-target");
-      console.log($(target).attr("data-value-active") == "monthly");
-      if ($(target).attr("data-value-active") == "monthly") {
-        $(target).attr("data-value-active", "yearly");
+    $(window).on("scroll", function () {
+      let scrolled = $(document).scrollTop(),
+        header = $(".rt-sticky-active");
+      if (scrolled > scroll) {
+        header.addClass("sticky");
       } else {
-        $(target).attr("data-value-active", "monthly");
+        header.removeClass("sticky");
       }
+      if (scrolled === 0) {
+        mainheader.removeClass("rt-sticky-active");
+      } else {
+        mainheader.addClass("rt-sticky-active");
+      }
+      scroll = $(document).scrollTop();
     });
+  }
+
+  stickyHeader();
+
+  $(".togglepass").on("click", function () {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  });
+
+  $(".togglepass2").on("click", function () {
+    var x = document.getElementById("myinput2");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  });
 
 
+
+// 6. input type changer 
+  function showPassword(input, icon) { 
+  icon.addEventListener('click', (e) => { 
+    // todo 1:  toggle eye show / hide  
+    icon.classList.toggle('ph-eye-slash');
+
+    // todo 2: input type 
+    input.type === 'password' ? input.type = 'text' : input.type = 'password';
+  })
+  }
+
+  const input =  document.querySelector("#password-hide_show");
+  const inputIcon = document.querySelector(".has-badge i");
+
+  const finputOne = document.querySelector("#password-hide_show1");
+  const ficonOne = document.querySelector(".select-icon__one i");
+
+  const finputTwo = document.querySelector("#password-hide_show2");
+  const ficonTwo = document.querySelector(".select-icon__two i");
+
+  const finputThree = document.querySelector("#password-hide_show3");
+  const ficonThree = document.querySelector(".select-icon__three i");
+
+  const finputFour = document.querySelector("#password-hide_show4");
+  const ficonFour = document.querySelector(".select-icon__four i");
+
+  const finputFive = document.querySelector("#password-hide_show5");
+  const ficonFive = document.querySelector(".select-icon__five i");
+
+  const finputSix = document.querySelector("#password-hide_show6");
+  const ficonSix = document.querySelector(".select-icon__six i");
+
+  const finputSeven = document.querySelector("#password-hide_show7");
+  const ficonSeven = document.querySelector(".select-icon__seven i");
+  
+  // Input page 
+  if(input || inputIcon) { 
+    showPassword(input,inputIcon)
+  }
+
+  // form elements page 
+  if (finputOne || ficonOne) { 
+    showPassword(finputOne,ficonOne)
+  }
+  if(finputTwo || ficonTwo ) { 
+    showPassword(finputTwo,ficonTwo)
+  }
+  if(finputThree || ficonThree) { 
+    
+    showPassword(finputThree,ficonThree)
+  }
+  if(finputFour || ficonFour) { 
+    
+    showPassword(finputFour,ficonFour)
+  }
+  if( finputFive || ficonFive ) { 
+    showPassword(finputFive,ficonFive)
+  }
+  if(finputSix || ficonSix) { 
+
+    showPassword(finputSix,ficonSix)
+  }
+
+  if(finputSeven || ficonSeven) { 
+
+    showPassword(finputSeven,ficonSeven)
+  }
+
+// 7. Themes 
+  var layoutbox = document.getElementsByName("layoutbox");
+  var theme = window.localStorage.getItem('data-layout');
+  if(theme) {
+    
+      document.documentElement.setAttribute('data-layout', theme);
+      localStorage.setItem( 'data-layout', theme);
+     
+}
+
+// 8. Layouts 
+  var layoutmode = {
+    "vertical":"vertical",
+    "horizental":"horizental",
+  } 
+
+var val = localStorage.getItem('layoutbox');
+for (var i=0;i<layoutbox.length;i++) {
+  layoutbox[i].onclick=function() {
+    var lay = layoutmode[this.value];
+    document.documentElement.setAttribute('data-layout', lay);
+    localStorage.setItem( 'data-layout', lay); 
+    
+  }
+  if(layoutbox[i].value == val){
+    layoutbox[i].checked = true;
+  }
+}
+
+$('input[name="layoutbox"]').on('change', function(){
+  localStorage.setItem('layoutbox', $(this).val());
+
+});
+
+var checkBox = document.getElementsByName("sidebar");
+var theme = window.localStorage.getItem('data-sidebar');
+
+if(theme) {
+    
+      document.documentElement.setAttribute('data-sidebar', theme);
+      localStorage.setItem( 'data-sidebar', theme);
+     
+}
+
+var sidebarmode = {
+  "white":"white",
+  "black":"black",
+  "blue":"blue"
+} 
+
+var val = localStorage.getItem('sidebar');
+for (var i=0;i<checkBox.length;i++) {
+  checkBox[i].onclick=function() {
+    var col = sidebarmode[this.value];
+    document.documentElement.setAttribute('data-sidebar', col);
+    localStorage.setItem( 'data-sidebar', col); 
+    
+  }
+  if(checkBox[i].value == val){
+    checkBox[i].checked = true;
+  }
+}
+
+$('input[name="sidebar"]').on('change', function(){
+  localStorage.setItem('sidebar', $(this).val());
+});
+
+ 
+
+  $("#layout").on("click", function () {
+    $("#appSettings").toggleClass("open");
+    $(".settings-overlay").addClass("open")
+    
+  });
+
+  
+  $(".settings-overlay, #closesetting").on("click", function () {
+    $("#appSettings").removeClass("open");
+    $(".settings-overlay").removeClass("open")
+    
+  });
+
+// 9. calender 
+if(document.getElementsByClassName('date-picker-calender')) { 
+  $(".date-picker-calender").datepicker();
+}
+
+// 10. map
+if(document.getElementById("world-map")) { 
+  $('#world-map').vectorMap({
+    map: 'world_mill_en',
+    normalizeFunction: 'polynomial',
+    hoverOpacity: 0.7,
+    hoverColor: false,
+    
+    regionStyle: {
+      initial: { fill: '#B6BFF3' },
+      hover: { fill: '#4452FF', 'fill-opacity': 1 },
+    },
+
+    backgroundColor: 'transparent',
+  });
+    
+}
+ 
+  
+
+// pricing js
+$(".toggle-btn").on("click", function (e) {
+  console.log($(e.target).parent().parent().hasClass("monthly-active"));
+  $(e.target).toggleClass("clicked");
+  if ($(e.target).parent().parent().hasClass("monthly-active")) {
+    $(e.target)
+      .parent()
+      .parent()
+      .removeClass("monthly-active")
+      .addClass("yearly-active");
+  } else {
+    $(e.target)
+      .parent()
+      .parent()
+      .removeClass("yearly-active")
+      .addClass("monthly-active");
+  }
+});
+
+$("[data-pricing-trigger]").on("click", function (e) {
+  $(e.target).addClass("active").siblings().removeClass("active");
+  var target = $(e.target).attr("data-target");
+  console.log($(target).attr("data-value-active") == "monthly");
+  if ($(target).attr("data-value-active") == "monthly") {
+    $(target).attr("data-value-active", "yearly");
+  } else {
+    $(target).attr("data-value-active", "monthly");
+  }
+});
+
+
+   
+
+var validation = false;
+var myTimeoutId = null;
+
+$('#info').onclick = function() {
+    $('#console').style.display = "block";
+    console.log("hello");
+}
+
+$('#close').onclick = function() {
+    $('#console').style.display = "none";
+}
+
+// presentioton 
+$(window).scroll(function(){
+  if ($(window).scrollTop() >= 120) {
+  $('.p-header .navbar').addClass('fixed');
+  }
+  else {
+  $('.p-header .navbar').removeClass('fixed');
+  }
+});
+
+// Animate on scroll 
+AOS.init();
+
+
+
+
+
+  
 
 })(jQuery);

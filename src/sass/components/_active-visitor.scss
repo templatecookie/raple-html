@@ -1,0 +1,131 @@
+.active-visitor {
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-data {
+    p {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 100%;
+      margin-bottom: 8px;
+      color: var(--gray-600);
+      text-transform: uppercase;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 25px;
+    }
+    h4 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      color: var(--success-500);
+      img {
+        margin-right: 4px;
+      }
+    }
+  }
+  &-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.profile-left.active-visitor {
+  align-items: center;
+  padding: 30px;
+  margin: 0;
+  @include max(991px) {
+    padding: 20px;
+  }
+  .profile-thumb {
+    margin-right: 20px;
+    width: 84px;
+    height: 84px;
+    border: none;
+    @include max(479px) {
+      margin: 0 auto 15px;
+    }
+  }
+  .profile-data {
+    padding: 0;
+    h4 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      line-height: 28px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.banner-wrap.active-visitor {
+  margin-bottom: 24px;
+  display: flex;
+  text-align: left;
+  @include max(479px) {
+    display: block;
+    text-align: center;
+  }
+  .banner-icon {
+    margin-right: 24px;
+    @include max(479px) {
+      margin: 0 auto 15px;
+    }
+  }
+  .banner-data {
+    p {
+      margin-bottom: 11px;
+    }
+  }
+}
+
+.fun-fact {
+  &-wrap {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &-item {
+    flex: 0 0 25%;
+    border-right: 1px solid var(--gray-100);
+    @include max(600px) {
+      flex: 0 0 50%;
+      margin: 10px 0;
+      &:nth-last-child(3) {
+        border: none;
+      }
+    }
+    &:last-child {
+      border: none;
+    }
+  }
+  &-icon {
+    margin-bottom: 20px;
+  }
+  &-data {
+    h4 {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 4px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      color: var(--gray-700);
+    }
+  }
+}

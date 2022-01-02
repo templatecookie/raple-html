@@ -1,0 +1,141 @@
+{% extends "layout/layout-docs.html" %} {% set page_title = "Introduction" %} {% block content %}
+
+<main class="app-wrapper">
+    {% include "../templates/layout/header-footer/doc-appheader.html" %} {% include "../templates/layout/header-footer/doc-sidebar.html" %} {% include "../templates/layout/header-footer/doc-topnav.html" %}
+    <div class="content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 rt-mb-25">
+                        {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+                    </div>
+                </div>
+
+                <div class="docu">
+                    <section id="colors">
+                        <h2 class="docu-title">colors</h2>
+                      <!-- Write content from here -->
+                        <p>The choice of colors for a website or app interface has an big influence on how users interact with the product and what
+                        decisions they make. Harmonic colors can contribute to a nice first impression and encourage users to engage with your
+                        product, so it's a very important aspect of a successful design, which needs to be well thought out.</p>
+                        <div class="card">
+                            <div class="card-body">
+                              <div class="color-box">
+                                  <div class="color-box-item bg-gray-900">
+                                    #7b878c
+                                  </div>
+                                <div class="color-box-item bg-primary-500">
+                                    #005ce8
+                                </div>
+                                <div class="color-box-item bg-secondary-500 text-gray-900">
+                                    #fff266
+                                </div>
+                                <div class="color-box-item bg-success-500">
+                                    #0faf62
+                                </div>
+                                <div class="color-box-item bg-warning-500">
+                                    #ff9500
+                                </div>
+                                <div class="color-box-item bg-danger-500">
+                                    #e84646
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="typography">
+                        <h2 class="docu-title">typgography</h2>
+                       <!-- Write content from here -->
+                       <p>Typography plays an important role in creating an attractive and clear interface design. Good typography will make the content easy to follow and improve the usability of your website.</p>
+                        <h3 class="docu-title-sub">Headings</h3>
+                        <!-- Write content from here -->
+                        <p>Use HTML headings to organize content on your website and make the structure clear and user-friendly.</p>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="hedding-title">
+                                    <h1>H1 Heading</h1>
+                                    <h2>H2 Heading</h2>
+                                    <h3>H3 Heading</h3>
+                                    <h4>H4 Heading</h4>
+                                    <h5>H5 Heading</h5>
+                                    <h6>H6 Heading</h6>
+                                </div>
+                            </div>
+                            <div>
+                                <textarea class="editor">
+                                    
+<h1>h1 Heading </h1>
+<h2>h1 Heading </h2>
+<h3>h1 Heading </h3>
+<h4>h1 Heading </h4>
+<h5>h1 Heading </h5>
+<h6>h1 Heading </h6>
+                                </textarea>
+                            </div>
+                        </div>
+                        <h3 class="docu-title-sub">Paragraphs</h3>
+                        <!-- Write content from here -->
+                        <p>Organize longer pieces of text into paragraphs using the p tag.</p>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda modi, iusto pariatur magnam eveniet. Reiciendis blanditiis facere tempora natus dolorum? Molestiae expedita repudiandae eaque fuga et perspiciatis magni necessitatibus.</p>
+                                <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                            </div>
+                            <div>
+                                <textarea class="editor">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                    magna aliquyam erat, sed diam voluptua.</p>
+                                </textarea>
+                            </div>
+                        </div>
+                       
+                    </section>
+                    <section id="icon">
+                        <h2 class="docu-title">Icons</h2>
+                        <!-- Write content from here -->
+                        <p>All icons come from the Phosphor Icons set and are MIT-licensed. Visit <a href="https://phosphoricons.com/">phosphoricons.com</a> , download the icons you need in
+                        SVG, PNG or React and use them in your favourite design tools. You can show all icons and SVG codes <a href="https://phosphoricons.com/">here.</a></p>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon-wrap">
+                                    <div class="icon-item">
+                                        <img src="../assets/images/svg/info.svg" alt="">
+                                    </div>
+                                    <div class="icon-item">
+                                        <img src="../assets/images/svg/checkcircle.svg" alt="">
+                                    </div>
+                                    <div class="icon-item">
+                                        <img src="../assets/images/svg/warningcircle.svg" alt="">
+                                    </div>
+                                    <div class="icon-item">
+                                        <img src="../assets/images/svg/warning.svg" alt="">
+                                    </div>
+                                    <div class="icon-item">
+                                        <img src="../assets/images/svg/file.svg" alt="">
+                                    </div>
+                                    <div class="icon-item">
+                                        <img src="../assets/images/svg/clock2.svg" alt="">
+                                    </div>
+                                    <div class="icon-item">
+                                        <img src="../assets/images/svg/chat-circle-dots.svg" alt="">
+                                    </div>
+                                    <div class="icon-item">
+                                        <img src="../assets/images/svg/crown.svg" alt="">
+                                    </div>
+                                    <div class="icon-item">
+                                        <img src="../assets/images/svg/clipboardtext.svg" alt="">
+                                    </div>
+                                    <div class="icon-item">
+                                        <img src="../assets/images/svg/filetext.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

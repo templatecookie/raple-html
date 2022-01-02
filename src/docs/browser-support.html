@@ -1,0 +1,103 @@
+{% extends "layout/layout-docs.html" %}
+{% set page_title = "Browser Support & Credits" %}
+{% block content %}
+
+<main class="app-wrapper">
+    {% include "../templates/layout/header-footer/doc-appheader.html" %} {% include "../templates/layout/header-footer/doc-sidebar.html" %} {% include "../templates/layout/header-footer/doc-topnav.html" %}
+
+    <div class="content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 rt-mb-25">
+                        {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+                    </div>
+                </div>
+
+                <div class="docu">
+                    <div class="docu-section">
+                        <div class="docu-card">
+                            <div class="mb-3">
+                                <h2 class="docu-title">Browser Supports</h2>
+                                <p>
+                                  As of this release, <b>Relik</b> has launched many new features that may bot be compatible with all browsers, especially older ones.
+                                  For instance, <b>Relik</b> no longer uses vendor prefixes in styles that are known to have some compatibility issues except for a few parts. <b>Relik</b> also supports new features such as CSS grid, object fit, and sticky positioning which is not yet supported on all browsers. In short, <b>Relik</b> supports all the latest supported browsers with only partial support for Internet Explorer.
+                                </p>
+                            </div>
+                            <div class="browser-table">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered ">
+                                        <thead class="table-dark" >
+                                          <tr>
+                                            <th>Browser</th>
+                                            <th>Version</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td><img src="../assets/images/svg/social/chrome.svg" width="24" height="24" class="me-2"> Chrome</td>
+                                            <td>last 3 versions</td>
+                                          </tr>
+                                          <tr>
+                                            <td><img src="../assets/images/svg/social/safari.svg" width="24" height="24" class="me-2"> Safari</td>
+                                            <td>last 3 versions</td>
+                                          </tr>
+                                          <tr>
+                                            <td><img src="../assets/images/svg/social/opera.svg" width="24" height="24" class="me-2"> Opera</td>
+                                            <td>last 3 versions</td>
+                                          </tr>
+                                          <tr>
+                                            <td><img src="../assets/images/svg/social/electron.svg" width="24" height="24" class="me-2"> Electron</td>
+                                            <td>last 3 versions</td>
+                                          </tr>
+                                          <tr>
+                                            <td><img src="../assets/images/svg/social/brave.svg" width="24" height="24" class="me-2"> Brave</td>
+                                            <td>last 3 versions</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="docu-section">
+                      <div class="docu-card">
+                        <div class="mb-3">
+                          <h2 class="docu-title">Credits</h2>
+                          <p>
+                            We've used the following resources as listed below. We are so thankful of these respective community, they are amazing without them it's may not be happened
+                          </p>
+                        </div>
+
+                          <div class="resources-list">
+                              <ul>
+                                <li><a href="https://getbootstrap.com/" target="_blank" >Bootstrap 5</a></li>
+                                <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+                                <li><a href="https://www.flaticon.com/" target="_blank">Flaticon</a></li>
+                                <li><a href="https://phosphoricons.com/" target="_blank">phosphor</a></li>
+                                <li><a href="https://animate.style/" target="_blank">Animate.css</a></li>
+                                <li><a href="https://apexcharts.com/" target="_blank">Apexchart.css</a></li>
+                                <li><a href="https://gionkunz.github.io/chartist-js/" target="_blank">Chartist.js</a></li>
+                                <li><a href="https://bevacqua.github.io/dragula/" target="_blank" >Dragula</a></li>
+                                <li><a href="https://www.riccardotartaglia.it/jkanban/" target="_blank">jkanban</a></li>
+                                <li><a href="https://jvectormap.com/" target="_blank">jvectormap</a></li>
+                                <li><a href="https://jqueryui.com/" target="_blank">jQuery</a></li>
+                                <li><a href="https://github.com/material-ocean/Material-Ocean" target="_blank">Material Ocean</a></li>
+                                <li><a href="https://github.com/onokumus/metismenu" target="_blank">
+                                  metismenu</a></li>
+                                <li><a href="https://morrisjs.github.io/morris.js/" target="_blank">Morris</a></li>
+                                <li><a href="https://select2.org/" target="_blank">Select2</a></li>
+                                <li><a href="https://github.com/Grsmto/simplebar" target="_blank">Simplebar</a></li>
+                              </ul>
+                          </div>
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

@@ -8,6 +8,12 @@
   transform: translateX(20px);
   background: #fff;
   z-index: -1;
+  @include breakpoint(md){
+    width: 320px;
+  }
+  @include breakpoint(xs){
+    width: 290px;
+  }
   @include hidden();
   .inner-content {
     padding: 24px;
@@ -25,7 +31,12 @@
     label{
       font-size: 14px;
       line-height: 20px;
-      color: var(--gray-900)
+      color: var(--gray-900);
+      img{
+        display: block;
+        object-fit: cover;
+        width: 100%;
+      }
     }
     &.no-shadow{
       border: none;
@@ -84,4 +95,7 @@
   color: var(--text-gray-900);
   font-weight: 600;
   margin-bottom: 20px;
+}
+.cal-h-70{
+  height: calc(100% - 70px)
 }

@@ -1,0 +1,388 @@
+{% extends "layout/layout-docs.html" %} {% set page_title = "Plugin" %} {% block content %}
+
+<main class="app-wrapper">
+    {% include "../templates/layout/header-footer/doc-appheader.html" %} {% include "../templates/layout/header-footer/doc-sidebar.html" %} {% include "../templates/layout/header-footer/doc-topnav.html" %}
+    <div class="content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 rt-mb-25">
+                        {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+                    </div>
+                </div>
+                <div class="docu">
+                    <div class="docu-section">
+                        <div class="docu-card">
+                            <div>
+                                <h2 class="docu-title">Map</h2>
+                                <p>
+                                    Relick uses jVectorMap - a free and open-source modern map library that helps developers to create beautiful and interactive visualizations for web pages.
+                                </p>
+                            </div>
+                            <div class="my-4" >
+                                <h6 class="docu-title-sub">Usage</h6>
+
+                                <p>
+                                    to able to use jvector you have to link <b>css</b> and <b>js</b>  files ( <span>jquery-jvectormap-2.0.5.css</span>, <span>jquery-jvectormap-2.0.5.min.js</span>, <span>jquery-jvectormap-world-mill-en.js</span> )
+                                </p>
+                            </div>
+
+                            <div class="docu-tabs">
+                                <ul class="nav nav-pills  " id="pills-tab" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-map-preview" data-bs-toggle="pill" data-bs-target="#pills-map-previews" type="button" role="tab" aria-controls="pills-map-previews" aria-selected="true">preview</button>
+                                  </li>
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-map-code" data-bs-toggle="pill" data-bs-target="#pills-map-codes" type="button" role="tab" aria-controls="pills-map-codes" aria-selected="false">code</button>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                  <div class="tab-pane fade active show" id="pills-map-previews" role="tabpanel" aria-labelledby="pills-map-preview">
+                                    <div id="world-map" class=" rt-mb-48"></div>
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-map-codes" role="tabpanel" aria-labelledby="pills-map-code">
+                                    <!-- Editor  -->
+                                    <textarea class="editor">
+<div id="world-map" class=" rt-mb-48"></div>
+<script>
+    //map
+    $('#world-map').vectorMap({
+        map: 'world_mill_en',
+        normalizeFunction: 'polynomial',
+        hoverOpacity: 0.7,
+        hoverColor: false,
+        
+        regionStyle: {
+        initial: { fill: '#B6BFF3' },
+        hover: { fill: '#4452FF', 'fill-opacity': 1 },
+        },
+
+        backgroundColor: 'transparent',
+});
+</script>
+                                    </textarea>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="docu-section" id="calendars" >
+                        <div class="docu-card">
+                            <div>
+                                <h2 class="docu-title">Calendar</h2>
+                                <p>
+                                    Relick uses javascript FullCalendar - a free and open-source modern calendar library that helps developers to create beautiful and interactive visualizations for web pages.
+                                </p>
+                            </div>
+                            <div class="my-4" >
+                                <h6 class="docu-title-sub">Usage</h6>
+
+                                <div class="usage-case">
+                                    <p>before you implement Full calendar you have to link those files that are mentioned below. all of those files you will get from <span>assets/css </span>  & <span>assets/js</span> </p>
+                                </div>
+                            </div>
+
+                            <div class="docu-tabs">
+                                <ul class="nav nav-pills" id="pills-calendar" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-calendar-preview" data-bs-toggle="pill" data-bs-target="#pills-calendar-previews" type="button" role="tab" aria-controls="pills-calendar-previews" aria-selected="true">preview</button>
+                                  </li>
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-calendar-code" data-bs-toggle="pill" data-bs-target="#pills-calendar-codes" type="button" role="tab" aria-controls="pills-calendar-codes" aria-selected="false">code</button>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                  <div class="tab-pane fade active show" id="pills-calendar-previews" role="tabpanel" aria-labelledby="pills-calendar-preview">
+                                    <div class="row">
+                                        <div class="col-12">
+                              
+                                            <div class="row">
+                                              <div class="col-lg-3">
+                                                <div class="card">
+                                                  
+                                                  <div class="card-body">
+                                                      <div id="btn-new-event" class="btn waves-effect waves-light  btn-primary btn-icon d-block ">
+                              
+                                                          <div class="button-content-wrapper">
+                                                              <div class="button-icon">
+                                                                  <i class="ph-plus-circle"></i>
+                                                              </div> 
+                                                              <div class="button-text">
+                                                                  Create New Event
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class=" body-font-4 text-gray-600 rt-pt-30 rt-mb-20">Drag and drop your event or click in the calenda</div>
+                                                      <div id="external-events">
+                                                        <div class="external-event fc-event bg-success" data-class="bg-success">
+                                                          <i class="mdi mdi-checkbox-blank-circle f-size-11 me-2"></i>New Event Planning
+                                                      </div>
+                                                      <div class="external-event fc-event bg-info" data-class="bg-info">
+                                                          <i class="mdi mdi-checkbox-blank-circle f-size-11 me-2"></i>Meeting
+                                                      </div>
+                                                      <div class="external-event fc-event bg-warning" data-class="bg-warning">
+                                                          <i class="mdi mdi-checkbox-blank-circle f-size-11 me-2"></i>Generating Reports
+                                                      </div>
+                                                      <div class="external-event fc-event bg-danger" data-class="bg-danger">
+                                                          <i class="mdi mdi-checkbox-blank-circle f-size-11 me-2"></i>Create New theme
+                                                      </div>
+                                                      </div>
+                                                   
+                                                  </div>
+                                                </div>
+                                            </div> <!-- end col-->
+                                              <div class="col-lg-9">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div id="calendar"></div>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col -->
+                                                
+                                            </div> 
+                                            
+                                            <!-- Add New Event MODAL -->
+                                            <div class="modal fade" id="event-modal" tabindex="-1">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header py-3 px-4">
+                                                            <h5 class="modal-title">Event</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                        <div class="modal-body p-4">
+                                                            <form class="needs-validation" name="event-form" id="form-event" novalidate>
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="mb-3">
+                                                                            <label class="form-label">Event Name</label>
+                                                                            <input class="form-control" placeholder="Insert Event Name"
+                                                                                type="text" name="title" id="event-title" required value="" />
+                                                                            <div class="invalid-feedback">Please provide a valid event name</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="mb-3">
+                                                                            <label class="form-label">Category</label>
+                                                                            <select class="form-select" name="category"
+                                                                                id="event-category">
+                                                                                <option selected> --Select-- </option>
+                                                                                <option value="bg-danger">Danger</option>
+                                                                                <option value="bg-success">Success</option>
+                                                                                <option value="bg-primary">Primary</option>
+                                                                                <option value="bg-info">Info</option>
+                                                                                <option value="bg-dark">Dark</option>
+                                                                                <option value="bg-warning">Warning</option>
+                                                                            </select>
+                                                                            <div class="invalid-feedback">Please select a valid event category</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button type="button" class="btn waves-effect waves-light  btn-danger" id="btn-delete-event">Delete</button>
+                                                                    </div>
+                                                                    <div class="col-6 text-end">
+                                                                        <button type="button" class="btn waves-effect waves-light  btn-light me-1" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn waves-effect waves-light  btn-success" id="btn-save-event">Save</button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div> <!-- end modal-content-->
+                                                </div> <!-- end modal dialog-->
+                                            </div>
+                                            <!-- end modal-->
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-calendar-codes" role="tabpanel" aria-labelledby="pills-calendar-code">
+                                    <!-- Editor  -->
+                                    <textarea class="editor">
+<div class="row">
+    <div class="col-12">
+
+        <div class="row">
+            <div class="col-lg-3">
+            <div class="card">
+                
+                <div class="card-body">
+                    <div id="btn-new-event" class="btn waves-effect waves-light  btn-primary btn-icon d-block ">
+
+                        <div class="button-content-wrapper">
+                            <div class="button-icon">
+                                <i class="ph-plus-circle"></i>
+                            </div> 
+                            <div class="button-text">
+                                Create New Event
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" body-font-4 text-gray-600 rt-pt-30 rt-mb-20">Drag and drop your event or click in the calenda</div>
+                    <div id="external-events">
+                    <div class="external-event fc-event bg-success" data-class="bg-success">
+                        <i class="mdi mdi-checkbox-blank-circle f-size-11 me-2"></i>New Event Planning
+                    </div>
+                    <div class="external-event fc-event bg-info" data-class="bg-info">
+                        <i class="mdi mdi-checkbox-blank-circle f-size-11 me-2"></i>Meeting
+                    </div>
+                    <div class="external-event fc-event bg-warning" data-class="bg-warning">
+                        <i class="mdi mdi-checkbox-blank-circle f-size-11 me-2"></i>Generating Reports
+                    </div>
+                    <div class="external-event fc-event bg-danger" data-class="bg-danger">
+                        <i class="mdi mdi-checkbox-blank-circle f-size-11 me-2"></i>Create New theme
+                    </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div> <!-- end col-->
+            <div class="col-lg-9">
+            <div class="card">
+                <div class="card-body">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div> <!-- end col -->
+            
+        </div> 
+        
+        <!-- Add New Event MODAL -->
+        <div class="modal fade" id="event-modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header py-3 px-4">
+                        <h5 class="modal-title">Event</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    <div class="modal-body p-4">
+                        <form class="needs-validation" name="event-form" id="form-event" novalidate>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Event Name</label>
+                                        <input class="form-control" placeholder="Insert Event Name"
+                                            type="text" name="title" id="event-title" required value="" />
+                                        <div class="invalid-feedback">Please provide a valid event name</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Category</label>
+                                        <select class="form-select" name="category"
+                                            id="event-category">
+                                            <option selected> --Select-- </option>
+                                            <option value="bg-danger">Danger</option>
+                                            <option value="bg-success">Success</option>
+                                            <option value="bg-primary">Primary</option>
+                                            <option value="bg-info">Info</option>
+                                            <option value="bg-dark">Dark</option>
+                                            <option value="bg-warning">Warning</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a valid event category</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-6">
+                                    <button type="button" class="btn waves-effect waves-light  btn-danger" id="btn-delete-event">Delete</button>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button type="button" class="btn waves-effect waves-light  btn-light me-1" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn waves-effect waves-light  btn-success" id="btn-save-event">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div> <!-- end modal-content-->
+            </div> <!-- end modal dialog-->
+        </div>
+        <!-- end modal-->
+    </div>
+    </div>
+                                    </textarea>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="docu-section" id="chart">
+                        <div class="docu-card">
+                            <div>
+                                <h2 class="docu-title">Chart</h2>
+                                <p>Relick Uses Javascript Apexchart - A Free And Open-Source Modern Calendar Library That Helps Developers To Create Beautiful And Interactive Visualizations For Web Pages. you have to need to files once css & js . All src files you get from  <span> <b>assets/css</b> </span> & <span> <b>assets/js</b> </span> </p>
+                            </div>
+                            <div class="docu-tabs">
+                                <ul class="nav nav-pills" id="pills-charts" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-charts-preview" data-bs-toggle="pill" data-bs-target="#pills-charts-previews" type="button" role="tab" aria-controls="pills-charts-previews" aria-selected="true">preview</button>
+                                  </li>
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-charts-code" data-bs-toggle="pill" data-bs-target="#pills-charts-codes" type="button" role="tab" aria-controls="pills-charts-codes" aria-selected="false">code</button>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                  <div class="tab-pane fade active show" id="pills-charts-previews" role="tabpanel" aria-labelledby="pills-charts-preview">
+                                    <div id="dount_chart"></div>
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-charts-codes" role="tabpanel" aria-labelledby="pills-charts-code">
+                                    <!-- Editor  -->
+                                    <textarea class="editor">
+<div id="dount_chart"></div>
+<script>
+      // pie chart home page
+   var donut_options = {
+        series: [90, 50, 200],
+          chart: {
+            width: 220,
+            type: 'donut',
+        },
+        colors: ['#FF9500', '#E84646', '#0E5FD9', ],
+        dataLabels: {
+          enabled: false,
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 220,
+            },
+            legend: {
+              show: false
+            }
+          }
+        }],
+        legend: {
+          show: false
+        }
+        };
+        var dountChart = new ApexCharts(document.querySelector("#dount_chart"), donut_options);
+        dountChart.render();
+    
+</script>
+                                    </textarea>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                            
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                {% include "../templates/layout/header-footer/footer.html" %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

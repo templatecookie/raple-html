@@ -1,13 +1,19 @@
 %text-para,
 %text-one { 
     margin: 0;
+    color: var(--gray-600);
 }
 
 %text-para { 
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    color: var(--gray-600);
+}
+
+%text-one,
+%text-two,
+%text-three { 
+    text-transform: capitalize;
 }
 
 %text-one { 
@@ -15,12 +21,28 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 600;
-    text-transform: capitalize;
 }
 
 %text-two { 
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
-    text-transform: capitalize;
+}
+
+%text-three { 
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+%text-four { 
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+%text-five { 
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
 }

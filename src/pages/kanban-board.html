@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-12">
             <div id="board" class="board">
-              <div class="row kanbanboard_parent" id="kanban_board_parent">
+              <div class="d-flex kanbanboard_parent" id="kanban_board_parent">
                 <div class="kanbanboard_child">
                   <div class="card">
                       <div class="card-body" >
@@ -28,6 +28,7 @@
                           </button>
                         </div>
                         <div id="task-1">
+                         
                           <div id="todo">
                             <div class="card-priority rt-mb-12">
                               <!-- top bar  -->
@@ -40,12 +41,12 @@
                                 </div>
                                 <!-- actions  -->
                                 <div class="card-priority__actions">
-                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="dropdownMenuButton_1" data-bs-toggle="dropdown" aria-expanded="true">
                                     <img src="assets/images/svg/dot.svg" alt="clock">
                                   </button>
-                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton_1" data-popper-placement="bottom-start">
                                    
-        
+          
                                     <li>
                                       <a href="#" class="dropdown-item" >
                                         <span>
@@ -63,12 +64,12 @@
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="#" class="dropdown-item" >
-                                        <span>
-                                              <img src="assets/images/svg/trash.svg" alt="copylink">
-                                            </span>
-                                        Delete
-                                      </a>
+                                      <button   type="button"  class="dropdown-item remove-killer plain-btn">
+    <span>
+          <img src="assets/images/svg/trash.svg" alt="copylink">
+        </span>
+    Delete
+  </button>
                                     </li>
                                   </ul>
                                 </div>
@@ -81,7 +82,7 @@
                                   <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
                                 </ul>
                               </div>
-                              <h2 class="card-priority__title">
+                              <h2 class="card-priority__title pointer">
                                 Meeting with UI/UX Team to manage our upcoming projects &amp; task.
                               </h2>
                               <!-- priority footer  -->
@@ -127,12 +128,12 @@
                                 </div>
                                 <!-- actions  -->
                                 <div class="card-priority__actions">
-                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="true">
                                     <img src="assets/images/svg/dot.svg" alt="clock">
                                   </button>
-                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton2" data-popper-placement="bottom-start">
                                    
-        
+          
                                     <li>
                                       <a href="#" class="dropdown-item" >
                                         <span>
@@ -150,12 +151,12 @@
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="#" class="dropdown-item" >
-                                        <span>
-                                              <img src="assets/images/svg/trash.svg" alt="copylink">
-                                            </span>
-                                        Delete
-                                      </a>
+                                      <button   type="button"  class="dropdown-item remove-killer plain-btn">
+    <span>
+          <img src="assets/images/svg/trash.svg" alt="copylink">
+        </span>
+    Delete
+  </button>
                                     </li>
                                   </ul>
                                 </div>
@@ -168,7 +169,7 @@
                                   <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
                                 </ul>
                               </div>
-                              <h2 class="card-priority__title">
+                              <h2 class="card-priority__title pointer">
                                 Meeting with UI/UX Team to manage our upcoming projects &amp; task.
                               </h2>
                               <!-- priority footer  -->
@@ -204,7 +205,7 @@
                               </div>
                             </div>
                             <div>
-                              <button type="button" class="btn btn-primary2  waves-effect  primary-dark pill btn-icon d-block" data-bs-toggle="modal" data-bs-target="#createcard-modal" id="toboad_task">
+                              <button type="button"  class="btn btn-primary2  waves-effect  primary-dark pill btn-icon d-block"  id="toboad_task" name="button-group">
                                 <span class="button-content-wrapper">
                                 <span class="button-icon align-icon-left">
                                   <i class="ph-plus"></i>
@@ -243,12 +244,12 @@
                                 </div>
                                 <!-- actions  -->
                                 <div class="card-priority__actions">
-                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="true">
                                     <img src="assets/images/svg/dot.svg" alt="clock">
                                   </button>
-                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton3" data-popper-placement="bottom-start">
                                    
-        
+          
                                     <li>
                                       <a href="#" class="dropdown-item" >
                                         <span>
@@ -266,12 +267,12 @@
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="#" class="dropdown-item" >
-                                        <span>
-                                              <img src="assets/images/svg/trash.svg" alt="copylink">
-                                            </span>
-                                        Delete
-                                      </a>
+                                      <button   type="button"  class="dropdown-item remove-killer plain-btn">
+    <span>
+          <img src="assets/images/svg/trash.svg" alt="copylink">
+        </span>
+    Delete
+  </button>
                                     </li>
                                   </ul>
                                 </div>
@@ -284,7 +285,7 @@
                                   <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
                                 </ul>
                               </div>
-                              <h2 class="card-priority__title">
+                              <h2 class="card-priority__title pointer">
                                 Meeting with UI/UX Team to manage our upcoming projects &amp; task.
                               </h2>
                               <!-- priority footer  -->
@@ -320,7 +321,7 @@
                               </div>
                             </div>
                             <div>
-                              <button type="button" class="btn btn-primary2  waves-effect  primary-dark pill btn-icon d-block" data-bs-toggle="modal" data-bs-target="#createcard-modal" id="doingboard_task">
+                              <button type="button"  class="btn btn-primary2  waves-effect  primary-dark pill btn-icon d-block"  id="doingboard_task" name="button-group">
                                 <span class="button-content-wrapper" >
                                 <span class="button-icon align-icon-left">
                                   <i class="ph-plus"></i>
@@ -359,12 +360,12 @@
                                 </div>
                                 <!-- actions  -->
                                 <div class="card-priority__actions">
-                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="downMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                  <button class="dots-three text-gray-400 f-size-24" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="true">
                                     <img src="assets/images/svg/dot.svg" alt="clock">
                                   </button>
-                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
+                                  <ul class="dropdown-menu dropdown-actions" aria-labelledby="dropdownMenuButton4" data-popper-placement="bottom-start">
                                    
-        
+          
                                     <li>
                                       <a href="#" class="dropdown-item" >
                                         <span>
@@ -382,12 +383,12 @@
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="#" class="dropdown-item" >
-                                        <span>
-                                              <img src="assets/images/svg/trash.svg" alt="copylink">
-                                            </span>
-                                        Delete
-                                      </a>
+                                      <button   type="button"  class="dropdown-item remove-killer plain-btn">
+    <span>
+          <img src="assets/images/svg/trash.svg" alt="copylink">
+        </span>
+    Delete
+  </button>
                                     </li>
                                   </ul>
                                 </div>
@@ -400,7 +401,7 @@
                                   <li><span class="labels urgent"><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt=""> Urgents</span></li>
                                 </ul>
                               </div>
-                              <h2 class="card-priority__title">
+                              <h2 class="card-priority__title pointer">
                                 Meeting with UI/UX Team to manage our upcoming projects &amp; task.
                               </h2>
                               <!-- priority footer  -->
@@ -436,7 +437,7 @@
                               </div>
                             </div>
                             <div>
-                              <button type="button" class="btn btn-primary2  waves-effect  primary-dark pill btn-icon d-block" data-bs-toggle="modal" data-bs-target="#createcard-modal" id="done_task">
+                              <button type="button"  class="btn btn-primary2  waves-effect  primary-dark pill btn-icon d-block"  id="done_task" name="button-group">
                                 <span class="button-content-wrapper">
                                 <span class="button-icon align-icon-left">
                                   <i class="ph-plus"></i>
@@ -468,6 +469,7 @@
             </div>
           </div>
         </div>
+        
         {% include "../templates/layout/header-footer/footer.html" %}
       </div>
     </div>
@@ -508,92 +510,209 @@
   </div>
 </div>
 
-<div class="modal fade" id="createcard-modal" tabindex="-1" aria-labelledby="createcard-modalLabel" aria-hidden="true">
-  <div class="modal-dialog createcard-modal-dialog">
+<div class="modal fade" id="viewmodal" tabindex="-1" aria-labelledby="viewmodalLabel" aria-hidden="true">
+  <div class="modal-dialog viewmodal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="body-font-3">Create New Card</h5>
+        <h5 class="body-font-3">Create New Column</h5>
         <button type="button" class="plain-btn"  data-bs-dismiss="modal" aria-label="Close">
           <img src="assets/images/svg/modal-close.svg" alt="" draggable="false">
         </button>
       </div>
       <div class="modal-body">
-        <div class="rt-mb-24">
-          <div class="row">
-            <div class="col-12 rt-mb-15">
-              <label class=" body-font-4 pointer block mb-2" for="card_title">Tittle</label>
-        <input type="text" placeholder="Add tittle" class="form-control" id="card_title">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 rt-mb-15">
-              <label for="">Priority</label>
-              <select name="" id="" >
-                <option value="hight">High Priority</option>
-                <option value="low">Low Priority</option>
-              </select>
-            </div>
-            <div class="col-md-6 rt-mb-15">
-              <label for="">Label</label>
-              <select name="" id="">
-                <option value="hight">Urgents</option>
-                <option value="low">Medium</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 rt-mb-15">
-              <textarea  rows="4" placeholder="Write something about your events..." ></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 rt-mb-15">
-              <div class="fromGroup has-icon">
-                <label>Date</label>
-                <div class="form-control-icon">
-                  <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
-                  <div class="icon-badge-2">
-                    <img src="assets/images/svg/calendar.svg" alt="">
+        <div class="card-details-wrap">
+           
+          <div class="card-details-body">
+              <div class="project-idea-wrap">
+                <div class="project-idea-header">
+                  <h3>New Project Idea & Research <span class="badge rounded-pill bg-danger-50 text-danger-500 rt-ml-8">High Priority</span></h3>
+                </div>
+                <div class="project-idea-body">
+                  <div class="project-idea-data">
+                      <h5>Label</h5>
+                      <span><img class="rt-mr-6" src="assets/images/svg/red-circle.svg" alt="">Urgents</span>
+                  </div>
+                  <div class="project-idea-data">
+                    <h5>Created date</h5>
+                    <p>12 Nov, 2021 at 9:40 PM</p>
+                  </div>
+                  <div class="project-idea-data">
+                    <h5>Due Date</h5>
+                    <p>15 Nov, 2021 at 10:00 AM</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6 rt-mb-15">
-              <div class="fromGroup has-icon">
-                <label>Date</label>
-                <div class="form-control-icon">
-                  <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
-                  <div class="icon-badge-2">
-                    <img src="assets/images/svg/calendar.svg" alt="">
+              <div class="project-description">
+                <h4>Description</h4>
+                <p>In lobortis fermentum venenatis. Phasellus orci libero, feugiat et velit non, sagittis feugiat eros. In placerat
+                  risus
+                  vitae est faucibus, in laoreet enim rutrum. Mauris posuere vitae felis at convallis. Integer consequat et tellus vel
+                  tincidunt. Aenean rhoncus ligula eu risus molestie semper.</p>
+              </div>
+              <div class="project-member-column">
+                <h4>Members <span>(05)</span></h4>
+                  <div class="project-member-wrap">
+                    <div class="project-member-item">
+                      <div class="project-member-thumb">
+                        <img src="assets/images/all-img/users/user1.png" alt="">
+                      </div>
+                      <div class="project-member-data">
+                        <h5>Brooklyn Simmons</h5>
+                        <a href="#">ateniese@mac.com</a>
+                      </div>
+                    </div>
+                    <div class="project-member-item">
+                      <div class="project-member-thumb">
+                        <img src="assets/images/all-img/users/two.png" alt="">
+                      </div>
+                      <div class="project-member-data">
+                        <h5>Ralph Edwards</h5>
+                        <a href="#">raines@optonline.com</a>
+                      </div>
+                    </div>
+                    <div class="project-member-item">
+                      <div class="project-member-thumb">
+                        <img src="assets/images/all-img/users/one.png" alt="">
+                      </div>
+                      <div class="project-member-data">
+                        <h5>Devon Lane</h5>
+                        <a href="#">gravyface@mac.com</a>
+                      </div>
+                    </div>
+                    <div class="project-member-item">
+                      <div class="project-member-thumb">
+                        <img src="assets/images/all-img/users/three.png" alt="">
+                      </div>
+                      <div class="project-member-data">
+                        <h5>Arlene McCoy</h5>
+                        <a href="#">kspiteri@live.com</a>
+                      </div>
+                    </div>
+                    <div class="project-member-item">
+                      <div class="project-member-thumb">
+                        <img src="assets/images/all-img/users/one.png" alt="">
+                      </div>
+                      <div class="project-member-data">
+                        <h5>Jane Cooper</h5>
+                        <a href="#">mthurn@optonline.com</a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+             
+          </div>
+          <div class="project-tab">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
+                  aria-controls="home" aria-selected="true">Comments</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"
+                  aria-controls="profile" aria-selected="false">Attach File</button>
+              </li>
+            </ul>
+            <div class="project-tab-body">
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="post-comment-wrap">
+                      <h4>Post Comments</h4>
+                      <form action="#">
+                        <div class="fromGroup post-comment has-icon mb-4">
+                          <div class="form-control-icon">
+                            <input class="form-control" type="text" placeholder="Write down your questions and comments...">
+                            <div class="icon-badge-2">
+                              <img src="assets/images/svg/chat-circle-dots.svg" alt="">
+                            </div>
+                          </div>
+                          <button type="button" class="btn btn-primary pill btn-icon">
+                            <span class="button-content-wrapper">
+                              <span class="button-icon align-icon-right">
+                                <i class="ph-arrow-right"></i>
+                              </span>
+                              <span class="button-text">
+                                Post
+                              </span>
+                            </span>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="latest-comment-wrap">
+                      <h4>Latest Comments</h4>
+                        <div class="latest-comment-item">
+                          <div class="latest-comment-thumb">
+                              <img src="assets/images/all-img/users/three.png" alt="">
+                          </div>
+                          <div class="latest-comment-data">
+                            <h5>Jane Cooper<span>10 mins ago</span></h5>
+                            <p><a href="#">@Everyone</a>Great Job.</p>
+                          </div>
+                        </div>
+                        <div class="latest-comment-item">
+                          <div class="latest-comment-thumb">
+                            <img src="assets/images/all-img/users/user1.png" alt="">
+                          </div>
+                          <div class="latest-comment-data">
+                            <h5>Jane Cooper<span>10 mins ago</span></h5>
+                            <p><a href="#">@Everyone</a>Great Job.</p>
+                          </div>
+                        </div>
+                        <div class="latest-comment-item">
+                          <div class="latest-comment-thumb">
+                            <img src="assets/images/all-img/users/one.png" alt="">
+                          </div>
+                          <div class="latest-comment-data">
+                            <h5>Jane Cooper<span>10 mins ago</span></h5>
+                            <p><a href="#">@Everyone</a>Great Job.</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="latest-comment-wrap">
+                      <h4>Latest Comments</h4>
+                      <div class="latest-comment-item">
+                        <div class="latest-comment-thumb">
+                          <img src="assets/images/all-img/users/three.png" alt="">
+                        </div>
+                        <div class="latest-comment-data">
+                          <h5>Jane Cooper<span>10 mins ago</span></h5>
+                          <p><a href="#">@Everyone</a>Great Job.</p>
+                        </div>
+                      </div>
+                      <div class="latest-comment-item">
+                        <div class="latest-comment-thumb">
+                          <img src="assets/images/all-img/users/user1.png" alt="">
+                        </div>
+                        <div class="latest-comment-data">
+                          <h5>Jane Cooper<span>10 mins ago</span></h5>
+                          <p><a href="#">@Everyone</a>Great Job.</p>
+                        </div>
+                      </div>
+                      <div class="latest-comment-item">
+                        <div class="latest-comment-thumb">
+                          <img src="assets/images/all-img/users/one.png" alt="">
+                        </div>
+                        <div class="latest-comment-data">
+                          <h5>Jane Cooper<span>10 mins ago</span></h5>
+                          <p><a href="#">@Everyone</a>Great Job.</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
             </div>
+            
           </div>
-          <div class="row">
-            <div class="col-12">
-              <label for="member-email">Add Member</label>
-              <input type="text" placeholder="Member email address" id="member-email">
-            </div>
-          </div>
-        </div>
-        <div class="createcard-modal-footer d-flex justify-content-between">
-          <button type="button" class="btn btn-dark2 pill" data-bs-dismiss="modal">Cancel</button>
-   
-          <button type="button" class="btn btn-primary pill btn-icon" id="createcard">
-            <span class="button-content-wrapper">
-            <span class="button-icon align-icon-right">
-              <i class="ph-arrow-right"></i>
-            </span>
-            <span class="button-text" >
-              Create Column
-            </span>
-            </span>
-          </button>
-        </div>
+      </div>
+        
       </div>
     </div>
   </div>
 </div>
+
+
+
 
 {% endblock %}

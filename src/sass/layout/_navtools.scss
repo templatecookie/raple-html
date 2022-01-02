@@ -5,9 +5,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-    @include breakpoint(lg) {
-      display: none;
-    }
+  
     > li {
       margin-right: 20px;
       position: relative;
@@ -27,10 +25,50 @@
     }
   }
 }
+.user_menu {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  li {
+    display: block;
+    line-height: 22px;
+    padding: 8px 0;
+    &:first-child {
+      padding-top: 0px;
+    }
+    &:last-child {
+      padding-bottom: 0px;
+    }
 
+    a {
+      display: flex;
+      color: #494e5f;
+      font-size: 14px;
+      font-weight: 400;
+      svg {
+        min-width: 21px;
+      }
+      span {
+        display: inline-block;
+        margin-right: 15px !important;
+        font-size: 20px;
+      }
+      &:hover {
+        color: var(--primary-500) !important;
+        // svg {
+        //   stroke: var(--primary_color) !important;
+        //   path {
+        //     stroke: var(--primary_color) !important;
+
+        //   }
+        // }
+      }
+    }
+  }
+}
 .rt-single-icon-box {
   &.user-profile-icon-big {
-    padding: 0 15px;
+    // padding: 0 15px;
     .icon-thumb {
       .innerImage {
         height: 48px;
@@ -104,22 +142,25 @@
 .PopoverParent {
   width: max-content;
   min-width: 205px;
-  &.min-372{
+  &.min-372 {
     min-width: 372px;
+    @include breakpoint(xs){
+      min-width: 100%;
+      max-width: 280px;
+    }
   }
-  
-.PopoverContent{
-  padding: 19px;
-}
+
+  .PopoverContent {
+    padding: 19px;
+  }
   .Popover-header {
-    border-bottom: 1px solid #E5E7E8;
+    border-bottom: 1px solid #e5e7e8;
     margin-left: -6px;
     margin-right: -6px;
     padding: 16px 24px;
   }
   .popOverFooter {
-    border-top: 1px solid #E5E7E8;
-
+    border-top: 1px solid #e5e7e8;
     margin-top: 12px;
     display: flex;
     flex-direction: column;
@@ -133,28 +174,39 @@
         display: inline-block;
         margin-right: 10px;
       }
-      padding-left: 15px;
+      padding-left: 10px;
       font-weight: 400;
     }
   }
 }
 
 .notify-lists {
-  li{
+  li {
     margin-bottom: 16px;
     display: block;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0px;
     }
   }
-  .icon-thumb{
+  .icon-thumb {
     height: 48px;
     width: 48px;
-    img{
+    img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+.notify-lists{
+  .rt-single-icon-box{
+    @include breakpoint(xs){
+      flex-direction: column !important;
+      .icon-thumb{
+        margin-bottom: 12px;
+      }
     }
   }
 }

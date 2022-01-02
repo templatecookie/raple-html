@@ -79,6 +79,9 @@
           }
         }
       }
+      .dynamic-value:before {
+       color: var(--gray-100);
+      }
     }
   }
 
@@ -105,12 +108,10 @@
     }
   }
   &-price {
-    h2 {
-      font-weight: 600;
-      font-size: 32px;
-      line-height: 40px;
-      margin-bottom: 5px;
-    }
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 5px;
     p {
       font-size: 14px;
       line-height: 20px;

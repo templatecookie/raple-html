@@ -17,12 +17,11 @@
         <div class="row">
           <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <div class="card">
-              <label class="upload-file">
+              <div class="upload-file">
                   <div class="upload-photo-thumb">
                     <img src="assets/images/all-img/users/user1.png" alt="">
                   </div>
-                  <input type="file">
-                  <a type="button" class="btn btn-outline-primary pill btn-icon block">
+                  <div class="btn btn-outline-primary pill btn-icon d-block position-static">
                     <span class="button-content-wrapper">
                       <span class="button-text">
                         Upload Proifle Photo
@@ -31,8 +30,9 @@
                         <img src="assets/images/svg/download2.svg" alt="">
                       </span>
                     </span>
-                  </a>
-              </label>
+                  </div>
+                  <input type="file">
+                </div>
               <div class="upload-photo-content">
                 <p><span>Remember:</span> For best results, use an image at least 200px by 200px in .jpg or .png format</p>
               </div>
@@ -40,13 +40,13 @@
           </div>
           <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <div class="card">
-              <label class="upload-file two">
+              <div class="upload-file two">
                 <div class="upload-photo-thumb two">
                   <img src="assets/images/all-img/banner2.jpg" alt="">
                 </div>
                 <input type="file">
                 <div class="upload-btn-wrap">
-                    <a type="button" class="btn btn-outline-primary pill btn-icon block">
+                    <div class="btn btn-outline-primary pill btn-icon d-block position-static">
                       <span class="button-content-wrapper">
                         <span class="button-text">
                           Upload Proifle Photo
@@ -55,11 +55,11 @@
                           <img src="assets/images/svg/download2.svg" alt="">
                         </span>
                       </span>
-                    </a>
+                    </div>
                 </div>
-              </label>
+              </div>
               <div class="upload-photo-content two">
-                <button type="button" class="btn btn-danger2 pill">Remove Banner</button>
+                <button type="button" class="btn btn-danger2 pill d-block">Remove Banner</button>
                 <p><span>Remember:</span> For best results, use an image at least 200px by 200px in .jpg or .png format</p>
               </div>
             </div>
@@ -93,7 +93,6 @@
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-xxl-4 col-xl-6 col-md-6">
             <div class="card">
@@ -135,18 +134,15 @@
                       </div>
                   </div>
                 </div>
-              
                 <div class="fromGroup has-icon mb-3">
                   <label>Date of Birth</label>
                   <div class="form-control-icon">
                     <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
-                    <!-- <div class="date-picker-calender rt-pt-15"></div> -->
                     <div class="icon-badge-2">
                       <img src="assets/images/svg/calendar.svg" alt="">
                     </div>
                   </div>
                 </div>
-        
                 <div class="fromGroup mb-3">
                   <label>Language</label>
                   <div class="select-box">
@@ -156,9 +152,6 @@
                     </select>
                   </div>
                 </div>
-                
-                
-                
                 <button type="button" class="btn btn-primary pill mt-3">Save Changes</button>
               </div>
             </div>
@@ -246,8 +239,8 @@
                     <div class="fromGroup eye mb-3">
                       <label>Current Password</label>
                       <div class="form-control-icon">
-                        <input id="password-hide_show1" class="form-control" type="password" placeholder="password">
-                        <div class="has-badge" onclick="showPassword('password-hide_show1', this)">
+                        <input id="password-hide_show" class="form-control" type="password" placeholder="password">
+                        <div class="has-badge">
                           <i class="ph-eye"></i>
                         </div>
                       </div>
@@ -256,7 +249,7 @@
                       <label>New Password</label>
                       <div class="form-control-icon">
                         <input id="password-hide_show2" class="form-control" type="password" placeholder="password">
-                        <div class="has-badge" onclick="showPassword('password-hide_show2', this)">
+                        <div class="has-badge select-icon__two">
                           <i class="ph-eye"></i>
                         </div>
                       </div>
@@ -265,7 +258,7 @@
                       <label>Confirm Password</label>
                       <div class="form-control-icon">
                         <input id="password-hide_show3" class="form-control" type="password" placeholder="password">
-                        <div class="has-badge" onclick="showPassword('password-hide_show3', this)">
+                        <div class="has-badge select-icon__three">
                           <i class="ph-eye"></i>
                         </div>
                       </div>

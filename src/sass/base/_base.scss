@@ -15,6 +15,8 @@
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
@@ -212,4 +214,12 @@ ul,ol,li {
   margin: 0px;
   padding: 0px;
   list-style: none;
+}
+
+button { 
+  padding: 0px;
+  outline: none;
+  border: none;
+  display: inline-block;
+  background-color: transparent;
 }

@@ -1,0 +1,97 @@
+{% extends "layout/layout-docs.html" %} {% set page_title = "Introduction" %} {% block content %}
+
+<main class="app-wrapper">
+    {% include "../templates/layout/header-footer/doc-appheader.html" %} {% include "../templates/layout/header-footer/doc-sidebar.html" %} {% include "../templates/layout/header-footer/doc-topnav.html" %}
+    <div class="content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 rt-mb-25">
+                        {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+                    </div>
+                </div>
+
+                <div class="docu rt-mb-30">
+                    <div class="docu-section">
+                        <div class="docu-card">
+                            <h2 class="docu-title">Introduction</h2>
+                            <p>
+                                Zakir Soft is a <a href="https://zakirsoft.com/" target="_blank" >Software company</a> and Software Development Training Institute. We have passionate
+                                teams like Full Stack Laravel Developer, Android Developer, UI/UX Designer. We have management
+                                system softwares for the local market. we also have eCommerce systems for your online business. <b>Highlight
+                                Text</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="docu-card">
+                        <h2 class="docu-title">Navigation</h2>
+                        <div>
+                            <div class="row docu-navigation ">
+                                <div class="col-lg-3 col-md-4 col-sm-6 ">
+                                    <h3 class="docu-title-sub">Getting started</h3>
+                                    <ul class="list-unstyled mb-4">
+                                        <li>
+                                            - <a href="started.html">Quick Start</a>
+                                        </li>
+                                        <li>
+                                            - <a href="started.html#environment">Environment Setup</a>
+                                        </li>
+                                        <li>
+                                            - <a href="started.html#folder">Folder Structure</a>
+                                        </li>
+                                        <li>
+                                            - <a href="started.html#colors">Colors</a>
+                                        </li>
+                                        <li>
+                                            - <a href="started.html#typography">Typography</a>
+                                        </li>
+                                        <li>
+                                            - <a href="started.html#icons">Icons</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6 ">
+                                    <h3 class="docu-title-sub">Layouts</h3>
+                                    <ul class="list-unstyled mb-4">
+                                        <li>
+                                            - <a href="layouts.html#verticle">Verticle</a>
+                                        </li>
+                                        <li>
+                                            - <a href="layouts.html#horizontal">Horizontal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6 ">
+                                    <h3 class="docu-title-sub">Plugins</h3>
+                                    <ul class="list-unstyled mb-4">
+                                        <li>
+                                            - <a href="#">Map</a>
+                                        </li>
+                                        <li>
+                                            - <a href="#">Calendar</a>
+                                        </li>
+                                        <li>
+                                            - <a href="#">Chart</a>
+                                        </li>
+                                    </ul>
+                            
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6 ">
+                                    <h3 class="docu-title-sub">About </h3>
+                                    <ul class="list-unstyled mb-4">
+                                        <li>
+                                            - <a href="browser-support.html">Browser Supports  & Credit</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% include "../templates/layout/header-footer/footer.html" %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

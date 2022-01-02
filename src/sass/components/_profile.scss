@@ -210,7 +210,6 @@
         }
       }
       .btn-danger2 {
-        width: 100%;
         margin-bottom: 24px;
       }
       p {
@@ -235,9 +234,7 @@
     @include max(767px) {
       padding: 24px 24px 0;
     }
-    .btn-icon {
-      width: 100%;
-    }
+
     &.two {
       padding: 0;
     }
