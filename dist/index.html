@@ -5,993 +5,401 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
-  <title>Relik - Admin Dashboard</title>
+  <title>Relik || Presentation</title>
   <link rel="icon" type="image/png" href="assets/images/logo/logo-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/browse/tippy.js@6/themes/light.css" />
-  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/libs/@fullcalendar/core/main.min.css" />
-  <link rel="stylesheet" href="assets/css/libs/@fullcalendar/daygrid/main.min.css" />
-  <link rel="stylesheet" href="assets/css/libs/@fullcalendar/bootstrap/main.min.css" />
-  <link rel="stylesheet" href="assets/css/libs/@fullcalendar/timegrid/main.min.css" />
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/jquery-ui.css" />
-  <link rel="stylesheet" href="assets/css/jquery-ui.theme.css" />
-  <link rel="stylesheet" href="assets/css/apexcharts.css" />
-  <link rel="stylesheet" href="assets/css/chartist-plugin-tooltip.css" />
-  <link rel="stylesheet" href="assets/css/chartist.min.css" />
   <link rel="stylesheet" href="assets/css/customfont.css" />
-  <link rel="stylesheet" href="assets/css/jquery-jvectormap-2.0.5.css" />
-  <link rel="stylesheet" href="assets/css/jquery-ui.theme.min.css" />
   <link rel="stylesheet" href="assets/css/metisMenu.min.css" />
-  <link rel="stylesheet" href="assets/css/select2.min.css" />
   <link rel="stylesheet" href="assets/css/simplebar.css" />
-  <link rel="stylesheet" href="assets/css/dragula.min.css" />
-
-  <link rel="stylesheet" href="assets/css/animate.min.css" />
   <link rel="stylesheet" href="assets/css/app.min.css" />
 </head>
 
 <body class="light">
-  <!--[if IE]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
 
 
 
-  <main class="app-wrapper">
-    <header class="app-header rt-sticky">
-      <div class="navbar align-items-center">
-        <div class="container-fluid">
-          <div class="left-content">
-            <div class="logo-segment">
-              <a href="/" class="brand-logo">
-                <img src="assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black">
-                <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white">
-              </a>
-              <a href="/" class="brand-logo white">
-                <img src="assets/images/logo/logo-white.svg" alt="" draggable="false">
-              </a>
-              <a href="/" class="collapse-in-logo ">
 
-                <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false">
+  <!-- Header section  -->
 
-              </a>
-              <div class="opener_sidebar ">
-                <i class="ph-list"></i>
-              </div>
-            </div>
-            <div class="dashboard-message position-relative">
-              <span class="back_sidebar_icon">
-              <i class="ph-arrow-right"></i>
-            </span>
-
-            </div>
-          </div>
-          <div class="app-mian-serach">
-            <form action="#">
-              <div class="input-box">
-                <input type="text" placeholder="Search" />
-                <button type="submit">
-                  <img src="assets/images/svg/search.svg" alt="" draggable="false">
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="ms-auto">
-            <div class="rt-nav-tolls d-flex align-items-center">
-              <ul>
-                <li class=" d-inline-block d-md-none">
-                  <div class="iconBox open-mbl-search pointer">
-                    <img src="assets/images/svg/search.svg" alt="" />
-                  </div>
-                </li>
-                <li>
-                  <div class="dropdown">
-                    <div class=" dropdown-toggle pointer" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      English
-                    </div>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div class="iconBox page-setting pointer" id="layout">
-                    <img src="assets/images/svg/grid.svg" alt="" draggable="false" class="for-v">
-                    <img src="assets/images/svg/grid2.svg" alt="" draggable="false" class="for-h">
-                  </div>
-                </li>
-                <li>
-                  <div class="iconBox notifications pointer waves-effect primary-light">
-                    <img src="assets/images/svg/bell.svg" alt="" draggable="false" class="for-v">
-                    <img src="assets/images/svg/bell2.svg" alt="" draggable="false" class="for-h">
-                  </div>
-                </li>
-                <li>
-                  <div class="userProfileBox openaccount  pointer">
-                    <img src="assets/images/all-img/user.svg" alt="" />
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="app-sidebar">
-      <div class="h-100" data-simplebar>
-        <div class="sidebar-menu">
-          <ul id="side-menu">
-            <li class="menu-title no-margin">Dashboard</li>
-            <li>
-              <a href="/" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-house-line"></i></span>
-                <div class="text-box">
-                  Dashboard
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="full-calendar.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-calendar-blank"></i></span>
-                <div class="text-box">
-                  Calendar
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="kanban-board.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-clipboard-text"></i></span>
-                <div class="text-box">Kanban Board</div>
-              </a>
-            </li>
-            <li class="has-child">
-              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-folder-notch-open"></i></span>
-                <div class="text-box">File Manager</div>
-              </a>
-              <ul class="sub-menu" aria-expanded="false">
-                <li><a href="file-manager.html">File Manager</a></li>
-                <li><a href="file-manager-new.html">Upload New File</a></li>
-              </ul>
-            </li>
-            <li class="has-child" class="waves-effect primary-light">
-              <a href="javascript: void(0);" aria-expanded="false">
-                <span class="icon-box"><i class="ph-puzzle-piece"></i></span>
-                <div class="text-box">Authentication</div>
-              </a>
-              <ul class="sub-menu" aria-expanded="false">
-                <li><a href="login.html">login</a></li>
-                <li><a href="registration.html">Registration</a></li>
-              </ul>
-            </li>
-            <li class="menu-title">pages</li>
-
-            <li>
-              <a href="profile.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-user"></i></span>
-                <div class="text-box">Profile</div>
-              </a>
-            </li>
-            <li>
-              <a href="setting.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-gear"></i></span>
-                <div class="text-box">Setting</div>
-              </a>
-            </li>
-            <li class="has-child">
-              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-notebook"></i></span>
-                <div class="text-box">Invoice</div>
-              </a>
-              <ul class="sub-menu" aria-expanded="false">
-                <li><a href="invoice.html">Invoice</a></li>
-                <li><a href="invoice-detail.html">Invoice Details</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="billing.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-credit-card"></i></span>
-                <div class="text-box">Billing</div>
-              </a>
-
-            </li>
-            <li>
-              <a href="pricing-plans.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-lightning"></i></span>
-                <div class="text-box">Pricing Plans</div>
-              </a>
-
-            </li>
-            <li>
-              <a href="faq.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-question"></i></span>
-                <div class="text-box">FAQs</div>
-              </a>
-            </li>
-            <li>
-              <a href="blank-page.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-note-blank"></i></span>
-                <div class="text-box">Blank Page</div>
-              </a>
-            </li>
-
-            <li class=" menu-title">Components</li>
-            <li class=" has-child">
-              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-book-open"></i></span>
-                <div class="text-box">UI Elements</div>
-              </a>
-              <ul class="sub-menu" aria-expanded="false">
-                <li><a href="button.html">Button</a></li>
-                <li><a href="badge.html">Badge</a></li>
-                <li><a href="checkbox.html">Checkbox</a></li>
-                <li><a href="radio.html">Radio</a></li>
-                <li><a href="switch.html">Switch</a></li>
-                <li><a href="pagination.html">Pagination</a></li>
-                <li><a href="accordion.html">Accordion</a></li>
-                <li><a href="alerts.html">Alerts</a></li>
-                <li><a href="input.html">Input</a></li>
-                <li><a href="banner.html">Banner</a></li>
-                <li><a href="file.html">File</a></li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="component-card.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-cards"></i></span>
-                <div class="text-box">Card</div>
-              </a>
-            </li>
-            <li>
-              <a href="component-table.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-list-dashes"></i></span>
-                <div class="text-box">Table</div>
-              </a>
-            </li>
-            <li>
-              <a href="form-elements.html" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-swatches"></i></span>
-                <div class="text-box">Form Elements</div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-leaf"></i></span>
-                <div class="text-box">Widgets</div>
-              </a>
-            </li>
-            <li class=" has-child">
-              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
-                <span class="icon-box"><i class="ph-book-open"></i></span>
-                <div class="text-box">Documentation</div>
-              </a>
-              <ul class="sub-menu" aria-expanded="false">
-                <li><a href="#">Overview</a></li>
-                <li><a href="#">User list</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-
-    </div>
-    <div class="top-navbar">
-      <div class="container-fluid p-0">
-        <div class="main-menu">
-          <span class="rt-mobile-menu-close"> X </span><!-- /.rt-mobile-menu-close -->
-          <ul class="menu-active-classes">
-            <li class="active">
-              <a href="index.html">
-                <span class="icon-box"><i class="ph-house-line"></i></span>
-                <div class="text-box">Dashboard</div>
-              </a>
-            </li>
-            <li class="menu-item-has-children">
-              <a href="#">
-                <span class="icon-box"><i class="ph-clipboard-text"></i></span>
-                <div class="text-box">Apps</div>
-              </a>
-              <ul class="sub-menu">
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Kanban Board</a></li>
-                <li class="menu-item-has-children"><a href="#">File Manager</a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Kanban Board</a></li>
-                    <li><a href="#">Card Details</a></li>
-                    <li><a href="#">Create New Cards</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">File Manager</a></li>
-              </ul>
-            </li>
-            <li class="menu-item-has-children">
-
-              <a href="#">
-                <span class="icon-box"><i class="ph-circles-three-plus"></i></span>
-                <div class="text-box">Pages</div>
-              </a>
-            </li>
-            <li class="menu-item-has-children">
-
-              <a href="#">
-                <span class="icon-box"><i class="ph-palette"></i></span>
-                <div class="text-box">Style Guide</div>
-              </a>
-            </li>
-            <li class="menu-item-has-children">
-
-              <a href="#">
-                <span class="icon-box"><i class="ph-swatches"></i></span>
-                <div class="text-box">UI Components</div>
-              </a>
-            </li>
-            <li class="menu-item-has-children">
-
-              <a href="#">
-                <span class="icon-box"><i class="ph-gear"></i></span>
-                <div class="text-box">From Elements</div>
-              </a>
-            </li>
-            <li>
-
-              <a href="#">
-                <span class="icon-box"><i class="ph-books"></i></span>
-                <div class="text-box">Documentation</div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!-- /.main-menu -->
-      </div>
-    </div>
-
-
-    <div class="content-wrapper">
-      <div class="page-content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 rt-mb-25">
-              <div class="page-title body-font-3 font-semibold">
-                <span class="inline-block rt-mr-5">👋</span> Hey, Kevin.
-              </div>
-              <div class="text-gray-600 body-font-4">
-                Here is all your Relik analytics overview
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col  col-only-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex justify-content-between rt-mb-24">
-                    <div>
-                      <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
-                        Active Visitors
-                      </div>
-                      <div class=" f-size-24 font-semibold">157,367</div>
-                    </div>
-                    <div class=" text-left text-lg-end text-success-500 body-font-4">
-                      6.7% Increase
-                    </div>
-                  </div>
-                  <div id="bar-chart1"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col  col-only-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex  justify-content-between rt-mb-24">
-                    <div>
-                      <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
-                        Visitor per minute
-                      </div>
-                      <div class=" f-size-24 font-semibold">9,741</div>
-                    </div>
-                    <div class=" text-left text-lg-end text-danger-500 body-font-4">
-                      13.5% Decrease
-                    </div>
-                  </div>
-                  <div id="area-spaline-bottom" class=" rt-mb-24"></div>
-                  <div id="area-spaline-bottom2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col  col-only-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex  justify-content-between rt-mb-48">
-                    <div>
-                      <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
-                        Conversion Rate
-                      </div>
-                      <div class=" f-size-24 font-semibold">9.73%</div>
-                    </div>
-                    <div class=" text-left text-lg-end text-success-500 body-font-4">
-                      3.5% Increase
-                    </div>
-                  </div>
-                  <div id="barchart2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col  col-only-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex  justify-content-between rt-mb-24">
-                    <div>
-                      <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
-                        bounce rate
-                      </div>
-                      <div class=" f-size-24 font-semibold">81.94%</div>
-                    </div>
-                    <div class=" text-left text-lg-end text-success-500 body-font-4">
-                      1.1% Increase
-                    </div>
-                  </div>
-                  <div id="line-1"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-9">
-              <div class="card">
-                <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
-                  <div>User Overview</div>
-
-                </div>
-                <div class="card-body">
-                  <div id="user_chart"></div>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-xl-3">
-              <div class="card">
-                <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
-                  <div>Most Visited Page</div>
-
-                </div>
-                <div class="card-body">
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xxl-3">
-              <div class="card">
-                <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
-                  <div>Browser Overview</div>
-
-                </div>
-                <div class="card-body pb-0">
-                  <div class="row">
-                    <div class="col-sm-6 col-12 text-center rt-mb-28">
-                      <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/chrome.svg" alt="" draggable="false">
-                      </div>
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Google Chrome</div>
-                      <div class="body-font-4  text-gray ">54% User</div>
-
-
-                    </div>
-                    <div class="col-sm-6 col-12 text-center rt-mb-28">
-                      <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/firefox.svg" alt="" draggable="false">
-                      </div>
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Firefox</div>
-                      <div class="body-font-4  text-gray ">23% User</div>
-
-                    </div>
-                    <div class="col-sm-6 col-12 text-center rt-mb-28">
-                      <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/edge.svg" alt="" draggable="false">
-                      </div>
-
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Microsoft Edge</div>
-                      <div class="body-font-4  text-gray ">19% User</div>
-
-                    </div>
-                    <div class="col-sm-6 col-12 text-center rt-mb-28">
-                      <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/breve.svg" alt="" draggable="false">
-                      </div>
-
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Brave</div>
-                      <div class="body-font-4  text-gray ">11% User</div>
-
-                    </div>
-                    <div class="col-sm-6 col-12 text-center rt-mb-28">
-                      <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/safari.svg" alt="" draggable="false">
-                      </div>
-
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Apple Safari</div>
-                      <div class="body-font-4  text-gray ">7% User</div>
-
-                    </div>
-                    <div class="col-sm-6 col-12 text-center rt-mb-28">
-                      <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/opera.svg" alt="" draggable="false">
-                      </div>
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Opera</div>
-                      <div class="body-font-4  text-gray ">3% User</div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-6">
-              <div class="card">
-                <div class="card-header">
-                  User Location
-                </div>
-                <div class="card-body">
-                  <div id="world-map" class=" rt-mb-48"></div>
-                  <div class="row">
-                    <div class="col-md-4 rt-md-10 ">
-                      <div class="rt-mb-15">
-                        <img src="assets/images/svg/usa-flag.svg" alt="" draggable="false">
-                      </div>
-                      <div class=" text-gray-900 body-font-3 font-medium rt-mb-4">United State (USA)</div>
-                      <div class=" text-gray  body-font-4">54% . 5,761,687 Users</div>
-                    </div>
-                    <div class="col-md-4 rt-md-10 ">
-                      <div class="rt-mb-15">
-                        <img src="assets/images/svg/china-flag.svg" alt="" draggable="false">
-                      </div>
-                      <div class=" text-gray-900 body-font-3 font-medium rt-mb-4">China</div>
-                      <div class=" text-gray  body-font-4">54% . 5,761,687 Users</div>
-                    </div>
-                    <div class="col-md-4 rt-md-10 ">
-                      <div class="rt-mb-15">
-                        <img src="assets/images/svg/russia-flag.svg" alt="" draggable="false">
-                      </div>
-                      <div class=" text-gray-900 body-font-3 font-medium rt-mb-4">Russia</div>
-                      <div class=" text-gray  body-font-4">54% . 5,761,687 Users</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xxl-3">
-              <div class="card">
-                <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
-                  <div>Devices Overview</div>
-
-                </div>
-                <div class="card-body pb-0">
-                  <ul>
-
-
-                    <li class=" block rt-mb-24">
-                      <div class="rt-single-icon-box">
-                        <div class="icon-thumb rt-mr-20"><img src="assets/images/svg/big-desktop.svg" alt="" draggable="false"></div>
-                        <div class="iconbox-content">
-                          <div class=" body-font-3 text-gray-900 font-medium rt-mb-4">Computer</div>
-                          <div class=" text-gray  body-font-4 rt-mb-8">
-                            <span>23%</span>
-                            <span>.</span>
-                            <span>698,723 Users</span>
-                          </div>
-                          <div class=" text-success-500 body-font-4">
-                            <span class=" rt-mr-4"><i class="ph-arrow-up"></i></span>1.2% Increase
-                          </div>
-                        </div>
-                      </div>
-
-                    </li>
-
-                    <li class=" block rt-mb-24">
-                      <div class="rt-single-icon-box">
-                        <div class="icon-thumb rt-mr-20"><img src="assets/images/svg/big-laptop.svg" alt="" draggable="false"></div>
-                        <div class="iconbox-content">
-                          <div class=" body-font-3 text-gray-900 font-medium rt-mb-4">Laptop</div>
-                          <div class=" text-gray  body-font-4 rt-mb-8">
-                            <span>23%</span>
-                            <span>.</span>
-                            <span>698,723 Users</span>
-                          </div>
-                          <div class=" text-success-500 body-font-4">
-                            <span class=" rt-mr-4"><i class="ph-arrow-down"></i></span>2.1% Decrease
-                          </div>
-                        </div>
-                      </div>
-
-                    </li>
-
-                    <li class=" block rt-mb-24">
-                      <div class="rt-single-icon-box">
-                        <div class="icon-thumb rt-mr-20"><img src="assets/images/svg/big-tablet.svg" alt="" draggable="false"></div>
-                        <div class="iconbox-content">
-                          <div class=" body-font-3 text-gray-900 font-medium rt-mb-4">Tablet</div>
-                          <div class=" text-gray  body-font-4 rt-mb-8">
-                            <span>19%</span>
-                            <span>.</span>
-                            <span>+68,412 Users</span>
-                          </div>
-                          <div class=" text-success-500 body-font-4">
-                            <span class=" rt-mr-4"><i class="ph-arrow-up"></i></span>1.7% Increase
-                          </div>
-                        </div>
-                      </div>
-
-                    </li>
-
-                    <li class=" block rt-mb-24">
-                      <div class="rt-single-icon-box">
-                        <div class="icon-thumb rt-mr-20"><img src="assets/images/svg/big-phone.svg" alt="" draggable="false"></div>
-                        <div class="iconbox-content">
-                          <div class=" body-font-3 text-gray-900 font-medium rt-mb-4">Mobile Phone</div>
-                          <div class=" text-gray  body-font-4 rt-mb-8">
-                            <span>11%</span>
-                            <span>.</span>
-                            <span>16,716 Users</span>
-                          </div>
-                          <div class=" text-success-500 body-font-4">
-                            <span class=" rt-mr-4"><i class="ph-arrow-up"></i></span>2.9% Increase
-                          </div>
-                        </div>
-                      </div>
-
-                    </li>
-
-
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xxl-4">
-              <div class="card">
-                <div class="card-header">
-                  Social Media Traffic
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table info-table">
-                      <thead>
-                        <tr class=" bg-gray-50">
-                          <td class="f-size-11 text-gray-700 font-medium" colspan="2">Network</td>
-                          <td class="f-size-11 text-gray-700 font-medium">Visitors</td>
-                          <td class="f-size-11 text-gray-700 font-medium">Followers</td>
-                        </tr>
-                      </thead>
-                      <tbody>
-
-
-                        <tr>
-                          <td colspan="2">
-                            <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/fb.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Facebook</div>
-                            </div>
-                          </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
-                        </tr>
-
-                        <tr>
-                          <td colspan="2">
-                            <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/tw.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Twitter</div>
-                            </div>
-                          </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
-                        </tr>
-
-                        <tr>
-                          <td colspan="2">
-                            <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/lin.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Linkedin</div>
-                            </div>
-                          </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
-                        </tr>
-
-                        <tr>
-                          <td colspan="2">
-                            <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/ins.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Instagram</div>
-                            </div>
-                          </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
-                        </tr>
-
-                        <tr>
-                          <td colspan="2">
-                            <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/dr.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Dribbble</div>
-                            </div>
-                          </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
-                        </tr>
-
-                        <tr>
-                          <td colspan="2">
-                            <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/be.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Behance</div>
-                            </div>
-                          </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
-                        </tr>
-
-                        <tr>
-                          <td colspan="2">
-                            <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/pin.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Pinterest</div>
-                            </div>
-                          </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
-                        </tr>
-
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xxl-3">
-              <div class="card">
-                <div class="card-header">
-                  Calendar
-                </div>
-                <div class="card-body">
-                  <div class="date-picker-calender rt-pt-15"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xxl-5">
-              <div class="card">
-                <div class="card-header">
-                  Operating System
-                </div>
-                <div class="card-body"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Footer  -->
-          <footer>
-            <div class="footer-content">
-              <div>
-                <p>© 2021 - Relik admin dashboard. Design & develop by <a href="#">Templatecookie</a> </p>
-              </div>
-              <div>
-                <ul>
-                  <li><a href="#">Documentation</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">FAQs</a></li>
-                </ul>
-              </div>
-            </div>
-          </footer>
-        </div>
-      </div>
-    </div>
-  </main>
-
-
-  <div class="rt-mobile-menu-overlay"></div>
-  <!-- /.rt-mobile-menu-overlay -->
-  <div id="template2" style="display: none">
-    <div class="PopoverParent">
-      <div class="Popover-header">
-        <a class="rt-single-icon-box user-profile-icon-big rt-align-center" href="#">
-          <div class="icon-thumb">
-            <div class="innerImage">
-              <img src="assets/images/all-img/user.svg" alt="profile_image" />
-            </div>
-          </div>
-          <div class="iconbox-content">
-            <h4>Faraz Ahmed</h4>
-            <span>farazleo112</span>
-          </div>
+  <header class="p-header">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo/white-logo.svg" alt="brand-logo">
         </a>
-      </div>
-      <div class="PopoverContent">
-        <div class="popoverInnerContent">
-          <ul class="user_menu">
-            <li>
-              <a href="#">
-                <span class="icon-i">
-                    <i class="ph-user"></i>
-                  </span>
-                Profile
-              </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html">Live Preview</a>
             </li>
-            <li>
-              <a href="#">
-                <span class="icon-i">
-                    <i class="ph-chart-bar"></i>
-                  </span>
-                Reports
-              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Documentation</a>
             </li>
-            <li>
-              <a href="#">
-                <span class="icon-i">
-                    <i class="ph-gear"></i>
-                  </span>
-                Settings
-              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Feature</a>
             </li>
-            <li>
-              <a href="#">
-                <span class="icon-i">
-                    <i class="ph-question"></i>
-                  </span>
-                Get Help
+            <li class="nav-item">
+              <a class="nav-link" href="#">Support</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="d-flex align-items-center w-full justify-content-center ">
+              <a href="#" class="p-header__btn">
+                Purchase Now
+                <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.125 10H16.875" stroke="#005CE8" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.25 4.375L16.875 10L11.25 15.625" stroke="#005CE8" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
               </a>
             </li>
           </ul>
         </div>
-        <div class="popOverFooter">
-          <a href="#">
-            <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="17.3"
-                  height="17.3"
-                  viewBox="0 0 17.3 17.3"
-                >
-                  <g id="log-out" transform="translate(-2.35 -2.35)">
-                    <path
-                      id="Path_2782"
-                      data-name="Path 2782"
-                      d="M8.333,19H4.778A1.778,1.778,0,0,1,3,17.222V4.778A1.778,1.778,0,0,1,4.778,3H8.333"
-                      transform="translate(0 0)"
-                      fill="none"
-                      stroke="#4d5afb"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.3"
-                    />
-                    <path
-                      id="Path_2783"
-                      data-name="Path 2783"
-                      d="M16,15.889l4.444-4.444L16,7"
-                      transform="translate(-1.444 -0.444)"
-                      fill="none"
-                      stroke="#4d5afb"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.3"
-                    />
-                    <line
-                      id="Line_11"
-                      data-name="Line 11"
-                      x1="10.667"
-                      transform="translate(8.333 11)"
-                      fill="none"
-                      stroke="#4d5afb"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.3"
-                    />
-                  </g>
-                </svg>
-              </span>
-            Log Out
-          </a>
-        </div>
       </div>
-    </div>
-  </div>
+    </nav>
+  </header>
 
-  <div id="template" style="display: none">
-    <div class="PopoverParent min-372">
-      <div class="Popover-header d-flex justify-content-between">
-        <div class="d-blok f-size-14 line-height-20 text-gray-900">
-          Notification
-        </div>
-        <div class="d-blok f-size-14 text-gray-700 pointer">Clear All</div>
-      </div>
-      <div class="PopoverContent">
-        <div class="popoverInnerContent">
-          <div class="notifybox">
-            <ul class="notify-lists rt-list">
+  <!-- Banner section  -->
+  <section class="p-banner bn_image_1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 order-2 order-lg-0 ">
+          <div class="p-banner__text-info">
+            <h6>Compatible with: <span>Figma, HTLM 5, Vue.js, Laravel</span> </h6>
+            <h2>
+              Relik — Well-Designed
+              <span>Admin Dashboard</span>
+            </h2>
+            <p>👉 Relik is a beautiful, simple, developer-friendly, highly customizable admin dashboard template with a 💎 high-quality UI & well-organized Figma file 🔥.</p>
 
-
+            <ul class="d-flex align-items-center">
               <li>
-                <a class="rt-single-icon-box" href="#">
-                  <div class="icon-thumb rt-mr-12">
-                    <img src="assets/images/notification/check.svg" alt="">
-                  </div>
-                  <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900 text-hide mb-1">This is a success notification.</div>
-                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
-                  </div>
-                </a>
-
+                <a href="home.html" class="btn btn-primary pill multipule-color-strep">Live Preview</a>
               </li>
-
               <li>
-                <a class="rt-single-icon-box" href="#">
-                  <div class="icon-thumb rt-mr-12">
-                    <img src="assets/images/all-img/user_1.png" alt="">
-                  </div>
-                  <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900 text-hide mb-1">Kevin Mention you in “UX Design Proc...”</div>
-                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
-                  </div>
+                <a href="#" class="btn btn-primary2 pill btn-icon">
+                  <span class="button-content-wrapper">
+                                        <span class="button-icon align-icon-right">
+                                          <i class="ph-arrow-right"></i>
+                                        </span>
+                  <span class="button-text">
+                                          Purchase Now
+                                        </span>
+                  </span>
                 </a>
-
               </li>
-
-              <li>
-                <a class="rt-single-icon-box" href="#">
-                  <div class="icon-thumb rt-mr-12">
-                    <img src="assets/images/notification/alert.svg" alt="">
-                  </div>
-                  <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900 text-hide mb-1">This is you lasst waring</div>
-                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
-                  </div>
-                </a>
-
-              </li>
-
-              <li>
-                <a class="rt-single-icon-box" href="#">
-                  <div class="icon-thumb rt-mr-12">
-                    <img src="assets/images/all-img/user_2.png" alt="">
-                  </div>
-                  <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900 text-hide mb-1">Janny invited you in events in calender</div>
-                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
-                  </div>
-                </a>
-
-              </li>
-
-              <li>
-                <a class="rt-single-icon-box" href="#">
-                  <div class="icon-thumb rt-mr-12">
-                    <img src="assets/images/notification/file.svg" alt="">
-                  </div>
-                  <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900 text-hide mb-1">Your pricing plan is updated</div>
-                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
-                  </div>
-                </a>
-
-              </li>
-
-
             </ul>
           </div>
         </div>
+        <div class="col-lg-6 order-1 order-lg-0 ">
+          <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="50" data-aos-duration="700" data-aos-easing="ease-in-out">
+            <img src="assets/images/all-img/Monitor.png" alt="banner">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section section-padding bg-white">
+    <div class="container">
+      <div class="presentation-content presentation-section-title">
+        <h2 data-aos="zoom-in" data-aos-offset="180" data-aos-delay="0" data-aos-duration="700" data-aos-easing="ease-in-out">Features that you’ll love</h2>
+      </div>
+      <div class="row">
+        <div class="col-xl-3 col-lg-6 d-flex align-items-stretch">
+          <div class="feature-wrap">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.64107 24.5021C5.67225 24.6335 5.7297 24.7573 5.80995 24.866C5.89021 24.9746 5.99163 25.0659 6.1081 25.1344C6.22457 25.2029 6.35368 25.247 6.48767 25.2643C6.62166 25.2816 6.75776 25.2715 6.88777 25.2348C12.8489 23.5889 19.1446 23.5883 25.106 25.2331C25.236 25.2698 25.372 25.2798 25.506 25.2625C25.6399 25.2453 25.769 25.2011 25.8854 25.1327C26.0018 25.0643 26.1032 24.973 26.1835 24.8644C26.2638 24.7558 26.3212 24.6321 26.3524 24.5007L29.5385 10.9611C29.5812 10.7798 29.5724 10.5902 29.5131 10.4137C29.4538 10.2372 29.3465 10.0807 29.2031 9.96193C29.0597 9.84314 28.886 9.76674 28.7015 9.74135C28.517 9.71595 28.3291 9.74256 28.159 9.81819L21.836 12.6284C21.6077 12.7299 21.3497 12.7422 21.1127 12.663C20.8757 12.5837 20.677 12.4186 20.5557 12.2002L16.8742 5.57344C16.7875 5.41755 16.6608 5.28765 16.5071 5.19721C16.3534 5.10677 16.1783 5.05908 16 5.05908C15.8217 5.05908 15.6466 5.10677 15.4929 5.19721C15.3392 5.28765 15.2124 5.41755 15.1258 5.57344L11.4443 12.2002C11.323 12.4186 11.1243 12.5837 10.8873 12.663C10.6504 12.7422 10.3923 12.7299 10.164 12.6284L3.84007 9.81777C3.66994 9.74215 3.48209 9.71554 3.29765 9.74091C3.11321 9.76628 2.93952 9.84263 2.79613 9.96137C2.65274 10.0801 2.54535 10.2365 2.48603 10.413C2.42672 10.5895 2.41785 10.779 2.46042 10.9602L5.64107 24.5021Z" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 20.2098C14.6593 19.9301 17.3407 19.9301 20 20.2098" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="feature-data">
+              <h4>Global Style Guide</h4>
+              <p>Auto-updatedable global style guide</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 d-flex align-items-stretch">
+          <div class="feature-wrap">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.64107 24.5021C5.67225 24.6335 5.7297 24.7573 5.80995 24.866C5.89021 24.9746 5.99163 25.0659 6.1081 25.1344C6.22457 25.2029 6.35368 25.247 6.48767 25.2643C6.62166 25.2816 6.75776 25.2715 6.88777 25.2348C12.8489 23.5889 19.1446 23.5883 25.106 25.2331C25.236 25.2698 25.372 25.2798 25.506 25.2625C25.6399 25.2453 25.769 25.2011 25.8854 25.1327C26.0018 25.0643 26.1032 24.973 26.1835 24.8644C26.2638 24.7558 26.3212 24.6321 26.3524 24.5007L29.5385 10.9611C29.5812 10.7798 29.5724 10.5902 29.5131 10.4137C29.4538 10.2372 29.3465 10.0807 29.2031 9.96193C29.0597 9.84314 28.886 9.76674 28.7015 9.74135C28.517 9.71595 28.3291 9.74256 28.159 9.81819L21.836 12.6284C21.6077 12.7299 21.3497 12.7422 21.1127 12.663C20.8757 12.5837 20.677 12.4186 20.5557 12.2002L16.8742 5.57344C16.7875 5.41755 16.6608 5.28765 16.5071 5.19721C16.3534 5.10677 16.1783 5.05908 16 5.05908C15.8217 5.05908 15.6466 5.10677 15.4929 5.19721C15.3392 5.28765 15.2124 5.41755 15.1258 5.57344L11.4443 12.2002C11.323 12.4186 11.1243 12.5837 10.8873 12.663C10.6504 12.7422 10.3923 12.7299 10.164 12.6284L3.84007 9.81777C3.66994 9.74215 3.48209 9.71554 3.29765 9.74091C3.11321 9.76628 2.93952 9.84263 2.79613 9.96137C2.65274 10.0801 2.54535 10.2365 2.48603 10.413C2.42672 10.5895 2.41785 10.779 2.46042 10.9602L5.64107 24.5021Z" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 20.2098C14.6593 19.9301 17.3407 19.9301 20 20.2098" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="feature-data">
+              <h4>150+ Widgets & Components</h4>
+              <p>Drag & drop vector-based</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 d-flex align-items-stretch">
+          <div class="feature-wrap">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.64107 24.5021C5.67225 24.6335 5.7297 24.7573 5.80995 24.866C5.89021 24.9746 5.99163 25.0659 6.1081 25.1344C6.22457 25.2029 6.35368 25.247 6.48767 25.2643C6.62166 25.2816 6.75776 25.2715 6.88777 25.2348C12.8489 23.5889 19.1446 23.5883 25.106 25.2331C25.236 25.2698 25.372 25.2798 25.506 25.2625C25.6399 25.2453 25.769 25.2011 25.8854 25.1327C26.0018 25.0643 26.1032 24.973 26.1835 24.8644C26.2638 24.7558 26.3212 24.6321 26.3524 24.5007L29.5385 10.9611C29.5812 10.7798 29.5724 10.5902 29.5131 10.4137C29.4538 10.2372 29.3465 10.0807 29.2031 9.96193C29.0597 9.84314 28.886 9.76674 28.7015 9.74135C28.517 9.71595 28.3291 9.74256 28.159 9.81819L21.836 12.6284C21.6077 12.7299 21.3497 12.7422 21.1127 12.663C20.8757 12.5837 20.677 12.4186 20.5557 12.2002L16.8742 5.57344C16.7875 5.41755 16.6608 5.28765 16.5071 5.19721C16.3534 5.10677 16.1783 5.05908 16 5.05908C15.8217 5.05908 15.6466 5.10677 15.4929 5.19721C15.3392 5.28765 15.2124 5.41755 15.1258 5.57344L11.4443 12.2002C11.323 12.4186 11.1243 12.5837 10.8873 12.663C10.6504 12.7422 10.3923 12.7299 10.164 12.6284L3.84007 9.81777C3.66994 9.74215 3.48209 9.71554 3.29765 9.74091C3.11321 9.76628 2.93952 9.84263 2.79613 9.96137C2.65274 10.0801 2.54535 10.2365 2.48603 10.413C2.42672 10.5895 2.41785 10.779 2.46042 10.9602L5.64107 24.5021Z" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 20.2098C14.6593 19.9301 17.3407 19.9301 20 20.2098" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="feature-data">
+              <h4>Free Google Fonts</h4>
+              <p>Pre-made 30+ text style</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 d-flex align-items-stretch">
+          <div class="feature-wrap">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.64107 24.5021C5.67225 24.6335 5.7297 24.7573 5.80995 24.866C5.89021 24.9746 5.99163 25.0659 6.1081 25.1344C6.22457 25.2029 6.35368 25.247 6.48767 25.2643C6.62166 25.2816 6.75776 25.2715 6.88777 25.2348C12.8489 23.5889 19.1446 23.5883 25.106 25.2331C25.236 25.2698 25.372 25.2798 25.506 25.2625C25.6399 25.2453 25.769 25.2011 25.8854 25.1327C26.0018 25.0643 26.1032 24.973 26.1835 24.8644C26.2638 24.7558 26.3212 24.6321 26.3524 24.5007L29.5385 10.9611C29.5812 10.7798 29.5724 10.5902 29.5131 10.4137C29.4538 10.2372 29.3465 10.0807 29.2031 9.96193C29.0597 9.84314 28.886 9.76674 28.7015 9.74135C28.517 9.71595 28.3291 9.74256 28.159 9.81819L21.836 12.6284C21.6077 12.7299 21.3497 12.7422 21.1127 12.663C20.8757 12.5837 20.677 12.4186 20.5557 12.2002L16.8742 5.57344C16.7875 5.41755 16.6608 5.28765 16.5071 5.19721C16.3534 5.10677 16.1783 5.05908 16 5.05908C15.8217 5.05908 15.6466 5.10677 15.4929 5.19721C15.3392 5.28765 15.2124 5.41755 15.1258 5.57344L11.4443 12.2002C11.323 12.4186 11.1243 12.5837 10.8873 12.663C10.6504 12.7422 10.3923 12.7299 10.164 12.6284L3.84007 9.81777C3.66994 9.74215 3.48209 9.71554 3.29765 9.74091C3.11321 9.76628 2.93952 9.84263 2.79613 9.96137C2.65274 10.0801 2.54535 10.2365 2.48603 10.413C2.42672 10.5895 2.41785 10.779 2.46042 10.9602L5.64107 24.5021Z" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 20.2098C14.6593 19.9301 17.3407 19.9301 20 20.2098" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="feature-data">
+              <h4>100% Easy-to-use & Editable</h4>
+              <p>Customizable well-organized files</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <!-- End section -->
+
+  <div class="section section-padding bg-gray-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <div data-aos="fade-right" data-aos-offset="0" data-aos-delay="0" data-aos-duration="700" data-aos-easing="ease-in-out" class="card">
+                <div class="card-body">
+                  <div class="active-visitor-wrap">
+                    <div class="active-visitor-data">
+                      <p>Conversion Rate</p>
+                      <h3>9.73%</h3>
+                      <h4><img src="assets/images/svg/arrow-up.svg" alt="icon"> 3.5% Increase</h4>
+                    </div>
+                    <div class="active-visitor-icon bg-success-50">
+                      <img src="assets/images/svg/coffee.svg" alt="icon">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="0" data-aos-duration="700" data-aos-easing="ease-in-out" class="card">
+                <div class="card-body">
+                  <div class="active-visitor-wrap">
+                    <div class="active-visitor-data">
+                      <p>bounce rate</p>
+                      <h3>81.94%</h3>
+                      <h4><img src="assets/images/svg/arrow-up.svg" alt="icon"> 1.7% Increase</h4>
+                    </div>
+                    <div class="active-visitor-icon bg-danger-50">
+                      <img src="assets/images/svg/activity.svg" alt="icon">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="fun-fact-wrap">
+                    <div class="fun-fact-item">
+                      <div class="fun-fact-icon">
+                        <img src="assets/images/svg/user-circle.svg" alt="icon">
+                      </div>
+                      <div class="fun-fact-data">
+                        <h4>157,367</h4>
+                        <p>Total users</p>
+                      </div>
+                    </div>
+                    <div class="fun-fact-item">
+                      <div class="fun-fact-icon">
+                        <img src="assets/images/svg/hand-pointing.svg" alt="icon">
+                      </div>
+                      <div class="fun-fact-data">
+                        <h4>9,741</h4>
+                        <p>Click</p>
+                      </div>
+                    </div>
+                    <div class="fun-fact-item">
+                      <div class="fun-fact-icon">
+                        <img src="assets/images/svg/pencil-circle.svg" alt="icon">
+                      </div>
+                      <div class="fun-fact-data">
+                        <h4>9.73%</h4>
+                        <p>Conversion Rate</p>
+                      </div>
+                    </div>
+                    <div class="fun-fact-item">
+                      <div class="fun-fact-icon">
+                        <img src="assets/images/svg/book-open.svg" alt="icon">
+                      </div>
+                      <div class="fun-fact-data">
+                        <h4>81.94%</h4>
+                        <p>Bounce Rate</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div data-aos="flip-left" data-aos-offset="0" data-aos-delay="60" data-aos-duration="700" data-aos-easing="ease-in-out" class="card">
+                <div class="profile-left active-visitor">
+                  <div class="profile-thumb">
+                    <img src="assets/images/all-img/users/user1.png" alt="icon">
+                  </div>
+                  <div class="profile-data">
+                    <h4>Kevin Gilbert</h4>
+                    <p>Software Engineer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div data-aos="flip-right" data-aos-offset="0" data-aos-delay="60" data-aos-duration="700" data-aos-easing="ease-in-out" class="banner-wrap bg-secondary-500 active-visitor">
+                <div class="banner-icon">
+                  <img src="assets/images/svg/folder-open.svg" alt="icon">
+                </div>
+                <div class="banner-data">
+                  <p>Become a <span>Pro</span> <br> to get more <span>Space</span>
+                  </p>
+                  <button type="button" class="btn bg-white pill text-gray-900">Upgrade Plans</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 offset-xl-1 d-flex align-items-center">
+          <div class="presentation-content">
+            <h2 data-aos="zoom-in" data-aos-offset="0" data-aos-delay="0" data-aos-duration="700" data-aos-easing="ease-in-out">Build for for everyone</h2>
+            <p>Donec suscipit justo sit amet volutpat placerat. Cras tristique sodales ligula, id convallis dui ullamcorper id. Cras a
+              mi lectus. Etiam ut dignissim justo.</p>
+            <button type="button" class="btn btn-primary pill btn-icon">
+              <span class="button-content-wrapper">
+                                <span class="button-icon align-icon-right">
+                                    <i class="ph-arrow-right"></i>
+                                </span>
+              <span class="button-text">
+                                    Purchase Now
+                                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section section-padding bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 offset-lg-1 order-lg-1">
+          <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="0" data-aos-duration="1000" data-aos-easing="ease-in-out" class="presentation-thumb">
+            <img src="assets/images/all-img/thumb1.jpg" alt="icon">
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="presentation-content">
+            <h2 data-aos="zoom-in" data-aos-offset="180" data-aos-delay="0" data-aos-duration="700" data-aos-easing="ease-in-out">Create, Customize & Manage Events in Calendar</h2>
+            <p>Donec suscipit justo sit amet volutpat placerat. Cras tristique sodales ligula, id convallis dui ullamcorper id. Cras a
+              mi lectus. Etiam ut dignissim justo. Aenean ac gravida nulla. Ut a velit nec massa interdum tempus id quis ante.</p>
+            <button type="button" class="btn btn-primary pill btn-icon">
+              <span class="button-content-wrapper">
+                                <span class="button-icon align-icon-right">
+                                    <i class="ph-arrow-right"></i>
+                                </span>
+              <span class="button-text">
+                                    Purchase Now
+                                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section section-padding bg-gray-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div data-aos="fade-right" data-aos-offset="0" data-aos-delay="0" data-aos-duration="1000" data-aos-easing="ease-in-out" class="presentation-thumb">
+            <img src="assets/images/all-img/thumb2.jpg" alt="icon">
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1 d-flex align-items-center">
+          <div class="presentation-content">
+            <h2 data-aos="zoom-in" data-aos-offset="180" data-aos-delay="0" data-aos-duration="700" data-aos-easing="ease-in-out">Kanban Board to Manage with Team</h2>
+            <p>Donec suscipit justo sit amet volutpat placerat. Cras tristique sodales ligula, id convallis dui ullamcorper id. Cras a
+              mi lectus. Etiam ut dignissim justo.</p>
+            <ul>
+              <li data-aos="zoom-out-up" data-aos-offset="0" data-aos-delay="90" data-aos-duration="900" data-aos-easing="ease-in-out"><img src="assets/images/svg/check-circle3.svg" alt="icon"> Create, Customize & Manage Cards & Boards.</li>
+              <li data-aos="zoom-out-up" data-aos-offset="0" data-aos-delay="160" data-aos-duration="1000" data-aos-easing="ease-in-out"><img src="assets/images/svg/check-circle3.svg" alt="icon"> Post Comments on Cards.</li>
+              <li data-aos="zoom-out-up" data-aos-offset="0" data-aos-delay="240" data-aos-duration="1200" data-aos-easing="ease-in-out"><img src="assets/images/svg/check-circle3.svg" alt="icon"> Add Card Label, Due Date & Priority</li>
+              <li data-aos="zoom-out-up" data-aos-offset="0" data-aos-delay="280" data-aos-duration="1400" data-aos-easing="ease-in-out"><img src="assets/images/svg/check-circle3.svg" alt="icon"> Attach File.</li>
+            </ul>
+            <button type="button" class="btn btn-primary pill btn-icon">
+              <span class="button-content-wrapper">
+                                <span class="button-icon align-icon-right">
+                                    <i class="ph-arrow-right"></i>
+                                </span>
+              <span class="button-text">
+                                    Purchase Now
+                                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="cta-section bn_image_2">
+    <div class="container">
+      <div class="presentation-content cta-content">
+        <h2 data-aos="zoom-in" data-aos-offset="180" data-aos-delay="0" data-aos-duration="700" data-aos-easing="ease-in-out">No more talk, Purchase it now</h2>
+        <p>Donec suscipit justo sit amet volutpat placerat. Cras tristique sodales ligula, id convallis dui ullamcorper id. Cras a
+          mi lectus. Etiam ut dignissim justo.</p>
+        <div class="presentation-button">
+          <a href="home.html" class="btn btn-dark3 pill rt-mr-12">Live Preview</a>
+          <button type="button" class="btn btn-primary pill btn-icon">
+            <span class="button-content-wrapper">
+                            <span class="button-icon align-icon-right">
+                                <i class="ph-arrow-right"></i>
+                            </span>
+            <span class="button-text">
+                                Purchase Now
+                            </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End cta section -->
+
+
+
+
 
   <div class="app-settings" id="appSettings">
     <div class="settings-header d-flex justify-content-between">
@@ -1004,76 +412,80 @@
 
       </div>
     </div>
-    <div class="inner-content">
-      <div class="setting-title">Layout</div>
-      <div class="settings-images row ">
-        <div class="col-md-6 rt-mb-32">
-          <div class="form-check p-0">
-            <label class="d-block pointer" for="vertical_lable">
-              <img src="assets/images/all-img/d-1.png" alt="" class="w-100" />
-            </label>
-            <div class="bottom-content">
-              <input class="form-check-input  pointer" type="radio" name="layoutbox" id="vertical_lable" value="vertical" checked />
-              <span> Vertical</span>
+    <div class="cal-h-70" data-simplebar>
+      <div class="inner-content">
+        <div class="setting-title">Layout</div>
+        <div class="settings-images row ">
+          <div class="col-lg-6 rt-mb-32">
+            <div class="form-check p-0">
+              <label class="d-block pointer" for="vertical_lable">
+                <img src="assets/images/all-img/d-1.png" alt="" class="w-100" />
+                <div class="bottom-content">
+                  <input class="form-check-input  pointer" type="radio" name="layoutbox" id="vertical_lable" value="vertical" checked />
+                  <span> Vertical</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+          <div class="col-lg-6 rt-mb-32">
+            <div class="form-check p-0">
+              <label class="form-check-label d-block pointer" for="horizental_label">
+                <img src="assets/images/all-img/d-2.png" alt="" />
+                <div class="bottom-content">
+                  <input class="form-check-input d-block pointer" type="radio" name="layoutbox" id="horizental_label" value="horizental" />
+                  <span>Horizontal</span>
+                </div>
+              </label>
+
             </div>
           </div>
         </div>
-        <div class="col-md-6 rt-mb-32">
-          <div class="form-check p-0">
-            <label class="form-check-label d-block pointer" for="horizental_label">
-              <img src="assets/images/all-img/d-2.png" alt="" />
-            </label>
-            <div class="bottom-content">
-              <input class="form-check-input d-block pointer" type="radio" name="layoutbox" id="horizental_label" value="horizental" />
-              <span>Horizontal</span>
+        <hr />
+        <div class="setting-title rt-pt-30">Layout</div>
+        <ul class="rt-mb-32">
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_white" value="white" checked />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_white">
+                White
+              </label>
             </div>
+          </li>
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_black" value="black" />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_black">
+                Black
+              </label>
+            </div>
+          </li>
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_navy" value="blue" />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_navy">
+                Navy Blue
+              </label>
+            </div>
+          </li>
+        </ul>
+        <div class="row smallgap">
+          <div class="col-md-6">
+            <button class="btn btn-primary2 pill block w-100 rt-mb-10">Reset to default</button>
           </div>
-        </div>
-      </div>
-      <hr />
-      <div class="setting-title rt-pt-30">Layout</div>
-      <ul class="rt-mb-32">
-        <li class="block rt-mb-12">
-          <div class="form-check p-0 no-shadow">
-            <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_white" value="white" checked />
-            <label class="form-check-label rt-ml-8 pointer" for="seibar_white">
-              White
-            </label>
-
-        </li>
-        <li class="block rt-mb-12">
-          <div class="form-check p-0 no-shadow">
-            <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_black" value="black" />
-            <label class="form-check-label rt-ml-8 pointer" for="seibar_black">
-              Black
-            </label>
-
-        </li>
-        <li class="block rt-mb-12">
-          <div class="form-check p-0 no-shadow">
-            <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_navy" value="blue" />
-            <label class="form-check-label rt-ml-8 pointer" for="seibar_navy">
-              Navy Blue
-            </label>
-
-        </li>
-      </ul>
-      <div class="row smallgap">
-        <div class="col-md-6">
-          <button class="btn btn-primary2 pill block w-100">Reset to default</button>
-        </div>
-        <div class="col-md-6">
-          <button type="button" class="btn btn-primary pill btn-icon block w-100 ">
-            <span class="button-content-wrapper">
-                          <span class="button-text">
-                            Purchase now
-                          </span>
-            <span class="button-icon align-icon-right">
-                            <i class="ph-arrow-right"></i>
-            
-                          </span>
-            </span>
-          </button>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-primary pill btn-icon block w-100  rt-mb-10">
+              <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Purchase now
+                            </span>
+              <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+              
+                            </span>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1082,32 +494,15 @@
 
   <!-- scripts -->
   <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="assets/js/plugins/popper.min.js"></script>
+  <script src="assets/js/plugins/tippy-bundle.umd.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/apexcharts.min.js"></script>
-  <script src="assets/js/chartist.min.js"></script>
-  <script src="assets/js/jquery-jvectormap-2.0.5.min.js"></script>
-  <script src="assets/js/jquery-jvectormap-world-mill-en.js"></script>
   <script src="assets/js/metisMenu.min.js"></script>
-  <script src="assets/js/morris.min.js"></script>
-  <script src="assets/js/select2.min.js"></script>
   <script src="assets/js/simplebar.min.js"></script>
-  <script src="assets/js/moment.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/libs/@fullcalendar/core/main.min.js"></script>
-  <script src="assets/js/libs/@fullcalendar/bootstrap/main.min.js"></script>
-  <script src="assets/js/libs/@fullcalendar/daygrid/main.min.js"></script>
-  <script src="assets/js/libs/@fullcalendar/timegrid/main.min.js"></script>
-  <script src="assets/js/libs/@fullcalendar/interaction/main.min.js"></script>
-  <script src="assets/js/calendar-int.js"></script>
   <script src="https://unpkg.com/phosphor-icons"></script>
-  <script src="assets/js/password.js"></script>
-  <script src="assets/js/custom-select.js"></script>
   <script src="assets/js/waves.js"></script>
-  <script src="assets/js/dragula.min.js"></script>
   <script src="assets/js/app.js"></script>
-
-
 </body>
 </html>

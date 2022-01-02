@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <title>Relik - Admin Dashboard</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo/logo-icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/light.css">
+  <link rel="stylesheet" href="../assets/css/scale.css">
+  <link rel="stylesheet" href="../assets/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/libs/@fullcalendar/core/main.min.css" />
+  <link rel="stylesheet" href="../assets/css/libs/@fullcalendar/daygrid/main.min.css" />
+  <link rel="stylesheet" href="../assets/css/libs/@fullcalendar/bootstrap/main.min.css" />
+  <link rel="stylesheet" href="../assets/css/libs/@fullcalendar/timegrid/main.min.css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/jquery-ui.css" />
+  <link rel="stylesheet" href="../assets/css/jquery-ui.theme.css" />
+  <link rel="stylesheet" href="../assets/css/apexcharts.css" />
+  <link rel="stylesheet" href="../assets/css/chartist-plugin-tooltip.css" />
+  <link rel="stylesheet" href="../assets/css/chartist.min.css" />
+  <link rel="stylesheet" href="../assets/css/customfont.css" />
+  <link rel="stylesheet" href="../assets/css/jquery-jvectormap-2.0.5.css" />
+  <link rel="stylesheet" href="../assets/css/jquery-ui.theme.min.css" />
+  <link rel="stylesheet" href="../assets/css/metisMenu.min.css" />
+  <link rel="stylesheet" href="../assets/css/select2.min.css" />
+  <link rel="stylesheet" href="../assets/css/simplebar.css" />
+  <link rel="stylesheet" href="../assets/css/dragula.min.css" />
+  <link rel="stylesheet" href="../assets/css/animate.min.css" />
+  <link rel="stylesheet" href="../assets/css/app.min.css" />
+</head>
+
+<body class="light">
+
+
+  <main class="app-wrapper">
+    <header class="app-header rt-sticky">
+      <div class="navbar align-items-center">
+        <div class="container-fluid">
+          <div class="left-content">
+            <div class="logo-segment">
+              <div class="all-logo">
+                <a href="/" class="brand-logo">
+                  <img src="../assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black">
+                  <img src="../assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10">
+                </a>
+                <a href="/" class="brand-logo white">
+                  <img src="../assets/images/logo/logo-white.svg" alt="" draggable="false">
+                </a>
+                <a href="/" class="collapse-in-logo ">
+
+                  <img src="../assets/images/logo/logo-icon.svg" alt="" draggable="false">
+
+                </a>
+              </div>
+              <div class="opener_sidebar ">
+                <span class="icon-bar-open" id="opener_icon"></span>
+              </div>
+            </div>
+            <div class="dashboard-message position-relative">
+              <span class="back_sidebar_icon">
+            <i class="ph-arrow-right"></i>
+          </span>
+
+            </div>
+          </div>
+          <div class="app-mian-serach">
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Search" />
+                <button type="submit">
+                  <img src="../assets/images/svg/search.svg" alt="" draggable="false">
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="ms-auto">
+            <div class="rt-nav-tolls d-flex align-items-center">
+              <ul>
+                <li class=" d-inline-block d-md-none">
+                  <div class="iconBox open-mbl-search pointer">
+                    <img src="../assets/images/svg/search.svg" alt="" />
+                  </div>
+                </li>
+                <li class=" d-none d-lg-block">
+                  <div class="dropdown dropdown-flag">
+                    <button class="dropdown-toggle pointer" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="../assets/images/svg/flag.svg" alt=""> English
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#"><img src="../assets/images/svg/flag.svg" alt=""> English</a></li>
+                      <li><a class="dropdown-item" href="#"><img src="../assets/images/svg/flag.svg" alt="">Bangla </a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="iconBox page-setting pointer" id="layout">
+                    <img src="../assets/images/svg/grid.svg" alt="" draggable="false" class="for-v">
+                    <img src="../assets/images/svg/grid2.svg" alt="" draggable="false" class="for-h">
+                  </div>
+                </li>
+                <li>
+                  <div class="iconBox notifications pointer waves-effect primary-light">
+                    <img src="../assets/images/svg/bell.svg" alt="" draggable="false" class="for-v">
+                    <img src="../assets/images/svg/bell2.svg" alt="" draggable="false" class="for-h">
+                  </div>
+                </li>
+                <li>
+                  <div class="userProfileBox openaccount  pointer">
+                    <img src="../assets/images/all-img/user.svg" alt="" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="app-sidebar">
+      <div class="h-100" data-simplebar>
+        <div class="sidebar-menu">
+          <ul id="side-menu">
+            <li class="menu-title no-margin">Dashboard</li>
+            <li>
+              <a href="/" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-house-line"></i></span>
+                <div class="text-box">
+                  Dashboard
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="../full-calendar.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-calendar-blank"></i></span>
+                <div class="text-box">
+                  Calendar
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="../kanban-board.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-clipboard-text"></i></span>
+                <div class="text-box">Kanban Board</div>
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-folder-notch-open"></i></span>
+                <div class="text-box">File Manager</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="file-manager.html">File Manager</a></li>
+                <li><a href="file-manager-new.html">Upload New File</a></li>
+              </ul>
+            </li>
+            <li class="has-child waves-effect primary-light">
+              <a href="javascript: void(0);" aria-expanded="false">
+                <span class="icon-box"><i class="ph-puzzle-piece"></i></span>
+                <div class="text-box">Authentication</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="../login.html">login</a></li>
+                <li><a href="../registration.html">Registration</a></li>
+              </ul>
+            </li>
+            <li class="menu-title">pages</li>
+
+            <li>
+              <a href="../profile.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-user"></i></span>
+                <div class="text-box">Profile</div>
+              </a>
+            </li>
+            <li>
+              <a href="../setting.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-gear"></i></span>
+                <div class="text-box">Setting</div>
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-notebook"></i></span>
+                <div class="text-box">Invoice</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="../invoice.html">Invoice</a></li>
+                <li><a href="../invoice-detail.html">Invoice Details</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="../billing.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-credit-card"></i></span>
+                <div class="text-box">Billing</div>
+              </a>
+            </li>
+            <li>
+              <a href="../pricing-plans.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-lightning"></i></span>
+                <div class="text-box">Pricing Plans</div>
+              </a>
+            </li>
+            <li>
+              <a href="../faq.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-question"></i></span>
+                <div class="text-box">FAQs</div>
+              </a>
+            </li>
+            <li>
+              <a href="../blank-page.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-note-blank"></i></span>
+                <div class="text-box">Blank Page</div>
+              </a>
+            </li>
+
+            <li class="menu-title">Components</li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-book-open"></i></span>
+                <div class="text-box">UI Elements</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="../button.html">Button</a></li>
+                <li><a href="../badge.html">Badge</a></li>
+                <li><a href="../checkbox.html">Checkbox</a></li>
+                <li><a href="../radio.html">Radio</a></li>
+                <li><a href="../switch.html">Switch</a></li>
+                <li><a href="../pagination.html">Pagination</a></li>
+                <li><a href="../accordion.html">Accordion</a></li>
+                <li><a href="../alerts.html">Alerts</a></li>
+                <li><a href="../input.html">Input</a></li>
+                <li><a href="../banner.html">Banner</a></li>
+                <li><a href="../file.html">File</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="../component-card.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-cards"></i></span>
+                <div class="text-box">Card</div>
+              </a>
+            </li>
+            <li>
+              <a href="../component-table.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-list-dashes"></i></span>
+                <div class="text-box">Table</div>
+              </a>
+            </li>
+            <li>
+              <a href="../form-elements.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-swatches"></i></span>
+                <div class="text-box">Form Elements</div>
+              </a>
+            </li>
+            <li>
+              <a href="../component-widget.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-leaf"></i></span>
+                <div class="text-box">Widgets</div>
+              </a>
+            </li>
+            <li class="menu-title">Documentation</li>
+            <li>
+              <a href="home.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-info"></i></span>
+                <div class="text-box">Introduction</div>
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-browser"></i></span>
+                <div class="text-box">Getting started</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="started.html">quick start</a></li>
+                <li><a href="started.html#environment">Environments Setup</a></li>
+                <li><a href="started.html#folder ">Folder Structure</a></li>
+                <li><a href="started.html#colors ">Colors</a></li>
+                <li><a href="started.html#typography ">Typography</a></li>
+                <li><a href="started.html#icons ">Icons</a></li>
+              </ul>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-layout"></i></span>
+                <div class="text-box">Layouts</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="layouts.html">Layouts</a></li>
+                <li><a href="layouts.html#theme">theme</a></li>
+              </ul>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box">
+                            <i class="ph-puzzle-piece"></i>
+                        </span>
+                <div class="text-box">Plugins</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="plugin.html">Map</a></li>
+                <li><a href="plugin.html#calendars">Calendar</a></li>
+                <li><a href="plugin.html#chart">Chart</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="browser-support.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-disc"></i></span>
+                <div class="text-box">Browser Supports & Credit </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="top-navbar">
+      <div class="container-fluid p-0">
+        <div class="main-menu">
+          <span class="rt-mobile-menu-close"> X </span>
+          <!-- /.rt-mobile-menu-close -->
+          <ul class="menu-active-classes">
+            <li class="active">
+              <a href="home.html">
+                <span class="icon-box"><i class="ph-house-line"></i></span>
+                <div class="text-box">Dashboard</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">
+                <span class="icon-box"><i class="ph-clipboard-text"></i></span>
+                <div class="text-box">Apps</div>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Kanban Board</a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">File Manager</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Kanban Board</a></li>
+                    <li><a href="#">Card Details</a></li>
+                    <li><a href="#">Create New Cards</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">File Manager</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">
+                <span class="icon-box"><i class="ph-circles-three-plus"></i></span>
+                <div class="text-box">Pages</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">
+                <span class="icon-box"><i class="ph-palette"></i></span>
+                <div class="text-box">Style Guide</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">
+                <span class="icon-box"><i class="ph-swatches"></i></span>
+                <div class="text-box">UI Components</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">
+                <span class="icon-box"><i class="ph-gear"></i></span>
+                <div class="text-box">From Elements</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-box"><i class="ph-books"></i></span>
+                <div class="text-box">Documentation</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.main-menu -->
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 rt-mb-25">
+              <div class="breadcrumbs ">
+                <div class="breadcrumb-title"> Introduction</div>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">App</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> Introduction</li>
+                  </ol>
+                </nav>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="docu">
+            <section id="colors">
+              <h2 class="docu-title">colors</h2>
+              <!-- Write content from here -->
+              <p>The choice of colors for a website or app interface has an big influence on how users interact with the product and what
+                decisions they make. Harmonic colors can contribute to a nice first impression and encourage users to engage with your
+                product, so it's a very important aspect of a successful design, which needs to be well thought out.</p>
+              <div class="card">
+                <div class="card-body">
+                  <div class="color-box">
+                    <div class="color-box-item bg-gray-900">
+                      #7b878c
+                    </div>
+                    <div class="color-box-item bg-primary-500">
+                      #005ce8
+                    </div>
+                    <div class="color-box-item bg-secondary-500 text-gray-900">
+                      #fff266
+                    </div>
+                    <div class="color-box-item bg-success-500">
+                      #0faf62
+                    </div>
+                    <div class="color-box-item bg-warning-500">
+                      #ff9500
+                    </div>
+                    <div class="color-box-item bg-danger-500">
+                      #e84646
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="typography">
+              <h2 class="docu-title">typgography</h2>
+              <!-- Write content from here -->
+              <p>Typography plays an important role in creating an attractive and clear interface design. Good typography will make the content easy to follow and improve the usability of your website.</p>
+              <h3 class="docu-title-sub">Headings</h3>
+              <!-- Write content from here -->
+              <p>Use HTML headings to organize content on your website and make the structure clear and user-friendly.</p>
+              <div class="card">
+                <div class="card-body">
+                  <div class="hedding-title">
+                    <h1>H1 Heading</h1>
+                    <h2>H2 Heading</h2>
+                    <h3>H3 Heading</h3>
+                    <h4>H4 Heading</h4>
+                    <h5>H5 Heading</h5>
+                    <h6>H6 Heading</h6>
+                  </div>
+                </div>
+                <div>
+                  <textarea class="editor">
+
+<h1>h1 Heading </h1>
+<h2>h1 Heading </h2>
+<h3>h1 Heading </h3>
+<h4>h1 Heading </h4>
+<h5>h1 Heading </h5>
+<h6>h1 Heading </h6>
+                                </textarea>
+                </div>
+              </div>
+              <h3 class="docu-title-sub">Paragraphs</h3>
+              <!-- Write content from here -->
+              <p>Organize longer pieces of text into paragraphs using the p tag.</p>
+              <div class="card">
+                <div class="card-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda modi, iusto pariatur magnam eveniet. Reiciendis blanditiis facere tempora natus dolorum? Molestiae expedita repudiandae eaque fuga et perspiciatis magni necessitatibus.</p>
+                  <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                </div>
+                <div>
+                  <textarea class="editor">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                    magna aliquyam erat, sed diam voluptua.</p>
+                                </textarea>
+                </div>
+              </div>
+
+            </section>
+            <section id="icon">
+              <h2 class="docu-title">Icons</h2>
+              <!-- Write content from here -->
+              <p>All icons come from the Phosphor Icons set and are MIT-licensed. Visit <a href="https://phosphoricons.com/">phosphoricons.com</a> , download the icons you need in
+                SVG, PNG or React and use them in your favourite design tools. You can show all icons and SVG codes <a href="https://phosphoricons.com/">here.</a></p>
+              <div class="card">
+                <div class="card-body">
+                  <div class="icon-wrap">
+                    <div class="icon-item">
+                      <img src="../assets/images/svg/info.svg" alt="">
+                    </div>
+                    <div class="icon-item">
+                      <img src="../assets/images/svg/checkcircle.svg" alt="">
+                    </div>
+                    <div class="icon-item">
+                      <img src="../assets/images/svg/warningcircle.svg" alt="">
+                    </div>
+                    <div class="icon-item">
+                      <img src="../assets/images/svg/warning.svg" alt="">
+                    </div>
+                    <div class="icon-item">
+                      <img src="../assets/images/svg/file.svg" alt="">
+                    </div>
+                    <div class="icon-item">
+                      <img src="../assets/images/svg/clock2.svg" alt="">
+                    </div>
+                    <div class="icon-item">
+                      <img src="../assets/images/svg/chat-circle-dots.svg" alt="">
+                    </div>
+                    <div class="icon-item">
+                      <img src="../assets/images/svg/crown.svg" alt="">
+                    </div>
+                    <div class="icon-item">
+                      <img src="../assets/images/svg/clipboardtext.svg" alt="">
+                    </div>
+                    <div class="icon-item">
+                      <img src="../assets/images/svg/filetext.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <div class="rt-mobile-menu-overlay"></div>
+  <!-- /.rt-mobile-menu-overlay -->
+  <div id="template2" style="display: none;">
+    <div class="PopoverParent">
+      <div class="Popover-header">
+        <a class="rt-single-icon-box user-profile-icon-big rt-align-center" href="#">
+          <div class="icon-thumb">
+            <div class="innerImage">
+              <img src="../assets/images/all-img/user.svg" alt="profile_image" />
+            </div>
+          </div>
+          <div class="iconbox-content">
+            <h4>Faraz Ahmed</h4>
+            <span>farazleo112</span>
+          </div>
+        </a>
+      </div>
+      <div class="PopoverContent">
+        <div class="popoverInnerContent">
+          <ul class="user_menu">
+            <li>
+              <a href="#">
+                <span class="icon-i">
+                                        <i class="ph-user"></i>
+                                    </span>
+                Profile
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-i">
+                                        <i class="ph-chart-bar"></i>
+                                    </span>
+                Reports
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-i">
+                                        <i class="ph-gear"></i>
+                                    </span>
+                Settings
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-i">
+                                        <i class="ph-question"></i>
+                                    </span>
+                Get Help
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="popOverFooter">
+          <a href="#">
+            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17.3" height="17.3" viewBox="0 0 17.3 17.3">
+                                    <g id="log-out" transform="translate(-2.35 -2.35)">
+                                        <path
+                                            id="Path_2782"
+                                            data-name="Path 2782"
+                                            d="M8.333,19H4.778A1.778,1.778,0,0,1,3,17.222V4.778A1.778,1.778,0,0,1,4.778,3H8.333"
+                                            transform="translate(0 0)"
+                                            fill="none"
+                                            stroke="#4d5afb"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.3"
+                                        />
+                                        <path
+                                            id="Path_2783"
+                                            data-name="Path 2783"
+                                            d="M16,15.889l4.444-4.444L16,7"
+                                            transform="translate(-1.444 -0.444)"
+                                            fill="none"
+                                            stroke="#4d5afb"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.3"
+                                        />
+                                        <line id="Line_11" data-name="Line 11" x1="10.667" transform="translate(8.333 11)" fill="none" stroke="#4d5afb" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" />
+                                    </g>
+                                </svg>
+                            </span>
+            Log Out
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="template" style="display: none;">
+    <div class="PopoverParent min-372">
+      <div class="Popover-header d-flex justify-content-between">
+        <div class="d-block f-size-14 line-height-20 text-gray-900">
+          Notification
+        </div>
+        <div class="d-block f-size-14 text-gray-700 pointer">Clear All</div>
+      </div>
+      <div class="PopoverContent">
+        <div class="popoverInnerContent">
+          <div class="notifybox">
+            <ul class="notify-lists rt-list">
+
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/notification/check.svg" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900 text-hide mb-1">This is a success notification.</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/all-img/user_1.png" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900 text-hide mb-1">Kevin Mention you in “UX Design Proc...”</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/notification/alert.svg" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900 text-hide mb-1">This is you lasst waring</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/all-img/user_2.png" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900 text-hide mb-1">Janny invited you in events in calender</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/notification/file.svg" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900 text-hide mb-1">Your pricing plan is updated</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-settings" id="appSettings">
+    <div class="settings-header d-flex justify-content-between">
+      <div class="text-gray-900 body-font-3 font-medium ">Settings</div>
+      <div class="pointer" id="closesetting">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 3.5L3.5 12.5" stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M12.5 12.5L3.5 3.5" stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+      </div>
+    </div>
+    <div class="cal-h-70" data-simplebar>
+      <div class="inner-content">
+        <div class="setting-title">Layout</div>
+        <div class="settings-images row ">
+          <div class="col-lg-6 rt-mb-32">
+            <div class="form-check p-0">
+              <label class="d-block pointer" for="vertical_lable">
+                <img src="../assets/images/all-img/d-1.png" alt="" class="w-100" />
+                <div class="bottom-content">
+                  <input class="form-check-input  pointer" type="radio" name="layoutbox" id="vertical_lable" value="vertical" checked />
+                  <span> Vertical</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+          <div class="col-lg-6 rt-mb-32">
+            <div class="form-check p-0">
+              <label class="form-check-label d-block pointer" for="horizental_label">
+                <img src="../assets/images/all-img/d-2.png" alt="" />
+                <div class="bottom-content">
+                  <input class="form-check-input d-block pointer" type="radio" name="layoutbox" id="horizental_label" value="horizental" />
+                  <span>Horizontal</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="setting-title rt-pt-30">Layout</div>
+        <ul class="rt-mb-32">
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_white" value="white" checked />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_white">
+                White
+              </label>
+            </div>
+          </li>
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_black" value="black" />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_black">
+                Black
+              </label>
+            </div>
+          </li>
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_navy" value="blue" />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_navy">
+                Navy Blue
+              </label>
+            </div>
+          </li>
+        </ul>
+        <div class="row smallgap">
+          <div class="col-md-6">
+            <button class="btn btn-primary2 pill block w-100 rt-mb-10">Reset to default</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-primary pill btn-icon block w-100  rt-mb-10">
+              <span class="button-content-wrapper">
+                                <span class="button-text">
+                                  Purchase now
+                                </span>
+              <span class="button-icon align-icon-right">
+                                  <i class="ph-arrow-right"></i>
+                  
+                                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="settings-overlay"></div>
+
+  <!-- scripts -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/popper.min.js"></script>
+  <script src="../assets/js/tippy-bundle.umd.min.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/apexcharts.min.js"></script>
+  <script src="../assets/js/chartist.min.js"></script>
+  <script src="../assets/js/jquery-jvectormap-2.0.5.min.js"></script>
+  <script src="../assets/js/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="../assets/js/metisMenu.min.js"></script>
+  <script src="../assets/js/morris.min.js"></script>
+  <script src="../assets/js/select2.min.js"></script>
+  <script src="../assets/js/simplebar.min.js"></script>
+  <script src="../assets/js/moment.min.js"></script>
+  <script src="../assets/js/jquery-ui.min.js"></script>
+  <script src="../assets/js/libs/@fullcalendar/core/main.min.js"></script>
+  <script src="../assets/js/libs/@fullcalendar/bootstrap/main.min.js"></script>
+  <script src="../assets/js/libs/@fullcalendar/daygrid/main.min.js"></script>
+  <script src="../assets/js/libs/@fullcalendar/timegrid/main.min.js"></script>
+  <script src="../assets/js/libs/@fullcalendar/interaction/main.min.js"></script>
+  <script src="../assets/js/calendar-int.js"></script>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <script src="../assets/js/custom-select.js"></script>
+  <script src="../assets/js/waves.js"></script>
+  <script src="../assets/js/dragula.min.js"></script>
+  <script src="../assets/js/appkanban.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
