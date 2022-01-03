@@ -205,8 +205,6 @@ function dlt_dist() {
     ]);
 }
 
-
-
 function reload(done) {
     browserSync.reload();
     done();
