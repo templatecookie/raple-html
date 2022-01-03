@@ -417,6 +417,9 @@
   }
   .logo-white {
     display: block;
+    @include breakpoint(md) {
+      display: none;
+    }
   }
   .logo-black {
     display: none;
@@ -434,6 +437,9 @@
   }
   .logo-white {
     display: block;
+    @include breakpoint(md){
+      display: none;
+    }
   }
   .logo-black {
     display: none;
@@ -545,3 +551,17 @@
   }
   
 }
+
+
+[data-sidebar="black"],
+[data-sidebar="blue"]
+
+{
+.logo-segment{
+  @include breakpoint(md){
+    background: white;
+  }
+}
+  
+}
+

@@ -1,3 +1,5 @@
+
+
 /*
 * ----------------------------------------------------------------------------------------
     Template Name: Relik
@@ -1044,7 +1046,11 @@ $(window).scroll(function(){
 });
 
 // Animate on scroll 
-AOS.init();
+if(document.querySelector('div').hasAttribute('data-aos')) { 
+  AOS.init();
+
+ 
+}
 
 
 
