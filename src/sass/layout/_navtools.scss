@@ -200,13 +200,3 @@
   }
 }
 
-.notify-lists{
-  .rt-single-icon-box{
-    @include breakpoint(xs){
-      flex-direction: column !important;
-      .icon-thumb{
-        margin-bottom: 12px;
-      }
-    }
-  }
-}
