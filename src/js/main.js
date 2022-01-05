@@ -1045,12 +1045,7 @@ $(window).scroll(function(){
   }
 });
 
-// Animate on scroll 
-if(document.querySelector('div').hasAttribute('data-aos')) { 
-  AOS.init();
 
- 
-}
 
 
 
