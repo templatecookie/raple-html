@@ -378,3 +378,20 @@
 .min-w-174{
   min-width: 174px;
 }
+.related-box{
+  position: relative;
+  .image-box{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    img{
+      transition: all .4s ease-in-out;
+    }
+  }
+  &:hover{
+    img{
+      transform: scale(1.2);
+    
+    }
+  }
+}
