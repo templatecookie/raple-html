@@ -445,6 +445,11 @@ select,
 }
 
 //custom checkbox
+.has-minus{
+  &.form-check{
+   margin-left: -1.5rem;
+  }
+}
 .from-chekbox-custom {
   .form-check-input {
     height: 20px;

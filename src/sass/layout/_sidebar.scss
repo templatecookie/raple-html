@@ -47,7 +47,7 @@
             font-size: 12px;
             @include rt-trs(0.24s);
             position: absolute;
-            right: 30px;
+            right: 40px;
             top: 50%;
             transform: translateY(-50%);
           }
@@ -274,7 +274,7 @@
   }
   .top-navbar {
     background-color: #fff;
-    padding-left: 154px;
+    padding-left: 180px;
     padding-right: 180px;
     display: block;
     @include breakpoint(xxl2) {

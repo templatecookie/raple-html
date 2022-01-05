@@ -245,3 +245,7 @@
         }
     }
 }
+
+.invoice-table-list table tbody tr.selected{
+    background-color: var(--primary-50);
+}
