@@ -44,16 +44,19 @@
           <div class="left-content">
             <div class="logo-segment">
               <div class="all-logo">
-                <a href="/" class="brand-logo">
+                <a href="../home.html" class="brand-logo">
                   <img src="../assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black">
+                  <img src="../assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white">
                   <img src="../assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10">
+                  <img src="../assets/images/logo/logo-full-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10">
                 </a>
-                <a href="/" class="brand-logo white">
+                <a href="home.html" class="brand-logo white">
                   <img src="../assets/images/logo/logo-white.svg" alt="" draggable="false">
                 </a>
-                <a href="/" class="collapse-in-logo ">
+                <a href="home.html" class="collapse-in-logo ">
 
-                  <img src="../assets/images/logo/logo-icon.svg" alt="" draggable="false">
+                  <img src="../assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon-blue">
+                  <img src="../assets/images/logo/logo-icon-white.svg" alt="" draggable="false" class="logo-icon-white">
 
                 </a>
               </div>
@@ -126,7 +129,7 @@
           <ul id="side-menu">
             <li class="menu-title no-margin">Dashboard</li>
             <li>
-              <a href="/" aria-expanded="false" class="waves-effect primary-light">
+              <a href="home.html" aria-expanded="false" class="waves-effect primary-light">
                 <span class="icon-box"><i class="ph-house-line"></i></span>
                 <div class="text-box">
                   Dashboard
@@ -263,7 +266,7 @@
             </li>
             <li class="menu-title">Documentation</li>
             <li>
-              <a href="home.html" aria-expanded="false" class="waves-effect primary-light">
+              <a href="index.html" aria-expanded="false" class="waves-effect primary-light">
                 <span class="icon-box"><i class="ph-info"></i></span>
                 <div class="text-box">Introduction</div>
               </a>
@@ -318,63 +321,115 @@
     <div class="top-navbar">
       <div class="container-fluid p-0">
         <div class="main-menu">
-          <span class="rt-mobile-menu-close"> X </span>
+          <div class="mobile-menu-header d-flex justify-content-between mb-5 pb-2 px-3 ps-3 d-block d-lg-none">
+            <a href="../home.html" class="mbl-logo"><img src="../assets/images/logo/logo.svg" alt=""></a>
+            <span class="rt-mobile-menu-close">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48zm86.63 272L320 342.63l-64-64l-64 64L169.37 320l64-64l-64-64L192 169.37l64 64l64-64L342.63 192l-64 64z" fill="#e84646"/></svg>
+              </span>
+          </div>
           <!-- /.rt-mobile-menu-close -->
           <ul class="menu-active-classes">
             <li class="active">
-              <a href="home.html">
+              <a href="../home.html">
                 <span class="icon-box"><i class="ph-house-line"></i></span>
                 <div class="text-box">Dashboard</div>
               </a>
             </li>
             <li class="menu-item-has-children">
-              <a href="#">
+              <a href="../javascript:void(0)">
                 <span class="icon-box"><i class="ph-clipboard-text"></i></span>
                 <div class="text-box">Apps</div>
               </a>
               <ul class="sub-menu">
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Kanban Board</a></li>
+                <li><a href="../full-calendar.html">Calendar</a></li>
+                <li><a href="../kanban-board.html">Kanban Board</a></li>
                 <li class="menu-item-has-children">
-                  <a href="#">File Manager</a>
+                  <a href="javascript: void(0);">File Manager</a>
                   <ul class="sub-menu">
-                    <li><a href="#">Kanban Board</a></li>
-                    <li><a href="#">Card Details</a></li>
-                    <li><a href="#">Create New Cards</a></li>
+                    <li><a href="../file-manager.html">File Manager</a></li>
+                    <li><a href="../file-manager-new.html">Upload New File</a></li>
                   </ul>
                 </li>
-                <li><a href="#">File Manager</a></li>
               </ul>
             </li>
-            <li class="menu-item-has-children">
-              <a href="#">
+            <li class="menu-item-has-children has-megamenu">
+              <a href="javascript: void(0);">
                 <span class="icon-box"><i class="ph-circles-three-plus"></i></span>
                 <div class="text-box">Pages</div>
               </a>
+              <div class="rt-mega-menu">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">Authentication</div>
+                      <a href="../login.html">login</a>
+                      <a href="../registration.html">Registration</a>
+                      <a href="../profile.html">Profile</a>
+                      <a href="../setting.html">Setting</a>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">billing</div>
+                      <a href="../billing.html">billing</a>
+                      <a href="../pricing-plans.html">pricing-plans</a>
+
+                      <a href="../invoice.html">Invoice</a>
+                      <a href="../invoice-detail.html">Invoice Details</a>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">Components</div>
+                      <a href="../button.html">Button</a>
+                      <a href="../badge.html">Badge</a>
+                      <a href="../checkbox.html">Checkbox</a>
+                      <a href="../radio.html">Radio</a>
+                      <a href="../switch.html">Switch</a>
+
+                    </div>
+                    <div class="col-lg-3">
+                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">Components</div>
+                      <a href="../pagination.html">Pagination</a>
+                      <a href="../accordion.html">Accordion</a>
+                      <a href="../alerts.html">Alerts</a>
+                      <a href="../input.html">Input</a>
+                      <a href="../banner.html">Banner</a>
+                      <a href="../file.html">File</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="menu-item-has-children">
-              <a href="#">
+            <li>
+              <a href="../#">
                 <span class="icon-box"><i class="ph-palette"></i></span>
                 <div class="text-box">Style Guide</div>
               </a>
             </li>
-            <li class="menu-item-has-children">
-              <a href="#">
-                <span class="icon-box"><i class="ph-swatches"></i></span>
-                <div class="text-box">UI Components</div>
-              </a>
-            </li>
-            <li class="menu-item-has-children">
-              <a href="#">
+
+            <li>
+              <a href="../form-elements.html">
                 <span class="icon-box"><i class="ph-gear"></i></span>
                 <div class="text-box">From Elements</div>
               </a>
             </li>
-            <li>
-              <a href="#">
+            <li class="menu-item-has-children">
+              <a href="javascript: void(0);">
                 <span class="icon-box"><i class="ph-books"></i></span>
                 <div class="text-box">Documentation</div>
               </a>
+              <ul class="sub-menu">
+                <li><a href="../docs/index.html">Introduction</a></li>
+                <li><a href="../docs/started.html">quick start</a></li>
+                <li><a href="../docs/started.html#environment">Environments Setup</a></li>
+                <li><a href="../docs/started.html#folder ">Folder Structure</a></li>
+                <li><a href="../docs/started.html#colors ">Colors</a></li>
+                <li><a href="../docs/started.html#typography ">Typography</a></li>
+                <li><a href="../docs/started.html#icons ">Icons</a></li>
+                <li><a href="../docs/layouts.html">layout</a></li>
+                <li><a href="../docs/layouts.html#theme">Theme</a></li>
+                <li><a href="../docs/plugin.html">Map</a></li>
+                <li><a href="../docs/plugin.html#calendars">Calendar</a></li>
+                <li><a href="../docs/plugin.html#chart">Chart</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -392,8 +447,8 @@
                 <div class="breadcrumb-title"> Getting Started</div>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="index.html">App</a></li>
+                    <li class="breadcrumb-item"><a href="../home.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../home.html">App</a></li>
                     <li class="breadcrumb-item active" aria-current="page"> Getting Started</li>
                   </ol>
                 </nav>
@@ -659,7 +714,7 @@
         <div class="popoverInnerContent">
           <ul class="user_menu">
             <li>
-              <a href="#">
+              <a href="../profile.html">
                 <span class="icon-i">
                                         <i class="ph-user"></i>
                                     </span>
@@ -667,7 +722,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="../invoice.html">
                 <span class="icon-i">
                                         <i class="ph-chart-bar"></i>
                                     </span>
@@ -675,7 +730,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="../setting.html">
                 <span class="icon-i">
                                         <i class="ph-gear"></i>
                                     </span>
@@ -683,7 +738,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="../faq.html">
                 <span class="icon-i">
                                         <i class="ph-question"></i>
                                     </span>
@@ -750,7 +805,7 @@
                     <img src="assets/images/notification/check.svg" alt="">
                   </div>
                   <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900 text-hide mb-1">This is a success notification.</div>
+                    <div class="title body-font-4 text-gray-900  mb-1">This is a success notification.</div>
                     <div class=" body-fonty-4 text-gray-500">5 min ago</div>
                   </div>
                 </a>
@@ -763,7 +818,7 @@
                     <img src="assets/images/all-img/user_1.png" alt="">
                   </div>
                   <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900 text-hide mb-1">Kevin Mention you in “UX Design Proc...”</div>
+                    <div class="title body-font-4 text-gray-900  mb-1">Kevin Mention you in “UX Design Proc...”</div>
                     <div class=" body-fonty-4 text-gray-500">5 min ago</div>
                   </div>
                 </a>
@@ -776,7 +831,7 @@
                     <img src="assets/images/notification/alert.svg" alt="">
                   </div>
                   <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900 text-hide mb-1">This is you lasst waring</div>
+                    <div class="title body-font-4 text-gray-900  mb-1">This is you lasst waring</div>
                     <div class=" body-fonty-4 text-gray-500">5 min ago</div>
                   </div>
                 </a>
@@ -789,7 +844,7 @@
                     <img src="assets/images/all-img/user_2.png" alt="">
                   </div>
                   <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900 text-hide mb-1">Janny invited you in events in calender</div>
+                    <div class="title body-font-4 text-gray-900  mb-1">Janny invited you in events in calender</div>
                     <div class=" body-fonty-4 text-gray-500">5 min ago</div>
                   </div>
                 </a>
@@ -802,7 +857,7 @@
                     <img src="assets/images/notification/file.svg" alt="">
                   </div>
                   <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900 text-hide mb-1">Your pricing plan is updated</div>
+                    <div class="title body-font-4 text-gray-900  mb-1">Your pricing plan is updated</div>
                     <div class=" body-fonty-4 text-gray-500">5 min ago</div>
                   </div>
                 </a>

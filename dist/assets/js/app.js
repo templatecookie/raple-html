@@ -897,7 +897,26 @@
     } else {
       $('.p-header .navbar').removeClass('fixed');
     }
-  }); // Animate on scroll 
+  });
 
-  AOS.init();
+  if (document.querySelector("table")) {
+    document.querySelector("table").addEventListener("click", function (_ref) {
+      var target = _ref.target;
+      // discard direct clicks on input elements
+      if (target.nodeName === "INPUT") return; // get the nearest tr
+
+      var tr = target.closest("tr");
+      tr.classList.toggle("selected");
+
+      if (tr) {
+        // if it exists, get the first checkbox
+        var checkbox = tr.querySelector("input[type='checkbox']");
+
+        if (checkbox) {
+          // if it exists, toggle the checked property
+          checkbox.checked = !checkbox.checked;
+        }
+      }
+    });
+  }
 })(jQuery);
