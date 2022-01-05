@@ -185,14 +185,18 @@
     margin: 12px 0;
     background-color: var(--primary-50);
     transition: all 0.3s ease-in-out;
+    i{
+      font-size: 32px;
+      transition: all 0.3s ease-in-out;
+    }
     &:hover { 
       .feature-icon {
         background-color: var(--primary-500);
-        svg { 
+        i { 
           transform: scale(1.2);
         }
-        path {
-          stroke: white;
+        i {
+          color: white;
         }
       }
     }
