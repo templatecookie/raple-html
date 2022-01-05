@@ -580,6 +580,9 @@
   }
   .logo-full-white{
     display: block;
+    @include breakpoint(md){
+      display: none;
+    }
   }
   .logo-icon-blue{
     display: none;
