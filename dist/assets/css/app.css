@@ -9572,6 +9572,10 @@ a.ui-button:active {
   color: var(--primary-500);
 }
 
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+  display: none;
+}
+
 .info-item {
   display: flex;
   margin-bottom: 24px;
