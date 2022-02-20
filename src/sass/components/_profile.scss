@@ -94,25 +94,20 @@
   }
   &-right {
     display: flex;
-    flex-wrap: wrap;
+    max-width: 516px;
+    width: 100%;
     margin-bottom: 15px;
-    @include max(1199px) {
-      justify-content: space-between;
-      margin-bottom: 0;
+    @include breakpoint(xs) {
+      flex-direction: column;
+      text-align: center;
     }
+
     &-item {
-      margin: 0 45px;
-      @include max(1400px) {
-        margin: 0 25px;
-      }
-      @include max(991px) {
-        margin: 0;
-      }
-      @include max(479px) {
-        text-align: center;
+      flex: 1;
+      @include breakpoint(xs) {
         margin-bottom: 15px;
         &:last-child {
-          margin-bottom: 0;
+          margin-bottom: 0px;
         }
       }
       h4 {
