@@ -1,6 +1,7 @@
 .blank {
   &-section {
-    height: 100vh;
+    height: calc(100vh - 150px);
+    padding-bottom: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
