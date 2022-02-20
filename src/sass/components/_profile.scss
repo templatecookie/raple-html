@@ -14,7 +14,7 @@
       display: block;
     }
     @include max(767px) {
-      padding: 35px;
+      padding: 15px;
     }
     &:before {
       width: 100%;
@@ -239,5 +239,11 @@
     @include max(767px) {
       padding: 0 24px;
     }
+  }
+}
+.kanban-link {
+  color: var(--gray-900);
+  &:hover {
+    color: var(--gray-700);
   }
 }
