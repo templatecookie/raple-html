@@ -1,66 +1,63 @@
+// navbar
+.p-header {
+  .navbar {
+    padding: 24px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+    transition: all 0.3s linear;
 
+    &-collapse {
+      @include max(991px) {
+        padding-bottom: 24px;
+        background-color: var(--gray-900);
+      }
+    }
 
+    .navbar-toggler {
+      color: #fff;
+      border-color: #fff;
+      background-color: #fff;
+    }
+    &.fixed {
+      background-color: var(--gray-900);
+    }
+    &-nav {
+      @include max(991px) {
+        margin-top: 36px;
+        align-items: center;
+        text-align: center;
+      }
+      .nav-item {
+        margin-right: 32px;
+        @include max(991px) {
+          margin: 0px;
+          margin-bottom: 24px;
+        }
+        &:nth-last-child(1) {
+          margin: 0px;
+        }
+      }
 
-// navbar 
-.p-header { 
-    .navbar { 
-        padding: 24px 0px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-        background-color: transparent;
+      .nav-link {
+        padding: 0px;
+        @extend %text-two;
+        text-transform: capitalize;
+        color: rgb(255, 255, 255, 0.7);
         transition: all 0.3s linear;
 
-        &-collapse { 
-         @include max(991px) {
-             padding-bottom: 24px;
-             background-color: var(--gray-900);
-         }
+        &:hover,
+        &.active,
+        &:focus,
+        &:active {
+          color: #fff;
         }
-
-        .navbar-toggler { 
-            color: #fff;
-            border-color: #fff;
-            background-color: #fff;
-        }
-        &.fixed { 
-            background-color: var(--gray-900);
-        }
-        &-nav { 
-            @include max(991px) { 
-                margin-top: 36px;
-                align-items: center;
-                text-align: center;
-            }
-            .nav-item { 
-                margin-right: 32px;
-                @include max(991px) { 
-                    margin: 0px;
-                    margin-bottom: 24px;
-                }
-                &:nth-last-child(1){ 
-                    margin: 0px;
-                }
-            }
-            
-            .nav-link { 
-                padding: 0px;
-                @extend %text-two;
-                text-transform: capitalize;
-                color: rgb(255, 255, 255, 0.7);
-                transition: all 0.3s linear;
-                
-                &:hover,
-                &.active,
-                &:focus,
-                &:active { 
-                    color: #fff; 
-                }
-            }
-        }
+      }
     }
+  }
 
   &__btn {
     font-size: 14px;
@@ -93,71 +90,70 @@
   }
 }
 
-// banner section 
-.p-banner { 
-    position: relative;
-    overflow: hidden;
-    padding-top: 215px;
-    @include max(991px) { 
-        padding-top: 116px;
-        padding-bottom: 90px;
+// banner section
+.p-banner {
+  position: relative;
+  overflow: hidden;
+  padding-top: 215px;
+  @include max(991px) {
+    padding-top: 116px;
+    padding-bottom: 90px;
+  }
+  &__text-info {
+    @include max(991px) {
+      text-align: center;
     }
-    &__text-info { 
-        @include max(991px) { 
-            text-align: center;
-        }
-        h6 { 
-            color: #9FBFF0;
-            font-size: 14px;
-            line-height: 20px;
-            text-transform: capitalize;
-            margin-bottom: 12px;
-            span { 
-                color: #FFF266;
-                font-weight: 500;
-            }
-        }
-        h2 { 
-            font-size: 48px;
-            line-height: 56px;
-            font-weight: 300;
-            color: #fff;
-            margin-bottom: 32px;
-            text-transform: capitalize;
-            @include max(767px) { 
-                font-size: 32px;
-                line-height: 46px;
-            }
-            span { 
-                font-weight: 700;
-            }
-        }
-
-        p { 
-            color: #CFDFF7;
-            font-size: 20px;
-            line-height: 28px;
-            text-transform: capitalize;
-            margin-bottom: 32px;
-            max-width: 568px;
-            @include max(991px) { 
-                margin: 0px auto;
-                margin-bottom: 32px;
-            }
-            @include max(767px) { 
-                max-width: 100%;
-            }
-        }
-
-        ul { 
-            @include max(991px) { 
-                justify-content: center;
-            }
-            li  { 
-             margin-right: 12px;   
-            }
-        }
+    h6 {
+      color: #9fbff0;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: capitalize;
+      margin-bottom: 12px;
+      span {
+        color: #fff266;
+        font-weight: 500;
+      }
     }
+    h2 {
+      font-size: 48px;
+      line-height: 56px;
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 32px;
+      text-transform: capitalize;
+      @include max(767px) {
+        font-size: 32px;
+        line-height: 46px;
+      }
+      span {
+        font-weight: 700;
+      }
+    }
+
+    p {
+      color: #cfdff7;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 32px;
+      max-width: 568px;
+      @include max(991px) {
+        margin: 0px auto;
+        margin-bottom: 32px;
+      }
+      @include max(767px) {
+        max-width: 100%;
+      }
+    }
+
+    ul {
+      @include max(991px) {
+        justify-content: center;
+      }
+      li {
+        margin-right: 12px;
+      }
+    }
+  }
 }
 
 .section-padding {
@@ -185,14 +181,14 @@
     margin: 12px 0;
     background-color: var(--primary-50);
     transition: all 0.3s ease-in-out;
-    i{
+    i {
       font-size: 32px;
       transition: all 0.3s ease-in-out;
     }
-    &:hover { 
+    &:hover {
       .feature-icon {
         background-color: var(--primary-500);
-        i { 
+        i {
           transform: scale(1.2);
         }
         i {
@@ -200,9 +196,6 @@
         }
       }
     }
-
-
-
   }
   &-icon {
     width: 80px;
@@ -214,7 +207,7 @@
     justify-content: center;
     background-color: white;
     transition: all 0.3s ease-in-out;
-    svg { 
+    svg {
       transform: scale(1);
       transition: all 0.4s linear;
     }
@@ -318,10 +311,10 @@
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  @include max(1200px) { 
-  min-height: 680px;
+  @include max(1200px) {
+    min-height: 680px;
   }
-  @include max(991px) { 
+  @include max(991px) {
     min-height: 520px;
   }
   .presentation-button {
@@ -357,41 +350,59 @@
   }
 }
 
-
-
-// banner images 
-.bn_image_1{
+// banner images
+.bn_image_1 {
   background-image: url(../images/all-img/bg-overlay.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
-.bn_image_2{
+.bn_image_2 {
   background-image: url(../images/all-img/cta-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
-.min-w-220{
+.min-w-220 {
   min-width: 220px;
 }
-.min-w-174{
+.min-w-174 {
   min-width: 174px;
 }
-.related-box{
+.related-box {
   position: relative;
-  .image-box{
+  .image-box {
     width: 100%;
     display: block;
     overflow: hidden;
-    img{
-      transition: all .4s ease-in-out;
+    img {
+      transition: all 0.4s ease-in-out;
     }
   }
-  &:hover{
-    img{
-      transform: scale(1.2);
-    
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.shocase {
+  .btn {
+    padding: 16px 40px;
+  }
+}
+
+.fix-conent {
+  h2 {
+    margin-bottom: 32px;
+    @include breakpoint(xs) {
+      margin-bottom: 24px;
+    }
+  }
+  p {
+    margin-bottom: 50px;
+    @include breakpoint(xs) {
+      margin-bottom: 30px;
     }
   }
 }
