@@ -25,6 +25,7 @@
     color: var(--gray-900);
     border-color: #e5e7e8;
     background: transparent;
+    align-items: center;
     @include max(991px) {
       padding: 14px 20px;
     }
@@ -130,7 +131,7 @@
         flex-shrink: 0;
         max-width: 330px;
         position: relative;
-        @include max(1640px) { 
+        @include max(1640px) {
           max-width: 280px;
         }
         @include max(767px) {

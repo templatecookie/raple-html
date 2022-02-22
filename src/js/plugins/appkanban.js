@@ -154,8 +154,11 @@
                 </div>
                 <div class="row">
                   <div class="col-12">
-                    <label for="member-email">Add Member</label>
+                  <div className="fromGroup">
+                   <label for="member-email" class="block rt-mb-4">Add Member</label>
                     <input type="text" placeholder="Member email address" id="member-email">
+                  </div>
+                   
                   </div>
                 </div>
               </div>
@@ -255,14 +258,14 @@
                                           </a>
                                         </li>
                                         <li>
-                                        <button   type="button"  class="dropdown-item remove-killer2 plain-btn" id="${
+                                        <a   href="#" type="button"  class="dropdown-item remove-killer2 plain-btn" id="${
                                           "newbtn_1" + ID()
                                         }">
                                         <span>
                                               <img src="assets/images/svg/trash.svg" alt="copylink">
                                             </span>
                                         Delete
-                                      </button>
+                                      </a>
                                         </li>
                                       </ul>
                                     </div>
@@ -408,8 +411,11 @@
               </div>
               <div class="row">
                 <div class="col-12">
-                  <label for="member-email">Add Member</label>
+                <div className="fromGroup">
+                 <label for="member-email" class="block rt-mb-4">Add Member</label>
                   <input type="text" placeholder="Member email address" id="member-email">
+                </div>
+                 
                 </div>
               </div>
             </div>
@@ -509,12 +515,12 @@
                                       </li>
                                       <li>
                                      
-                                    <button   type="button"  class="dropdown-item remove-killer plain-btn">
+                                    <a     class="dropdown-item remove-killer plain-btn">
                                         <span>
                                               <img src="assets/images/svg/trash.svg" alt="copylink">
                                             </span>
                                         Delete
-                                      </button>
+                                      </a>
                                       </li>
                                     </ul>
                                   </div>
