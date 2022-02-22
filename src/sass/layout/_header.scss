@@ -586,3 +586,9 @@
     display: none;
   }
 }
+
+.card-priority__actions {
+  .dropdown-menu {
+    right: -15px !important;
+  }
+}

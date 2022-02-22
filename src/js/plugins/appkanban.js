@@ -322,10 +322,7 @@
 
             document.body.removeChild(modalbox);
             document.body.removeChild(overlay);
-
-            
           });
-          
         });
       });
     });
@@ -388,7 +385,7 @@
               <div class="row">
                 <div class="col-md-6 rt-mb-15">
                   <div class="fromGroup has-icon">
-                    <label>Date</label>
+                    <label>Created Date</label>
                     <div class="form-control-icon">
                       <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
                       <div class="icon-badge-2">
@@ -399,7 +396,7 @@
                 </div>
                 <div class="col-md-6 rt-mb-15">
                   <div class="fromGroup has-icon">
-                    <label>Date</label>
+                    <label>Created Date</label>
                     <div class="form-control-icon">
                       <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
                       <div class="icon-badge-2">
@@ -584,8 +581,6 @@
   const UniqBoardButton = document.querySelectorAll(".remove-killer");
   const UinqBoard = document.getElementsByClassName("card-priority");
 
-
-
   UinqBoard.forEach(function (item) {
     item.setAttribute("id", "pid_" + ID());
   });
@@ -601,8 +596,6 @@
       removeitem.remove();
     });
   });
-
-
 
   let cardviewModal = document.querySelectorAll(".card-priority__title");
 
