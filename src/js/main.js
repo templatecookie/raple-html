@@ -1,5 +1,3 @@
-
-
 /*
 * ----------------------------------------------------------------------------------------
     Template Name: Relik
@@ -32,19 +30,17 @@
 (function ($) {
   "use strict";
 
+  // 1. Charts
 
-
-// 1. Charts 
-
-   // bar chart  
-   var barchartOne = {
+  // bar chart
+  var barchartOne = {
     chart: {
       height: 148,
-      type: 'bar',
+      type: "bar",
       stacked: true,
-      stackType: '20%',
+      stackType: "20%",
       toolbar: {
-        autoSelected: 'pan',
+        autoSelected: "pan",
         show: false,
       },
       offsetX: 0,
@@ -58,16 +54,15 @@
     },
     plotOptions: {
       bar: {
-        columnWidth: '40px',
-        barHeight: '100%',
+        columnWidth: "40px",
+        barHeight: "100%",
         borderRadius: 4,
-  
       },
     },
     dataLabels: {
       enabled: false,
     },
-    stroke: { curve: 'smooth', width: 2 },
+    stroke: { curve: "smooth", width: 2 },
     series: [
       {
         data: [1000, 400, 1000, 600, 700, 400, 800],
@@ -76,19 +71,18 @@
         data: [300, 600, 150, 400, 450, 700, 400],
       },
     ],
-    colors: ['#0E5FD9', '#F0F6FF'],
+    colors: ["#0E5FD9", "#F0F6FF"],
     tooltip: {
-      theme: 'dark',
+      theme: "dark",
     },
     grid: {
       show: false,
-     
     },
     yaxis: {
       show: false,
     },
     fill: {
-      type: 'dashed',
+      type: "dashed",
       opacity: [1, 1],
     },
     xaxis: {
@@ -102,10 +96,10 @@
   var barchar2 = {
     chart: {
       height: 120,
-      type: 'bar',
-      
+      type: "bar",
+
       toolbar: {
-        autoSelected: 'pan',
+        autoSelected: "pan",
         show: false,
       },
       offsetX: 0,
@@ -119,83 +113,88 @@
     },
     plotOptions: {
       bar: {
-        columnWidth: '70px',
-        barHeight: '100%',
-  
+        columnWidth: "70px",
+        barHeight: "100%",
       },
     },
     crosshairs: {
       fill: {
-        type: 'gradient',
+        type: "gradient",
         gradient: {
-          colorFrom: '#FFD599',
-          colorTo: '#FFD599',
+          colorFrom: "#FFD599",
+          colorTo: "#FFD599",
           stops: [0, 100],
           opacityFrom: 0.4,
           opacityTo: 0.5,
-        }
-      }
+        },
+      },
     },
     dataLabels: {
       enabled: false,
     },
-    stroke: { curve: 'smooth', width: 2 },
+    stroke: { curve: "smooth", width: 2 },
     series: [
-      
       {
-        data: [200, 400, 900, 800, 500, 600],
+        data: [200, 400, 900, 800, 500, 600, 400],
       },
     ],
-    colors: ['#FFD599'],
+    colors: ["#FFD599"],
     tooltip: {
-      theme: 'light',
+      theme: "light",
     },
     grid: {
       show: false,
-     
     },
     yaxis: {
       show: false,
     },
     fill: {
-      type: 'dashed',
+      type: "dashed",
       opacity: [1, 1],
     },
-    xaxis: {
-      show: false,
-    },
+
     legend: {
       show: false,
     },
+    xaxis: {
+      low: 0,
+      offsetX: 0,
+      offsetY: 0,
+      show: false,
+      labels: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+      axisBorder: {
+        low: 0,
+        offsetX: 0,
+        show: false,
+      },
+    },
   };
 
-  if (document.getElementById('bar-chart1')) {
-      var chart = new ApexCharts(
-        document.querySelector('#bar-chart1'),
-        barchartOne
-      );
-      chart.render();
-    } 
-
-
-
-  if (document.getElementById('barchart2')) {
-    var chart4 = new ApexCharts(
-      document.querySelector('#barchart2'),
-      barchar2
+  if (document.getElementById("bar-chart1")) {
+    var chart = new ApexCharts(
+      document.querySelector("#bar-chart1"),
+      barchartOne
     );
+    chart.render();
+  }
+
+  if (document.getElementById("barchart2")) {
+    var chart4 = new ApexCharts(document.querySelector("#barchart2"), barchar2);
 
     chart4.render();
   }
 
-
-  // area chart 
+  // area chart
   var options = {
     chart: {
       height: 62,
-      type: 'area',
+      type: "area",
       toolbar: {
-        autoSelected: 'pan',
+        autoSelected: "pan",
         show: false,
       },
       offsetX: 0,
@@ -210,19 +209,18 @@
     dataLabels: {
       enabled: false,
     },
-    stroke: { curve: 'smooth', width: 2 },
+    stroke: { curve: "smooth", width: 2 },
     series: [
       {
-        type: 'area',
+        type: "area",
 
         data: [800, 600, 1000, 800, 600, 1000, 800, 900],
       },
-      
     ],
-    colors: ['#0FAF62',],
+    colors: ["#0FAF62"],
 
     tooltip: {
-      theme: 'light',
+      theme: "light",
     },
     grid: {
       show: false,
@@ -235,11 +233,11 @@
       show: false,
     },
     fill: {
-      type: 'solid',
-      opacity: [0.10],
+      type: "solid",
+      opacity: [0.1],
     },
     xaxis: {
-      categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan'],
+      categories: ["01 Jan", "02 Jan", "03 Jan", "04 Jan", "05 Jan"],
       low: 0,
       offsetX: 0,
       offsetY: 0,
@@ -263,9 +261,9 @@
   var options2 = {
     chart: {
       height: 62,
-      type: 'area',
+      type: "area",
       toolbar: {
-        autoSelected: 'pan',
+        autoSelected: "pan",
         show: false,
       },
       offsetX: 0,
@@ -280,19 +278,18 @@
     dataLabels: {
       enabled: false,
     },
-    stroke: { curve: 'smooth', width: 2 },
+    stroke: { curve: "smooth", width: 2 },
     series: [
       {
-        type: 'area',
+        type: "area",
 
         data: [800, 600, 1000, 800, 600, 1000, 800, 900],
       },
-      
     ],
-    colors: ['#E84646',],
+    colors: ["#E84646"],
 
     tooltip: {
-      theme: 'light',
+      theme: "light",
     },
     grid: {
       show: false,
@@ -305,11 +302,11 @@
       show: false,
     },
     fill: {
-      type: 'solid',
-      opacity: [0.10],
+      type: "solid",
+      opacity: [0.1],
     },
     xaxis: {
-      categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan'],
+      categories: ["01 Jan", "02 Jan", "03 Jan", "04 Jan", "05 Jan"],
       low: 0,
       offsetX: 0,
       offsetY: 0,
@@ -330,13 +327,12 @@
     },
   };
 
-    
   var line_1 = {
     chart: {
       height: 148,
-      type: 'area',
+      type: "area",
       toolbar: {
-        autoSelected: 'pan',
+        autoSelected: "pan",
         show: false,
       },
       offsetX: 0,
@@ -353,21 +349,20 @@
     },
     stroke: {
       width: [4, 3, 3],
-      curve: 'straight',
-      dashArray: [0, 8, 5]
+      curve: "straight",
+      dashArray: [0, 8, 5],
     },
     series: [
       {
-        type: 'area',
+        type: "area",
 
-        data: [45, 52, 38, 54, 33, 26, 60]
+        data: [45, 52, 38, 54, 33, 26, 60],
       },
-      
     ],
-    colors: ['#0FAF62',],
+    colors: ["#0FAF62"],
 
     tooltip: {
-      theme: 'light',
+      theme: "light",
     },
     grid: {
       show: false,
@@ -380,11 +375,11 @@
       show: false,
     },
     fill: {
-      type: 'solid',
-      opacity: [0.10],
+      type: "solid",
+      opacity: [0.1],
     },
     xaxis: {
-      categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan'],
+      categories: ["01 Jan", "02 Jan", "03 Jan", "04 Jan", "05 Jan"],
       low: 0,
       offsetX: 0,
       offsetY: 0,
@@ -408,37 +403,37 @@
   var user_chart_option = {
     chart: {
       height: 280,
-      type: 'area',
+      type: "area",
       toolbar: {
         show: false,
       },
     },
     plotOptions: {
       area: {
-        fillTo: 'origin',
+        fillTo: "origin",
       },
     },
     dataLabels: {
       enabled: false,
     },
-    stroke: { curve: 'smooth', width: 5 },
+    stroke: { curve: "smooth", width: 5 },
     series: [
       {
         data: [90, 70, 85, 60, 80, 70, 90, 75, 60, 80],
       },
     ],
-    colors: ['#4452FF'],
+    colors: ["#4452FF"],
 
     tooltip: {
-      theme: 'dark',
+      theme: "dark",
     },
     grid: {
       show: true,
     },
 
     fill: {
-      type: 'gradient',
-      colors: '#0E5FD9',
+      type: "gradient",
+      colors: "#0E5FD9",
       gradient: {
         shadeIntensity: 1,
         opacityFrom: 0.4,
@@ -447,7 +442,20 @@
       },
     },
     xaxis: {
-      categories: ['November 01', 'November 10', 'November 20', 'November 30'],
+      categories: [
+        "jan",
+        "feb",
+        "mar",
+        "appril",
+        "may",
+        "june",
+        "july",
+        "aug",
+        "sept",
+        "oct",
+        "nov",
+        "dec",
+      ],
     },
     padding: {
       top: 0,
@@ -457,179 +465,172 @@
     },
   };
 
-
-
-  if (document.getElementById('area-spaline-bottom')) {
+  if (document.getElementById("area-spaline-bottom")) {
     var chart2 = new ApexCharts(
-      document.querySelector('#area-spaline-bottom'),
+      document.querySelector("#area-spaline-bottom"),
       options
     );
 
     chart2.render();
   }
 
-
-  if (document.getElementById('area-spaline-bottom2')) {
+  if (document.getElementById("area-spaline-bottom2")) {
     var chart3 = new ApexCharts(
-      document.querySelector('#area-spaline-bottom2'),
+      document.querySelector("#area-spaline-bottom2"),
       options2
     );
 
     chart3.render();
   }
 
-  if (document.getElementById('line-1')) {
-    var chart5 = new ApexCharts(
-      document.querySelector('#line-1'),
-      line_1
-    );
+  if (document.getElementById("line-1")) {
+    var chart5 = new ApexCharts(document.querySelector("#line-1"), line_1);
 
     chart5.render();
   }
 
-
-
-  if (document.getElementById('user_chart')) {
+  if (document.getElementById("user_chart")) {
     var user_chart = new ApexCharts(
-      document.querySelector('#user_chart'),
+      document.querySelector("#user_chart"),
       user_chart_option
     );
 
     user_chart.render();
   }
 
-
-  // Line charts 
-    var line_chart_keyword_1 = {
-      maintainAspectRatio: true,
-      chart: {
-        height: 24,
-        type: 'line',
-        toolbar: {
-          show: false,
-        },
-  
-        sparkline: {
-          enabled: true,
-        },
-      },
-  
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: { curve: 'smooth', width: 2 },
-      series: [
-        {
-          data: [70, 20, 80, 10, 40, 30, 60, 40, 90, 20],
-        },
-      ],
-      colors: ['#0066FF'],
-  
-      tooltip: {
-        theme: 'light',
-      },
-      grid: {
+  // Line charts
+  var line_chart_keyword_1 = {
+    maintainAspectRatio: true,
+    chart: {
+      height: 24,
+      type: "line",
+      toolbar: {
         show: false,
       },
-      yaxis: {
-        show: false,
+
+      sparkline: {
+        enabled: true,
       },
-  
-      xaxis: {
-        show: false,
-      },
-      legend: {
-        show: false,
-      },
-    };
-    
-    if (document.getElementById('line_chartkeyword_1')) {
-        var line_chart_create = new ApexCharts(
-          document.querySelector('#line_chartkeyword_1'),
-          line_chart_keyword_1,
-        );
-    
-        line_chart_create.render();
-    }
-
-    if (document.getElementById('line_chartkeyword_2')) {
-        var line_chart_create = new ApexCharts(
-          document.querySelector('#line_chartkeyword_2'),
-          line_chart_keyword_1,
-        );
-    
-        line_chart_create.render();
-    }
-
-    if (document.getElementById('line_chartkeyword_3')) {
-        var line_chart_create = new ApexCharts(
-          document.querySelector('#line_chartkeyword_3'),
-          line_chart_keyword_1,
-        );
-    
-        line_chart_create.render();
-    }
-
-    if (document.getElementById('line_chartkeyword_4')) {
-        var line_chart_create = new ApexCharts(
-          document.querySelector('#line_chartkeyword_4'),
-          line_chart_keyword_1,
-        );
-    
-        line_chart_create.render();
-    }
-
-    if (document.getElementById('line_chartkeyword_5')) {
-        var line_chart_create = new ApexCharts(
-          document.querySelector('#line_chartkeyword_5'),
-          line_chart_keyword_1,
-        );
-    
-        line_chart_create.render();
-    }
-
-// pie chart 
-  var donut_options = {
-    series: [90, 50, 200],
-      chart: {
-        width: 220,
-        type: 'donut',
     },
-    colors: ['#FF9500', '#E84646', '#0E5FD9', ],
+
     dataLabels: {
       enabled: false,
     },
-    responsive: [{
-      breakpoint: 480,
-      options: {
-        chart: {
-          width: 220,
-        },
-        legend: {
-          show: false
-        }
-      }
-    }],
+    stroke: { curve: "smooth", width: 2 },
+    series: [
+      {
+        data: [70, 20, 80, 10, 40, 30, 60, 40, 90, 20],
+      },
+    ],
+    colors: ["#0066FF"],
+
+    tooltip: {
+      theme: "light",
+    },
+    grid: {
+      show: false,
+    },
+    yaxis: {
+      show: false,
+    },
+
+    xaxis: {
+      show: false,
+    },
     legend: {
-      show: false
-    }
+      show: false,
+    },
   };
 
-  
-  if(document.querySelector("#dount_chart")) { 
-    var dountChart = new ApexCharts(document.querySelector("#dount_chart"), donut_options);
+  if (document.getElementById("line_chartkeyword_1")) {
+    var line_chart_create = new ApexCharts(
+      document.querySelector("#line_chartkeyword_1"),
+      line_chart_keyword_1
+    );
+
+    line_chart_create.render();
+  }
+
+  if (document.getElementById("line_chartkeyword_2")) {
+    var line_chart_create = new ApexCharts(
+      document.querySelector("#line_chartkeyword_2"),
+      line_chart_keyword_1
+    );
+
+    line_chart_create.render();
+  }
+
+  if (document.getElementById("line_chartkeyword_3")) {
+    var line_chart_create = new ApexCharts(
+      document.querySelector("#line_chartkeyword_3"),
+      line_chart_keyword_1
+    );
+
+    line_chart_create.render();
+  }
+
+  if (document.getElementById("line_chartkeyword_4")) {
+    var line_chart_create = new ApexCharts(
+      document.querySelector("#line_chartkeyword_4"),
+      line_chart_keyword_1
+    );
+
+    line_chart_create.render();
+  }
+
+  if (document.getElementById("line_chartkeyword_5")) {
+    var line_chart_create = new ApexCharts(
+      document.querySelector("#line_chartkeyword_5"),
+      line_chart_keyword_1
+    );
+
+    line_chart_create.render();
+  }
+
+  // pie chart
+  var donut_options = {
+    series: [90, 50, 200],
+    chart: {
+      width: 220,
+      type: "donut",
+    },
+    colors: ["#FF9500", "#E84646", "#0E5FD9"],
+    dataLabels: {
+      enabled: false,
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 220,
+          },
+          legend: {
+            show: false,
+          },
+        },
+      },
+    ],
+    legend: {
+      show: false,
+    },
+  };
+
+  if (document.querySelector("#dount_chart")) {
+    var dountChart = new ApexCharts(
+      document.querySelector("#dount_chart"),
+      donut_options
+    );
     dountChart.render();
   }
 
-
-
-// 2. Dropdown
+  // 2. Dropdown
 
   var template_x = document.getElementById("template");
   var template2_x = document.getElementById("template2");
 
   // Dropdown - notification
-  if(template2_x) { 
+  if (template2_x) {
     tippy(".notifications", {
       arrow: false,
       delay: 40,
@@ -644,7 +645,7 @@
     });
   }
 
-  if(template2_x) {
+  if (template2_x) {
     tippy(".openaccount", {
       arrow: false,
       delay: 40,
@@ -665,73 +666,66 @@
     });
   }
 
+  // 3. Sidebar
+  var SidebarOpenrIcon = document.getElementById("opener_icon");
+  const MainMenuOpen = document.getElementById("mainmenuOpen");
+  if (MainMenuOpen) {
+    MainMenuOpen.addEventListener("click", function (e) {
+      e.preventDefault();
+      $(".main-menu").toggleClass("active-mobile-menu");
+      $(".rt-mobile-menu-overlay").addClass("active");
+    });
+  }
 
-
-// 3. Sidebar 
-var SidebarOpenrIcon = document.getElementById("opener_icon");
-const MainMenuOpen = document.getElementById("mainmenuOpen");
-if(MainMenuOpen){
-  MainMenuOpen.addEventListener("click", function (e) {
-  e.preventDefault();
-    $(".main-menu").toggleClass("active-mobile-menu");
-    $(".rt-mobile-menu-overlay").addClass("active");
-  
+  $(".rt-mobile-menu-close, .rt-mobile-menu-overlay").on("click", function () {
+    $(".main-menu").removeClass("active-mobile-menu");
+    $(".rt-mobile-menu-overlay").removeClass("active");
+    return false;
   });
-}
 
-$(".rt-mobile-menu-close, .rt-mobile-menu-overlay").on("click", function () {
-  $(".main-menu").removeClass("active-mobile-menu");
-  $(".rt-mobile-menu-overlay").removeClass("active");
-  return false;
-});
-
-if ($(window).width() < 991.98) {
-  $(".menu-item-has-children > a").on("click", function () {
-    var element = $(this).parent("li");
-    if (element.hasClass("open")) {
-      element.removeClass("open");
-      element.find("li").removeClass("open");
-      element.find("ul").slideUp(300);
-      element.find(".rt-mega-menu").slideUp(300);
-    } else {
-      element.addClass("open");
-      element.children("ul").slideDown(300);
-      element.children(".rt-mega-menu").slideDown(300);
-      element.siblings("li").children("ul").slideUp();
-      element.siblings("li").removeClass("open");
-      element.siblings("li").find("li").removeClass("open");
-      element.siblings("li").find("ul").slideUp();
-    }
-  });
-}
-
+  if ($(window).width() < 991.98) {
+    $(".menu-item-has-children > a").on("click", function () {
+      var element = $(this).parent("li");
+      if (element.hasClass("open")) {
+        element.removeClass("open");
+        element.find("li").removeClass("open");
+        element.find("ul").slideUp(300);
+        element.find(".rt-mega-menu").slideUp(300);
+      } else {
+        element.addClass("open");
+        element.children("ul").slideDown(300);
+        element.children(".rt-mega-menu").slideDown(300);
+        element.siblings("li").children("ul").slideUp();
+        element.siblings("li").removeClass("open");
+        element.siblings("li").find("li").removeClass("open");
+        element.siblings("li").find("ul").slideUp();
+      }
+    });
+  }
 
   $(".opener_sidebar").on("click", function (e) {
     e.preventDefault();
-   
-    if(window.innerWidth < 992){
-     
+
+    if (window.innerWidth < 992) {
       SidebarOpenrIcon.classList.toggle("has-cross");
-      
     }
-      $("body").toggleClass("sidebar-collapse"),992 <= $(window).width()
+    $("body").toggleClass("sidebar-collapse"),
+      992 <= $(window).width()
         ? $("body").toggleClass("vertical-collpsed")
         : $("body").removeClass("vertical-collpsed");
   });
-  
+
   $(".back_sidebar_icon").on("click", function () {
     $("body").removeClass("sidebar-collapse");
   });
 
-// 4. Menu 
+  // 4. Menu
 
-  if(document.getElementById('side-menu')) { 
+  if (document.getElementById("side-menu")) {
     $("#side-menu").metisMenu();
   }
 
-  if(document.getElementById('side-menu'))  { 
-
-    
+  if (document.getElementById("side-menu")) {
     $("#side-menu a").each(function () {
       var e = window.location.href.split(/[?#]/)[0];
       this.href == e &&
@@ -749,20 +743,20 @@ if ($(window).width() < 991.98) {
           .parent()
           .addClass("mm-active"));
     }),
-    $(document).ready(function () {
-      var e;
-      0 < $("#side-menu").length &&
-        0 < $("#side-menu .mm-active .active").length &&
-        300 < (e = $("#side-menu .mm-active .active").offset().top) &&
-        ((e -= 300),
-        $(".app-sidebar .simplebar-content-wrapper").animate(
-          { scrollTop: e },
-          "slow"
-        ));
-    });
+      $(document).ready(function () {
+        var e;
+        0 < $("#side-menu").length &&
+          0 < $("#side-menu .mm-active .active").length &&
+          300 < (e = $("#side-menu .mm-active .active").offset().top) &&
+          ((e -= 300),
+          $(".app-sidebar .simplebar-content-wrapper").animate(
+            { scrollTop: e },
+            "slow"
+          ));
+      });
   }
 
-// 5. Sticky Navbar  
+  // 5. Sticky Navbar
   function stickyHeader() {
     let mainheader = $(".rt-sticky"),
       height = mainheader.outerHeight(),
@@ -813,20 +807,20 @@ if ($(window).width() < 991.98) {
     }
   });
 
+  // 6. input type changer
+  function showPassword(input, icon) {
+    icon.addEventListener("click", (e) => {
+      // todo 1:  toggle eye show / hide
+      icon.classList.toggle("ph-eye-slash");
 
-
-// 6. input type changer 
-  function showPassword(input, icon) { 
-  icon.addEventListener('click', (e) => { 
-    // todo 1:  toggle eye show / hide  
-    icon.classList.toggle('ph-eye-slash');
-
-    // todo 2: input type 
-    input.type === 'password' ? input.type = 'text' : input.type = 'password';
-  })
+      // todo 2: input type
+      input.type === "password"
+        ? (input.type = "text")
+        : (input.type = "password");
+    });
   }
 
-  const input =  document.querySelector("#password-hide_show");
+  const input = document.querySelector("#password-hide_show");
   const inputIcon = document.querySelector(".has-badge i");
 
   const finputOne = document.querySelector("#password-hide_show1");
@@ -849,226 +843,193 @@ if ($(window).width() < 991.98) {
 
   const finputSeven = document.querySelector("#password-hide_show7");
   const ficonSeven = document.querySelector(".select-icon__seven i");
-  
-  // Input page 
-  if(input || inputIcon) { 
-    showPassword(input,inputIcon)
+
+  // Input page
+  if (input || inputIcon) {
+    showPassword(input, inputIcon);
   }
 
-  // form elements page 
-  if (finputOne || ficonOne) { 
-    showPassword(finputOne,ficonOne)
+  // form elements page
+  if (finputOne || ficonOne) {
+    showPassword(finputOne, ficonOne);
   }
-  if(finputTwo || ficonTwo ) { 
-    showPassword(finputTwo,ficonTwo)
+  if (finputTwo || ficonTwo) {
+    showPassword(finputTwo, ficonTwo);
   }
-  if(finputThree || ficonThree) { 
-    
-    showPassword(finputThree,ficonThree)
+  if (finputThree || ficonThree) {
+    showPassword(finputThree, ficonThree);
   }
-  if(finputFour || ficonFour) { 
-    
-    showPassword(finputFour,ficonFour)
+  if (finputFour || ficonFour) {
+    showPassword(finputFour, ficonFour);
   }
-  if( finputFive || ficonFive ) { 
-    showPassword(finputFive,ficonFive)
+  if (finputFive || ficonFive) {
+    showPassword(finputFive, ficonFive);
   }
-  if(finputSix || ficonSix) { 
-
-    showPassword(finputSix,ficonSix)
+  if (finputSix || ficonSix) {
+    showPassword(finputSix, ficonSix);
   }
 
-  if(finputSeven || ficonSeven) { 
-
-    showPassword(finputSeven,ficonSeven)
+  if (finputSeven || ficonSeven) {
+    showPassword(finputSeven, ficonSeven);
   }
 
-// 7. Themes 
+  // 7. Themes
   var layoutbox = document.getElementsByName("layoutbox");
-  var theme = window.localStorage.getItem('data-layout');
-  if(theme) {
-    
-      document.documentElement.setAttribute('data-layout', theme);
-      localStorage.setItem( 'data-layout', theme);
-     
-}
+  var theme = window.localStorage.getItem("data-layout");
+  if (theme) {
+    document.documentElement.setAttribute("data-layout", theme);
+    localStorage.setItem("data-layout", theme);
+  }
 
-// 8. Layouts 
+  // 8. Layouts
   var layoutmode = {
-    "vertical":"vertical",
-    "horizental":"horizental",
-  } 
+    vertical: "vertical",
+    horizental: "horizental",
+  };
 
-var val = localStorage.getItem('layoutbox');
-for (var i=0;i<layoutbox.length;i++) {
-  layoutbox[i].onclick=function() {
-    var lay = layoutmode[this.value];
-    document.documentElement.setAttribute('data-layout', lay);
-    localStorage.setItem( 'data-layout', lay); 
-    
+  var val = localStorage.getItem("layoutbox");
+  for (var i = 0; i < layoutbox.length; i++) {
+    layoutbox[i].onclick = function () {
+      var lay = layoutmode[this.value];
+      document.documentElement.setAttribute("data-layout", lay);
+      localStorage.setItem("data-layout", lay);
+    };
+    if (layoutbox[i].value == val) {
+      layoutbox[i].checked = true;
+    }
   }
-  if(layoutbox[i].value == val){
-    layoutbox[i].checked = true;
+
+  $('input[name="layoutbox"]').on("change", function () {
+    localStorage.setItem("layoutbox", $(this).val());
+  });
+
+  var checkBox = document.getElementsByName("sidebar");
+  var theme = window.localStorage.getItem("data-sidebar");
+
+  if (theme) {
+    document.documentElement.setAttribute("data-sidebar", theme);
+    localStorage.setItem("data-sidebar", theme);
   }
-}
 
-$('input[name="layoutbox"]').on('change', function(){
-  localStorage.setItem('layoutbox', $(this).val());
+  var sidebarmode = {
+    white: "white",
+    black: "black",
+    blue: "blue",
+  };
 
-});
-
-var checkBox = document.getElementsByName("sidebar");
-var theme = window.localStorage.getItem('data-sidebar');
-
-if(theme) {
-    
-      document.documentElement.setAttribute('data-sidebar', theme);
-      localStorage.setItem( 'data-sidebar', theme);
-     
-}
-
-var sidebarmode = {
-  "white":"white",
-  "black":"black",
-  "blue":"blue"
-} 
-
-var val = localStorage.getItem('sidebar');
-for (var i=0;i<checkBox.length;i++) {
-  checkBox[i].onclick=function() {
-    var col = sidebarmode[this.value];
-    document.documentElement.setAttribute('data-sidebar', col);
-    localStorage.setItem( 'data-sidebar', col); 
-    
+  var val = localStorage.getItem("sidebar");
+  for (var i = 0; i < checkBox.length; i++) {
+    checkBox[i].onclick = function () {
+      var col = sidebarmode[this.value];
+      document.documentElement.setAttribute("data-sidebar", col);
+      localStorage.setItem("data-sidebar", col);
+    };
+    if (checkBox[i].value == val) {
+      checkBox[i].checked = true;
+    }
   }
-  if(checkBox[i].value == val){
-    checkBox[i].checked = true;
-  }
-}
 
-$('input[name="sidebar"]').on('change', function(){
-  localStorage.setItem('sidebar', $(this).val());
-});
-
- 
+  $('input[name="sidebar"]').on("change", function () {
+    localStorage.setItem("sidebar", $(this).val());
+  });
 
   $("#layout").on("click", function () {
     $("#appSettings").toggleClass("open");
-    $(".settings-overlay").addClass("open")
-    
+    $(".settings-overlay").addClass("open");
   });
 
-  
   $(".settings-overlay, #closesetting").on("click", function () {
     $("#appSettings").removeClass("open");
-    $(".settings-overlay").removeClass("open")
-    
+    $(".settings-overlay").removeClass("open");
   });
 
-// 9. calender 
-if(document.getElementsByClassName('date-picker-calender')) { 
-  $(".date-picker-calender").datepicker();
-}
-
-// 10. map
-if(document.getElementById("world-map")) { 
-  $('#world-map').vectorMap({
-    map: 'world_mill_en',
-    normalizeFunction: 'polynomial',
-    hoverOpacity: 0.7,
-    hoverColor: false,
-    
-    regionStyle: {
-      initial: { fill: '#B6BFF3' },
-      hover: { fill: '#4452FF', 'fill-opacity': 1 },
-    },
-
-    backgroundColor: 'transparent',
-  });
-    
-}
- 
-  
-
-// pricing js
-$(".toggle-btn").on("click", function (e) {
-  console.log($(e.target).parent().parent().hasClass("monthly-active"));
-  $(e.target).toggleClass("clicked");
-  if ($(e.target).parent().parent().hasClass("monthly-active")) {
-    $(e.target)
-      .parent()
-      .parent()
-      .removeClass("monthly-active")
-      .addClass("yearly-active");
-  } else {
-    $(e.target)
-      .parent()
-      .parent()
-      .removeClass("yearly-active")
-      .addClass("monthly-active");
+  // 9. calender
+  if (document.getElementsByClassName("date-picker-calender")) {
+    $(".date-picker-calender").datepicker();
   }
-});
 
-$("[data-pricing-trigger]").on("click", function (e) {
-  $(e.target).addClass("active").siblings().removeClass("active");
-  var target = $(e.target).attr("data-target");
-  console.log($(target).attr("data-value-active") == "monthly");
-  if ($(target).attr("data-value-active") == "monthly") {
-    $(target).attr("data-value-active", "yearly");
-  } else {
-    $(target).attr("data-value-active", "monthly");
+  // 10. map
+  if (document.getElementById("world-map")) {
+    $("#world-map").vectorMap({
+      map: "world_mill_en",
+      normalizeFunction: "polynomial",
+      hoverOpacity: 0.7,
+      hoverColor: false,
+
+      regionStyle: {
+        initial: { fill: "#B6BFF3" },
+        hover: { fill: "#4452FF", "fill-opacity": 1 },
+      },
+
+      backgroundColor: "transparent",
+    });
   }
-});
 
-
-   
-
-var validation = false;
-var myTimeoutId = null;
-
-$('#info').onclick = function() {
-    $('#console').style.display = "block";
-    console.log("hello");
-}
-
-$('#close').onclick = function() {
-    $('#console').style.display = "none";
-}
-
-// presentioton 
-$(window).scroll(function(){
-  if ($(window).scrollTop() >= 120) {
-  $('.p-header .navbar').addClass('fixed');
-  }
-  else {
-  $('.p-header .navbar').removeClass('fixed');
-  }
-});
-if(document.querySelector("table")){
-  document.querySelector("table").addEventListener("click", ({target}) => {
-    // discard direct clicks on input elements
-    if (target.nodeName === "INPUT") return;
-    // get the nearest tr
-    const tr = target.closest("tr");
-    tr.classList.toggle("selected");
-    if (tr) {
-      // if it exists, get the first checkbox
-      const checkbox = tr.querySelector("input[type='checkbox']");
-      if (checkbox) {
-        // if it exists, toggle the checked property
-        checkbox.checked = !checkbox.checked;
-      }
+  // pricing js
+  $(".toggle-btn").on("click", function (e) {
+    console.log($(e.target).parent().parent().hasClass("monthly-active"));
+    $(e.target).toggleClass("clicked");
+    if ($(e.target).parent().parent().hasClass("monthly-active")) {
+      $(e.target)
+        .parent()
+        .parent()
+        .removeClass("monthly-active")
+        .addClass("yearly-active");
+    } else {
+      $(e.target)
+        .parent()
+        .parent()
+        .removeClass("yearly-active")
+        .addClass("monthly-active");
     }
   });
-}
 
+  $("[data-pricing-trigger]").on("click", function (e) {
+    $(e.target).addClass("active").siblings().removeClass("active");
+    var target = $(e.target).attr("data-target");
+    console.log($(target).attr("data-value-active") == "monthly");
+    if ($(target).attr("data-value-active") == "monthly") {
+      $(target).attr("data-value-active", "yearly");
+    } else {
+      $(target).attr("data-value-active", "monthly");
+    }
+  });
 
+  var validation = false;
+  var myTimeoutId = null;
 
+  $("#info").onclick = function () {
+    $("#console").style.display = "block";
+    console.log("hello");
+  };
 
+  $("#close").onclick = function () {
+    $("#console").style.display = "none";
+  };
 
-
-
-
-  
-
+  // presentioton
+  $(window).scroll(function () {
+    if ($(window).scrollTop() >= 120) {
+      $(".p-header .navbar").addClass("fixed");
+    } else {
+      $(".p-header .navbar").removeClass("fixed");
+    }
+  });
+  if (document.querySelector("table")) {
+    document.querySelector("table").addEventListener("click", ({ target }) => {
+      // discard direct clicks on input elements
+      if (target.nodeName === "INPUT") return;
+      // get the nearest tr
+      const tr = target.closest("tr");
+      tr.classList.toggle("selected");
+      if (tr) {
+        // if it exists, get the first checkbox
+        const checkbox = tr.querySelector("input[type='checkbox']");
+        if (checkbox) {
+          // if it exists, toggle the checked property
+          checkbox.checked = !checkbox.checked;
+        }
+      }
+    });
+  }
 })(jQuery);

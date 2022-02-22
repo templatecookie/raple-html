@@ -95,9 +95,8 @@
   position: relative;
   overflow: hidden;
   padding-top: 215px;
-  @include max(991px) {
-    padding-top: 116px;
-    padding-bottom: 90px;
+  @include breakpoint(lg) {
+    padding-bottom: 150px;
   }
   &__text-info {
     @include max(991px) {
@@ -122,8 +121,8 @@
       margin-bottom: 32px;
       text-transform: capitalize;
       @include max(767px) {
-        font-size: 32px;
-        line-height: 46px;
+        font-size: 24px;
+        line-height: 36px;
       }
       span {
         font-weight: 700;
