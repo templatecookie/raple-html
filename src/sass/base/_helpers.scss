@@ -24,8 +24,8 @@ img {
 }
 
 .smallgap.row > [class*="col-"] {
-  padding-left: 8px !important;
-  padding-right: 8px !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
   @include breakpoint(xs) {
     padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
     padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
@@ -108,49 +108,48 @@ blockquote {
 .rt-mb-15 {
   margin-bottom: 15px;
 }
-.rt-mb-8{
+.rt-mb-8 {
   margin-bottom: 8px;
 }
-.rt-mb-2{
+.rt-mb-2 {
   margin-bottom: 2px;
 }
-.rt-mb-4{
+.rt-mb-4 {
   margin-bottom: 4px;
 }
 .rt-pt-15 {
   padding-top: 15px;
 }
-.rt-mb-12{
+.rt-mb-12 {
   margin-bottom: 12px;
 }
 .rt-spacer-15 {
   height: 15px;
 }
-.rt-mb-16{
+.rt-mb-16 {
   margin-bottom: 16px;
 }
-.rt-mb-25{
+.rt-mb-25 {
   margin-bottom: 25px;
 }
-.rt-mb-24{
+.rt-mb-24 {
   margin-bottom: 24px;
 }
-.rt-mb-28{
+.rt-mb-28 {
   margin-bottom: 28px;
 }
-.rt-mb-48{
+.rt-mb-48 {
   margin-bottom: 48px;
 }
-.rt-mb-32{
+.rt-mb-32 {
   margin-bottom: 32px;
 }
 .hr-0 {
   margin: 0;
   padding: 0;
- 
 }
-.text-gray{
-  color: #7B878C;
+.text-gray {
+  color: #7b878c;
 }
 @each $color, $shades in $colors {
   @each $shade, $value in $shades {
@@ -262,7 +261,7 @@ blockquote {
 .pointer {
   cursor: pointer;
 }
-.text-hide{
+.text-hide {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -472,57 +471,54 @@ blockquote {
     margin-bottom: 0px;
   }
   border-color: var(--gray-50);
-  
 }
 .modal-content {
-  border-radius: 16px;
+  border-radius: 8px;
 }
 .modal-body {
   padding: 24px;
 }
 
-
-
-.bg-primary{
+.bg-primary {
   background-color: var(--primary-500) !important;
 }
-.bg-secondary{
+.bg-secondary {
   background-color: var(--secondary-500) !important;
 }
-.bg-success{
-background-color: var(--success-500) !important;
+.bg-success {
+  background-color: var(--success-500) !important;
 }
-.bg-warning{
+.bg-warning {
   background-color: var(--warning-500) !important;
 }
-.bg-danger{
+.bg-danger {
   background-color: var(--danger-500) !important;
 }
 
-.bg-dark{
-  background-color:  var(--gray-900) !important;
+.bg-dark {
+  background-color: var(--gray-900) !important;
 }
 
-.text-primary{
+.text-primary {
   color: var(--primary-500) !important;
 }
-.text-secondary{
- color: var(--secondary-500) !important;
+.text-secondary {
+  color: var(--secondary-500) !important;
 }
-.text-success{
-color: var(--success-500) !important;
+.text-success {
+  color: var(--success-500) !important;
 }
-.text-warning{
+.text-warning {
   color: var(--warning-500) !important;
 }
-.text-danger{
- color: var(--danger-500) !important;
+.text-danger {
+  color: var(--danger-500) !important;
 }
-.text-dark{
- color:  var(--gray-900) !important;
+.text-dark {
+  color: var(--gray-900) !important;
 }
 
-.alert-info{
+.alert-info {
   color: var(--primary-500);
-  background-color: rgba(95,99,242,.04) !important;
+  background-color: rgba(95, 99, 242, 0.04) !important;
 }

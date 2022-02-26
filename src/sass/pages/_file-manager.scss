@@ -146,3 +146,12 @@
     }
   }
 }
+
+.c-w {
+  padding: 0 13px;
+}
+.dropdown-wrap {
+  &:last-child {
+    padding-right: 0px !important;
+  }
+}

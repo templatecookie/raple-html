@@ -43,6 +43,7 @@ tr {
   font-size: 14px;
   line-height: 20px;
   color: var(--gray-900);
+  font-weight: 400;
 }
 .ui-datepicker td a,
 .ui-datepicker td span {
@@ -70,6 +71,7 @@ a.ui-button:active {
   border: none;
   background: white;
   font-weight: normal;
+  padding: 7px;
   color: var(--gray-900);
 }
 .ui-state-highlight,
@@ -127,6 +129,7 @@ a.ui-button:active {
     color: var(--primary-500);
   }
 }
-.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
   display: none;
 }

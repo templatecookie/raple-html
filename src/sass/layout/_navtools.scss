@@ -5,7 +5,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-  
+
     > li {
       margin-right: 20px;
       position: relative;
@@ -144,7 +144,7 @@
   min-width: 205px;
   &.min-372 {
     min-width: 372px;
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       min-width: 100%;
       max-width: 280px;
     }
@@ -168,7 +168,7 @@
     height: calc(54px - 15px);
     a {
       font-size: 14px;
-      margin-top: 10px;
+      margin-top: 3px;
       color: var(--primary-500);
       span {
         display: inline-block;
@@ -199,4 +199,3 @@
     }
   }
 }
-
