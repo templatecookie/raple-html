@@ -91,7 +91,7 @@
           <div class="modal-header">
             <h5 class="body-font-3">Create New Card</h5>
             <button type="button" class="plain-btn" id="modal-vag" aria-label="Close">
-              <img src="assets/images/svg/modal-close.svg" alt="" draggable="false">
+              <img src="assets/images/svg/close-btn.png" alt="" draggable="false">
             </button>
           </div>
           <div class="modal-body">
@@ -348,7 +348,7 @@
         <div class="modal-header">
           <h5 class="body-font-3">Create New Card</h5>
           <button type="button" class="plain-btn" id="modal-vag" aria-label="Close">
-            <img src="assets/images/svg/modal-close.svg" alt="" draggable="false">
+            <img src="assets/images/svg/close-btn.png" alt="" draggable="false">
           </button>
         </div>
         <div class="modal-body">
