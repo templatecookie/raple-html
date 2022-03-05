@@ -1,6 +1,6 @@
 /*
 * ----------------------------------------------------------------------------------------
-    Template Name: Relik
+    Template Name: Wadmin
     Template URI: 
     Description: 
     Author: templatecookie
