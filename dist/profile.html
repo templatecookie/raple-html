@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
-  <title>Relik - Admin Dashboard</title>
+  <title>Wadmin - Admin Dashboard</title>
   <link rel="icon" type="image/png" href="assets/images/logo/logo-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/light.css">
-  <link rel="stylesheet" href="assets/css/scale.css">
-  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/light.css" />
+  <link rel="stylesheet" href="assets/css/scale.css" />
+  <link rel="stylesheet" href="assets/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/jquery-ui.css" />
   <link rel="stylesheet" href="assets/css/jquery-ui.theme.css" />
@@ -33,8 +33,6 @@
 <body class="light">
 
 
-
-
   <main class="app-wrapper">
     <header class="app-header rt-sticky">
       <div class="navbar align-items-center">
@@ -43,33 +41,30 @@
             <div class="logo-segment">
               <div class="all-logo">
                 <a href="home.html" class="brand-logo">
-                  <img src="assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black">
-                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white">
-                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10">
-                  <img src="assets/images/logo/logo-full-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10">
+                  <img src="assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black" />
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white" />
+                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10" />
+                  <img src="assets/images/logo/logo-full-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10" />
                 </a>
                 <a href="home.html" class="brand-logo white">
-                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false">
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" />
                 </a>
-                <a href="home.html" class="collapse-in-logo ">
-
-                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon-blue">
-                  <img src="assets/images/logo/logo-icon-white.svg" alt="" draggable="false" class="logo-icon-white">
-
+                <a href="home.html" class="collapse-in-logo">
+                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon-blue" />
+                  <img src="assets/images/logo/logo-icon-white.svg" alt="" draggable="false" class="logo-icon-white" />
                 </a>
               </div>
-              <div class="opener_sidebar ">
+              <div class="opener_sidebar">
                 <span class="icon-bar-open" id="opener_icon"></span>
               </div>
-              <div class="opener_horizentalmenu " id="mainmenuOpen">
+              <div class="opener_horizentalmenu" id="mainmenuOpen">
                 <span class="icon-bar-open2" id="opener_icon2"></span>
               </div>
             </div>
             <div class="dashboard-message position-relative">
               <span class="back_sidebar_icon">
-              <i class="ph-arrow-right"></i>
-            </span>
-
+            <i class="ph-arrow-right"></i>
+          </span>
             </div>
           </div>
           <div class="app-mian-serach">
@@ -77,7 +72,7 @@
               <div class="input-box">
                 <input type="text" placeholder="Search" />
                 <button type="submit">
-                  <img src="assets/images/svg/search.svg" alt="" draggable="false">
+                  <img src="assets/images/svg/search.svg" alt="" draggable="false" />
                 </button>
               </div>
             </form>
@@ -85,36 +80,37 @@
           <div class="ms-auto">
             <div class="rt-nav-tolls d-flex align-items-center">
               <ul>
-                <li class=" d-inline-block d-md-none">
+                <li class="d-inline-block d-md-none">
                   <div class="iconBox open-mbl-search pointer">
                     <img src="assets/images/svg/search.svg" alt="" />
                   </div>
                 </li>
-                <li class=" d-none d-lg-block">
-                  <div class="dropdown dropdown-flag">
-                    <button class="dropdown-toggle pointer" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="assets/images/svg/flag.svg" alt=""> English
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#"><img src="assets/images/svg/flag.svg" alt=""> English</a></li>
-                      <li><a class="dropdown-item" href="#"><img src="assets/images/svg/flag.svg" alt="">Bangla </a></li>
-                    </ul>
+                <li class="d-none d-lg-block">
+                  <div class="language-picker js-language-picker desktop-show">
+                    <form action="" class="language-picker__form">
+                      <label for="language-picker-select"></label>
+                      <select name="language-picker-select" id="language-picker-select">
+                        <option lang="en" value="english" selected>English</option>
+                        <option lang="de" value="deutsch">germany</option>
+                        <option lang="sp" value="spanish">spanish</option>
+                      </select>
+                    </form>
                   </div>
                 </li>
                 <li>
                   <div class="iconBox page-setting pointer" id="layout">
-                    <img src="assets/images/svg/grid.svg" alt="" draggable="false" class="for-v">
-                    <img src="assets/images/svg/grid2.svg" alt="" draggable="false" class="for-h">
+                    <img src="assets/images/svg/grid.svg" alt="" draggable="false" class="for-v" />
+                    <img src="assets/images/svg/grid2.svg" alt="" draggable="false" class="for-h" />
                   </div>
                 </li>
                 <li>
                   <div class="iconBox notifications pointer waves-effect primary-light">
-                    <img src="assets/images/svg/bell.svg" alt="" draggable="false" class="for-v">
-                    <img src="assets/images/svg/bell2.svg" alt="" draggable="false" class="for-h">
+                    <img src="assets/images/svg/bell.svg" alt="" draggable="false" class="for-v" />
+                    <img src="assets/images/svg/bell2.svg" alt="" draggable="false" class="for-h" />
                   </div>
                 </li>
                 <li>
-                  <div class="userProfileBox openaccount  pointer">
+                  <div class="userProfileBox openaccount pointer">
                     <img src="assets/images/all-img/user.svg" alt="" />
                   </div>
                 </li>
@@ -319,15 +315,28 @@
         </div>
       </div>
     </div>
-
     <div class="top-navbar">
       <div class="container-fluid p-0">
         <div class="main-menu">
           <div class="mobile-menu-header d-flex justify-content-between mb-5 pb-2 px-3 ps-3 d-block d-lg-none">
-            <a href="#" class="mbl-logo"><img src="assets/images/logo/logo.svg" alt=""></a>
+            <a href="#" class="mbl-logo"><img src="assets/images/logo/logo.svg" alt="" /></a>
             <span class="rt-mobile-menu-close">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48zm86.63 272L320 342.63l-64-64l-64 64L169.37 320l64-64l-64-64L192 169.37l64 64l64-64L342.63 192l-64 64z" fill="#e84646"/></svg>
-            </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            width="32"
+            height="32"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48zm86.63 272L320 342.63l-64-64l-64 64L169.37 320l64-64l-64-64L192 169.37l64 64l64-64L342.63 192l-64 64z"
+              fill="#e84646"
+            />
+          </svg>
+        </span>
           </div>
           <!-- /.rt-mobile-menu-close -->
           <ul class="menu-active-classes">
@@ -363,38 +372,44 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-lg-3">
-                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">Authentication</div>
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Authentication
+                      </div>
                       <a href="login.html">login</a>
                       <a href="registration.html">Registration</a>
                       <a href="profile.html">Profile</a>
                       <a href="setting.html">Setting</a>
                     </div>
                     <div class="col-lg-3">
-                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">billing</div>
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        billing
+                      </div>
                       <a href="billing.html">billing</a>
-                      <a href="pricing-plans.html">"pricing-plans</a>
+                      <a href="pricing-plans.html">pricing-plans</a>
 
                       <a href="invoice.html">Invoice</a>
                       <a href="invoice-detail.html">Invoice Details</a>
                     </div>
                     <div class="col-lg-3">
-                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">Components</div>
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Components
+                      </div>
                       <a href="button.html">Button</a>
                       <a href="badge.html">Badge</a>
                       <a href="checkbox.html">Checkbox</a>
                       <a href="radio.html">Radio</a>
                       <a href="switch.html">Switch</a>
-
                     </div>
                     <div class="col-lg-3">
-                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">Components</div>
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Components
+                      </div>
                       <a href="pagination.html">Pagination</a>
                       <a href="accordion.html">Accordion</a>
                       <a href="alerts.html">Alerts</a>
                       <a href="input.html">Input</a>
                       <a href="banner.html">Banner</a>
                       <a href="file.html">File</a>
-
                     </div>
                   </div>
                 </div>
@@ -421,7 +436,9 @@
               <ul class="sub-menu">
                 <li><a href="docs/index.html">Introduction</a></li>
                 <li><a href="docs/started.html">quick start</a></li>
-                <li><a href="docs/started.html#environment">Environments Setup</a></li>
+                <li>
+                  <a href="docs/started.html#environment">Environments Setup</a>
+                </li>
                 <li><a href="docs/started.html#folder ">Folder Structure</a></li>
                 <li><a href="docs/started.html#colors ">Colors</a></li>
                 <li><a href="docs/started.html#typography ">Typography</a></li>
@@ -460,7 +477,7 @@
           <div class="profile-wrap">
             <div class="profile-left">
               <div class="profile-thumb">
-                <img src="assets/images/all-img/users/user1.png" alt="">
+                <img src="assets/images/all-img/users/user1.png" alt="" />
               </div>
               <div class="profile-data">
                 <h4>Kevin Gilbert</h4>
@@ -485,15 +502,12 @@
           <div class="row">
             <div class="col-xxl-3 col-xl-4 col-md-5">
               <div class="card rounded-0">
-                <div class="card-header">
-                  Info
-                </div>
+                <div class="card-header">Info</div>
                 <div class="card-body">
                   <div class="info-wrap">
                     <div class="info-item">
                       <div class="info-icon">
-                        <img src="assets/images/svg/envelope.svg" alt="">
-
+                        <img src="assets/images/svg/envelope.svg" alt="" />
                       </div>
                       <div class="info-data">
                         <p>email</p>
@@ -502,7 +516,7 @@
                     </div>
                     <div class="info-item">
                       <div class="info-icon">
-                        <img src="assets/images/svg/phonecall.svg" alt="">
+                        <img src="assets/images/svg/phonecall.svg" alt="" />
                       </div>
                       <div class="info-data">
                         <p>PHone</p>
@@ -511,27 +525,32 @@
                     </div>
                     <div class="info-item">
                       <div class="info-icon">
-                        <img src="assets/images/svg/map.svg" alt="">
+                        <img src="assets/images/svg/map.svg" alt="" />
                       </div>
                       <div class="info-data">
                         <p>Location</p>
-                        <a href="#">Home# 1024/N, Road# 17/A, Adabor, Dhaka-1207, Bangladesh</a>
+                        <a href="#">Home# 1024/N, Road# 17/A, Adabor, Dhaka-1207,
+                          Bangladesh</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card rounded-0">
-                <div class="card-header">
-                  Biography
-                </div>
+                <div class="card-header">Biography</div>
                 <div class="card-body">
                   <div class="about-content">
                     <h4>About Me</h4>
-                    <p>Suspendisse iaculis tortor tortor, ac convallis quam dictum mattis. Integer leo ex, luctus eget ipsum sit amet, euismod
-                      hendrerit velit. Praesent eu vestibulum elit, in rutrum quam. Nulla maximus dolor enim, sed aliquet leo tincidunt sit
-                      amet. Sed ac est ac justo euismod efficitur porttitor vitae urna. Phasellus venenatis rutrum convallis. Curabitur
-                      efficitur lobortis ligula nec mollis. Vivamus a porttitor turpis.</p>
+                    <p>
+                      Suspendisse iaculis tortor tortor, ac convallis quam dictum
+                      mattis. Integer leo ex, luctus eget ipsum sit amet, euismod
+                      hendrerit velit. Praesent eu vestibulum elit, in rutrum
+                      quam. Nulla maximus dolor enim, sed aliquet leo tincidunt
+                      sit amet. Sed ac est ac justo euismod efficitur porttitor
+                      vitae urna. Phasellus venenatis rutrum convallis. Curabitur
+                      efficitur lobortis ligula nec mollis. Vivamus a porttitor
+                      turpis.
+                    </p>
                   </div>
                   <div class="biography-details">
                     <ul>
@@ -586,7 +605,7 @@
             </div>
             <div class="col-xxl-9 col-xl-8 col-md-7">
               <div class="card">
-                <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
+                <div class="d-flex justify-content-between card-header">
                   <div>User Overview</div>
                   <div class="select-box select-header">
                     <select class="custom-select sources" title="This Month">
@@ -601,16 +620,17 @@
                 </div>
               </div>
               <div class="card">
-                <div class="card-header">
-                  Latest Activity
-                </div>
+                <div class="card-header">Latest Activity</div>
                 <div class="card-body">
                   <div class="card-activity-user">
                     <div class="card-activity-icon">
-                      <img src="assets/images/all-img/users/user1.png" alt="">
+                      <img src="assets/images/all-img/users/user1.png" alt="" />
                     </div>
                     <div class="card-activity-data">
-                      <h4>Kevin Gilbert created 3 new events in Calendar with Urgent Label.</h4>
+                      <h4>
+                        Kevin Gilbert created 3 new events in Calendar with Urgent
+                        Label.
+                      </h4>
                       <ul>
                         <li>Just now</li>
                       </ul>
@@ -621,20 +641,39 @@
                       <div class="card-activity-wrap">
                         <div class="card-activity-header">
                           <h4>Urgents</h4>
-                          <h3>Meeting with UI/UX Team to manage our upcoming projects & task.</h3>
+                          <h3>
+                            <a href="kanban-board.html" class="kanban-link">
+                              Meeting with UI/UX Team to manage our upcoming
+                              projects & task.
+                            </a>
+                          </h3>
                         </div>
                         <div class="card-activity-body">
                           <ul>
-                            <li><img src="assets/images/svg/user.svg" alt="">Kevin Gilbert</li>
-                            <li><img src="assets/images/svg/clock.svg" alt="">14 Nov, 2021, 9:30 PM to 11:00 PM</li>
+                            <li>
+                              <img src="assets/images/svg/user.svg" alt="" />Kevin
+                              Gilbert
+                            </li>
+                            <li>
+                              <img src="assets/images/svg/clock.svg" alt="" />14
+                              Nov, 2021, 9:30 PM to 11:00 PM
+                            </li>
                           </ul>
                         </div>
                         <div class="card-priority__footer">
                           <ul class="users">
-                            <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
-                            <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
-                            <li class="users-item"><img src="assets/images/all-img/users/two.png" alt="user-photo"></li>
-                            <li class="users-item"><img src="assets/images/all-img/users/one.png" alt="user-photo"></li>
+                            <li class="users-item">
+                              <img src="assets/images/all-img/users/user1.png" alt="user-photo" />
+                            </li>
+                            <li class="users-item">
+                              <img src="assets/images/all-img/users/three.png" alt="user-photo" />
+                            </li>
+                            <li class="users-item">
+                              <img src="assets/images/all-img/users/two.png" alt="user-photo" />
+                            </li>
+                            <li class="users-item">
+                              <img src="assets/images/all-img/users/one.png" alt="user-photo" />
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -643,12 +682,20 @@
                       <div class="card-activity-wrap">
                         <div class="card-activity-header">
                           <h4>Urgents</h4>
-                          <h3>Relik - Project UX Research & Plans</h3>
+                          <h3>
+                            <a href="kanban-board.html" class="kanban-link">Wadmin - Project UX Research & Plans</a>
+                          </h3>
                         </div>
                         <div class="card-activity-body">
                           <ul>
-                            <li><img src="assets/images/svg/user.svg" alt="">Kevin Gilbert</li>
-                            <li><img src="assets/images/svg/clock.svg" alt="">14 Nov, 2021, 9:30 PM to 11:00 PM</li>
+                            <li>
+                              <img src="assets/images/svg/user.svg" alt="" />Kevin
+                              Gilbert
+                            </li>
+                            <li>
+                              <img src="assets/images/svg/clock.svg" alt="" />14
+                              Nov, 2021, 9:30 PM to 11:00 PM
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -657,17 +704,29 @@
                       <div class="card-activity-wrap">
                         <div class="card-activity-header">
                           <h4>Urgents</h4>
-                          <h3>Relik - Project User Interview, User Flow and User Persona.</h3>
+                          <h3>
+                            <a href="kanban-board.html" class="kanban-link">
+                              Wadmin - Project User Interview, User Flow and User
+                              Persona.
+                            </a>
+                          </h3>
                         </div>
                         <div class="card-activity-body">
                           <ul>
-                            <li><img src="assets/images/svg/user.svg" alt="">Kevin Gilbert</li>
+                            <li>
+                              <img src="assets/images/svg/user.svg" alt="" />Kevin
+                              Gilbert
+                            </li>
                           </ul>
                         </div>
                         <div class="card-priority__footer">
                           <ul class="users">
-                            <li class="users-item"><img src="assets/images/all-img/users/user1.png" alt="user-photo"></li>
-                            <li class="users-item"><img src="assets/images/all-img/users/three.png" alt="user-photo"></li>
+                            <li class="users-item">
+                              <img src="assets/images/all-img/users/user1.png" alt="user-photo" />
+                            </li>
+                            <li class="users-item">
+                              <img src="assets/images/all-img/users/three.png" alt="user-photo" />
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -681,7 +740,10 @@
           <footer>
             <div class="footer-content">
               <div>
-                <p>© 2021 - Relik admin dashboard. Design & develop by <a href="#">Templatecookie</a> </p>
+                <p>
+                  © 2021 - Wadmin admin dashboard. Design & develop by
+                  <a href="#">Templatecookie</a>
+                </p>
               </div>
               <div>
                 <ul>
@@ -692,17 +754,16 @@
               </div>
             </div>
           </footer>
+
         </div>
       </div>
     </div>
   </main>
 
 
-
-
   <div class="rt-mobile-menu-overlay"></div>
   <!-- /.rt-mobile-menu-overlay -->
-  <div id="template2" style="display: none;">
+  <div id="template2" style="display: none">
     <div class="PopoverParent">
       <div class="Popover-header">
         <a class="rt-single-icon-box user-profile-icon-big rt-align-center" href="#">
@@ -723,32 +784,32 @@
             <li>
               <a href="profile.html">
                 <span class="icon-i">
-                                        <i class="ph-user"></i>
-                                    </span>
+                    <i class="ph-user"></i>
+                  </span>
                 Profile
               </a>
             </li>
             <li>
               <a href="invoice.html">
                 <span class="icon-i">
-                                        <i class="ph-chart-bar"></i>
-                                    </span>
+                    <i class="ph-chart-bar"></i>
+                  </span>
                 Reports
               </a>
             </li>
             <li>
               <a href="setting.html">
                 <span class="icon-i">
-                                        <i class="ph-gear"></i>
-                                    </span>
+                    <i class="ph-gear"></i>
+                  </span>
                 Settings
               </a>
             </li>
             <li>
               <a href="faq.html">
                 <span class="icon-i">
-                                        <i class="ph-question"></i>
-                                    </span>
+                    <i class="ph-question"></i>
+                  </span>
                 Get Help
               </a>
             </li>
@@ -757,34 +818,49 @@
         <div class="popOverFooter">
           <a href="#">
             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17.3" height="17.3" viewBox="0 0 17.3 17.3">
-                                    <g id="log-out" transform="translate(-2.35 -2.35)">
-                                        <path
-                                            id="Path_2782"
-                                            data-name="Path 2782"
-                                            d="M8.333,19H4.778A1.778,1.778,0,0,1,3,17.222V4.778A1.778,1.778,0,0,1,4.778,3H8.333"
-                                            transform="translate(0 0)"
-                                            fill="none"
-                                            stroke="#4d5afb"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.3"
-                                        />
-                                        <path
-                                            id="Path_2783"
-                                            data-name="Path 2783"
-                                            d="M16,15.889l4.444-4.444L16,7"
-                                            transform="translate(-1.444 -0.444)"
-                                            fill="none"
-                                            stroke="#4d5afb"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.3"
-                                        />
-                                        <line id="Line_11" data-name="Line 11" x1="10.667" transform="translate(8.333 11)" fill="none" stroke="#4d5afb" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" />
-                                    </g>
-                                </svg>
-                            </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.3"
+                  height="17.3"
+                  viewBox="0 0 17.3 17.3"
+                >
+                  <g id="log-out" transform="translate(-2.35 -2.35)">
+                    <path
+                      id="Path_2782"
+                      data-name="Path 2782"
+                      d="M8.333,19H4.778A1.778,1.778,0,0,1,3,17.222V4.778A1.778,1.778,0,0,1,4.778,3H8.333"
+                      transform="translate(0 0)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                    <path
+                      id="Path_2783"
+                      data-name="Path 2783"
+                      d="M16,15.889l4.444-4.444L16,7"
+                      transform="translate(-1.444 -0.444)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                    <line
+                      id="Line_11"
+                      data-name="Line 11"
+                      x1="10.667"
+                      transform="translate(8.333 11)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                  </g>
+                </svg>
+              </span>
             Log Out
           </a>
         </div>
@@ -792,7 +868,7 @@
     </div>
   </div>
 
-  <div id="template" style="display: none;">
+  <div id="template" style="display: none">
     <div class="PopoverParent min-372">
       <div class="Popover-header d-flex justify-content-between">
         <div class="d-blok f-size-14 line-height-20 text-gray-900">
@@ -987,6 +1063,7 @@
   <script src="assets/js/jquery-ui.min.js"></script>
   <script src="https://unpkg.com/phosphor-icons"></script>
   <script src="assets/js/custom-select.js"></script>
+  <script src="assets/js/custom-select2.js"></script>
   <script src="assets/js/waves.js"></script>
   <script src="assets/js/dragula.min.js"></script>
   <script src="assets/js/appkanban.js"></script>

@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
-  <title>Relik - Admin Dashboard</title>
+  <title>Wadmin - Admin Dashboard</title>
   <link rel="icon" type="image/png" href="../assets/images/logo/logo-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/css/light.css">
-  <link rel="stylesheet" href="../assets/css/scale.css">
-  <link rel="stylesheet" href="../assets/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/light.css" />
+  <link rel="stylesheet" href="../assets/css/scale.css" />
+  <link rel="stylesheet" href="../assets/css/all.min.css" />
   <link rel="stylesheet" href="../assets/css/libs/@fullcalendar/core/main.min.css" />
   <link rel="stylesheet" href="../assets/css/libs/@fullcalendar/daygrid/main.min.css" />
   <link rel="stylesheet" href="../assets/css/libs/@fullcalendar/bootstrap/main.min.css" />
@@ -90,14 +90,15 @@
                   </div>
                 </li>
                 <li class=" d-none d-lg-block">
-                  <div class="dropdown dropdown-flag">
-                    <button class="dropdown-toggle pointer" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="../assets/images/svg/flag.svg" alt=""> English
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#"><img src="../assets/images/svg/flag.svg" alt=""> English</a></li>
-                      <li><a class="dropdown-item" href="#"><img src="../assets/images/svg/flag.svg" alt="">Bangla </a></li>
-                    </ul>
+                  <div class="language-picker js-language-picker desktop-show">
+                    <form action="" class="language-picker__form">
+                      <label for="language-picker-select"></label>
+                      <select name="language-picker-select" id="language-picker-select">
+                        <option lang="en" value="english" selected>English</option>
+                        <option lang="de" value="deutsch">germany</option>
+                        <option lang="sp" value="spanish">spanish</option>
+                      </select>
+                    </form>
                   </div>
                 </li>
                 <li>
@@ -129,19 +130,15 @@
           <ul id="side-menu">
             <li class="menu-title no-margin">Dashboard</li>
             <li>
-              <a href="home.html" aria-expanded="false" class="waves-effect primary-light">
+              <a href="../home.html" aria-expanded="false" class="waves-effect primary-light">
                 <span class="icon-box"><i class="ph-house-line"></i></span>
-                <div class="text-box">
-                  Dashboard
-                </div>
+                <div class="text-box">Dashboard</div>
               </a>
             </li>
             <li>
               <a href="../full-calendar.html" aria-expanded="false" class="waves-effect primary-light">
                 <span class="icon-box"><i class="ph-calendar-blank"></i></span>
-                <div class="text-box">
-                  Calendar
-                </div>
+                <div class="text-box">Calendar</div>
               </a>
             </li>
             <li>
@@ -298,8 +295,8 @@
             <li class="has-child">
               <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
                 <span class="icon-box">
-                            <i class="ph-puzzle-piece"></i>
-                        </span>
+              <i class="ph-puzzle-piece"></i>
+            </span>
                 <div class="text-box">Plugins</div>
               </a>
               <ul class="sub-menu" aria-expanded="false">
@@ -311,7 +308,7 @@
             <li>
               <a href="browser-support.html" aria-expanded="false" class="waves-effect primary-light">
                 <span class="icon-box"><i class="ph-disc"></i></span>
-                <div class="text-box">Browser Supports & Credit </div>
+                <div class="text-box">Browser Supports & Credit</div>
               </a>
             </li>
           </ul>
@@ -463,7 +460,14 @@
               <div class="docu-card">
                 <h2 class="docu-title">Quick Start</h2>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum dignissimos eos, dicta autem incidunt qui quisquam reiciendis fuga aperiam nesciunt sequi natus ipsa possimus labore dolorem maiores dolore ducimus mollitia ea tempora est necessitatibus. Qui tempora delectus eveniet expedita, minima laborum veritatis! At tenetur magni ratione modi voluptatibus iste quis explicabo harum architecto distinctio aut consequatur, possimus, mollitia error veniam?
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+                  dignissimos eos, dicta autem incidunt qui quisquam reiciendis
+                  fuga aperiam nesciunt sequi natus ipsa possimus labore dolorem
+                  maiores dolore ducimus mollitia ea tempora est necessitatibus.
+                  Qui tempora delectus eveniet expedita, minima laborum veritatis!
+                  At tenetur magni ratione modi voluptatibus iste quis explicabo
+                  harum architecto distinctio aut consequatur, possimus, mollitia
+                  error veniam?
                 </p>
               </div>
             </div>
@@ -472,21 +476,33 @@
               <div class="docu-card">
                 <h2 class="docu-title">Environment Setup</h2>
                 <div>
-                  <p>To use our build system and run our documentation locally, you’ll need a copy of Tabler’s source files. Follow the steps below:</p>
+                  <p>
+                    To use our build system and run our documentation locally,
+                    you’ll need a copy of Tabler’s source files. Follow the steps
+                    below:
+                  </p>
                 </div>
                 <div class="environment">
                   <ol>
                     <li>
-                      <p>install <span>package dependecies</span> via yarn or npm</p>
+                      <p>
+                        install <span>package dependecies</span> via yarn or npm
+                      </p>
                     </li>
                     <li>
-                      <p> In the comand line run <span>gulp</span> </p>
+                      <p>In the comand line run <span>gulp</span></p>
                     </li>
                     <li>
-                      <p>open in <span>http://localhost:3000/</span> in your browser </p>
+                      <p>
+                        open in <span>http://localhost:3000/</span> in your
+                        browser
+                      </p>
                     </li>
                     <li>
-                      <p>Any change in <span>/src</span> directory will build the aplication and refresh the page </p>
+                      <p>
+                        Any change in <span>/src</span> directory will build the
+                        aplication and refresh the page
+                      </p>
                     </li>
                   </ol>
                 </div>
@@ -567,13 +583,13 @@
                   <div class="colors-plate__item yellow">
                     <p>#FFF266</p>
                   </div>
-                  <div class="colors-plate__item green ">
+                  <div class="colors-plate__item green">
                     <p>#0FAF62</p>
                   </div>
-                  <div class="colors-plate__item orange ">
+                  <div class="colors-plate__item orange">
                     <p>#FF9500</p>
                   </div>
-                  <div class="colors-plate__item red ">
+                  <div class="colors-plate__item red">
                     <p>#E84646</p>
                   </div>
                 </div>
@@ -585,12 +601,16 @@
               <div class="docu-card">
                 <h2 class="docu-title">Typography</h2>
                 <div class="docu-tabs">
-                  <ul class="nav nav-pills  " id="pills-tab" role="tablist">
+                  <ul class="nav nav-pills" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="pills-typography-tab" data-bs-toggle="pill" data-bs-target="#pills-typography" type="button" role="tab" aria-controls="pills-typography" aria-selected="true">preview</button>
+                      <button class="nav-link active" id="pills-typography-tab" data-bs-toggle="pill" data-bs-target="#pills-typography" type="button" role="tab" aria-controls="pills-typography" aria-selected="true">
+                        preview
+                      </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="pills-typo-code" data-bs-toggle="pill" data-bs-target="#pills-code" type="button" role="tab" aria-controls="pills-code" aria-selected="false">code</button>
+                      <button class="nav-link" id="pills-typo-code" data-bs-toggle="pill" data-bs-target="#pills-code" type="button" role="tab" aria-controls="pills-code" aria-selected="false">
+                        code
+                      </button>
                     </li>
                   </ul>
                   <div class="tab-content" id="pills-tabContent">
@@ -604,7 +624,6 @@
                           <h5>Heading</h5>
                           <h6>Heading</h6>
                         </div>
-
                       </div>
                     </div>
                     <div class="tab-pane fade" id="pills-code" role="tabpanel" aria-labelledby="pills-typo-code">
@@ -628,9 +647,6 @@
               <div class="docu-card">
                 <div class="mb-3">
                   <h2 class="docu-title">Icons</h2>
-                  <p>
-                    All icons come from the <a href="https://phosphoricons.com/">Phosphoricons.com</a> & it's a open source . Just go & checkout there documentation you will get to know how to use it . Here below some of icons previewed
-                  </p>
                 </div>
                 <div class="icon-gallery">
                   <div class="icon-gallery__item">
@@ -684,18 +700,16 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-
   </main>
 
 
   <div class="rt-mobile-menu-overlay"></div>
   <!-- /.rt-mobile-menu-overlay -->
-  <div id="template2" style="display: none;">
+  <div id="template2" style="display: none">
     <div class="PopoverParent">
       <div class="Popover-header">
         <a class="rt-single-icon-box user-profile-icon-big rt-align-center" href="#">
@@ -716,32 +730,32 @@
             <li>
               <a href="../profile.html">
                 <span class="icon-i">
-                                        <i class="ph-user"></i>
-                                    </span>
+                    <i class="ph-user"></i>
+                  </span>
                 Profile
               </a>
             </li>
             <li>
               <a href="../invoice.html">
                 <span class="icon-i">
-                                        <i class="ph-chart-bar"></i>
-                                    </span>
+                    <i class="ph-chart-bar"></i>
+                  </span>
                 Reports
               </a>
             </li>
             <li>
               <a href="../setting.html">
                 <span class="icon-i">
-                                        <i class="ph-gear"></i>
-                                    </span>
+                    <i class="ph-gear"></i>
+                  </span>
                 Settings
               </a>
             </li>
             <li>
               <a href="../faq.html">
                 <span class="icon-i">
-                                        <i class="ph-question"></i>
-                                    </span>
+                    <i class="ph-question"></i>
+                  </span>
                 Get Help
               </a>
             </li>
@@ -750,34 +764,49 @@
         <div class="popOverFooter">
           <a href="#">
             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17.3" height="17.3" viewBox="0 0 17.3 17.3">
-                                    <g id="log-out" transform="translate(-2.35 -2.35)">
-                                        <path
-                                            id="Path_2782"
-                                            data-name="Path 2782"
-                                            d="M8.333,19H4.778A1.778,1.778,0,0,1,3,17.222V4.778A1.778,1.778,0,0,1,4.778,3H8.333"
-                                            transform="translate(0 0)"
-                                            fill="none"
-                                            stroke="#4d5afb"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.3"
-                                        />
-                                        <path
-                                            id="Path_2783"
-                                            data-name="Path 2783"
-                                            d="M16,15.889l4.444-4.444L16,7"
-                                            transform="translate(-1.444 -0.444)"
-                                            fill="none"
-                                            stroke="#4d5afb"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.3"
-                                        />
-                                        <line id="Line_11" data-name="Line 11" x1="10.667" transform="translate(8.333 11)" fill="none" stroke="#4d5afb" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" />
-                                    </g>
-                                </svg>
-                            </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.3"
+                  height="17.3"
+                  viewBox="0 0 17.3 17.3"
+                >
+                  <g id="log-out" transform="translate(-2.35 -2.35)">
+                    <path
+                      id="Path_2782"
+                      data-name="Path 2782"
+                      d="M8.333,19H4.778A1.778,1.778,0,0,1,3,17.222V4.778A1.778,1.778,0,0,1,4.778,3H8.333"
+                      transform="translate(0 0)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                    <path
+                      id="Path_2783"
+                      data-name="Path 2783"
+                      d="M16,15.889l4.444-4.444L16,7"
+                      transform="translate(-1.444 -0.444)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                    <line
+                      id="Line_11"
+                      data-name="Line 11"
+                      x1="10.667"
+                      transform="translate(8.333 11)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                  </g>
+                </svg>
+              </span>
             Log Out
           </a>
         </div>
@@ -785,7 +814,7 @@
     </div>
   </div>
 
-  <div id="template" style="display: none;">
+  <div id="template" style="display: none">
     <div class="PopoverParent min-372">
       <div class="Popover-header d-flex justify-content-between">
         <div class="d-block f-size-14 line-height-20 text-gray-900">
@@ -798,72 +827,86 @@
           <div class="notifybox">
             <ul class="notify-lists rt-list">
 
-
               <li>
                 <a class="rt-single-icon-box" href="#">
                   <div class="icon-thumb rt-mr-12">
-                    <img src="assets/images/notification/check.svg" alt="">
+                    <img src="../assets/images/notification/check.svg" alt="" />
                   </div>
                   <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900  mb-1">This is a success notification.</div>
-                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                    <div class="title body-font-4 text-gray-900 mb-1">
+                      This is a success notification.
+                    </div>
+                    <div class="body-fonty-4 text-gray-500">
+                      5 min
+                      ago
+                    </div>
                   </div>
                 </a>
-
               </li>
 
               <li>
                 <a class="rt-single-icon-box" href="#">
                   <div class="icon-thumb rt-mr-12">
-                    <img src="assets/images/all-img/user_1.png" alt="">
+                    <img src="../assets/images/all-img/user_1.png" alt="" />
                   </div>
                   <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900  mb-1">Kevin Mention you in “UX Design Proc...”</div>
-                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                    <div class="title body-font-4 text-gray-900 mb-1">
+                      Kevin Mention you in “UX Design Proc...”
+                    </div>
+                    <div class="body-fonty-4 text-gray-500">
+                      5 min ago
+                    </div>
                   </div>
                 </a>
-
               </li>
 
               <li>
                 <a class="rt-single-icon-box" href="#">
                   <div class="icon-thumb rt-mr-12">
-                    <img src="assets/images/notification/alert.svg" alt="">
+                    <img src="../assets/images/notification/alert.svg" alt="" />
                   </div>
                   <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900  mb-1">This is you lasst waring</div>
-                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                    <div class="title body-font-4 text-gray-900 mb-1">
+                      This is you lasst waring
+                    </div>
+                    <div class="body-fonty-4 text-gray-500">
+                      5 min ago
+                    </div>
                   </div>
                 </a>
-
               </li>
 
               <li>
                 <a class="rt-single-icon-box" href="#">
                   <div class="icon-thumb rt-mr-12">
-                    <img src="assets/images/all-img/user_2.png" alt="">
+                    <img src="../assets/images/all-img/user_2.png" alt="" />
                   </div>
                   <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900  mb-1">Janny invited you in events in calender</div>
-                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                    <div class="title body-font-4 text-gray-900 mb-1">
+                      Janny invited you in events in calender
+                    </div>
+                    <div class="body-fonty-4 text-gray-500">
+                      5 min ago
+                    </div>
                   </div>
                 </a>
-
               </li>
 
               <li>
                 <a class="rt-single-icon-box" href="#">
                   <div class="icon-thumb rt-mr-12">
-                    <img src="assets/images/notification/file.svg" alt="">
+                    <img src="../assets/images/notification/file.svg" alt="" />
                   </div>
                   <div class="iconbox-content">
-                    <div class="title body-font-4 text-gray-900  mb-1">Your pricing plan is updated</div>
-                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                    <div class="title body-font-4 text-gray-900 mb-1">
+                      Your pricing plan is updated
+                    </div>
+                    <div class="body-fonty-4 text-gray-500">
+                      5 min ago
+                    </div>
                   </div>
                 </a>
-
               </li>
-
 
             </ul>
           </div>
@@ -986,6 +1029,7 @@
   <script src="../assets/js/calendar-int.js"></script>
   <script src="https://unpkg.com/phosphor-icons"></script>
   <script src="../assets/js/custom-select.js"></script>
+  <script src="../assets/js/custom-select2.js"></script>
   <script src="../assets/js/waves.js"></script>
   <script src="../assets/js/dragula.min.js"></script>
   <script src="../assets/js/appkanban.js"></script>

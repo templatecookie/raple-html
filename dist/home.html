@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
-  <title>Relik - Admin Dashboard</title>
+  <title>Wadmin - Admin Dashboard</title>
   <link rel="icon" type="image/png" href="assets/images/logo/logo-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/light.css">
-  <link rel="stylesheet" href="assets/css/scale.css">
-  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/light.css" />
+  <link rel="stylesheet" href="assets/css/scale.css" />
+  <link rel="stylesheet" href="assets/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/jquery-ui.css" />
   <link rel="stylesheet" href="assets/css/jquery-ui.theme.css" />
@@ -33,8 +33,6 @@
 <body class="light">
 
 
-
-
   <main class="app-wrapper">
     <header class="app-header rt-sticky">
       <div class="navbar align-items-center">
@@ -43,33 +41,30 @@
             <div class="logo-segment">
               <div class="all-logo">
                 <a href="home.html" class="brand-logo">
-                  <img src="assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black">
-                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white">
-                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10">
-                  <img src="assets/images/logo/logo-full-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10">
+                  <img src="assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black" />
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white" />
+                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10" />
+                  <img src="assets/images/logo/logo-full-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10" />
                 </a>
                 <a href="home.html" class="brand-logo white">
-                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false">
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" />
                 </a>
-                <a href="home.html" class="collapse-in-logo ">
-
-                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon-blue">
-                  <img src="assets/images/logo/logo-icon-white.svg" alt="" draggable="false" class="logo-icon-white">
-
+                <a href="home.html" class="collapse-in-logo">
+                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon-blue" />
+                  <img src="assets/images/logo/logo-icon-white.svg" alt="" draggable="false" class="logo-icon-white" />
                 </a>
               </div>
-              <div class="opener_sidebar ">
+              <div class="opener_sidebar">
                 <span class="icon-bar-open" id="opener_icon"></span>
               </div>
-              <div class="opener_horizentalmenu " id="mainmenuOpen">
+              <div class="opener_horizentalmenu" id="mainmenuOpen">
                 <span class="icon-bar-open2" id="opener_icon2"></span>
               </div>
             </div>
             <div class="dashboard-message position-relative">
               <span class="back_sidebar_icon">
-              <i class="ph-arrow-right"></i>
-            </span>
-
+            <i class="ph-arrow-right"></i>
+          </span>
             </div>
           </div>
           <div class="app-mian-serach">
@@ -77,7 +72,7 @@
               <div class="input-box">
                 <input type="text" placeholder="Search" />
                 <button type="submit">
-                  <img src="assets/images/svg/search.svg" alt="" draggable="false">
+                  <img src="assets/images/svg/search.svg" alt="" draggable="false" />
                 </button>
               </div>
             </form>
@@ -85,36 +80,37 @@
           <div class="ms-auto">
             <div class="rt-nav-tolls d-flex align-items-center">
               <ul>
-                <li class=" d-inline-block d-md-none">
+                <li class="d-inline-block d-md-none">
                   <div class="iconBox open-mbl-search pointer">
                     <img src="assets/images/svg/search.svg" alt="" />
                   </div>
                 </li>
-                <li class=" d-none d-lg-block">
-                  <div class="dropdown dropdown-flag">
-                    <button class="dropdown-toggle pointer" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="assets/images/svg/flag.svg" alt=""> English
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#"><img src="assets/images/svg/flag.svg" alt=""> English</a></li>
-                      <li><a class="dropdown-item" href="#"><img src="assets/images/svg/flag.svg" alt="">Bangla </a></li>
-                    </ul>
+                <li class="d-none d-lg-block">
+                  <div class="language-picker js-language-picker desktop-show">
+                    <form action="" class="language-picker__form">
+                      <label for="language-picker-select"></label>
+                      <select name="language-picker-select" id="language-picker-select">
+                        <option lang="en" value="english" selected>English</option>
+                        <option lang="de" value="deutsch">germany</option>
+                        <option lang="sp" value="spanish">spanish</option>
+                      </select>
+                    </form>
                   </div>
                 </li>
                 <li>
                   <div class="iconBox page-setting pointer" id="layout">
-                    <img src="assets/images/svg/grid.svg" alt="" draggable="false" class="for-v">
-                    <img src="assets/images/svg/grid2.svg" alt="" draggable="false" class="for-h">
+                    <img src="assets/images/svg/grid.svg" alt="" draggable="false" class="for-v" />
+                    <img src="assets/images/svg/grid2.svg" alt="" draggable="false" class="for-h" />
                   </div>
                 </li>
                 <li>
                   <div class="iconBox notifications pointer waves-effect primary-light">
-                    <img src="assets/images/svg/bell.svg" alt="" draggable="false" class="for-v">
-                    <img src="assets/images/svg/bell2.svg" alt="" draggable="false" class="for-h">
+                    <img src="assets/images/svg/bell.svg" alt="" draggable="false" class="for-v" />
+                    <img src="assets/images/svg/bell2.svg" alt="" draggable="false" class="for-h" />
                   </div>
                 </li>
                 <li>
-                  <div class="userProfileBox openaccount  pointer">
+                  <div class="userProfileBox openaccount pointer">
                     <img src="assets/images/all-img/user.svg" alt="" />
                   </div>
                 </li>
@@ -323,10 +319,24 @@
       <div class="container-fluid p-0">
         <div class="main-menu">
           <div class="mobile-menu-header d-flex justify-content-between mb-5 pb-2 px-3 ps-3 d-block d-lg-none">
-            <a href="#" class="mbl-logo"><img src="assets/images/logo/logo.svg" alt=""></a>
+            <a href="#" class="mbl-logo"><img src="assets/images/logo/logo.svg" alt="" /></a>
             <span class="rt-mobile-menu-close">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48zm86.63 272L320 342.63l-64-64l-64 64L169.37 320l64-64l-64-64L192 169.37l64 64l64-64L342.63 192l-64 64z" fill="#e84646"/></svg>
-            </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            width="32"
+            height="32"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48zm86.63 272L320 342.63l-64-64l-64 64L169.37 320l64-64l-64-64L192 169.37l64 64l64-64L342.63 192l-64 64z"
+              fill="#e84646"
+            />
+          </svg>
+        </span>
           </div>
           <!-- /.rt-mobile-menu-close -->
           <ul class="menu-active-classes">
@@ -362,38 +372,44 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-lg-3">
-                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">Authentication</div>
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Authentication
+                      </div>
                       <a href="login.html">login</a>
                       <a href="registration.html">Registration</a>
                       <a href="profile.html">Profile</a>
                       <a href="setting.html">Setting</a>
                     </div>
                     <div class="col-lg-3">
-                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">billing</div>
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        billing
+                      </div>
                       <a href="billing.html">billing</a>
-                      <a href="pricing-plans.html">"pricing-plans</a>
+                      <a href="pricing-plans.html">pricing-plans</a>
 
                       <a href="invoice.html">Invoice</a>
                       <a href="invoice-detail.html">Invoice Details</a>
                     </div>
                     <div class="col-lg-3">
-                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">Components</div>
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Components
+                      </div>
                       <a href="button.html">Button</a>
                       <a href="badge.html">Badge</a>
                       <a href="checkbox.html">Checkbox</a>
                       <a href="radio.html">Radio</a>
                       <a href="switch.html">Switch</a>
-
                     </div>
                     <div class="col-lg-3">
-                      <div class=" f-size-16 text-gray-800 px-3 text-capitalize">Components</div>
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Components
+                      </div>
                       <a href="pagination.html">Pagination</a>
                       <a href="accordion.html">Accordion</a>
                       <a href="alerts.html">Alerts</a>
                       <a href="input.html">Input</a>
                       <a href="banner.html">Banner</a>
                       <a href="file.html">File</a>
-
                     </div>
                   </div>
                 </div>
@@ -420,7 +436,9 @@
               <ul class="sub-menu">
                 <li><a href="docs/index.html">Introduction</a></li>
                 <li><a href="docs/started.html">quick start</a></li>
-                <li><a href="docs/started.html#environment">Environments Setup</a></li>
+                <li>
+                  <a href="docs/started.html#environment">Environments Setup</a>
+                </li>
                 <li><a href="docs/started.html#folder ">Folder Structure</a></li>
                 <li><a href="docs/started.html#colors ">Colors</a></li>
                 <li><a href="docs/started.html#typography ">Typography</a></li>
@@ -448,12 +466,12 @@
                 <span class="inline-block rt-mr-5">👋</span> Hey, Kevin.
               </div>
               <div class="text-gray-600 body-font-4">
-                Here is all your Relik analytics overview
+                Here is all your Wadmin analytics overview
               </div>
             </div>
           </div>
           <div class="row grid">
-            <div class="col col-only-4 col-only-xs-12 col-only-md-6 ">
+            <div class="col col-only-4 col-only-xs-12 col-only-md-6">
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex justify-content-between rt-mb-24">
@@ -461,65 +479,71 @@
                       <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
                         Active Visitors
                       </div>
-                      <div class=" f-size-24 font-semibold">157,367</div>
+                      <div class="f-size-24 font-semibold">157,367</div>
                     </div>
-                    <div class=" text-left text-lg-end text-success-500 body-font-4 font-medium">
-                      <span class=" d-inline-block rt-mr-7"><i class="ph-arrow-up"></i></span>6.7% Increase
+                    <div class="text-left text-lg-end text-success-500 body-font-4 font-medium">
+                      <span class="d-inline-block rt-mr-7"
+                      ><i class="ph-arrow-up"></i></span>6.7% Increase
                     </div>
                   </div>
                   <div id="bar-chart1"></div>
                 </div>
               </div>
             </div>
-            <div class="col col-only-4 col-only-xs-12 col-only-md-6  ">
+            <div class="col col-only-4 col-only-xs-12 col-only-md-6">
               <div class="card">
                 <div class="card-body">
-                  <div class="d-flex  justify-content-between rt-mb-24">
+                  <div class="d-flex justify-content-between rt-mb-24">
                     <div>
                       <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
                         Visitor per minute
                       </div>
-                      <div class=" f-size-24 font-semibold">9,741</div>
+                      <div class="f-size-24 font-semibold">9,741</div>
                     </div>
-                    <div class=" text-left text-lg-end text-danger-500 body-font-4 font-medium">
-                      <span class=" d-inline-block rt-mr-7"><i class="ph-arrow-down"></i></span>13.5% Decrease
+                    <div class="text-left text-lg-end text-danger-500 body-font-4 font-medium">
+                      <span class="d-inline-block rt-mr-7"
+                      ><i class="ph-arrow-down"></i></span>13.5% Decrease
                     </div>
                   </div>
-                  <div id="area-spaline-bottom" class=" rt-mb-24"></div>
+                  <div id="area-spaline-bottom" class="rt-mb-24"></div>
                   <div id="area-spaline-bottom2"></div>
                 </div>
               </div>
             </div>
-            <div class="col col-only-4 col-only-xs-12 col-only-md-6 ">
+            <div class="col col-only-4 col-only-xs-12 col-only-md-6">
               <div class="card">
                 <div class="card-body">
-                  <div class="d-flex  justify-content-between rt-mb-48">
+                  <div class="d-flex justify-content-between rt-mb-48">
                     <div>
                       <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
                         Conversion Rate
                       </div>
-                      <div class=" f-size-24 font-semibold">9.73%</div>
+                      <div class="f-size-24 font-semibold">9.73%</div>
                     </div>
-                    <div class=" text-left text-lg-end text-success-500 body-font-4 font-medium">
-                      <span class=" d-inline-block rt-mr-7"><i class="ph-arrow-up"></i></span>3.5% Increase
+                    <div class="text-left text-lg-end text-success-500 body-font-4 font-medium">
+                      <span class="d-inline-block rt-mr-7"
+                      ><i class="ph-arrow-up"></i></span>3.5% Increase
                     </div>
                   </div>
                   <div id="barchart2"></div>
                 </div>
               </div>
             </div>
-            <div class="col col-only-4 col-only-xs-12  col-only-md-6 ">
+            <div class="col col-only-4 col-only-xs-12 col-only-md-6">
               <div class="card">
                 <div class="card-body">
-                  <div class="d-flex  justify-content-between rt-mb-24">
+                  <div class="d-flex justify-content-between rt-mb-24">
                     <div>
                       <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
                         bounce rate
                       </div>
-                      <div class=" f-size-24 font-semibold">81.94%</div>
+                      <div class="f-size-24 font-semibold">81.94%</div>
                     </div>
-                    <div class=" text-left text-lg-end text-success-500 body-font-4 font-medium">
-                      <span class=" d-inline-block rt-mr-7"><i class="ph-arrow-up"></i></span> 1.1% Increase
+                    <div class="text-left text-lg-end text-success-500 body-font-4 font-medium">
+                      <span class="d-inline-block rt-mr-7"
+                      ><i class="ph-arrow-up"></i
+                    ></span>
+                      1.1% Increase
                     </div>
                   </div>
                   <div id="line-1"></div>
@@ -528,15 +552,16 @@
             </div>
           </div>
           <div class="row">
-            <div class=" col  col-only-9  col-only-md-7 col-only-xs-12 ">
+            <div class="col col-only-9 col-only-md-7 col-only-xs-12">
               <div class="card">
                 <div class="d-flex justify-content-between flex-sm-row flex-column align-items-center card-header">
                   <div>User Overview</div>
                   <div class="select-box select-header">
-                    <select class="custom-select sources" title="This Month">
-                      <option>Jan</option>
-                      <option>Feb</option>
-                      <option>Mar</option>
+                    <select class="custom-select sources" title="Today">
+                      <option>Yestarday</option>
+                      <option>This Week</option>
+                      <option>This Month</option>
+                      <option>This Year</option>
                     </select>
                   </div>
                 </div>
@@ -545,15 +570,16 @@
                 </div>
               </div>
             </div>
-            <div class="col col-only-3 col-only-md-5 col-only-xs-12 ">
+            <div class="col col-only-3 col-only-md-5 col-only-xs-12">
               <div class="card">
-                <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
+                <div class="d-flex justify-content-between card-header">
                   <div>Most Visited Page</div>
                   <div class="select-box select-header">
-                    <select class="custom-select sources" title="This Month">
-                      <option>Jan</option>
-                      <option>Feb</option>
-                      <option>Mar</option>
+                    <select class="custom-select sources" title="Today">
+                      <option>Yestarday</option>
+                      <option>This Week</option>
+                      <option>This Month</option>
+                      <option>This Year</option>
                     </select>
                   </div>
                 </div>
@@ -561,7 +587,7 @@
                   <div id="dount_chart"></div>
                 </div>
                 <div class="donut-chart-table">
-                  <table class=" table">
+                  <table class="table">
                     <thead>
                       <tr>
                         <th>Page name</th>
@@ -571,20 +597,30 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="text-gray-900 extra-padding"> <img src="assets/images/svg/circle-grren.svg" alt=""> Request a Quote
+                        <td class="text-gray-900 extra-padding">
+                          <img src="assets/images/svg/circle-grren.svg" alt="" />
+                          Request a Quote
                         </td>
-                        <td class="text-gray-700 fw-normal extra-padding">547,914</td>
+                        <td class="text-gray-700 fw-normal extra-padding">
+                          547,914
+                        </td>
                         <td class="text-success-500 extra-padding">81.94%</td>
                       </tr>
                       <tr>
-                        <td class="text-gray-900"> <img src="assets/images/svg/circle-orange.svg" alt=""> Career</td>
+                        <td class="text-gray-900">
+                          <img src="assets/images/svg/circle-orange.svg" alt="" />
+                          Career
+                        </td>
                         <td class="text-gray-700 fw-normal">547,914</td>
-                        <td class="text-success-500">81.94%</td>
+                        <td class="text-success-500">10.94%</td>
                       </tr>
                       <tr>
-                        <td class="text-gray-900"> <img src="assets/images/svg/circle-red.svg" alt=""> Work</td>
+                        <td class="text-gray-900">
+                          <img src="assets/images/svg/circle-red.svg" alt="" />
+                          Work
+                        </td>
                         <td class="text-gray-700 fw-normal">547,914</td>
-                        <td class="text-success-500">81.94%</td>
+                        <td class="text-success-500">8.94%</td>
                       </tr>
                     </tbody>
                   </table>
@@ -596,13 +632,14 @@
           <div class="row">
             <div class="col col-only-4 col-only-xs-12 col-only-md-6">
               <div class="card">
-                <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
+                <div class="d-flex justify-content-between card-header">
                   <div>Browser Overview</div>
                   <div class="select-box select-header">
-                    <select class="custom-select sources" title="This Month">
-                      <option>Jan</option>
-                      <option>Feb</option>
-                      <option>Mar</option>
+                    <select class="custom-select sources" title="Today">
+                      <option>Yestarday</option>
+                      <option>This Week</option>
+                      <option>This Month</option>
+                      <option>This Year</option>
                     </select>
                   </div>
                 </div>
@@ -610,52 +647,60 @@
                   <div class="row">
                     <div class="col-6 text-center rt-mb-28">
                       <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/chrome.svg" alt="" draggable="false">
+                        <img src="assets/images/all-img/chrome.svg" alt="" draggable="false" />
                       </div>
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Google Chrome</div>
-                      <div class="body-font-4  text-gray ">54% User</div>
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Google Chrome
+                      </div>
+                      <div class="body-font-4 text-gray">54% User</div>
                     </div>
                     <div class="col-6 text-center rt-mb-28">
                       <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/firefox.svg" alt="" draggable="false">
+                        <img src="assets/images/all-img/firefox.svg" alt="" draggable="false" />
                       </div>
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Firefox</div>
-                      <div class="body-font-4  text-gray ">23% User</div>
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Firefox
+                      </div>
+                      <div class="body-font-4 text-gray">23% User</div>
                     </div>
                     <div class="col-6 text-center rt-mb-28">
                       <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/edge.svg" alt="" draggable="false">
+                        <img src="assets/images/all-img/edge.svg" alt="" draggable="false" />
                       </div>
 
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Microsoft Edge</div>
-                      <div class="body-font-4  text-gray ">19% User</div>
-
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Microsoft Edge
+                      </div>
+                      <div class="body-font-4 text-gray">19% User</div>
                     </div>
                     <div class="col-6 text-center rt-mb-28">
                       <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/breve.svg" alt="" draggable="false">
+                        <img src="assets/images/all-img/breve.svg" alt="" draggable="false" />
                       </div>
 
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Brave</div>
-                      <div class="body-font-4  text-gray ">11% User</div>
-
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Brave
+                      </div>
+                      <div class="body-font-4 text-gray">11% User</div>
                     </div>
                     <div class="col-6 text-center rt-mb-28">
                       <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/safari.svg" alt="" draggable="false">
+                        <img src="assets/images/all-img/safari.svg" alt="" draggable="false" />
                       </div>
 
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Apple Safari</div>
-                      <div class="body-font-4  text-gray ">7% User</div>
-
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Apple Safari
+                      </div>
+                      <div class="body-font-4 text-gray">7% User</div>
                     </div>
                     <div class="col-6 text-center rt-mb-28">
                       <div class="borwser-img rt-mb-16">
-                        <img src="assets/images/all-img/opera.svg" alt="" draggable="false">
+                        <img src="assets/images/all-img/opera.svg" alt="" draggable="false" />
                       </div>
-                      <div class="body-font-4  text-black font-semibold rt-mb-4">Opera</div>
-                      <div class="body-font-4  text-gray ">3% User</div>
-
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Opera
+                      </div>
+                      <div class="body-font-4 text-gray">3% User</div>
                     </div>
                   </div>
                 </div>
@@ -663,39 +708,52 @@
             </div>
             <div class="col col-only-6 col-only-xs-12">
               <div class="card">
-                <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
+                <div class="d-flex justify-content-between card-header">
                   <div>User Location</div>
                   <div class="select-box select-header">
-                    <select class="custom-select sources" title="This Month">
-                      <option>Jan</option>
-                      <option>Feb</option>
-                      <option>Mar</option>
+                    <select class="custom-select sources" title="Today">
+                      <option>Yestarday</option>
+                      <option>This Week</option>
+                      <option>This Month</option>
+                      <option>This Year</option>
                     </select>
                   </div>
                 </div>
                 <div class="card-body">
-                  <div id="world-map" class=" rt-mb-48"></div>
+                  <div id="world-map" class="rt-mb-48"></div>
                   <div class="row">
-                    <div class="col-md-4 rt-md-10 ">
+                    <div class="col-md-4 rt-md-10">
                       <div class="rt-mb-15">
-                        <img src="assets/images/svg/usa-flag.svg" alt="" draggable="false">
+                        <img src="assets/images/svg/usa-flag.svg" alt="" draggable="false" />
                       </div>
-                      <div class=" text-gray-900 body-font-3 font-medium rt-mb-4">United State (USA)</div>
-                      <div class=" text-gray  body-font-4">54% . 5,761,687 Users</div>
+                      <div class="text-gray-900 body-font-3 font-medium rt-mb-4">
+                        United State (USA)
+                      </div>
+                      <div class="text-gray body-font-4">
+                        54% . 5,761,687 Users
+                      </div>
                     </div>
-                    <div class="col-md-4 rt-md-10 ">
+                    <div class="col-md-4 rt-md-10">
                       <div class="rt-mb-15">
-                        <img src="assets/images/svg/china-flag.svg" alt="" draggable="false">
+                        <img src="assets/images/svg/china-flag.svg" alt="" draggable="false" />
                       </div>
-                      <div class=" text-gray-900 body-font-3 font-medium rt-mb-4">China</div>
-                      <div class=" text-gray  body-font-4">54% . 5,761,687 Users</div>
+                      <div class="text-gray-900 body-font-3 font-medium rt-mb-4">
+                        China
+                      </div>
+                      <div class="text-gray body-font-4">
+                        54% . 5,761,687 Users
+                      </div>
                     </div>
-                    <div class="col-md-4 rt-md-10 ">
+                    <div class="col-md-4 rt-md-10">
                       <div class="rt-mb-15">
-                        <img src="assets/images/svg/russia-flag.svg" alt="" draggable="false">
+                        <img src="assets/images/svg/russia-flag.svg" alt="" draggable="false" />
                       </div>
-                      <div class=" text-gray-900 body-font-3 font-medium rt-mb-4">Russia</div>
-                      <div class=" text-gray  body-font-4">54% . 5,761,687 Users</div>
+                      <div class="text-gray-900 body-font-3 font-medium rt-mb-4">
+                        Russia
+                      </div>
+                      <div class="text-gray body-font-4">
+                        54% . 5,761,687 Users
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -787,19 +845,18 @@
                 </div>
               </div>
             </div>
-
-
           </div>
           <div class="row">
-            <div class=" col col-only-3 col-only-md-6 col-only-xs-12">
+            <div class="col col-only-3 col-only-md-6 col-only-xs-12">
               <div class="card">
-                <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header border-0">
+                <div class="d-flex justify-content-between card-header border-0">
                   <div>Social Media Traffic</div>
                   <div class="select-box select-header">
-                    <select class="custom-select sources" title="This Month">
-                      <option>Jan</option>
-                      <option>Feb</option>
-                      <option>Mar</option>
+                    <select class="custom-select sources" title="Today">
+                      <option>Yestarday</option>
+                      <option>This Week</option>
+                      <option>This Month</option>
+                      <option>This Year</option>
                     </select>
                   </div>
                 </div>
@@ -815,82 +872,137 @@
                       </thead>
                       <tbody>
 
-
                         <tr>
                           <td colspan="2">
                             <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/fb.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Facebook</div>
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/fb.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Facebook
+                              </div>
                             </div>
                           </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
                         </tr>
 
                         <tr>
                           <td colspan="2">
                             <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/tw.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Twitter</div>
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/tw.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Twitter
+                              </div>
                             </div>
                           </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
                         </tr>
 
                         <tr>
                           <td colspan="2">
                             <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/lin.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Linkedin</div>
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/lin.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Linkedin
+                              </div>
                             </div>
                           </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
                         </tr>
 
                         <tr>
                           <td colspan="2">
                             <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/ins.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Instagram</div>
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/ins.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Instagram
+                              </div>
                             </div>
                           </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
                         </tr>
 
                         <tr>
                           <td colspan="2">
                             <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/dr.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Dribbble</div>
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/dr.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Dribbble
+                              </div>
                             </div>
                           </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
                         </tr>
 
                         <tr>
                           <td colspan="2">
                             <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/be.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Behance</div>
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/be.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Behance
+                              </div>
                             </div>
                           </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
                         </tr>
 
                         <tr>
                           <td colspan="2">
                             <div class="rt-single-icon-box rt-align-center">
-                              <div class="icon-thumb rt-mr-8"><img src="assets/images/svg/social/pin.svg" alt=""></div>
-                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">Pinterest</div>
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/pin.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Pinterest
+                              </div>
                             </div>
                           </td>
-                          <td class=" body-font-4 text-gray-700">5,761,687</td>
-                          <td class=" body-font-4 text-gray-700">68,412</td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
                         </tr>
 
                       </tbody>
@@ -899,25 +1011,21 @@
                 </div>
               </div>
             </div>
-            <div class="col  col-only-4 col-only-xs-12 col-only-md-6">
+            <div class="col col-only-4 col-only-xs-12 col-only-md-6">
               <div class="card">
-                <div class="card-header">
-                  Calendar
-                </div>
+                <div class="card-header">Calendar</div>
                 <div class="card-body body-calendar">
                   <div class="date-picker-calender rt-pt-10"></div>
                 </div>
               </div>
             </div>
-            <div class="col  col-only-5 col-only-md-12">
+            <div class="col col-only-5 col-only-md-12">
               <div class="card">
-                <div class="card-header">
-                  Operating System
-                </div>
+                <div class="card-header">Operating System</div>
                 <div class="operating-system-wrap">
                   <div class="operating-system-item">
                     <div class="operating-system-thumb">
-                      <img src="assets/images/svg/windows.svg" alt="">
+                      <img src="assets/images/svg/windows.svg" alt="" />
                     </div>
                     <div class="operating-system-data">
                       <a href="#">Computer & Laptop</a>
@@ -927,7 +1035,7 @@
                   </div>
                   <div class="operating-system-item">
                     <div class="operating-system-thumb">
-                      <img src="assets/images/svg/MacOS.svg" alt="">
+                      <img src="assets/images/svg/MacOS.svg" alt="" />
                     </div>
                     <div class="operating-system-data">
                       <a href="#">Computer & Laptop</a>
@@ -937,7 +1045,7 @@
                   </div>
                   <div class="operating-system-item">
                     <div class="operating-system-thumb">
-                      <img src="assets/images/svg/iOS.svg" alt="">
+                      <img src="assets/images/svg/iOS.svg" alt="" />
                     </div>
                     <div class="operating-system-data">
                       <a href="#">Mobile & Tablet</a>
@@ -947,7 +1055,7 @@
                   </div>
                   <div class="operating-system-item">
                     <div class="operating-system-thumb">
-                      <img src="assets/images/svg/Android.svg" alt="">
+                      <img src="assets/images/svg/Android.svg" alt="" />
                     </div>
                     <div class="operating-system-data">
                       <a href="#">Mobile & Tablet</a>
@@ -957,7 +1065,7 @@
                   </div>
                   <div class="operating-system-item">
                     <div class="operating-system-thumb">
-                      <img src="assets/images/svg/Ubuntu.svg" alt="">
+                      <img src="assets/images/svg/Ubuntu.svg" alt="" />
                     </div>
                     <div class="operating-system-data">
                       <a href="#">Computer & Laptop</a>
@@ -973,7 +1081,10 @@
           <footer>
             <div class="footer-content">
               <div>
-                <p>© 2021 - Relik admin dashboard. Design & develop by <a href="#">Templatecookie</a> </p>
+                <p>
+                  © 2021 - Wadmin admin dashboard. Design & develop by
+                  <a href="#">Templatecookie</a>
+                </p>
               </div>
               <div>
                 <ul>
@@ -984,6 +1095,7 @@
               </div>
             </div>
           </footer>
+
         </div>
       </div>
     </div>
@@ -992,7 +1104,7 @@
 
   <div class="rt-mobile-menu-overlay"></div>
   <!-- /.rt-mobile-menu-overlay -->
-  <div id="template2" style="display: none;">
+  <div id="template2" style="display: none">
     <div class="PopoverParent">
       <div class="Popover-header">
         <a class="rt-single-icon-box user-profile-icon-big rt-align-center" href="#">
@@ -1013,32 +1125,32 @@
             <li>
               <a href="profile.html">
                 <span class="icon-i">
-                                        <i class="ph-user"></i>
-                                    </span>
+                    <i class="ph-user"></i>
+                  </span>
                 Profile
               </a>
             </li>
             <li>
               <a href="invoice.html">
                 <span class="icon-i">
-                                        <i class="ph-chart-bar"></i>
-                                    </span>
+                    <i class="ph-chart-bar"></i>
+                  </span>
                 Reports
               </a>
             </li>
             <li>
               <a href="setting.html">
                 <span class="icon-i">
-                                        <i class="ph-gear"></i>
-                                    </span>
+                    <i class="ph-gear"></i>
+                  </span>
                 Settings
               </a>
             </li>
             <li>
               <a href="faq.html">
                 <span class="icon-i">
-                                        <i class="ph-question"></i>
-                                    </span>
+                    <i class="ph-question"></i>
+                  </span>
                 Get Help
               </a>
             </li>
@@ -1047,34 +1159,49 @@
         <div class="popOverFooter">
           <a href="#">
             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17.3" height="17.3" viewBox="0 0 17.3 17.3">
-                                    <g id="log-out" transform="translate(-2.35 -2.35)">
-                                        <path
-                                            id="Path_2782"
-                                            data-name="Path 2782"
-                                            d="M8.333,19H4.778A1.778,1.778,0,0,1,3,17.222V4.778A1.778,1.778,0,0,1,4.778,3H8.333"
-                                            transform="translate(0 0)"
-                                            fill="none"
-                                            stroke="#4d5afb"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.3"
-                                        />
-                                        <path
-                                            id="Path_2783"
-                                            data-name="Path 2783"
-                                            d="M16,15.889l4.444-4.444L16,7"
-                                            transform="translate(-1.444 -0.444)"
-                                            fill="none"
-                                            stroke="#4d5afb"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.3"
-                                        />
-                                        <line id="Line_11" data-name="Line 11" x1="10.667" transform="translate(8.333 11)" fill="none" stroke="#4d5afb" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" />
-                                    </g>
-                                </svg>
-                            </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.3"
+                  height="17.3"
+                  viewBox="0 0 17.3 17.3"
+                >
+                  <g id="log-out" transform="translate(-2.35 -2.35)">
+                    <path
+                      id="Path_2782"
+                      data-name="Path 2782"
+                      d="M8.333,19H4.778A1.778,1.778,0,0,1,3,17.222V4.778A1.778,1.778,0,0,1,4.778,3H8.333"
+                      transform="translate(0 0)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                    <path
+                      id="Path_2783"
+                      data-name="Path 2783"
+                      d="M16,15.889l4.444-4.444L16,7"
+                      transform="translate(-1.444 -0.444)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                    <line
+                      id="Line_11"
+                      data-name="Line 11"
+                      x1="10.667"
+                      transform="translate(8.333 11)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                  </g>
+                </svg>
+              </span>
             Log Out
           </a>
         </div>
@@ -1082,7 +1209,7 @@
     </div>
   </div>
 
-  <div id="template" style="display: none;">
+  <div id="template" style="display: none">
     <div class="PopoverParent min-372">
       <div class="Popover-header d-flex justify-content-between">
         <div class="d-blok f-size-14 line-height-20 text-gray-900">
@@ -1277,6 +1404,7 @@
   <script src="assets/js/jquery-ui.min.js"></script>
   <script src="https://unpkg.com/phosphor-icons"></script>
   <script src="assets/js/custom-select.js"></script>
+  <script src="assets/js/custom-select2.js"></script>
   <script src="assets/js/waves.js"></script>
   <script src="assets/js/dragula.min.js"></script>
   <script src="assets/js/appkanban.js"></script>
