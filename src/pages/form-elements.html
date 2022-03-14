@@ -1,11 +1,10 @@
-{% extends "layout/layout.html" %}
-{% set page_title = "Form Elements" %}
-{% block content %}
+{% extends "layout/layout.html" %} {% set page_title = "Form Elements" %} {%
+block content %}
 
 <main class="app-wrapper">
-  {% include "../templates/layout/header-footer/app-header.html" %}
-  {% include "../templates/layout/header-footer/app-sidebar.html" %}
-  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  {% include "../templates/layout/header-footer/app-header.html" %} {% include
+  "../templates/layout/header-footer/app-sidebar.html" %} {% include
+  "../templates/layout/header-footer/topnavbar.html" %}
   <div class="content-wrapper">
     <div class="page-content">
       <div class="container-fluid">
@@ -20,56 +19,81 @@
               <div class="card-header">Basic Input Field</div>
               <div class="card-body">
                 <form action="#">
-                    <div class="fromGroup mb-3">
-                      <label>Text Field</label>
-                      <input class="form-control" type="text" placeholder="">
-                    </div>
-                    <div class="fromGroup mb-3">
-                      <label>Email</label>
-                      <input class="form-control" type="email" placeholder="Twitter profile url...">
-                    </div>
-                    <div class="fromGroup eye mb-3">
-                      <label>Password</label>
-                      <div class="form-control-icon">
-                        <input id="password-hide_show" class="form-control" type="password" placeholder="password">
-                        <div class="has-badge">
-                          <i class="ph-eye"></i>
-                        </div>
+                  <div class="fromGroup mb-3">
+                    <label>Text Field</label>
+                    <input class="form-control" type="text" placeholder="" />
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Email</label>
+                    <input
+                      class="form-control"
+                      type="email"
+                      placeholder="Twitter profile url..."
+                    />
+                  </div>
+                  <div class="fromGroup eye mb-3">
+                    <label>Password</label>
+                    <div class="form-control-icon">
+                      <input
+                        id="password-hide_show"
+                        class="form-control"
+                        type="password"
+                        placeholder="password"
+                      />
+                      <div class="has-badge">
+                        <i class="ph-eye"></i>
                       </div>
                     </div>
-                    <div class="fromGroup has-icon mb-3">
-                      <label>Search</label>
-                      <div class="form-control-icon">
-                        <input class="form-control" type="search" placeholder="Search for anything...">
-                        <div class="icon-badge-2">
-                          <img src="assets/images/svg/search2.svg" alt="">
-                        </div>
+                  </div>
+                  <div class="fromGroup has-icon mb-3">
+                    <label>Search</label>
+                    <div class="form-control-icon">
+                      <input
+                        class="form-control"
+                        type="search"
+                        placeholder="Search for anything..."
+                      />
+                      <div class="icon-badge-2">
+                        <img src="assets/images/svg/search2.svg" alt="" />
                       </div>
                     </div>
-                    <div class="fromGroup has-icon mb-3">
-                      <label>Left Icon</label>
-                      <div class="form-control-icon">
-                        <input class="form-control" type="search" placeholder="Write down your location...">
-                        <div class="icon-badge-2">
-                          <img src="assets/images/svg/map2.svg" alt="">
-                        </div>
+                  </div>
+                  <div class="fromGroup has-icon mb-3">
+                    <label>Left Icon</label>
+                    <div class="form-control-icon">
+                      <input
+                        class="form-control"
+                        type="search"
+                        placeholder="Write down your location..."
+                      />
+                      <div class="icon-badge-2">
+                        <img src="assets/images/svg/map2.svg" alt="" />
                       </div>
                     </div>
-                    <div class="fromGroup has-icon mb-3">
-                      <label>date</label>
-                      <div class="form-control-icon">
-                        <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY">
-                        <!-- <div class="date-picker-calender rt-pt-15"></div> -->
-                        <div class="icon-badge-2">
-                          <img src="assets/images/svg/calendar.svg" alt="">
-                        </div>
+                  </div>
+                  <div class="fromGroup has-icon mb-3">
+                    <label>date</label>
+                    <div class="form-control-icon">
+                      <input
+                        class="form-control date-picker-calender"
+                        type="text"
+                        placeholder="DD / MM / YY"
+                      />
+                      <!-- <div class="date-picker-calender rt-pt-15"></div> -->
+                      <div class="icon-badge-2">
+                        <img src="assets/images/svg/calendar.svg" alt="" />
                       </div>
                     </div>
-                    <div class="fromGroup mb-3">
-                      <label>Message</label>
-                      <textarea class="form-control" name="textarea" placeholder="Write your message, description..."
-                        spellcheck="false"></textarea>
-                    </div>
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Message</label>
+                    <textarea
+                      class="form-control"
+                      name="textarea"
+                      placeholder="Write your message, description..."
+                      spellcheck="false"
+                    ></textarea>
+                  </div>
                 </form>
               </div>
             </div>
@@ -138,19 +162,35 @@
                   <div class="card-body">
                     <form action="#">
                       <div class="form-check from-chekbox-custom mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="check-one">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="check-one"
+                        />
                         <label class="form-check-label" for="check-one">
                           Option 01
                         </label>
                       </div>
                       <div class="form-check from-chekbox-custom mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="check-two" checked>
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="check-two"
+                          checked
+                        />
                         <label class="form-check-label" for="check-two">
                           Option 02
                         </label>
                       </div>
                       <div class="form-check from-chekbox-custom">
-                        <input class="form-check-input" type="checkbox" value="" id="check-three">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="check-three"
+                        />
                         <label class="form-check-label" for="check-three">
                           Option 03
                         </label>
@@ -165,19 +205,35 @@
                   <div class="card-body">
                     <form action="#">
                       <div class="form-check from-radio-custom mb-3">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-one">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="radio-one"
+                        />
                         <label class="form-check-label" for="radio-one">
                           Option 01
                         </label>
                       </div>
                       <div class="form-check from-radio-custom mb-3">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-two">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="radio-two"
+                        />
                         <label class="form-check-label" for="radio-two">
                           Option 02
                         </label>
                       </div>
                       <div class="form-check from-radio-custom">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-three" checked>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="radio-three"
+                          checked
+                        />
                         <label class="form-check-label" for="radio-three">
                           Option 03
                         </label>
@@ -190,26 +246,42 @@
                 <div class="card">
                   <div class="card-header">Toggle Switches</div>
                   <div class="card-body">
-                      <form action="#">
-                        <div class="form-check form-switch custom-switch mb-3">
-                          <input class="form-check-input rt-mr-8" type="checkbox" role="switch" id="switch-one" checked>
-                          <label class="form-check-label" for="switch-one">
-                            Option 01
-                          </label>
-                        </div>
-                        <div class="form-check form-switch custom-switch mb-3">
-                          <input class="form-check-input rt-mr-8" type="checkbox" role="switch" id="switch-two">
-                          <label class="form-check-label" for="switch-two">
-                            Option 02
-                          </label>
-                        </div>
-                        <div class="form-check form-switch custom-switch">
-                          <input class="form-check-input rt-mr-8" type="checkbox" role="switch" id="switch-three">
-                          <label class="form-check-label" for="switch-three">
-                            Option 03
-                          </label>
-                        </div>
-                      </form>
+                    <form action="#">
+                      <div class="form-check form-switch custom-switch mb-3">
+                        <input
+                          class="form-check-input rt-mr-8"
+                          type="checkbox"
+                          role="switch"
+                          id="switch-one"
+                          checked
+                        />
+                        <label class="form-check-label" for="switch-one">
+                          Option 01
+                        </label>
+                      </div>
+                      <div class="form-check form-switch custom-switch mb-3">
+                        <input
+                          class="form-check-input rt-mr-8"
+                          type="checkbox"
+                          role="switch"
+                          id="switch-two"
+                        />
+                        <label class="form-check-label" for="switch-two">
+                          Option 02
+                        </label>
+                      </div>
+                      <div class="form-check form-switch custom-switch">
+                        <input
+                          class="form-check-input rt-mr-8"
+                          type="checkbox"
+                          role="switch"
+                          id="switch-three"
+                        />
+                        <label class="form-check-label" for="switch-three">
+                          Option 03
+                        </label>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -224,12 +296,21 @@
                 <form action="#">
                   <div class="fromGroup mb-3">
                     <label>Email</label>
-                    <input class="form-control" type="email" placeholder="Email address">
+                    <input
+                      class="form-control"
+                      type="email"
+                      placeholder="Email address"
+                    />
                   </div>
                   <div class="fromGroup eye mb-3">
                     <label>Password</label>
                     <div class="form-control-icon">
-                      <input id="password-hide_show2" class="form-control" type="password" placeholder="password">
+                      <input
+                        id="password-hide_show2"
+                        class="form-control"
+                        type="password"
+                        placeholder="password"
+                      />
                       <div class="has-badge select-icon__two">
                         <i class="ph-eye"></i>
                       </div>
@@ -246,7 +327,13 @@
                     </div>
                   </div>
                   <div class="form-check from-chekbox-custom rt-mb-30">
-                    <input class="form-check-input" type="checkbox" value="" id="check-four" checked="">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="check-four"
+                      checked=""
+                    />
                     <label class="form-check-label" for="check-four">
                       I’m agree with all of your terms & conditions.
                     </label>
@@ -256,12 +343,9 @@
                       <span class="button-icon align-icon-right">
                         <i class="ph-arrow-right"></i>
                       </span>
-                      <span class="button-text">
-                        Submit Form
-                      </span>
+                      <span class="button-text"> Submit Form </span>
                     </span>
                   </button>
-                  
                 </form>
               </div>
             </div>
@@ -273,12 +357,21 @@
                 <form action="#">
                   <div class="fromGroup horizontal-form mb-3">
                     <label>Email</label>
-                    <input class="form-control" type="email" placeholder="Email address">
+                    <input
+                      class="form-control"
+                      type="email"
+                      placeholder="Email address"
+                    />
                   </div>
                   <div class="fromGroup horizontal-form eye mb-3">
                     <label>Password</label>
                     <div class="form-control-icon">
-                      <input id="password-hide_show3" class="form-control" type="password" placeholder="password">
+                      <input
+                        id="password-hide_show3"
+                        class="form-control"
+                        type="password"
+                        placeholder="password"
+                      />
                       <div class="has-badge select-icon__three">
                         <i class="ph-eye"></i>
                       </div>
@@ -295,7 +388,13 @@
                     </div>
                   </div>
                   <div class="form-check from-chekbox-custom rt-mb-30">
-                    <input class="form-check-input" type="checkbox" value="" id="check-five" checked="">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="check-five"
+                      checked=""
+                    />
                     <label class="form-check-label" for="check-five">
                       I’m agree with all of your terms & conditions.
                     </label>
@@ -305,12 +404,9 @@
                       <span class="button-icon align-icon-right">
                         <i class="ph-arrow-right"></i>
                       </span>
-                      <span class="button-text">
-                        Submit Form
-                      </span>
+                      <span class="button-text"> Submit Form </span>
                     </span>
                   </button>
-          
                 </form>
               </div>
             </div>
@@ -323,22 +419,35 @@
             <form action="#">
               <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <div class="fromGroup mb-3">
-                      <label>Email</label>
-                      <input class="form-control" type="email" placeholder="Email address">
-                    </div>
+                  <div class="fromGroup mb-3">
+                    <label>Email</label>
+                    <input
+                      class="form-control"
+                      type="email"
+                      placeholder="Email address"
+                    />
+                  </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="fromGroup mb-3">
                     <label>Email</label>
-                    <input class="form-control" type="email" placeholder="Email address">
+                    <input
+                      class="form-control"
+                      type="email"
+                      placeholder="Email address"
+                    />
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="fromGroup eye mb-3">
                     <label>Password</label>
                     <div class="form-control-icon">
-                      <input id="password-hide_show4" class="form-control" type="password" placeholder="password">
+                      <input
+                        id="password-hide_show4"
+                        class="form-control"
+                        type="password"
+                        placeholder="password"
+                      />
                       <div class="has-badge select-icon__four">
                         <i class="ph-eye"></i>
                       </div>
@@ -349,7 +458,12 @@
                   <div class="fromGroup eye mb-3">
                     <label>Password</label>
                     <div class="form-control-icon">
-                      <input id="password-hide_show5" class="form-control" type="password" placeholder="password">
+                      <input
+                        id="password-hide_show5"
+                        class="form-control"
+                        type="password"
+                        placeholder="password"
+                      />
                       <div class="has-badge select-icon__five">
                         <i class="ph-eye"></i>
                       </div>
@@ -359,11 +473,19 @@
               </div>
               <div class="fromGroup mb-3">
                 <label>Addresss Line 01</label>
-                <input class="form-control" type="email" placeholder="Email address">
+                <input
+                  class="form-control"
+                  type="email"
+                  placeholder="Email address"
+                />
               </div>
               <div class="fromGroup mb-3">
                 <label>Addresss Line 02</label>
-                <input class="form-control" type="email" placeholder="Email address">
+                <input
+                  class="form-control"
+                  type="email"
+                  placeholder="Email address"
+                />
               </div>
               <div class="row">
                 <div class="col-xl-5 col-lg-4">
@@ -392,11 +514,31 @@
                 </div>
                 <div class="col-xl-2 col-lg-4">
                   <div class="fromGroup mb-3">
-                    <label>Zip Cod3</label>
-                    <input class="form-control" type="text">
+                    <label>Zip Code</label>
+                    <input class="form-control" type="text" />
                   </div>
                 </div>
               </div>
+              <div class="form-check from-chekbox-custom rt-mb-30">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="check-five_2"
+                  checked=""
+                />
+                <label class="form-check-label" for="check-five_2">
+                  I’m agree with all of your terms & conditions.
+                </label>
+              </div>
+              <button type="button" class="btn btn-primary pill btn-icon">
+                <span class="button-content-wrapper">
+                  <span class="button-icon align-icon-right">
+                    <i class="ph-arrow-right"></i>
+                  </span>
+                  <span class="button-text"> Submit Form </span>
+                </span>
+              </button>
             </form>
           </div>
         </div>
@@ -405,6 +547,5 @@
     </div>
   </div>
 </main>
-
 
 {% endblock %}

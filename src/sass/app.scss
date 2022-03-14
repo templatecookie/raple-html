@@ -1,6 +1,6 @@
 /**!
 
-    Template Name: 'Relik-Admin Dashboard'
+    Template Name: 'Wadmin-Admin Dashboard'
     Template URI:
     Description: ' '
     Author: templatecookie
@@ -75,75 +75,33 @@
 **/
 
 // 1. Configuration and helpers
-@import
-        "abstracts/variables", 
-        "abstracts/functions", 
-        "abstracts/mixins",
-        "abstracts/placeholder";
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins",
+  "abstracts/placeholder";
 
 // 2. Vendors
-@import 
-        "vendors/bourbon/bourbon",
-        "vendors/select2";
+@import "vendors/bourbon/bourbon", "vendors/select2";
 
 // 3. base css
-@import 
-        "base/base",
-        "base/typography",
-        "base/helpers";
+@import "base/base", "base/typography", "base/helpers";
 
 // 4. Layout
-@import
-        "layout/header",
-        "layout/footer",
-        "layout/menu",
-        "layout/iconbox",
-        "layout/mega-menu",
-        "layout/navtools",
-        "layout/sidebar",
-        "layout/app-settings", 
-        "layout/menu-responsive";
+@import "layout/header", "layout/footer", "layout/menu", "layout/iconbox",
+  "layout/mega-menu", "layout/navtools", "layout/sidebar", "layout/app-settings",
+  "layout/menu-responsive";
 
 // 5. Components
-@import 
-        "components/accordian",
-        "components/button",
-        "components/bs-dropdown",
-        "components/badge",
-        "components/form",
-        "components/tippyjs",
-        "components/card",
-        "components/breadcrumbs",
-        "components/pagination",
-        "components/alert",
-        "components/label-card",
-        "components/file",
-        "components/banner",
-        "components/payment-card",
-        "components/invoice-list",
-        "components/payment-history",
-        "components/modal",
-        "components/profile",
-        "components/jquery-ui/calender",
-        "components/info",
-        "components/social-icon",
-        "components/events/calender",
-        "components/card-activity",
-        "components/pricing",
-        "components/waves",
-        "components/faq",
-        "components/tables",
-        "components/active-visitor";
+@import "components/accordian", "components/button", "components/bs-dropdown",
+  "components/badge", "components/form", "components/tippyjs", "components/card",
+  "components/breadcrumbs", "components/pagination", "components/alert",
+  "components/label-card", "components/file", "components/banner",
+  "components/payment-card", "components/invoice-list",
+  "components/payment-history", "components/modal", "components/profile",
+  "components/jquery-ui/calender", "components/info", "components/social-icon",
+  "components/events/calender", "components/card-activity", "components/pricing",
+  "components/waves", "components/faq", "components/tables",
+  "components/active-visitor";
 
 // 6. Page-specific styles
-@import 
-        "pages/home",
-        "pages/setting",
-        "pages/billing",
-        "pages/blank",
-        "pages/login",
-        "pages/styleguide",
-        "pages/file-manager",
-        "pages/kanban-board",
-        "pages/documentation",
-        "pages/presentation";
+@import "pages/home", "pages/setting", "pages/billing", "pages/blank",
+  "pages/login", "pages/styleguide", "pages/file-manager", "pages/kanban-board",
+  "pages/documentation", "pages/presentation";

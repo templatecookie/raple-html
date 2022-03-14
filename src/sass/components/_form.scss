@@ -38,6 +38,7 @@ $primary_color: var(--primary-500);
     border: 1px solid var(--gray-50);
     background-color: transparent;
     color: var(--gray-900);
+    border-radius: 4px;
     appearance: none;
   }
 }
@@ -56,6 +57,7 @@ select,
   background-color: transparent;
   color: var(--gray-900);
   appearance: none;
+  border-radius: 4px;
 
   &:focus {
     outline: none;
@@ -445,9 +447,9 @@ select,
 }
 
 //custom checkbox
-.has-minus{
-  &.form-check{
-   margin-left: -1.5rem;
+.has-minus {
+  &.form-check {
+    margin-left: -1.5rem;
   }
 }
 .from-chekbox-custom {
@@ -693,5 +695,11 @@ select,
   .form-control-icon,
   .select-box {
     flex: 1;
+  }
+}
+
+.modal-dialog.createcard-modal-dialog {
+  .modal-content {
+    border-radius: 8px;
   }
 }
