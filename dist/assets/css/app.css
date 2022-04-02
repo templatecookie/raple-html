@@ -1,78 +1,77 @@
 @charset "UTF-8";
 /**!
+  Template Name: 'Wadmin-Admin Dashboard'
+  Template URI:
+  Description: ' '
+  Author: templatecookie
+  Author URI: 
+  Version: 1.0.0
+  -------------------------------------------------
+    1. Configuration and helpers
+    1.1 mixins
+    1.2 variables
+    1.3 functions
+    1.4 placeholder
 
-    Template Name: 'Wadmin-Admin Dashboard'
-    Template URI:
-    Description: ' '
-    Author: templatecookie
-    Author URI: 
-    Version: 1.0.0
-    -------------------------------------------------
-     1. Configuration and helpers
-      1.1 mixins
-      1.2 variables
-      1.3 functions
-      1.4 placeholder
+    2. Vendors
+    2.1 chart 
+    2.2 select2
+    2.3 bourbon
 
-     2. Vendors
-      2.1 chart 
-      2.2 select2
-      2.3 bourbon
+    3. Base
+    3.1 base
+    3.2 typography
+    3.3 helpers
 
-     3. Base
-      3.1 base
-      3.2 typography
-      3.3 helpers
+    4. Layout
+    4.1 header
+    4.2 footer
+    4.3 menu 
+    4.4 iconbox
+    4.5 mega-menu
+    4.6 navtools
+    4.7 app-settings
+    4.8 menu-responsive 
 
-     4. Layout
-      4.1 header
-      4.2 footer
-      4.3 menu 
-      4.4 iconbox
-      4.5 mega-menu
-      4.6 navtools
-      4.7 app-settings
-      4.8 menu-responsive 
+    5. Components 
+      5.1 accordian
+      5.2 button 
+      5.3 bs-dropdown
+      5.4 badge 
+      5.5 form 
+      5.6 tippyjs
+      5.7 card
+      5.8 breadcrumbs
+      5.9 pagination 
+      5.10 alert
+      5.11 label-card
+      5.12 file
+      5.13 file 
+      5.14 banner 
+      5.15 payment-card
+      5.16 invoice-list
+      5.17 payment-history
+      5.18 modal
+      5.19 profile
+      5.20 calender 
+      5.21 card-activity 
+      5.22 pricing 
+      5.23 waves 
+      5.24 faq 
+      5.25 tables 
+      5.26 active-visitor
 
-     5. Components 
-        5.1 accordian
-        5.2 button 
-        5.3 bs-dropdown
-        5.4 badge 
-        5.5 form 
-        5.6 tippyjs
-        5.7 card
-        5.8 breadcrumbs
-        5.9 pagination 
-        5.10 alert
-        5.11 label-card
-        5.12 file
-        5.13 file 
-        5.14 banner 
-        5.15 payment-card
-        5.16 invoice-list
-        5.17 payment-history
-        5.18 modal
-        5.19 profile
-        5.20 calender 
-        5.21 card-activity 
-        5.22 pricing 
-        5.23 waves 
-        5.24 faq 
-        5.25 tables 
-        5.26 active-visitor
-
-     6. Page-specific styles
-       6.1 home 
-       6.2 setting 
-       6.3 billing 
-       6.4 blank 
-       6.5 login 
-       6.6 styleguide 
-       6.7 file-manager
-       6.8 kanban-board
-       6.9 documentation 
-       6.10 presentation 
+    6. Page-specific styles
+      6.1 home 
+      6.2 setting 
+      6.3 billing 
+      6.4 blank 
+      6.5 login 
+      6.6 styleguide 
+      6.7 file-manager
+      6.8 kanban-board
+      6.9 documentation 
+      6.10 presentation 
 **/
 .docu .resources-list ul li a, .docu-info p, .docu-card .usage-file ul li p, .docu-card p, .tables .table-wrapper .table tbody tr th,
 .tables .table-wrapper .table tbody tr td, .tables .table-wrapper .table .users-profile, .card-priority__footer .labels-info li a, .card-priority__title, .card-priority__actions .dropdown-actions li a, .card-basic p, .card-aligned__info p, footer .footer-content ul li a, footer .footer-content p,
@@ -12233,6 +12232,70 @@ button.dots-three:hover path {
 @media (max-width: 767.98px) {
   .fix-conent p {
     margin-bottom: 30px;
+  }
+}
+
+.templatecookie-btn {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 10000000000000000 !important;
+}
+.templatecookie-btn .purchase-btn {
+  box-shadow: 0px 0px 3px 0px white !important;
+  background-color: #171717 !important;
+  color: white !important;
+  width: max-content !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0px 20px !important;
+  height: 50px !important;
+  border-radius: 30px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  animation-name: wave-animation !important;
+  animation-duration: 3.5s !important;
+  animation-iteration-count: infinite !important;
+  transform-origin: 70% 70% !important;
+}
+.templatecookie-btn .purchase-btn span svg {
+  margin-left: 8px;
+  display: block;
+  width: 20px;
+  height: 18px;
+}
+.templatecookie-btn .purchase-btn span svg path {
+  stroke: white;
+}
+.templatecookie-btn .purchase-btn:hover {
+  animation-name: unset !important;
+}
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 /*# sourceMappingURL=app.css.map */
