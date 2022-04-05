@@ -116,7 +116,7 @@
   &--two {
     display: flex;
     max-width: 100%;
-    max-height: 204px;
+    max-height: 195px;
     align-items: center;
     justify-content: space-between;
     @include max(767px) {
@@ -250,7 +250,7 @@
   &__content {
     width: 100%;
     padding: 24px;
-    padding-top: 256px;
+    padding-top: 235px;
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 0%,

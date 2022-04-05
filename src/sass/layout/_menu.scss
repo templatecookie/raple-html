@@ -413,9 +413,14 @@
     li {
       line-height: 1;
       a {
-        padding: 8px 12px;
+        padding: 9px 13px;
         color: black;
         text-transform: capitalize;
+        transition: all 0.4s;
+        &:hover{
+          color: white;
+          background-color: var(--primary-500);
+        }
       }
     }
   }

@@ -23,8 +23,11 @@
           width: auto;
         }
         &:first-child {
-          padding-left: 60px;
+          padding-left: 65px;
           border-radius: 0;
+          @include max(1199px) {
+            padding-left: 55px;
+          }
         }
         &:last-child {
           border-radius: 0;

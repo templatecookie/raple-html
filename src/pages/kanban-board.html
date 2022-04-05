@@ -23,11 +23,51 @@ block content %}
                       <div class="kanban-board-header">
                         <h5>To-do</h5>
                         <button
-                          class="dots-three text-gray-400 f-size-24 lh-1"
+                          class="dots-three text-gray-400 f-size-24 lh-1" id="dropdownMenuButton_11"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="true"
                           type="button"
                         >
                           <img src="assets/images/svg/dot.svg" alt="clock" />
                         </button>
+                        <ul class="dropdown-menu dropdown-actions dropdown-menu-end"  aria-labelledby="dropdownMenuButton_11" data-popper-placement="bottom-start">
+                            <li>
+                              <a href="#" class="dropdown-item">
+                                <span>
+                                  <img
+                                    src="assets/images/svg/pen.svg"
+                                    alt="pen"
+                                  />
+                                </span>
+                                Edit
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="dropdown-item">
+                                <span>
+                                  <img
+                                    src="assets/images/svg/copy-link.svg"
+                                    alt="copylink"
+                                  />
+                                </span>
+                                Copy Link
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="dropdown-item remove-killer plain-btn delete-content"
+                              >
+                                <span>
+                                  <img
+                                    src="assets/images/svg/trash.svg"
+                                    alt="copylink"
+                                  />
+                                </span>
+                                Delete
+                              </a>
+                            </li>
+                        </ul>
                       </div>
                       <div id="task-1">
                         <div id="todo">
@@ -309,10 +349,50 @@ block content %}
                         <h5>Doing</h5>
                         <button
                           class="dots-three text-gray-400 f-size-24 lh-1"
-                          type="button"
+                          type="button" id="dropdownMenuButton_12"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="true"
                         >
                           <img src="assets/images/svg/dot.svg" alt="clock" />
                         </button>
+                        <ul class="dropdown-menu dropdown-actions dropdown-menu-end"  aria-labelledby="dropdownMenuButton_12" data-popper-placement="bottom-start">
+                          <li>
+                            <a href="#" class="dropdown-item">
+                              <span>
+                                <img
+                                  src="assets/images/svg/pen.svg"
+                                  alt="pen"
+                                />
+                              </span>
+                              Edit
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown-item">
+                              <span>
+                                <img
+                                  src="assets/images/svg/copy-link.svg"
+                                  alt="copylink"
+                                />
+                              </span>
+                              Copy Link
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="dropdown-item remove-killer plain-btn delete-content"
+                            >
+                              <span>
+                                <img
+                                  src="assets/images/svg/trash.svg"
+                                  alt="copylink"
+                                />
+                              </span>
+                              Delete
+                            </a>
+                          </li>
+                      </ul>
                       </div>
                       <div id="task-2">
                         <div id="doing">
@@ -497,10 +577,50 @@ block content %}
                         <h5>Done</h5>
                         <button
                           class="dots-three text-gray-400 f-size-24 lh-1"
-                          type="button"
+                          type="button" id="dropdownMenuButton_13"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="true"
                         >
                           <img src="assets/images/svg/dot.svg" alt="clock" />
                         </button>
+                        <ul class="dropdown-menu dropdown-actions dropdown-menu-end"  aria-labelledby="dropdownMenuButton_13" data-popper-placement="bottom-start">
+                          <li>
+                            <a href="#" class="dropdown-item">
+                              <span>
+                                <img
+                                  src="assets/images/svg/pen.svg"
+                                  alt="pen"
+                                />
+                              </span>
+                              Edit
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown-item">
+                              <span>
+                                <img
+                                  src="assets/images/svg/copy-link.svg"
+                                  alt="copylink"
+                                />
+                              </span>
+                              Copy Link
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="dropdown-item remove-killer plain-btn delete-content"
+                            >
+                              <span>
+                                <img
+                                  src="assets/images/svg/trash.svg"
+                                  alt="copylink"
+                                />
+                              </span>
+                              Delete
+                            </a>
+                          </li>
+                      </ul>
                       </div>
                       <div id="task-3">
                         <div id="done">
@@ -680,9 +800,8 @@ block content %}
                 </div>
                 <div class="kanbanboard_child">
                   <div class="card">
-                    <div class="card-body text-center">
                       <button
-                        class="plain-btn text-primary-500"
+                        class="plain-btn add-new-column text-primary-500 font-semibold"
                         data-bs-toggle="modal"
                         data-bs-target="#createboard-modal"
                       >
@@ -703,7 +822,6 @@ block content %}
                           </svg> </span
                         >Add new Column
                       </button>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -728,7 +846,7 @@ block content %}
   <div class="modal-dialog createboard-modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="f-size-18 font-medium">Create New Column</h5>
+        <h5 class="f-size-18 font-medium lh-1">Create New Column</h5>
         <button type="button" class="plain-btn" data-bs-dismiss="modal">
           <img
             src="assets/images/svg/odal-close.svg"

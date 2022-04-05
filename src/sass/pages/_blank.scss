@@ -1,7 +1,6 @@
 .blank {
   &-section {
-    height: calc(100vh - 150px);
-    padding-bottom: 150px;
+    height: calc(100vh - 245px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +10,7 @@
     margin: 0 auto;
     @include breakpoint(xs) {
       height: auto;
-      padding: 100px 0;
+      padding: 50px 0;
       display: block;
     }
   }
