@@ -1,476 +1,1957 @@
-{% extends "layout/layout.html" %}
-{% set page_title = "File Manager" %}
-{% block content %}
-
-<main class="app-wrapper">
-  {% include "../templates/layout/header-footer/app-header.html" %}
-  {% include "../templates/layout/header-footer/app-sidebar.html" %}
-  {% include "../templates/layout/header-footer/topnavbar.html" %}
-  <div class="content-wrapper">
-    <div class="page-content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 rt-mb-25">
-            {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
-          </div>
-          <div class="col-xxl-3 col-xl-4">
-            <div class="card">
-              <div class="file-manager-wrap">
-                <div class="file-manager-item">
-                  <button type="button" class="btn btn-primary pill btn-icon" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    <span class="button-content-wrapper">
-                      <span class="button-text">
-                        Upload file
-                      </span>
-                      <span class="button-icon">
-                        <img src="assets/images/svg/plus.svg" alt="">
-                      </span>
-                    </span>
-                  </button>
-                  <a class="file-text-wrap" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                    aria-expanded="false" aria-controls="collapseExample">
-                    <div class="file-text-left">
-                      <div class="file-text-icon">
-                        <img src="assets/images/svg/filetext.svg" alt="">
-                      </div>
-                      <div class="file-text-data">
-                        <h4>All Files</h4>
-                      </div>
-                    </div>
-                    <div class="file-text-toggle">
-                        <img src="assets/images/svg/arrow-bottom.svg" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="collapse show" id="collapseExample">
+{% extends "layout/layout.html" %} {% set page_title = "File Manager" %} {%
+  block content %}
+  
+  <main class="app-wrapper">
+    {% include "../templates/layout/header-footer/app-header.html" %} {% include
+    "../templates/layout/header-footer/app-sidebar.html" %} {% include
+    "../templates/layout/header-footer/topnavbar.html" %}
+    <div class="content-wrapper">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 rt-mb-25">
+              {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+            </div>
+            <div class="col-xxl-3 col-xl-4">
+              <div class="card">
+                <div class="file-manager-wrap">
                   <div class="file-manager-item">
-                    <div class="connected-apps">
-                      <p>Connected apps</p>
-                      <ul>
-                        <li><a href=""><img src="assets/images/svg/google-drive.svg" alt="">Google Drive</a></li>
-                        <li><a href=""><img src="assets/images/svg/dropbox.svg" alt="">Dropbox</a></li>
-                        <li><a href=""><img src="assets/images/svg/mail.svg" alt="">Mega</a></li>
-                      </ul>
-                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-primary pill btn-icon"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      <span class="button-content-wrapper">
+                        <span class="button-text"> Upload file </span>
+                        <span class="button-icon">
+                          <img src="assets/images/svg/plus.svg" alt="" />
+                        </span>
+                      </span>
+                    </button>
+                    <a
+                      class="file-text-wrap"
+                      data-bs-toggle="collapse"
+                      href="#collapseExample"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                    >
+                      <div class="file-text-left">
+                        <div class="file-text-icon">
+                          <img src="assets/images/svg/filetext.svg" alt="" />
+                        </div>
+                        <div class="file-text-data">
+                          <h4>All Files</h4>
+                        </div>
+                      </div>
+                      <div class="file-text-toggle">
+                        <img src="assets/images/svg/arrow-bottom.svg" alt="" />
+                      </div>
+                    </a>
                   </div>
-                  <div class="file-manager-item">
-                    <div class="file-link">
-                      <ul>
-                        <li>
-                          <a href="">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
+                  <div class="collapse show" id="collapseExample">
+                    <div class="file-manager-item">
+                      <div class="connected-apps">
+                        <p>Connected apps</p>
+                        <ul>
+                          <li>
+                            <a href=""
+                              ><img
+                                src="assets/images/svg/google-drive.svg"
+                                alt=""
+                              />Google Drive</a
+                            >
+                          </li>
+                          <li>
+                            <a href=""
+                              ><img
+                                src="assets/images/svg/dropbox.svg"
+                                alt=""
+                              />Dropbox</a
+                            >
+                          </li>
+                          <li>
+                            <a href=""
+                              ><img
+                                src="assets/images/svg/mail.svg"
+                                alt=""
+                              />Mega</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="file-manager-item">
+                      <div class="file-link">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                          <li class="nav-item">
+                            <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
                               <path
                                 d="M5 12.5C6.38071 12.5 7.5 11.3807 7.5 10C7.5 8.61929 6.38071 7.5 5 7.5C3.61929 7.5 2.5 8.61929 2.5 10C2.5 11.3807 3.61929 12.5 5 12.5Z"
-                                stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                stroke="#626C70"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
                               <path
                                 d="M13.75 18.125C15.1307 18.125 16.25 17.0057 16.25 15.625C16.25 14.2443 15.1307 13.125 13.75 13.125C12.3693 13.125 11.25 14.2443 11.25 15.625C11.25 17.0057 12.3693 18.125 13.75 18.125Z"
-                                stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                stroke="#626C70"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
                               <path
                                 d="M13.75 6.875C15.1307 6.875 16.25 5.75571 16.25 4.375C16.25 2.99429 15.1307 1.875 13.75 1.875C12.3693 1.875 11.25 2.99429 11.25 4.375C11.25 5.75571 12.3693 6.875 13.75 6.875Z"
-                                stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M11.6472 5.72656L7.1026 8.6481" stroke="#626C70" stroke-width="1.25"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M7.1026 11.3516L11.6472 14.2731" stroke="#626C70" stroke-width="1.25"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                                stroke="#626C70"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M11.6472 5.72656L7.1026 8.6481"
+                                stroke="#626C70"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M7.1026 11.3516L11.6472 14.2731"
+                                stroke="#626C70"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
                             </svg>
-
-                            Shared File
-                          </a>
-                        </li>
-                        <li>
-                          <a href="">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
+                            Shared File</button>
+                          </li>
+                          <li class="nav-item">
+                            <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
                               <path
                                 d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
-                                stroke="#626C70" stroke-width="1.25" stroke-miterlimit="10" />
-                              <path d="M10 5.625V10H14.375" stroke="#626C70" stroke-width="1.25" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                                stroke="#626C70"
+                                stroke-width="1.25"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 5.625V10H14.375"
+                                stroke="#626C70"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
                             </svg>
-
-                            Recents Files
-                          </a>
-                        </li>
-                        <li>
-                          <a href="">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
+                            My Files</button>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><svg
+                              width="18"
+                              height="18"
+                              viewBox="0 0 18 18"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
                               <path
                                 d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
-                                stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                stroke="#959FA3"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
                             </svg>
-
                             Starred
-                          </a>
-                        </li>
-                        <li>
-                          <a href="">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                              <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                              <path
-                                d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375"
-                                stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375"
-                                stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                          </button>
+                          </li>
+                          <li class="nav-item">
+                            <button class="nav-link" id="pills-delete-tab" data-bs-toggle="pill" data-bs-target="#pills-delete" type="button" role="tab" aria-controls="pills-delete" aria-selected="false"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
-
                             Deleted
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="file-manager-progress">
-                  <div class="progress-wrap">
-                    <div class="progress-icon">
-                      <img src="assets/images/svg/clipboardtext.svg" alt="">
-                    </div>
-                    <div class="progress-data">
-                      <h4>Total Storage</h4>
-                      <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0"
-                          aria-valuemax="100"></div>
+                          </button>
+                          </li>
+                        </ul>
                       </div>
-                      <p>3.71 GB of 15 GB available</p>
                     </div>
                   </div>
-                  <div class="banner-wrap bg-secondary-500">
-                    <div class="banner-icon">
-                      <img src="assets/images/svg/folder-open.svg" alt="">
+                  <div class="file-manager-progress">
+                    <div class="progress-wrap">
+                      <div class="progress-icon">
+                        <img src="assets/images/svg/clipboardtext.svg" alt="" />
+                      </div>
+                      <div class="progress-data">
+                        <h4>Total Storage</h4>
+                        <div class="progress">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            aria-valuenow="20"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                        <p>3.71 GB of 15 GB available</p>
+                      </div>
                     </div>
-                    <div class="banner-data">
-                      <p>Become a <span>Pro</span> <br /> to get more <span>Space</span>
-                      </p>
-                      <button type="button" class="btn bg-white pill text-gray-900">Upgrade Plans</button>
+                    <div class="banner-wrap bg-secondary-500">
+                      <div class="banner-icon">
+                        <img src="assets/images/svg/folder-open.svg" alt="" />
+                      </div>
+                      <div class="banner-data">
+                        <p>
+                          Become a <span>Pro</span> <br />
+                          to get more <span>Space</span>
+                        </p>
+                        <button
+                          type="button"
+                          class="btn bg-white pill text-gray-900"
+                        >
+                          Upgrade Plans
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-xxl-9 col-xl-8">
-            <div class="card rt-mb-12">
-              <div class="card-header border-0">Shared Files</div>
-            </div>
-            <div class="recent-file-list table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Size</th>
-                    <th>Date Added</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="large-width extra-padding">
-                      <a href="#">
-                        <div class="recent-file-wrap">
-                          <div class="start-icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
-                                stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+            <div class="col-xxl-9 col-xl-8">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade  show active" id="pills-profile" aria-labelledby="pills-profile-tab">
+                  <div class="card m-0">
+                    <div class="card-header border-0">Shared Files</div>
+                  </div>
+                  <div class="recent-file-list table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Type</th>
+                          <th>Size</th>
+                          <th>Date Added</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="large-width extra-padding">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                              
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3" />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Folder name
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td class="extra-padding">
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="">
+                                Zip File
+                              </a>
+                            </div>
+                          </td>
+                          <td class="extra-padding"><a href="#">14.6 GB</a></td>
+                          <td class="extra-padding"><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td class="extra-padding">
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon c-w" id="dropdownMenuButton13" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
                         
-                          </div>
-                          <div class="folder-name">
-                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
-                                fill="#959FA3" />
-                              <path
-                                d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
-                                fill="#959FA3" />
-                              <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
-                                fill="#959FA3" />
-                            </svg>
-                            Folder name
-                          </div>
-                        </div>
-                      </a>
-                    </td>
-                    <td class="extra-padding">
-                      <div class="link-wrap">
-                        <a href="#">
-                          <img src="assets/images/svg/link.svg" alt="">
-                          Zip File
-                        </a>
-                      </div>
-                    </td>
-                    <td class="extra-padding"><a href="#">14.6 GB</a></td>
-                    <td class="extra-padding"><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
-                    <td class="extra-padding">
-                      <div class="dropdown-wrap">
-                        <button type="button" class="button-icon" id="dropdownMenuButton6" data-bs-toggle="dropdown">
-                          <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
-                              fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
-                          </svg>
-                  
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
-                          <li><a class="dropdown-item" href="#">Download</a></li>
-                          <li><a class="dropdown-item" href="#">Print</a></li>
-                          <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="large-width">
-                      <a href="#">
-                        <div class="recent-file-wrap">
-                          <div class="start-icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
-                                stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton13">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                              
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3" />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Folder name
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="">
+                                Zip File
+                              </a>
+                            </div>
                         
-                          </div>
-                          <div class="folder-name">
-                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
-                                fill="#959FA3" />
-                              <path
-                                d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
-                                fill="#959FA3" />
-                              <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
-                                fill="#959FA3" />
-                            </svg>
-                            Folder name
-                          </div>
-                        </div>
-                      </a>
-                    </td>
-                    <td>
-                      <div class="link-wrap">
-                        <a href="#">
-                          <img src="assets/images/svg/link.svg" alt="">
-                          Zip File
-                        </a>
-                      </div>
-                  
-                    </td>
-                    <td><a href="#">14.6 GB</a></td>
-                    <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
-                    <td>
-                      <div class="dropdown-wrap">
-                        <button type="button" class="button-icon" id="dropdownMenuButton2" data-bs-toggle="dropdown">
-                          <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
-                              fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
-                          </svg>
-                  
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                          <li><a class="dropdown-item" href="#">Download</a></li>
-                          <li><a class="dropdown-item" href="#">Print</a></li>
-                          <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="large-width">
-                      <a href="#">
-                        <div class="recent-file-wrap">
-                          <div class="start-icon">
-                            <img src="assets/images/svg/star2.svg" alt="">
-                          </div>
-                          <div class="folder-name">
-                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
-                                fill="#959FA3" />
-                              <path
-                                d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
-                                fill="#959FA3" />
-                              <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
-                                fill="#959FA3" />
-                            </svg>
-                            Folder name
-                          </div>
-                        </div>
-                      </a>
-                    </td>
-                    <td>
-                      <div class="link-wrap">
-                        <a href="#">
-                          <img src="assets/images/svg/link.svg" alt="">
-                          Zip File
-                        </a>
-                      </div>
-                    </td>
-                    <td><a href="#">14.6 GB</a></td>
-                    <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
-                    <td>
-                      <div class="dropdown-wrap">
-                        <button type="button" class="button-icon" id="dropdownMenuButton3" data-bs-toggle="dropdown">
-                          <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
-                              fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
-                          </svg>
-                  
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                          <li><a class="dropdown-item" href="#">Download</a></li>
-                          <li><a class="dropdown-item" href="#">Print</a></li>
-                          <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="large-width">
-                      <a href="#">
-                        <div class="recent-file-wrap">
-                          <div class="start-icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
-                                stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                          </td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon c-w" id="dropdownMenuButton14" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
                         
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton14">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <img src="assets/images/svg/star2.svg" alt="">
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3" />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Folder name
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="">
+                                Zip File
+                              </a>
+                            </div>
+                          </td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon c-w" id="dropdownMenuButton15" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                        
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton15">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                              
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Templatecookie - Themeforest Templates
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                            <a href="#">
+                              <img src="assets/images/svg/link.svg" alt="">
+                              Zip File
+                            </a>
                           </div>
-                          <div class="folder-name">
-                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
-                                fill="#959FA3" />
-                            </svg>
-                            Templatecookie - Themeforest Templates
+                        </td>
+                        <td><a href="#">14.6 GB</a></td>
+                        <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                        <td>
+                          <div class="dropdown-wrap">
+                            <button type="button" class="button-icon c-w" id="dropdownMenuButton16" data-bs-toggle="dropdown">
+                              <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                  fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                              </svg>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton16">
+                              <li><a class="dropdown-item" href="#">Download</a></li>
+                              <li><a class="dropdown-item" href="#">Print</a></li>
+                              <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                              
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3" />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Echotemplate Logo v1.0
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="">
+                                Zip File
+                              </a>                        
+                            </div>
+                          </td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon c-w" id="dropdownMenuButton17" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                        
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton17">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-home" aria-labelledby="pills-home-tab">
+                  <div class="card m-0">
+                    <div class="file-manager-wrap">
+                      <h3 class="file-title">My Files</h3>
+                      <div class="file-wrap">
+                        <div class="file-item">
+                          <div class="file-icon">
+                            <img src="assets/images/svg/image.svg" alt="" />
+                          </div>
+                          <div class="file-data">
+                            <h4>Photos</h4>
+                            <p>2451 photos</p>
                           </div>
                         </div>
-                      </a>
-                    </td>
-                    <td>
-                      <div class="link-wrap">
-                      <a href="#">
-                        <img src="assets/images/svg/link.svg" alt="">
-                        Zip File
-                      </a>
+                        <div class="file-item">
+                          <div class="file-icon">
+                            <img src="assets/images/svg/youtubelogo.svg" alt="" />
+                          </div>
+                          <div class="file-data">
+                            <h4>Video</h4>
+                            <p>31 videos</p>
+                          </div>
+                        </div>
+                        <div class="file-item">
+                          <div class="file-icon">
+                            <img src="assets/images/svg/music.svg" alt="" />
+                          </div>
+                          <div class="file-data">
+                            <h4>Audio</h4>
+                            <p>19 photos</p>
+                          </div>
+                        </div>
+                        <div class="file-item">
+                          <div class="file-icon">
+                            <img src="assets/images/svg/folderopen.svg" alt="" />
+                          </div>
+                          <div class="file-data">
+                            <h4>Documents</h4>
+                            <p>Documents</p>
+                          </div>
+                        </div>
+                        <div class="file-item">
+                          <div class="file-icon">
+                            <img src="assets/images/svg/floppydisk.svg" alt="" />
+                          </div>
+                          <div class="file-data">
+                            <h4>Others</h4>
+                            <p>61 Files</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </td>
-                  <td><a href="#">14.6 GB</a></td>
-                  <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
-                  <td>
-                    <div class="dropdown-wrap">
-                      <button type="button" class="button-icon" id="dropdownMenuButton4" data-bs-toggle="dropdown">
-                        <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
-                            fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
-                        </svg>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
-                        <li><a class="dropdown-item" href="#">Download</a></li>
-                        <li><a class="dropdown-item" href="#">Print</a></li>
-                        <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                  </tr>
-                  <tr>
-                    <td class="large-width">
-                      <a href="#">
-                        <div class="recent-file-wrap">
-                          <div class="start-icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
-                                stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                  </div>
+                  <div class="recent-file-list table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Type</th>
+                          <th>Size</th>
+                          <th>Date Added</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="large-width extra-padding">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 18 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3"
+                                      stroke-width="1.25"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="18"
+                                    height="14"
+                                    viewBox="0 0 18 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+      
+                                  Designerzafor.
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td class="extra-padding"><a href="#">Zip File</a></td>
+                          <td class="extra-padding"><a href="#">14.6 GB</a></td>
+                          <td class="extra-padding">
+                            <a href="#">1 Feb, 2020 At 5:30 PM</a>
+                          </td>
+                          <td class="extra-padding">
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton_1"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton_1"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <img src="assets/images/svg/star2.svg" alt="" />
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="18"
+                                    height="14"
+                                    viewBox="0 0 18 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+      
+                                  @designerzafor at twitter
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td><a href="#">Zip File</a></td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton2"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton2"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 18 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3"
+                                      stroke-width="1.25"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="18"
+                                    height="14"
+                                    viewBox="0 0 18 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+      
+                                  Dribbble, Behance & Portfolio Project List & Details
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td><a href="#">Zip File</a></td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton3"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton3"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <img src="assets/images/svg/star2.svg" alt="" />
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="14"
+                                    height="18"
+                                    viewBox="0 0 14 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3"
+                                    />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3"
+                                    />
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+                                  Folder name
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="" />
+                                Zip File
+                              </a>
+                            </div>
+                          </td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton4"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton4"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 18 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3"
+                                      stroke-width="1.25"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="18"
+                                    height="14"
+                                    viewBox="0 0 18 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+      
+                                  Designerzafor.
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td><a href="#">Zip File</a></td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton5"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton5"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <img src="assets/images/svg/star2.svg" alt="" />
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="18"
+                                    height="14"
+                                    viewBox="0 0 18 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+      
+                                  @designerzafor at twitter
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td><a href="#">Zip File</a></td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton6"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton6"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 18 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3"
+                                      stroke-width="1.25"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="18"
+                                    height="14"
+                                    viewBox="0 0 18 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+      
+                                  Dribbble, Behance & Portfolio Project List & Details
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td><a href="#">Zip File</a></td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton7"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton7"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <img src="assets/images/svg/star2.svg" alt="" />
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="14"
+                                    height="18"
+                                    viewBox="0 0 14 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3"
+                                    />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3"
+                                    />
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+                                  Folder name
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="" />
+                                Zip File
+                              </a>
+                            </div>
+                          </td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton8"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton8"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 18 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3"
+                                      stroke-width="1.25"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="18"
+                                    height="14"
+                                    viewBox="0 0 18 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+      
+                                  Designerzafor.
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td><a href="#">Zip File</a></td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton9"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton9"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 18 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3"
+                                      stroke-width="1.25"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="18"
+                                    height="14"
+                                    viewBox="0 0 18 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+      
+                                  Zakirsoft Logo v2.0
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td><a href="#">Zip File</a></td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton10"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton10"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <img src="assets/images/svg/star2.svg" alt="" />
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="14"
+                                    height="18"
+                                    viewBox="0 0 14 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3"
+                                    />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3"
+                                    />
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+                                  Zakirsoft
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="" />
+                                Zip File
+                              </a>
+                            </div>
+                          </td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton11"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton11"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 18 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3"
+                                      stroke-width="1.25"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </div>
+                                <div class="folder-name">
+                                  <svg
+                                    width="18"
+                                    height="14"
+                                    viewBox="0 0 18 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3"
+                                    />
+                                  </svg>
+      
+                                  Zakirsoft Logo v2.0
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td><a href="#">Zip File</a></td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button
+                                type="button"
+                                class="button-icon c-w"
+                                id="dropdownMenuButton12"
+                                data-bs-toggle="dropdown"
+                              >
+                                <svg
+                                  width="4"
+                                  height="16"
+                                  viewBox="0 0 4 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C"
+                                    stroke="#191B1C"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton12"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#">Download</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li>
+                                  <a class="dropdown-item delete-content" href="#"
+                                    >Delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-contact" aria-labelledby="pills-contact-tab">
+                  <div class="card m-0">
+                    <div class="card-header border-0">Shared</div>
+                  </div>
+                  <div class="recent-file-list table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Type</th>
+                          <th>Size</th>
+                          <th>Date Added</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <img src="assets/images/svg/star2.svg" alt="">
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3" />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Folder name
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="">
+                                Zip File
+                              </a>
+                            </div>
+                          </td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon c-w" id="dropdownMenuButton18" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
                         
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton18">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                              
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Templatecookie - Themeforest Templates
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                            <a href="#">
+                              <img src="assets/images/svg/link.svg" alt="">
+                              Zip File
+                            </a>
                           </div>
-                          <div class="folder-name">
-                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
-                                fill="#959FA3" />
-                              <path
-                                d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
-                                fill="#959FA3" />
-                              <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
-                                fill="#959FA3" />
-                            </svg>
-                            Echotemplate Logo v1.0
+                        </td>
+                        <td><a href="#">14.6 GB</a></td>
+                        <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                        <td>
+                          <div class="dropdown-wrap">
+                            <button type="button" class="button-icon c-w" id="dropdownMenuButton19" data-bs-toggle="dropdown">
+                              <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                  fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                              </svg>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton19">
+                              <li><a class="dropdown-item" href="#">Download</a></li>
+                              <li><a class="dropdown-item" href="#">Print</a></li>
+                              <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                            </ul>
                           </div>
-                        </div>
-                      </a>
-                    </td>
-                    <td>
-                      <div class="link-wrap">
-                        <a href="#">
-                          <img src="assets/images/svg/link.svg" alt="">
-                          Zip File
-                        </a>                        
-                      </div>
-                    </td>
-                    <td><a href="#">14.6 GB</a></td>
-                    <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
-                    <td>
-                      <div class="dropdown-wrap">
-                        <button type="button" class="button-icon" id="dropdownMenuButton5" data-bs-toggle="dropdown">
-                          <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
-                              fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
-                          </svg>
-                  
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
-                          <li><a class="dropdown-item" href="#">Download</a></li>
-                          <li><a class="dropdown-item" href="#">Print</a></li>
-                          <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                        </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                              
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3" />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Echotemplate Logo v1.0
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="">
+                                Zip File
+                              </a>                        
+                            </div>
+                          </td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon c-w" id="dropdownMenuButton20" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                        
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton20">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-delete" aria-labelledby="pills-delete-tab">
+                  <div class="card m-0">
+                    <div class="card-header border-0">Deleted</div>
+                  </div>
+                  <div class="recent-file-list table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Type</th>
+                          <th>Size</th>
+                          <th>Date Added</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <img src="assets/images/svg/star2.svg" alt="">
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3" />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Folder name
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="">
+                                Zip File
+                              </a>
+                            </div>
+                          </td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon c-w" id="dropdownMenuButton21" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                        
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton21">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                              
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M15.875 2.62488H9.20874L7.04077 0.999511C6.82463 0.838084 6.56225 0.750552 6.29248 0.749878H2.125C1.79358 0.750205 1.47583 0.882006 1.24148 1.11636C1.00713 1.35071 0.875327 1.66846 0.875 1.99988V12.6249C0.875327 12.9563 1.00713 13.274 1.24148 13.5084C1.47583 13.7427 1.79358 13.8745 2.125 13.8749H15.9446C16.2575 13.8744 16.5575 13.7499 16.7788 13.5287C17.0001 13.3074 17.1246 13.0074 17.125 12.6945V3.87488C17.1247 3.54346 16.9929 3.2257 16.7585 2.99136C16.5242 2.75701 16.2064 2.6252 15.875 2.62488Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Templatecookie - Themeforest Templates
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                            <a href="#">
+                              <img src="assets/images/svg/link.svg" alt="">
+                              Zip File
+                            </a>
+                          </div>
+                        </td>
+                        <td><a href="#">14.6 GB</a></td>
+                        <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                        <td>
+                          <div class="dropdown-wrap">
+                            <button type="button" class="button-icon c-w" id="dropdownMenuButton22" data-bs-toggle="dropdown">
+                              <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                  fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                              </svg>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton22">
+                              <li><a class="dropdown-item" href="#">Download</a></li>
+                              <li><a class="dropdown-item" href="#">Print</a></li>
+                              <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                        </tr>
+                        <tr>
+                          <td class="large-width">
+                            <a href="#">
+                              <div class="recent-file-wrap">
+                                <div class="start-icon">
+                                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z"
+                                      stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                              
+                                </div>
+                                <div class="folder-name">
+                                  <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M10.1244 9.83333C10.1244 9.48816 9.84453 9.20833 9.49935 9.20833H4.49935C4.15417 9.20833 3.87435 9.48816 3.87435 9.83333C3.87435 10.1785 4.15417 10.4583 4.49935 10.4583H9.49935C9.84453 10.4583 10.1244 10.1785 10.1244 9.83333Z"
+                                      fill="#959FA3" />
+                                    <path
+                                      d="M10.1244 13.1667C10.1244 12.8215 9.84453 12.5417 9.49935 12.5417H4.49935C4.15417 12.5417 3.87435 12.8215 3.87435 13.1667C3.87435 13.5118 4.15417 13.7917 4.49935 13.7917H9.49935C9.84453 13.7917 10.1244 13.5118 10.1244 13.1667Z"
+                                      fill="#959FA3" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.83268 0.875C1.56703 0.875 0.541016 1.90101 0.541016 3.16667V14.8333C0.541016 16.099 1.56703 17.125 2.83268 17.125H11.166C12.4317 17.125 13.4577 16.099 13.4577 14.8333V5.63971C13.4577 5.32241 13.3542 5.01375 13.1629 4.76058L10.6648 1.4542C10.3891 1.08941 9.9584 0.875 9.5012 0.875H2.83268ZM1.79102 3.16667C1.79102 2.59137 2.25739 2.125 2.83268 2.125H8.87435V5.7892C8.87435 6.13438 9.15417 6.4142 9.49935 6.4142H12.2077V14.8333C12.2077 15.4086 11.7413 15.875 11.166 15.875H2.83268C2.25739 15.875 1.79102 15.4086 1.79102 14.8333V3.16667Z"
+                                      fill="#959FA3" />
+                                  </svg>
+                                  Echotemplate Logo v1.0
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <div class="link-wrap">
+                              <a href="#">
+                                <img src="assets/images/svg/link.svg" alt="">
+                                Zip File
+                              </a>                        
+                            </div>
+                          </td>
+                          <td><a href="#">14.6 GB</a></td>
+                          <td><a href="#">1 Feb, 2020 At 5:30 PM</a></td>
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon c-w" id="dropdownMenuButton23" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z"
+                                    fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                        
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton23">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
             </div>
           </div>
+          {% include "../templates/layout/header-footer/footer.html" %}
         </div>
-        {% include "../templates/layout/header-footer/footer.html" %}
+      </div>
+    </div>
+  </main>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="upload-file-wrap">
+          <img src="assets/images/svg/cloud-arrow-up.svg" alt="" />
+          <h4>Upload new file or folder</h4>
+          <p>Drag an drop a file or <a href="#">browse file</a></p>
+          <input type="file" />
+        </div>
       </div>
     </div>
   </div>
-</main>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1"  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="upload-file-wrap">
-        <img src="assets/images/svg/cloud-arrow-up.svg" alt="">
-        <h4>Upload new file or folder</h4>
-        <p>Drag an drop a file or <a href="#">browse file</a> </p>
-        <input type="file">
-      </div>
-    </div>
-  </div>
-</div>
-
-{% endblock %}
+  
+  {% endblock %}
+  
