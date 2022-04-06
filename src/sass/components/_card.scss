@@ -332,7 +332,7 @@
 .card-priority {
   overflow: hidden;
   position: relative;
-  padding: 18px 16px;
+  padding: 13px 16px 18px;
   border-radius: 8px;
   border: 1px solid #e5e7e8;
   box-shadow: 0px 4px 12px 0px #191b1c0f;
@@ -438,6 +438,9 @@
           &.urgent {
             color: #d50000;
             background-color: transparent;
+            &.green{
+              color: #0C8C4E;
+            }
           }
         }
       }
@@ -456,6 +459,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 16px;
 
     .labels-info {
       display: flex;
@@ -505,4 +509,34 @@
       margin-bottom: 24px;
     }
   }
+}
+
+span.labels.red {
+  color: #E84646;
+  background-color: #FDEDED;
+}
+
+.card-priority-thumb {
+  height: 157px;
+  margin-bottom: 16px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+span.labels.medium.yellow{
+  color: var(--warning-500);
+  background-color: var(--warning-50);
+}
+
+span.labels.urgent.blue {
+  color: #0E78D9;
+}
+span.labels.urgent.yellow {
+  color: #FF9904;
+}
+.add-new-card-btn {
+  margin-top: 24px;
 }
