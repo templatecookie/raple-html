@@ -683,7 +683,7 @@
     return false;
   });
 
-  if ($(window).width() < 991.98) {
+
     $(".menu-item-has-children > a").on("click", function () {
       var element = $(this).parent("li");
       if (element.hasClass("open")) {
@@ -701,7 +701,7 @@
         element.siblings("li").find("ul").slideUp();
       }
     });
-  }
+  
 
   $(".opener_sidebar").on("click", function (e) {
     e.preventDefault();
