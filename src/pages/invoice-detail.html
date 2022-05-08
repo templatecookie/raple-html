@@ -1,11 +1,10 @@
-{% extends "layout/layout.html" %}
-{% set page_title = "Invoice Detail" %}
-{% block content %}
+{% extends "layout/layout.html" %} {% set page_title = "Invoice Detail" %} {%
+block content %}
 
 <main class="app-wrapper">
-  {% include "../templates/layout/header-footer/app-header.html" %}
-  {% include "../templates/layout/header-footer/app-sidebar.html" %}
-  {% include "../templates/layout/header-footer/topnavbar.html" %}
+  {% include "../templates/layout/header-footer/app-header.html" %} {% include
+  "../templates/layout/header-footer/app-sidebar.html" %} {% include
+  "../templates/layout/header-footer/topnavbar.html" %}
   <div class="content-wrapper">
     <div class="page-content">
       <div class="container-fluid">
@@ -17,120 +16,127 @@
         <div class="row">
           <div class="col-12">
             <div class="card">
-                <div class="invoice-detail-wrap">
-                  <div class="invoice-detail-item">
-                      <a class="invoice-detail-logo" href=""><img src="assets/images/logo/logo.svg" alt=""></a>
-                      <div class="invoice-detail-middle">
-                          <div class="invoice-detail-data">
-                            <p>Hello Charles Hall,<br />
-                            This is the receipt for a payment of $268.00 (USD) you made to <span>Relik - Admin Dashboard</span>  Demo.
-                            </p>
-                          </div>
-                          <div class="invoice-detail-btn">
-                            <button type="button" class="btn btn-primary2 pill rt-mr-12">Download</button>
-                            <button type="button" class="btn btn-primary pill btn-icon">
-                              <span class="button-content-wrapper">
-                                <span class="button-text">
-                                  Print Inovice
-                                </span>
-                                <span class="button-icon">
-                                  <img src="assets/images/svg/printer2.svg" alt="">
-                                </span>
-                              </span>
-                            </button>
-                          </div>
-                      </div>
-                      <div class="invoice-detail-payment">
-                        <div class="invoice-detail-data2">
-                          <p>Payment No.</p>
-                          <h4>741037024</h4>
-                        </div>
-                        <div class="invoice-detail-data2 text-right">
-                          <p>Payment date</p>
-                          <h4>October 2, 2021 - 03:45 pm</h4>
-                        </div>
-                      </div>
+              <div class="invoice-detail-wrap">
+                <div class="invoice-detail-item">
+                  <a class="invoice-detail-logo" href=""
+                    ><img src="assets/images/logo/logo.svg" alt=""
+                  /></a>
+                  <div class="invoice-detail-middle">
+                    <div class="invoice-detail-data">
+                      <p>
+                        Hello Charles Hall,<br />
+                        This is the receipt for a payment of $268.00 (USD) you
+                        made to <span>Wadmin - Admin Dashboard</span> Demo.
+                      </p>
+                    </div>
+                    <div class="invoice-detail-btn">
+                      <button
+                        type="button"
+                        class="btn btn-primary2 pill rt-mr-12"
+                      >
+                        Download
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary pill btn-icon"
+                      >
+                        <span class="button-content-wrapper">
+                          <span class="button-text"> Print Inovice </span>
+                          <span class="button-icon">
+                            <img src="assets/images/svg/printer2.svg" alt="" />
+                          </span>
+                        </span>
+                      </button>
+                    </div>
                   </div>
                   <div class="invoice-detail-payment">
-                    <div class="invoice-detail-data3">
-                      <h4>Company</h4>
-                      <ul>
-                        <li>Street Address</li>
-                        <li>State, City</li>
-                        <li>Region, Postal Code</li>
-                        <li>ltd@example.com</li>
-                      </ul>
+                    <div class="invoice-detail-data2">
+                      <p>Payment No.</p>
+                      <h4>741037024</h4>
                     </div>
-                    <div class="invoice-detail-data3 text-right">
-                      <h4>Client</h4>
-                      <ul>
-                        <li>Street Address</li>
-                        <li>State, City</li>
-                        <li>Region, Postal Code</li>
-                        <li>ltd@example.com</li>
-                      </ul>
+                    <div class="invoice-detail-data2 text-right">
+                      <p>Payment date</p>
+                      <h4>October 2, 2021 - 03:45 pm</h4>
                     </div>
                   </div>
-                  <div class="invoice-detail-table">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>PRODUCT</th>
-                            <th>QNT</th>
-                            <th>UNIT</th>
-                            <th>AMOUNT</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="large-width">
-                              <div class="invoice-logo-creation">
-                                  <div class="invoice-logo-number">
-                                    1
-                                  </div>
-                                  <div class="invoice-logo-data">
-                                    <h4>Logo Creation</h4>
-                                    <p>Logo and business cards design</p>
-                                  </div>
-                              </div>
-                            </td>
-                            <td >1</td>
-                            <td>$1.800,00</td>
-                            <td>$1.800,00</td>
-                          </tr>
-                          <tr>
-                            <td class="large-width">
-                            </td>
-                            <td></td>
-                            <td class="sub-totla">Sub-Total</td>
-                            <td>$1.800,00</td>
-                          </tr>
-                          <tr>
-                            <td class="large-width">
-                            </td>
-                            <td></td>
-                            <td class="sub-totla">Vat Rate</td>
-                            <td>$1.800,00</td>
-                          </tr>
-                          <tr>
-                            <td class="large-width">
-                            </td>
-                            <td></td>
-                            <td class="sub-totla">Vat Due</td>
-                            <td>$1.800,00</td>
-                          </tr>
-                          <tr>
-                            <td class="large-width">
-                            </td>
-                            <td></td>
-                            <td class="sub-totla two">TOTAL DUE</td>
-                            <td class="sub-totla three">$1.800,00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                  </div>
-                    <p class="invoice-footer-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, similique!</p>
                 </div>
+                <div class="invoice-detail-payment">
+                  <div class="invoice-detail-data3">
+                    <h4>Company</h4>
+                    <ul>
+                      <li>Street Address</li>
+                      <li>State, City</li>
+                      <li>Region, Postal Code</li>
+                      <li>ltd@example.com</li>
+                    </ul>
+                  </div>
+                  <div class="invoice-detail-data3 text-right">
+                    <h4>Client</h4>
+                    <ul>
+                      <li>Street Address</li>
+                      <li>State, City</li>
+                      <li>Region, Postal Code</li>
+                      <li>ltd@example.com</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="invoice-detail-table">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>PRODUCT</th>
+                        <th>QNT</th>
+                        <th>UNIT</th>
+                        <th>AMOUNT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="large-width">
+                          <div class="invoice-logo-creation">
+                            <div class="invoice-logo-number">1</div>
+                            <div class="invoice-logo-data">
+                              <h4>Logo Creation</h4>
+                              <p>Logo and business cards design</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>1</td>
+                        <td>$1.800,00</td>
+                        <td>$1.800,00</td>
+                      </tr>
+                      <tr>
+                        <td class="large-width"></td>
+                        <td></td>
+                        <td class="sub-totla">Sub-Total</td>
+                        <td>$1.800,00</td>
+                      </tr>
+                      <tr>
+                        <td class="large-width"></td>
+                        <td></td>
+                        <td class="sub-totla">Vat Rate</td>
+                        <td>$1.800,00</td>
+                      </tr>
+                      <tr>
+                        <td class="large-width"></td>
+                        <td></td>
+                        <td class="sub-totla">Vat Due</td>
+                        <td>$1.800,00</td>
+                      </tr>
+                      <tr>
+                        <td class="large-width"></td>
+                        <td></td>
+                        <td class="sub-totla two">TOTAL DUE</td>
+                        <td class="sub-totla three">$1.800,00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="invoice-footer-content">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eaque, similique!
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -139,7 +145,5 @@
     </div>
   </div>
 </main>
-
-
 
 {% endblock %}

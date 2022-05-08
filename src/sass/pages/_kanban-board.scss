@@ -5,7 +5,7 @@
   &-header {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     justify-content: space-between;
     h5 {
       margin: 0;
@@ -29,34 +29,43 @@ button.dots-three {
     }
   }
 }
- .kanbanboard_parent, #appkanban{
+.kanbanboard_parent,
+#appkanban {
   overflow-x: auto;
-  
+  margin-bottom: 68px;
 }
-.kanbanboard_child{
+.kanbanboard_child {
   max-width: 372px;
   flex: 0 0 372px;
   margin-right: 30px;
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
 }
-.plain-btn{
+.plain-btn {
   background: transparent;
   border: none;
 }
 
-.kanban-board{
+.kanban-board {
   background: #fff;
   border-radius: 8px;
 }
 
-.modal-overlay{
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1050;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.add-new-column{
+  padding: 17px;
+  font-size: 14px;
+  span{
+    margin-right: 3px;
+  }
 }

@@ -44,3 +44,14 @@
     color: var(--gray-600);
   }
 }
+
+.post-comment-wrap {
+  input {
+    background-color: #f5f6f7;
+  }
+}
+.card {
+  &.no-rounded {
+    border-radius: 0px;
+  }
+}

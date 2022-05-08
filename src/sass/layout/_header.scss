@@ -36,18 +36,16 @@
   }
   .collapse-in-logo {
     display: none;
-    
-
   }
 }
-.logo-icon{
+.logo-icon {
   display: none;
-  @include breakpoint(md){
+  @include breakpoint(md) {
     display: block;
   }
 }
-.logo-black{
-  @include breakpoint(md){
+.logo-black {
+  @include breakpoint(md) {
     display: none;
   }
 }
@@ -74,21 +72,21 @@
       display: none;
     }
   }
-  .all-logo{
+  .all-logo {
     position: relative;
-   @include breakpoint(md){
-     padding-right: 13px;
-    &::after{
-      position: absolute;
-    right: 0;
-    top: 50%;
-    height: 71px;
-    width: 1px;
-    content: "";
-    background: #f2f3f4;
-    transform: translateY(-50%);
+    @include breakpoint(md) {
+      padding-right: 13px;
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 71px;
+        width: 1px;
+        content: "";
+        background: #f2f3f4;
+        transform: translateY(-50%);
+      }
     }
-   }
   }
   @include breakpoint(md) {
     width: auto;
@@ -178,7 +176,6 @@
   @include breakpoint(md) {
     display: none;
   }
-
 }
 
 .app-mian-serach {
@@ -287,7 +284,7 @@
   }
   .opener_sidebar {
     display: none;
-    @include breakpoint(md){
+    @include breakpoint(md) {
       display: block;
     }
   }
@@ -331,10 +328,9 @@
   position: relative;
 }
 
-
-  .for-h {
-    display: none;
-  }
+.for-h {
+  display: none;
+}
 
 [data-layout="horizental"] {
   .content-wrapper {
@@ -344,7 +340,7 @@
       margin-left: 80px;
       margin-right: 80px;
     }
-    @include breakpoint(md){
+    @include breakpoint(md) {
       margin-left: 15px;
       margin-right: 15px;
     }
@@ -393,7 +389,7 @@
       padding-left: 80px;
       padding-right: 80px;
     }
-    @include breakpoint(md){
+    @include breakpoint(md) {
       padding-left: 15px;
       padding-right: 15px;
     }
@@ -437,7 +433,7 @@
   }
   .logo-white {
     display: block;
-    @include breakpoint(md){
+    @include breakpoint(md) {
       display: none;
     }
   }
@@ -449,87 +445,82 @@
   }
 }
 
-.notifications{
-  >img{
+.notifications {
+  > img {
     animation: tada_animation 1.5s ease infinite;
-    
   }
-  &:hover, &[aria-expanded="true"]{
-    >img{
+  &:hover,
+  &[aria-expanded="true"] {
+    > img {
       animation: none;
     }
   }
 }
 
-
 @keyframes tada_animation {
   from {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
   10%,
   20% {
-      transform: scale3d(1, 1, 0.95) rotate3d(0, 0, 1, -10deg);
+    transform: scale3d(1, 1, 0.95) rotate3d(0, 0, 1, -10deg);
   }
   30%,
   50%,
   70%,
   90% {
-      transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
   }
   40%,
   60%,
   80% {
-      transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
   }
   to {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
 
-.simplebar-content-wrapper[style]{
+.simplebar-content-wrapper[style] {
   padding-right: 0px !important;
 }
-.icon-bar-open{
+.icon-bar-open {
   height: 24px;
   width: 24px;
   display: inline-block;
-  
+
   background-repeat: no-repeat;
   background-position: center center;
-  background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23191b1c%22%20stroke-width%3D%222%22%20d%3D%22M2%2019h20M2%205h20M2%2012h20%22%2F%3E%3C%2Fsvg%3E');
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23191b1c%22%20stroke-width%3D%222%22%20d%3D%22M2%2019h20M2%205h20M2%2012h20%22%2F%3E%3C%2Fsvg%3E");
   background-size: contain;
-  &.has-cross{
-   
-    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M19%206.41L17.59%205L12%2010.59L6.41%205L5%206.41L10.59%2012L5%2017.59L6.41%2019L12%2013.41L17.59%2019L19%2017.59L13.41%2012L19%206.41z%22%20fill%3D%22%23191b1c%22%2F%3E%3C%2Fsvg%3E');
+  &.has-cross {
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M19%206.41L17.59%205L12%2010.59L6.41%205L5%206.41L10.59%2012L5%2017.59L6.41%2019L12%2013.41L17.59%2019L19%2017.59L13.41%2012L19%206.41z%22%20fill%3D%22%23191b1c%22%2F%3E%3C%2Fsvg%3E");
     background-size: 100% 100%;
-    
   }
 }
-.icon-bar-open2{
+.icon-bar-open2 {
   height: 24px;
   width: 24px;
   display: inline-block;
-  
+
   background-repeat: no-repeat;
   background-position: center center;
-  background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2012h16%22%2F%3E%3Cpath%20d%3D%22M4%206h16%22%2F%3E%3Cpath%20d%3D%22M4%2018h16%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2012h16%22%2F%3E%3Cpath%20d%3D%22M4%206h16%22%2F%3E%3Cpath%20d%3D%22M4%2018h16%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   background-size: contain;
-  &.has-cross{
-   
-    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M19%206.41L17.59%205L12%2010.59L6.41%205L5%206.41L10.59%2012L5%2017.59L6.41%2019L12%2013.41L17.59%2019L19%2017.59L13.41%2012L19%206.41z%22%20fill%3D%22%23191b1c%22%2F%3E%3C%2Fsvg%3E');
+  &.has-cross {
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M19%206.41L17.59%205L12%2010.59L6.41%205L5%206.41L10.59%2012L5%2017.59L6.41%2019L12%2013.41L17.59%2019L19%2017.59L13.41%2012L19%206.41z%22%20fill%3D%22%23191b1c%22%2F%3E%3C%2Fsvg%3E");
     background-size: 100% 100%;
-    
   }
 }
 .opener_horizentalmenu {
   display: none;
 }
-[data-layout="horizental"]{
-  .all-logo{
-    &::after{
-      @include breakpoint(md){
+[data-layout="horizental"] {
+  .all-logo {
+    &::after {
+      @include breakpoint(md) {
         display: none;
       }
     }
@@ -538,56 +529,69 @@
     top: 4px;
     position: relative;
     cursor: pointer;
-    @include breakpoint(md){
+    @include breakpoint(md) {
       display: block;
     }
   }
-  .dropdown.dropdown-flag .dropdown-toggle{
+  .dropdown.dropdown-flag .dropdown-toggle {
     background-color: var(--gray-800);
     color: var(--gray-300);
   }
-  .dropdown.dropdown-flag .dropdown-toggle::after{
+  .dropdown.dropdown-flag .dropdown-toggle::after {
     color: var(--gray-300);
   }
-  
 }
 
-.logo-full-white, .logo-icon-white{
+.logo-full-white,
+.logo-icon-white {
   display: none;
 }
 [data-sidebar="black"],
-[data-sidebar="blue"]
-
-{
-.logo-segment{
-  @include breakpoint(md){
-    background: white;
+[data-sidebar="blue"] {
+  .logo-segment {
+    @include breakpoint(md) {
+      background: white;
+    }
+  }
+  @media (min-width: 992px) {
+    .icon-bar-open {
+      background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2012h16%22%2F%3E%3Cpath%20d%3D%22M4%206h16%22%2F%3E%3Cpath%20d%3D%22M4%2018h16%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }
-@media (min-width: 992px){
-  .icon-bar-open{
-    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2012h16%22%2F%3E%3Cpath%20d%3D%22M4%206h16%22%2F%3E%3Cpath%20d%3D%22M4%2018h16%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
-  
-}
 
-[data-sidebar="blue"]{
-  .logo-white{
+[data-sidebar="blue"] {
+  .logo-white {
     display: none;
   }
-  .logo-full-white{
+  .logo-full-white {
     display: block;
-    @include breakpoint(md){
+    @include breakpoint(md) {
       display: none;
     }
   }
-  .logo-icon-blue{
+  .logo-icon-blue {
     display: none;
   }
-  .logo-icon-white{
+  .logo-icon-white {
     display: block;
   }
 }
+
+[data-layout="horizental"] {
+  .sidebar-collapse .collapse-in-logo,
+  .sidebar-collapse .back_sidebar_icon {
+    display: none;
+  }
+}
+
+.card-priority__actions {
+  .dropdown-menu {
+    right: -15px !important;
+  }
+}
+
+
+

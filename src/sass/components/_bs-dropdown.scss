@@ -39,6 +39,7 @@
     color: var(--primary-500) !important;
   }
   &.delete-content {
+    color: var(--danger-500) !important;
     &:hover {
       color: var(--danger-500) !important;
     }

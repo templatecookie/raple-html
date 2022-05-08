@@ -51,14 +51,15 @@
               </div>
             </li>
             <li class=" d-none d-lg-block">
-              <div class="dropdown dropdown-flag">
-                <button class="dropdown-toggle pointer"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                 <img src="../assets/images/svg/flag.svg" alt=""> English
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#"><img src="../assets/images/svg/flag.svg" alt="">  English</a></li>
-                  <li><a class="dropdown-item" href="#"><img src="../assets/images/svg/flag.svg" alt="">Bangla </a></li>
-                </ul>
+              <div class="language-picker js-language-picker desktop-show">
+                <form action="" class="language-picker__form">
+                  <label for="language-picker-select"></label>
+                  <select name="language-picker-select" id="language-picker-select">
+                    <option lang="en" value="english" selected>English</option>
+                    <option lang="de" value="deutsch">germany</option>
+                    <option lang="sp" value="spanish">spanish</option>
+                  </select>
+                </form>
               </div>
             </li>
             <li>
