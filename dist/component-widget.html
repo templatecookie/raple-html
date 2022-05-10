@@ -1,0 +1,2868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <title>Wadmin - Admin Dashboard</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/logo-icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/light.css" />
+  <link rel="stylesheet" href="assets/css/scale.css" />
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui.theme.css" />
+  <link rel="stylesheet" href="assets/css/apexcharts.css" />
+  <link rel="stylesheet" href="assets/css/chartist-plugin-tooltip.css" />
+  <link rel="stylesheet" href="assets/css/chartist.min.css" />
+  <link rel="stylesheet" href="assets/css/customfont.css" />
+  <link rel="stylesheet" href="assets/css/jquery-jvectormap-2.0.5.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui.theme.min.css" />
+  <link rel="stylesheet" href="assets/css/metisMenu.min.css" />
+  <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <link rel="stylesheet" href="assets/css/simplebar.css" />
+  <link rel="stylesheet" href="assets/css/dragula.min.css" />
+  <link rel="stylesheet" href="assets/css/animate.min.css" />
+  <link rel="stylesheet" href="assets/css/app.min.css" />
+</head>
+
+<body class="light">
+
+
+  <main class="app-wrapper">
+    <header class="app-header rt-sticky">
+      <div class="navbar align-items-center">
+        <div class="container-fluid">
+          <div class="left-content">
+            <div class="logo-segment">
+              <div class="all-logo">
+                <a href="home.html" class="brand-logo">
+                  <img src="assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black" />
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white" />
+                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10" />
+                  <img src="assets/images/logo/logo-full-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10" />
+                </a>
+                <a href="home.html" class="brand-logo white">
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" />
+                </a>
+                <a href="home.html" class="collapse-in-logo">
+                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon-blue" />
+                  <img src="assets/images/logo/logo-icon-white.svg" alt="" draggable="false" class="logo-icon-white" />
+                </a>
+              </div>
+              <div class="opener_sidebar">
+                <span class="icon-bar-open" id="opener_icon"></span>
+              </div>
+              <div class="opener_horizentalmenu" id="mainmenuOpen">
+                <span class="icon-bar-open2" id="opener_icon2"></span>
+              </div>
+            </div>
+            <div class="dashboard-message position-relative">
+              <span class="back_sidebar_icon">
+            <i class="ph-arrow-right"></i>
+          </span>
+            </div>
+          </div>
+          <div class="app-mian-serach">
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Search" />
+                <button type="submit">
+                  <img src="assets/images/svg/search.svg" alt="" draggable="false" />
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="ms-auto">
+            <div class="rt-nav-tolls d-flex align-items-center">
+              <ul>
+                <li class="d-inline-block d-md-none">
+                  <div class="iconBox open-mbl-search pointer">
+                    <img src="assets/images/svg/search.svg" alt="" />
+                  </div>
+                </li>
+                <li class="d-none d-lg-block">
+                  <div class="language-picker js-language-picker desktop-show">
+                    <form action="" class="language-picker__form">
+                      <label for="language-picker-select"></label>
+                      <select name="language-picker-select" id="language-picker-select">
+                        <option lang="en" value="english" selected>English</option>
+                        <option lang="de" value="deutsch">germany</option>
+                        <option lang="sp" value="spanish">spanish</option>
+                      </select>
+                    </form>
+                  </div>
+                </li>
+                <li>
+                  <div class="iconBox page-setting pointer" id="layout">
+                    <img src="assets/images/svg/grid.svg" alt="" draggable="false" class="for-v" />
+                    <img src="assets/images/svg/grid2.svg" alt="" draggable="false" class="for-h" />
+                  </div>
+                </li>
+                <li>
+                  <div class="iconBox notifications pointer waves-effect primary-light">
+                    <img src="assets/images/svg/bell.svg" alt="" draggable="false" class="for-v" />
+                    <img src="assets/images/svg/bell2.svg" alt="" draggable="false" class="for-h" />
+                  </div>
+                </li>
+                <li>
+                  <div class="userProfileBox openaccount pointer">
+                    <img src="assets/images/all-img/user.svg" alt="" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="app-sidebar">
+      <div class="h-100" data-simplebar>
+        <div class="sidebar-menu">
+          <ul id="side-menu">
+            <li class="menu-title no-margin">Dashboard</li>
+            <li>
+              <a href="home.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-house-line"></i></span>
+                <div class="text-box">
+                  Dashboard
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="full-calendar.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-calendar-blank"></i></span>
+                <div class="text-box">
+                  Calendar
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="kanban-board.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-clipboard-text"></i></span>
+                <div class="text-box">Kanban Board</div>
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-folder-notch-open"></i></span>
+                <div class="text-box">File Manager</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="file-manager.html">File Manager</a></li>
+                <li><a href="file-manager-new.html">Upload New File</a></li>
+              </ul>
+            </li>
+            <li class="has-child waves-effect primary-light">
+              <a href="javascript: void(0);" aria-expanded="false">
+                <span class="icon-box"><i class="ph-puzzle-piece"></i></span>
+                <div class="text-box">Authentication</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="login.html">login</a></li>
+                <li><a href="registration.html">Registration</a></li>
+              </ul>
+            </li>
+            <li class="menu-title">pages</li>
+
+            <li>
+              <a href="profile.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-user"></i></span>
+                <div class="text-box">Profile</div>
+              </a>
+            </li>
+            <li>
+              <a href="setting.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-gear"></i></span>
+                <div class="text-box">Setting</div>
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-notebook"></i></span>
+                <div class="text-box">Invoice</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="invoice.html">Invoice</a></li>
+                <li><a href="invoice-detail.html">Invoice Details</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="billing.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-credit-card"></i></span>
+                <div class="text-box">Billing</div>
+              </a>
+            </li>
+            <li>
+              <a href="pricing-plans.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-lightning"></i></span>
+                <div class="text-box">Pricing Plans</div>
+              </a>
+            </li>
+            <li>
+              <a href="faq.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-question"></i></span>
+                <div class="text-box">FAQs</div>
+              </a>
+            </li>
+            <li>
+              <a href="blank-page.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-note-blank"></i></span>
+                <div class="text-box">Blank Page</div>
+              </a>
+            </li>
+
+            <li class="menu-title">Components</li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-book-open"></i></span>
+                <div class="text-box">UI Elements</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="button.html">Button</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="switch.html">Switch</a></li>
+                <li><a href="pagination.html">Pagination</a></li>
+                <li><a href="accordion.html">Accordion</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li><a href="input.html">Input</a></li>
+                <li><a href="banner.html">Banner</a></li>
+                <li><a href="file.html">File</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="component-card.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-cards"></i></span>
+                <div class="text-box">Card</div>
+              </a>
+            </li>
+            <li>
+              <a href="component-table.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-list-dashes"></i></span>
+                <div class="text-box">Table</div>
+              </a>
+            </li>
+            <li>
+              <a href="form-elements.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-swatches"></i></span>
+                <div class="text-box">Form Elements</div>
+              </a>
+            </li>
+            <li>
+              <a href="component-widget.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-leaf"></i></span>
+                <div class="text-box">Widgets</div>
+              </a>
+            </li>
+            <li class="menu-title">Documentation</li>
+            <li>
+              <a href="docs/index.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-info"></i></span>
+                <div class="text-box">Introduction</div>
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-browser"></i></span>
+                <div class="text-box">Getting started</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="docs/started.html">quick start</a></li>
+                <li><a href="docs/started.html#environment">Environments Setup</a></li>
+                <li><a href="docs/started.html#folder ">Folder Structure</a></li>
+                <li><a href="docs/started.html#colors ">Colors</a></li>
+                <li><a href="docs/started.html#typography ">Typography</a></li>
+                <li><a href="docs/started.html#icons ">Icons</a></li>
+              </ul>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-layout"></i></span>
+                <div class="text-box">Layouts</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="docs/layouts.html">layout</a></li>
+                <li><a href="docs/layouts.html#theme">Theme</a></li>
+              </ul>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box">
+                            <i class="ph-puzzle-piece"></i>
+                        </span>
+                <div class="text-box">Plugins</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="docs/plugin.html">Map</a></li>
+                <li><a href="docs/plugin.html#calendars">Calendar</a></li>
+                <li><a href="docs/plugin.html#chart">Chart</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href=" docs/browser-support.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-disc"></i></span>
+                <div class="text-box">Browser Support & Credit </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="top-navbar">
+      <div class="container-fluid p-0">
+        <div class="main-menu">
+          <div class="mobile-menu-header d-flex justify-content-between mb-5 pb-2 px-3 ps-3 d-block d-lg-none">
+            <a href="#" class="mbl-logo"><img src="assets/images/logo/logo.svg" alt="" /></a>
+            <span class="rt-mobile-menu-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            width="32"
+            height="32"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48zm86.63 272L320 342.63l-64-64l-64 64L169.37 320l64-64l-64-64L192 169.37l64 64l64-64L342.63 192l-64 64z"
+              fill="#e84646"
+            />
+          </svg>
+        </span>
+          </div>
+          <!-- /.rt-mobile-menu-close -->
+          <ul class="menu-active-classes">
+            <li class="active">
+              <a href="home.html">
+                <span class="icon-box"><i class="ph-house-line"></i></span>
+                <div class="text-box">Dashboard</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="javascript:void(0)">
+                <span class="icon-box"><i class="ph-clipboard-text"></i></span>
+                <div class="text-box">Apps</div>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="full-calendar.html">Calendar</a></li>
+                <li><a href="kanban-board.html">Kanban Board</a></li>
+                <li class="menu-item-has-children">
+                  <a href="javascript: void(0);">File Manager</a>
+                  <ul class="sub-menu">
+                    <li><a href="file-manager.html">File Manager</a></li>
+                    <li><a href="file-manager-new.html">Upload New File</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children has-megamenu">
+              <a href="javascript: void(0);">
+                <span class="icon-box"><i class="ph-circles-three-plus"></i></span>
+                <div class="text-box">Pages</div>
+              </a>
+              <div class="rt-mega-menu">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Authentication
+                      </div>
+                      <a href="login.html">login</a>
+                      <a href="registration.html">Registration</a>
+                      <a href="profile.html">Profile</a>
+                      <a href="setting.html">Setting</a>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        billing
+                      </div>
+                      <a href="billing.html">billing</a>
+                      <a href="pricing-plans.html">pricing-plans</a>
+
+                      <a href="invoice.html">Invoice</a>
+                      <a href="invoice-detail.html">Invoice Details</a>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Components
+                      </div>
+                      <a href="button.html">Button</a>
+                      <a href="badge.html">Badge</a>
+                      <a href="checkbox.html">Checkbox</a>
+                      <a href="radio.html">Radio</a>
+                      <a href="switch.html">Switch</a>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Components
+                      </div>
+                      <a href="pagination.html">Pagination</a>
+                      <a href="accordion.html">Accordion</a>
+                      <a href="alerts.html">Alerts</a>
+                      <a href="input.html">Input</a>
+                      <a href="banner.html">Banner</a>
+                      <a href="file.html">File</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-box"><i class="ph-palette"></i></span>
+                <div class="text-box">Style Guide</div>
+              </a>
+            </li>
+
+            <li>
+              <a href="form-elements.html">
+                <span class="icon-box"><i class="ph-gear"></i></span>
+                <div class="text-box">From Elements</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="javascript: void(0);">
+                <span class="icon-box"><i class="ph-books"></i></span>
+                <div class="text-box">Documentation</div>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="docs/index.html">Introduction</a></li>
+                <li><a href="docs/started.html">quick start</a></li>
+                <li>
+                  <a href="docs/started.html#environment">Environments Setup</a>
+                </li>
+                <li><a href="docs/started.html#folder ">Folder Structure</a></li>
+                <li><a href="docs/started.html#colors ">Colors</a></li>
+                <li><a href="docs/started.html#typography ">Typography</a></li>
+                <li><a href="docs/started.html#icons ">Icons</a></li>
+                <li><a href="docs/layouts.html">layout</a></li>
+                <li><a href="docs/layouts.html#theme">Theme</a></li>
+                <li><a href="docs/plugin.html">Map</a></li>
+                <li><a href="docs/plugin.html#calendars">Calendar</a></li>
+                <li><a href="docs/plugin.html#chart">Chart</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.main-menu -->
+      </div>
+    </div>
+
+
+    <div class="content-wrapper">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between rt-mb-24">
+                    <div>
+                      <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
+                        Active Visitors
+                      </div>
+                      <div class="f-size-24 font-semibold">157,367</div>
+                    </div>
+                    <div class="text-left text-lg-end text-success-500 body-font-4">
+                      6.7% Increase
+                    </div>
+                  </div>
+                  <div id="bar-chart1"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between rt-mb-24">
+                    <div>
+                      <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
+                        Visitor per minute
+                      </div>
+                      <div class="f-size-24 font-semibold">9,741</div>
+                    </div>
+                    <div class="text-left text-lg-end text-danger-500 body-font-4">
+                      13.5% Decrease
+                    </div>
+                  </div>
+                  <div id="area-spaline-bottom" class="rt-mb-24"></div>
+                  <div id="area-spaline-bottom2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between rt-mb-48">
+                    <div>
+                      <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
+                        Conversion Rate
+                      </div>
+                      <div class="f-size-24 font-semibold">9.73%</div>
+                    </div>
+                    <div class="text-left text-lg-end text-success-500 body-font-4">
+                      3.5% Increase
+                    </div>
+                  </div>
+                  <div id="barchart2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between rt-mb-24">
+                    <div>
+                      <div class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase">
+                        bounce rate
+                      </div>
+                      <div class="f-size-24 font-semibold">81.94%</div>
+                    </div>
+                    <div class="text-left text-lg-end text-success-500 body-font-4">
+                      1.1% Increase
+                    </div>
+                  </div>
+                  <div id="line-1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="active-visitor-wrap">
+                    <div class="active-visitor-data">
+                      <p>Active Visitors</p>
+                      <h3>157,367</h3>
+                      <h4>
+                        <img src="assets/images/svg/arrow-up.svg" alt="" /> 6.7%
+                        Increase
+                      </h4>
+                    </div>
+                    <div class="active-visitor-icon bg-primary-50">
+                      <img src="assets/images/svg/package2.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="active-visitor-wrap">
+                    <div class="active-visitor-data">
+                      <p>Visitor per minute</p>
+                      <h3>9,741</h3>
+                      <h4 class="text-danger-500">
+                        <img src="assets/images/svg/arrow-red.svg" alt="" /> 13.5%
+                        Decrease
+                      </h4>
+                    </div>
+                    <div class="active-visitor-icon bg-secondary-200">
+                      <img src="assets/images/svg/stack.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-xl-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="fun-fact-wrap">
+                    <div class="fun-fact-item">
+                      <div class="fun-fact-icon">
+                        <img src="assets/images/svg/user-circle.svg" alt="" />
+                      </div>
+                      <div class="fun-fact-data">
+                        <h4>157,367</h4>
+                        <p>Total users</p>
+                      </div>
+                    </div>
+                    <div class="fun-fact-item">
+                      <div class="fun-fact-icon">
+                        <img src="assets/images/svg/hand-pointing.svg" alt="" />
+                      </div>
+                      <div class="fun-fact-data">
+                        <h4>9,741</h4>
+                        <p>Click</p>
+                      </div>
+                    </div>
+                    <div class="fun-fact-item">
+                      <div class="fun-fact-icon">
+                        <img src="assets/images/svg/pencil-circle.svg" alt="" />
+                      </div>
+                      <div class="fun-fact-data">
+                        <h4>9.73%</h4>
+                        <p>Conversion Rate</p>
+                      </div>
+                    </div>
+                    <div class="fun-fact-item">
+                      <div class="fun-fact-icon">
+                        <img src="assets/images/svg/book-open.svg" alt="" />
+                      </div>
+                      <div class="fun-fact-data">
+                        <h4>81.94%</h4>
+                        <p>Bounce Rate</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="active-visitor-wrap">
+                    <div class="active-visitor-data">
+                      <p>Conversion Rate</p>
+                      <h3>9.73%</h3>
+                      <h4>
+                        <img src="assets/images/svg/arrow-up.svg" alt="" /> 3.5%
+                        Increase
+                      </h4>
+                    </div>
+                    <div class="active-visitor-icon bg-success-50">
+                      <img src="assets/images/svg/coffee.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="active-visitor-wrap">
+                    <div class="active-visitor-data">
+                      <p>bounce rate</p>
+                      <h3>81.94%</h3>
+                      <h4>
+                        <img src="assets/images/svg/arrow-up.svg" alt="" /> 1.7%
+                        Increase
+                      </h4>
+                    </div>
+                    <div class="active-visitor-icon bg-danger-50">
+                      <img src="assets/images/svg/activity.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="profile-left active-visitor">
+                  <div class="profile-thumb">
+                    <img src="assets/images/all-img/users/user1.png" alt="" />
+                  </div>
+                  <div class="profile-data">
+                    <h4>Kevin Gilbert</h4>
+                    <p>Software Engineer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+              <div class="banner-wrap bg-secondary-500 active-visitor">
+                <div class="banner-icon">
+                  <img src="assets/images/svg/folder-open.svg" alt="" />
+                </div>
+                <div class="banner-data">
+                  <p>
+                    Become a <span>Pro</span> <br />
+                  to get more <span>Space</span>
+                  </p>
+                  <button type="button" class="btn bg-white pill text-gray-900">
+                    Upgrade Plans
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xxl-9 col-xl-7 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="d-flex justify-content-between flex-sm-row flex-column align-items-center card-header">
+                  <div>User Overview</div>
+                  <div class="select-box select-header">
+                    <select class="custom-select sources" title="This Month">
+                      <option>Jan</option>
+                      <option>Feb</option>
+                      <option>Mar</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="user_chart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-5 col-lg-6 col-md-6">
+              <div class="card">
+                <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
+                  <div>Most Visited Page</div>
+                  <div class="select-box select-header">
+                    <select class="custom-select sources" title="This Month">
+                      <option>Jan</option>
+                      <option>Feb</option>
+                      <option>Mar</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="donut-chart-wrap">
+                  <div id="dount_chart"></div>
+                </div>
+                <div class="donut-chart-table">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Page name</th>
+                        <th>total users</th>
+                        <th>bounce rate</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-gray-900 extra-padding">
+                          <img src="assets/images/svg/circle-grren.svg" alt="" />
+                          Request a Quote
+                        </td>
+                        <td class="text-gray-700 fw-normal extra-padding">
+                          547,914
+                        </td>
+                        <td class="text-success-500 extra-padding">81.94%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-gray-900">
+                          <img src="assets/images/svg/circle-orange.svg" alt="" />
+                          Career
+                        </td>
+                        <td class="text-gray-700 fw-normal">547,914</td>
+                        <td class="text-success-500">81.94%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-gray-900">
+                          <img src="assets/images/svg/circle-red.svg" alt="" />
+                          Work
+                        </td>
+                        <td class="text-gray-700 fw-normal">547,914</td>
+                        <td class="text-success-500">81.94%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+              <div class="card">
+                <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
+                  <div>Browser Overview</div>
+                  <div class="select-box select-header">
+                    <select class="custom-select sources" title="This Month">
+                      <option>Jan</option>
+                      <option>Feb</option>
+                      <option>Mar</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card-body pb-0">
+                  <div class="row">
+                    <div class="col-sm-6 col-12 text-center rt-mb-28">
+                      <div class="borwser-img rt-mb-16">
+                        <img src="assets/images/all-img/chrome.svg" alt="" draggable="false" />
+                      </div>
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Google Chrome
+                      </div>
+                      <div class="body-font-4 text-gray">54% User</div>
+                    </div>
+                    <div class="col-sm-6 col-12 text-center rt-mb-28">
+                      <div class="borwser-img rt-mb-16">
+                        <img src="assets/images/all-img/firefox.svg" alt="" draggable="false" />
+                      </div>
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Firefox
+                      </div>
+                      <div class="body-font-4 text-gray">23% User</div>
+                    </div>
+                    <div class="col-sm-6 col-12 text-center rt-mb-28">
+                      <div class="borwser-img rt-mb-16">
+                        <img src="assets/images/all-img/edge.svg" alt="" draggable="false" />
+                      </div>
+
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Microsoft Edge
+                      </div>
+                      <div class="body-font-4 text-gray">19% User</div>
+                    </div>
+                    <div class="col-sm-6 col-12 text-center rt-mb-28">
+                      <div class="borwser-img rt-mb-16">
+                        <img src="assets/images/all-img/breve.svg" alt="" draggable="false" />
+                      </div>
+
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Brave
+                      </div>
+                      <div class="body-font-4 text-gray">11% User</div>
+                    </div>
+                    <div class="col-sm-6 col-12 text-center rt-mb-28">
+                      <div class="borwser-img rt-mb-16">
+                        <img src="assets/images/all-img/safari.svg" alt="" draggable="false" />
+                      </div>
+
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Apple Safari
+                      </div>
+                      <div class="body-font-4 text-gray">7% User</div>
+                    </div>
+                    <div class="col-sm-6 col-12 text-center rt-mb-28">
+                      <div class="borwser-img rt-mb-16">
+                        <img src="assets/images/all-img/opera.svg" alt="" draggable="false" />
+                      </div>
+                      <div class="body-font-4 text-black font-semibold rt-mb-4">
+                        Opera
+                      </div>
+                      <div class="body-font-4 text-gray">3% User</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6 order-xxl-3">
+              <div class="card">
+                <div class="d-flex justify-content-between flex-sm-row flex-column card-header">
+                  <div>Devices Overview</div>
+                </div>
+                <div class="card-body pb-0">
+                  <ul>
+
+
+                    <div class="rt-mb-24 col rt-col-12 rt-col-md-6 rt-col-lg-6 rt-col-xs-12">
+                      <div class="rt-single-icon-box">
+                        <div class="icon-thumb rt-mr-20"><img src="assets/images/svg/big-desktop.svg" alt="" draggable="false"></div>
+                        <div class="iconbox-content">
+                          <div class=" body-font-3 text-gray-900 font-medium rt-mb-4">Computer</div>
+                          <div class=" text-gray  body-font-4 rt-mb-8">
+                            <span>23%</span>
+                            <span>.</span>
+                            <span>698,723 Users</span>
+                          </div>
+                          <div class=" text-success-500 body-font-4 rt-mb-8">
+                            <span class=" rt-mr-4"><i class="ph-arrow-up"></i></span>1.2% Increase
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="rt-mb-24 col rt-col-12 rt-col-md-6 rt-col-lg-6 rt-col-xs-12">
+                      <div class="rt-single-icon-box">
+                        <div class="icon-thumb rt-mr-20"><img src="assets/images/svg/big-laptop.svg" alt="" draggable="false"></div>
+                        <div class="iconbox-content">
+                          <div class=" body-font-3 text-gray-900 font-medium rt-mb-4">Laptop</div>
+                          <div class=" text-gray  body-font-4 rt-mb-8">
+                            <span>23%</span>
+                            <span>.</span>
+                            <span>698,723 Users</span>
+                          </div>
+                          <div class=" text-danger-500 body-font-4 rt-mb-8">
+                            <span class=" rt-mr-4"><i class="ph-arrow-down"></i></span>2.1% Decrease
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="rt-mb-24 col rt-col-12 rt-col-md-6 rt-col-lg-6 rt-col-xs-12">
+                      <div class="rt-single-icon-box">
+                        <div class="icon-thumb rt-mr-20"><img src="assets/images/svg/big-tablet.svg" alt="" draggable="false"></div>
+                        <div class="iconbox-content">
+                          <div class=" body-font-3 text-gray-900 font-medium rt-mb-4">Tablet</div>
+                          <div class=" text-gray  body-font-4 rt-mb-8">
+                            <span>19%</span>
+                            <span>.</span>
+                            <span>+68,412 Users</span>
+                          </div>
+                          <div class=" text-success-500 body-font-4 rt-mb-8">
+                            <span class=" rt-mr-4"><i class="ph-arrow-up"></i></span>1.7% Increase
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="rt-mb-24 col rt-col-12 rt-col-md-6 rt-col-lg-6 rt-col-xs-12">
+                      <div class="rt-single-icon-box">
+                        <div class="icon-thumb rt-mr-20"><img src="assets/images/svg/big-phone.svg" alt="" draggable="false"></div>
+                        <div class="iconbox-content">
+                          <div class=" body-font-3 text-gray-900 font-medium rt-mb-4">Mobile Phone</div>
+                          <div class=" text-gray  body-font-4 rt-mb-8">
+                            <span>11%</span>
+                            <span>.</span>
+                            <span>16,716 Users</span>
+                          </div>
+                          <div class=" text-success-500 body-font-4 rt-mb-8">
+                            <span class=" rt-mr-4"><i class="ph-arrow-up"></i></span>2.9% Increase
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-6">
+              <div class="card">
+                <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
+                  <div>User Location</div>
+                  <div class="select-box select-header">
+                    <select class="custom-select sources" title="This Month">
+                      <option>Jan</option>
+                      <option>Feb</option>
+                      <option>Mar</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="world-map" class="rt-mb-48"></div>
+                  <div class="row">
+                    <div class="col-md-4 rt-md-10">
+                      <div class="rt-mb-15">
+                        <img src="assets/images/svg/usa-flag.svg" alt="" draggable="false" />
+                      </div>
+                      <div class="text-gray-900 body-font-3 font-medium rt-mb-4">
+                        United State (USA)
+                      </div>
+                      <div class="text-gray body-font-4">
+                        54% . 5,761,687 Users
+                      </div>
+                    </div>
+                    <div class="col-md-4 rt-md-10">
+                      <div class="rt-mb-15">
+                        <img src="assets/images/svg/china-flag.svg" alt="" draggable="false" />
+                      </div>
+                      <div class="text-gray-900 body-font-3 font-medium rt-mb-4">
+                        China
+                      </div>
+                      <div class="text-gray body-font-4">
+                        54% . 5,761,687 Users
+                      </div>
+                    </div>
+                    <div class="col-md-4 rt-md-10">
+                      <div class="rt-mb-15">
+                        <img src="assets/images/svg/russia-flag.svg" alt="" draggable="false" />
+                      </div>
+                      <div class="text-gray-900 body-font-3 font-medium rt-mb-4">
+                        Russia
+                      </div>
+                      <div class="text-gray body-font-4">
+                        54% . 5,761,687 Users
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxl-4 col-xl-6 col-md-6">
+              <div class="card">
+                <div class="d-flex justify-content-between flex-sm-row align-items-center flex-column card-header">
+                  <div>Social Media Traffic</div>
+                  <div class="select-box select-header">
+                    <select class="custom-select sources" title="This Month">
+                      <option>Jan</option>
+                      <option>Feb</option>
+                      <option>Mar</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table info-table">
+                      <thead>
+                        <tr class="bg-gray-50">
+                          <td class="f-size-11 text-gray-700 font-medium" colspan="2">
+                            Network
+                          </td>
+                          <td class="f-size-11 text-gray-700 font-medium">
+                            Visitors
+                          </td>
+                          <td class="f-size-11 text-gray-700 font-medium">
+                            Followers
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <td colspan="2">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/fb.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Facebook
+                              </div>
+                            </div>
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="2">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/tw.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Twitter
+                              </div>
+                            </div>
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="2">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/lin.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Linkedin
+                              </div>
+                            </div>
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="2">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/ins.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Instagram
+                              </div>
+                            </div>
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="2">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/dr.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Dribbble
+                              </div>
+                            </div>
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="2">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/be.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Behance
+                              </div>
+                            </div>
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="2">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8">
+                                <img src="assets/images/svg/social/pin.svg" alt="" />
+                              </div>
+                              <div class="iconbox-content text-gray-900 body-font-4 font-medium">
+                                Pinterest
+                              </div>
+                            </div>
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            5,761,687
+                          </td>
+                          <td class="body-font-4 text-gray-700">
+                            68,412
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-md-6">
+              <div class="card">
+                <div class="card-header">Calendar</div>
+                <div class="card-body">
+                  <div class="date-picker-calender rt-pt-15"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-5 col-xl-12">
+              <div class="card">
+                <div class="card-header">Operating System</div>
+                <div class="card-body">
+                  <div class="operating-system-wrap">
+                    <div class="operating-system-item">
+                      <div class="operating-system-thumb">
+                        <img src="assets/images/svg/windows.svg" alt="" />
+                      </div>
+                      <div class="operating-system-data">
+                        <a href="#">Computer & Laptop</a>
+                        <h4>Windows</h4>
+                        <p>57% • 68,412 Users</p>
+                      </div>
+                    </div>
+                    <div class="operating-system-item">
+                      <div class="operating-system-thumb">
+                        <img src="assets/images/svg/MacOS.svg" alt="" />
+                      </div>
+                      <div class="operating-system-data">
+                        <a href="#">Computer & Laptop</a>
+                        <h4>macOS</h4>
+                        <p>57% • 68,412 Users</p>
+                      </div>
+                    </div>
+                    <div class="operating-system-item">
+                      <div class="operating-system-thumb">
+                        <img src="assets/images/svg/iOS.svg" alt="" />
+                      </div>
+                      <div class="operating-system-data">
+                        <a href="#">Mobile & Tablet</a>
+                        <h4>iOS</h4>
+                        <p>57% • 68,412 Users</p>
+                      </div>
+                    </div>
+                    <div class="operating-system-item">
+                      <div class="operating-system-thumb">
+                        <img src="assets/images/svg/Android.svg" alt="" />
+                      </div>
+                      <div class="operating-system-data">
+                        <a href="#">Mobile & Tablet</a>
+                        <h4>Android</h4>
+                        <p>57% • 68,412 Users</p>
+                      </div>
+                    </div>
+                    <div class="operating-system-item">
+                      <div class="operating-system-thumb">
+                        <img src="assets/images/svg/Ubuntu.svg" alt="" />
+                      </div>
+                      <div class="operating-system-data">
+                        <a href="#">Computer & Laptop</a>
+                        <h4>Ubuntu</h4>
+                        <p>57% • 68,412 Users</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- upgrade palne start -->
+          <div class="row">
+            <div class="col-xxl-5">
+              <div class="billing-column black-box">
+                <h5>Current subscription plans</h5>
+                <div class="primium-content">
+                  <img src="assets/images/all-img/plane.png" alt="" /> Premium
+                </div>
+                <p>
+                  Premium monthly subscription plan active since:
+                  <span>Apr 16, 2021</span>
+                </p>
+                <button type="button" class="btn btn-secondary pill">
+                  Upgrade Plans
+                </button>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-lg-12 col-md-6">
+              <div class="billing-column">
+                <div class="billing-invoice-wrap">
+                  <div class="billing-invoice-content">
+                    <p>Next invoice</p>
+                    <h3>$149.00</h3>
+                    <h4>
+                      <img src="assets/images/svg/alarm.svg" alt="" /> On May,
+                      2021
+                    </h4>
+                    <button type="button" class="btn btn-primary pill btn-icon">
+                      <span class="button-content-wrapper">
+                      <span class="button-icon align-icon-right">
+                        <i class="ph-arrow-right"></i>
+                      </span>
+                      <span class="button-text"> Pay Now </span>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="card-aligned__icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="color-white" opacity="0.2" d="M3.99976 23.9999L3.99976 23.9998L3.99909 13.1064H27.9991L27.9998 23.9999L3.99976 23.9999Z" fill="#005CE8" stroke="#005CE8" stroke-width="2" />
+                      <path d="M28 7H4C3.44772 7 3 7.44772 3 8V24C3 24.5523 3.44772 25 4 25H28C28.5523 25 29 24.5523 29 24V8C29 7.44772 28.5523 7 28 7Z" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M20.999 21H24.999" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M14.999 21H16.999" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M2.99902 12.1064H28.999" stroke="#005CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-6 col-lg-12 col-md-6">
+              <div class="billing-column">
+                <div class="billing-curent-plane">
+                  <h5>Current Plans Benefits</h5>
+                  <p>
+                    Aenean efficitur euismod elementum. Donec ullamcorper pretium
+                    tempus.
+                  </p>
+                </div>
+                <div class="billing-curent-plane-benefits">
+                  <ul>
+                    <li>
+                      <img src="assets/images/svg/check.svg" alt="" />Upgrade
+                      Profile
+                    </li>
+                    <li>
+                      <img src="assets/images/svg/check.svg" alt="" />Multi-shot &
+                      video
+                    </li>
+                    <li>
+                      <img src="assets/images/svg/check.svg" alt="" />Instant
+                      creative portfolio
+                    </li>
+                    <li>
+                      <img src="assets/images/svg/check.svg" alt="" />Sell goods
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End upgrade palne start -->
+          <div class="row">
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+              <div class="card">
+                <div class="upload-file">
+                  <div class="upload-photo-thumb">
+                    <img src="assets/images/all-img/users/user1.png" alt="" />
+                  </div>
+                  <div class="btn btn-outline-primary pill btn-icon d-block position-static">
+                    <span class="button-content-wrapper">
+                    <span class="button-text"> Upload Proifle Photo </span>
+                    <span class="button-icon">
+                      <img src="assets/images/svg/download2.svg" alt="" />
+                    </span>
+                    </span>
+                  </div>
+                  <input type="file" />
+                </div>
+                <div class="upload-photo-content">
+                  <p>
+                    <span>Remember:</span> For best results, use an image at least
+                    200px by 200px in .jpg or .png format
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+              <div class="card">
+                <div class="upload-file two">
+                  <div class="upload-photo-thumb two">
+                    <img src="assets/images/all-img/banner2.jpg" alt="" />
+                  </div>
+                  <input type="file" />
+                  <div class="upload-btn-wrap">
+                    <div class="btn btn-outline-primary pill btn-icon d-block position-static">
+                      <span class="button-content-wrapper">
+                      <span class="button-text"> Upload Proifle Photo </span>
+                      <span class="button-icon">
+                        <img src="assets/images/svg/download2.svg" alt="" />
+                      </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="upload-photo-content two">
+                  <button type="button" class="btn btn-danger2 pill d-block">
+                    Remove Banner
+                  </button>
+                  <p>
+                    <span>Remember:</span> For best results, use an image at least
+                    200px by 200px in .jpg or .png format
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-xl-12">
+              <div class="card">
+                <div class="card-header">Basic Info</div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                      <div class="fromGroup mb-3">
+                        <label>Name</label>
+                        <input class="form-control" type="text" placeholder="Full name" />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <div class="fromGroup mb-3">
+                        <label>Tittle</label>
+                        <input class="form-control" type="text" placeholder="headline, sub-tittle" />
+                      </div>
+                    </div>
+                    <div class="fromGroup mb-3">
+                      <label>Boigraphy</label>
+                      <textarea class="form-control" name="textarea" placeholder="You boigraphy, description"></textarea>
+                    </div>
+                    <div class="save-change-btn">
+                      <button type="button" class="btn btn-primary pill mt-3">
+                        Save Changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxl-4 col-xl-6 col-md-6">
+              <div class="card">
+                <div class="card-header">Private Info</div>
+                <div class="card-body">
+                  <div class="fromGroup mb-3">
+                    <label>Team</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>Select...</option>
+                        <option>Select...</option>
+                        <option>Select...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                      <div class="fromGroup mb-3">
+                        <label>Country</label>
+                        <div class="select-box">
+                          <select class="custom-select sources" title="Select...">
+                            <option>Bangladesh</option>
+                            <option>New zealand</option>
+                            <option>switzerland</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                      <div class="fromGroup mb-3">
+                        <label>City</label>
+                        <div class="select-box">
+                          <select class="custom-select sources" title="Select...">
+                            <option>Dhaka</option>
+                            <option>New zealand</option>
+                            <option>switzerland</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fromGroup has-icon mb-3">
+                    <label>Date of Birth</label>
+                    <div class="form-control-icon">
+                      <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY" />
+                      <!-- <div class="date-picker-calender rt-pt-15"></div> -->
+                      <div class="icon-badge-2">
+                        <img src="assets/images/svg/calendar.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fromGroup mb-3">
+                    <label>Language</label>
+                    <div class="select-box">
+                      <select class="custom-select sources" title="Select...">
+                        <option>Bangla</option>
+                        <option>English</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary pill mt-3">
+                    Save Changes
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-6 col-md-6">
+              <div class="card">
+                <div class="card-header">Social Account</div>
+                <div class="card-body">
+                  <form action="#">
+                    <div class="fromGroup mb-3">
+                      <label>Facebook</label>
+                      <input class="form-control" type="text" placeholder="Facebook profile url..." />
+                    </div>
+                    <div class="fromGroup mb-3">
+                      <label>Twitter</label>
+                      <input class="form-control" type="text" placeholder="Twitter profile url..." />
+                    </div>
+                    <div class="fromGroup mb-3">
+                      <label>Linkedin</label>
+                      <input class="form-control" type="text" placeholder="Linkedin profile url..." />
+                    </div>
+                    <div class="fromGroup mb-3">
+                      <label>Instagram</label>
+                      <input class="form-control" type="text" placeholder="Instagram profile url..." />
+                    </div>
+                    <button type="button" class="btn btn-primary pill mt-3">
+                      Save Changes
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4">
+              <div class="card">
+                <div class="card-header">Contact Info</div>
+                <div class="card-body">
+                  <form action="#">
+                    <div class="fromGroup has-icon mb-3">
+                      <label>Phone</label>
+                      <div class="form-control-icon">
+                        <input class="form-control" type="text" placeholder="Phone number" />
+                        <div class="icon-badge-2">
+                          <img src="assets/images/svg/phonecall2.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fromGroup has-icon mb-3">
+                      <label>Email</label>
+                      <div class="form-control-icon">
+                        <input class="form-control" type="text" placeholder="email address" />
+                        <div class="icon-badge-2">
+                          <img src="assets/images/svg/envelope2.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fromGroup has-icon mb-3">
+                      <label>Address</label>
+                      <div class="form-control-icon">
+                        <input class="form-control" type="text" placeholder="Current location..." />
+                        <div class="icon-badge-2">
+                          <img src="assets/images/svg/map2.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fromGroup has-icon mb-3">
+                      <label>Portfolio</label>
+                      <div class="form-control-icon">
+                        <input class="form-control" type="text" placeholder="Personal portfolio url" />
+                        <div class="icon-badge-2">
+                          <img src="assets/images/svg/briefcase.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary pill mt-3">
+                      Save Changes
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxl-4 col-xl-6 col-md-6">
+              <div class="card">
+                <div class="card-header">Change Password</div>
+                <div class="card-body">
+                  <form action="#">
+                    <div class="fromGroup eye mb-3">
+                      <label>Current Password</label>
+                      <div class="form-control-icon">
+                        <input id="password-hide_show" class="form-control" type="password" placeholder="password" />
+                        <div class="has-badge">
+                          <i class="ph-eye"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fromGroup eye mb-3">
+                      <label>New Password</label>
+                      <div class="form-control-icon">
+                        <input id="password-hide_show2" class="form-control" type="password" placeholder="password" />
+                        <div class="has-badge select-icon__two">
+                          <i class="ph-eye"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fromGroup eye mb-3">
+                      <label>Confirm Password</label>
+                      <div class="form-control-icon">
+                        <input id="password-hide_show3" class="form-control" type="password" placeholder="password" />
+                        <div class="has-badge select-icon__three">
+                          <i class="ph-eye"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary pill mt-3">
+                      Save Changes
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-md-6">
+              <div class="card">
+                <div class="card-header">Advance Setting</div>
+                <div class="card-body">
+                  <form action="#">
+                    <div class="checkbox-top">
+                      <div class="form-check from-chekbox-custom mb-2">
+                        <input class="form-check-input" type="checkbox" value="" id="check-one" checked />
+                        <label class="form-check-label" for="check-one">
+                          Show my balance
+                        </label>
+                      </div>
+                      <div class="form-check from-chekbox-custom mb-2">
+                        <input class="form-check-input" type="checkbox" value="" id="check-two" checked />
+                        <label class="form-check-label" for="check-two">
+                          Show total Kanban Board card
+                        </label>
+                      </div>
+                      <div class="form-check from-chekbox-custom mb-2">
+                        <input class="form-check-input" type="checkbox" value="" id="check-three" />
+                        <label class="form-check-label" for="check-three">
+                          Show total Calendar task
+                        </label>
+                      </div>
+                      <div class="form-check from-chekbox-custom">
+                        <input class="form-check-input" type="checkbox" value="" id="check-four" />
+                        <label class="form-check-label" for="check-four">
+                          Show total Calendar events
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-check from-chekbox-custom mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="check-five" checked />
+                      <label class="form-check-label" for="check-five">
+                        Show private information
+                      </label>
+                    </div>
+                    <div class="form-check from-chekbox-custom mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="check-six" />
+                      <label class="form-check-label" for="check-six">
+                        Contact information
+                      </label>
+                    </div>
+                    <div class="form-check from-chekbox-custom">
+                      <input class="form-check-input" type="checkbox" value="" id="check-seven" />
+                      <label class="form-check-label" for="check-seven">
+                        Social media link
+                      </label>
+                    </div>
+                    <button type="button" class="btn btn-primary pill mt-3">
+                      Save Changes
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-5">
+              <div class="pricing-plan-wrap">
+                <div class="pricing-plan top">
+                  <h4>Pricing Plans</h4>
+                  <h5>🚀 Premium</h5>
+                  <p>
+                    Transfer this account to another user or to an organization
+                    where you have the ability to create repositories.
+                  </p>
+                  <button type="button" class="btn btn-primary pill">
+                    Upgrade plan
+                  </button>
+                </div>
+                <div class="pricing-plan bottom">
+                  <h4>Deactivate this account</h4>
+                  <p>
+                    Once you delete a account, there is no going back. Please be
+                    certain.
+                  </p>
+                  <button type="button" class="btn btn-danger2 pill">
+                    Deactivated account
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- End setting -->
+          <div class="profile-wrap">
+            <div class="profile-left">
+              <div class="profile-thumb">
+                <img src="assets/images/all-img/users/user1.png" alt="" />
+              </div>
+              <div class="profile-data">
+                <h4>Kevin Gilbert</h4>
+                <p>Software Engineer</p>
+              </div>
+            </div>
+            <div class="profile-right">
+              <div class="profile-right-item">
+                <h4>$95,400</h4>
+                <p>Total Balance</p>
+              </div>
+              <div class="profile-right-item">
+                <h4>3,475</h4>
+                <p>Board Card</p>
+              </div>
+              <div class="profile-right-item">
+                <h4>63,867</h4>
+                <p>Calender Events</p>
+              </div>
+            </div>
+          </div>
+          <!-- End profile -->
+
+          <div class="card">
+            <div class="card-header">Payment Method</div>
+            <div class="card-body">
+              <div class="payment-card-column">
+                <div class="payment-card-wrap" style="
+                  background-image: url(assets/images/all-img/card-bg1.png);
+                ">
+                  <div class="payment-card-header">
+                    <h4>$95, 400.00 <span>USD</span></h4>
+                    <img src="assets/images/svg/visa.svg" alt="" />
+                  </div>
+                  <div class="payment-card-number">
+                    <div class="payment-card-number-left">
+                      <p id="textToCopy">**** **** **** 3814</p>
+                      <button id="copyButton">
+                        <img src="assets/images/svg/copy.svg" alt="" />
+                      </button>
+                    </div>
+                    <div class="payment-card-number-right">
+                      <p>Expires</p>
+                      <h5>04 / 24</h5>
+                    </div>
+                  </div>
+                  <div class="payment-card-footer">
+                    <p>Kevin Gilbert</p>
+                    <div class="card-dropdown">
+                      <button class="dots-btn" id="dropdownMenuButton10" data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots.svg" alt="" />
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton10">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li>
+                          <a class="dropdown-item delete-content" href="#">Delete</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- end card one -->
+                <div class="payment-card-wrap" style="
+                  background-image: url(assets/images/all-img/card-bg2.png);
+                ">
+                  <div class="payment-card-header header2">
+                    <h4>$95, 400.00 <span>USD</span></h4>
+                    <img src="assets/images/svg/visa2.svg" alt="" />
+                  </div>
+                  <div class="payment-card-number">
+                    <div class="payment-card-number-left">
+                      <p id="textToCopy2">**** **** **** 5468</p>
+                      <button id="copyButton2">
+                        <img src="assets/images/svg/copy.svg" alt="" />
+                      </button>
+                    </div>
+                    <div class="payment-card-number-right">
+                      <p>Expires</p>
+                      <h5>04 / 24</h5>
+                    </div>
+                  </div>
+                  <div class="payment-card-footer">
+                    <p>Kevin Gilbert</p>
+                    <div class="card-dropdown">
+                      <button class="dots-btn" id="dropdownMenuButton11" data-bs-toggle="dropdown">
+                        <img src="assets/images/svg/dots.svg" alt="" />
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton11">
+                        <li><a class="dropdown-item" href="#">Download</a></li>
+                        <li><a class="dropdown-item" href="#">Print</a></li>
+                        <li>
+                          <a class="dropdown-item delete-content" href="#">Delete</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- end card two -->
+                <div class="payment-card-add" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <img src="assets/images/svg/pluscircle.svg" alt="" />
+                  <p>Add new card</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end payment method -->
+          <div class="card">
+            <div class="card-header border-0">Payment History</div>
+            <div class="payment-history-list table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>NO.</th>
+                    <th>Invoice Date</th>
+                    <th>Date Paid</th>
+                    <th>Status</th>
+                    <th>Payment Method</th>
+                    <th>Subscription</th>
+                    <th>Amount</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>EKG464SJFN17</td>
+                    <td>10 Dec, 2021</td>
+                    <td>10 Dec, 2021</td>
+                    <td>
+                      <button type="button" class="btn btn-primary2 pill small-btn">
+                        Button
+                      </button>
+                    </td>
+                    <td>0077 **** **** 3814 (Visa)</td>
+                    <td>Premium (Yearly)</td>
+                    <td>$129.99 USD</td>
+                    <td>
+                      <div class="dropdown-wrap">
+                        <button type="button" class="btn bg-primary-50 rounded-circle icon-btn" id="dropdownMenuButton_1" data-bs-toggle="dropdown">
+                          <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                          </svg>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton_1">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+
+                              Download
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.99951 6.25V3.125H14.9995V6.25" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.9995 11.875H4.99951V17.1875H14.9995V11.875Z" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.99951 13.75H2.18701V7.5C2.18701 6.80964 2.79329 6.25 3.54118 6.25H16.4578C17.2057 6.25 17.812 6.80964 17.812 7.5V13.75H14.9995" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.6875 10C15.2053 10 15.625 9.58027 15.625 9.0625C15.625 8.54473 15.2053 8.125 14.6875 8.125C14.1697 8.125 13.75 8.54473 13.75 9.0625C13.75 9.58027 14.1697 10 14.6875 10Z" fill="#626C70" />
+                              </svg>
+
+                              Print
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item delete-content" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>EKG464SJFN17</td>
+                    <td>10 Dec, 2021</td>
+                    <td>10 Dec, 2021</td>
+                    <td>
+                      <button type="button" class="btn btn-success2 pill small-btn small-btn2">
+                        Completed
+                      </button>
+                    </td>
+                    <td>0077 **** **** 3814 (Visa)</td>
+                    <td>Premium (Yearly)</td>
+                    <td>$129.99 USD</td>
+                    <td>
+                      <div class="dropdown-wrap">
+                        <button type="button" class="btn bg-primary-50 rounded-circle icon-btn" id="dropdownMenuButton2" data-bs-toggle="dropdown">
+                          <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                          </svg>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                              Download
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.99951 6.25V3.125H14.9995V6.25" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.9995 11.875H4.99951V17.1875H14.9995V11.875Z" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.99951 13.75H2.18701V7.5C2.18701 6.80964 2.79329 6.25 3.54118 6.25H16.4578C17.2057 6.25 17.812 6.80964 17.812 7.5V13.75H14.9995" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.6875 10C15.2053 10 15.625 9.58027 15.625 9.0625C15.625 8.54473 15.2053 8.125 14.6875 8.125C14.1697 8.125 13.75 8.54473 13.75 9.0625C13.75 9.58027 14.1697 10 14.6875 10Z" fill="#626C70" />
+                              </svg>
+
+                              Print
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item delete-content" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>EKG464SJFN17</td>
+                    <td>10 Dec, 2021</td>
+                    <td>10 Dec, 2021</td>
+                    <td>
+                      <button type="button" class="btn btn-success2 pill small-btn small-btn2">
+                        Completed
+                      </button>
+                    </td>
+                    <td>0077 **** **** 3814 (Visa)</td>
+                    <td>Premium (Yearly)</td>
+                    <td>$129.99 USD</td>
+                    <td>
+                      <div class="dropdown-wrap">
+                        <button type="button" class="btn bg-primary-50 rounded-circle icon-btn" id="dropdownMenuButton3" data-bs-toggle="dropdown">
+                          <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                          </svg>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+
+                              Download
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.99951 6.25V3.125H14.9995V6.25" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.9995 11.875H4.99951V17.1875H14.9995V11.875Z" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.99951 13.75H2.18701V7.5C2.18701 6.80964 2.79329 6.25 3.54118 6.25H16.4578C17.2057 6.25 17.812 6.80964 17.812 7.5V13.75H14.9995" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.6875 10C15.2053 10 15.625 9.58027 15.625 9.0625C15.625 8.54473 15.2053 8.125 14.6875 8.125C14.1697 8.125 13.75 8.54473 13.75 9.0625C13.75 9.58027 14.1697 10 14.6875 10Z" fill="#626C70" />
+                              </svg>
+
+                              Print
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item delete-content" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>EKG464SJFN17</td>
+                    <td>10 Dec, 2021</td>
+                    <td>10 Dec, 2021</td>
+                    <td>
+                      <button type="button" class="btn btn-success2 pill small-btn small-btn2">
+                        Completed
+                      </button>
+                    </td>
+                    <td>0077 **** **** 3814 (Visa)</td>
+                    <td>Premium (Yearly)</td>
+                    <td>$129.99 USD</td>
+                    <td>
+                      <div class="dropdown-wrap">
+                        <button type="button" class="btn bg-primary-50 rounded-circle icon-btn" id="dropdownMenuButton4" data-bs-toggle="dropdown">
+                          <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                          </svg>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                              Download
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.99951 6.25V3.125H14.9995V6.25" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.9995 11.875H4.99951V17.1875H14.9995V11.875Z" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.99951 13.75H2.18701V7.5C2.18701 6.80964 2.79329 6.25 3.54118 6.25H16.4578C17.2057 6.25 17.812 6.80964 17.812 7.5V13.75H14.9995" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.6875 10C15.2053 10 15.625 9.58027 15.625 9.0625C15.625 8.54473 15.2053 8.125 14.6875 8.125C14.1697 8.125 13.75 8.54473 13.75 9.0625C13.75 9.58027 14.1697 10 14.6875 10Z" fill="#626C70" />
+                              </svg>
+
+                              Print
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item delete-content" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11.875 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.625 4.375V16.25C15.625 16.4158 15.5592 16.5747 15.4419 16.6919C15.3247 16.8092 15.1658 16.875 15 16.875H5C4.83424 16.875 4.67527 16.8092 4.55806 16.6919C4.44085 16.5747 4.375 16.4158 4.375 16.25V4.375" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.125 4.375V3.125C13.125 2.79348 12.9933 2.47554 12.7589 2.24112C12.5245 2.0067 12.2065 1.875 11.875 1.875H8.125C7.79348 1.875 7.47554 2.0067 7.24112 2.24112C7.0067 2.47554 6.875 2.79348 6.875 3.125V4.375" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- End payment history list -->
+
+          <div class="card">
+            <div class="card-header border-0">Invoice</div>
+            <div class="invoice-table-list table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>NO.</th>
+                    <th>INVOICE SUBJECT</th>
+                    <th>Client</th>
+                    <th>Vat NO.</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="from-chekbox-custom">
+                        <input class="form-check-input" type="checkbox" value="" id="check-eight" />
+                        <label class="form-check-label" for="check-eight">
+                          EKG464SJFN17
+                        </label>
+                      </div>
+                    </td>
+                    <td class="large-width">Design Works</td>
+                    <td>
+                      <div class="rt-single-icon-box rt-align-center">
+                        <div class="icon-thumb rt-mr-8">
+                          <img src="assets/images/all-img/flag1.png" alt="" />
+                        </div>
+                        <div class="iconbox-content">Carlson Limited</div>
+                      </div>
+                    </td>
+                    <td>87956621</td>
+                    <td>15 Dec, 2017</td>
+                    <td class="large-width2">
+                      <div class="paid-wrap">
+                        <img src="assets/images/svg/circle2.svg" alt="" />
+                        Pending
+                      </div>
+                    </td>
+                    <td>$887.00</td>
+                    <td>
+                      <div class="dropdown-wrap">
+                        <button type="button" class="btn btn-primary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                          <span class="button-text"> Download </span>
+                          <span class="button-icon">
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.71875 8.5946L10 11.875L13.2812 8.5946"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M10 3.125V11.8727"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton5" data-bs-toggle="dropdown">
+                          <img src="assets/images/svg/dots2.svg" alt="" />
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
+                          <li><a class="dropdown-item" href="#">Download</a></li>
+                          <li><a class="dropdown-item" href="#">Print</a></li>
+                          <li>
+                            <a class="dropdown-item delete-content" href="#">Delete</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="from-chekbox-custom">
+                        <input class="form-check-input" type="checkbox" value="" id="check-nine" />
+                        <label class="form-check-label" for="check-nine">
+                          EKG464SJFN17
+                        </label>
+                      </div>
+                    </td>
+                    <td class="large-width">Design Works</td>
+                    <td>
+                      <div class="rt-single-icon-box rt-align-center">
+                        <div class="icon-thumb rt-mr-8">
+                          <img src="assets/images/all-img/flag2.png" alt="" />
+                        </div>
+                        <div class="iconbox-content">Carlson Limited</div>
+                      </div>
+                    </td>
+                    <td>87956621</td>
+                    <td>15 Dec, 2017</td>
+                    <td class="large-width2">
+                      <div class="paid-wrap">
+                        <img src="assets/images/svg/circle2.svg" alt="" />
+                        Pending
+                      </div>
+                    </td>
+                    <td>$887.00</td>
+                    <td>
+                      <div class="dropdown-wrap">
+                        <button type="button" class="btn btn-primary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                          <span class="button-text"> Download </span>
+                          <span class="button-icon">
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.71875 8.5946L10 11.875L13.2812 8.5946"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M10 3.125V11.8727"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton6" data-bs-toggle="dropdown">
+                          <img src="assets/images/svg/dots2.svg" alt="" />
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
+                          <li><a class="dropdown-item" href="#">Download</a></li>
+                          <li><a class="dropdown-item" href="#">Print</a></li>
+                          <li>
+                            <a class="dropdown-item delete-content" href="#">Delete</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="from-chekbox-custom">
+                        <input class="form-check-input" type="checkbox" value="" id="check-ten" />
+                        <label class="form-check-label" for="check-ten">
+                          EKG464SJFN17
+                        </label>
+                      </div>
+                    </td>
+                    <td class="large-width">Design Works</td>
+                    <td>
+                      <div class="rt-single-icon-box rt-align-center">
+                        <div class="icon-thumb rt-mr-8">
+                          <img src="assets/images/all-img/flag1.png" alt="" />
+                        </div>
+                        <div class="iconbox-content">Carlson Limited</div>
+                      </div>
+                    </td>
+                    <td>87956621</td>
+                    <td>15 Dec, 2017</td>
+                    <td class="large-width2">
+                      <div class="paid-wrap">
+                        <img src="assets/images/svg/circle.svg" alt="" />
+                        Paid
+                      </div>
+                    </td>
+                    <td>$887.00</td>
+                    <td>
+                      <div class="dropdown-wrap">
+                        <button type="button" class="btn btn-primary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                          <span class="button-text"> Download </span>
+                          <span class="button-icon">
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.71875 8.5946L10 11.875L13.2812 8.5946"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M10 3.125V11.8727"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton7" data-bs-toggle="dropdown">
+                          <img src="assets/images/svg/dots2.svg" alt="" />
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
+                          <li><a class="dropdown-item" href="#">Download</a></li>
+                          <li><a class="dropdown-item" href="#">Print</a></li>
+                          <li>
+                            <a class="dropdown-item delete-content" href="#">Delete</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="from-chekbox-custom">
+                        <input class="form-check-input" type="checkbox" value="" id="check-eleven" />
+                        <label class="form-check-label" for="check-eleven">
+                          EKG464SJFN17
+                        </label>
+                      </div>
+                    </td>
+                    <td class="large-width">Design Works</td>
+                    <td>
+                      <div class="rt-single-icon-box rt-align-center">
+                        <div class="icon-thumb rt-mr-8">
+                          <img src="assets/images/all-img/flag2.png" alt="" />
+                        </div>
+                        <div class="iconbox-content">Carlson Limited</div>
+                      </div>
+                    </td>
+                    <td>87956621</td>
+                    <td>15 Dec, 2017</td>
+                    <td class="large-width2">
+                      <div class="paid-wrap">
+                        <img src="assets/images/svg/circle.svg" alt="" />
+                        Paid
+                      </div>
+                    </td>
+                    <td>$887.00</td>
+                    <td>
+                      <div class="dropdown-wrap">
+                        <button type="button" class="btn btn-primary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                          <span class="button-text"> Download </span>
+                          <span class="button-icon">
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.71875 8.5946L10 11.875L13.2812 8.5946"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M10 3.125V11.8727"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton8" data-bs-toggle="dropdown">
+                          <img src="assets/images/svg/dots2.svg" alt="" />
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton8">
+                          <li><a class="dropdown-item" href="#">Download</a></li>
+                          <li><a class="dropdown-item" href="#">Print</a></li>
+                          <li>
+                            <a class="dropdown-item delete-content" href="#">Delete</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="from-chekbox-custom">
+                        <input class="form-check-input" type="checkbox" value="" id="check12" />
+                        <label class="form-check-label" for="check12">
+                          EKG464SJFN17
+                        </label>
+                      </div>
+                    </td>
+                    <td class="large-width">Design Works</td>
+                    <td>
+                      <div class="rt-single-icon-box rt-align-center">
+                        <div class="icon-thumb rt-mr-8">
+                          <img src="assets/images/all-img/flag1.png" alt="" />
+                        </div>
+                        <div class="iconbox-content">Carlson Limited</div>
+                      </div>
+                    </td>
+                    <td>87956621</td>
+                    <td>15 Dec, 2017</td>
+                    <td class="large-width2">
+                      <div class="paid-wrap">
+                        <img src="assets/images/svg/circle.svg" alt="" />
+                        Paid
+                      </div>
+                    </td>
+                    <td>$887.00</td>
+                    <td>
+                      <div class="dropdown-wrap">
+                        <button type="button" class="btn btn-primary2 pill btn-icon">
+                          <span class="button-content-wrapper">
+                          <span class="button-text"> Download </span>
+                          <span class="button-icon">
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.71875 8.5946L10 11.875L13.2812 8.5946"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M10 3.125V11.8727"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                stroke="white"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                          </span>
+                        </button>
+                        <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton9" data-bs-toggle="dropdown">
+                          <img src="assets/images/svg/dots2.svg" alt="" />
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton9">
+                          <li><a class="dropdown-item" href="#">Download</a></li>
+                          <li><a class="dropdown-item" href="#">Print</a></li>
+                          <li>
+                            <a class="dropdown-item delete-content" href="#">Delete</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-footer">
+              <div class="table-footer-left">Showing 1 to 8 of 16 entries</div>
+              <div class="table-footer-right">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <i class="ph-arrow-left"></i>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">01</a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">02</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">03</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">04</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">05</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <i class="ph-arrow-right"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!-- End invoice list -->
+
+          <!-- Footer  -->
+          <footer>
+            <div class="footer-content">
+              <div>
+                <p>
+                  © 2021 - Wadmin admin dashboard. Design & develop by
+                  <a href="#">Templatecookie</a>
+                </p>
+              </div>
+              <div>
+                <ul>
+                  <li><a href="docs/index.html">Documentation</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="card m-0">
+          <div class="card-header">Add new Card</div>
+          <div class="card-body">
+            <form action="#">
+              <div class="fromGroup mb-3">
+                <label>Card Number</label>
+                <input class="form-control" type="text" placeholder="card number..." />
+              </div>
+              <div class="fromGroup mb-3">
+                <label>Name on Card</label>
+                <input class="form-control" type="text" placeholder="Name" />
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="fromGroup mb-3">
+                    <label>CVC</label>
+                    <input class="form-control" type="password" placeholder="..." />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="fromGroup mb-3">
+                    <label>Expire Date</label>
+                    <input class="form-control date-picker-calender" type="text" placeholder="DD / MM / YY" />
+                  </div>
+                </div>
+              </div>
+              <div class="billing-modal-footer">
+                <button type="button" class="btn btn-dark2 pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Cancel
+                </button>
+                <button type="button" class="btn btn-primary pill btn-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <span class="button-content-wrapper">
+                  <span class="button-text"> Add Card </span>
+                  <span class="button-icon">
+                    <img src="assets/images/svg/plus.svg" alt="" />
+                  </span>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="rt-mobile-menu-overlay"></div>
+  <!-- /.rt-mobile-menu-overlay -->
+  <div id="template2" style="display: none">
+    <div class="PopoverParent">
+      <div class="Popover-header">
+        <a class="rt-single-icon-box user-profile-icon-big rt-align-center" href="#">
+          <div class="icon-thumb">
+            <div class="innerImage">
+              <img src="assets/images/all-img/user.svg" alt="profile_image" />
+            </div>
+          </div>
+          <div class="iconbox-content">
+            <h4>Faraz Ahmed</h4>
+            <span>farazleo112</span>
+          </div>
+        </a>
+      </div>
+      <div class="PopoverContent">
+        <div class="popoverInnerContent">
+          <ul class="user_menu">
+            <li>
+              <a href="profile.html">
+                <span class="icon-i">
+                    <i class="ph-user"></i>
+                  </span>
+                Profile
+              </a>
+            </li>
+            <li>
+              <a href="invoice.html">
+                <span class="icon-i">
+                    <i class="ph-chart-bar"></i>
+                  </span>
+                Reports
+              </a>
+            </li>
+            <li>
+              <a href="setting.html">
+                <span class="icon-i">
+                    <i class="ph-gear"></i>
+                  </span>
+                Settings
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <span class="icon-i">
+                    <i class="ph-question"></i>
+                  </span>
+                Get Help
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="popOverFooter">
+          <a href="#">
+            <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.3"
+                  height="17.3"
+                  viewBox="0 0 17.3 17.3"
+                >
+                  <g id="log-out" transform="translate(-2.35 -2.35)">
+                    <path
+                      id="Path_2782"
+                      data-name="Path 2782"
+                      d="M8.333,19H4.778A1.778,1.778,0,0,1,3,17.222V4.778A1.778,1.778,0,0,1,4.778,3H8.333"
+                      transform="translate(0 0)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                    <path
+                      id="Path_2783"
+                      data-name="Path 2783"
+                      d="M16,15.889l4.444-4.444L16,7"
+                      transform="translate(-1.444 -0.444)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                    <line
+                      id="Line_11"
+                      data-name="Line 11"
+                      x1="10.667"
+                      transform="translate(8.333 11)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                  </g>
+                </svg>
+              </span>
+            Log Out
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="template" style="display: none">
+    <div class="PopoverParent min-372">
+      <div class="Popover-header d-flex justify-content-between">
+        <div class="d-blok f-size-14 line-height-20 text-gray-900">
+          Notification
+        </div>
+        <div class="d-blok f-size-14 text-gray-700 pointer">Clear All</div>
+      </div>
+      <div class="PopoverContent">
+        <div class="popoverInnerContent">
+          <div class="notifybox">
+            <ul class="notify-lists rt-list">
+
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/notification/check.svg" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900  mb-1">This is a success notification.</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/all-img/user_1.png" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900  mb-1">Kevin Mention you in “UX Design Proc...”</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/notification/alert.svg" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900  mb-1">This is you lasst waring</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/all-img/user_2.png" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900  mb-1">Janny invited you in events in calender</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/notification/file.svg" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900  mb-1">Your pricing plan is updated</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-settings" id="appSettings">
+    <div class="settings-header d-flex justify-content-between">
+      <div class="text-gray-900 body-font-3 font-medium ">Settings</div>
+      <div class="pointer" id="closesetting">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 3.5L3.5 12.5" stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M12.5 12.5L3.5 3.5" stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+      </div>
+    </div>
+    <div class="cal-h-70" data-simplebar>
+      <div class="inner-content">
+        <div class="setting-title">Layout</div>
+        <div class="settings-images row ">
+          <div class="col-lg-6 rt-mb-32">
+            <div class="form-check p-0">
+              <label class="d-block pointer" for="vertical_lable">
+                <img src="assets/images/all-img/d-1.png" alt="" class="w-100" />
+                <div class="bottom-content">
+                  <input class="form-check-input  pointer" type="radio" name="layoutbox" id="vertical_lable" value="vertical" checked />
+                  <span> Vertical</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+          <div class="col-lg-6 rt-mb-32">
+            <div class="form-check p-0">
+              <label class="form-check-label d-block pointer" for="horizental_label">
+                <img src="assets/images/all-img/d-2.png" alt="" />
+                <div class="bottom-content">
+                  <input class="form-check-input d-block pointer" type="radio" name="layoutbox" id="horizental_label" value="horizental" />
+                  <span>Horizontal</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="setting-title rt-pt-30">Layout</div>
+        <ul class="rt-mb-32">
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_white" value="white" checked />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_white">
+                White
+              </label>
+            </div>
+          </li>
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_black" value="black" />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_black">
+                Black
+              </label>
+            </div>
+          </li>
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_navy" value="blue" />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_navy">
+                Navy Blue
+              </label>
+            </div>
+          </li>
+        </ul>
+        <div class="row smallgap">
+          <div class="col-md-6">
+            <button class="btn btn-primary2 pill block w-100 rt-mb-10">Reset to default</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-primary pill btn-icon block w-100  rt-mb-10">
+              <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Purchase now
+                            </span>
+              <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+              
+                            </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="settings-overlay"></div>
+
+  <!-- scripts -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/tippy-bundle.umd.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/chartist.min.js"></script>
+  <script src="assets/js/jquery-jvectormap-2.0.5.min.js"></script>
+  <script src="assets/js/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="assets/js/metisMenu.min.js"></script>
+  <script src="assets/js/morris.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/simplebar.min.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <script src="assets/js/custom-select.js"></script>
+  <script src="assets/js/waves.js"></script>
+  <script src="assets/js/dragula.min.js"></script>
+  <script src="assets/js/appkanban.js"></script>
+  <script src="assets/js/app.js"></script>
+  <div class="templatecookie-btn">
+    <!-- Purchase Button -->
+    <a href="#" class="purchase-btn">
+      Purchase Now
+      <span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </span>
+    </a>
+  </div>
+</body>
+</html>

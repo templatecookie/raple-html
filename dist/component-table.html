@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <title>Wadmin - Admin Dashboard</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/logo-icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/light.css" />
+  <link rel="stylesheet" href="assets/css/scale.css" />
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui.theme.css" />
+  <link rel="stylesheet" href="assets/css/apexcharts.css" />
+  <link rel="stylesheet" href="assets/css/chartist-plugin-tooltip.css" />
+  <link rel="stylesheet" href="assets/css/chartist.min.css" />
+  <link rel="stylesheet" href="assets/css/customfont.css" />
+  <link rel="stylesheet" href="assets/css/jquery-jvectormap-2.0.5.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui.theme.min.css" />
+  <link rel="stylesheet" href="assets/css/metisMenu.min.css" />
+  <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <link rel="stylesheet" href="assets/css/simplebar.css" />
+  <link rel="stylesheet" href="assets/css/dragula.min.css" />
+  <link rel="stylesheet" href="assets/css/animate.min.css" />
+  <link rel="stylesheet" href="assets/css/app.min.css" />
+</head>
+
+<body class="light">
+
+
+  <main class="app-wrapper">
+    <header class="app-header rt-sticky">
+      <div class="navbar align-items-center">
+        <div class="container-fluid">
+          <div class="left-content">
+            <div class="logo-segment">
+              <div class="all-logo">
+                <a href="home.html" class="brand-logo">
+                  <img src="assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black" />
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white" />
+                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10" />
+                  <img src="assets/images/logo/logo-full-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10" />
+                </a>
+                <a href="home.html" class="brand-logo white">
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" />
+                </a>
+                <a href="home.html" class="collapse-in-logo">
+                  <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon-blue" />
+                  <img src="assets/images/logo/logo-icon-white.svg" alt="" draggable="false" class="logo-icon-white" />
+                </a>
+              </div>
+              <div class="opener_sidebar">
+                <span class="icon-bar-open" id="opener_icon"></span>
+              </div>
+              <div class="opener_horizentalmenu" id="mainmenuOpen">
+                <span class="icon-bar-open2" id="opener_icon2"></span>
+              </div>
+            </div>
+            <div class="dashboard-message position-relative">
+              <span class="back_sidebar_icon">
+            <i class="ph-arrow-right"></i>
+          </span>
+            </div>
+          </div>
+          <div class="app-mian-serach">
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Search" />
+                <button type="submit">
+                  <img src="assets/images/svg/search.svg" alt="" draggable="false" />
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="ms-auto">
+            <div class="rt-nav-tolls d-flex align-items-center">
+              <ul>
+                <li class="d-inline-block d-md-none">
+                  <div class="iconBox open-mbl-search pointer">
+                    <img src="assets/images/svg/search.svg" alt="" />
+                  </div>
+                </li>
+                <li class="d-none d-lg-block">
+                  <div class="language-picker js-language-picker desktop-show">
+                    <form action="" class="language-picker__form">
+                      <label for="language-picker-select"></label>
+                      <select name="language-picker-select" id="language-picker-select">
+                        <option lang="en" value="english" selected>English</option>
+                        <option lang="de" value="deutsch">germany</option>
+                        <option lang="sp" value="spanish">spanish</option>
+                      </select>
+                    </form>
+                  </div>
+                </li>
+                <li>
+                  <div class="iconBox page-setting pointer" id="layout">
+                    <img src="assets/images/svg/grid.svg" alt="" draggable="false" class="for-v" />
+                    <img src="assets/images/svg/grid2.svg" alt="" draggable="false" class="for-h" />
+                  </div>
+                </li>
+                <li>
+                  <div class="iconBox notifications pointer waves-effect primary-light">
+                    <img src="assets/images/svg/bell.svg" alt="" draggable="false" class="for-v" />
+                    <img src="assets/images/svg/bell2.svg" alt="" draggable="false" class="for-h" />
+                  </div>
+                </li>
+                <li>
+                  <div class="userProfileBox openaccount pointer">
+                    <img src="assets/images/all-img/user.svg" alt="" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="app-sidebar">
+      <div class="h-100" data-simplebar>
+        <div class="sidebar-menu">
+          <ul id="side-menu">
+            <li class="menu-title no-margin">Dashboard</li>
+            <li>
+              <a href="home.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-house-line"></i></span>
+                <div class="text-box">
+                  Dashboard
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="full-calendar.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-calendar-blank"></i></span>
+                <div class="text-box">
+                  Calendar
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="kanban-board.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-clipboard-text"></i></span>
+                <div class="text-box">Kanban Board</div>
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-folder-notch-open"></i></span>
+                <div class="text-box">File Manager</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="file-manager.html">File Manager</a></li>
+                <li><a href="file-manager-new.html">Upload New File</a></li>
+              </ul>
+            </li>
+            <li class="has-child waves-effect primary-light">
+              <a href="javascript: void(0);" aria-expanded="false">
+                <span class="icon-box"><i class="ph-puzzle-piece"></i></span>
+                <div class="text-box">Authentication</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="login.html">login</a></li>
+                <li><a href="registration.html">Registration</a></li>
+              </ul>
+            </li>
+            <li class="menu-title">pages</li>
+
+            <li>
+              <a href="profile.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-user"></i></span>
+                <div class="text-box">Profile</div>
+              </a>
+            </li>
+            <li>
+              <a href="setting.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-gear"></i></span>
+                <div class="text-box">Setting</div>
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-notebook"></i></span>
+                <div class="text-box">Invoice</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="invoice.html">Invoice</a></li>
+                <li><a href="invoice-detail.html">Invoice Details</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="billing.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-credit-card"></i></span>
+                <div class="text-box">Billing</div>
+              </a>
+            </li>
+            <li>
+              <a href="pricing-plans.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-lightning"></i></span>
+                <div class="text-box">Pricing Plans</div>
+              </a>
+            </li>
+            <li>
+              <a href="faq.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-question"></i></span>
+                <div class="text-box">FAQs</div>
+              </a>
+            </li>
+            <li>
+              <a href="blank-page.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-note-blank"></i></span>
+                <div class="text-box">Blank Page</div>
+              </a>
+            </li>
+
+            <li class="menu-title">Components</li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-book-open"></i></span>
+                <div class="text-box">UI Elements</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="button.html">Button</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="switch.html">Switch</a></li>
+                <li><a href="pagination.html">Pagination</a></li>
+                <li><a href="accordion.html">Accordion</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li><a href="input.html">Input</a></li>
+                <li><a href="banner.html">Banner</a></li>
+                <li><a href="file.html">File</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="component-card.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-cards"></i></span>
+                <div class="text-box">Card</div>
+              </a>
+            </li>
+            <li>
+              <a href="component-table.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-list-dashes"></i></span>
+                <div class="text-box">Table</div>
+              </a>
+            </li>
+            <li>
+              <a href="form-elements.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-swatches"></i></span>
+                <div class="text-box">Form Elements</div>
+              </a>
+            </li>
+            <li>
+              <a href="component-widget.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-leaf"></i></span>
+                <div class="text-box">Widgets</div>
+              </a>
+            </li>
+            <li class="menu-title">Documentation</li>
+            <li>
+              <a href="docs/index.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-info"></i></span>
+                <div class="text-box">Introduction</div>
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-browser"></i></span>
+                <div class="text-box">Getting started</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="docs/started.html">quick start</a></li>
+                <li><a href="docs/started.html#environment">Environments Setup</a></li>
+                <li><a href="docs/started.html#folder ">Folder Structure</a></li>
+                <li><a href="docs/started.html#colors ">Colors</a></li>
+                <li><a href="docs/started.html#typography ">Typography</a></li>
+                <li><a href="docs/started.html#icons ">Icons</a></li>
+              </ul>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-layout"></i></span>
+                <div class="text-box">Layouts</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="docs/layouts.html">layout</a></li>
+                <li><a href="docs/layouts.html#theme">Theme</a></li>
+              </ul>
+            </li>
+            <li class="has-child">
+              <a href="javascript: void(0);" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box">
+                            <i class="ph-puzzle-piece"></i>
+                        </span>
+                <div class="text-box">Plugins</div>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a href="docs/plugin.html">Map</a></li>
+                <li><a href="docs/plugin.html#calendars">Calendar</a></li>
+                <li><a href="docs/plugin.html#chart">Chart</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href=" docs/browser-support.html" aria-expanded="false" class="waves-effect primary-light">
+                <span class="icon-box"><i class="ph-disc"></i></span>
+                <div class="text-box">Browser Support & Credit </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-navbar">
+      <div class="container-fluid p-0">
+        <div class="main-menu">
+          <div class="mobile-menu-header d-flex justify-content-between mb-5 pb-2 px-3 ps-3 d-block d-lg-none">
+            <a href="#" class="mbl-logo"><img src="assets/images/logo/logo.svg" alt="" /></a>
+            <span class="rt-mobile-menu-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            width="32"
+            height="32"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48zm86.63 272L320 342.63l-64-64l-64 64L169.37 320l64-64l-64-64L192 169.37l64 64l64-64L342.63 192l-64 64z"
+              fill="#e84646"
+            />
+          </svg>
+        </span>
+          </div>
+          <!-- /.rt-mobile-menu-close -->
+          <ul class="menu-active-classes">
+            <li class="active">
+              <a href="home.html">
+                <span class="icon-box"><i class="ph-house-line"></i></span>
+                <div class="text-box">Dashboard</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="javascript:void(0)">
+                <span class="icon-box"><i class="ph-clipboard-text"></i></span>
+                <div class="text-box">Apps</div>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="full-calendar.html">Calendar</a></li>
+                <li><a href="kanban-board.html">Kanban Board</a></li>
+                <li class="menu-item-has-children">
+                  <a href="javascript: void(0);">File Manager</a>
+                  <ul class="sub-menu">
+                    <li><a href="file-manager.html">File Manager</a></li>
+                    <li><a href="file-manager-new.html">Upload New File</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children has-megamenu">
+              <a href="javascript: void(0);">
+                <span class="icon-box"><i class="ph-circles-three-plus"></i></span>
+                <div class="text-box">Pages</div>
+              </a>
+              <div class="rt-mega-menu">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Authentication
+                      </div>
+                      <a href="login.html">login</a>
+                      <a href="registration.html">Registration</a>
+                      <a href="profile.html">Profile</a>
+                      <a href="setting.html">Setting</a>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        billing
+                      </div>
+                      <a href="billing.html">billing</a>
+                      <a href="pricing-plans.html">pricing-plans</a>
+
+                      <a href="invoice.html">Invoice</a>
+                      <a href="invoice-detail.html">Invoice Details</a>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Components
+                      </div>
+                      <a href="button.html">Button</a>
+                      <a href="badge.html">Badge</a>
+                      <a href="checkbox.html">Checkbox</a>
+                      <a href="radio.html">Radio</a>
+                      <a href="switch.html">Switch</a>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="f-size-16 text-gray-800 px-3 text-capitalize">
+                        Components
+                      </div>
+                      <a href="pagination.html">Pagination</a>
+                      <a href="accordion.html">Accordion</a>
+                      <a href="alerts.html">Alerts</a>
+                      <a href="input.html">Input</a>
+                      <a href="banner.html">Banner</a>
+                      <a href="file.html">File</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-box"><i class="ph-palette"></i></span>
+                <div class="text-box">Style Guide</div>
+              </a>
+            </li>
+
+            <li>
+              <a href="form-elements.html">
+                <span class="icon-box"><i class="ph-gear"></i></span>
+                <div class="text-box">From Elements</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="javascript: void(0);">
+                <span class="icon-box"><i class="ph-books"></i></span>
+                <div class="text-box">Documentation</div>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="docs/index.html">Introduction</a></li>
+                <li><a href="docs/started.html">quick start</a></li>
+                <li>
+                  <a href="docs/started.html#environment">Environments Setup</a>
+                </li>
+                <li><a href="docs/started.html#folder ">Folder Structure</a></li>
+                <li><a href="docs/started.html#colors ">Colors</a></li>
+                <li><a href="docs/started.html#typography ">Typography</a></li>
+                <li><a href="docs/started.html#icons ">Icons</a></li>
+                <li><a href="docs/layouts.html">layout</a></li>
+                <li><a href="docs/layouts.html#theme">Theme</a></li>
+                <li><a href="docs/plugin.html">Map</a></li>
+                <li><a href="docs/plugin.html#calendars">Calendar</a></li>
+                <li><a href="docs/plugin.html#chart">Chart</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.main-menu -->
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Breedcrumb -->
+          <div class="row">
+            <div class="col-12 rt-mb-25">
+              <div class="breadcrumbs ">
+                <div class="breadcrumb-title"> Table</div>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="home.html">App</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> Table</li>
+                  </ol>
+                </nav>
+              </div>
+
+            </div>
+          </div>
+
+          <section class="tables">
+            <!-- basic Tables -->
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="table-wrapper">
+                  <div class="table-head">
+                    <h2>Basic Table </h2>
+                  </div>
+                  <div class="table-content table-responsive">
+                    <table class="table align-middle table-basic ">
+                      <thead>
+                        <tr>
+                          <th scope="col">id</th>
+                          <th colspan="2" scope="col">Name</th>
+                          <th scope="col">Phone</th>
+                          <th scope="col">Date of Birth</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="table-wrapper">
+                  <div class="table-head">
+                    <h2>Basic Bordered Table</h2>
+                  </div>
+                  <div class="table-content table-responsive">
+                    <table class="table align-middle table-basic table-basic--border ">
+                      <thead>
+                        <tr>
+                          <th scope="col">id</th>
+                          <th colspan="2" scope="col">Name</th>
+                          <th scope="col">Phone</th>
+                          <th scope="col">Date of Birth</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">647</th>
+                          <td colspan="2">Esther Howard</td>
+                          <td>(252) 555-0126</td>
+                          <td>Oct. 18, 1996</td>
+                          <td>
+                            <ul class="action-btn">
+                              <li>
+                                <button>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                              <li>
+                                <button>
+                                  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1.5L4.5 8.49969L1 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Striped & Hoverable Row Table  -->
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="table-wrapper">
+                  <div class="table-head">
+                    <h2>Striped Table</h2>
+                  </div>
+                  <div class="table-content table-responsive">
+                    <table class="table align-middle table-stripeds ">
+                      <thead>
+                        <tr>
+                          <th colspan="2" scope="col">Social Media</th>
+                          <th colspan="2" scope="col">Username</th>
+                          <th scope="col">visitor</th>
+                          <th scope="col">Followers</th>
+                          <th colspan="2" scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <!-- Social Media  -->
+                          <th colspan="2" scope="row">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/logo/social/facebook.png" alt="social-icon">
+                                        </span>
+                              facebook
+                            </a>
+                          </th>
+                          <!-- User Name  -->
+                          <td colspan="2">
+                            @Designerzafor
+                          </td>
+                          <!-- Visitor  -->
+                          <td>
+                            267400
+                          </td>
+                          <!-- Followers -->
+                          <td>
+                            487441
+                          </td>
+                          <!-- Statics  -->
+                          <td>
+                            <div id="line_chartkeyword_1"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!-- Social Media  -->
+                          <th colspan="2" scope="row">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/logo/social/twitter.png" alt="social-icon">
+                                        </span>
+                              twitter
+                            </a>
+                          </th>
+                          <!-- User Name  -->
+                          <td colspan="2">
+                            @Developerrashed
+                          </td>
+                          <!-- Visitor  -->
+                          <td>
+                            267400
+                          </td>
+                          <!-- Followers -->
+                          <td>
+                            487441
+                          </td>
+                          <!-- Statics  -->
+                          <td>
+                            <div id="line_chartkeyword_2"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!-- Social Media  -->
+                          <th colspan="2" scope="row">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/logo/social/linkedin.png" alt="social-icon">
+                                        </span>
+                              Linkedin
+                            </a>
+                          </th>
+                          <!-- User Name  -->
+                          <td colspan="2">
+                            @Developermahedi
+                          </td>
+                          <!-- Visitor  -->
+                          <td>
+                            267400
+                          </td>
+                          <!-- Followers -->
+                          <td>
+                            487441
+                          </td>
+                          <!-- Statics  -->
+                          <td>
+                            <div id="line_chartkeyword_3"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!-- Social Media  -->
+                          <th colspan="2" scope="row">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/logo/social/instagram.png" alt="social-icon">
+                                        </span>
+                              instagram
+                            </a>
+                          </th>
+                          <!-- User Name  -->
+                          <td colspan="2">
+                            @Developermahedi
+                          </td>
+                          <!-- Visitor  -->
+                          <td>
+                            267400
+                          </td>
+                          <!-- Followers -->
+                          <td>
+                            487441
+                          </td>
+                          <!-- Statics  -->
+                          <td>
+                            <div id="line_chartkeyword_4"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!-- Social Media  -->
+                          <th colspan="2" scope="row">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/logo/social/behance.png" alt="social-icon">
+                                        </span>
+                              behance
+                            </a>
+                          </th>
+                          <!-- User Name  -->
+                          <td colspan="2">
+                            @Managerzakir
+                          </td>
+                          <!-- Visitor  -->
+                          <td>
+                            267400
+                          </td>
+                          <!-- Followers -->
+                          <td>
+                            487441
+                          </td>
+                          <!-- Statics  -->
+                          <td>
+                            <div id="line_chartkeyword_5"></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="table-wrapper">
+                  <div class="table-head">
+                    <h2>Hoverable Rows</h2>
+                  </div>
+                  <div class="table-content table-responsive">
+                    <table class="table align-middle table-hoverable">
+                      <thead>
+                        <tr>
+                          <th colspan="3" scope="col">name</th>
+                          <th colspan="2" scope="col">email</th>
+                          <th scope="col">phone number</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <!-- Name  -->
+                          <th colspan="3" scope="row">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-one.png" alt="user-icon">
+                                        </span>
+                              Darell Steward
+                            </a>
+                          </th>
+                          <!-- Email -->
+                          <td colspan="2">
+                            tanya.hill@example.com
+                          </td>
+                          <!-- Phone number  -->
+                          <td>
+                            (307) 555-0133
+                          </td>
+                        </tr>
+                        <tr>
+                          <!-- Name  -->
+                          <th colspan="3" scope="row">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-two.png" alt="user-icon">
+                                        </span>
+                              Cody Fisher
+                            </a>
+                          </th>
+                          <!-- Email -->
+                          <td colspan="2">
+                            tim.jennings@example.com
+                          </td>
+                          <!-- Phone number  -->
+                          <td>
+                            (302) 555-0107
+                          </td>
+                        </tr>
+                        <tr>
+                          <!-- Name  -->
+                          <th colspan="3" scope="row">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-three.png" alt="user-icon">
+                                        </span>
+                              Robert Fox
+                            </a>
+                          </th>
+                          <!-- Email -->
+                          <td colspan="2">
+                            nathan.roberts@example.com
+                          </td>
+                          <!-- Phone number  -->
+                          <td>
+                            (270) 555-0117
+                          </td>
+                        </tr>
+                        <tr>
+                          <!-- Name  -->
+                          <th colspan="3" scope="row">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-four.png" alt="user-icon">
+                                        </span>
+                              Arlene McCoy
+                            </a>
+                          </th>
+                          <!-- Email -->
+                          <td colspan="2">
+                            curtis.weaver@example.com
+                          </td>
+                          <!-- Phone number  -->
+                          <td>
+                            (205) 555-0100
+                          </td>
+                        </tr>
+                        <tr>
+                          <!-- Name  -->
+                          <th colspan="3" scope="row">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-five.png" alt="user-icon">
+                                        </span>
+                              Jerome Bell
+                            </a>
+                          </th>
+                          <!-- Email -->
+                          <td colspan="2">
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone number  -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- small  & highlight column Table  -->
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="table-wrapper">
+                  <div class="table-head">
+                    <h2>Small Tables</h2>
+                  </div>
+                  <div class="table-content table-responsive">
+                    <table class="table align-middle table-small  ">
+                      <thead>
+                        <tr>
+                          <th colspan="3" scope="col">Name</th>
+                          <th scope="col">email</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton_1" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton_1">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton2" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton3" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton4" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton5" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton6" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton7" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="table-wrapper">
+                  <div class="table-head">
+                    <h2>Highlight Column</h2>
+                  </div>
+                  <div class="table-content table-responsive">
+                    <table class="table align-middle table-small table-small--highlight ">
+                      <thead>
+                        <tr>
+                          <th colspan="3" scope="col" class="table-active">Name</th>
+                          <th scope="col">email</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row" class="table-active">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton8" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton8">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row" class="table-active">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton9" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton9">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row" class="table-active">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton10" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton10">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row" class="table-active">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton11" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton11">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row" class="table-active">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton12" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton12">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row" class="table-active">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton13" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton13">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  Name  -->
+                          <th colspan="3" scope="row" class="table-active">
+                            jerome Bell
+                          </th>
+                          <!-- Email  -->
+                          <td>
+                            michael.mitc@example.com
+                          </td>
+                          <!-- Phone Number   -->
+                          <td>
+                            (808) 555-0111
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton14" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton14">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Responsive Table -->
+            <div class="row">
+              <div class="col-12">
+                <div class="table-wrapper">
+                  <div class="table-head">
+                    <h2>Responsive Tables</h2>
+                  </div>
+                  <div class="table-content table-responsive table-responsives">
+                    <table class="table align-middle ">
+                      <thead>
+                        <tr>
+                          <th colspan="2" scope="col">User id</th>
+                          <th scope="col" colspan="2">users</th>
+                          <th scope="col" colspan="2">email</th>
+                          <th scope="col">Phone</th>
+                          <th scope="col">Date of Birth</th>
+                          <th scope="col">Location</th>
+                          <th scope="col">Balance</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <!--  User ID  -->
+                          <th colspan="2" scope="row">
+                            ID: 39635
+                          </th>
+                          <!-- Users  -->
+                          <td colspan="2">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-one.png" alt="user-icon">
+                                        </span>
+                              Darell Steward
+                            </a>
+                          </td>
+                          <!-- Email   -->
+                          <td colspan="2">
+                            bill.sanders@example.com
+                          </td>
+                          <!-- Phone  -->
+                          <td>
+                            (270) 555-0117
+                          </td>
+                          <!-- Birth date  -->
+                          <td>
+                            Jun 10th, 2020
+                          </td>
+                          <!-- location  -->
+                          <td>
+                            4517 Washington Ave. Manchester, Kentucky 39495
+                          </td>
+                          <!-- balance  -->
+                          <td>
+                            $106.58
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton15" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton15">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  User ID  -->
+                          <th colspan="2" scope="row">
+                            ID: 39635
+                          </th>
+                          <!-- Users  -->
+                          <td colspan="2">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-two.png" alt="user-icon">
+                                        </span>
+                              Darell Steward
+                            </a>
+                          </td>
+                          <!-- Email   -->
+                          <td colspan="2">
+                            bill.sanders@example.com
+                          </td>
+                          <!-- Phone  -->
+                          <td>
+                            (270) 555-0117
+                          </td>
+                          <!-- Birth date  -->
+                          <td>
+                            Jun 10th, 2020
+                          </td>
+                          <!-- location  -->
+                          <td>
+                            4517 Washington Ave. Manchester, Kentucky 39495
+                          </td>
+                          <!-- balance  -->
+                          <td>
+                            $106.58
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton16" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton16">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  User ID  -->
+                          <th colspan="2" scope="row">
+                            ID: 39635
+                          </th>
+                          <!-- Users  -->
+                          <td colspan="2">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-three.png" alt="user-icon">
+                                        </span>
+                              Darell Steward
+                            </a>
+                          </td>
+                          <!-- Email   -->
+                          <td colspan="2">
+                            bill.sanders@example.com
+                          </td>
+                          <!-- Phone  -->
+                          <td>
+                            (270) 555-0117
+                          </td>
+                          <!-- Birth date  -->
+                          <td>
+                            Jun 10th, 2020
+                          </td>
+                          <!-- location  -->
+                          <td>
+                            4517 Washington Ave. Manchester, Kentucky 39495
+                          </td>
+                          <!-- balance  -->
+                          <td>
+                            $106.58
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton17" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton17">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  User ID  -->
+                          <th colspan="2" scope="row">
+                            ID: 39635
+                          </th>
+                          <!-- Users  -->
+                          <td colspan="2">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-four.png" alt="user-icon">
+                                        </span>
+                              Darell Steward
+                            </a>
+                          </td>
+                          <!-- Email   -->
+                          <td colspan="2">
+                            bill.sanders@example.com
+                          </td>
+                          <!-- Phone  -->
+                          <td>
+                            (270) 555-0117
+                          </td>
+                          <!-- Birth date  -->
+                          <td>
+                            Jun 10th, 2020
+                          </td>
+                          <!-- location  -->
+                          <td>
+                            4517 Washington Ave. Manchester, Kentucky 39495
+                          </td>
+                          <!-- balance  -->
+                          <td>
+                            $106.58
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton18" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton18">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  User ID  -->
+                          <th colspan="2" scope="row">
+                            ID: 39635
+                          </th>
+                          <!-- Users  -->
+                          <td colspan="2">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-five.png" alt="user-icon">
+                                        </span>
+                              Darell Steward
+                            </a>
+                          </td>
+                          <!-- Email   -->
+                          <td colspan="2">
+                            bill.sanders@example.com
+                          </td>
+                          <!-- Phone  -->
+                          <td>
+                            (270) 555-0117
+                          </td>
+                          <!-- Birth date  -->
+                          <td>
+                            Jun 10th, 2020
+                          </td>
+                          <!-- location  -->
+                          <td>
+                            4517 Washington Ave. Manchester, Kentucky 39495
+                          </td>
+                          <!-- balance  -->
+                          <td>
+                            $106.58
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton19" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton19">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--  User ID  -->
+                          <th colspan="2" scope="row">
+                            ID: 39635
+                          </th>
+                          <!-- Users  -->
+                          <td colspan="2">
+                            <a class="users-profile" href="#">
+                              <span>
+                                            <img src="assets/images/users/img-one.png" alt="user-icon">
+                                        </span>
+                              Darell Steward
+                            </a>
+                          </td>
+                          <!-- Email   -->
+                          <td colspan="2">
+                            bill.sanders@example.com
+                          </td>
+                          <!-- Phone  -->
+                          <td>
+                            (270) 555-0117
+                          </td>
+                          <!-- Birth date  -->
+                          <td>
+                            Jun 10th, 2020
+                          </td>
+                          <!-- location  -->
+                          <td>
+                            4517 Washington Ave. Manchester, Kentucky 39495
+                          </td>
+                          <!-- balance  -->
+                          <td>
+                            $106.58
+                          </td>
+                          <!-- action -->
+                          <td>
+                            <div class="dropdown-wrap">
+                              <button type="button" class="button-icon" id="dropdownMenuButton20" data-bs-toggle="dropdown">
+                                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2 1.25C2.41421 1.25 2.75 1.58579 2.75 2C2.75 2.41421 2.41421 2.75 2 2.75C1.58579 2.75 1.25 2.41421 1.25 2C1.25 1.58579 1.58579 1.25 2 1.25ZM2 7.25C2.41421 7.25 2.75 7.58579 2.75 8C2.75 8.41421 2.41421 8.75 2 8.75C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25ZM2 13.25C2.41421 13.25 2.75 13.5858 2.75 14C2.75 14.4142 2.41421 14.75 2 14.75C1.58579 14.75 1.25 14.4142 1.25 14C1.25 13.5858 1.58579 13.25 2 13.25Z" fill="#191B1C" stroke="#191B1C" stroke-width="1.5" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton20">
+                                <li><a class="dropdown-item" href="#">Download</a></li>
+                                <li><a class="dropdown-item" href="#">Print</a></li>
+                                <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="6">
+                            Showing 1 to 8 of 16 entries
+                          </td>
+                          <td colspan="6">
+                            <nav aria-label="Page navigation">
+                              <ul class="pagination justify-content-end">
+                                <li class="page-item">
+                                  <a class="page-link" href="#" aria-label="Previous">
+                                    <i class="ph-arrow-left"></i>
+                                  </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">01</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">02</a></li>
+                                <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                <li class="page-item"><a class="page-link" href="#">04</a></li>
+                                <li class="page-item"><a class="page-link" href="#">05</a></li>
+                                <li class="page-item">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                    <i class="ph-arrow-right"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Footer  -->
+          <footer>
+            <div class="footer-content">
+              <div>
+                <p>
+                  © 2021 - Wadmin admin dashboard. Design & develop by
+                  <a href="#">Templatecookie</a>
+                </p>
+              </div>
+              <div>
+                <ul>
+                  <li><a href="docs/index.html">Documentation</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+  <div class="rt-mobile-menu-overlay"></div>
+  <!-- /.rt-mobile-menu-overlay -->
+  <div id="template2" style="display: none">
+    <div class="PopoverParent">
+      <div class="Popover-header">
+        <a class="rt-single-icon-box user-profile-icon-big rt-align-center" href="#">
+          <div class="icon-thumb">
+            <div class="innerImage">
+              <img src="assets/images/all-img/user.svg" alt="profile_image" />
+            </div>
+          </div>
+          <div class="iconbox-content">
+            <h4>Faraz Ahmed</h4>
+            <span>farazleo112</span>
+          </div>
+        </a>
+      </div>
+      <div class="PopoverContent">
+        <div class="popoverInnerContent">
+          <ul class="user_menu">
+            <li>
+              <a href="profile.html">
+                <span class="icon-i">
+                    <i class="ph-user"></i>
+                  </span>
+                Profile
+              </a>
+            </li>
+            <li>
+              <a href="invoice.html">
+                <span class="icon-i">
+                    <i class="ph-chart-bar"></i>
+                  </span>
+                Reports
+              </a>
+            </li>
+            <li>
+              <a href="setting.html">
+                <span class="icon-i">
+                    <i class="ph-gear"></i>
+                  </span>
+                Settings
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <span class="icon-i">
+                    <i class="ph-question"></i>
+                  </span>
+                Get Help
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="popOverFooter">
+          <a href="#">
+            <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.3"
+                  height="17.3"
+                  viewBox="0 0 17.3 17.3"
+                >
+                  <g id="log-out" transform="translate(-2.35 -2.35)">
+                    <path
+                      id="Path_2782"
+                      data-name="Path 2782"
+                      d="M8.333,19H4.778A1.778,1.778,0,0,1,3,17.222V4.778A1.778,1.778,0,0,1,4.778,3H8.333"
+                      transform="translate(0 0)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                    <path
+                      id="Path_2783"
+                      data-name="Path 2783"
+                      d="M16,15.889l4.444-4.444L16,7"
+                      transform="translate(-1.444 -0.444)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                    <line
+                      id="Line_11"
+                      data-name="Line 11"
+                      x1="10.667"
+                      transform="translate(8.333 11)"
+                      fill="none"
+                      stroke="#4d5afb"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                  </g>
+                </svg>
+              </span>
+            Log Out
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="template" style="display: none">
+    <div class="PopoverParent min-372">
+      <div class="Popover-header d-flex justify-content-between">
+        <div class="d-blok f-size-14 line-height-20 text-gray-900">
+          Notification
+        </div>
+        <div class="d-blok f-size-14 text-gray-700 pointer">Clear All</div>
+      </div>
+      <div class="PopoverContent">
+        <div class="popoverInnerContent">
+          <div class="notifybox">
+            <ul class="notify-lists rt-list">
+
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/notification/check.svg" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900  mb-1">This is a success notification.</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/all-img/user_1.png" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900  mb-1">Kevin Mention you in “UX Design Proc...”</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/notification/alert.svg" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900  mb-1">This is you lasst waring</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/all-img/user_2.png" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900  mb-1">Janny invited you in events in calender</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+              <li>
+                <a class="rt-single-icon-box" href="#">
+                  <div class="icon-thumb rt-mr-12">
+                    <img src="assets/images/notification/file.svg" alt="">
+                  </div>
+                  <div class="iconbox-content">
+                    <div class="title body-font-4 text-gray-900  mb-1">Your pricing plan is updated</div>
+                    <div class=" body-fonty-4 text-gray-500">5 min ago</div>
+                  </div>
+                </a>
+
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-settings" id="appSettings">
+    <div class="settings-header d-flex justify-content-between">
+      <div class="text-gray-900 body-font-3 font-medium ">Settings</div>
+      <div class="pointer" id="closesetting">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 3.5L3.5 12.5" stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M12.5 12.5L3.5 3.5" stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+      </div>
+    </div>
+    <div class="cal-h-70" data-simplebar>
+      <div class="inner-content">
+        <div class="setting-title">Layout</div>
+        <div class="settings-images row ">
+          <div class="col-lg-6 rt-mb-32">
+            <div class="form-check p-0">
+              <label class="d-block pointer" for="vertical_lable">
+                <img src="assets/images/all-img/d-1.png" alt="" class="w-100" />
+                <div class="bottom-content">
+                  <input class="form-check-input  pointer" type="radio" name="layoutbox" id="vertical_lable" value="vertical" checked />
+                  <span> Vertical</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+          <div class="col-lg-6 rt-mb-32">
+            <div class="form-check p-0">
+              <label class="form-check-label d-block pointer" for="horizental_label">
+                <img src="assets/images/all-img/d-2.png" alt="" />
+                <div class="bottom-content">
+                  <input class="form-check-input d-block pointer" type="radio" name="layoutbox" id="horizental_label" value="horizental" />
+                  <span>Horizontal</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="setting-title rt-pt-30">Layout</div>
+        <ul class="rt-mb-32">
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_white" value="white" checked />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_white">
+                White
+              </label>
+            </div>
+          </li>
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_black" value="black" />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_black">
+                Black
+              </label>
+            </div>
+          </li>
+          <li class="block rt-mb-12">
+            <div class="form-check p-0 no-shadow">
+              <input class="form-check-input  pointer" type="radio" name="sidebar" id="seibar_navy" value="blue" />
+              <label class="form-check-label rt-ml-8 pointer" for="seibar_navy">
+                Navy Blue
+              </label>
+            </div>
+          </li>
+        </ul>
+        <div class="row smallgap">
+          <div class="col-md-6">
+            <button class="btn btn-primary2 pill block w-100 rt-mb-10">Reset to default</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-primary pill btn-icon block w-100  rt-mb-10">
+              <span class="button-content-wrapper">
+                            <span class="button-text">
+                              Purchase now
+                            </span>
+              <span class="button-icon align-icon-right">
+                              <i class="ph-arrow-right"></i>
+              
+                            </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="settings-overlay"></div>
+
+  <!-- scripts -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/tippy-bundle.umd.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/chartist.min.js"></script>
+  <script src="assets/js/jquery-jvectormap-2.0.5.min.js"></script>
+  <script src="assets/js/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="assets/js/metisMenu.min.js"></script>
+  <script src="assets/js/morris.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/simplebar.min.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <script src="assets/js/custom-select.js"></script>
+  <script src="assets/js/waves.js"></script>
+  <script src="assets/js/dragula.min.js"></script>
+  <script src="assets/js/appkanban.js"></script>
+  <script src="assets/js/app.js"></script>
+  <div class="templatecookie-btn">
+    <!-- Purchase Button -->
+    <a href="#" class="purchase-btn">
+      Purchase Now
+      <span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </span>
+    </a>
+  </div>
+</body>
+</html>
