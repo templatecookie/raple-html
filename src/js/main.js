@@ -1,6 +1,6 @@
 /*
 * ----------------------------------------------------------------------------------------
-    Template Name: Wadmin
+    Template Name: Raple
     Template URI: 
     Description: 
     Author: templatecookie
