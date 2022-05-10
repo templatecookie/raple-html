@@ -3,14 +3,14 @@
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-    padding: 84px 40px 35px;
+    padding: 84px 40px 30px;
     position: relative;
     z-index: 0;
     display: flex;
     align-items: flex-end;
     margin-bottom: 24px;
     justify-content: space-between;
-    @include max(1199px) {
+    @include max(1300px) {
       display: block;
     }
     @include max(767px) {
@@ -37,8 +37,8 @@
   &-left {
     display: flex;
     align-items: flex-end;
-    @include max(1199px) {
-      margin-bottom: 30px;
+    @include max(1300px) {
+      margin-bottom: 20px;
     }
     @include max(767px) {
       align-items: center;
@@ -97,9 +97,14 @@
     max-width: 516px;
     width: 100%;
     margin-bottom: 15px;
-    @include breakpoint(xs) {
-      flex-direction: column;
+    justify-content:space-between;
+    @include max(1300px) {
+      max-width: 100%;
       text-align: center;
+      margin: 0;
+    }
+    @include max(380px) {
+      display: block;
     }
 
     &-item {

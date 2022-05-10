@@ -116,7 +116,7 @@
   &--two {
     display: flex;
     max-width: 100%;
-    max-height: 204px;
+    max-height: 195px;
     align-items: center;
     justify-content: space-between;
     @include max(767px) {
@@ -250,7 +250,7 @@
   &__content {
     width: 100%;
     padding: 24px;
-    padding-top: 256px;
+    padding-top: 235px;
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 0%,
@@ -332,7 +332,7 @@
 .card-priority {
   overflow: hidden;
   position: relative;
-  padding: 18px 16px;
+  padding: 13px 16px 18px;
   border-radius: 8px;
   border: 1px solid #e5e7e8;
   box-shadow: 0px 4px 12px 0px #191b1c0f;
@@ -370,11 +370,11 @@
       right: 0px;
       width: 170px;
       position: absolute;
-      border-radius: 8px;
-      padding: 12px 0px;
+      padding: 10px 0px;
       background-color: #fff;
       border: 1px solid #e5e7e8;
-      box-shadow: 0px 4px 24px 0px #191b1c29;
+      box-shadow: 0px 4px 24px rgba(25, 27, 28, 0.16);
+      border-radius: 4px;
       &.show {
         opacity: 1;
         visibility: visible;
@@ -384,20 +384,24 @@
           @extend %text-para;
           color: var(--gray-600);
           width: 100%;
-          padding: 8px 12px;
+          padding: 5px 12px!important;
           display: inline-block;
           span {
-            margin-right: 12px;
+            margin-right: 8px;
           }
         }
 
         &:nth-last-child(1) {
           a {
-            padding: 12px;
             padding-bottom: 0px;
             border-top: 1px solid #e5e7e8;
             display: inline-block;
             color: var(--danger-500);
+            padding-top: 15px!important;
+            margin-top: 11px!important;
+            &:hover{
+              color: var(--danger-500)!important;
+            }
           }
         }
       }
@@ -434,6 +438,9 @@
           &.urgent {
             color: #d50000;
             background-color: transparent;
+            &.green{
+              color: #0C8C4E;
+            }
           }
         }
       }
@@ -452,6 +459,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 16px;
 
     .labels-info {
       display: flex;
@@ -501,4 +509,34 @@
       margin-bottom: 24px;
     }
   }
+}
+
+span.labels.red {
+  color: #E84646;
+  background-color: #FDEDED;
+}
+
+.card-priority-thumb {
+  height: 157px;
+  margin-bottom: 16px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+span.labels.medium.yellow{
+  color: var(--warning-500);
+  background-color: var(--warning-50);
+}
+
+span.labels.urgent.blue {
+  color: #0E78D9;
+}
+span.labels.urgent.yellow {
+  color: #FF9904;
+}
+.add-new-card-btn {
+  margin-top: 24px;
 }

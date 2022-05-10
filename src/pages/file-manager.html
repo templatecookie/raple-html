@@ -24,7 +24,7 @@ block content %}
                   >
                     <span class="button-content-wrapper">
                       <span class="button-text"> Upload file </span>
-                      <span class="button-icon c-w">
+                      <span class="button-icon">
                         <img src="assets/images/svg/plus.svg" alt="" />
                       </span>
                     </span>
@@ -86,7 +86,34 @@ block content %}
                     <div class="file-link">
                       <ul>
                         <li>
-                          <a href="">
+                          <a class="active" href="file-manager.html">
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
+                                stroke="#626C70"
+                                stroke-width="1.25"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 5.625V10H14.375"
+                                stroke="#626C70"
+                                stroke-width="1.25"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+
+                            My Files
+                          </a>
+                        </li>
+                        <li>
+                          <a href="file-manager-new.html">
                             <svg
                               width="20"
                               height="20"
@@ -135,34 +162,7 @@ block content %}
                           </a>
                         </li>
                         <li>
-                          <a href="">
-                            <svg
-                              width="20"
-                              height="20"
-                              viewBox="0 0 20 20"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
-                                stroke="#626C70"
-                                stroke-width="1.25"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 5.625V10H14.375"
-                                stroke="#626C70"
-                                stroke-width="1.25"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </svg>
-
-                            Recents Files
-                          </a>
-                        </li>
-                        <li>
-                          <a href="">
+                          <a href="starred.html">
                             <svg
                               width="18"
                               height="18"
@@ -183,7 +183,7 @@ block content %}
                           </a>
                         </li>
                         <li>
-                          <a href="">
+                          <a href="deleted.html">
                             <svg
                               width="20"
                               height="20"
@@ -276,7 +276,7 @@ block content %}
             </div>
           </div>
           <div class="col-xxl-9 col-xl-8">
-            <div class="card no-rounded">
+            <div class="card m-0">
               <div class="file-manager-wrap">
                 <h3 class="file-title">My Files</h3>
                 <div class="file-wrap">

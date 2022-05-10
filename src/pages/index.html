@@ -1,690 +1,521 @@
-{% extends "layout/layout-presentiton.html" %} {% block content %}
+{% extends "layout/layout.html" %} {% block content %}
 
-<!-- Header section  -->
+<main class="app-wrapper">
+  {% include "../templates/layout/header-footer/app-header.html" %} {% include
+  "../templates/layout/header-footer/app-sidebar.html" %} {% include
+  "../templates/layout/header-footer/topnavbar.html" %}
 
-<header class="p-header">
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="assets/images/logo/white-logo.svg" alt="brand-logo" />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home.html"
-              >Live Preview</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Documentation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Feature</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Support</a>
-          </li>
-        </ul>
-        <ul>
-          <li class="d-flex align-items-center w-full justify-content-center">
-            <a href="#" class="p-header__btn">
-              Purchase Now
-              <span>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.125 10H16.875"
-                    stroke="#005CE8"
-                    stroke-width="1.25"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M11.25 4.375L16.875 10L11.25 15.625"
-                    stroke="#005CE8"
-                    stroke-width="1.25"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<!-- Banner section  -->
-<section class="p-banner bn_image_1">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 order-2 order-lg-0">
-        <div class="p-banner__text-info">
-          <h6>Compatible with: <span>Figma, HTLM 5, Vue.js, Laravel</span></h6>
-          <h2>
-            Wadmin — Well-Designed
-            <span>Admin Dashboard</span>
-          </h2>
-          <p>
-            👉 Wadmin is a beautiful, simple, developer-friendly, highly
-            customizable admin dashboard template with a 💎 high-quality UI &
-            well-organized Figma file 🔥.
-          </p>
-
-          <ul class="d-flex align-items-center flex-column flex-md-row">
-            <li class="mb-3 mb-md-0">
-              <a
-                href="home.html"
-                class="btn btn-primary pill multipule-color-strep min-w-174"
-                >Live Preview</a
-              >
-            </li>
-            <li>
-              <a href="#" class="btn btn-primary2 pill btn-icon min-w-220">
-                <span class="button-content-wrapper">
-                  <span class="button-icon align-icon-right">
-                    <i class="ph-arrow-right"></i>
-                  </span>
-                  <span class="button-text"> Purchase Now </span>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-6 order-1 order-lg-0">
-        <div
-          data-aos="fade-left"
-          data-aos-offset="0"
-          data-aos-delay="50"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-out"
-        >
-          <img src="assets/images/all-img/Monitor.png" alt="banner" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section section-padding bg-white">
-  <div class="container">
-    <div class="presentation-content presentation-section-title">
-      <h2
-        data-aos="zoom-in"
-        data-aos-offset="180"
-        data-aos-delay="0"
-        data-aos-duration="700"
-        data-aos-easing="ease-in-out"
-      >
-        Features that you’ll love
-      </h2>
-    </div>
-    <div class="row">
-      <div class="col-xl-3 col-sm-6 d-flex align-items-stretch">
-        <div class="feature-wrap">
-          <div class="feature-icon">
-            <i class="ph-swatches"></i>
-          </div>
-          <div class="feature-data">
-            <h4>Global Style Guide</h4>
-            <p>Auto-updatedable global style guide</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-sm-6 d-flex align-items-stretch">
-        <div class="feature-wrap">
-          <div class="feature-icon">
-            <i class="ph-rocket"></i>
-          </div>
-          <div class="feature-data">
-            <h4>150+ Widgets & Components</h4>
-            <p>Drag & drop vector-based</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-sm-6 d-flex align-items-stretch">
-        <div class="feature-wrap">
-          <div class="feature-icon">
-            <i class="ph-text-t"></i>
-          </div>
-          <div class="feature-data">
-            <h4>Free Google Fonts</h4>
-            <p>Pre-made 30+ text style</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-sm-6 d-flex align-items-stretch">
-        <div class="feature-wrap">
-          <div class="feature-icon">
-            <i class="ph-pen-nib"></i>
-          </div>
-          <div class="feature-data">
-            <h4>100% Easy-to-use & Editable</h4>
-            <p>Customizable well-organized files</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End section -->
-
-<div class="section section-padding bg-gray-50">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-6">
+  <div class="content-wrapper">
+    <div class="page-content">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div
-              data-aos="fade-right"
-              data-aos-offset="0"
-              data-aos-delay="0"
-              data-aos-duration="700"
-              data-aos-easing="ease-in-out"
-              class="card"
-            >
-              <div class="card-body">
-                <div class="active-visitor-wrap">
-                  <div class="active-visitor-data">
-                    <p>Conversion Rate</p>
-                    <h3>9.73%</h3>
-                    <h4>
-                      <img src="assets/images/svg/arrow-up.svg" alt="icon" />
-                      3.5% Increase
-                    </h4>
-                  </div>
-                  <div class="active-visitor-icon bg-success-50">
-                    <img src="assets/images/svg/coffee.svg" alt="icon" />
-                  </div>
-                </div>
-              </div>
+          <div class="col-12 rt-mb-25">
+            <div class="page-title body-font-3 font-semibold">
+              <span class="inline-block rt-mr-5">👋</span> Hey, Kevin.
+            </div>
+            <div class="text-gray-600 body-font-4">
+              Here is all your Raple analytics overview
             </div>
           </div>
-          <div class="col-lg-6 col-md-6">
-            <div
-              data-aos="fade-left"
-              data-aos-offset="0"
-              data-aos-delay="0"
-              data-aos-duration="700"
-              data-aos-easing="ease-in-out"
-              class="card"
-            >
-              <div class="card-body">
-                <div class="active-visitor-wrap">
-                  <div class="active-visitor-data">
-                    <p>bounce rate</p>
-                    <h3>81.94%</h3>
-                    <h4>
-                      <img src="assets/images/svg/arrow-up.svg" alt="icon" />
-                      1.7% Increase
-                    </h4>
-                  </div>
-                  <div class="active-visitor-icon bg-danger-50">
-                    <img src="assets/images/svg/activity.svg" alt="icon" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-12">
+        </div>
+        <div class="row grid">
+          <div class="col col-only-4 col-only-xs-12 col-only-md-6">
             <div class="card">
               <div class="card-body">
-                <div class="fun-fact-wrap">
-                  <div class="fun-fact-item">
-                    <div class="fun-fact-icon">
-                      <img src="assets/images/svg/user-circle.svg" alt="icon" />
+                <div class="d-flex justify-content-between rt-mb-24">
+                  <div>
+                    <div
+                      class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase"
+                    >
+                      Active Visitors
                     </div>
-                    <div class="fun-fact-data">
-                      <h4>157,367</h4>
-                      <p>Total users</p>
-                    </div>
+                    <div class="f-size-24 font-semibold">157,367</div>
                   </div>
-                  <div class="fun-fact-item">
-                    <div class="fun-fact-icon">
+                  <div
+                    class="text-left text-lg-end text-success-500 body-font-4 font-medium"
+                  >
+                    <span class="d-inline-block rt-mr-7"
+                      ><i class="ph-arrow-up"></i></span
+                    >6.7% Increase
+                  </div>
+                </div>
+                <div id="bar-chart1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-only-4 col-only-xs-12 col-only-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between rt-mb-24">
+                  <div>
+                    <div
+                      class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase"
+                    >
+                      Visitor per minute
+                    </div>
+                    <div class="f-size-24 font-semibold">9,741</div>
+                  </div>
+                  <div
+                    class="text-left text-lg-end text-danger-500 body-font-4 font-medium"
+                  >
+                    <span class="d-inline-block rt-mr-7"
+                      ><i class="ph-arrow-down"></i></span
+                    >13.5% Decrease
+                  </div>
+                </div>
+                <div id="area-spaline-bottom" class="rt-mb-24"></div>
+                <div id="area-spaline-bottom2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-only-4 col-only-xs-12 col-only-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between rt-mb-48">
+                  <div>
+                    <div
+                      class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase"
+                    >
+                      Conversion Rate
+                    </div>
+                    <div class="f-size-24 font-semibold">9.73%</div>
+                  </div>
+                  <div
+                    class="text-left text-lg-end text-success-500 body-font-4 font-medium"
+                  >
+                    <span class="d-inline-block rt-mr-7"
+                      ><i class="ph-arrow-up"></i></span
+                    >3.5% Increase
+                  </div>
+                </div>
+                <div id="barchart2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-only-4 col-only-xs-12 col-only-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between rt-mb-24">
+                  <div>
+                    <div
+                      class="f-size-12 line-height-16 font-medium text-gray-700 rt-mb-4 text-uppercase"
+                    >
+                      bounce rate
+                    </div>
+                    <div class="f-size-24 font-semibold">81.94%</div>
+                  </div>
+                  <div
+                    class="text-left text-lg-end text-success-500 body-font-4 font-medium"
+                  >
+                    <span class="d-inline-block rt-mr-7"
+                      ><i class="ph-arrow-up"></i
+                    ></span>
+                    1.1% Increase
+                  </div>
+                </div>
+                <div id="line-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-only-9 col-only-md-7 col-only-xs-12">
+            <div class="card">
+              <div
+                class="d-flex justify-content-between align-items-center card-header"
+              >
+                <div>User Overview</div>
+                <div class="select-box select-header">
+                  <select class="custom-select sources" title="Today">
+                    <option>Yestarday</option>
+                    <option>This Week</option>
+                    <option>This Month</option>
+                    <option>This Year</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-body">
+                <div id="user_chart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-only-3 col-only-md-5 col-only-xs-12">
+            <div class="card">
+              <div class="d-flex justify-content-between card-header">
+                <div>Most Visited Page</div>
+                <div class="select-box select-header">
+                  <select class="custom-select sources" title="Today">
+                    <option>Yestarday</option>
+                    <option>This Week</option>
+                    <option>This Month</option>
+                    <option>This Year</option>
+                  </select>
+                </div>
+              </div>
+              <div class="donut-chart-wrap">
+                <div id="dount_chart"></div>
+              </div>
+              <div class="donut-chart-table">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Page name</th>
+                      <th>total users</th>
+                      <th>bounce rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-gray-900 extra-padding">
+                        <img src="assets/images/svg/circle-grren.svg" alt="" />
+                        Request a Quote
+                      </td>
+                      <td class="text-gray-700 fw-normal extra-padding">
+                        547,914
+                      </td>
+                      <td class="text-success-500 extra-padding">81.94%</td>
+                    </tr>
+                    <tr>
+                      <td class="text-gray-900">
+                        <img src="assets/images/svg/circle-orange.svg" alt="" />
+                        Career
+                      </td>
+                      <td class="text-gray-700 fw-normal">547,914</td>
+                      <td class="text-success-500">10.94%</td>
+                    </tr>
+                    <tr>
+                      <td class="text-gray-900">
+                        <img src="assets/images/svg/circle-red.svg" alt="" />
+                        Work
+                      </td>
+                      <td class="text-gray-700 fw-normal">547,914</td>
+                      <td class="text-success-500">8.94%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-only-4 col-only-xs-12 col-only-md-6">
+            <div class="card">
+              <div class="d-flex justify-content-between card-header">
+                <div>Browser Overview</div>
+                <div class="select-box select-header">
+                  <select class="custom-select sources" title="Today">
+                    <option>Yestarday</option>
+                    <option>This Week</option>
+                    <option>This Month</option>
+                    <option>This Year</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-body pb-0">
+                <div class="row">
+                  <div class="col-6 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
                       <img
-                        src="assets/images/svg/hand-pointing.svg"
-                        alt="icon"
+                        src="assets/images/all-img/chrome.svg"
+                        alt=""
+                        draggable="false"
                       />
                     </div>
-                    <div class="fun-fact-data">
-                      <h4>9,741</h4>
-                      <p>Click</p>
+                    <div class="body-font-4 text-black font-semibold rt-mb-4">
+                      Google Chrome
                     </div>
+                    <div class="body-font-4 text-gray">54% User</div>
                   </div>
-                  <div class="fun-fact-item">
-                    <div class="fun-fact-icon">
+                  <div class="col-6 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
                       <img
-                        src="assets/images/svg/pencil-circle.svg"
-                        alt="icon"
+                        src="assets/images/all-img/firefox.svg"
+                        alt=""
+                        draggable="false"
                       />
                     </div>
-                    <div class="fun-fact-data">
-                      <h4>9.73%</h4>
-                      <p>Conversion Rate</p>
+                    <div class="body-font-4 text-black font-semibold rt-mb-4">
+                      Firefox
+                    </div>
+                    <div class="body-font-4 text-gray">23% User</div>
+                  </div>
+                  <div class="col-6 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
+                      <img
+                        src="assets/images/all-img/edge.svg"
+                        alt=""
+                        draggable="false"
+                      />
+                    </div>
+
+                    <div class="body-font-4 text-black font-semibold rt-mb-4">
+                      Microsoft Edge
+                    </div>
+                    <div class="body-font-4 text-gray">19% User</div>
+                  </div>
+                  <div class="col-6 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
+                      <img
+                        src="assets/images/all-img/breve.svg"
+                        alt=""
+                        draggable="false"
+                      />
+                    </div>
+
+                    <div class="body-font-4 text-black font-semibold rt-mb-4">
+                      Brave
+                    </div>
+                    <div class="body-font-4 text-gray">11% User</div>
+                  </div>
+                  <div class="col-6 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
+                      <img
+                        src="assets/images/all-img/safari.svg"
+                        alt=""
+                        draggable="false"
+                      />
+                    </div>
+
+                    <div class="body-font-4 text-black font-semibold rt-mb-4">
+                      Apple Safari
+                    </div>
+                    <div class="body-font-4 text-gray">7% User</div>
+                  </div>
+                  <div class="col-6 text-center rt-mb-28">
+                    <div class="borwser-img rt-mb-16">
+                      <img
+                        src="assets/images/all-img/opera.svg"
+                        alt=""
+                        draggable="false"
+                      />
+                    </div>
+                    <div class="body-font-4 text-black font-semibold rt-mb-4">
+                      Opera
+                    </div>
+                    <div class="body-font-4 text-gray">3% User</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-only-6 col-only-xs-12">
+            <div class="card">
+              <div class="d-flex justify-content-between card-header">
+                <div>User Location</div>
+                <div class="select-box select-header">
+                  <select class="custom-select sources" title="Today">
+                    <option>Yestarday</option>
+                    <option>This Week</option>
+                    <option>This Month</option>
+                    <option>This Year</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-body">
+                <div id="world-map" class="rt-mb-48"></div>
+                <div class="row">
+                  <div class="col-md-4 rt-md-10">
+                    <div class="rt-mb-15">
+                      <img
+                        src="assets/images/svg/usa-flag.svg"
+                        alt=""
+                        draggable="false"
+                      />
+                    </div>
+                    <div class="text-gray-900 body-font-3 font-medium rt-mb-4">
+                      United State (USA)
+                    </div>
+                    <div class="text-gray body-font-4">
+                      54% . 5,761,687 Users
                     </div>
                   </div>
-                  <div class="fun-fact-item">
-                    <div class="fun-fact-icon">
-                      <img src="assets/images/svg/book-open.svg" alt="icon" />
+                  <div class="col-md-4 rt-md-10">
+                    <div class="rt-mb-15">
+                      <img
+                        src="assets/images/svg/china-flag.svg"
+                        alt=""
+                        draggable="false"
+                      />
                     </div>
-                    <div class="fun-fact-data">
-                      <h4>81.94%</h4>
-                      <p>Bounce Rate</p>
+                    <div class="text-gray-900 body-font-3 font-medium rt-mb-4">
+                      China
+                    </div>
+                    <div class="text-gray body-font-4">
+                      54% . 5,761,687 Users
+                    </div>
+                  </div>
+                  <div class="col-md-4 rt-md-10">
+                    <div class="rt-mb-15">
+                      <img
+                        src="assets/images/svg/russia-flag.svg"
+                        alt=""
+                        draggable="false"
+                      />
+                    </div>
+                    <div class="text-gray-900 body-font-3 font-medium rt-mb-4">
+                      Russia
+                    </div>
+                    <div class="text-gray body-font-4">
+                      54% . 5,761,687 Users
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6">
-            <div
-              data-aos="flip-left"
-              data-aos-offset="0"
-              data-aos-delay="60"
-              data-aos-duration="700"
-              data-aos-easing="ease-in-out"
-              class="card"
-            >
-              <div class="profile-left active-visitor">
-                <div class="profile-thumb">
-                  <img src="assets/images/all-img/users/user1.png" alt="icon" />
-                </div>
-                <div class="profile-data">
-                  <h4>Kevin Gilbert</h4>
-                  <p>Software Engineer</p>
+          <div class="col col-only-4 col-only-xs-12 col-only-md-12">
+            <div class="card">
+              <div
+                class="d-flex justify-content-between flex-sm-row flex-column card-header"
+              >
+                <div>Devices Overview</div>
+              </div>
+              <div class="card-body pb-0">
+                <div class="row">
+                  {% include "../templates/components/device-list.html" %}
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6">
-            <div
-              data-aos="flip-right"
-              data-aos-offset="0"
-              data-aos-delay="60"
-              data-aos-duration="700"
-              data-aos-easing="ease-in-out"
-              class="banner-wrap bg-secondary-500 active-visitor"
-            >
-              <div class="banner-icon">
-                <img src="assets/images/svg/folder-open.svg" alt="icon" />
+        </div>
+        <div class="row">
+          <div class="col col-only-3 col-only-md-6 col-only-xs-12">
+            <div class="card">
+              <div class="d-flex justify-content-between card-header border-0">
+                <div>Social Media Traffic</div>
+                <div class="select-box select-header">
+                  <select class="custom-select sources" title="Today">
+                    <option>Yestarday</option>
+                    <option>This Week</option>
+                    <option>This Month</option>
+                    <option>This Year</option>
+                  </select>
+                </div>
               </div>
-              <div class="banner-data">
-                <p>
-                  Become a <span>Pro</span> <br />
-                  to get more <span>Space</span>
-                </p>
-                <button type="button" class="btn bg-white pill text-gray-900">
-                  Upgrade Plans
-                </button>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table info-table mb-0">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Network</th>
+                        <th>Visitors</th>
+                        <th>Followers</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% set items = [ { title: 'Facebook', icon: 'fb.svg',
+                      visitors: '5,761,687', followers: '68,412' }, { title:
+                      'Twitter', icon: 'tw.svg', visitors: '5,761,687',
+                      followers: '68,412' }, { title: 'Linkedin', icon:
+                      'lin.svg', visitors: '5,761,687', followers: '68,412' }, {
+                      title: 'Instagram', icon: 'ins.svg', visitors:
+                      '5,761,687', followers: '68,412' }, { title: 'Dribbble',
+                      icon: 'dr.svg', visitors: '5,761,687', followers: '68,412'
+                      }, { title: 'Behance', icon: 'be.svg', visitors:
+                      '5,761,687', followers: '68,412' }, { title: 'Pinterest',
+                      icon: 'pin.svg', visitors: '5,761,687', followers:
+                      '68,412' } ] %} {%for item in items%}
+                      <tr>
+                        <td colspan="2">
+                          <div class="rt-single-icon-box rt-align-center">
+                            <div class="icon-thumb rt-mr-8">
+                              <img
+                                src="assets/images/svg/social/{{item.icon}}"
+                                alt=""
+                              />
+                            </div>
+                            <div
+                              class="iconbox-content text-gray-900 body-font-4 font-medium"
+                            >
+                              {{item.title}}
+                            </div>
+                          </div>
+                        </td>
+                        <td class="body-font-4 text-gray-700">
+                          {{item.visitors}}
+                        </td>
+                        <td class="body-font-4 text-gray-700">
+                          {{item.followers}}
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-only-4 col-only-xs-12 col-only-md-6">
+            <div class="card">
+              <div class="card-header">Calendar</div>
+              <div class="card-body body-calendar">
+                <div class="date-picker-calender rt-pt-10"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-only-5 col-only-md-12">
+            <div class="card">
+              <div class="card-header">Operating System</div>
+              <div class="operating-system-wrap">
+                <div class="operating-system-item">
+                  <div class="operating-system-thumb">
+                    <img src="assets/images/svg/windows.svg" alt="" />
+                  </div>
+                  <div class="operating-system-data">
+                    <a href="#">Computer & Laptop</a>
+                    <h4>Windows</h4>
+                    <p>57% • 68,412 Users</p>
+                  </div>
+                </div>
+                <div class="operating-system-item">
+                  <div class="operating-system-thumb">
+                    <img src="assets/images/svg/MacOS.svg" alt="" />
+                  </div>
+                  <div class="operating-system-data">
+                    <a href="#">Computer & Laptop</a>
+                    <h4>macOS</h4>
+                    <p>57% • 68,412 Users</p>
+                  </div>
+                </div>
+                <div class="operating-system-item">
+                  <div class="operating-system-thumb">
+                    <img src="assets/images/svg/iOS.svg" alt="" />
+                  </div>
+                  <div class="operating-system-data">
+                    <a href="#">Mobile & Tablet</a>
+                    <h4>iOS</h4>
+                    <p>57% • 68,412 Users</p>
+                  </div>
+                </div>
+                <div class="operating-system-item">
+                  <div class="operating-system-thumb">
+                    <img src="assets/images/svg/Android.svg" alt="" />
+                  </div>
+                  <div class="operating-system-data">
+                    <a href="#">Mobile & Tablet</a>
+                    <h4>Android</h4>
+                    <p>57% • 68,412 Users</p>
+                  </div>
+                </div>
+                <div class="operating-system-item">
+                  <div class="operating-system-thumb">
+                    <img src="assets/images/svg/Ubuntu.svg" alt="" />
+                  </div>
+                  <div class="operating-system-data">
+                    <a href="#">Computer & Laptop</a>
+                    <h4>Ubuntu</h4>
+                    <p>57% • 68,412 Users</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-xl-5 offset-xl-1 d-flex align-items-center">
-        <div class="presentation-content">
-          <h2
-            data-aos="zoom-in"
-            data-aos-offset="0"
-            data-aos-delay="0"
-            data-aos-duration="700"
-            data-aos-easing="ease-in-out"
-          >
-            Build for everyone
-          </h2>
-          <p>
-            Donec suscipit justo sit amet volutpat placerat. Cras tristique
-            sodales ligula, id convallis dui ullamcorper id. Cras a mi lectus.
-            Etiam ut dignissim justo.
-          </p>
-          <button type="button" class="btn btn-primary pill btn-icon min-w-220">
-            <span class="button-content-wrapper">
-              <span class="button-icon align-icon-right">
-                <i class="ph-arrow-right"></i>
-              </span>
-              <span class="button-text"> Purchase Now </span>
-            </span>
-          </button>
-        </div>
+        {% include "../templates/layout/header-footer/footer.html" %}
       </div>
     </div>
   </div>
-</div>
-<!-- End section -->
-
-<div class="section section-padding bg-white">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 offset-lg-1 order-lg-1">
-        <div
-          data-aos="fade-left"
-          data-aos-offset="0"
-          data-aos-delay="0"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          class="presentation-thumb"
-        >
-          <img src="assets/images/all-img/thumb1.jpg" alt="icon" />
-        </div>
-      </div>
-      <div class="col-lg-6 d-flex align-items-center">
-        <div class="presentation-content">
-          <h2
-            data-aos="zoom-in"
-            data-aos-offset="180"
-            data-aos-delay="0"
-            data-aos-duration="700"
-            data-aos-easing="ease-in-out"
-          >
-            Create, Customize & Manage Events in Calendar
-          </h2>
-          <p>
-            Donec suscipit justo sit amet volutpat placerat. Cras tristique
-            sodales ligula, id convallis dui ullamcorper id. Cras a mi lectus.
-            Etiam ut dignissim justo. Aenean ac gravida nulla. Ut a velit nec
-            massa interdum tempus id quis ante.
-          </p>
-          <button type="button" class="btn btn-primary pill btn-icon min-w-220">
-            <span class="button-content-wrapper">
-              <span class="button-icon align-icon-right">
-                <i class="ph-arrow-right"></i>
-              </span>
-              <span class="button-text"> Purchase Now </span>
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End section -->
-
-<div class="section section-padding bg-gray-50">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <div
-          data-aos="fade-right"
-          data-aos-offset="0"
-          data-aos-delay="0"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          class="presentation-thumb"
-        >
-          <img src="assets/images/all-img/thumb2.jpg" alt="icon" />
-        </div>
-      </div>
-      <div class="col-lg-5 offset-lg-1 d-flex">
-        <div class="presentation-content">
-          <h2
-            data-aos="zoom-in"
-            data-aos-offset="180"
-            data-aos-delay="0"
-            data-aos-duration="700"
-            data-aos-easing="ease-in-out"
-          >
-            Kanban Board to Manage with Team
-          </h2>
-          <p>
-            Donec suscipit justo sit amet volutpat placerat. Cras tristique
-            sodales ligula, id convallis dui ullamcorper id. Cras a mi lectus.
-            Etiam ut dignissim justo.
-          </p>
-          <ul>
-            <li
-              data-aos="fade-up"
-              data-aos-offset="0"
-              data-aos-delay="90"
-              data-aos-duration="900"
-              data-aos-easing="ease-in-out"
-            >
-              <img src="assets/images/svg/check-circle3.svg" alt="icon" />
-              Create, Customize & Manage Cards & Boards.
-            </li>
-            <li
-              data-aos="fade-up"
-              data-aos-offset="0"
-              data-aos-delay="160"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
-            >
-              <img src="assets/images/svg/check-circle3.svg" alt="icon" /> Post
-              Comments on Cards.
-            </li>
-            <li
-              data-aos="fade-up"
-              data-aos-offset="0"
-              data-aos-delay="240"
-              data-aos-duration="1200"
-              data-aos-easing="ease-in-out"
-            >
-              <img src="assets/images/svg/check-circle3.svg" alt="icon" /> Add
-              Card Label, Due Date & Priority
-            </li>
-            <li
-              data-aos="fade-up"
-              data-aos-offset="0"
-              data-aos-delay="280"
-              data-aos-duration="1400"
-              data-aos-easing="ease-in-out"
-            >
-              <img src="assets/images/svg/check-circle3.svg" alt="icon" />
-              Attach File.
-            </li>
-          </ul>
-          <button type="button" class="btn btn-primary pill btn-icon min-w-220">
-            <span class="button-content-wrapper">
-              <span class="button-icon align-icon-right">
-                <i class="ph-arrow-right"></i>
-              </span>
-              <span class="button-text"> Purchase Now </span>
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End section -->
-<div class="other-template mb-5 pb-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="presentation-content presentation-section-title">
-          <h2
-            data-aos="zoom-in"
-            data-aos-offset="180"
-            data-aos-delay="0"
-            data-aos-duration="700"
-            data-aos-easing="ease-in-out"
-          >
-            Our Other Templates
-          </h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xl-4 col-md-6 col-12 rt-mb-20">
-        <div class="related-box">
-          <a
-            class="image-box rt-mb-20"
-            href="https://themeforest.net/item/onest-classified-ads-html-template/35164825"
-            target="_blank"
-          >
-            <img
-              src="https://adlisting-html.netlify.app/assets/images/preview.png"
-              alt=""
-            />
-          </a>
-          <div class="relate-box-content">
-            <div class="body-font-4 text-gray-500 rt-mb-4">
-              UI Template / Html
-            </div>
-            <div class="body-font-1 text-gray-900 font-medium rt-mb-16">
-              Onest - Classified Ads HTML Template
-            </div>
-            <div class="d-flex justify-content-between">
-              <div class="body-font-1 text-danger-400 font-medium">$16</div>
-              <div>
-                <a
-                  href="https://adlisting-html.netlify.app/home.html"
-                  class="btn btn-outline-primary pill rt-mr-10"
-                  target="_blank"
-                >
-                  Preview
-                </a>
-                <a
-                  href="https://themeforest.net/item/onest-classified-ads-html-template/35164825"
-                  class="btn btn-primary pill"
-                  target="_blank"
-                >
-                  Purchase
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-4 col-md-6 col-12 rt-mb-20">
-        <div class="related-box">
-          <a
-            class="image-box rt-mb-20"
-            href="https://themeforest.net/item/etutor-education-online-lms-html-template/35100979"
-            target="_blank"
-          >
-            <img
-              src="https://themeforest.img.customer.envatousercontent.com/files/368012341/01_preview.__large_preview.jpg?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=74b0fa3e792abbeecc87b3b5267d0d1f"
-              alt=""
-            />
-          </a>
-          <div class="relate-box-content">
-            <div class="body-font-4 text-gray-500 rt-mb-4">
-              UI Template / Html
-            </div>
-            <div class="body-font-1 text-gray-900 font-medium rt-mb-16">
-              E-tutor - Education & Online LMS HTML Template
-            </div>
-            <div class="d-flex justify-content-between">
-              <div class="body-font-1 text-danger-400 font-medium">$22</div>
-              <div>
-                <a
-                  href="https://e-tutor-html.netlify.app/"
-                  class="btn btn-outline-primary pill rt-mr-10"
-                  target="_blank"
-                >
-                  Preview
-                </a>
-                <a
-                  href="https://themeforest.net/item/etutor-education-online-lms-html-template/35100979"
-                  class="btn btn-primary pill"
-                  target="_blank"
-                >
-                  Purchase
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-4 col-md-6 col-12 rt-mb-20">
-        <div class="related-box">
-          <a
-            class="image-box rt-mb-20"
-            href="https://themeforest.net/item/eduguard-education-online-course-bootstrap-5-template/33027843"
-            target="_blank"
-          >
-            <img
-              src="https://themeforest.img.customer.envatousercontent.com/files/364596154/01_preview.__large_preview.jpg?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=b613587cb5c6be29309993bb09a070a1"
-              alt=""
-            />
-          </a>
-          <div class="relate-box-content">
-            <div class="body-font-4 text-gray-500 rt-mb-4">
-              UI Template / Html
-            </div>
-            <div class="body-font-1 text-gray-900 font-medium rt-mb-16">
-              Eduguard - Education & Online Course Bootstrap 5 Template
-            </div>
-            <div class="d-flex justify-content-between">
-              <div class="body-font-1 text-danger-400 font-medium">$22</div>
-              <div>
-                <a
-                  href="https://eduguard-html.netlify.app"
-                  class="btn btn-outline-primary pill rt-mr-10"
-                  target="_blank"
-                >
-                  Preview
-                </a>
-                <a
-                  href="https://themeforest.net/item/eduguard-education-online-course-bootstrap-5-template/33027843"
-                  class="btn btn-primary pill"
-                  target="_blank"
-                >
-                  Purchase
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End section -->
-
-<div class="cta-section bn_image_2">
-  <div class="container">
-    <div class="presentation-content cta-content fix-conent">
-      <h2
-        data-aos="zoom-in"
-        data-aos-offset="180"
-        data-aos-delay="0"
-        data-aos-duration="700"
-        data-aos-easing="ease-in-out"
-      >
-        No more talk, Purchase it now
-      </h2>
-      <p>
-        Donec suscipit justo sit amet volutpat placerat. Cras tristique sodales
-        ligula, id convallis dui ullamcorper id. Cras a mi lectus. Etiam ut
-        dignissim justo.
-      </p>
-      <div class="presentation-button">
-        <a href="home.html" class="btn btn-dark3 pill rt-mr-12 min-w-174"
-          >Live Preview</a
-        >
-        <button type="button" class="btn btn-primary pill btn-icon min-w-220">
-          <span class="button-content-wrapper">
-            <span class="button-icon align-icon-right">
-              <i class="ph-arrow-right"></i>
-            </span>
-            <span class="button-text"> Purchase Now </span>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- End cta section -->
+</main>
 
 {% endblock %}

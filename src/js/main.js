@@ -1,6 +1,6 @@
 /*
 * ----------------------------------------------------------------------------------------
-    Template Name: Wadmin
+    Template Name: Raple
     Template URI: 
     Description: 
     Author: templatecookie
@@ -683,7 +683,7 @@
     return false;
   });
 
-  if ($(window).width() < 991.98) {
+
     $(".menu-item-has-children > a").on("click", function () {
       var element = $(this).parent("li");
       if (element.hasClass("open")) {
@@ -701,7 +701,7 @@
         element.siblings("li").find("ul").slideUp();
       }
     });
-  }
+  
 
   $(".opener_sidebar").on("click", function (e) {
     e.preventDefault();
@@ -1458,5 +1458,34 @@
         });
       });
     }
+
+      // credit card number init js
+    $('#credit-card-number').on('input propertychange paste', function() {
+      var value = $('#credit-card-number').val();
+      var formattedValue = formatCardNumber(value);
+      $('#credit-card-number').val(formattedValue);
+    });
+    
+    function formatCardNumber(value) {
+      var value = value.replace(/\D/g, '');
+      var formattedValue;
+      var maxLength;
+      // american express, 15 digits
+      if ((/^3[47]\d{0,13}$/).test(value)) {
+        formattedValue = value.replace(/(\d{4})/, '$1 ').replace(/(\d{4}) (\d{6})/, '$1 $2 ');
+        maxLength = 17;
+      } else if((/^3(?:0[0-5]|[68]\d)\d{0,11}$/).test(value)) { // diner's club, 14 digits
+        formattedValue = value.replace(/(\d{4})/, '$1 ').replace(/(\d{4}) (\d{6})/, '$1 $2 ');
+        maxLength = 16;
+      } else if ((/^\d{0,16}$/).test(value)) { // regular cc number, 16 digits
+        formattedValue = value.replace(/(\d{4})/, '$1 ').replace(/(\d{4}) (\d{4})/, '$1 $2 ').replace(/(\d{4}) (\d{4}) (\d{4})/, '$1 $2 $3 ');
+        maxLength = 19;
+      }
+      
+      $('#credit-card-number').attr('maxlength', maxLength);
+      return formattedValue;
+    }
+
+
   })();
 })(jQuery);

@@ -23,8 +23,11 @@
           width: auto;
         }
         &:first-child {
-          padding-left: 60px;
+          padding-left: 65px;
           border-radius: 0;
+          @include max(1199px) {
+            padding-left: 55px;
+          }
         }
         &:last-child {
           border-radius: 0;
@@ -42,7 +45,7 @@
           border-color: var(--primary-500);
           box-shadow: 0 2px 8px rgb(14 95 217 / 24%);
         }
-        &:hover td {
+        &:hover a {
           color: var(--gray-900);
         }
         &:hover .btn-icon {
@@ -70,10 +73,27 @@
           white-space: nowrap;
           border-width: 1;
           border-color: var(--gray-100);
+          a{
+            color: var(--gray-700)
+          }
           @include breakpoint(lg) {
             padding: 16px 20px;
           }
-          color: var(--gray-700);
+          .form-check {
+              display: block;
+              min-height: inherit;
+              padding-left: 0;
+              margin-bottom: 0;
+          }
+          .form-check {
+              display: block;
+              min-height: inherit;
+              padding-left: 0;
+              margin-bottom: 0;
+          }
+          .has-minus.form-check {
+            margin-left: 0;
+        }
         }
       }
     }

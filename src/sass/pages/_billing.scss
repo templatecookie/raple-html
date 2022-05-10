@@ -155,4 +155,7 @@
 
 .min-h-275 {
   min-height: 275px;
+  @include max(1400px) {
+    min-height: inherit;
+  }
 }
