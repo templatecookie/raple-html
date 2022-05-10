@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
-  <title>Wadmin - Admin Dashboard</title>
+  <title>Raple - Admin Dashboard</title>
   <link rel="icon" type="image/png" href="assets/images/logo/logo-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,16 +40,16 @@
           <div class="left-content">
             <div class="logo-segment">
               <div class="all-logo">
-                <a href="home.html" class="brand-logo">
+                <a href="index.html" class="brand-logo">
                   <img src="assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black" />
                   <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white" />
                   <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10" />
-                  <img src="assets/images/logo/logo-full-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10" />
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10" />
                 </a>
-                <a href="home.html" class="brand-logo white">
+                <a href="index.html" class="brand-logo white">
                   <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" />
                 </a>
-                <a href="home.html" class="collapse-in-logo">
+                <a href="index.html" class="collapse-in-logo">
                   <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon-blue" />
                   <img src="assets/images/logo/logo-icon-white.svg" alt="" draggable="false" class="logo-icon-white" />
                 </a>
@@ -126,7 +126,7 @@
           <ul id="side-menu">
             <li class="menu-title no-margin">Dashboard</li>
             <li>
-              <a href="home.html" aria-expanded="false" class="waves-effect primary-light">
+              <a href="index.html" aria-expanded="false" class="waves-effect primary-light">
                 <span class="icon-box"><i class="ph-house-line"></i></span>
                 <div class="text-box">
                   Dashboard
@@ -318,7 +318,7 @@
     <div class="top-navbar">
       <div class="container-fluid p-0">
         <div class="main-menu">
-          <div class="mobile-menu-header d-flex justify-content-between mb-5 pb-2 px-3 ps-3 d-block d-lg-none">
+          <div class="mobile-menu-header d-flex justify-content-between mb-3 pb-2 px-3 ps-3 d-block d-lg-none">
             <a href="#" class="mbl-logo"><img src="assets/images/logo/logo.svg" alt="" /></a>
             <span class="rt-mobile-menu-close">
           <svg
@@ -341,7 +341,7 @@
           <!-- /.rt-mobile-menu-close -->
           <ul class="menu-active-classes">
             <li class="active">
-              <a href="home.html">
+              <a href="index.html">
                 <span class="icon-box"><i class="ph-house-line"></i></span>
                 <div class="text-box">Dashboard</div>
               </a>
@@ -465,8 +465,8 @@
                 <div class="breadcrumb-title"> File Manager</div>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="home.html">App</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">App</a></li>
                     <li class="breadcrumb-item active" aria-current="page"> File Manager</li>
                   </ol>
                 </nav>
@@ -480,7 +480,7 @@
                     <button type="button" class="btn btn-primary pill btn-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       <span class="button-content-wrapper">
                       <span class="button-text"> Upload file </span>
-                      <span class="button-icon c-w">
+                      <span class="button-icon">
                         <img src="assets/images/svg/plus.svg" alt="" />
                       </span>
                       </span>
@@ -520,7 +520,17 @@
                       <div class="file-link">
                         <ul>
                           <li>
-                            <a href="">
+                            <a class="active" href="file-manager.html">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#626C70" stroke-width="1.25" stroke-miterlimit="10" />
+                                <path d="M10 5.625V10H14.375" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+
+                              My Files
+                            </a>
+                          </li>
+                          <li>
+                            <a href="file-manager-new.html">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 12.5C6.38071 12.5 7.5 11.3807 7.5 10C7.5 8.61929 6.38071 7.5 5 7.5C3.61929 7.5 2.5 8.61929 2.5 10C2.5 11.3807 3.61929 12.5 5 12.5Z" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M13.75 18.125C15.1307 18.125 16.25 17.0057 16.25 15.625C16.25 14.2443 15.1307 13.125 13.75 13.125C12.3693 13.125 11.25 14.2443 11.25 15.625C11.25 17.0057 12.3693 18.125 13.75 18.125Z" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
@@ -533,17 +543,7 @@
                             </a>
                           </li>
                           <li>
-                            <a href="">
-                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#626C70" stroke-width="1.25" stroke-miterlimit="10" />
-                                <path d="M10 5.625V10H14.375" stroke="#626C70" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-
-                              Recents Files
-                            </a>
-                          </li>
-                          <li>
-                            <a href="">
+                            <a href="starred.html">
                               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.34462 13.901L13.2849 16.3974C13.7886 16.7165 14.4139 16.2419 14.2644 15.654L13.126 11.1756C13.0939 11.0509 13.0977 10.9197 13.137 10.797C13.1762 10.6743 13.2492 10.5652 13.3477 10.4822L16.8811 7.54132C17.3453 7.1549 17.1057 6.38439 16.5092 6.34568L11.8949 6.0462C11.7706 6.03732 11.6514 5.99332 11.5511 5.91931C11.4509 5.84531 11.3737 5.74435 11.3286 5.62819L9.60765 1.29436C9.56087 1.17106 9.47769 1.06492 9.36916 0.990017C9.26062 0.915115 9.13187 0.875 9 0.875C8.86813 0.875 8.73938 0.915115 8.63085 0.990017C8.52232 1.06492 8.43914 1.17106 8.39236 1.29436L6.6714 5.62819C6.62631 5.74435 6.54914 5.84531 6.4489 5.91931C6.34865 5.99332 6.22944 6.03732 6.10515 6.0462L1.49078 6.34568C0.894294 6.38439 0.654664 7.1549 1.11894 7.54132L4.65232 10.4822C4.75079 10.5652 4.82383 10.6743 4.86305 10.797C4.90226 10.9197 4.90606 11.0509 4.874 11.1756L3.81824 15.3288C3.63889 16.0343 4.38929 16.6038 4.99369 16.2209L8.65539 13.901C8.75837 13.8354 8.87792 13.8006 9 13.8006C9.12208 13.8006 9.24163 13.8354 9.34462 13.901V13.901Z" stroke="#959FA3" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                               </svg>
@@ -552,7 +552,7 @@
                             </a>
                           </li>
                           <li>
-                            <a href="">
+                            <a href="deleted.html">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.875 4.375L3.125 4.37501" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M8.125 8.125V13.125" stroke="#E84646" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
@@ -600,7 +600,7 @@
               </div>
             </div>
             <div class="col-xxl-9 col-xl-8">
-              <div class="card no-rounded">
+              <div class="card m-0">
                 <div class="file-manager-wrap">
                   <h3 class="file-title">My Files</h3>
                   <div class="file-wrap">
@@ -1182,7 +1182,7 @@
             <div class="footer-content">
               <div>
                 <p>
-                  © 2021 - Wadmin admin dashboard. Design & develop by
+                  © 2021 - Raple admin dashboard. Design & develop by
                   <a href="#">Templatecookie</a>
                 </p>
               </div>
@@ -1326,7 +1326,7 @@
   <div id="template" style="display: none">
     <div class="PopoverParent min-372">
       <div class="Popover-header d-flex justify-content-between">
-        <div class="d-blok f-size-14 line-height-20 text-gray-900">
+        <div class="d-blok f-size-14 line-height-20 text-gray-900 font-medium">
           Notification
         </div>
         <div class="d-blok f-size-14 text-gray-700 pointer">Clear All</div>
@@ -1446,12 +1446,11 @@
                   <span>Horizontal</span>
                 </div>
               </label>
-
             </div>
           </div>
         </div>
         <hr />
-        <div class="setting-title rt-pt-30">Layout</div>
+        <div class="setting-title rt-pt-30">Theme</div>
         <ul class="rt-mb-32">
           <li class="block rt-mb-12">
             <div class="form-check p-0 no-shadow">

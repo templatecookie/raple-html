@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
-  <title>Wadmin - Admin Dashboard</title>
+  <title>Raple - Admin Dashboard</title>
   <link rel="icon" type="image/png" href="assets/images/logo/logo-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,16 +40,16 @@
           <div class="left-content">
             <div class="logo-segment">
               <div class="all-logo">
-                <a href="home.html" class="brand-logo">
+                <a href="index.html" class="brand-logo">
                   <img src="assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black" />
                   <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white" />
                   <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10" />
-                  <img src="assets/images/logo/logo-full-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10" />
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10" />
                 </a>
-                <a href="home.html" class="brand-logo white">
+                <a href="index.html" class="brand-logo white">
                   <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" />
                 </a>
-                <a href="home.html" class="collapse-in-logo">
+                <a href="index.html" class="collapse-in-logo">
                   <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon-blue" />
                   <img src="assets/images/logo/logo-icon-white.svg" alt="" draggable="false" class="logo-icon-white" />
                 </a>
@@ -126,7 +126,7 @@
           <ul id="side-menu">
             <li class="menu-title no-margin">Dashboard</li>
             <li>
-              <a href="home.html" aria-expanded="false" class="waves-effect primary-light">
+              <a href="index.html" aria-expanded="false" class="waves-effect primary-light">
                 <span class="icon-box"><i class="ph-house-line"></i></span>
                 <div class="text-box">
                   Dashboard
@@ -318,7 +318,7 @@
     <div class="top-navbar">
       <div class="container-fluid p-0">
         <div class="main-menu">
-          <div class="mobile-menu-header d-flex justify-content-between mb-5 pb-2 px-3 ps-3 d-block d-lg-none">
+          <div class="mobile-menu-header d-flex justify-content-between mb-3 pb-2 px-3 ps-3 d-block d-lg-none">
             <a href="#" class="mbl-logo"><img src="assets/images/logo/logo.svg" alt="" /></a>
             <span class="rt-mobile-menu-close">
           <svg
@@ -341,7 +341,7 @@
           <!-- /.rt-mobile-menu-close -->
           <ul class="menu-active-classes">
             <li class="active">
-              <a href="home.html">
+              <a href="index.html">
                 <span class="icon-box"><i class="ph-house-line"></i></span>
                 <div class="text-box">Dashboard</div>
               </a>
@@ -465,8 +465,8 @@
                 <div class="breadcrumb-title"> Billing</div>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="home.html">App</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">App</a></li>
                     <li class="breadcrumb-item active" aria-current="page"> Billing</li>
                   </ol>
                 </nav>
@@ -901,7 +901,7 @@
             <div class="footer-content">
               <div>
                 <p>
-                  © 2021 - Wadmin admin dashboard. Design & develop by
+                  © 2021 - Raple admin dashboard. Design & develop by
                   <a href="#">Templatecookie</a>
                 </p>
               </div>
@@ -930,7 +930,7 @@
             <form action="#">
               <div class="fromGroup mb-3">
                 <label>Card Number</label>
-                <input class="form-control" type="text" placeholder="card number..." />
+                <input class="form-control" id="credit-card-number" type="text" placeholder="card number..." />
               </div>
               <div class="fromGroup mb-3">
                 <label>Name on Card</label>
@@ -946,7 +946,7 @@
                 <div class="col-lg-6">
                   <div class="fromGroup mb-3">
                     <label>Expire Date</label>
-                    <input class="form-control date-picker-calender" type="text" placeholder="Month" />
+                    <input class="form-control" type="text" placeholder="MM / YY" />
                   </div>
                 </div>
               </div>
@@ -1081,7 +1081,7 @@
   <div id="template" style="display: none">
     <div class="PopoverParent min-372">
       <div class="Popover-header d-flex justify-content-between">
-        <div class="d-blok f-size-14 line-height-20 text-gray-900">
+        <div class="d-blok f-size-14 line-height-20 text-gray-900 font-medium">
           Notification
         </div>
         <div class="d-blok f-size-14 text-gray-700 pointer">Clear All</div>
@@ -1201,12 +1201,11 @@
                   <span>Horizontal</span>
                 </div>
               </label>
-
             </div>
           </div>
         </div>
         <hr />
-        <div class="setting-title rt-pt-30">Layout</div>
+        <div class="setting-title rt-pt-30">Theme</div>
         <ul class="rt-mb-32">
           <li class="block rt-mb-12">
             <div class="form-check p-0 no-shadow">

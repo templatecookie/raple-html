@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
-  <title>Wadmin - Admin Dashboard</title>
+  <title>Raple - Admin Dashboard</title>
   <link rel="icon" type="image/png" href="assets/images/logo/logo-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,16 +40,16 @@
           <div class="left-content">
             <div class="logo-segment">
               <div class="all-logo">
-                <a href="home.html" class="brand-logo">
+                <a href="index.html" class="brand-logo">
                   <img src="assets/images/logo/logo.svg" alt="" draggable="false" class="logo-black" />
                   <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-white" />
                   <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon rt-mr-10" />
-                  <img src="assets/images/logo/logo-full-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10" />
+                  <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" class="logo-full-white rt-mr-10" />
                 </a>
-                <a href="home.html" class="brand-logo white">
+                <a href="index.html" class="brand-logo white">
                   <img src="assets/images/logo/logo-white.svg" alt="" draggable="false" />
                 </a>
-                <a href="home.html" class="collapse-in-logo">
+                <a href="index.html" class="collapse-in-logo">
                   <img src="assets/images/logo/logo-icon.svg" alt="" draggable="false" class="logo-icon-blue" />
                   <img src="assets/images/logo/logo-icon-white.svg" alt="" draggable="false" class="logo-icon-white" />
                 </a>
@@ -127,7 +127,7 @@
           <ul id="side-menu">
             <li class="menu-title no-margin">Dashboard</li>
             <li>
-              <a href="home.html" aria-expanded="false" class="waves-effect primary-light">
+              <a href="index.html" aria-expanded="false" class="waves-effect primary-light">
                 <span class="icon-box"><i class="ph-house-line"></i></span>
                 <div class="text-box">
                   Dashboard
@@ -320,7 +320,7 @@
     <div class="top-navbar">
       <div class="container-fluid p-0">
         <div class="main-menu">
-          <div class="mobile-menu-header d-flex justify-content-between mb-5 pb-2 px-3 ps-3 d-block d-lg-none">
+          <div class="mobile-menu-header d-flex justify-content-between mb-3 pb-2 px-3 ps-3 d-block d-lg-none">
             <a href="#" class="mbl-logo"><img src="assets/images/logo/logo.svg" alt="" /></a>
             <span class="rt-mobile-menu-close">
           <svg
@@ -343,7 +343,7 @@
           <!-- /.rt-mobile-menu-close -->
           <ul class="menu-active-classes">
             <li class="active">
-              <a href="home.html">
+              <a href="index.html">
                 <span class="icon-box"><i class="ph-house-line"></i></span>
                 <div class="text-box">Dashboard</div>
               </a>
@@ -467,8 +467,8 @@
                 <div class="breadcrumb-title"> Invoice</div>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="home.html">App</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">App</a></li>
                     <li class="breadcrumb-item active" aria-current="page"> Invoice</li>
                   </ol>
                 </nav>
@@ -498,32 +498,36 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-one">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check1">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag1.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag1.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle2.svg" alt="">
-                            Pending
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle2.svg" alt="">
+                              Pending
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
                           <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
@@ -560,34 +564,38 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-two">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check2">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag2.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag2.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle2.svg" alt="">
-                            Pending
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle2.svg" alt="">
+                              Pending
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
-                          <div class="dropdown-wrap ">
+                          <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
                               <span class="button-content-wrapper">
                               <span class="button-text">
@@ -622,34 +630,38 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-three">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check3">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag1.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag1.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle.svg" alt="">
-                            Paid
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle.svg" alt="">
+                              Paid
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
-                          <div class="dropdown-wrap ">
+                          <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
                               <span class="button-content-wrapper">
                               <span class="button-text">
@@ -666,6 +678,7 @@
                                     d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
                                     stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                               </span>
                               </span>
                             </button>
@@ -683,34 +696,38 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-four">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check4">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag2.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag2.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle.svg" alt="">
-                            Paid
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle.svg" alt="">
+                              Paid
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
-                          <div class="dropdown-wrap ">
+                          <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
                               <span class="button-content-wrapper">
                               <span class="button-text">
@@ -727,6 +744,7 @@
                                     d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
                                     stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                               </span>
                               </span>
                             </button>
@@ -744,34 +762,38 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-five">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check5">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag1.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag1.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle.svg" alt="">
-                            Paid
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle.svg" alt="">
+                              Paid
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
-                          <div class="dropdown-wrap ">
+                          <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
                               <span class="button-content-wrapper">
                               <span class="button-text">
@@ -788,6 +810,7 @@
                                     d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
                                     stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                               </span>
                               </span>
                             </button>
@@ -805,34 +828,38 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-six">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check6">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag2.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag2.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle.svg" alt="">
-                            Paid
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle.svg" alt="">
+                              Paid
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
-                          <div class="dropdown-wrap ">
+                          <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
                               <span class="button-content-wrapper">
                               <span class="button-text">
@@ -866,34 +893,38 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-seven">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check7">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag1.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag1.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle.svg" alt="">
-                            Paid
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle.svg" alt="">
+                              Paid
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
-                          <div class="dropdown-wrap ">
+                          <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
                               <span class="button-content-wrapper">
                               <span class="button-text">
@@ -910,6 +941,7 @@
                                     d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
                                     stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                               </span>
                               </span>
                             </button>
@@ -927,34 +959,38 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-eight">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check8">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag2.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag2.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle.svg" alt="">
-                            Paid
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle.svg" alt="">
+                              Paid
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
-                          <div class="dropdown-wrap ">
+                          <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
                               <span class="button-content-wrapper">
                               <span class="button-text">
@@ -971,6 +1007,7 @@
                                     d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
                                     stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                               </span>
                               </span>
                             </button>
@@ -988,34 +1025,38 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-nine">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check9">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag1.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag1.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle.svg" alt="">
-                            Paid
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle.svg" alt="">
+                              Paid
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
-                          <div class="dropdown-wrap ">
+                          <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
                               <span class="button-content-wrapper">
                               <span class="button-text">
@@ -1032,6 +1073,7 @@
                                     d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
                                     stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                               </span>
                               </span>
                             </button>
@@ -1049,34 +1091,38 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-ten">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check10">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag2.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag2.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle.svg" alt="">
-                            Paid
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle.svg" alt="">
+                              Paid
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
-                          <div class="dropdown-wrap ">
+                          <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
                               <span class="button-content-wrapper">
                               <span class="button-text">
@@ -1110,34 +1156,38 @@
                       <tr>
                         <td>
                           <div class="form-check  from-chekbox-custom has-minus">
-                            <input class="form-check-input" type="checkbox" value="" id="check-eleven">
-                            <a href="invoice-detail.html" class="text-gray-700 form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" id="check11">
+                            <a href="invoice-detail.html" class="form-check-label">
                               EKG464SJFN17
                             </a>
                           </div>
                         </td>
-                        <td class="large-width">Design Works</td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
                         <td>
-                          <div class="rt-single-icon-box rt-align-center">
-                            <div class="icon-thumb rt-mr-8 ">
-                              <img src="assets/images/all-img/flag1.png" alt="">
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag1.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
                             </div>
-                            <div class="iconbox-content">
-                              Carlson Limited
-                            </div>
-                          </div>
+                          </a>
                         </td>
-                        <td>87956621</td>
-                        <td>15 Dec, 2017</td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
                         <td class="large-width2">
-                          <div class="paid-wrap">
-                            <img src="assets/images/svg/circle.svg" alt="">
-                            Paid
-                          </div>
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle.svg" alt="">
+                              Paid
+                            </div>
+                          </a>
                         </td>
-                        <td>$887.00</td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
                         <td>
-                          <div class="dropdown-wrap ">
+                          <div class="dropdown-wrap">
                             <button type="button" class="btn btn-primary2 pill btn-icon">
                               <span class="button-content-wrapper">
                               <span class="button-text">
@@ -1154,6 +1204,7 @@
                                     d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
                                     stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                               </span>
                               </span>
                             </button>
@@ -1161,6 +1212,72 @@
                               <img src="assets/images/svg/dots2.svg" alt="">
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton11">
+                              <li><a class="dropdown-item" href="#">Download</a></li>
+                              <li><a class="dropdown-item" href="#">Print</a></li>
+                              <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check  from-chekbox-custom has-minus">
+                            <input class="form-check-input" type="checkbox" value="" id="check12">
+                            <a href="invoice-detail.html" class="form-check-label">
+                              EKG464SJFN17
+                            </a>
+                          </div>
+                        </td>
+                        <td class="large-width"> <a class="text-gray-900 font-medium" href="invoice-detail.html">Design Works</a> </td>
+                        <td>
+                          <a href="invoice-detail.html">
+                            <div class="rt-single-icon-box rt-align-center">
+                              <div class="icon-thumb rt-mr-8 ">
+                                <img src="assets/images/all-img/flag2.png" alt="">
+                              </div>
+                              <div class="iconbox-content">
+                                Carlson Limited
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td> <a href="invoice-detail.html">87956621</a> </td>
+                        <td><a href="invoice-detail.html">15 Dec, 2017</a></td>
+                        <td class="large-width2">
+                          <a href="invoice-detail.html">
+                            <div class="paid-wrap">
+                              <img src="assets/images/svg/circle.svg" alt="">
+                              Paid
+                            </div>
+                          </a>
+                        </td>
+                        <td><a href="invoice-detail.html">$887.00</a></td>
+                        <td>
+                          <div class="dropdown-wrap">
+                            <button type="button" class="btn btn-primary2 pill btn-icon">
+                              <span class="button-content-wrapper">
+                              <span class="button-text">
+                                Download
+                              </span>
+                              <span class="button-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.71875 8.5946L10 11.875L13.2812 8.5946" stroke="white" stroke-width="1.25"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                  <path d="M10 3.125V11.8727" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                  <path
+                                    d="M16.875 11.875V16.25C16.875 16.4158 16.8092 16.5747 16.6919 16.6919C16.5747 16.8092 16.4158 16.875 16.25 16.875H3.75C3.58424 16.875 3.42527 16.8092 3.30806 16.6919C3.19085 16.5747 3.125 16.4158 3.125 16.25V11.875"
+                                    stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                              </span>
+                              </span>
+                            </button>
+                            <button type="button" class="btn bg-gray-50 rounded-circle icon-btn" id="dropdownMenuButton12" data-bs-toggle="dropdown">
+                              <img src="assets/images/svg/dots2.svg" alt="">
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton12">
                               <li><a class="dropdown-item" href="#">Download</a></li>
                               <li><a class="dropdown-item" href="#">Print</a></li>
                               <li><a class="dropdown-item delete-content" href="#">Delete</a></li>
@@ -1205,7 +1322,7 @@
             <div class="footer-content">
               <div>
                 <p>
-                  © 2021 - Wadmin admin dashboard. Design & develop by
+                  © 2021 - Raple admin dashboard. Design & develop by
                   <a href="#">Templatecookie</a>
                 </p>
               </div>
@@ -1337,7 +1454,7 @@
   <div id="template" style="display: none">
     <div class="PopoverParent min-372">
       <div class="Popover-header d-flex justify-content-between">
-        <div class="d-blok f-size-14 line-height-20 text-gray-900">
+        <div class="d-blok f-size-14 line-height-20 text-gray-900 font-medium">
           Notification
         </div>
         <div class="d-blok f-size-14 text-gray-700 pointer">Clear All</div>
@@ -1457,12 +1574,11 @@
                   <span>Horizontal</span>
                 </div>
               </label>
-
             </div>
           </div>
         </div>
         <hr />
-        <div class="setting-title rt-pt-30">Layout</div>
+        <div class="setting-title rt-pt-30">Theme</div>
         <ul class="rt-mb-32">
           <li class="block rt-mb-12">
             <div class="form-check p-0 no-shadow">
