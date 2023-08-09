@@ -9,6 +9,19 @@ Check the [Live Demo here](https://raple-dashboard.netlify.app).
 
 ![](screenshot.png)
 
+## Feature
+- Kanban Board
+- Calendar
+- Themeing and Layout
+- Invoice
+- Map
+
+## Framework & Technologies
+- boostratp
+- scss
+- jQuery
+- chart
+
 ## Credits
 - Design & Developed by [Templatecookie](https://templatecookie.com)
 
