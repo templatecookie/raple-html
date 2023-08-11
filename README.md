@@ -17,10 +17,10 @@ Check the [Live Demo here](https://raple-dashboard.netlify.app).
 - Map
 
 ## Framework & Technologies
-- boostratp
-- scss
-- jQuery
-- chart
+- [Bootstrap](https://getbootstrap.com/)
+- [scss](https://sass-lang.com/)
+- [jQuery](https://jquery.com/)
+- [chart](https://www.chartjs.org/docs/latest/developers/plugins.html)
 
 ## Credits
 - Design & Developed by [Templatecookie](https://templatecookie.com)
